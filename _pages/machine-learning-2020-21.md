@@ -15,8 +15,8 @@ author_profile: false
 
 <font size="3em"><ol reversed start="34">
     <li><b>Wednesday, August 19</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/445063480">Class Recording</a>-->
-        <br>Assignment Problems (<a class="body" target="_blank" href="https://eurisko-us.github.io/resources/#submit-assignment">submit</a> by Sunday at midnight)
+        <br><a class="body" target="_blank" href="https://vimeo.com/449376256">Class Recording</a>
+        <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-34-1">Logistic Regression via Code</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-34-2">Likelihood of Coin Flipping</a></li>
