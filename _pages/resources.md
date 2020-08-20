@@ -338,7 +338,7 @@ author_profile: false
     <li>Copy any recent changes from your old repl to your new repl (i.e. just those changes that didn't get pushed up to github)</li>
     <li>In your new repl, push the changes back up to your existing github repository</li>
     <li>Your new repl is now fully up-to-date and connected to your github, so you can delete the old repl</li>
-  </ul>
+  </ol>
 </font></details>
   
 </div>
