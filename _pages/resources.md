@@ -326,7 +326,7 @@ author_profile: false
 <font size="3em">
 
 <details>
-  <summary>my repl was originally pushing code up to github, but now it's not doing that any more</summary>
+  <summary>My repl was originally pushing code up to github, but now it's not doing that any more. What should I do?</summary><br><font size="3em">
   
   This happens once in a while -- a repl might randomly stop being able to push to github. The solution is to move your code over to a new repl, and then replace the old repl with the new repl. Here's an efficient way to do this:
   <ol>
@@ -337,6 +337,6 @@ author_profile: false
     <li>In your new repl, push the changes back up to your existing github repository</li>
     <li>Your new repl is now fully up-to-date and connected to your github, so you can delete the old repl</li>
   </ul>
-</details>
+</font></details>
   
 </div>
