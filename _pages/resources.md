@@ -8,7 +8,7 @@ author_profile: false
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
-<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a></b></center></font>
+<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#troubleshooting">Troubleshooting</a></b></center></font>
 </div>
 
 ## [<center>Class Meetings</center>](#class-meetings)
@@ -314,5 +314,29 @@ author_profile: false
 </details>
 
 </font>
+  
+</div>
+
+## [<center>Coding Commandments</center>](#coding-commandments)
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+
+<br>
+
+<font size="3em">
+
+<details>
+  <summary>my repl was originally pushing code up to github, but now it's not doing that any more</summary>
+  
+  This happens once in a while -- a repl might randomly stop being able to push to github. The solution is to move your code over to a new repl, and then replace the old repl with the new repl. Here's an efficient way to do this:
+  <ol>
+    <li>Create a new repl with the same name as the old repl</li>
+    <li>Connect the new repl to the existing github repository</li>
+    <li>Pull the github repository to your new repl</li>
+    <li>Copy any recent changes from your old repl to your new repl (i.e. just those changes that didn't get pushed up to github)</li>
+    <li>In your new repl, push the changes back up to your existing github repository</li>
+    <li>Your new repl is now fully up-to-date and connected to your github, so you can delete the old repl</li>
+  </ul>
+</details>
   
 </div>
