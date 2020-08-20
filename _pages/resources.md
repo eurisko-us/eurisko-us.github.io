@@ -317,7 +317,7 @@ author_profile: false
   
 </div>
 
-## [<center>Coding Commandments</center>](#coding-commandments)
+## [<center>Troubleshooting</center>](#troubleshooting)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 
