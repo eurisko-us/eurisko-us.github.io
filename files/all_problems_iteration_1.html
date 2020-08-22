@@ -13109,18 +13109,196 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="All-Assignment-Problems-for-Cohort-1">All Assignment Problems for Cohort 1<a class="anchor-link" href="#All-Assignment-Problems-for-Cohort-1">&#182;</a></h1>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-35-1">Problem 35-1<a class="anchor-link" href="#Problem-35-1">&#182;</a></h1><p><strong>Location: <code>assignment-problems/assignment_35_statistics.py</code></strong></p>
+<hr>
+<p>To say that a random variable $X$ follows a probability distribution $p(x),$ is to say that $P(X=x) = p(x).$ Symbolically we write $X \sim p.$</p>
+<p>The <strong>expected value</strong> (also known as the <strong>mean</strong>) of a random variable $X \sim p$ is defined as the weighted sum of possible values, where the weights are given by the probability.</p>
+<ul>
+<li><p>In other words, $E[X] = \sum x p(x).$</p>
+</li>
+<li><p>It is common to denote $E[X]$ by $\bar{X}$ or $\left&lt; X \right&gt;.$</p>
+</li>
+</ul>
+<p>The <strong>variance</strong> of a random variable is the expected squared deviation from the mean.</p>
+<ul>
+<li>In other words, $\text{Var}[X] = E[(X-\bar{X})^2]$</li>
+</ul>
+<p>The <strong>standard deviation</strong> of a random variable is the square root of the variance.</p>
+<ul>
+<li>In other words, $\text{Std}[X] = \sqrt{ \text{Var}[X] }.$</li>
+</ul>
+<hr>
+<p><strong>Warning: No points will be given if you don't show your work.</strong></p>
+<p><strong>Part A</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Write the probability distribution $p_{4}(x)$ for getting $x$ heads on $4$ coin flips, where the coin is a fair coin (i.e. it lands on heads with probability $0.5$).</p>
+</li>
+<li><p>Let $X$ be the number of heads in $4$ coin flips. Then $X \sim p_{4}.$ Intuitively, what is the expected value of $X$? Explain the reasoning behind your intuition.</p>
+</li>
+<li><p>Compute the expected value of $X,$ <em>using the definition</em> $E[Y] = \sum x p(x).$ The answer you get should match your answer from (b).</p>
+</li>
+<li><p>Compute the variance of $X,$ <em>using the definition</em> $\text{Var}[X] = E[(X-\bar{X})^2].$</p>
+</li>
+<li><p>Compute the standard deviation of $X,$ <em>using the definition</em> $\text{Std}[X] = \sqrt{ \text{Var}[X] }.$</p>
+</li>
+</ol>
+<p><strong>Part B</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Write the probability distribution $p_{4,\lambda}(y)$ for getting $y$ heads on $4$ coin flips, where the coin is a <strong>biased</strong> coin that lands on heads with probability $\lambda.$</p>
+</li>
+<li><p>Let $Y$ be the number of heads in $4$ coin flips. Then $Y \sim p_{4,\lambda}.$ Intuitively, what is the expected value of $Y$? Your answer should be in terms of $\lambda.$ Explain the reasoning behind your intuition.</p>
+</li>
+<li><p>Compute the expected value of $Y,$ <em>using the definition</em> $E[Y] = \sum x p(x).$ The answer you get should match your answer from (b).</p>
+</li>
+<li><p>Compute the variance of $X,$ <em>using the definition</em> $\text{Var}[Y] = E[(Y-\bar{Y})^2].$</p>
+</li>
+<li><p>Compute the standard deviation of $X,$ <em>using the definition</em> $\text{Std}[Y] = \sqrt{ \text{Var}[Y] }.$</p>
+</li>
+</ol>
 
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-35-2">Problem 35-2<a class="anchor-link" href="#Problem-35-2">&#182;</a></h1><p><strong>Location: <code>machine-learning/analysis/assignment_35.py</code></strong></p>
+<hr>
+<p>Recall the following sandwich dataset:</p>
+
+<pre><code>Slices Beef | Tbsp Peanut Butter | Condiments  | Rating |
+--------------------------------------------------------------
+ 0          | 0                  | -           |    1   |
+ 0          | 0                  | mayo        |    1   |
+ 0          | 0                  | jelly       |    4   |
+ 0          | 0                  | mayo, jelly |    0   |
+ 5          | 0                  | -           |    4   |
+ 5          | 0                  | mayo        |    8   |
+ 5          | 0                  | jelly       |    1   |
+ 5          | 0                  | mayo, jelly |    0   |
+ 0          | 5                  | -           |    5   |
+ 0          | 5                  | mayo        |    0   |
+ 0          | 5                  | jelly       |    9   |
+ 0          | 5                  | mayo, jelly |    0   |
+ 5          | 5                  | -           |    0   |
+ 5          | 5                  | mayo        |    0   |
+ 5          | 5                  | jelly       |    0   |
+ 5          | 5                  | mayo, jelly |    0   |</code></pre>
+<p>In Assignment 29-1, you transformed <code>Condiments</code> into dummy variables and fit a linear model to the data.</p>
+
+<pre><code>rating = beta_0
+         + beta_1 ( slices beef ) + beta_2 ( tbsp pb ) + beta_3 ( mayo ) + beta_4 ( jelly ) 
+         + beta_5 ( slices beef ) ( tbsp pb ) + beta_6 ( slices beef ) ( jelly ) + beta_7 ( slices beef ) ( jelly )
+         + beta_8 ( tbsp pb ) ( mayo ) + beta_9 ( tbsp pb ) ( jelly )
+         + beta_10 ( mayo ) ( jelly )</code></pre>
+<p>The linear model captured the overall idea of the data, but it often gave weird predictions like negative ratings for a really bad sandwich.</p>
+<hr>
+<p><strong>YOUR TASK</strong></p>
+<p>This time, you will fit a logistic model to the data. This will squeeze the predicted ratings into the interval between $0$ and $10.$</p>
+<p>Normally, we use a logistic curve of the form $y=\dfrac{1}{1+e^{ \sum \beta_i x_i}}$ to model probability. But here, we are modeling ratings on a scale from $0$ to $10$ instead of probability on a scale of $0$ to $1.$ So we just need to change the numerator accordingly:</p>
+$$y=\dfrac{10}{1+e^{\sum \beta_i x_i}}$$<p>Note that any ratings or <code>0</code> will cause an issue when fitting the model. So, change them to <code>0.1</code>.</p>
+<p>With your model, <code>assert</code> that your predictions are within $0.25$ of the following correct predictions:</p>
+
+<pre><code>PREDICTED RATINGS
+
+no ingredients: 2.66
+mayo only: 0.59
+mayo and jelly: 0.07
+5 slices beef + mayo: 7.64
+5 tbsp pb + jelly: 8.94
+5 slices beef + 5 slices pb + mayo + jelly: 0.02</code></pre>
+<p><strong>You get 1 point for each matching prediction, and 4 points for code quality.</strong></p>
+<hr>
+<p><strong>Because you guys have been good about participating in #help this week...</strong> I will be nice and give you the final transformed dataset so you don't have to worry about data entry and processing. Here it is:</p>
+
+<pre><code>columns = ['beef', 'pb', 'mayo', 'jelly', 'rating',
+           'beef_pb', 'beef_mayo', 'beef_jelly', 'pb_mayo', 'pb_jelly',
+           'mayo_jelly', 'constant']
+data = [[ 0,  0,  0,  0,  1,    0,  0,  0,  0,  0,  0,  1],
+        [ 0,  0,  1,  0,  1,    0,  0,  0,  0,  0,  0,  1],
+        [ 0,  0,  0,  1,  4,    0,  0,  0,  0,  0,  0,  1],
+        [ 0,  0,  1,  1,  0.1,  0,  0,  0,  0,  0,  1,  1],
+        [ 5,  0,  0,  0,  4,    0,  0,  0,  0,  0,  0,  1],
+        [ 5,  0,  1,  0,  8,    0,  5,  0,  0,  0,  0,  1],
+        [ 5,  0,  0,  1,  1,    0,  0,  5,  0,  0,  0,  1],
+        [ 5,  0,  1,  1,  0.1,  0,  5,  5,  0,  0,  1,  1],
+        [ 0,  5,  0,  0,  5,    0,  0,  0,  0,  0,  0,  1],
+        [ 0,  5,  1,  0,  0.1,  0,  0,  0,  5,  0,  0,  1],
+        [ 0,  5,  0,  1,  9,    0,  0,  0,  0,  5,  0,  1],
+        [ 0,  5,  1,  1,  0.1,  0,  0,  0,  5,  5,  1,  1],
+        [ 5,  5,  0,  0,  0.1, 25,  0,  0,  0,  0,  0,  1],
+        [ 5,  5,  1,  0,  0.1, 25,  5,  0,  5,  0,  0,  1],
+        [ 5,  5,  0,  1,  0.1, 25,  0,  5,  0,  5,  0,  1],
+        [ 5,  5,  1,  1,  0.1, 25,  5,  5,  5,  5,  1,  1]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-35-3">Problem 35-3<a class="anchor-link" href="#Problem-35-3">&#182;</a></h1><p>Make sure that your tests in <code>tests/test_combat_test_player.py</code> are written and pass completely.</p>
+<p>You get 1 point per test that passes. There are 7 tests in total. These should be easy points because you "should" already have done it in Assignment 29.</p>
+<p>But I'm not confident that everyone's tests were actually working fully, because it wasn't graded over the summer. Now it's graded, so make sure the tests work COMPLETELY! And make sure you check for all components mentioned in each test below.</p>
+<p><strong>Note:</strong> These tests are using ASCENDING die rolls. In the next assignment, we'll implement more tests based on what we figured out the combat events should be for DESCENDING die rolls.</p>
+<hr>
+<ul>
+<li><p>At the end of Turn 1 Economic Phase:</p>
+<ul>
+<li>Player 1 has 1 CP, 3 scouts at (2,2), 1 destroyer at (2,0)</li>
+<li>Player 2 has 4 CP, 1 destroyer at (2,4).</li>
+</ul>
+</li>
+<li><p>At the end of Turn 2 Movement Phase:</p>
+<ul>
+<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
+<li>Player 2 has 1 destroyer at (2,2)</li>
+</ul>
+</li>
+<li><p>At the end of Turn 2 Combat Phase:</p>
+<ul>
+<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
+<li>Player 2 has no ships other than its home colony/shipyards</li>
+</ul>
+</li>
+<li><p>At the end of Turn 2 Economic Phase:</p>
+<ul>
+<li>Player 1 has 0 CP, 3 scouts at (2,2), 1 destroyer at (2,2).</li>
+<li>Player 2 has 1 CP, 1 scout at (2,4).</li>
+</ul>
+</li>
+<li><p>At the end of Turn 3 Movement Phase:</p>
+<ul>
+<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
+<li>Player 2 has 1 scout at (2,2)</li>
+</ul>
+</li>
+<li><p>At the end of Turn 3 Combat Phase:</p>
+<ul>
+<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
+<li>Player 2 has no ships other than its home colony/shipyards</li>
+</ul>
+</li>
+<li><p>At the end of Turn 3 Economic Phase:</p>
+<ul>
+<li>Player 1 has 0 CP, 2 scouts and 1 destroyer at (2,0).</li>
+<li>Player 2 has 4 CP, no ships other than its home colony/shipyards</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
