@@ -14,6 +14,16 @@ author_profile: false
 <br>
 
 <font size="3em"><ol reversed start="34">
+    <li><b>Monday, August 24</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/449376256">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-1">Expected Value and Associated Statisics</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-2">Logistic Regression for Sandwich Ratings</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-3">CombatPlayer Tests - Ascending Die Rolls</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, August 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/449376256">Class Recording</a>
         <br>Assignment Problems:
