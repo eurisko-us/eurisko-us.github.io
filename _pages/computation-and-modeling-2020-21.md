@@ -14,6 +14,16 @@ author_profile: false
 <br>
 
 <font size="3em"><ol reversed start="1">
+    <li><b>Monday, August 24</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/449365385">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-2-1">Unions and Intersections</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-2-2">Character-Counting via Dictionary</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-2-3">Computing the Nth Term of a Recursive Sequence</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, August 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/449365385">Class Recording</a>
         <br>Assignment Problems:
