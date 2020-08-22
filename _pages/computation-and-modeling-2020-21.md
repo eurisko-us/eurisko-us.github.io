@@ -13,7 +13,7 @@ author_profile: false
 
 <br>
 
-<font size="3em"><ol reversed start="1">
+<font size="3em"><ol reversed start="2">
     <li><b>Monday, August 24</b>
         <!--<br><a class="body" target="_blank" href="https://vimeo.com/449365385">Class Recording</a>-->
         <br>Assignment Problems:
