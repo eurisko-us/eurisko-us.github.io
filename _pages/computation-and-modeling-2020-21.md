@@ -13,7 +13,17 @@ author_profile: false
 
 <br>
 
-<font size="3em"><ol reversed start="2">
+<font size="3em"><ol reversed start="3">
+    <li><b>Wednesday, August 26</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/449365385">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-1">Converting Binary to Decimal</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-2">Nesting and Flattening Dictionaries</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-3">Implementing a Stack</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, August 24</b>
         <!--<br><a class="body" target="_blank" href="https://vimeo.com/449365385">Class Recording</a>-->
         <br>Assignment Problems:
