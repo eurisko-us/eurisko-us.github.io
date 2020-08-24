@@ -13119,6 +13119,111 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-3-1">Problem 3-1<a class="anchor-link" href="#Problem-3-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/base_10.py</code></p>
+<p><strong>Grading:</strong> 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
+<p>Write a function <code>convert_to_base_10</code> that converts a number from base-2 (binary) to base-10 (decimal). For example, the binary number $10011$ corresponds to the decimal number
+$$
+1 \cdot 2^{4} + 0 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 1 \cdot 2^0 = 19.
+$$</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; convertToBase10(10011)
+19</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-3-2">Problem 3-2<a class="anchor-link" href="#Problem-3-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/dictionary_conversions.py</code></p>
+<p><strong>Grading:</strong> for each part (a) and (b), you get 1 point for passing the test, and then (assuming it passes the test) 1 point for code quality</p>
+<p><strong>a.</strong> Write a function <code>make_nested</code> which takes a "flat" dictionary and converts it into a nested dictionary based on underscores in the the key names. You can assume that all keys have exactly one underscore.</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; colors = {
+  'animal_bumblebee': ['yellow', 'black'],
+  'animal_elephant': ['gray'],
+  'animal_fox': ['orange', 'white'],
+  'food_apple': ['red', 'green', 'yellow'],
+  'food_cheese': ['white', 'orange']
+  }
+&gt;&gt;&gt; make_nested(colors)
+{
+  'animal': {
+    'bumblebee': ['yellow', 'black'],
+    'elephant': ['gray'],
+    'fox': ['orange', 'white']
+  },
+  'food': {
+    'apple': ['red', 'green', 'yellow'],
+    'cheese': ['white', 'orange']
+  }
+}</code></pre>
+<p><strong>b.</strong> Write a function <code>flatten</code> which takes a nested dictionary and converts it into a flat dictionary based on the key names. You can assume that the nested dictionary only has one level of nesting, meaning that in the output, each key will have exactly one underscore.</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; colors = {
+  'animal': {
+    'bumblebee': ['yellow', 'black'],
+    'elephant': ['gray'],
+    'fox': ['orange', 'white']
+  },
+  'food': {
+    'apple': ['red', 'green', 'yellow'],
+    'cheese': ['white', 'orange']
+  }
+}
+&gt;&gt;&gt; flatten(colors)
+{
+  'animal_bumblebee': ['yellow', 'black'],
+  'animal_elephant': ['gray'],
+  'animal_fox': ['orange', 'white'],
+  'food_apple': ['red', 'green', 'yellow'],
+  'food_cheese': ['white', 'orange']
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-3-3">Problem 3-3<a class="anchor-link" href="#Problem-3-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/stack.py</code></p>
+<p><strong>Grading:</strong> you get 0.5 points for passing each test, and then (assuming your code passes all the tests) 2 points for code quality.</p>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type">stack</a>. That is, create a class <code>Stack</code> which operates on an attribute <code>data</code> using the following methods:</p>
+<ul>
+<li><p><code>push</code>: add a new item on top of the stack</p>
+</li>
+<li><p><code>pop</code>: remove the top (rightmost) item from the stack</p>
+</li>
+<li><p><code>peek</code>: return the top item without modifying the stack</p>
+</li>
+</ul>
+<p>Assert that your class passes the following sequence of 5 tests. (You should write 5 <code>assert</code> statements in total.)</p>
+
+<pre><code>&gt;&gt;&gt; s = Stack()
+&gt;&gt;&gt; s.data
+[]
+&gt;&gt;&gt; s.push('a')
+&gt;&gt;&gt; s.push('b')
+&gt;&gt;&gt; s.push('c')
+&gt;&gt;&gt; s.data
+['a', 'b', 'c']
+&gt;&gt;&gt; s.pop()
+&gt;&gt;&gt; s.data
+['a', 'b']
+&gt;&gt;&gt; s.peek()
+'b'
+&gt;&gt;&gt; s.data
+['a', 'b']</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-2-1">Problem 2-1<a class="anchor-link" href="#Problem-2-1">&#182;</a></h1><p><strong>Location: <code>assignment-problems/union_intersection.py</code></strong></p>
 <p><strong>a.</strong> (1 point for code quality; 1 point for passing test)</p>
 <p>Write a function <code>intersection</code> that computes the intersection of two lists. Assert that it passes the following test:</p>
