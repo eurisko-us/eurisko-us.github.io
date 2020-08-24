@@ -13206,7 +13206,7 @@ div#notebook {
 <p><strong>YOUR TASK</strong></p>
 <p>This time, you will fit a logistic model to the data. This will squeeze the predicted ratings into the interval between $0$ and $10.$</p>
 <p>Normally, we use a logistic curve of the form $y=\dfrac{1}{1+e^{ \sum \beta_i x_i}}$ to model probability. But here, we are modeling ratings on a scale from $0$ to $10$ instead of probability on a scale of $0$ to $1.$ So we just need to change the numerator accordingly:</p>
-$$y=\dfrac{10}{1+e^{\sum \beta_i x_i}}$$<p>Note that any ratings or <code>0</code> will cause an issue when fitting the model. So, change them to <code>0.1</code>.</p>
+$$y=\dfrac{10}{1+e^{\sum \beta_i x_i}}$$<p>Note that any ratings of <code>0</code> will cause an issue when fitting the model. So, change them to <code>0.1</code>.</p>
 <p>With your model, <code>assert</code> that your predictions are within $0.25$ of the following correct predictions:</p>
 
 <pre><code>PREDICTED RATINGS
