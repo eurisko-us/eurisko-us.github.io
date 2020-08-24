@@ -19,7 +19,7 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-1">Converting Binary to Decimal</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-2">Nesting and Flattening Dictionaries</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-2">Turning a Flat Dictionary into a Nested Dictionary</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-3-3">Implementing a Stack</a></li>
         </ul></font>
     </li>
