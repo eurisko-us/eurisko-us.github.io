@@ -13119,6 +13119,141 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-4-1">Problem 4-1<a class="anchor-link" href="#Problem-4-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/flatten.py</code></p>
+<p><strong>Grading:</strong> 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
+<p>Write a function <code>flatten</code> which takes a nested dictionary and converts it into a flat dictionary based on the key names. You can assume that the nested dictionary only has one level of nesting, meaning that in the output, each key will have exactly one underscore.</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; colors = {
+  'animal': {
+    'bumblebee': ['yellow', 'black'],
+    'elephant': ['gray'],
+    'fox': ['orange', 'white']
+  },
+  'food': {
+    'apple': ['red', 'green', 'yellow'],
+    'cheese': ['white', 'orange']
+  }
+}
+&gt;&gt;&gt; flatten(colors)
+{
+  'animal_bumblebee': ['yellow', 'black'],
+  'animal_elephant': ['gray'],
+  'animal_fox': ['orange', 'white'],
+  'food_apple': ['red', 'green', 'yellow'],
+  'food_cheese': ['white', 'orange']
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-4-2">Problem 4-2<a class="anchor-link" href="#Problem-4-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/convert_to_base_2.py</code></p>
+<p><strong>Grading:</strong> 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
+<p>Write a function <code>convert_to_base_2</code> that converts a number from base-10 to base-2. Assert that it passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; convert_to_base_2(19)
+10011</code></pre>
+<p>Hint: use $\log_2$ to figure out how many digits there will be in the binary number. Then, fill up the binary number, repeatedly subtracting off the next-largest power of 2 if possible.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-4-3">Problem 4-3<a class="anchor-link" href="#Problem-4-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/linear_encoding_cryptography.py</code></p>
+<p><strong>Grading:</strong> for each part, you get 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
+<p>In Assignment 1, we encountered the trivial encoding function which maps</p>
+<ul>
+<li><p><code>' '</code> $\rightarrow 0,$</p>
+</li>
+<li><p><code>'a'</code> $\rightarrow 1,$</p>
+</li>
+<li><p><code>'b'</code> $\rightarrow 2,$</p>
+</li>
+</ul>
+<p>and so on.</p>
+<p>Using a linear encoding function $s(x) = 2x+3,$ the message <code>'a cat'</code> can be encoded as follows:</p>
+<ol>
+<li><p>Original message: <code>'a cat'</code></p>
+</li>
+<li><p>Trivial encoding: <code>[1, 0, 3, 1, 20]</code></p>
+</li>
+<li><p>Linear encoding: <code>[5, 3, 9, 5, 43]</code></p>
+</li>
+</ol>
+<p><strong>a.</strong> Create a function <code>encode(string,a,b)</code> which encodes a string using the linear encoding function $s(x) = ax+b.$ Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; get_encoding('a cat', 2, 3)
+[5, 3, 9, 5, 43]</code></pre>
+<p><strong>b.</strong> Create a function <code>decode(numbers,a,b)</code> which attempts to decode a given list of <code>numbers</code> using the linear encoding function $s(x) = ax+b.$</p>
+<p>To do this, you should apply the inverse encoding $s^{-1}(x) = \dfrac{x-b}{a},$ to all the numbers in the list and then check if they are all integers in the range from $0$ to $26$ (inclusive). If they are, then return the corresponding letters; if they are not, then return False.</p>
+<p>Assert that your function passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; decode([5, 3, 9, 5, 43], 2, 3)
+'a cat'
+
+for debugging purposes, here's the scratch work for you:
+[(5-3)/2, (3-3)/2, (9-3)/2, (5-3)/2, (43-3)/2]
+[1, 0, 3, 1, 20]
+'a cat'
+
+&gt;&gt;&gt; decode([1, 3, 9, 5, 43], 2, 3)
+False
+
+for debugging purposes, here's the scratch work for you:
+[(1-3)/2, (3-3)/2, (9-3)/2, (5-3)/2, (43-3)/2]
+[-1, 0, 3, 1, 20]
+False (because -1 does not correspond to a letter)
+
+&gt;&gt;&gt; decode([5, 3, 9, 5, 44], 2, 3)
+False
+
+for debugging purposes, here's the scratch work for you:
+[(5-3)/2, (3-3)/2, (9-3)/2, (5-3)/2, (44-3)/2]
+[1, 0, 3, 1, 20.5]
+False (because 20.5 does not correspond to a letter)</code></pre>
+<p><strong>c.</strong> Decode the message</p>
+
+<pre><code>[377,
+ 717,
+ 71,
+ 513,
+ 105,
+ 921,
+ 581,
+ 547,
+ 547,
+ 105,
+ 377,
+ 717,
+ 241,
+ 71,
+ 105,
+ 547,
+ 71,
+ 377,
+ 547,
+ 717,
+ 751,
+ 683,
+ 785,
+ 513,
+ 241,
+ 547,
+ 751],</code></pre>
+<p>given that it was encoded with a linear encoding function $s(x) = ax+b$ where $a,b \in \{ 0, 1, 2, \ldots, 100 \}.$</p>
+<p>You should run through each combination of $a$ and $b,$ try to decode the list of numbers using that combination, and if you get a valid decoding, then print it out. Then, you can visually inspect all the decodings you printed out to find the one that makes sense.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-3-1">Problem 3-1<a class="anchor-link" href="#Problem-3-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/convert_to_base_10.py</code></p>
 <p><strong>Grading:</strong> 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
 <p>Write a function <code>convert_to_base_10</code> that converts a number from base-2 (binary) to base-10 (decimal). For example, the binary number $10011$ corresponds to the decimal number
