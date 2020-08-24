@@ -20,7 +20,6 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-1">Expected Value and Associated Statisics</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-2">Logistic Regression for Sandwich Ratings</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-35-3">CombatPlayer Tests - Ascending Die Rolls</a></li>
         </ul></font>
     </li>
     <br>
