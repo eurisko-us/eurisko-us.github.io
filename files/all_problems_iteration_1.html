@@ -13119,6 +13119,536 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Ascending Rolls (need to correct this to account for 20 cp from home colony)</p>
+
+<pre><code>STARTING CONDITIONS
+
+Players 1 and 2
+    are CombatTestingPlayers
+    start with 20 CPs
+    have an initial fleet of 3 scouts, 3 colony ships, 4 ship yards
+
+---
+
+TURN 1 - MOVEMENT PHASE
+
+Player 1:
+    Scouts 1,2,3: (2,0) --&gt; (2,2)
+    Colony Ships 4,5,6: (2,0) --&gt; (2,2)
+
+Player 2:
+    Scouts 1,2,3: (2,4) --&gt; (2,2)
+    Colony Ships 4,5,6: (2,4) --&gt; (2,2)
+
+COMBAT PHASE
+
+Colony Ships are removed
+
+| PLAYER |        SHIP        | HEALTH  |
+----------------------------------------
+|    1   |         Scout 1    |    1    |
+|    1   |         Scout 2    |    1    |
+|    1   |         Scout 3    |    1    |
+|    2   |         Scout 1    |    1    |
+|    2   |         Scout 2    |    1    |
+|    2   |         Scout 3    |    1    |
+
+Attack 1
+    Attacker: Player 1 Scout 1
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Die Roll: 1
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+|    2   |         Scout 2        |    1    |
+|    2   |         Scout 3        |    1    |
+
+Attack 2
+    Attacker: Player 1 Scout 2
+    Defender: Player 2 Scout 2
+    Largest Roll to Hit: 3
+    Die Roll: 2
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+|    2   |         Scout 3        |    1    |
+
+Attack 3
+    Attacker: Player 1 Scout 3
+    Defender: Player 2 Scout 3
+    Largest Roll to Hit: 3
+    Dice Roll: 3
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+
+Combat phase complete
+
+------------------------
+
+TURN 1 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 20)
+        colony income: +3 CP/Home Colony x 1 Colony = +20 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts = -3 CP
+
+    PURCHASES (starting CP: 20)
+        ship size technology 2: -10 CP
+        destroyer: -9 CP
+
+    REMAINING CP: 1
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 20)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    PURCHASES (starting CP: 23)
+        ship size technology 2: -10 CP
+        destroyer: -9 CP
+
+    REMAINING CP: 4
+
+------------------------
+
+TURN 2 - MOVEMENT PHASE
+
+Player 1:
+    Scouts 1,2,3: stay at (2,2)
+    Destroyer 1 : (2,0) --&gt; (2,2)
+
+Player 2:
+    Destroyer 1: (2,4) --&gt; (2,2)
+
+------------------------
+
+TURN 2 - COMBAT PHASE
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Destroyer 1    |    1    |
+|    2   |         Destroyer 1    |    1    |
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+
+Attack 1
+    Attacker: Player 1 Destroyer 1
+    Defender: Player 2 Destroyer 1
+    Largest Roll to Hit: 4
+    Dice Roll: 4
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Destroyer 1    |    1    |
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+
+------------------------
+
+TURN 2 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 1)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts -1 CP/Destroyer x 1 Destroyer = -4 CP
+
+    REMAINING CP: 0
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 4)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    PURCHASES (starting CP: 7)
+        scout: -6 CP
+
+    REMAINING CP: 1
+
+------------------------
+
+TURN 3 - MOVEMENT PHASE
+
+Player 1:
+    Scouts 1,2,3: stay at (2,2)
+    Destroyer 1 : stay at (2,2)
+
+Player 2:
+    Scout 1: (2,4) --&gt; (2,2)
+
+------------------------
+
+TURN 3 - COMBAT PHASE
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Destroyer 1    |    1    |
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+|    2   |         Scout 1        |    1    |
+
+Attack 1
+    Attacker: Player 1 Destroyer 1
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 4
+    Dice Roll: 5
+    Hit or Miss: Miss
+
+Attack 2
+    Attacker: Player 1 Scout 1
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Dice Roll: 6
+    Hit or Miss: Miss
+
+Attack 3
+    Attacker: Player 1 Scout 2
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Dice Roll: 1
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Destroyer 1    |    1    |
+|    1   |         Scout 1        |    1    |
+|    1   |         Scout 2        |    1    |
+|    1   |         Scout 3        |    1    |
+
+------------------------
+
+TURN 3 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 0)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts -1 CP/Destroyer x 1 Destroyer = -4 CP
+
+    REMOVALS
+        remove scout 3 due to inability to pay maintenance costs
+
+    REMAINING CP: 0
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 1)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    REMAINING CP: 4</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Descending Rolls (need to correct this to account for 20 cp from home colony)</p>
+
+<pre><code>STARTING CONDITIONS
+
+Players 1 and 2
+    are CombatTestingPlayers
+    start with 20 CPs
+    have an initial fleet of 3 scouts, 3 colony ships, 4 ship yards
+
+---
+
+TURN 1 - MOVEMENT PHASE
+
+Player 1:
+    Scouts 1,2,3: (2,0) --&gt; (2,2)
+    Colony Ships 4,5,6: (2,0) --&gt; (2,2)
+
+Player 2:
+    Scouts 1,2,3: (2,4) --&gt; (2,2)
+    Colony Ships 4,5,6: (2,4) --&gt; (2,2)
+
+COMBAT PHASE
+
+Colony Ships are removed
+
+| PLAYER |        SHIP        | HEALTH  |
+----------------------------------------
+|    1   |         Scout 1    |    1    |
+|    1   |         Scout 2    |    1    |
+|    1   |         Scout 3    |    1    |
+|    2   |         Scout 1    |    1    |
+|    2   |         Scout 2    |    1    |
+|    2   |         Scout 3    |    1    |
+
+Attack 1
+    Attacker: Player 1 Scout 1
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Die Roll: 6
+    Hit or Miss: Miss
+
+Attack 2
+    Attacker: Player 1 Scout 2
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Die Roll: 5
+    Hit or Miss: Miss
+
+Attack 3
+    Attacker: Player 1 Scout 3
+    Defender: Player 2 Scout 1
+    Largest Roll to Hit: 3
+    Die Roll: 4
+    Hit or Miss: Miss
+
+Attack 4
+    Attacker: Player 2 Scout 1
+    Defender: Player 1 Scout 1
+    Largest Roll to Hit: 3
+    Die Roll: 3
+    Hit or Miss: Hit
+
+| PLAYER |        SHIP        | HEALTH  |
+----------------------------------------
+|    1   |         Scout 2    |    1    |
+|    1   |         Scout 3    |    1    |
+|    2   |         Scout 1    |    1    |
+|    2   |         Scout 2    |    1    |
+|    2   |         Scout 3    |    1    |
+
+Attack 5
+    Attacker: Player 2 Scout 2
+    Defender: Player 1 Scout 2
+    Largest Roll to Hit: 3
+    Die Roll: 2
+    Hit or Miss: Hit
+
+| PLAYER |        SHIP        | HEALTH  |
+----------------------------------------
+|    1   |         Scout 3    |    1    |
+|    2   |         Scout 1    |    1    |
+|    2   |         Scout 2    |    1    |
+|    2   |         Scout 3    |    1    |
+
+Attack 5
+    Attacker: Player 2 Scout 3
+    Defender: Player 1 Scout 3
+    Largest Roll to Hit: 3
+    Die Roll: 1
+    Hit or Miss: Hit
+
+| PLAYER |        SHIP        | HEALTH  |
+----------------------------------------
+|    2   |         Scout 1    |    1    |
+|    2   |         Scout 2    |    1    |
+|    2   |         Scout 3    |    1    |
+
+Combat phase complete
+
+------------------------
+
+TURN 1 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 20)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    PURCHASES (starting CP: 23)
+        ship size technology 2: -10 CP
+        destroyer: -9 CP
+
+    REMAINING CP: 4
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 20)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts = -3 CP
+
+    PURCHASES (starting CP: 20)
+        ship size technology 2: -10 CP
+        destroyer: -9 CP
+
+    REMAINING CP: 1
+
+------------------------
+
+TURN 2 - MOVEMENT PHASE
+
+Player 1:
+    Destroyer 1 : (2,0) --&gt; (2,2)
+
+Player 2:
+    Scouts 1,2,3: stay at (2,2)
+    Destroyer 1: (2,4) --&gt; (2,2)
+
+------------------------
+
+TURN 2 - COMBAT PHASE
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    1   |         Destroyer 1    |    1    |
+|    2   |         Destroyer 1    |    1    |
+|    2   |         Scout 1        |    1    |
+|    2   |         Scout 2        |    1    |
+|    2   |         Scout 3        |    1    |
+
+Attack 1
+    Attacker: Player 1 Destroyer 1
+    Defender: Player 2 Destroyer 1
+    Largest Roll to Hit: 4
+    Dice Roll: 6
+    Hit or Miss: Miss
+
+Attack 2
+    Attacker: Player 2 Destroyer 1
+    Defender: Player 1 Destroyer 1
+    Largest Roll to Hit: 4
+    Dice Roll: 5
+    Hit or Miss: Miss
+
+Attack 3
+    Attacker: Player 2 Scout 1
+    Defender: Player 1 Destroyer 1
+    Largest Roll to Hit: 3
+    Dice Roll: 4
+    Hit or Miss: Miss
+
+Attack 4
+    Attacker: Player 2 Scout 2
+    Defender: Player 1 Destroyer 1
+    Largest Roll to Hit: 3
+    Dice Roll: 3
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    2   |         Destroyer 1    |    1    |
+|    2   |         Scout 1        |    1    |
+|    2   |         Scout 2        |    1    |
+|    2   |         Scout 3        |    1    |
+
+Combat phase complete
+
+------------------------
+
+TURN 2 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 4)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    PURCHASES (starting CP: 7)
+        scout: -6 CP
+
+    REMAINING CP: 1
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 1)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts - 1 CP/Destroyer x 1 Destroyer = -4 CP
+
+    PURCHASES (starting CP: 0)
+        none
+
+    REMAINING CP: 0
+
+------------------------
+
+TURN 3 - MOVEMENT PHASE
+
+Player 1:
+    Scout 1 : (2,0) --&gt; (2,2)
+
+Player 2:
+    Scouts 1,2,3: stay at (2,2)
+    Destroyer 1: stay at (2,2)
+
+------------------------
+
+TURN 3 - COMBAT PHASE
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    2   |         Destroyer 1    |    1    |
+|    2   |         Scout 1        |    1    |
+|    2   |         Scout 2        |    1    |
+|    2   |         Scout 3        |    1    |
+|    1   |         Scout 1        |    1    |
+
+
+Attack 1
+    Attacker: Player 1 Destroyer 1
+    Defender: Player 1 Scout 1
+    Largest Roll to Hit: 4
+    Dice Roll: 2
+    Hit or Miss: Hit
+
+| PLAYER |          SHIP          | HEALTH  |
+---------------------------------------------
+|    2   |         Destroyer 1    |    1    |
+|    2   |         Scout 1        |    1    |
+|    2   |         Scout 2        |    1    |
+|    2   |         Scout 3        |    1    |
+
+------------------------
+
+TURN 3 - ECONOMIC PHASE
+
+Player 1
+
+    INCOME/MAINTENANCE (starting CP: 1)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: 0
+
+    PURCHASES (starting CP: 4)
+        none
+
+    REMAINING CP: 4
+
+Player 2
+
+    INCOME/MAINTENANCE (starting CP: 0)
+        colony income: +3 CP/Colony x 1 Colony = +3 CP
+        maintenance costs: -1 CP/Scout x 3 Scouts - 1 CP/Destroyer x 1 Destroyer = -4 CP
+        removals: Scout 3
+
+    PURCHASES (starting CP: 0)
+        none
+
+    REMAINING CP: 0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-35-1">Problem 35-1<a class="anchor-link" href="#Problem-35-1">&#182;</a></h1><p><strong>Location: <code>assignment-problems/assignment_35_statistics.py</code></strong></p>
 <hr>
 <p>To say that a random variable $X$ follows a probability distribution $p(x),$ is to say that $P(X=x) = p(x).$ Symbolically we write $X \sim p.$</p>
@@ -13240,62 +13770,6 @@ data = [[ 0,  0,  0,  0,  1,    0,  0,  0,  0,  0,  0,  1],
         [ 5,  5,  1,  0,  0.1, 25,  5,  0,  5,  0,  0,  1],
         [ 5,  5,  0,  1,  0.1, 25,  0,  5,  0,  5,  0,  1],
         [ 5,  5,  1,  1,  0.1, 25,  5,  5,  5,  5,  1,  1]]</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-35-3">Problem 35-3<a class="anchor-link" href="#Problem-35-3">&#182;</a></h1><p>Make sure that your tests in <code>tests/test_combat_test_player.py</code> are written and pass completely.</p>
-<p>You get 1 point per test that passes. There are 7 tests in total. These should be easy points because you "should" already have done it in Assignment 29.</p>
-<p>But I'm not confident that everyone's tests were actually working fully, because it wasn't graded over the summer. Now it's graded, so make sure the tests work COMPLETELY! And make sure you check for all components mentioned in each test below.</p>
-<p><strong>Note:</strong> These tests are using ASCENDING die rolls. In the next assignment, we'll implement more tests based on what we figured out the combat events should be for DESCENDING die rolls.</p>
-<hr>
-<ul>
-<li><p>At the end of Turn 1 Economic Phase:</p>
-<ul>
-<li>Player 1 has 1 CP, 3 scouts at (2,2), 1 destroyer at (2,0)</li>
-<li>Player 2 has 4 CP, 1 destroyer at (2,4).</li>
-</ul>
-</li>
-<li><p>At the end of Turn 2 Movement Phase:</p>
-<ul>
-<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
-<li>Player 2 has 1 destroyer at (2,2)</li>
-</ul>
-</li>
-<li><p>At the end of Turn 2 Combat Phase:</p>
-<ul>
-<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
-<li>Player 2 has no ships other than its home colony/shipyards</li>
-</ul>
-</li>
-<li><p>At the end of Turn 2 Economic Phase:</p>
-<ul>
-<li>Player 1 has 0 CP, 3 scouts at (2,2), 1 destroyer at (2,2).</li>
-<li>Player 2 has 1 CP, 1 scout at (2,4).</li>
-</ul>
-</li>
-<li><p>At the end of Turn 3 Movement Phase:</p>
-<ul>
-<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
-<li>Player 2 has 1 scout at (2,2)</li>
-</ul>
-</li>
-<li><p>At the end of Turn 3 Combat Phase:</p>
-<ul>
-<li>Player 1 has 3 scouts and 1 destroyer at (2,2)</li>
-<li>Player 2 has no ships other than its home colony/shipyards</li>
-</ul>
-</li>
-<li><p>At the end of Turn 3 Economic Phase:</p>
-<ul>
-<li>Player 1 has 0 CP, 2 scouts and 1 destroyer at (2,0).</li>
-<li>Player 2 has 4 CP, no ships other than its home colony/shipyards</li>
-</ul>
-</li>
-</ul>
 
 </div>
 </div>
