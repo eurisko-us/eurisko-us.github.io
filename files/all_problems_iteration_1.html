@@ -13800,7 +13800,7 @@ combat phase completed</code></pre>
 
 <pre><code>rating = beta_0
          + beta_1 ( slices beef ) + beta_2 ( tbsp pb ) + beta_3 ( mayo ) + beta_4 ( jelly ) 
-         + beta_5 ( slices beef ) ( tbsp pb ) + beta_6 ( slices beef ) ( jelly ) + beta_7 ( slices beef ) ( jelly )
+         + beta_5 ( slices beef ) ( tbsp pb ) + beta_6 ( slices beef ) ( mayo) + beta_7 ( slices beef ) ( jelly )
          + beta_8 ( tbsp pb ) ( mayo ) + beta_9 ( tbsp pb ) ( jelly )
          + beta_10 ( mayo ) ( jelly )</code></pre>
 <p>The linear model captured the overall idea of the data, but it often gave weird predictions like negative ratings for a really bad sandwich.</p>
@@ -13818,7 +13818,7 @@ mayo only: 0.59
 mayo and jelly: 0.07
 5 slices beef + mayo: 7.64
 5 tbsp pb + jelly: 8.94
-5 slices beef + 5 slices pb + mayo + jelly: 0.02</code></pre>
+5 slices beef + 5 tbsp pb + mayo + jelly: 0.02</code></pre>
 <p><strong>You get 1 point for each matching prediction, and 4 points for code quality.</strong></p>
 <hr>
 <p><strong>Because you guys have been good about participating in #help this week...</strong> I will be nice and give you the final transformed dataset so you don't have to worry about data entry and processing. Here it is:</p>
