@@ -12,14 +12,25 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto">  
 
 <br>
-
+<font size="3em"><ol reversed start="36">
+    <li><b>Friday, August 28</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-37-1">Linear and Logistic Regression by Hand</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-37-2">DataFrames -- Column Transformations</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-37-3">Graph Distance via Breadth-First Search</a></li>
+         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-37-4">Verifying CombatPlayer Tests</a></li>
+        </ul></font>
+    </li>
+    <br>
 <font size="3em"><ol reversed start="36">
     <li><b>Wednesday, August 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-36-1">Exponential Distributions</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-36-2">Verifying CombatPlayer Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-36-2">DataFrames -- Initialization and Column Filtering</a></li>
         </ul></font>
     </li>
     <br>
