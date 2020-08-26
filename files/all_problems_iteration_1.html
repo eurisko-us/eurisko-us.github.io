@@ -13119,50 +13119,13 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-36-1">Problem 36-1<a class="anchor-link" href="#Problem-36-1">&#182;</a></h1><p><strong>Location:</strong> `assignment-problems/exponential_distribution.txt</p>
-<p>Continuous distributions are defined similarly to discrete distributions. There are only 2 big differences:</p>
-<ul>
-<li><p>We use an integral to compute expectation: if $X \sim p,$ then $$E[X] = \int_{-\infty}^\infty x \, p(x) \, \mathrm{d}x.$$</p>
-</li>
-<li><p>We talk about probability on an interval rather than at a point: if $X \sim p,$ then $$P(a &lt; X \leq b) = \int_a^b p(x) \, \mathrm{d}x$$</p>
-</li>
-</ul>
-<p>Note the following definitions:</p>
-<ul>
-<li>The cumulative distribution function is given by $$P(X \leq x) = \int_0^x p(x) \, \mathrm{d}x.$$</li>
-</ul>
-<p><strong>This problem deals with integrals, so you need to show your work by hand (i.e. not using code). You can just type out words in place of symbols, e.g.</strong></p>
+<h1 id="Problem-37-1">Problem 37-1<a class="anchor-link" href="#Problem-37-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/regression_by_hand.txt</code></p>
+<p><strong>Grading:</strong> each part is worth 5 points.</p>
+<p>Suppose you are given the following dataset:</p>
 
-<pre><code>integral of e^(-5x) from x=0 to x=1
-= -1/5 e^(-5x) from x=0 to x=1
-= -1/5 e^(-5) - (-1/5)
-= [ 1 - e^(-5) ] / 5</code></pre>
-<p><strong>PART A</strong> (1 point per correct answer <em>with supporting work</em>)</p>
-<ol>
-<li><p>Consider the exponential distribution defined by $$p_2(x) = \begin{cases} 2 e^{-2 x} & x \geq 0 \\ 0 & x < 0 \end{cases}.$$ Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
-</li>
-<li><p>Given that $X \sim p_2,$ compute $P(0 &lt; X &lt; 1).$</p>
-</li>
-<li><p>Given that $X \sim p_2,$ compute the cumulative distribution function $P(X &lt; x).$</p>
-</li>
-<li><p>Given that $X \sim p_2,$ compute $E[X].$</p>
-</li>
-<li><p>Given that $X \sim p_2,$ compute $\text{Var}[X].$</p>
-</li>
-</ol>
-<p><strong>PART B</strong> (1 point per correct answer <em>with supporting work</em>)</p>
-<ol>
-<li><p>Consider the general exponential distribution defined by $p_\lambda(x) = \lambda e^{-\lambda x}.$ Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
-</li>
-<li><p>Given that $X \sim p_\lambda,$ compute $P(0 &lt; X &lt; 1).$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
-</li>
-<li><p>Given that $X \sim p_\lambda,$ compute the cumulative distribution function $P(X &lt; x).$ Your answer should be general in terms of $\lambda$ and $x,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
-</li>
-<li><p>Given that $X \sim p_\lambda,$ compute $E[X].$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
-</li>
-<li><p>Given that $X \sim p_\lambda,$ compute $\text{Var}[X].$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
-</li>
-</ol>
+<pre><code>data = [(1,0.2), (2,0.25), (3,0.5)]</code></pre>
+<p>a) Fit a linear regression model $y=a+bx$ <strong>by hand</strong>. Show all of your steps <strong>in a text file</strong>. No code allowed!</p>
+<p>b) Fit a logistic regression model $y=\dfrac{1}{1+e^{a+bx} }$ <strong>by hand</strong>. Show all of your steps <strong>in a text file</strong>. No code allowed!</p>
 
 </div>
 </div>
@@ -13170,7 +13133,74 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-36-2">Problem 36-2<a class="anchor-link" href="#Problem-36-2">&#182;</a></h1><p>There is a correction we need to make to our combat player tests. The home base colony, aka the "home world", pays 20 CP per round. Previously, we had been using a different amount (which applies to non-home-world colonies).</p>
+<h1 id="Problem-37-2">Problem 37-2<a class="anchor-link" href="#Problem-37-2">&#182;</a></h1><p><strong>Grading:</strong> 5 points for code quality, 5 points for passing tests.</p>
+<p>Update your <code>DataFrame</code> to implement the following functionality:</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sara': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
+&gt;&gt;&gt; df1.data_dict
+{
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sara': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1.to_array()
+[[1, 2, 3]
+ [0, 1, 1]
+ [1, 0, 4]
+ [0, 2, 0]]
+
+&gt;&gt;&gt; def multiply_by_4(x):
+        return 4*x
+&gt;&gt;&gt; df2 = df1.apply('John', multiply_by_4)
+&gt;&gt;&gt; df2.to_array()
+[[1, 8, 3]
+ [0, 4, 1]
+ [1, 0, 4]
+ [0, 4, 0]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-37-3">Problem 37-3<a class="anchor-link" href="#Problem-37-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points for code quality, 5 points for passing tests.</p>
+<p>Implement a method <code>find_distance(i,j)</code> in your <code>Graph</code> class that uses breadth-first search to compute the number of steps that must be taken to get from the node at index <code>i</code> to the node at index <code>j</code>.</p>
+<p>You should do a breadth-first traversal starting from the node at index <code>i</code>, and count how many generations of children you have to go through until you reach the node with index <code>j</code>.</p>
+
+<pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(1,3),(3,4),(1,4),(4,5)]
+&gt;&gt;&gt; graph = Graph(edges)
+
+at this point, the graph looks like this:
+0 -- 1 -- 2
+     | \
+     3--4 -- 5
+
+&gt;&gt;&gt; graph.distance(0,4)
+2
+&gt;&gt;&gt; graph.distance(5,2)
+3
+&gt;&gt;&gt; graph.distance(0,5)
+3
+&gt;&gt;&gt; graph.distance(4,1)
+1
+&gt;&gt;&gt; graph.distance(3,3)
+0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-37-4">Problem 37-4<a class="anchor-link" href="#Problem-37-4">&#182;</a></h1><p>There is a correction we need to make to our combat player tests. The home base colony, aka the "home world", pays 20 CP per round. Previously, we had been using a different amount (which applies to non-home-world colonies).</p>
 <p>I've updated the combat player tests for ascending rolls and descending rolls. Now it's your job to update your combat player tests and make sure they pass. You just need to set your home colony to pay 20 CP per round, and then update your tests with those that I've given below. Provided your tests were working before, this should be a pretty quick problem.</p>
 <p><strong>You get 2 points for passing each test. So there are 2 x 6 = 12 points total.</strong> Let's get this out of the way, finally, so that we can build our first complete strategy player over the weekend!</p>
 <p><strong>Extra credit may be possible on this problem.</strong> Hopefully, these tests are completely correct. But as usual with Space Empires tests, there's a chance that I may have made a mistake somewhere. If you find that one of the tests is wrong, then you can get a "bounty point" for bringing it to my attention and explaining where the underlying error is. You can earn up to a maximum of 6 bounty points (1 per test).</p>
@@ -13721,6 +13751,100 @@ combat phase completed</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-36-1">Problem 36-1<a class="anchor-link" href="#Problem-36-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/exponential_distribution.txt</code></p>
+<p>Continuous distributions are defined similarly to discrete distributions. There are only 2 big differences:</p>
+<ul>
+<li><p>We use an integral to compute expectation: if $X \sim p,$ then $$E[X] = \int_{-\infty}^\infty x \, p(x) \, \mathrm{d}x.$$</p>
+</li>
+<li><p>We talk about probability on an interval rather than at a point: if $X \sim p,$ then $$P(a &lt; X \leq b) = \int_a^b p(x) \, \mathrm{d}x$$</p>
+</li>
+</ul>
+<p>Note the following definitions:</p>
+<ul>
+<li>The cumulative distribution function is given by $$P(X \leq x) = \int_0^x p(x) \, \mathrm{d}x.$$</li>
+</ul>
+<p><strong>This problem deals with integrals, so you need to show your work by hand (i.e. not using code). You can just type out words in place of symbols, e.g.</strong></p>
+
+<pre><code>integral of e^(-5x) from x=0 to x=1
+= -1/5 e^(-5x) from x=0 to x=1
+= -1/5 e^(-5) - (-1/5)
+= [ 1 - e^(-5) ] / 5</code></pre>
+<p><strong>PART A</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Consider the exponential distribution defined by $$p_2(x) = \begin{cases} 2 e^{-2 x} &amp; x \geq 0 \\ 0 &amp; x &lt; 0 \end{cases}.$$ Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $P(0 &lt; X &lt; 1).$</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute the cumulative distribution function $P(X &lt; x).$</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $E[X].$</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $\text{Var}[X].$</p>
+</li>
+</ol>
+<p><strong>PART B</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Consider the general exponential distribution defined by $p_\lambda(x) = \lambda e^{-\lambda x}.$ Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $P(0 &lt; X &lt; 1).$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute the cumulative distribution function $P(X &lt; x).$ Your answer should be general in terms of $\lambda$ and $x,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $E[X].$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $\text{Var}[X].$ Your answer should be general in terms of $\lambda,$ and it should match your answer from Part A if you set $\lambda = 2.$</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-36-2">Problem 36-2<a class="anchor-link" href="#Problem-36-2">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/dataframe.py</code></p>
+<p><strong>Grading:</strong> 5 points for code quality, 5 points for passing tests.</p>
+<p>Create a class <code>DataFrame</code> that implements the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sara': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sara'])
+&gt;&gt;&gt; df1.data_dict
+{
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sara': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1.to_array()
+[[1, 2, 3]
+ [0, 1, 1]
+ [1, 0, 4]
+ [0, 2, 0]]
+
+&gt;&gt;&gt; df1.columns
+['Pete', 'John', 'Sara']
+
+&gt;&gt;&gt; df2 = df1.filter_columns(['Sara', 'Pete'])
+&gt;&gt;&gt; df2.to_array()
+[[3, 1],
+ [1, 0],
+ [4, 1],
+ [0, 0]]
+
+&gt;&gt;&gt; df2.columns()
+['Sara', 'Pete']</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-35-1">Problem 35-1<a class="anchor-link" href="#Problem-35-1">&#182;</a></h1><p><strong>Location: <code>assignment-problems/assignment_35_statistics.py</code></strong></p>
 <hr>
 <p>To say that a random variable $X$ follows a probability distribution $p(x),$ is to say that $P(X=x) = p(x).$ Symbolically we write $X \sim p.$</p>
@@ -13800,7 +13924,7 @@ combat phase completed</code></pre>
 
 <pre><code>rating = beta_0
          + beta_1 ( slices beef ) + beta_2 ( tbsp pb ) + beta_3 ( mayo ) + beta_4 ( jelly ) 
-         + beta_5 ( slices beef ) ( tbsp pb ) + beta_6 ( slices beef ) ( mayo) + beta_7 ( slices beef ) ( jelly )
+         + beta_5 ( slices beef ) ( tbsp pb ) + beta_6 ( slices beef ) ( mayo ) + beta_7 ( slices beef ) ( jelly )
          + beta_8 ( tbsp pb ) ( mayo ) + beta_9 ( tbsp pb ) ( jelly )
          + beta_10 ( mayo ) ( jelly )</code></pre>
 <p>The linear model captured the overall idea of the data, but it often gave weird predictions like negative ratings for a really bad sandwich.</p>
