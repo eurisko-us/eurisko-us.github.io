@@ -14,7 +14,7 @@ author_profile: false
 <br>
 <font size="3em"><ol reversed start="37">
     <li><b>Friday, August 28</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>-->
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-37-1">Linear and Logistic Regression by Hand</a></li>
@@ -25,7 +25,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Wednesday, August 26</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/451932993">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-36-1">Exponential Distributions</a></li>
