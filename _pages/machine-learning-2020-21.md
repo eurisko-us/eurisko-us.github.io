@@ -12,7 +12,7 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto">  
 
 <br>
-<font size="3em"><ol reversed start="36">
+<font size="3em"><ol reversed start="37">
     <li><b>Friday, August 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
         <br>Assignment Problems:
@@ -24,7 +24,6 @@ author_profile: false
         </ul></font>
     </li>
     <br>
-<font size="3em"><ol reversed start="36">
     <li><b>Wednesday, August 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>
         <br>Assignment Problems:
