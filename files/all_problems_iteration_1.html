@@ -13761,7 +13761,7 @@ combat phase completed</code></pre>
 </ul>
 <p>Note the following definitions:</p>
 <ul>
-<li>The cumulative distribution function is given by $$P(X \leq x) = \int_0^x p(x) \, \mathrm{d}x.$$</li>
+<li>The cumulative distribution function is given by $$P(X \leq x) = \int_{-\infty}^x p(x) \, \mathrm{d}x.$$</li>
 </ul>
 <p><strong>This problem deals with integrals, so you need to show your work by hand (i.e. not using code). You can just type out words in place of symbols, e.g.</strong></p>
 
@@ -13773,9 +13773,9 @@ combat phase completed</code></pre>
 <ol>
 <li><p>Consider the exponential distribution defined by $$p_2(x) = \begin{cases} 2 e^{-2 x} &amp; x \geq 0 \\ 0 &amp; x &lt; 0 \end{cases}.$$ Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
 </li>
-<li><p>Given that $X \sim p_2,$ compute $P(0 &lt; X &lt; 1).$</p>
+<li><p>Given that $X \sim p_2,$ compute $P(0 &lt; X \leq 1).$</p>
 </li>
-<li><p>Given that $X \sim p_2,$ compute the cumulative distribution function $P(X &lt; x).$</p>
+<li><p>Given that $X \sim p_2,$ compute the cumulative distribution function $P(X \leq x).$</p>
 </li>
 <li><p>Given that $X \sim p_2,$ compute $E[X].$</p>
 </li>
@@ -13836,7 +13836,7 @@ combat phase completed</code></pre>
  [4, 1],
  [0, 0]]
 
-&gt;&gt;&gt; df2.columns()
+&gt;&gt;&gt; df2.columns
 ['Sara', 'Pete']</code></pre>
 
 </div>
