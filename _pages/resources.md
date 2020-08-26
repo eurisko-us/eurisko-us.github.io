@@ -15,9 +15,9 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 
-<br>Class meetings will take place on Google Hangouts: <a class="body" href="https://meet.google.com/ohx-efji-xpg">https://meet.google.com/ohx-efji-xpg</a>
+<br>Class meetings will take place on Google Hangouts: <a class="body" href="https://meet.google.com/ohx-efji-xpg">meet.google.com/ohx-efji-xpg</a>
 
-<br>Collaboration / help outside of class will take place on Slack: <a class="body" href="https://eurisko-us.slack.com/">https://eurisko-us.slack.com/</a>
+<br>Collaboration / help outside of class will take place on Slack: <a class="body" href="https://eurisko-us.slack.com/">eurisko-us.slack.com</a>
 
 <br><br><b>Computation & Modeling</b>
 <font size="3em"><ul>
