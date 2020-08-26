@@ -17,6 +17,8 @@ author_profile: false
 
 <br>Class meetings will take place on Google Hangouts: <a class="body" href="https://meet.google.com/ohx-efji-xpg">https://meet.google.com/ohx-efji-xpg</a>
 
+<br>Collaboration / help outside of class will take place on Slack: <a class="body" href="https://eurisko-us.slack.com/">https://eurisko-us.slack.com/</a>
+
 <br><br><b>Computation & Modeling</b>
 <font size="3em"><ul>
   <li>"B" Mondays from 8:30-8:50am</li>
