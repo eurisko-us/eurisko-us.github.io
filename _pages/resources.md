@@ -73,9 +73,7 @@ author_profile: false
   
   <br><b>Penalty:</b> Violation of this collaboration policy will result in earning no credit on the affected problem(s), with no opportunity for resubmission.
   
-<br><br>Here are some examples of things you can vs cannot do:
-
-<br>
+<br><br>Here are some examples of things you can vs cannot do:<br>
 
 <center>
 <table style="width:80%">
