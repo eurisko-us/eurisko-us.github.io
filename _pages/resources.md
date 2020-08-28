@@ -75,6 +75,7 @@ author_profile: false
   
 <br><br>
 
+<center>
 <table style="width:80%">
   <tr>
     <td width="50%"><b><center><font color="green"><b>You CAN:</b></font></center></b></td>
@@ -89,6 +90,7 @@ author_profile: false
    <td>Show your full solution that you're going to turn in.</td>
   </tr>
 </table>
+</center>
   
 </div>
 
