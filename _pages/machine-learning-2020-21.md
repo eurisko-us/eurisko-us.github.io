@@ -11,9 +11,9 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto">  
     
-<br><br>In general, all assignments are due by midnight the night before the next class. So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.
+<br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
-<br>
+<br><br>
 <font size="3em"><ol reversed start="37">
     <li><b>Friday, August 28</b>
         <!--<br><a class="body" target="_blank" href="https://vimeo.com/451223270">Class Recording</a>-->
