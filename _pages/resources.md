@@ -83,7 +83,7 @@ author_profile: false
   <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 3 specific things that could be improved.</li>
 </ul></font>
 
-<b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late.<br>
+<b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late.<br><br>
 
 <b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed.
 
