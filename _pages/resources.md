@@ -75,7 +75,7 @@ author_profile: false
   
 <br><br>
 
-<table>
+<table style="width:80%">
   <tr>
     <td width="50%"><b><center><font color="green"><b>You CAN:</b></font></center></b></td>
     <td width="50%"><b><center><font color="red"><b>You CANNOT:</b></font></center></b></td>
