@@ -71,14 +71,14 @@ author_profile: false
     <li>copy (i.e. plagiarize) others' code. (If you copy code and then change the variable names, it still counts as plagiarism.)</li>
   </ol>
   
-  <br><br><b>Penalty:</b> Violation of this collaboration policy will result in earning a zero on the affected problem(s), with no opportunity for resubmission.
+  <br><b>Penalty:</b> Violation of this collaboration policy will result in earning a zero on the affected problem(s), with no opportunity for resubmission.
   
-<br>
+<br><br>
 
 <table>
   <tr>
-    <td><b><center><font color="green"><b>You CAN:</b></font></center></b></td>
-    <td><b><center><font color="red"><b>You CANNOT:</b></font></center></b></td>
+    <td width="50%"><b><center><font color="green"><b>You CAN:</b></font></center></b></td>
+    <td width="50%"><b><center><font color="red"><b>You CANNOT:</b></font></center></b></td>
   </tr>
   <tr>
    <td>Post a line of your code on the #help channel</td>
