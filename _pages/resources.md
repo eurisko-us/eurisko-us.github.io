@@ -65,9 +65,31 @@ author_profile: false
 ## [<center>Collaboration Policy</center>](#collaboration-policy)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
-  <br>In general, you are free to get help from others on assignments. However, you are not allowed to copy (i.e. plagiarize) others' code.
+  <br>In general, you are free to help each other on assignments. However, you are not allowed to
+  <ol>
+    <li>share your full solutions with others, or</li>
+    <li>copy (i.e. plagiarize) others' code. (If you copy code and then change the variable names, it still counts as plagiarism.)</li>
+  </ol>
   
-  <br><br><b>Note:</b> if you copy code and then change the variable names, it still counts as plagiarism.
+  <br><br><b>Penalty:</b> Violation of this collaboration policy will result in earning a zero on the affected problem(s), with no opportunity for resubmission.
+  
+<br>
+
+<table>
+  <tr>
+    <td><b><center><font color="green"><b>You CAN:</b></font></center></b></td>
+    <td><b><center><font color="red"><b>You CANNOT:</b></font></center></b></td>
+  </tr>
+  <tr>
+   <td>Post a line of your code on the #help channel</td>
+   <td>Post your complete code on the #help channel</td>
+  </tr>
+  <tr>
+   <td>Screenshare with another student to discuss Python syntax, logic, and approaches to problems.</td>
+   <td>Show your full solution that you're going to turn in.</td>
+  </tr>
+</table>
+  
 </div>
 
 ## [<center>Grade Breakdown</center>](#grade-breakdown)
