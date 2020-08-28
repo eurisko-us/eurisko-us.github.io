@@ -65,7 +65,7 @@ author_profile: false
 ## [<center>Collaboration Policy</center>](#collaboration-policy)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
-  <br>In general, you are free to help each other on assignments. However, you are not allowed to
+  <br>In general, you are free to help each other on assignments. However, you are NOT allowed to
   <ol>
     <li>share your full solutions with others, or</li>
     <li>copy (i.e. plagiarize) others' code. (If you copy code and then change the variable names, it still counts as plagiarism.)</li>
