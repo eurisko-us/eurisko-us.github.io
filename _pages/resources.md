@@ -82,7 +82,7 @@ author_profile: false
     <td width="50%"><b><center><font color="red"><b>You CANNOT:</b></font></center></b></td>
   </tr>
   <tr>
-   <td>Post a line of your code on the #help channel</td>
+   <td>Post a line of your code, or describe an idea of how to approach a problem, on the #help channel</td>
    <td>Post your complete code on the #help channel</td>
   </tr>
   <tr>
