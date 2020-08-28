@@ -86,8 +86,8 @@ author_profile: false
    <td>Post your complete code on the #help channel</td>
   </tr>
   <tr>
-   <td>Screenshare with another student to discuss Python syntax, logic, and approaches to problems.</td>
-   <td>Show your full solution that you're going to turn in.</td>
+   <td>Screenshare with another student to discuss Python and approaches to problems</td>
+   <td>Show your full solution that you're going to turn in</td>
   </tr>
 </table>
 </center>
