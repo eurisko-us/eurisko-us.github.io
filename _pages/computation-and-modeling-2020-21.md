@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="4">
     <li><b>Friday, August 28</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/451223280">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/452679324">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-4-1">Flattening a Nested Dictionary</a></li>
