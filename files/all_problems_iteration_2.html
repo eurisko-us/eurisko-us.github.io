@@ -13119,6 +13119,108 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-5-1">Problem 5-1<a class="anchor-link" href="#Problem-5-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/comprehensions.py</code></p>
+<p><strong>Grading:</strong> 2 points for each part (a) and (b)</p>
+<p><strong>a.</strong> Implement a function <code>even_odd_tuples</code> that takes a list of numbers and labels each number as even or odd. Return a <a href="https://www.python-course.eu/list_comprehension.php">list comprehension</a> so that the function takes up only two lines, as follows:</p>
+
+<pre><code>def even_odd_tuples(numbers):
+   return [&lt;your code here&gt;]</code></pre>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; even_odd_tuples([1,2,3,5,8,11])
+[(1,'odd'),(2,'even'),(3,'odd'),(5,'odd'),(8,'even'),(11,'odd')]</code></pre>
+<p><strong>b.</strong> Implement a function <code>even_odd_dict</code> that again takes a list of numbers and labels each number as even or odd. This time, the output will be a dictionary. Use a <a href="https://www.geeksforgeeks.org/python-dictionary-comprehension/">dictionary comprehensions</a> so that the function takes up only two lines, as follows:</p>
+
+<pre><code>def even_odd_dict(numbers):
+   return {&lt;your code here&gt;}</code></pre>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; even_odd_dict([1,2,3,5,8,11])
+{
+    1:'odd',
+    2:'even',
+    3:'odd',
+    5:'odd',
+    8:'even',
+    11:'odd'
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-5-2">Problem 5-2<a class="anchor-link" href="#Problem-5-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/root_approximation.py</code></p>
+<p><strong>Grading:</strong> For each part (a) and (b), you get 2 points for code quality and 2 points for passing the tests. So there are 8 points in total to be had on this problem.</p>
+<p>The value of $\sqrt{2}$ is in the interval $[1,2].$ We will estimate the value of $\sqrt{2}$ by repeatedly narrowing these bounds.</p>
+<p><strong>a.</strong> Create a function <code>update_bounds(bounds)</code> that guesses a value halfway between the bounds, determines whether the guess was too high or too low, and updates the <code>bounds</code> accordingly.</p>
+<ul>
+<li><p>For example, starting with the bounds $[1,2],$ the guess would be $1.5.$ This guess is too high because $1.5^2 = 2.25 &gt; 2.$ So, the updated bounds would be $[1, 1.5].$</p>
+</li>
+<li><p>Now, using the bounds $[1,1.5]$, the next guess would be $1.25.$ This guess is too low because $1.25^2 = 1.5625 &lt; 2.$ So, the updated bounds would be $[1.25, 1.5].$</p>
+</li>
+</ul>
+<p>Assert that your function passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; update_bounds([1, 2])
+[1, 1.5]
+&gt;&gt;&gt; update_bounds([1, 1.5])
+[1.25, 1.5]</code></pre>
+<p><strong>b.</strong> Create a <strong>recursive function</strong> <code>estimate_root(precision)</code> that estimates the value of $\sqrt{2}$ by repeatedly calling <code>update_bounds</code> until the bounds are narrower than <code>precision</code>. You can start with the bounds $[1,2]$ again. Then it should return the midpoint of the final set of bounds.</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; estimate_root(0.1)
+1.40625
+
+note: the sequence of bounds would be
+[1, 2]
+[1, 1.5]
+[1.25, 1.5]
+[1.375, 1.5]
+[1.375, 1.4375]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-5-3">Problem 5-3<a class="anchor-link" href="#Problem-5-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/queue.py</code></p>
+<p><strong>Grading:</strong> you get 0.5 points for passing each test, and 2 points for code quality</p>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Queue_(abstract_data_type">queue</a>. That is, create a class <code>Queue</code> which operates on an attribute <code>data</code> using the following methods:</p>
+<ul>
+<li><p><code>enqueue</code>: add a new item to the back of the queue</p>
+</li>
+<li><p><code>dequeue</code>: remove the item at the front of the queue</p>
+</li>
+<li><p><code>peek</code>: return the item at the front without modifying the queue</p>
+</li>
+</ul>
+<p>Assert that the following tests pass:</p>
+
+<pre><code>&gt;&gt;&gt; q = Queue()
+&gt;&gt;&gt; q.data
+[]
+&gt;&gt;&gt; q.enqueue('a')
+&gt;&gt;&gt; q.enqueue('b')
+&gt;&gt;&gt; q.enqueue('c')
+&gt;&gt;&gt; q.data
+['a', 'b', 'c']
+&gt;&gt;&gt; q.dequeue()
+&gt;&gt;&gt; q.data
+['b', 'c']
+&gt;&gt;&gt; q.peek()
+'b'
+&gt;&gt;&gt; q.data
+['b', 'c']</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-4-1">Problem 4-1<a class="anchor-link" href="#Problem-4-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/flatten.py</code></p>
 <p><strong>Grading:</strong> 1 point for passing test, and then (assuming it passes the test) 1 point for code quality</p>
 <p>Write a function <code>flatten</code> which takes a nested dictionary and converts it into a flat dictionary based on the key names. You can assume that the nested dictionary only has one level of nesting, meaning that in the output, each key will have exactly one underscore.</p>
@@ -13304,7 +13406,7 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-3-3">Problem 3-3<a class="anchor-link" href="#Problem-3-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/stack.py</code></p>
 <p><strong>Grading:</strong> you get 0.5 points for passing each test, and then (assuming your code passes all the tests) 2 points for code quality.</p>
-<p>Implement a <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">stack</a>. That is, create a class <code>Stack</code> which operates on an attribute <code>data</code> using the following methods:</p>
+<p>Implement a <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type">stack</a>). That is, create a class <code>Stack</code> which operates on an attribute <code>data</code> using the following methods:</p>
 <ul>
 <li><p><code>push</code>: add a new item on top of the stack</p>
 </li>

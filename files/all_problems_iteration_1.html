@@ -13119,6 +13119,79 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-38-1">Problem 38-1<a class="anchor-link" href="#Problem-38-1">&#182;</a></h1><p><strong>Grading:</strong> 2.5 points for code quality, 2.5 points for passing tests (0.5 points each).</p>
+<p>Rename your method <code>distance(i,j)</code> to <code>calc_distance(i,j)</code>.</p>
+<p>Implement a method <code>calc_shortest_path(i,j)</code> in your <code>Graph</code> class that uses breadth-first search to compute a shortest path from the node at index <code>i</code> to the node at index <code>j</code>.</p>
+<p>You can use an approach similar to a breadth-first traversal starting from the node at index <code>i</code>. The only additional thing you need to do is have a list <code>previous</code> which will store the previous node index for every node visited. Then, once the breadth-first search has completed, you can use <code>previous</code> to generate the shortest path.</p>
+<p>In <code>graph/tests/test_graph.py</code>, assert that your method passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(1,3),(3,4),(1,4),(4,5)]
+&gt;&gt;&gt; graph = Graph(edges)
+
+at this point, the graph looks like this:
+0 -- 1 -- 2
+     | \
+     3--4 -- 5
+
+&gt;&gt;&gt; graph.calc_shortest_path(0,4)
+[0, 1, 4]
+&gt;&gt;&gt; graph.calc_shortest_path(5,2)
+[5, 4, 1, 2]
+&gt;&gt;&gt; graph.calc_shortest_path(0,5)
+[0, 1, 4, 5]
+&gt;&gt;&gt; graph.calc_shortest_path(4,1)
+[4, 1]
+&gt;&gt;&gt; graph.calc_shortest_path(3,3)
+[3]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-38-2">Problem 38-2<a class="anchor-link" href="#Problem-38-2">&#182;</a></h1><p><strong>Grading:</strong> 2 points for code quality, 2 points for passing tests.</p>
+<p>Update your <code>DataFrame</code> to implement the following functionality.</p>
+<p>Put all of your <code>DataFrame</code> tests as assertions in a file <code>machine-learning/tests/test_dataframe.py</code>, <em>including the tests you wrote on the previous assignment.</em></p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sara': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
+&gt;&gt;&gt; df2 = df1.append_pairwise_interactions()
+&gt;&gt;&gt; df2.columns
+['Pete', 'John', 'Sarah', 'Pete_John', 'Pete_Sarah', 'John_Sarah']
+
+&gt;&gt;&gt; df2.to_array()
+[[1, 2, 3, 2, 3, 6]
+ [0, 1, 1, 0, 0, 1]
+ [1, 0, 4, 0, 4, 0]
+ [0, 2, 0, 0, 0, 0]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-38-3">Problem 38-3<a class="anchor-link" href="#Problem-38-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/uniform_distribution.txt</code></p>
+<p><strong>Grading:</strong> 1 point per correct answer <em>with supporting work</em></p>
+<p><strong>This problem deals with integrals, so you need to show your work by hand (i.e. not using code). You can just type out words in place of symbols, as usual.</strong></p>
+<p>A <strong>uniform distribution</strong> on the interval $[a,b]$ is a probability distribution $p(x)$ that takes the following form for some constant $k\mathbin{:}$</p>
+$$p(x) = \begin{cases} k &amp; x \in [a,b] \\ 0 &amp; x \not\in [a,b] \end{cases}$$<p>a) Find the value of $k$ such that $p(x)$ is a valid probability distribution. Your answer should be in terms of $a$ and $b.$</p>
+<p>b) Given that $X \sim p,$ compute the cumulative distribution $P(X \leq x).$</p>
+<p>c) Given that $X \sim p_2,$ compute $E[X].$</p>
+<p>d) Given that $X \sim p_2,$ compute $\text{Var}[X].$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-37-1">Problem 37-1<a class="anchor-link" href="#Problem-37-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/regression_by_hand.txt</code></p>
 <p><strong>Grading:</strong> each part is worth 5 points.</p>
 <p>Suppose you are given the following dataset:</p>
