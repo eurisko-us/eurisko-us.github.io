@@ -14,7 +14,17 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="37">
+<font size="3em"><ol reversed start="38">
+    <li><b>Wednesday, September 2</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/452679334">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-38-1">Calculating the Shortest Path in a Graph</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-38-2">DataFrame -- Interaction Variables</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-38-3">The Uniform Distribution</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, August 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/452679334">Class Recording</a>
         <br>Assignment Problems:
