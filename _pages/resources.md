@@ -111,7 +111,9 @@ author_profile: false
 
 <b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late.<br><br>
 
-<b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%. (Note: you can only resubmit each assignment *once*.)
+<b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.
+
+<br>Note that you can only resubmit each assignment *once* -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to make your corrections, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.
 
 </div>
 
