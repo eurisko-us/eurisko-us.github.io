@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="4">
+<font size="3em"><ol reversed start="5">
+    <li><b>Wednesday, September 2</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/452679324">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-5-1">List and Dictionary Comprehensions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-5-2">Iteratively Approximating the Square Root of 2</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-5-3">Implementing a Queue</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, August 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/452679324">Class Recording</a>
         <br>Assignment Problems:
