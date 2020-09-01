@@ -13277,24 +13277,24 @@ at this point, the graph looks like this:
 <h1 id="Problem-37-4">Problem 37-4<a class="anchor-link" href="#Problem-37-4">&#182;</a></h1><p>There is a correction we need to make to our combat player tests. The home base colony, aka the "home world", pays 20 CP per round. Previously, we had been using a different amount (which applies to non-home-world colonies).</p>
 <p>I've updated the combat player tests for ascending rolls and descending rolls. Now it's your job to update your combat player tests and make sure they pass. You just need to set your home colony to pay 20 CP per round, and then update your tests with those that I've given below. Provided your tests were working before, this should be a pretty quick problem.</p>
 <p><strong>You get 2 points for passing each test. So there are 2 x 6 = 12 points total.</strong> Let's get this out of the way, finally, so that we can build our first complete strategy player over the weekend!</p>
-<p><strong>Extra credit may be possible on this problem.</strong> Hopefully, these tests are completely correct. But as usual with Space Empires tests, there's a chance that I may have made a mistake somewhere. If you find that one of the tests is wrong, then you can get a "bounty point" for bringing it to my attention and explaining where the underlying error is. You can earn up to a maximum of 6 bounty points (1 per test).</p>
+<p><strong>Extra credit may be possible on this problem.</strong> Hopefully, these tests are completely correct. But as usual with Space Empires tests, there's a chance that I may have made a mistake somewhere. If you find there is an error that leads to a mistake in a test, you can get "bounty point" for bringing it to my attention and explaining where the underlying error is. You can earn up to a maximum of 6 bounty points (1 per test).</p>
 <p><strong>Put both the ascending rolls test and the descending rolls test in <code>space-empires/tests/test_combat_player.py</code>.</strong></p>
 <p><strong>Ascending Rolls</strong></p>
 <ol>
-<li><p>At the end of Turn 1 economic phase, Player 1 has 3 CP and Player 2 has 0 CP</p>
+<li><p>At the end of Turn 1 economic phase, Player 1 has 7 CP and Player 2 has 1 CP</p>
 </li>
-<li><p>At the end of Turn 2 movement phase, Player 1 has 4 scouts and 2 destroyers at (2,2), while Player 2 has 2 scouts and 2 destroyers at (2,2).</p>
+<li><p>At the end of Turn 2 movement phase, Player 1 has 3 scouts at (2,2), while Player 2 has 1 destroyer at (2,2).</p>
 </li>
-<li><p>At the end of Turn 2 combat phase, Player 1 has 4 scouts and 2 destroyers at (2,2), while Player 2 has no ships (other than its colony/shipyards at its home planet).</p>
+<li><p>At the end of Turn 2 combat phase, Player 1 has 1 scout at (2,2), while Player 2 has no ships (other than its colony/shipyards at its home planet).</p>
 </li>
 </ol>
 <p><strong>Descending Rolls</strong></p>
 <ol>
-<li><p>At the end of Turn 1 economic phase, Player 1 has 0 CP and Player 2 has 3 CP</p>
+<li><p>At the end of Turn 1 economic phase, Player 1 has 1 CP and Player 2 has 7 CP</p>
 </li>
-<li><p>At the end of Turn 2 movement phase, Player 1 has 2 scouts and 2 destroyers at (2,2), while Player 2 has 4 scouts and 2 destroyers at (2,2).</p>
+<li><p>At the end of Turn 2 movement phase, Player 1 has 1 destroyer at (2,2), while Player 2 has 3 scouts at (2,2).</p>
 </li>
-<li><p>At the end of Turn 2 combat phase, Player 2 has 4 scouts and 2 destroyers at (2,2), while Player 1 has no ships (other than its colony/shipyards at its home planet).</p>
+<li><p>At the end of Turn 2 combat phase, Player 2 has 3 scouts at (2,2), while Player 1 has no ships (other than its colony/shipyards at its home planet).</p>
 </li>
 </ol>
 
@@ -13310,7 +13310,7 @@ at this point, the graph looks like this:
 
 Players 1 and 2
     are CombatTestingPlayers
-    start with 20 CPs
+    start with 0 CPs
     have an initial fleet of 3 scouts, 3 colony ships, 4 ship yards
 
 ---
@@ -13388,32 +13388,26 @@ TURN 1 - ECONOMIC PHASE
 
 Player 1
 
-    INCOME/MAINTENANCE (starting CP: 20)
+    INCOME/MAINTENANCE (starting CP: 0)
         colony income: +20 CP from home colony
         maintenance costs: -1 CP/Scout x 3 Scouts = -3 CP
 
-    PURCHASES (starting CP: 37)
+    PURCHASES (starting CP: 17)
         ship size technology 2: -10 CP
-        destroyer: -9 CP
-        scout: -6 CP
-        destroyer: -9 CP
 
-    REMAINING CP: 3
+    REMAINING CP: 7
 
 Player 2
 
-    INCOME/MAINTENANCE (starting CP: 20)
+    INCOME/MAINTENANCE (starting CP: 0)
         colony income: +20 CP from home colony
         maintenance costs: 0
 
-    PURCHASES (starting CP: 40)
+    PURCHASES (starting CP: 20)
         ship size technology 2: -10 CP
         destroyer: -9 CP
-        scout: -6 CP
-        destroyer: -9 CP
-        scout: -6 CP
 
-    REMAINING CP: 0
+    REMAINING CP: 1
 
 ------------------------
 
@@ -13421,12 +13415,9 @@ TURN 2 - MOVEMENT PHASE
 
 Player 1:
     Scouts 1,2,3: stay at (2,2)
-    Destroyers 1,2 : (2,0) --&gt; (2,2)
-    Scout 4: (2,0) --&gt; (2,2)
 
 Player 2:
-    Destroyers 1,2: (2,4) --&gt; (2,2)
-    Scouts 1,2: (2,4) --&gt; (2,2)
+    Destroyer 1: (2,4) --&gt; (2,2)
 
 ------------------------
 
@@ -13434,100 +13425,60 @@ TURN 2 - COMBAT PHASE
 
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
-|    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
 |    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
 |    1   |         Scout 1        |    1    |
 |    1   |         Scout 2        |    1    |
 |    1   |         Scout 3        |    1    |
-|    1   |         Scout 4        |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
 
 Attack 1
-    Attacker: Player 1 Destroyer 1
-    Defender: Player 2 Destroyer 1
+    Attacker: Player 2 Destroyer 1
+    Defender: Player 2 Scout 1
     Largest Roll to Hit: 4
     Dice Roll: 4
     Hit or Miss: Hit
 
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
-|    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
-|    2   |         Destroyer 2    |    1    |
-|    1   |         Scout 1        |    1    |
+|    2   |         Destroyer 1    |    1    |
 |    1   |         Scout 2        |    1    |
 |    1   |         Scout 3        |    1    |
-|    1   |         Scout 4        |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
 
 Attack 2
-    Attacker: Player 1 Destroyer 2
-    Defender: Player 2 Destroyer 2
-    Largest Roll to Hit: 4
+    Attacker: Player 1 Scout 2
+    Defender: Player 2 Destroyer 1
+    Largest Roll to Hit: 3
     Dice Roll: 5
     Hit or Miss: Miss
 
 Attack 3
-    Attacker: Player 2 Destroyer 2
-    Defender: Player 1 Destroyer 1
-    Largest Roll to Hit: 4
+    Attacker: Player 1 Scout 3
+    Defender: Player 2 Destroyer 1
+    Largest Roll to Hit: 3
     Dice Roll: 6
     Hit or Miss: Miss
 
 Attack 4
-    Attacker: Player 1 Scout 1
-    Defender: Player 2 Destroyer 2
-    Largest Roll to Hit: 3
+    Attacker: Player 2 Destroyer 1
+    Defender: Player 1 Scout 2
+    Largest Roll to Hit: 4
     Dice Roll: 1
     Hit or Miss: Hit
 
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
-|    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
+|    2   |         Destroyer 1    |    1    |
 |    1   |         Scout 3        |    1    |
-|    1   |         Scout 4        |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
 
 Attack 5
-    Attacker: Player 1 Scout 2
-    Defender: Player 2 Scout 1
+    Attacker: Player 1 Scout 3
+    Defender: Player 2 Destroyer 1
     Largest Roll to Hit: 3
     Dice Roll: 2
     Hit or Miss: Hit
 
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
-|    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
 |    1   |         Scout 3        |    1    |
-|    1   |         Scout 4        |    1    |
-|    2   |         Scout 2        |    1    |
-
-Attack 6
-    Attacker: Player 1 Scout 3
-    Defender: Player 2 Scout 2
-    Largest Roll to Hit: 3
-    Dice Roll: 3
-    Hit or Miss: Hit
-
-| PLAYER |          SHIP          | HEALTH  |
----------------------------------------------
-|    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
-|    1   |         Scout 3        |    1    |
-|    1   |         Scout 4        |    1    |
 
 combat phase completed</code></pre>
 
@@ -13543,7 +13494,7 @@ combat phase completed</code></pre>
 
 Players 1 and 2
     are CombatTestingPlayers
-    start with 20 CPs
+    start with 0 CPs
     have an initial fleet of 3 scouts, 3 colony ships, 4 ship yards
 
 ---
@@ -13642,45 +13593,36 @@ TURN 1 - ECONOMIC PHASE
 
 Player 1
 
-    INCOME/MAINTENANCE (starting CP: 20)
+    INCOME/MAINTENANCE (starting CP: 0)
         colony income: +20 CP from home colony
         maintenance costs: 0
 
-    PURCHASES (starting CP: 40)
+    PURCHASES (starting CP: 20)
         ship size technology 2: -10 CP
         destroyer: -9 CP
-        scout: -6 CP
-        destroyer: -9 CP
-        scout: -6 CP
 
-    REMAINING CP: 0
+    REMAINING CP: 1
 
 Player 2
 
-    INCOME/MAINTENANCE (starting CP: 20)
+    INCOME/MAINTENANCE (starting CP: 0)
         colony income: +20 CP from home colony
         maintenance costs: -1 CP/Scout x 3 Scouts = -3 CP
 
-    PURCHASES (starting CP: 37)
+    PURCHASES (starting CP: 17)
         ship size technology 2: -10 CP
-        destroyer: -9 CP
-        scout: -6 CP
-        destroyer: -9 CP
 
-    REMAINING CP: 3
+    REMAINING CP: 7
 
 ------------------------
 
 TURN 2 - MOVEMENT PHASE
 
 Player 1:
-    Destroyers 1,2 : (2,0) --&gt; (2,2)
-    Scouts 1,2 : (2,0) --&gt; (2,2)
+    Destroyer 1 : (2,0) --&gt; (2,2)
 
 Player 2:
     Scouts 1,2,3: stay at (2,2)
-    Destroyers 1,2: (2,4) --&gt; (2,2)
-    Scout 4: (2,4) --&gt; (2,2)
 
 ------------------------
 
@@ -13689,32 +13631,26 @@ TURN 2 - COMBAT PHASE
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
 |    1   |         Destroyer 1    |    1    |
-|    1   |         Destroyer 2    |    1    |
-|    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
 |    2   |         Scout 1        |    1    |
 |    2   |         Scout 2        |    1    |
 |    2   |         Scout 3        |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
-|    2   |         Scout 4        |    1    |
 
 Attack 1
     Attacker: Player 1 Destroyer 1
-    Defender: Player 2 Destroyer 1
+    Defender: Player 2 Scout 1
     Largest Roll to Hit: 4
     Dice Roll: 6
     Hit or Miss: Miss
 
 Attack 2
-    Attacker: Player 1 Destroyer 2
-    Defender: Player 2 Destroyer 1
+    Attacker: Player 2 Scout 1
+    Defender: Player 1 Destroyer 1
     Largest Roll to Hit: 4
     Dice Roll: 5
     Hit or Miss: Miss
 
 Attack 3
-    Attacker: Player 2 Destroyer 1
+    Attacker: Player 2 Scout 3
     Defender: Player 1 Destroyer 1
     Largest Roll to Hit: 4
     Dice Roll: 4
@@ -13722,66 +13658,9 @@ Attack 3
 
 | PLAYER |          SHIP          | HEALTH  |
 ---------------------------------------------
-|    1   |         Destroyer 2    |    1    |
-|    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
 |    2   |         Scout 1        |    1    |
 |    2   |         Scout 2        |    1    |
 |    2   |         Scout 3        |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
-|    2   |         Scout 4        |    1    |
-
-Attack 4
-    Attacker: Player 2 Destroyer 2
-    Defender: Player 1 Destroyer 2
-    Largest Roll to Hit: 4
-    Dice Roll: 3
-    Hit or Miss: Hit
-
-| PLAYER |          SHIP          | HEALTH  |
----------------------------------------------
-|    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
-|    2   |         Scout 3        |    1    |
-|    1   |         Scout 1        |    1    |
-|    1   |         Scout 2        |    1    |
-|    2   |         Scout 4        |    1    |
-
-Attack 5
-    Attacker: Player 2 Scout 1
-    Defender: Player 1 Scout 1
-    Largest Roll to Hit: 3
-    Dice Roll: 2
-    Hit or Miss: Hit
-
-| PLAYER |          SHIP          | HEALTH  |
----------------------------------------------
-|    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
-|    2   |         Scout 3        |    1    |
-|    1   |         Scout 2        |    1    |
-|    2   |         Scout 4        |    1    |
-
-Attack 6
-    Attacker: Player 2 Scout 2
-    Defender: Player 1 Scout 2
-    Largest Roll to Hit: 3
-    Dice Roll: 1
-    Hit or Miss: Hit
-
-| PLAYER |          SHIP          | HEALTH  |
----------------------------------------------
-|    2   |         Destroyer 1    |    1    |
-|    2   |         Destroyer 2    |    1    |
-|    2   |         Scout 1        |    1    |
-|    2   |         Scout 2        |    1    |
-|    2   |         Scout 3        |    1    |
-|    2   |         Scout 4        |    1    |
 
 combat phase completed</code></pre>
 
