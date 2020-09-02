@@ -13167,7 +13167,7 @@ div#notebook {
 [1, 1.5]
 &gt;&gt;&gt; update_bounds([1, 1.5])
 [1.25, 1.5]</code></pre>
-<p><strong>b.</strong> Create a <strong>recursive function</strong> <code>estimate_root(precision)</code> that estimates the value of $\sqrt{2}$ by repeatedly calling <code>update_bounds</code> until the bounds are narrower than <code>precision</code>. You can start with the bounds $[1,2]$ again. Then it should return the midpoint of the final set of bounds.</p>
+<p><strong>b.</strong> Write a function <code>estimate_root(precision)</code> that estimates the value of $\sqrt{2}$ by repeatedly calling <code>update_bounds</code> until the bounds are narrower than <code>precision</code>. You can start with the bounds $[1,2]$ again. Then it should return the midpoint of the final set of bounds.</p>
 <p>Assert that your function passes the following test:</p>
 
 <pre><code>&gt;&gt;&gt; estimate_root(0.1)
