@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="38">
     <li><b>Wednesday, September 2</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/452679334">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/454122212">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-38-1">Calculating the Shortest Path in a Graph</a></li>
