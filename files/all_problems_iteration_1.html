@@ -13157,7 +13157,7 @@ at this point, the graph looks like this:
 <pre><code>&gt;&gt;&gt; data_dict = {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
-    'Sara': [3, 1, 4, 0]
+    'Sarah': [3, 1, 4, 0]
 }
 
 &gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
@@ -13213,7 +13213,7 @@ $$p(x) = \begin{cases} k &amp; x \in [a,b] \\ 0 &amp; x \not\in [a,b] \end{cases
 <pre><code>&gt;&gt;&gt; data_dict = {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
-    'Sara': [3, 1, 4, 0]
+    'Sarah': [3, 1, 4, 0]
 }
 
 &gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
@@ -13221,7 +13221,7 @@ $$p(x) = \begin{cases} k &amp; x \in [a,b] \\ 0 &amp; x \not\in [a,b] \end{cases
 {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
-    'Sara': [3, 1, 4, 0]
+    'Sarah': [3, 1, 4, 0]
 }
 
 &gt;&gt;&gt; df1.to_array()
@@ -13728,15 +13728,15 @@ combat phase completed</code></pre>
 <pre><code>&gt;&gt;&gt; data_dict = {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
-    'Sara': [3, 1, 4, 0]
+    'Sarah': [3, 1, 4, 0]
 }
 
-&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sara'])
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
 &gt;&gt;&gt; df1.data_dict
 {
     'Pete': [1, 0, 1, 0],
     'John': [2, 1, 0, 2],
-    'Sara': [3, 1, 4, 0]
+    'Sarah': [3, 1, 4, 0]
 }
 
 &gt;&gt;&gt; df1.to_array()
@@ -13746,9 +13746,9 @@ combat phase completed</code></pre>
  [0, 2, 0]]
 
 &gt;&gt;&gt; df1.columns
-['Pete', 'John', 'Sara']
+['Pete', 'John', 'Sarah']
 
-&gt;&gt;&gt; df2 = df1.filter_columns(['Sara', 'Pete'])
+&gt;&gt;&gt; df2 = df1.filter_columns(['Sarah', 'Pete'])
 &gt;&gt;&gt; df2.to_array()
 [[3, 1],
  [1, 0],
@@ -13756,7 +13756,7 @@ combat phase completed</code></pre>
  [0, 0]]
 
 &gt;&gt;&gt; df2.columns
-['Sara', 'Pete']</code></pre>
+['Sarah', 'Pete']</code></pre>
 
 </div>
 </div>
