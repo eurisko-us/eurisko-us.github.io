@@ -13129,7 +13129,7 @@ div#notebook {
 }
 
 &gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['id', 'color'])
-&gt;&gt;&gt; df1 = df1.dummy_variables()
+&gt;&gt;&gt; df1 = df1.create_dummy_variables()
 &gt;&gt;&gt; df2.columns
 ['id', 'color_blue', 'color_yellow', 'color_green']
 &gt;&gt;&gt; df2.to_array()
@@ -13166,49 +13166,49 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-39-2">Problem 39-2<a class="anchor-link" href="#Problem-39-2">&#182;</a></h1><p><strong>Grading:</strong> 12 points total = 6 points for code quality, 0.5 points for passing each test (there are 12 tests).</p>
-<p>In <code>graph/src/directed_acyclic_graph.py</code>, create a class <code>DirectedAcyclicGraph</code> that implements a directed graph. (Yes, you have to name it with the full name.)</p>
-<p>In a directed graph, nodes have parents and children instead of just "neighbors". For now, we will consider only graphs which are "acyclic", meaning that there is no path from any node to itself.</p>
-<p>For example, a <code>Tree</code> is a special case of an <code>DirectedAcyclicGraph</code>.</p>
+<p>In <code>graph/src/directed_graph.py</code>, create a class <code>DirectedGraph</code> that implements a directed graph. (Yes, you have to name it with the full name.)</p>
+<p>In a directed graph, nodes have parents and children instead of just "neighbors".</p>
+<p>For example, a <code>Tree</code> is a special case of an <code>DirectedGraph</code>.</p>
 <p><strong>Important: do NOT try to inherit from <code>Graph</code>.</strong></p>
-<p>Implement the following tests as assertions in <code>graph/tests/test_directed_acyclic_graph.py</code>.</p>
+<p>Implement the following tests as assertions in <code>graph/tests/test_directed_graph.py</code>.</p>
 
 <pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(3,1),(4,3),(1,4),(4,5),(3,6)]
 Note: the edges are in the form (parent,child)
-&gt;&gt;&gt; dag = DirectedAcyclicGraph(edges)
+&gt;&gt;&gt; directed_graph = DirectedGraph(edges)
 Note: if no vertices are passed, just assume that vertices = node index list, i.e.
 vertices = [0, 1, 2, 3, 4, 5, 6]
 
-at this point, the "DAG" looks like this:
+at this point, the directed graph looks like this:
 0--&gt;1--&gt;2
     ^ \
     |  v
 6&lt;--3&lt;--4--&gt;5
 
-&gt;&gt;&gt; [[child.index for child in node.children] for node in dag.nodes]
+&gt;&gt;&gt; [[child.index for child in node.children] for node in directed_graph.nodes]
 [[1], [4], [], [1,6], [3,5], []]
-&gt;&gt;&gt; [[parent.index for parent in node.parents] for node in dag.nodes]
+&gt;&gt;&gt; [[parent.index for parent in node.parents] for node in directed_graph.nodes]
 [[], [0,3], [1], [4], [1], [4], [3]]
 
-&gt;&gt;&gt; dag.calc_distance(0,3)
+&gt;&gt;&gt; directed_graph.calc_distance(0,3)
 3
-&gt;&gt;&gt; dag.calc_distance(3,5)
+&gt;&gt;&gt; directed_graph.calc_distance(3,5)
 3
-&gt;&gt;&gt; dag.calc_distance(0,5)
+&gt;&gt;&gt; directed_graph.calc_distance(0,5)
 3
-&gt;&gt;&gt; dag.calc_distance(4,1)
+&gt;&gt;&gt; directed_graph.calc_distance(4,1)
 2
-&gt;&gt;&gt; dag.calc_distance(2,4)
+&gt;&gt;&gt; directed_graph.calc_distance(2,4)
 False
 
-&gt;&gt;&gt; dag.calc_shortest_path(0,3)
+&gt;&gt;&gt; directed_graph.calc_shortest_path(0,3)
 [0, 1, 4, 3]
-&gt;&gt;&gt; dag.calc_shortest_path(3,5)
+&gt;&gt;&gt; directed_graph.calc_shortest_path(3,5)
 [3, 1, 4, 5]
-&gt;&gt;&gt; dag.calc_shortest_path(0,5)
+&gt;&gt;&gt; directed_graph.calc_shortest_path(0,5)
 [0, 1, 4, 5]
-&gt;&gt;&gt; dag.calc_shortest_path(4,1)
+&gt;&gt;&gt; directed_graph.calc_shortest_path(4,1)
 [4, 3, 1]
-&gt;&gt;&gt; dag.calc_shortest_path(2,4)
+&gt;&gt;&gt; directed_graph.calc_shortest_path(2,4)
 False</code></pre>
 
 </div>
@@ -13219,7 +13219,7 @@ False</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-39-3">Problem 39-3<a class="anchor-link" href="#Problem-39-3">&#182;</a></h1><p><strong>Location</strong>: Put your answers in <code>assignment-problems/assignment_39_probability.txt</code></p>
 <p><strong>SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK</strong></p>
-<p><strong>Part A</strong> (For 1-4 you get 1 point per correct answer <em>with supporting work</em>; for 5 you get 2 points.)</p>
+<p><strong>Part A</strong> (For 1-4 you get 1 point per correct answer <em>with supporting work</em>)</p>
 <p>Suppose that you take a bus to work every day. Bus A arrives at 8am but is x minutes late with $x \sim U(0,15).$ Bus B arrives at 8:05 but with $x \sim U(0,10).$ The bus ride is 20 minutes and you need to arrive at work by 8:30.</p>
 <p>Tip: Remember that $U(a,b)$ means the uniform distribution on $[a,b].$</p>
 <ol>
@@ -13230,8 +13230,6 @@ False</code></pre>
 <li><p>If you take bus A, what is the probability that you will arrive on time to work?</p>
 </li>
 <li><p>If you take bus B, what is the probability that you will arrive on time to work?</p>
-</li>
-<li><p>If you did the previous problems correctly, you found that you expect to arrive at work at the same time regardless of which bus you take -- but taking one bus in particular gives you a higher probability of arriving on time to work. Intuitively, why does this result make sense? Don't get too mathy in your explanation. Explain it like you're talking to a 10-year-old.</p>
 </li>
 </ol>
 <p><strong>SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK</strong></p>
