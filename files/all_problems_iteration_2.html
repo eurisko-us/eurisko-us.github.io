@@ -13218,26 +13218,18 @@ PASSED</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-6-3">Problem 6-3<a class="anchor-link" href="#Problem-6-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_6_comprehensions.py</code></p>
-<p><strong>Grading:</strong> For each part, you get 1 point for code quality and 1 point for passing the test.</p>
-<p><strong>a.</strong> <strong>USING COMPREHENSION</strong>, create a function <code>find_all_numbers_divisible_by_a_and_b(n,a,b)</code> that lists the numbers $1$ through $n$ that are divisible by both $a$ and $b$. <strong>The body of your function should consist of just 1 line, in which it simply returns a list comprehension.</strong></p>
+<h1 id="Problem-6-3">Problem 6-3<a class="anchor-link" href="#Problem-6-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/simple_sort_swap_sort.py</code></p>
+<p><strong>a.</strong> (1 point for code quality, 1 point for passing test)</p>
+<p>Write a function <code>simple_sort(num_list)</code> that takes an input list <code>num_list</code> and sorts its elements from least to greatest by repeatedly finding the smallest element and moving it to a new list. <strong>Don't use Python's built-in <code>min</code> function.</strong></p>
 <p>Assert that your function passes the following test:</p>
 
-<pre><code>&gt;&gt;&gt; find_all_numbers_divisible_by_a_and_b(100,6,15)
-[30, 60, 90]</code></pre>
-<p><strong>b.</strong> Rewrite the following function to consist of simply returning a list comprehension.</p>
+<pre><code>&gt;&gt;&gt; simple_sort([5,8,2,2,4,3,0,2,-5,3.14,2])
+[-5,0,2,2,2,2,3,3.14,4,5,8]</code></pre>
+<p><strong>b.</strong> (1 point for code quality, 1 point for passing test)</p>
+<p>Write a recursive function <code>swap_sort(x)</code> that sorts the list from least to greatest by repeatedly going through each pair of adjacent elements and swapping them if they are in the wrong order.</p>
 
-<pre><code>def compute_all_products(M,N):
-    products = []
-    for m in range(M):
-       for n in range(N):
-           product = m * n
-           products.append(product)
-    return products</code></pre>
-<p>Write a test for your function using <code>M=3,N=4</code> and assert that your function passes it.</p>
-
-<pre><code>&gt;&gt;&gt; compute_all_products(3,4)
-(you need to figure out what the correct output is)</code></pre>
+<pre><code>&gt;&gt;&gt; swap_sort([5,8,2,2,4,3,0,2,-5,3.14,2])
+[-5,0,2,2,2,2,3,3.14,4,5,8]</code></pre>
 
 </div>
 </div>

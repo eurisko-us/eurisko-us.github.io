@@ -13184,9 +13184,9 @@ at this point, the "DAG" looks like this:
     |  v
 6&lt;--3&lt;--4--&gt;5
 
-&gt;&gt;&gt; [node.children for node in dag.nodes]
+&gt;&gt;&gt; [[child.index for child in node.children] for node in dag.nodes]
 [[1], [4], [], [1,6], [3,5], []]
-&gt;&gt;&gt; [node.parents for node in dag.nodes]
+&gt;&gt;&gt; [[parent.index for parent in node.parents] for node in dag.nodes]
 [[], [0,3], [1], [4], [1], [4], [3]]
 
 &gt;&gt;&gt; dag.calc_distance(0,3)
