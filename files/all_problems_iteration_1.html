@@ -13119,6 +13119,157 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-1">Problem 39-1<a class="anchor-link" href="#Problem-39-1">&#182;</a></h1><p><strong>Grading:</strong> 12 points total = 6 points for code quality, 1 point for passing each test (there are 6 tests).</p>
+<p>Update your <code>DataFrame</code> to implement the following functionality.</p>
+<p>Put all of your <code>DataFrame</code> tests as assertions in a file <code>machine-learning/tests/test_dataframe.py</code>.</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'id': [1, 2, 3, 4],
+    'color': ['blue', 'yellow', 'green', 'yellow']
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['id', 'color'])
+&gt;&gt;&gt; df1 = df1.dummy_variables()
+&gt;&gt;&gt; df2.columns
+['id', 'color_blue', 'color_yellow', 'color_green']
+&gt;&gt;&gt; df2.to_array()
+[[1, 1, 0, 0]
+ [2, 0, 1, 0]
+ [3, 0, 0, 1]
+ [4, 0, 1, 0]]
+
+&gt;&gt;&gt; df3 = df2.remove_columns(['id', 'color_yellow'])
+&gt;&gt;&gt; df3.columns
+['color_blue', 'color_green']
+&gt;&gt;&gt; df3.to_array()
+[[1, 0]
+ [0, 0]
+ [0, 1]
+ [0, 0]]
+
+&gt;&gt;&gt; df4 = df3.append_columns({
+    'name': ['Anna', 'Bill', 'Cayden', 'Daphnie'],
+    'letter': ['a', 'b', 'c', 'd']
+})
+&gt;&gt;&gt; df4.columns
+['color_blue', 'color_green', 'name', 'letter']
+&gt;&gt;&gt; df4.to_array()
+[[1, 0, 'Annna', 'a']
+ [0, 0, 'Bill', 'b']
+ [0, 1, 'Cayden', 'c']
+ [0, 0, 'Daphnie', 'd']]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-2">Problem 39-2<a class="anchor-link" href="#Problem-39-2">&#182;</a></h1><p><strong>Grading:</strong> 12 points total = 6 points for code quality, 0.5 points for passing each test (there are 12 tests).</p>
+<p>In <code>graph/src/directed_acyclic_graph.py</code>, create a class <code>DirectedAcyclicGraph</code> that implements a directed graph. (Yes, you have to name it with the full name.)</p>
+<p>In a directed graph, nodes have parents and children instead of just "neighbors". For now, we will consider only graphs which are "acyclic", meaning that there is no path from any node to itself.</p>
+<p>For example, a <code>Tree</code> is a special case of an <code>DirectedAcyclicGraph</code>.</p>
+<p><strong>Important: do NOT try to inherit from <code>Graph</code>.</strong></p>
+<p>Implement the following tests as assertions in <code>graph/tests/test_directed_acyclic_graph.py</code>.</p>
+
+<pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(3,1),(4,3),(1,4),(4,5),(3,6)]
+Note: the edges are in the form (parent,child)
+&gt;&gt;&gt; dag = DirectedAcyclicGraph(edges)
+Note: if no vertices are passed, just assume that vertices = node index list, i.e.
+vertices = [0, 1, 2, 3, 4, 5, 6]
+
+at this point, the "DAG" looks like this:
+0--&gt;1--&gt;2
+    ^ \
+    |  v
+6&lt;--3&lt;--4--&gt;5
+
+&gt;&gt;&gt; [node.children for node in dag.nodes]
+[[1], [4], [], [1,6], [3,5], []]
+&gt;&gt;&gt; [node.parents for node in dag.nodes]
+[[], [0,3], [1], [4], [1], [4], [3]]
+
+&gt;&gt;&gt; dag.calc_distance(0,3)
+3
+&gt;&gt;&gt; dag.calc_distance(3,5)
+3
+&gt;&gt;&gt; dag.calc_distance(0,5)
+3
+&gt;&gt;&gt; dag.calc_distance(4,1)
+2
+&gt;&gt;&gt; dag.calc_distance(2,4)
+False
+
+&gt;&gt;&gt; dag.calc_shortest_path(0,3)
+[0, 1, 4, 3]
+&gt;&gt;&gt; dag.calc_shortest_path(3,5)
+[3, 1, 4, 5]
+&gt;&gt;&gt; dag.calc_shortest_path(0,5)
+[0, 1, 4, 5]
+&gt;&gt;&gt; dag.calc_shortest_path(4,1)
+[4, 3, 1]
+&gt;&gt;&gt; dag.calc_shortest_path(2,4)
+False</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-3">Problem 39-3<a class="anchor-link" href="#Problem-39-3">&#182;</a></h1><p><strong>Location</strong>: Put your answers in <code>assignment-problems/assignment_39_probability.txt</code></p>
+<p><strong>SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK</strong></p>
+<p><strong>Part A</strong> (For 1-4 you get 1 point per correct answer <em>with supporting work</em>; for 5 you get 2 points.)</p>
+<p>Suppose that you take a bus to work every day. Bus A arrives at 8am but is x minutes late with $x \sim U(0,15).$ Bus B arrives at 8:05 but with $x \sim U(0,10).$ The bus ride is 20 minutes and you need to arrive at work by 8:30.</p>
+<p>Tip: Remember that $U(a,b)$ means the uniform distribution on $[a,b].$</p>
+<ol>
+<li><p>If you take bus A, what time do you expect to arrive at work?</p>
+</li>
+<li><p>If you take bus B, what time do you expect to arrive at work?</p>
+</li>
+<li><p>If you take bus A, what is the probability that you will arrive on time to work?</p>
+</li>
+<li><p>If you take bus B, what is the probability that you will arrive on time to work?</p>
+</li>
+<li><p>If you did the previous problems correctly, you found that you expect to arrive at work at the same time regardless of which bus you take -- but taking one bus in particular gives you a higher probability of arriving on time to work. Intuitively, why does this result make sense? Don't get too mathy in your explanation. Explain it like you're talking to a 10-year-old.</p>
+</li>
+</ol>
+<p><strong>SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK</strong></p>
+<p><strong>Part B</strong> (For 1-4 you get 1 point per correct answer <em>with supporting work</em>; for 5 you get 2 points.)</p>
+<p>Continuing the scenario above, there is a third option that you can use to get to work: you can jump into a wormhole and (usually) come out almost instantly at the other side. The only issue is that time runs differently inside the wormhole, and while you're probably going to arrive at the other end very quickly, there's a small chance that you could get stuck in there for a really long time.</p>
+<p>The number of <strong>seconds</strong> it takes you to come out the other end of the wormhole follows an exponential distribution with parameter $\lambda=10,$ meaning that $x \sim p(x)$ where $$p(x) = \begin{cases} 10e^{-10x} &amp; \text{ if } x &gt; 0 \\
+0 &amp;\text{ otherwise.} \end{cases}$$</p>
+<ol>
+<li><p>How long do you expect it to take you to come out of the wormhole?</p>
+</li>
+<li><p>What's the probability of taking longer than a minute to come out of the wormhole?</p>
+</li>
+<li><p>Fill in the blank: the probability of coming out of the wormhole within ___ seconds is $99.999\%.$</p>
+</li>
+<li><p>What is the probability that it would take you longer than a day to come out of the wormhole? Give the exact answer, not a decimal approximation.</p>
+</li>
+<li><p>Your friend says that you shouldn't use the wormhole because there's always a chance that you might get stuck in it for over a week, and if you use the wormhole twice per day, then that'll probably happen sometime within your lifetime. Is this a reasonable fear? Why or why not? Justify your answer using probability.</p>
+</li>
+</ol>
+<p><strong>SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK - SHOW YOUR WORK</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-4">Problem 39-4<a class="anchor-link" href="#Problem-39-4">&#182;</a></h1><p>4 points</p>
+<p>Get your <code>CombatPlayer</code> tests working from the previous assignment. If they're working already, then congrats, you just got 4 points for free.</p>
+<p>I'm making this worth 4 points so that there's an incentive to get this done as soon as possible (rather than just waiting to resubmit the previous assignment at some later date).</p>
+<p>Once you get your tests working, remember to resubmit the previous assignment to get that 60% partial credit.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-38-1">Problem 38-1<a class="anchor-link" href="#Problem-38-1">&#182;</a></h1><p><strong>Grading:</strong> 2.5 points for code quality, 2.5 points for passing tests (0.5 points each).</p>
 <p>Rename your method <code>distance(i,j)</code> to <code>calc_distance(i,j)</code>.</p>
 <p>Implement a method <code>calc_shortest_path(i,j)</code> in your <code>Graph</code> class that uses breadth-first search to compute a shortest path from the node at index <code>i</code> to the node at index <code>j</code>.</p>
@@ -13182,8 +13333,8 @@ at this point, the graph looks like this:
 <p><strong>This problem deals with integrals, so you need to show your work by hand (i.e. not using code). You can just type out words in place of symbols, as usual.</strong></p>
 <p>A <strong>uniform distribution</strong> on the interval $[a,b]$ is a probability distribution $p(x)$ that takes the following form for some constant $k\mathbin{:}$</p>
 $$p(x) = \begin{cases} k &amp; x \in [a,b] \\ 0 &amp; x \not\in [a,b] \end{cases}$$<p>a) Find the value of $k$ such that $p(x)$ is a valid probability distribution. Your answer should be in terms of $a$ and $b.$</p>
-<p>b) Given that $X \sim p,$ compute the cumulative distribution $P(X \leq x).$ Your answer should be a piecewise function: $$P(X \leq x) = \begin{cases} \_\_\_ &\text{ if } x < a \\ \_\_\_ &\text{ if } a \leq x \leq b \\ \_\_\_ &\text{ if } b < x \end{cases}$$</p>
-<p>c) Given that $X \sim p_2,$ compute $E[X].$</p>
+<p>b) Given that $X \sim p,$ compute the cumulative distribution $P(X \leq x).$ Your answer should be a piecewise function:</p>
+$$P(X \leq x) = \begin{cases} \_\_\_ &amp;\text{ if } x &lt; a \\ \_\_\_ &amp;\text{ if } a \leq x \leq b \\ \_\_\_ &amp;\text{ if } b &lt; x \end{cases}$$<p>c) Given that $X \sim p_2,$ compute $E[X].$</p>
 <p>d) Given that $X \sim p_2,$ compute $\text{Var}[X].$</p>
 
 </div>

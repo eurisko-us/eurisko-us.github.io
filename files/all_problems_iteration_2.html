@@ -13119,6 +13119,132 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-6-1">Problem 6-1<a class="anchor-link" href="#Problem-6-1">&#182;</a></h1><p><strong>Locations:</strong> <code>machine-learning/src/matrix.py</code> and <code>machine-learning/tests/test_matrix.py</code></p>
+<p><strong>Grading:</strong> 5 points for code quality; 5 points for passing each test (1 point per test)</p>
+<ol>
+<li><p>Create a <code>machine-learning</code> repository on GitHub and connect it to a repl of the same name. Create a folder <code>machine-learning/src</code>, and within that folder, put a file <code>matrix.py</code> which will contain the <code>Matrix</code> class you write in this problem.</p>
+</li>
+<li><p>In <code>machine-learning/src/matrix.py</code>, create a <code>Matrix</code> class with the methods <code>copy</code>, <code>add</code>, and <code>subtract</code>, <code>scalar_multiply</code>, and <code>matrix_multiply</code> for $2 \times 2$ matrices.</p>
+</li>
+<li><p>Create a folder <code>machine-learning/tests</code>, and within that folder, put a file <code>test_matrix.py</code> which will contain your "assert" tests for the <code>Matrix</code> class.</p>
+</li>
+<li><p>In <code>machine-learning/tests/test_matrix.py</code>, include the following at the top of your file so that you can use your <code>Matrix</code> class:</p>
+</li>
+</ol>
+
+<pre><code>import sys
+sys.path.append('src')
+from matrix import Matrix</code></pre>
+<ol>
+<li>In <code>machine-learning/tests/test_matrix.py</code>, assert that your <code>Matrix</code> class passes the following tests:</li>
+</ol>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([[1,3],
+                [2,4]])
+&gt;&gt;&gt; A.elements
+[[1,3],
+ [2,4]]
+
+&gt;&gt;&gt; B = A.copy()
+&gt;&gt;&gt; A = 'resetting A to a string'
+&gt;&gt;&gt; B.elements # the purpose of this test is to show that B is independent of A
+[[1,3],
+ [2,4]]
+
+&gt;&gt;&gt; C = Matrix([[1,0],
+                [2,-1]])
+&gt;&gt;&gt; D = B.add(C)
+&gt;&gt;&gt; D.elements
+[[2,3],
+ [4,3]]
+
+&gt;&gt;&gt; E = B.subtract(C)
+&gt;&gt;&gt; E.elements
+[[0,3],
+ [0,5]]
+
+&gt;&gt;&gt; F = B.scalar_multiply(2)
+&gt;&gt;&gt; F.elements
+[[2,6],
+ [4,8]]
+
+&gt;&gt;&gt; G = B.matrix_multiply(C)
+[[7,-3],
+ [10,-4]]</code></pre>
+<ol>
+<li>Make sure that when you run <code>python tests/test_matrix.py</code>, your tests print out:</li>
+</ol>
+
+<pre><code>&gt;&gt;&gt; python tests/test_matrix.py
+Testing method "copy"...
+PASSED
+
+Testing method "add"...
+PASSED
+
+Testing method "subtract"...
+PASSED
+
+Testing method "scalar_multiply"...
+PASSED
+
+Testing method "matrix_multiply"...
+PASSED</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-6-2">Problem 6-2<a class="anchor-link" href="#Problem-6-2">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/skip_factorial.py</code></p>
+<p><strong>Grading:</strong> For each part, you get 1 point for code quality and 1 point for passing both tests.</p>
+<p><strong>a.</strong> <strong>WITHOUT using recursion,</strong> create a function <code>skip_factorial_nonrecursive(n)</code> that computes the product</p>
+<ul>
+<li>$n(n-2)(n-4)\ldots(2)$ if $n$ is even, or</li>
+<li>$n(n-2)(n-4)\ldots(1)$ if $n$ is odd.</li>
+</ul>
+<p>Assert that your function passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; skip_factorial_nonrecursive(6)
+48
+&gt;&gt;&gt; skip_factorial_nonrecursive(7)
+105</code></pre>
+<p><strong>b.</strong> <strong>USING RECURSION,</strong> create a function <code>skip_factorial_recursive(n)</code> and assert that it passes the same tests as in part (a).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-6-3">Problem 6-3<a class="anchor-link" href="#Problem-6-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_6_comprehensions.py</code></p>
+<p><strong>Grading:</strong> For each part, you get 1 point for code quality and 1 point for passing the test.</p>
+<p><strong>a.</strong> <strong>USING COMPREHENSION</strong>, create a function <code>find_all_numbers_divisible_by_a_and_b(n,a,b)</code> that lists the numbers $1$ through $n$ that are divisible by both $a$ and $b$. <strong>The body of your function should consist of just 1 line, in which it simply returns a list comprehension.</strong></p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; find_all_numbers_divisible_by_a_and_b(100,6,15)
+[30, 60, 90]</code></pre>
+<p><strong>b.</strong> Rewrite the following function to consist of simply returning a list comprehension.</p>
+
+<pre><code>def compute_all_products(M,N):
+    products = []
+    for m in range(M):
+       for n in range(N):
+           product = m * n
+           products.append(product)
+    return products</code></pre>
+<p>Write a test for your function using <code>M=3,N=4</code> and assert that your function passes it.</p>
+
+<pre><code>&gt;&gt;&gt; compute_all_products(3,4)
+(you need to figure out what the correct output is)</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-5-1">Problem 5-1<a class="anchor-link" href="#Problem-5-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/comprehensions.py</code></p>
 <p><strong>Grading:</strong> 2 points for each part (a) and (b)</p>
 <p><strong>a.</strong> Implement a function <code>even_odd_tuples</code> that takes a list of numbers and labels each number as even or odd. Return a <a href="https://www.python-course.eu/list_comprehension.php">list comprehension</a> so that the function takes up only two lines, as follows:</p>
