@@ -14,7 +14,18 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="38">
+<font size="3em"><ol reversed start="39">
+    <li><b>Friday, September 4</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/454122212">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-39-1">DataFrame -- Dummy Variables, Appending/Removing Columns</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-39-2">Directed Acyclic Graphs</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-39-3">Applications of Probability Distributions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-39-4">CombatPlayer Tests (same as before)</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/454122212">Class Recording</a>
         <br>Assignment Problems:
