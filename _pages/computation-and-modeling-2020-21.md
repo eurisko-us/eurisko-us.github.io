@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="5">
+<font size="3em"><ol reversed start="6">
+    <li><b>Friday, September 4</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/454122196">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-6-1">2x2 Matrix Class</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-6-2">Iterative and Recursive Skip-Factorial</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-6-3">Elementary Sorting ("Simple" Sort and "Swap" Sort)</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/454122196">Class Recording</a>
         <br>Assignment Problems:
