@@ -8,7 +8,7 @@ author_profile: false
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
-<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • <a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#troubleshooting">Troubleshooting</a></b></center></font>
+<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • <a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#troubleshooting">Troubleshooting</a></b></center></font>
 </div>
 
 ## [<center>Class Meetings</center>](#class-meetings)
@@ -102,7 +102,7 @@ author_profile: false
   
 <font size="3em"><ul>
   <li><b>Assignments (30%).</b> Every class, you will have an assignment consisting of multiple problems from a variety of domains. Assignments will be graded for both functionality and code quality.</li>
-  <li><b>Biweekly Quizzes (30%).</b> We will have 2 quizzes each month: one on the last class on or before the 15th of the month, and another on the last class on or before the last day of the month. These quizzes will be short free-response quizzes focused on the core principles covered in the assignments.</li>
+  <li><b>Biweekly Quizzes (30%).</b> We will have quizzes every other week. They will consist of free-response problems focused on the core principles covered in the assignments.</li>
   <li><b>Library Quality (30%).</b> At the end of the course, your code libraries will be graded for both functionality and code quality. So, be sure to refactor your code appropriately each time you do an assignment!</li>
   <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 3 specific things that could be improved.</li>
 </ul></font>
@@ -115,6 +115,12 @@ author_profile: false
 
 <br>Note that you can only resubmit each assignment *once* -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to make your corrections, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.
 
+</div>
+
+## [<center>Study Tips</center>](#study-tips)
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+<br>To prepare for a quiz, all you really need to do is make sure that you are "fluent" with the relevant problems covered on homeworks. To be clear: simply writing working code is enough to score well on homeworks, but it's not enough to score well on quizzes. For quizzes, you need to make sure that you can quickly work out these problems from scratch, without any help. It's not enough to get to the point of "I think I get this, this makes sense" -- you need to get to the point of "I totally get this, this is easy".
 </div>
 
 ## [<center>Coding Commandments</center>](#coding-commandments)
