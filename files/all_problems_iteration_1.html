@@ -13185,7 +13185,7 @@ at this point, the directed graph looks like this:
 6&lt;--3&lt;--4--&gt;5
 
 &gt;&gt;&gt; [[child.index for child in node.children] for node in directed_graph.nodes]
-[[1], [4], [], [1,6], [3,5], []]
+[[1], [2,4], [], [1,6], [3,5], [], []]
 &gt;&gt;&gt; [[parent.index for parent in node.parents] for node in directed_graph.nodes]
 [[], [0,3], [1], [4], [1], [4], [3]]
 
