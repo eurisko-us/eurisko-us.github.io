@@ -13121,6 +13121,7 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-6-1">Problem 6-1<a class="anchor-link" href="#Problem-6-1">&#182;</a></h1><p><strong>Locations:</strong> <code>machine-learning/src/matrix.py</code> and <code>machine-learning/tests/test_matrix.py</code></p>
 <p><strong>Grading:</strong> 5 points for code quality; 5 points for passing each test (1 point per test)</p>
+<p><strong>Note:</strong> You are <strong>NOT</strong> allowed to use <code>numpy</code> or any other external library. The <code>Matrix</code> class should be written entirely from scratch.</p>
 <ol>
 <li><p>Create a <code>machine-learning</code> repository on GitHub and connect it to a repl of the same name. Create a folder <code>machine-learning/src</code>, and within that folder, put a file <code>matrix.py</code> which will contain the <code>Matrix</code> class you write in this problem.</p>
 </li>
@@ -13219,17 +13220,234 @@ PASSED</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-6-3">Problem 6-3<a class="anchor-link" href="#Problem-6-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/simple_sort_swap_sort.py</code></p>
+<p><strong>Note:</strong> In these questions, you will need to compute the minimum element of a list <strong>without using Python's built-in <code>min</code> function</strong>. To do this, you should write a "helper" function <code>minimum()</code> that loops through a list, keeping track of the smallest element seen so far. For example:</p>
+
+<pre><code>given the list [4,6,3,5]
+first element is 4; smallest element so far is 4
+next element is 6; smallest element so far is 4
+next element is 3; smallest element so far is 3
+next element is 5; smallest element so far is 3
+conclude that minimum element is 3</code></pre>
 <p><strong>a.</strong> (1 point for code quality, 1 point for passing test)</p>
-<p>Write a function <code>simple_sort(num_list)</code> that takes an input list <code>num_list</code> and sorts its elements from least to greatest by repeatedly finding the smallest element and moving it to a new list. <strong>Don't use Python's built-in <code>min</code> function.</strong></p>
+<p>Write a function <code>simple_sort(num_list)</code> that takes an input list <code>num_list</code> and sorts its elements from least to greatest by repeatedly finding the smallest element and moving it to a new list. <strong>Don't use Python's built-in <code>min</code> function or its built-in <code>sort</code> function.</strong></p>
 <p>Assert that your function passes the following test:</p>
 
 <pre><code>&gt;&gt;&gt; simple_sort([5,8,2,2,4,3,0,2,-5,3.14,2])
 [-5,0,2,2,2,2,3,3.14,4,5,8]</code></pre>
+<p><strong>Tip:</strong> To help you debug your code, here are the steps that your function should be doing behind the scenes. (You don't have to write tests for them.)</p>
+
+<pre><code>sorted elements: []
+remaining elements: [5,8,2,2,4,3,0,2,-5,3.14,2]
+
+minimum of remaining elements: -5
+sorted elements: [-5]
+remaining elements: [5,8,2,2,4,3,0,2,3.14,2]
+
+minimum of remaining elements: 0
+sorted elements: [-5,0]
+remaining elements: [5,8,2,2,4,3,2,3.14,2]
+
+minimum of remaining elements: 2
+sorted elements: [-5,0,2]
+remaining elements: [5,8,2,4,3,2,3.14,2]
+
+minimum of remaining elements: 2
+sorted elements: [-5,0,2,2]
+remaining elements: [5,8,4,3,2,3.14,2]
+
+minimum of remaining elements: 2
+sorted elements: [-5,0,2,2,2]
+remaining elements: [5,8,4,3,3.14,2]
+
+minimum of remaining elements: 2
+sorted elements: [-5,0,2,2,2,2]
+remaining elements: [5,8,4,3,3.14]
+
+minimum of remaining elements: 3
+sorted elements: [-5,0,2,2,2,2]
+remaining elements: [5,8,4,3.14]
+
+minimum of remaining elements: 3.14
+sorted elements: [-5,0,2,2,2,2,3.14]
+remaining elements: [5,8,4]
+
+minimum of remaining elements: 4
+sorted elements: [-5,0,2,2,2,2,3.14,4]
+remaining elements: [5,8]
+
+minimum of remaining elements: 5
+sorted elements: [-5,0,2,2,2,2,3.14,4,5]
+remaining elements: [8]
+
+minimum of remaining elements: 8
+sorted elements: [-5,0,2,2,2,2,3.14,4,5,8]
+remaining elements: []
+
+final output: [-5,0,2,2,2,2,3.14,4,5,8]</code></pre>
 <p><strong>b.</strong> (1 point for code quality, 1 point for passing test)</p>
-<p>Write a function <code>swap_sort(x)</code> that sorts the list from least to greatest by repeatedly going through each pair of adjacent elements and swapping them if they are in the wrong order.</p>
+<p>Write a function <code>swap_sort(x)</code> that sorts the list from least to greatest by repeatedly going through each pair of adjacent elements and swapping them if they are in the wrong order. The algorithm should terminate once it's made a full pass through the list without making any more swaps. <strong>Don't use Python's built-in <code>sort</code> function.</strong></p>
+<p>Assert that your function passes the following test:</p>
 
 <pre><code>&gt;&gt;&gt; swap_sort([5,8,2,2,4,3,0,2,-5,3.14,2])
 [-5,0,2,2,2,2,3,3.14,4,5,8]</code></pre>
+<p><strong>Tip:</strong> To help you debug your code, here are the steps that your function should be doing behind the scenes. (You don't have to write tests for them.)</p>
+
+<pre><code>FIRST PASS
+
+starting list: [-5,0,2,2,2,2,3,3.14,4,5,8]
+
+[(5,8),2,2,4,3,0,2,-5,3.14,2]
+[5,(8,2),2,4,3,0,2,-5,3.14,2] SWAP
+[5,2,(8,2),4,3,0,2,-5,3.14,2] SWAP
+[5,2,2,(8,4),3,0,2,-5,3.14,2] SWAP
+[5,2,2,4,(8,3),0,2,-5,3.14,2] SWAP
+[5,2,2,4,3,(8,0),2,-5,3.14,2] SWAP
+[5,2,2,4,3,0,(8,2),-5,3.14,2] SWAP
+[5,2,2,4,3,0,2,(8,-5),3.14,2] SWAP
+[5,2,2,4,3,0,2,-5,(8,3.14),2] SWAP
+[5,2,2,4,3,0,2,-5,3.14,(8,2)] SWAP
+
+ending list: [5,2,2,4,3,0,2,-5,3.14,2,8]
+
+SECOND PASS
+
+starting list: [5,2,2,4,3,0,2,-5,3.14,2,8]
+
+[(5,2),2,4,3,0,2,-5,3.14,2,8] SWAP
+[2,(5,2),4,3,0,2,-5,3.14,2,8] SWAP
+[2,2,(5,4),3,0,2,-5,3.14,2,8] SWAP
+[2,2,4,(5,3),0,2,-5,3.14,2,8] SWAP
+[2,2,4,3,(5,0),2,-5,3.14,2,8] SWAP
+[2,2,4,3,0,(5,2),-5,3.14,2,8] SWAP
+[2,2,4,3,0,2,(5,-5),3.14,2,8] SWAP
+[2,2,4,3,0,2,-5,(5,3.14),2,8] SWAP
+[2,2,4,3,0,2,-5,3.14,(5,2),8] SWAP
+[2,2,4,3,0,2,-5,3.14,2,(5,8)]
+
+ending list: [2,2,4,3,0,2,-5,3.14,2,5,8]
+
+THIRD PASS
+
+starting list: [2,2,4,3,0,2,-5,3.14,2,5,8]
+
+[(2,2),4,3,0,2,-5,3.14,2,5,8]
+[2,(2,4),3,0,2,-5,3.14,2,5,8]
+[2,2,(4,3),0,2,-5,3.14,2,5,8] SWAP
+[2,2,3,(4,0),2,-5,3.14,2,5,8] SWAP
+[2,2,3,0,(4,2),-5,3.14,2,5,8] SWAP
+[2,2,3,0,2,(4,-5),3.14,2,5,8] SWAP
+[2,2,3,0,2,-5,(4,3.14),2,5,8] SWAP
+[2,2,3,0,2,-5,3.14,(4,2),5,8] SWAP
+[2,2,3,0,2,-5,3.14,2,(4,5),8] 
+[2,2,3,0,2,-5,3.14,2,4,(5,8)]
+
+ending list: [2,2,3,0,2,-5,3.14,2,4,5,8]
+
+FOURTH PASS
+
+starting list: [2,2,3,0,2,-5,3.14,2,4,5,8]
+
+[(2,2),3,0,2,-5,3.14,2,4,5,8]
+[2,(2,3),0,2,-5,3.14,2,4,5,8]
+[2,2,(3,0),2,-5,3.14,2,4,5,8] SWAP
+[2,2,0,(3,2),-5,3.14,2,4,5,8] SWAP
+[2,2,0,2,(3,-5),3.14,2,4,5,8] SWAP
+[2,2,0,2,-5,(3,3.14),2,4,5,8] 
+[2,2,0,2,-5,3,(3.14,2),4,5,8] SWAP
+[2,2,0,2,-5,3,2,(3.14,4),5,8]
+[2,2,0,2,-5,3,2,3.14,(4,5),8]
+[2,2,0,2,-5,3,2,3.14,4,(5,8)]
+
+ending list: [2,2,0,2,-5,3,2,3.14,4,5,8]
+
+FIFTH PASS
+
+starting list: [2,2,0,2,-5,3,2,3.14,4,5,8]
+
+[(2,2),0,2,-5,3,2,3.14,4,5,8]
+[2,(2,0),2,-5,3,2,3.14,4,5,8] SWAP
+[2,0,(2,2),-5,3,2,3.14,4,5,8] 
+[2,0,2,(2,-5),3,2,3.14,4,5,8] SWAP
+[2,0,2,-5,(2,3),2,3.14,4,5,8]
+[2,0,2,-5,2,(3,2),3.14,4,5,8] SWAP
+[2,0,2,-5,2,2,(3,3.14),4,5,8]
+[2,0,2,-5,2,2,3,(3.14,4),5,8]
+[2,0,2,-5,2,2,3,3.14,(4,5),8]
+[2,0,2,-5,2,2,3,3.14,4,(5,8)]
+
+ending list: [2,0,2,-5,2,2,3,3.14,4,5,8] 
+
+SIXTH PASS
+
+starting list: [2,0,2,-5,2,2,3,3.14,4,5,8]
+
+[(2,0),2,-5,2,2,3,3.14,4,5,8] SWAP
+[0,(2,2),-5,2,2,3,3.14,4,5,8]
+[0,2,(2,-5),2,2,3,3.14,4,5,8] SWAP
+[0,2,-5,(2,2),2,3,3.14,4,5,8] 
+[0,2,-5,2,(2,2),3,3.14,4,5,8]
+[0,2,-5,2,2,(2,3),3.14,4,5,8]
+[0,2,-5,2,2,2,(3,3.14),4,5,8]
+[0,2,-5,2,2,2,3,(3.14,4),5,8]
+[0,2,-5,2,2,2,3,3.14,(4,5),8]
+[0,2,-5,2,2,2,3,3.14,4,(5,8)]
+
+ending list: [0,2,-5,2,2,2,3,3.14,4,5,8]
+
+SEVENTH PASS
+
+starting list: [0,2,-5,2,2,2,3,3.14,4,5,8]
+
+[(0,2),-5,2,2,2,3,3.14,4,5,8]
+[0,(2,-5),2,2,2,3,3.14,4,5,8] SWAP
+[0,-5,(2,2),2,2,3,3.14,4,5,8]
+[0,-5,2,(2,2),2,3,3.14,4,5,8] 
+[0,-5,2,2,(2,2),3,3.14,4,5,8]
+[0,-5,2,2,2,(2,3),3.14,4,5,8]
+[0,-5,2,2,2,2,(3,3.14),4,5,8]
+[0,-5,2,2,2,2,3,(3.14,4),5,8]
+[0,-5,2,2,2,2,3,3.14,(4,5),8]
+[0,-5,2,2,2,2,3,3.14,4,(5,8)]
+
+ending list: [0,-5,2,2,2,2,3,3.14,4,5,8]
+
+EIGTHTH PASS
+
+starting list: [0,-5,2,2,2,2,3,3.14,4,5,8]
+
+[(0,-5),2,2,2,2,3,3.14,4,5,8] SWAP
+[-5,(0,2),2,2,2,3,3.14,4,5,8] 
+[-5,0,(2,2),2,2,3,3.14,4,5,8]
+[-5,0,2,(2,2),2,3,3.14,4,5,8] 
+[-5,0,2,2,(2,2),3,3.14,4,5,8]
+[-5,0,2,2,2,(2,3),3.14,4,5,8]
+[-5,0,2,2,2,2,(3,3.14),4,5,8]
+[-5,0,2,2,2,2,3,(3.14,4),5,8]
+[-5,0,2,2,2,2,3,3.14,(4,5),8]
+[-5,0,2,2,2,2,3,3.14,4,(5,8)]
+
+ending list: [-5,0,2,2,2,2,3,3.14,4,5,8]
+
+NINTH PASS
+
+starting list: [-5,0,2,2,2,2,3,3.14,4,5,8]
+
+[(-5,0),2,2,2,2,3,3.14,4,5,8]
+[-5,(0,2),2,2,2,3,3.14,4,5,8] 
+[-5,0,(2,2),2,2,3,3.14,4,5,8]
+[-5,0,2,(2,2),2,3,3.14,4,5,8] 
+[-5,0,2,2,(2,2),3,3.14,4,5,8]
+[-5,0,2,2,2,(2,3),3.14,4,5,8]
+[-5,0,2,2,2,2,(3,3.14),4,5,8]
+[-5,0,2,2,2,2,3,(3.14,4),5,8]
+[-5,0,2,2,2,2,3,3.14,(4,5),8]
+[-5,0,2,2,2,2,3,3.14,4,(5,8)]
+
+ending list: [-5,0,2,2,2,2,3,3.14,4,5,8]
+
+no swaps were done in the ninth pass, so we're done!
+
+final output: [-5,0,2,2,2,2,3,3.14,4,5,8]</code></pre>
 
 </div>
 </div>
