@@ -13129,7 +13129,7 @@ div#notebook {
 }
 
 &gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['id', 'color'])
-&gt;&gt;&gt; df1 = df1.create_dummy_variables()
+&gt;&gt;&gt; df2 = df1.create_dummy_variables()
 &gt;&gt;&gt; df2.columns
 ['id', 'color_blue', 'color_yellow', 'color_green']
 &gt;&gt;&gt; df2.to_array()
