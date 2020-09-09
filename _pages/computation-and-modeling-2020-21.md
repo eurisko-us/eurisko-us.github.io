@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="6">
+<font size="3em"><ol reversed start="7">
+    <li><b>Wednesday, September 9</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/454839856">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-7-1">MxN Matrix Class</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-7-2">Monte Carlo Simulations of Coin Flipping</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-7-3">SwapSort Theory</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, September 4</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/454839856">Class Recording</a>
         <br>Assignment Problems:
