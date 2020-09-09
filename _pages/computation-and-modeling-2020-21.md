@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="7">
     <li><b>Wednesday, September 9</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/454839856">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/456278496">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-7-1">MxN Matrix Class</a></li>
