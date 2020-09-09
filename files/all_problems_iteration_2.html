@@ -13119,6 +13119,126 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-7-1">Problem 7-1<a class="anchor-link" href="#Problem-7-1">&#182;</a></h1><p><strong>Grading:</strong> 1 point per working test with good code quality. (There are 7 tests total)</p>
+<p>Generalize your <code>Matrix</code> class to $M \times N$ matrices. Also, write two more methods <code>transpose()</code> and <code>is_equal()</code>, and create attributes <code>num_rows</code> and <code>num_cols</code>.</p>
+<p>Assert that the following tests work. Put your tests in <code>machine-learning/tests/test_matrix.py</code>.</p>
+<p><strong>Note:</strong> In the tests below, we manipulate a $4 \times 5$ matrix. However, your code should be general to <em>any</em> size of matrix. For example, it should work with a $400 \times 500$ matrix as well.</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([[1,0,2,0,3],
+                [0,4,0,5,0],
+                [6,0,7,0,8],
+                [-1,-2,-3,-4,-5])
+&gt;&gt;&gt; (A.num_rows, A.num_cols)
+(4, 5)
+
+&gt;&gt;&gt; A_t = A.transpose()
+&gt;&gt;&gt; A_t.elements
+[[ 1,  0,  6, -1],
+ [ 0,  4,  0, -2],
+ [ 2,  0,  7, -3],
+ [ 0,  5,  0, -4],
+ [ 3,  0,  8, -5]]
+
+&gt;&gt;&gt; B = A_t.matrix_multiply(A)
+&gt;&gt;&gt; B.elements
+[[38,  2, 47,  4, 56],
+ [ 2, 20,  6, 28, 10],
+ [47,  6, 62, 12, 77],
+ [ 4, 28, 12, 41, 20],
+ [56, 10, 77, 20, 98]]
+
+&gt;&gt;&gt; C = B.scalar_multiply(0.1)
+&gt;&gt;&gt; C.elements
+[[3.8,  .2, 4.7,  .4, 5.6],
+ [ .2, 2.0,  .6, 2.8, 1.0],
+ [4.7,  .6, 6.2, 1.2, 7.7],
+ [ .4, 2.8, 1.2, 4.1, 2.0],
+ [5.6, 1.0, 7.7, 2.0, 9.8]]
+
+&gt;&gt;&gt; D = B.subtract(C)
+&gt;&gt;&gt; D.elements
+[[34.2,  1.8, 42.3,  3.6, 50.4]
+ [ 1.8, 18. ,  5.4, 25.2,  9. ]
+ [42.3,  5.4, 55.8, 10.8, 69.3]
+ [ 3.6, 25.2, 10.8, 36.9, 18. ]
+ [50.4,  9. , 69.3, 18. , 88.2]]
+
+&gt;&gt;&gt; E = D.add(C)
+[[38,  2, 47,  4, 56],
+ [ 2, 20,  6, 28, 10],
+ [47,  6, 62, 12, 77],
+ [ 4, 28, 12, 41, 20],
+ [56, 10, 77, 20, 98]]
+
+&gt;&gt;&gt; (E.is_equal(B), E.is_equal(C))
+(True, False)</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-7-2">Problem 7-2<a class="anchor-link" href="#Problem-7-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/monte_carlo_coin_flips.py</code></p>
+<p><strong>Grading:</strong> There are 6 points possible (2 points per part).</p>
+<p>In this problem, you will compute the probability of getting <code>num_heads</code> heads in <code>num_flips</code> flips of a fair coin. You will do this using two different methods. You should write your functions in a file <code>assignment-problems/coin_flipping.py</code></p>
+<p><strong>a.</strong> (1 point for code quality; 1 point for passing test)</p>
+<p>Write a function <code>probability(num_heads, num_flips)</code> that uses mathematics to compute the probability.</p>
+<ul>
+<li><p>First, compute the total number of possible outcomes for <code>num_flips</code> flips. (Hint: it's an exponent.)</p>
+</li>
+<li><p>Then, compute the number of outcomes in which <code>num_heads</code> heads arise in <code>num_flips</code> flips. (Hint: it's a combination.)</p>
+</li>
+<li><p>Then, divide the results.</p>
+</li>
+</ul>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; probability(5,8)
+0.21875</code></pre>
+<p><strong>b.</strong> (2 points for code quality/correctness)</p>
+<p>Write a function <code>monte_carlo_probability(num_heads, num_flips)</code> that uses simulation to compute the probability.</p>
+<ul>
+<li><p>First, simulate 1000 trials of <code>num_flips</code> coin flips, keeping track of how many heads there were.</p>
+</li>
+<li><p>Then, divide the number of outcomes in which there were <code>num_heads</code> heads, by the total number of trials (1000).</p>
+</li>
+</ul>
+<p><strong>c.</strong> (1 point for code quality; 1 point for printing out reasonable monte carlo results)</p>
+<p>When you run <code>assignment-problems/coin_flipping.py</code>, you should print out the result of <code>probability(5,8)</code>. Also, print out 5 instances of <code>monte_carlo_probability(5,8)</code>.</p>
+<ul>
+<li>The 5 instances will be slightly different because it's a random simulation, but they should be fairly close to each other and to the true result.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-7-3">Problem 7-3<a class="anchor-link" href="#Problem-7-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/swap_sort_theory.txt</code></p>
+<p><strong>Grading:</strong> 1 point per correct answer <strong>with justification.</strong></p>
+<p>Answer the following questions about <code>swap_sort</code>. <em>Explain or show your work for each question.</em></p>
+<ol>
+<li><p>Given a list of 5 elements, what’s the least number of swaps that could occur?  What about for a list of $n$ elements? <strong>Explain why.</strong></p>
+</li>
+<li><p>Given a list of 5 elements, what’s the greatest number of swaps that could occur? What about for a list of $n$ elements? <strong>Explain why.</strong></p>
+</li>
+</ol>
+<p>For 3 and 4, determine whether the statement is true or false. If true, then explain why. If false, then provide a counterexample.</p>
+<ol>
+<li><p>The number of swaps performed by swap sort on each pass is always a decreasing sequence.</p>
+</li>
+<li><p>On two consecutive passes, the number of swaps performed by swap sort is never equal.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-6-1">Problem 6-1<a class="anchor-link" href="#Problem-6-1">&#182;</a></h1><p><strong>Locations:</strong> <code>machine-learning/src/matrix.py</code> and <code>machine-learning/tests/test_matrix.py</code></p>
 <p><strong>Grading:</strong> 5 points for code quality; 5 points for passing each test (1 point per test)</p>
 <p><strong>Note:</strong> You are <strong>NOT</strong> allowed to use <code>numpy</code> or any other external library. The <code>Matrix</code> class should be written entirely from scratch.</p>

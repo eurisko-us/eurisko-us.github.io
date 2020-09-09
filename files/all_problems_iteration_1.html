@@ -13119,6 +13119,159 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-40-1">Problem 40-1<a class="anchor-link" href="#Problem-40-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/assignment_40_statistics.txt</code></p>
+<p><strong>Grading:</strong> 1 point for a correct answer to each part <em>with all work shown.</em></p>
+<p>Suppose you toss a coin $10$ times and get the result $\text{HHHHT HHHHH}.$ From this result, you estimate that the coin is biased and generally lands on heads $90\%$ of the time. But how sure can you be? Let's quantify it.</p>
+<p><strong>SHOW YOUR WORK FOR ALL PARTS OF THE QUESTION!</strong></p>
+<ol>
+<li><p><strong>Compute the likelihood function</strong> $\mathcal{L}(k | \text{HHHHT HHHHH})$ where $P(H)=k.$ Remember that the likelihood is just the probability of getting the result $\text{HHHHT HHHHH}$ under the assumption that $P(H)=k.$ Your answer should be expressed in terms of $k.$</p>
+</li>
+<li><p>"Normalize" the likelihood function by multiplying it by some constant $c$ such that it integrates to $1.$ That is, <strong>find the constant $c$ such that</strong>
+$$\int_0^1 c \cdot \mathcal{L}(k | \text{HHHHT HHHHH}) \, \textrm{d}k = 1.$$
+This way, we can treat $c \cdot \mathcal{L}$ as a probability distribution for $k:$
+$$p(k) = c \cdot \mathcal{L}(k | \text{HHHHT HHHHH})$$</p>
+</li>
+<li><p>What is the most probable value of $k?$ In other words, what is value of $k$ at which $p(k)$ reaches a maximum? USE THE FIRST OR SECOND DERIVATIVE TEST.</p>
+</li>
+<li><p>What is the probability that the coin is biased at all? In other words, what is $P(k &gt; 0.5)?$</p>
+</li>
+<li><p>What is the probability that the coin is biased with $0.85 &lt; P(H) &lt; 0.95?$</p>
+</li>
+<li><p>Fill in the blank: you can be $95\%$ sure that $P(H)$ is at least $\_\_\_.$</p>
+</li>
+</ol>
+<p><strong>WAIT! DID YOU SHOW YOUR WORK FOR ALL PARTS OF THE QUESTION?</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-40-2">Problem 40-2<a class="anchor-link" href="#Problem-40-2">&#182;</a></h1><p><strong>Grading:</strong> 1 point for each working test (4 tests total), 4 points for code quality</p>
+<p>In your <code>DataFrame</code>, modify your <code>create_dummy_variables()</code> method so that it also works when a column's entries are themselves lists of categorical entries.</p>
+<p>Assert that your <code>DataFrame</code> passes the following tests. Make sure to put your tests in <code>machine-learning/tests/test_dataframe.py</code>.</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'beef': [0, 0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 5, 5, 5, 5],
+    'pb': [0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5],
+    'condiments': [[],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly']],
+    'rating': [1, 1, 4, 0, 4, 8, 1, 0, 5, 0, 9, 0, 0, 0, 0, 0]
+}
+&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments'])
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'condiments']
+&gt;&gt;&gt; df.to_array()
+   [[ 0,  0,  []],
+    [ 0,  0,  ['mayo']],
+    [ 0,  0,  ['jelly']],
+    [ 0,  0,  ['mayo','jelly']],
+    [ 5,  0,  []],
+    [ 5,  0,  ['mayo']],
+    [ 5,  0,  ['jelly']],
+    [ 5,  0,  ['mayo','jelly']],
+    [ 0,  5,  []],
+    [ 0,  5,  ['mayo']],
+    [ 0,  5,  ['jelly']],
+    [ 0,  5,  ['mayo','jelly']],
+    [ 5,  5,  []],
+    [ 5,  5,  ['mayo']],
+    [ 5,  5,  ['jelly']],
+    [ 5,  5,  ['mayo','jelly']]]
+
+&gt;&gt;&gt; df = df.create_dummy_variables()
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'mayo', 'jelly']
+&gt;&gt;&gt; df.to_array()
+   [[ 0,  0,  0,  0],
+    [ 0,  0,  1,  0],
+    [ 0,  0,  0,  1],
+    [ 0,  0,  1,  1],
+    [ 5,  0,  0,  0],
+    [ 5,  0,  1,  0],
+    [ 5,  0,  0,  1],
+    [ 5,  0,  1,  1],
+    [ 0,  5,  0,  0],
+    [ 0,  5,  1,  0],
+    [ 0,  5,  0,  1],
+    [ 0,  5,  1,  1],
+    [ 5,  5,  0,  0],
+    [ 5,  5,  1,  0],
+    [ 5,  5,  0,  1],
+    [ 5,  5,  1,  1]]
+
+&gt;&gt;&gt; df = df.append_pairwise_interactions()
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'mayo', 'jelly',
+ 'beef_pb', 'beef_mayo', 'beef_jelly',
+ 'pb_mayo', 'pb_jelly',
+ 'mayo_jelly']
+&gt;&gt;&gt; df.to_array()
+   [[ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [ 0,  0,  1,  0,  0,  0,  0,  0,  0,  0],
+    [ 0,  0,  0,  1,  0,  0,  0,  0,  0,  0],
+    [ 0,  0,  1,  1,  0,  0,  0,  0,  0,  1],
+    [ 5,  0,  0,  0,  0,  0,  0,  0,  0,  0],
+    [ 5,  0,  1,  0,  0,  5,  0,  0,  0,  0],
+    [ 5,  0,  0,  1,  0,  0,  5,  0,  0,  0],
+    [ 5,  0,  1,  1,  0,  5,  5,  0,  0,  1],
+    [ 0,  5,  0,  0,  0,  0,  0,  0,  0,  0],
+    [ 0,  5,  1,  0,  0,  0,  0,  5,  0,  0],
+    [ 0,  5,  0,  1,  0,  0,  0,  0,  5,  0],
+    [ 0,  5,  1,  1,  0,  0,  0,  5,  5,  1],
+    [ 5,  5,  0,  0, 25,  0,  0,  0,  0,  0],
+    [ 5,  5,  1,  0, 25,  5,  0,  5,  0,  0],
+    [ 5,  5,  0,  1, 25,  0,  5,  0,  5,  0],
+    [ 5,  5,  1,  1, 25,  5,  5,  5,  5,  1]]
+
+&gt;&gt;&gt; df.append_columns({
+    'constant': [1 for _ in range(len(data_dict['rating']))],
+    'rating': data_dict['rating']
+}, column_order = ['constant', 'rating'])
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'mayo', 'jelly',
+ 'beef_pb', 'beef_mayo', 'beef_jelly',
+ 'pb_mayo', 'pb_jelly',
+ 'mayo_jelly',
+ 'constant', 'rating]
+&gt;&gt;&gt; df.to_array()
+   [[ 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  1],
+    [ 0,  0,  1,  0,  0,  0,  0,  0,  0,  0,  1,  1],
+    [ 0,  0,  0,  1,  0,  0,  0,  0,  0,  0,  1,  4],
+    [ 0,  0,  1,  1,  0,  0,  0,  0,  0,  1,  1,  0],
+    [ 5,  0,  0,  0,  0,  0,  0,  0,  0,  0,  1,  4],
+    [ 5,  0,  1,  0,  0,  5,  0,  0,  0,  0,  1,  8],
+    [ 5,  0,  0,  1,  0,  0,  5,  0,  0,  0,  1,  1],
+    [ 5,  0,  1,  1,  0,  5,  5,  0,  0,  1,  1,  0],
+    [ 0,  5,  0,  0,  0,  0,  0,  0,  0,  0,  1,  5],
+    [ 0,  5,  1,  0,  0,  0,  0,  5,  0,  0,  1,  0],
+    [ 0,  5,  0,  1,  0,  0,  0,  0,  5,  0,  1,  9],
+    [ 0,  5,  1,  1,  0,  0,  0,  5,  5,  1,  1,  0],
+    [ 5,  5,  0,  0, 25,  0,  0,  0,  0,  0,  1,  0],
+    [ 5,  5,  1,  0, 25,  5,  0,  5,  0,  0,  1,  0],
+    [ 5,  5,  0,  1, 25,  0,  5,  0,  5,  0,  1,  0],
+    [ 5,  5,  1,  1, 25,  5,  5,  5,  5,  1,  1,  0]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-40-3">Problem 40-3<a class="anchor-link" href="#Problem-40-3">&#182;</a></h1><p>2 points</p>
+<p>Get your <code>CombatPlayer</code> tests working. If they're working already, then congrats, you just got 2 points for free.</p>
+<p>I'm making this worth 2 points so that there's an incentive to get this done as soon as possible (rather than just waiting to resubmit the previous assignment at some later date).</p>
+<p>Once you get your tests working, remember to resubmit any previous assignments to get that 60% partial credit.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-39-1">Problem 39-1<a class="anchor-link" href="#Problem-39-1">&#182;</a></h1><p><strong>Grading:</strong> 12 points total = 6 points for code quality, 1 point for passing each test (there are 6 tests).</p>
 <p>Update your <code>DataFrame</code> to implement the following functionality.</p>
 <p>Put all of your <code>DataFrame</code> tests as assertions in a file <code>machine-learning/tests/test_dataframe.py</code>.</p>
