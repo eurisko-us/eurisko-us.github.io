@@ -14,12 +14,22 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="40">
+<font size="3em"><ol reversed start="41">
+    <li><b>Friday, September 11</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/456278598">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-1">Bayesian Inference with Discrete Uniform Distribution</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-2">"Dangers of Poor Modeling" Scenarios</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-3">LinearRegressor and LogisticRegressor Classes based on DataFrame</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/456278598">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-40-1">Introduction to Posterior Distributions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-40-1">Bayesian Inference with Coin Flips</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-40-2">DataFrame - Sandwich Dataset Processing</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-40-3">CombatPlayer Tests (same as before)</a></li>
         </ul></font>
