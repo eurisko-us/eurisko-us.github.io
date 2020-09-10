@@ -13119,6 +13119,252 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-41-1">Problem 41-1<a class="anchor-link" href="#Problem-41-1">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_41_stats.txt</code> AND <code>assignment-problems/assignment_41_stats.py</code></p>
+<p><strong>Grading:</strong> 1 point per part (6 points total)</p>
+<hr>
+<p>In the previous assignment, you calculated the distribution of the bias of a coin by collecting some data, computing the likelihood function, and then "normalized" the likelihood function to turn it into a probability distribution.</p>
+<p>This process is called <strong>Bayesian inference</strong>, and the probability distribution that you created using the likelihood function is called the <strong>Bayesian posterior distribution</strong>.</p>
+<p>Later, we will learn more about the "Bayesian" in Bayesian inference, but for now, I want you to become familiar with the process. Now, you will perform another round of Bayesian inference, but this time on a different distribution.</p>
+<hr>
+<p>Your friend is randomly stating positive integers that are less than some upper bound (which your friend knows, but you don't know). The numbers your friend states are as follows:</p>
+<blockquote><p>1, 17, 8, 25, 3</p>
+</blockquote>
+<p>You assume that the numbers come from a <strong>discrete uniform distribution</strong> $U\left\{1,2,\ldots,k\right\}$ defined as follows:</p>
+$$p_k(x) = \begin{cases} \dfrac{1}{k} &amp; x \in \left\{1,2,\ldots,k\right\} \\ 0 &amp; x \not\in \left\{1,2,\ldots,k\right\} \end{cases}$$<p><strong>SHOW YOUR WORK FOR ALL PARTS OF THE QUESTION!</strong></p>
+<ol>
+<li><p><strong>Compute the likelihood function</strong> $\mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\} ).$ Remember that the likelihood is just the probability of getting the result $ \left\{  1, 17, 8, 25, 3 \right\}$ under the assumption that the data was sampled from the distribution $p_k(x).$ Your answer should be a piecewise function expressed in terms of $k.$</p>
+</li>
+<li><p>"Normalize" the likelihood function by multiplying it by some constant $c$ such that sums to $1.$ That is, <strong>find the constant $c$ such that</strong>
+$$\sum_{k=1}^\infty c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\}) \, \textrm{d}k = 1.$$
+This way, we can treat $c \cdot \mathcal{L}$ as a probability distribution for $k:$
+$$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong>SUPER IMPORTANT:</strong> You won't be able to figure this out analytically (i.e. just using pen and paper). Instead, you should write a Python script in <code>assignment-problems/assignment_41_stats.py</code> to approximate the sum by evaluating it for a very large number of terms. You should use as many terms as you need until the result appears to converge.</p>
+</li>
+<li><p>What is the most probable value of $k?$ You can tell this just by looking at the distribution $p(k),$ but make sure to justify your answer with an explanation.</p>
+</li>
+<li><p>The largest number in the dataset is $25.$ What is the probability that $25$ is actually the upper bound chosen by your friend?</p>
+</li>
+<li><p>What is the probability that the upper bound is less than or equal to $30?$</p>
+</li>
+<li><p>Fill in the blank: you can be $95\%$ sure that the upper bound is less than $\_\_\_.$<br><strong>SUPER IMPORTANT:</strong> You won't be able to figure this out analytically (i.e. just using pen and paper). Instead, you should write another Python function in <code>assignment-problems/assignment_41_stats.py</code> to approximate value of $k$ needed (i.e. the number of terms needed) to have $p(K \leq k) = 0.95.$</p>
+</li>
+</ol>
+<p><strong>SHOW YOUR WORK FOR ALL PARTS OF THE QUESTION!</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-41-2">Problem 41-2<a class="anchor-link" href="#Problem-41-2">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_41_scenarios.txt</code></p>
+<p><strong>Grading:</strong> 1 point per part (4 points total)</p>
+<p><strong>a.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a logistic regression when the data is actually linear.</p>
+<ul>
+<li>Here's an example (which you cannot use as your answer). You're trying to predict the correct dose of a vitamin to administer to a patient. You gather a dataset of dose amount vs the vitamin concentration in the patient's blood, and you want to find the correct dose that will result in some amount of vitamin in the patient's blood. The data is linear, but you fit it with a logistic regression. As a result, because the logistic regression fits a sigmoid that "flattens out", you grossly overestimate the dose amount that is required to achieve the desired level of vitamin concentration. When you administer this overdose, the patient experiences severe vitamin overdose symptoms and possibly dies.</li>
+</ul>
+<p><strong>b.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a linear regression when the data is actually sigmoid-shaped.</p>
+<p><strong>c.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly assume that data follows an exponential distribution when it actually follows a uniform distribution.</p>
+<p><strong>d.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly assume that data follows a uniform distribution when it actually follows an exponential distribution.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-41-3">Problem 41-3<a class="anchor-link" href="#Problem-41-3">&#182;</a></h1><p><strong>Grading:</strong> In each part, you get 3 points for each correct predictions and 3 points for code quality. So 12 points total.</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/linear_regressor.py</code><br>
+<code>machine-learning/tests/test_linear_regressor.py</code><br>
+<code>machine-learning/src/logistic_regressor.py</code><br>
+<code>machine-learning/tests/test_logistic_regressor.py</code><br></p>
+</blockquote>
+<hr>
+<p><strong>PART A</strong></p>
+<p>If you have existing linear and polynomial regressor files and tests, rename them as follows:</p>
+<blockquote><p><code>machine-learning/src/deprecated_linear_regressor.py</code><br>
+<code>machine-learning/src/deprecated_polynomial_regressor.py</code><br>
+<code>machine-learning/tests/test_deprecated_linear_regressor.py</code><br>
+<code>machine-learning/tests/test_deprecated_polynomial_regressor.py</code></p>
+</blockquote>
+<p>Now, create a new class <code>LinearRegressor</code> in <code>machine-learning/src/linear_regressor.py</code> and <code>assert</code> that it passes the following tests. Put your tests in <code>tests/test_linear_regressor.py</code>.</p>
+<p><strong>Note:</strong> You can use parts of your deprecated <code>LinearRegressor</code> for inspiration, but I don't want to see any old dead code in this new class.</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'beef': [0, 0, 0, 0, 5, 5, 5, 5, 0, 0, 0, 0, 5, 5, 5, 5],
+    'pb': [0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 5, 5, 5],
+    'condiments': [[],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly'],
+                   [],['mayo'],['jelly'],['mayo','jelly']],
+    'rating': [1, 1, 4, 0, 4, 8, 1, 0, 5, 0, 9, 0, 0, 0, 0, 0]
+}
+&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments'])
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'condiments']
+
+&gt;&gt;&gt; df = df.create_all_dummy_variables()
+&gt;&gt;&gt; df = df.append_pairwise_interactions()
+&gt;&gt;&gt; df = df.append_columns({
+    'constant': [1 for _ in range(len(data_dict['rating']))],
+})
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'rating', 'mayo', 'jelly',
+ 'beef_pb', 'beef_mayo', 'beef_jelly', 'pb_mayo', 'pb_jelly', 'mayo_jelly'
+ 'constant']
+
+&gt;&gt;&gt; linear_regressor = LinearRegressor(df, prediction_column = 'rating')
+&gt;&gt;&gt; linear_regressor.coefficients
+{
+    'beef': 0.25,
+    'pb': 0.4,
+    'mayo': -1.25,
+    'jelly': 1.5,
+    'beef_pb': -0.21,
+    'beef_mayo': 1.05,
+    'beef_jelly': -0.85,
+    'pb_mayo': -0.65,
+    'pb_jelly': 0.65,
+    'mayo_jelly': -3.25,
+    'constant': 2.1875
+}
+
+&gt;&gt;&gt; linear_regressor.gather_all_inputs({
+    'beef': 5,
+    'pb': 5,
+    'mayo': 1,
+    'jelly': 1,
+})
+
+{
+    'beef': 5,
+    'pb': 5,
+    'mayo': 1,
+    'jelly': 1,
+    'beef_pb': 25,
+    'beef_mayo': 5,
+    'beef_jelly': 5,
+    'pb_mayo': 1,
+    'pb_jelly': 1,
+    'mayo_jelly': 1,
+    'constant': 1
+}
+
+
+^ Note: this should include all interactions terms AND any constant term
+that also appear in the base dataframe
+
+&gt;&gt;&gt; linear_regressor.predict({
+    'beef': 5,
+    'pb': 5,
+    'mayo': 1,
+    'jelly': 1,
+})
+-1.8125
+
+&gt;&gt;&gt; linear_regressor.predict({
+    'beef': 0,
+    'pb': 3,
+    'mayo': 0,
+    'jelly': 1,
+})
+6.8375
+
+&gt;&gt;&gt; linear_regressor.predict({
+    'beef': 1,
+    'pb': 1,
+    'mayo': 1,
+    'jelly': 0,
+})
+1.7775
+
+&gt;&gt;&gt; linear_regressor.predict({
+    'beef': 6,
+    'pb': 0,
+    'mayo': 1,
+    'jelly': 0,
+})
+8.7375</code></pre>
+<hr>
+<p><strong>PART B</strong></p>
+<p>If you have existing logistic regressor files and tests, rename them as follows:</p>
+<blockquote><p><code>machine-learning/src/deprecated_logistic_regressor.py</code><br>
+<code>machine-learning/tests/test_deprecated_logistic_regressor.py</code></p>
+</blockquote>
+<p>Now, create a new class <code>LinearRegressor</code> in <code>machine-learning/src/logistic_regressor.py</code> and <code>assert</code> that it passes the following tests. Put your tests in <code>tests/test_logistic_regressor.py</code>.</p>
+<p><strong>IMPORTANT:</strong> Your code must satisfy the following specifications:</p>
+<ul>
+<li><p><code>LogisticRegressor</code> should inherit from <code>LinearRegressor</code>.</p>
+</li>
+<li><p><code>LogisticRegressor</code> should compute its coefficients by first replacing the <code>prediction_column</code> with the appropriate transformed values, and then fitting a linear regression.</p>
+</li>
+<li><p><code>LogisticRegressor</code> should make a prediction by first computing the linear regression output using its coefficients, and then passing the result as input into the sigmoid function.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> If you have a deprecated <code>LogisticRegressor</code>, then you can use parts of it for inspiration, but I don't want to see any old dead code in this new class.</p>
+
+<pre><code>(continued from tests in Part A...)
+
+&gt;&gt;&gt; df = df.apply('rating', lambda x: 0.1 if x==0 else x)
+
+^ Note: a "lambda" function is a way of writing a function on a single line,
+kind of like a list comprehension. The above lambda function just replaces any
+values of 0 with 0.1.
+
+&gt;&gt;&gt; regressor = LogisticRegressor(df, prediction_column = 'rating', max_value = 10)
+&gt;&gt;&gt; regressor.multipliers
+{
+    'beef': -0.03900793,
+    'pb': -0.02047944,
+    'mayo': 1.74825378,
+    'jelly': -0.39777219,
+    'beef_pb': 0.14970983,
+    'beef_mayo': -0.74854916,
+    'beef_jelly': 0.46821312,
+    'pb_mayo': 0.32958369,
+    'pb_jelly': -0.5288267,
+    'mayo_jelly': 2.64413352,
+    'constant': 1.01248436
+}
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 5,
+    'pb': 5,
+    'mayo': 1,
+    'jelly': 1,
+})
+0.023417479576338825
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 0,
+    'pb': 3,
+    'mayo': 0,
+    'jelly': 1,
+})
+7.375370259327203
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 1,
+    'pb': 1,
+    'mayo': 1,
+    'jelly': 0,
+})
+0.8076522077650409
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 6,
+    'pb': 0,
+    'mayo': 1,
+    'jelly': 0,
+})
+8.770303903540402</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-40-1">Problem 40-1<a class="anchor-link" href="#Problem-40-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/assignment_40_statistics.txt</code></p>
 <p><strong>Grading:</strong> 1 point for a correct answer to each part <em>with all work shown.</em></p>
 <p>Suppose you toss a coin $10$ times and get the result $\text{HHHHT HHHHH}.$ From this result, you estimate that the coin is biased and generally lands on heads $90\%$ of the time. But how sure can you be? Let's quantify it.</p>
