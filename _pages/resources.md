@@ -109,7 +109,7 @@ author_profile: false
 
 <br>
 
-<b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late.<br><br>
+<b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late. The late penalty is on a per-question basis, not a whole-assignment basis -- so it's always better to turn in a partially completed homework on time and turn in the remaining bit late, than to turn in everything late.<br><br>
 
 <b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.
 
