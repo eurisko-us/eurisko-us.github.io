@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="7">
+<font size="3em"><ol reversed start="8">
+    <li><b>Friday, September 11</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/456278496">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-1">Distribution Plotting/a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-2">Row Reduction Helper Methods</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-3">Further Comprehensions</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/456278496">Class Recording</a>
         <br>Assignment Problems:
