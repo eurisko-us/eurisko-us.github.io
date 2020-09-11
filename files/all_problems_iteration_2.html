@@ -13331,26 +13331,23 @@ Testing row reduction on the following matrix:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-8-3">Problem 8-3<a class="anchor-link" href="#Problem-8-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_6_comprehensions.py</code></p>
-<p><strong>Grading:</strong> For each part, you get 1 point for code quality and 1 point for passing the test.</p>
-<p><strong>a.</strong> <strong>USING COMPREHENSION</strong>, create a function <code>find_all_numbers_divisible_by_a_and_b(n,a,b)</code> that lists the numbers $1$ through $n$ that are divisible by both $a$ and $b$. <strong>The body of your function should consist of just 1 line, in which it simply returns a list comprehension.</strong></p>
+<h1 id="Problem-8-3">Problem 8-3<a class="anchor-link" href="#Problem-8-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/matrix_elements_comprehensions.py</code></p>
+<p><strong>Grading:</strong> 2 points for each part</p>
+<p><strong>a.</strong> <strong>USING COMPREHENSION</strong>, create a function <code>identity_matrix_elements(n)</code> that creates the elements for an $n \times n$ identity matrix. <strong>The body of your function should consist of just 1 line, in which it simply returns a list comprehension.</strong></p>
 <p>Assert that your function passes the following test:</p>
 
-<pre><code>&gt;&gt;&gt; find_all_numbers_divisible_by_a_and_b(100,6,15)
-[30, 60, 90]</code></pre>
-<p><strong>b.</strong> Rewrite the following function to consist of simply returning a list comprehension.</p>
+<pre><code>&gt;&gt;&gt; identity_matrix_elements(4)
+[[1, 0, 0, 0],
+ [0, 1, 0, 0],
+ [0, 0, 1, 0],
+ [0, 0, 0, 1]]</code></pre>
+<p><strong>b.</strong> <strong>USING COMPREHENSION</strong>, create a function <code>counting_across_rows_matrix_elements(m,n)</code> that creates the elements for an $m \times n$ matrix that "counts" upwards across the rows. <strong>The body of your function should consist of just 1 line, in which it simply returns a list comprehension.</strong></p>
+<p>Assert that your function passes the following test:</p>
 
-<pre><code>def compute_all_products(M,N):
-    products = []
-    for m in range(M):
-       for n in range(N):
-           product = m * n
-           products.append(product)
-    return products</code></pre>
-<p>Write a test for your function using <code>M=3,N=4</code> and assert that your function passes it.</p>
-
-<pre><code>&gt;&gt;&gt; compute_all_products(3,4)
-(you need to figure out what the correct output is)</code></pre>
+<pre><code>&gt;&gt;&gt; counting_across_rows_matrix_elements(3,4)
+[[1, 2, 3, 4],
+ [5, 6, 7, 8],
+ [9, 10, 11, 12]]</code></pre>
 
 </div>
 </div>
