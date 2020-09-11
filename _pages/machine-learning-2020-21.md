@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="41">
     <li><b>Friday, September 11</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/456278598">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/457046763">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-1">Bayesian Inference with Discrete Uniform Distribution</a></li>
