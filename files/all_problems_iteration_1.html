@@ -13156,23 +13156,7 @@ $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-41-2">Problem 41-2<a class="anchor-link" href="#Problem-41-2">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_41_scenarios.txt</code></p>
-<p><strong>Grading:</strong> 1 point per part (4 points total)</p>
-<p><strong>a.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a logistic regression when the data is actually linear.</p>
-<ul>
-<li>Here's an example (which you cannot use as your answer). You're trying to predict the correct dose of a vitamin to administer to a patient. You gather a dataset of dose amount vs the vitamin concentration in the patient's blood, and you want to find the correct dose that will result in some amount of vitamin in the patient's blood. The data is linear, but you fit it with a logistic regression. As a result, because the logistic regression fits a sigmoid that "flattens out", you grossly overestimate the dose amount that is required to achieve the desired level of vitamin concentration. When you administer this overdose, the patient experiences severe vitamin overdose symptoms and possibly dies.</li>
-</ul>
-<p><strong>b.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a linear regression when the data is actually sigmoid-shaped.</p>
-<p><strong>c.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly assume that data follows an exponential distribution when it actually follows a uniform distribution.</p>
-<p><strong>d.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly assume that data follows a uniform distribution when it actually follows an exponential distribution.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-41-3">Problem 41-3<a class="anchor-link" href="#Problem-41-3">&#182;</a></h1><p><strong>Grading:</strong> In each part, you get 3 points for each correct predictions and 3 points for code quality. So 12 points total.</p>
+<h1 id="Problem-41-2">Problem 41-2<a class="anchor-link" href="#Problem-41-2">&#182;</a></h1><p><strong>Grading:</strong> 4 points for each correct predictions and 4 points for code quality</p>
 <p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/linear_regressor.py</code><br>
 <code>machine-learning/tests/test_linear_regressor.py</code><br>
@@ -13180,7 +13164,6 @@ $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong
 <code>machine-learning/tests/test_logistic_regressor.py</code><br></p>
 </blockquote>
 <hr>
-<p><strong>PART A</strong></p>
 <p>If you have existing linear and polynomial regressor files and tests, rename them as follows:</p>
 <blockquote><p><code>machine-learning/src/deprecated_linear_regressor.py</code><br>
 <code>machine-learning/src/deprecated_polynomial_regressor.py</code><br>
@@ -13285,79 +13268,31 @@ that also appear in the base dataframe
     'jelly': 0,
 })
 8.7375</code></pre>
-<hr>
-<p><strong>PART B</strong></p>
-<p>If you have existing logistic regressor files and tests, rename them as follows:</p>
-<blockquote><p><code>machine-learning/src/deprecated_logistic_regressor.py</code><br>
-<code>machine-learning/tests/test_deprecated_logistic_regressor.py</code></p>
-</blockquote>
-<p>Now, create a new class <code>LinearRegressor</code> in <code>machine-learning/src/logistic_regressor.py</code> and <code>assert</code> that it passes the following tests. Put your tests in <code>tests/test_logistic_regressor.py</code>.</p>
-<p><strong>IMPORTANT:</strong> Your code must satisfy the following specifications:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-41-3">Problem 41-3<a class="anchor-link" href="#Problem-41-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_41_scenarios.txt</code></p>
+<p><strong>Grading:</strong> 1 point per part (2 points total)</p>
+<p><strong>a.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a logistic regression when the data is actually linear.</p>
 <ul>
-<li><p><code>LogisticRegressor</code> should inherit from <code>LinearRegressor</code>.</p>
-</li>
-<li><p><code>LogisticRegressor</code> should compute its coefficients by first replacing the <code>prediction_column</code> with the appropriate transformed values, and then fitting a linear regression.</p>
-</li>
-<li><p><code>LogisticRegressor</code> should make a prediction by first computing the linear regression output using its coefficients, and then passing the result as input into the sigmoid function.</p>
-</li>
+<li>Here's an example (which you cannot use as your answer). You're trying to predict the correct dose of a vitamin to administer to a patient. You gather a dataset of dose amount vs the vitamin concentration in the patient's blood, and you want to find the correct dose that will result in some amount of vitamin in the patient's blood. The data is linear, but you fit it with a logistic regression. As a result, because the logistic regression fits a sigmoid that "flattens out", you grossly overestimate the dose amount that is required to achieve the desired level of vitamin concentration. When you administer this overdose, the patient experiences severe vitamin overdose symptoms and possibly dies.</li>
 </ul>
-<p><strong>Note:</strong> If you have a deprecated <code>LogisticRegressor</code>, then you can use parts of it for inspiration, but I don't want to see any old dead code in this new class.</p>
+<p><strong>b.</strong> Give a real-world scenario in which something could go drastically wrong if you mistakenly use a linear regression when the data is actually sigmoid-shaped.</p>
 
-<pre><code>(continued from tests in Part A...)
-
-&gt;&gt;&gt; df = df.apply('rating', lambda x: 0.1 if x==0 else x)
-
-^ Note: a "lambda" function is a way of writing a function on a single line,
-kind of like a list comprehension. The above lambda function just replaces any
-values of 0 with 0.1.
-
-&gt;&gt;&gt; regressor = LogisticRegressor(df, prediction_column = 'rating', max_value = 10)
-&gt;&gt;&gt; regressor.multipliers
-{
-    'beef': -0.03900793,
-    'pb': -0.02047944,
-    'mayo': 1.74825378,
-    'jelly': -0.39777219,
-    'beef_pb': 0.14970983,
-    'beef_mayo': -0.74854916,
-    'beef_jelly': 0.46821312,
-    'pb_mayo': 0.32958369,
-    'pb_jelly': -0.5288267,
-    'mayo_jelly': 2.64413352,
-    'constant': 1.01248436
-}
-
-&gt;&gt;&gt; regressor.predict({
-    'beef': 5,
-    'pb': 5,
-    'mayo': 1,
-    'jelly': 1,
-})
-0.023417479576338825
-
-&gt;&gt;&gt; regressor.predict({
-    'beef': 0,
-    'pb': 3,
-    'mayo': 0,
-    'jelly': 1,
-})
-7.375370259327203
-
-&gt;&gt;&gt; regressor.predict({
-    'beef': 1,
-    'pb': 1,
-    'mayo': 1,
-    'jelly': 0,
-})
-0.8076522077650409
-
-&gt;&gt;&gt; regressor.predict({
-    'beef': 6,
-    'pb': 0,
-    'mayo': 1,
-    'jelly': 0,
-})
-8.770303903540402</code></pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-41-4">Problem 41-4<a class="anchor-link" href="#Problem-41-4">&#182;</a></h1><p>2 points</p>
+<p>Get your <code>CombatPlayer</code> tests working. If they're working already, then congrats, you just got 2 points for free.</p>
+<p>I'm making this worth 2 points so that there's an incentive to get this done as soon as possible (rather than just waiting to resubmit the previous assignment at some later date).</p>
+<p>Once you get your tests working, remember to resubmit any previous assignments to get that 60% partial credit.</p>
 
 </div>
 </div>
