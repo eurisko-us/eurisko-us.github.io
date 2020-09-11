@@ -20,8 +20,9 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-1">Bayesian Inference with Discrete Uniform Distribution</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-2">"Dangers of Poor Modeling" Scenarios</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-3">LinearRegressor and LogisticRegressor Classes based on DataFrame</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-2">LinearRegressor Integration with DataFrame</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-3">"Dangers of Poor Modeling" Scenarios</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-41-4">CombatPlayer Tests (same as before)</a></li>
         </ul></font>
     </li>
     <br>
