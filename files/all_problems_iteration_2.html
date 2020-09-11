@@ -13408,6 +13408,26 @@ Testing row reduction on the following matrix:
 
 &gt;&gt;&gt; (E.is_equal(B), E.is_equal(C))
 (True, False)</code></pre>
+<hr>
+<p><strong>Tip:</strong> For <code>matrix_multiply</code>, make a helper function dot_product that computes a dot product of two lists. Then just loop through each row-column pair and compute the corresponding dot product.</p>
+<p><strong>Note:</strong> When you multiply 38 by 0.1, you might get a result like 3.80000000...3.</p>
+<p>This is because of the way that Python represents numbers -- decimal numbers are always close <em>approximations</em> to the real thing, since there's a limit to how many digits the computer can store. So, it's normal.</p>
+<p>However, that does make it more difficult to write a test to make sure that a matrix equals the desired result. So what you can do to get around it is you can implement a round method for your matrix, and then assert that your matrix elements (rounded to, say, 5 decimal places) come out to the desired result.</p>
+
+<pre><code>class Matrix
+
+  ...
+
+  def round(self, num_decimal_places):
+     return self.elements rounded to num_decimal_places</code></pre>
+
+<pre><code>scalar_product_matrix = original_matrix.scalar_multiply(0.1)
+assert scalar_product_matrix.round(5) == desired_result</code></pre>
+<p>That way, the 3.80000000...3 will get rounded to 38.00000, and 38.00000 == 38 will come out true.</p>
+<p>For rounding, there's a built-in function <code>round()</code>. For example,</p>
+
+<pre><code>&gt;&gt;&gt; round(0.45982345, 4)
+0.4598</code></pre>
 
 </div>
 </div>
@@ -13549,26 +13569,6 @@ PASSED
 
 Testing method "matrix_multiply"...
 PASSED</code></pre>
-<hr>
-<p><strong>Tip:</strong> For <code>matrix_multiply</code>, make a helper function dot_product that computes a dot product of two lists. Then just loop through each row-column pair and compute the corresponding dot product.</p>
-<p><strong>Note:</strong> When you multiply 38 by 0.1, you might get a result like 3.80000000...3.</p>
-<p>This is because of the way that Python represents numbers -- decimal numbers are always close <em>approximations</em> to the real thing, since there's a limit to how many digits the computer can store. So, it's normal.</p>
-<p>However, that does make it more difficult to write a test to make sure that a matrix equals the desired result. So what you can do to get around it is you can implement a round method for your matrix, and then assert that your matrix elements (rounded to, say, 5 decimal places) come out to the desired result.</p>
-
-<pre><code>class Matrix
-
-  ...
-
-  def round(self, num_decimal_places):
-     return self.elements rounded to num_decimal_places</code></pre>
-
-<pre><code>scalar_product_matrix = original_matrix.scalar_multiply(0.1)
-assert scalar_product_matrix.round(5) == desired_result</code></pre>
-<p>That way, the 3.80000000...3 will get rounded to 38.00000, and 38.00000 == 38 will come out true.</p>
-<p>For rounding, there's a built-in function <code>round()</code>. For example,</p>
-
-<pre><code>&gt;&gt;&gt; round(0.45982345, 4)
-0.4598</code></pre>
 
 </div>
 </div>
