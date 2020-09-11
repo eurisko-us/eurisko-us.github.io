@@ -13302,27 +13302,6 @@ Testing row reduction on the following matrix:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-8-3">Problem 8-3<a class="anchor-link" href="#Problem-8-3">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/collatz_iterations.py</code></p>
-<p>The <em>Collatz function</em> is defined as</p>
-$$f(n) = \begin{cases} n \, / \, 2 &amp; \text{if } n \text{ is even} \\ 3n+1 &amp; \text{if } n \text{ is odd} \end{cases}$$<p>The <em>Collatz conjecture</em> is that by repeatedly applying this function to any positive number, the result will eventually reach the cycle</p>
-$$1 \to 4 \to 2 \to 1.$$<p>For example, repeatedly applying the Collatz function to the number $13,$ we have:</p>
-$$13 \to 40 \to 20 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$$<hr>
-<p><strong>a.</strong> (1 point for code quality; 1 point for passing the test)</p>
-<p>Create a function <code>collatz_iterations(number)</code> that computes the number of iterations of the Collatz function that it takes for the input number to reach $1.$</p>
-
-<pre><code>&gt;&gt;&gt; collatz_iterations(13)
-9</code></pre>
-<p><strong>b.</strong> (1 point)</p>
-<p>Write a short script to answer the following question:</p>
-<blockquote><p>Of the numbers from 1 to 1000, which number has the highest number of Collatz iterations?</p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-7-1">Problem 7-1<a class="anchor-link" href="#Problem-7-1">&#182;</a></h1><p><strong>Grading:</strong> 1 point per working test with good code quality. (There are 7 tests total)</p>
 <p>Generalize your <code>Matrix</code> class to $M \times N$ matrices. Also, write two more methods <code>transpose()</code> and <code>is_equal()</code>, and create attributes <code>num_rows</code> and <code>num_cols</code>.</p>
 <p>Assert that the following tests work. Put your tests in <code>machine-learning/tests/test_matrix.py</code>.</p>
