@@ -23,7 +23,7 @@ author_profile: false
         <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-1">Distribution Plotting</a></li>-->
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-1">Row Reduction Helper Methods</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-2">Matrix Elements via Comprehensions</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-3">Collatz Iterations</a></li>
+        <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-8-3">Collatz Iterations</a></li>-->
         </ul></font>
     </li>
     <br>
