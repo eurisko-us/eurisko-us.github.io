@@ -13182,19 +13182,20 @@ $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong
                    [],['mayo'],['jelly'],['mayo','jelly']],
     'rating': [1, 1, 4, 0, 4, 8, 1, 0, 5, 0, 9, 0, 0, 0, 0, 0]
 }
-&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments', 'rating'])
+&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments'])
 &gt;&gt;&gt; df.columns
-['beef', 'pb', 'condiments', 'rating']
+['beef', 'pb', 'condiments']
 
 &gt;&gt;&gt; df = df.create_all_dummy_variables()
 &gt;&gt;&gt; df = df.append_pairwise_interactions()
 &gt;&gt;&gt; df = df.append_columns({
     'constant': [1 for _ in range(len(data_dict['rating']))],
+    'rating': data_dict['rating']
 })
 &gt;&gt;&gt; df.columns
-['beef', 'pb', 'rating', 'mayo', 'jelly',
+['beef', 'pb', 'mayo', 'jelly',
  'beef_pb', 'beef_mayo', 'beef_jelly', 'pb_mayo', 'pb_jelly', 'mayo_jelly'
- 'constant']
+ 'constant', 'rating']
 
 &gt;&gt;&gt; linear_regressor = LinearRegressor(df, prediction_column = 'rating')
 &gt;&gt;&gt; linear_regressor.coefficients
