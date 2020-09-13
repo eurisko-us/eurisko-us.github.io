@@ -13182,9 +13182,9 @@ $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong
                    [],['mayo'],['jelly'],['mayo','jelly']],
     'rating': [1, 1, 4, 0, 4, 8, 1, 0, 5, 0, 9, 0, 0, 0, 0, 0]
 }
-&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments'])
+&gt;&gt;&gt; df = DataFrame(data_dict, column_order = ['beef', 'pb', 'condiments', 'rating'])
 &gt;&gt;&gt; df.columns
-['beef', 'pb', 'condiments']
+['beef', 'pb', 'condiments', 'rating']
 
 &gt;&gt;&gt; df = df.create_all_dummy_variables()
 &gt;&gt;&gt; df = df.append_pairwise_interactions()
