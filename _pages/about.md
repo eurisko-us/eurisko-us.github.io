@@ -12,12 +12,12 @@ redirect_from:
 <div style="width:100%; max-width:800px; margin:auto">
 
 <div style="width:25%;float:left;">
-<img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
+<img src="https://eurisko-us.github.io/files/icon-appacademy-circleBorder.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
 
 <div style="width:70%;float:right;">
   <br>
-  Eurisko is a group of high schoolers working on advanced projects in computer science. It was formed during the summer of 2020 as a spinoff of <a class="body" target="_blank" href="https://mathacademy.us">Math Academy</a>.<br><br>
+  Eurisko is a group of high schoolers working on advanced projects in computer science. It was formed during the summer of 2020 as a collaboration between <a class="body" target="_blank" href="http://www.theappacademy.us/">App Academy</a> and <a class="body" target="_blank" href="https://mathacademy.us">Math Academy</a>.<br><br>
 
 <!--<b>What kinds of projects?</b><br>-->
 
