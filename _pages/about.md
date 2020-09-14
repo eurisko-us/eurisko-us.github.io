@@ -17,6 +17,7 @@ redirect_from:
 </div>-->
 
 <div style="width:25%;float:left;">
+  <br>
 <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
 
