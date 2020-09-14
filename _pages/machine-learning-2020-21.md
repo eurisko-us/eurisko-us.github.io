@@ -20,7 +20,7 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-42-1">Poisson Distribution</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-42-2">LogisticRegressor Integration with LinearRegressor and DataFrame</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-42-2">Catch-Up</a></li>
         </ul></font>
     </li>
     <br>
