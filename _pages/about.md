@@ -13,7 +13,7 @@ redirect_from:
 
 <div style="width:20%;float:left;">
 <img src="https://eurisko-us.github.io/files/icon-appacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon"><br>
-  <img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="right" style="border: none; /* height: 7em; */" alt="icon">
+  <img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon">
 </div>
 
 <div style="width:75%;float:right;">
