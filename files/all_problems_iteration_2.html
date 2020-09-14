@@ -13119,6 +13119,220 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-11-1">Problem 11-1<a class="anchor-link" href="#Problem-11-1">&#182;</a></h1><p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/matrix.py</code><br>
+<code>machine-learning/tests/test_matrix.py</code></p>
+</blockquote>
+<p><strong>Grading:</strong> 5 points for each passing test, 10 points code quality (so 20 points total)</p>
+<p>Extend your <code>Matrix</code> class to include a method <code>rref</code> that converts the matrix to reduced row echelon form. You should use the <a href="https://textbooks.math.gatech.edu/ila/row-reduction.html">row reduction</a> algorithm, which goes like this:</p>
+
+<pre><code>create a copy of the original matrix
+row_index = 0
+for each col_index:
+    if a pivot row exists for the col_index:
+
+        if the pivot row is not the current row:
+            swap the current row with the pivot row
+            # now the current row is actually the pivot row
+
+        normalize the pivot row so that the first nonzero entry is 1
+        clear all entries below and above the pivot entry
+
+        row_index += 1</code></pre>
+<p>Assert that your method passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([[0, 1, 2],
+                [3, 6, 9],
+                [2, 6, 8]])
+&gt;&gt;&gt; A.rref().elements
+[1, 0, 0]
+[0, 1, 0]
+[0, 0, 1]
+
+&gt;&gt;&gt; B = Matrix([[0, 0, -4, 0],
+                [0, 0, 0.3, 0],
+                [0, 2, 1, 0]])
+&gt;&gt;&gt; A.rref().elements
+[0, 1, 0, 0]
+[0, 0, 1, 0]
+[0, 0, 0, 0]</code></pre>
+<p>To help you debug your implementation, here is a walkthrough of the above algorithm on the matrix $\begin{bmatrix} 0 &amp; 1 &amp; 2 \\ 3 &amp; 6 &amp; 9 \\ 2 &amp; 6 &amp; 8 \end{bmatrix}\mathbin{:}$</p>
+
+<pre><code>row_index = 0
+
+looping through columns...
+
+col_index = 0
+
+    current matrix is
+    [0,1,2]
+    [3,6,9]
+    [2,6,8]
+
+    for col_index = 0, the pivot row has index 1
+    this is different from row_index = 0, so we need to swap
+    swapping, the matrix becomes
+    [3,6,9]
+    [0,1,2]
+    [2,6,8]
+
+    the pivot row now has index 0, same as row_index = 0
+    normalizing the pivot row, the matrix becomes
+    [1,2,3]
+    [0,1,2]
+    [2,6,8]
+
+    the pivot entry is the 1 in the (0,0) position (i.e. top-left)
+    clearing all entries above and below the pivot entry, the matrix becomes
+    [1,2,3]
+    [0,1,2]
+    [0,2,2]
+
+    row_index += 1
+    so now we have row_index = 1
+
+col_index = 1
+
+    current matrix is
+    [1,2,3]
+    [0,1,2]
+    [0,2,2]
+
+    for col_index = 1, the pivot row has index 1, same as row_index=1
+    so no swap is needed
+
+    the pivot row is already normalized
+
+    the pivot entry is the 1 in the (1,1) position (i.e. exact middle)
+    clearing all entries above and below the pivot entry, the matrix becomes
+    [1,0,-1]
+    [0,1,2]
+    [0,0,-2]
+
+    row_index += 1
+    so now we have row_index = 2
+
+col_index = 2
+
+    current matrix is
+    [1,0,-1]
+    [0,1,2]
+    [0,0,-2]
+
+    for col_index = 2, the pivot row has index 2, same as row_index=2
+    so no swap is needed
+
+    normalizing the pivot row, the matrix becomes
+    [1,0,-1]
+    [0,1,2]
+    [0,0,1]
+
+    the pivot entry is the 1 in the (2,2) position (i.e. bottom-right)
+    clearing all entries above and below the pivot entry, the matrix becomes
+    [1,0,0]
+    [0,1,0]
+    [0,0,1]
+
+    row_index += 1
+    so now we have row_index = 3
+
+we've gone through all the columns, so we're done!
+the result is
+    [1,0,0]
+    [0,1,0]
+    [0,0,1]</code></pre>
+<p>Likewise, here is a walkthrough of the above algorithm on the matrix $\begin{bmatrix} 0 &amp; 0 &amp; -4 &amp; 0 \\ 0 &amp; 0 &amp; 0.3 &amp; 0 \\ 0 &amp; 2 &amp; 1 &amp; 0 \end{bmatrix}\mathbin{:}$</p>
+
+<pre><code>row_index = 0
+
+looping through columns...
+
+col_index = 0
+
+    current matrix is
+    [0,0,-4,0]
+    [0,0,0.3,0]
+    [0,2,1,0]
+
+    for col_index = 0, there is no pivot row
+    so we move on
+
+    we still have row_index = 0
+
+col_index = 1
+
+    current matrix is
+    [0,0,-4,0]
+    [0,0,0.3,0]
+    [0,2,1,0]
+
+    for col_index = 1, the pivot row has index 2
+    this is different from row_index = 0, so we need to swap
+    swapping, the matrix becomes
+    [0,2,1,0]
+    [0,0,-4,0]
+    [0,0,0.3,0]
+
+    the pivot row now has index 0, same as row_index = 0
+    normalizing the pivot row, the matrix becomes
+    [0,1,0.5,0]
+    [0,0,-4,0]
+    [0,0,0.3,0]
+
+    the pivot entry is the 1 in the (0,1) position
+    all entries above and the pivot entry are already cleared
+
+    row_index += 1
+    so now we have row_index = 1
+
+col_index = 2
+
+    current matrix is
+    [0,1,0.5,0]
+    [0,0,-4,0]
+    [0,0,0.3,0]
+
+    for col_index = 2, the pivot row has index 1, same as row_index = 1
+    so no swap is needed
+
+    normalizing the pivot row, the matrix becomes
+    [0,1,0.5,0]
+    [0,0,1,0]
+    [0,0,0.3,0]
+
+    the pivot entry is the 1 in the (1,2) position
+    clearing all entries above and below the pivot entry, the matrix becomes
+    [0,1,0,0]
+    [0,0,1,0]
+    [0,0,0,0]
+
+    row_index += 1
+    so now we have row_index = 2 
+
+col_index = 3
+
+    current matrix is
+    [0,1,0,0]
+    [0,0,1,0]
+    [0,0,0,0]
+
+    for col_index = 3, there is no pivot row
+    so we move on
+
+    we still have row_index = 2
+
+we've gone through all the columns, so we're done!
+the result is
+    [0,1,0,0]
+    [0,0,1,0]
+    [0,0,0,0]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-10-1">Problem 10-1<a class="anchor-link" href="#Problem-10-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/distribution_plots.py</code></p>
 <p><strong>Grading:</strong> 1 point for each part, 3 points code quality (so 6 points total)</p>
 <p><strong>a.</strong> Using your function <code>probability(num_heads, num_flips)</code>, plot the distribution for the number of heads in <code>8</code> coin flips. In other words, plot the curve $y=p(x),$ where $p(x)$ is the probability of getting $x$ heads in $8$ coin flips.</p>
@@ -13133,7 +13347,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -13178,6 +13392,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-10-2">Problem 10-2<a class="anchor-link" href="#Problem-10-2">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/unlist.py</code></p>
+<p><strong>Grading:</strong> In each part, you get 1 point for code quality, and 1 point for passing tests (so 4 points total)</p>
+<p><strong>a.</strong> <strong>WITHOUT using recursion,</strong> create a function <code>unlist_nonrecursive(x)</code> that removes outer parentheses from a list until either a) the final list consists of multiple elements, or b) no more lists exist.</p>
+<p>Assert that your function passes the following tests.</p>
+
+<pre><code>&gt;&gt;&gt; unlist_nonrecursive([[[[1], [2,3], 4]]])
+[[1], [2,3], 4]
+&gt;&gt;&gt; unlist_nonrecursive([[[[1]]]])
+1</code></pre>
+<p><strong>b.</strong> <strong>USING RECURSION,</strong> write a function <code>unlist_recursive(x)</code> and assert that it passes the same tests as in part (a).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-9-1">Problem 9-1<a class="anchor-link" href="#Problem-9-1">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/collatz_iterations.py</code></p>
 <p>The <em>Collatz function</em> is defined as</p>
 $$f(n) = \begin{cases} n \, / \, 2 &amp; \text{if } n \text{ is even} \\ 3n+1 &amp; \text{if } n \text{ is odd} \end{cases}$$<p>The <em>Collatz conjecture</em> is that by repeatedly applying this function to any positive number, the result will eventually reach the cycle</p>
@@ -13200,7 +13431,7 @@ $$13 \to 40 \to 20 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$$<hr>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
