@@ -20,8 +20,8 @@ author_profile: false
         <!--<br><a class="body" target="_blank" href="https://vimeo.com/457046753">Class Recording</a>-->
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-9-1">Plotting Probability Distributions</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-9-2">Exploration of the Collatz Conjecture</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-9-1">Exploration of the Collatz Conjecture</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-9-2">Catch-Up</a></li>
         </ul></font>
     </li>
     <br>
