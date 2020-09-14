@@ -22,6 +22,9 @@ author_profile: false
 
 <br><b>Machine Learning</b>
 <br><font size="3em"><i>Prerequisites: Computation & Modeling</i></font>
+<p><font size="3em">
+    Machine Learning is a comprehensive, college-level course that integrates predictive modeling, clustery & dimensionality reduction, and reinforcement learning. This is an elective course associated with a radically-accelerated math sequence intended for highly-gifted math students. It covers methods of building models to draw insights and make predictions based on data, implementing games, and developing self-improving game-playing agents. This is a year-long course for high school students that introduces techniques from predictive modeling (naive Bayes, decision trees, support vector machines, neural networks, random forests); clustering & dimensionality reduction (k-nearest neighbors, k-means, DBSCAN, t-SNE, PCA/ICA, expectation maximization, hierarchical clustering); and reinforcement learning (Markov decision processes, policy iteration, value iteration, temporal difference learning, SARSA, Q-Learning).
+    </font></p>
 
 <font size="3em"><ul>
     <li><a class="body" target="_blank" href="https://eurisko-us.github.io/machine-learning-2020-21">2020-21</a></li>
