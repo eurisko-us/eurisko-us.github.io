@@ -13119,6 +13119,133 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-42-1">Problem 42-1<a class="anchor-link" href="#Problem-42-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/poisson_distribution.txt</code></p>
+<p>The <strong>Poisson distribution</strong> can be used to model how many times an event will occur within some continuous interval of time, given that occurrences of an event are independent of one another.</p>
+<p>Its probability function is given by
+\begin{align*}
+p_\lambda(x) = \dfrac{\lambda^x e^{-\lambda}}{x!}, \quad x \in \left\{ 0, 1, 2, \ldots \right\},
+\end{align*}</p>
+<p>where $\lambda$ is the mean number of events that occur in the particular time interval.</p>
+<p><strong>SUPER IMPORTANT:</strong> Manipulating the Poisson distribution involves using infinite sums. However, these sums can be easily expressed using the Mclaurin series for $e^x\mathbin{:}$</p>
+\begin{align*}
+e^z = \sum_{n=0}^\infty \dfrac{z^n}{n!}
+\end{align*}<p><strong>PART A</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Consider the Poisson distribution defined by $$p_2(x) = \dfrac{2^x e^{-2}}{x!}.$$ Show that this is a valid probability distribution, i.e. all the probability sums to $1.$</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $P(10 &lt; X \leq 12).$ Write your answer in closed form, as simplified as possible (but <em>don't</em> expand out factorials). Pay close attention to the "less than" vs "less than or equal to" symbols.</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $E[X].$ Using the Mclaurin series for $e^z,$ your answer should come out to a nice clean integer.</p>
+</li>
+<li><p>Given that $X \sim p_2,$ compute $\text{Var}[X].$ Using the Mclaurin series for $e^z,$ your answer should come out to a nice clean integer.</p>
+</li>
+</ol>
+<p><strong>PART B</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<ol>
+<li><p>Consider the general Poisson distribution defined by $$p_\lambda(x) = \dfrac{\lambda^x e^{-\lambda}}{x!}.$$ Show that this is a valid probability distribution, i.e. all the probability sums to $1.$</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $P(10 &lt; X \leq 12).$ Write your answer in closed form, as simplified as possible (but <em>don't</em> expand out factorials).</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $E[X].$ Using the Mclaurin series for $e^z,$ your answer should come out to a nice clean integer.</p>
+</li>
+<li><p>Given that $X \sim p_\lambda,$ compute $\text{Var}[X].$ Using the Mclaurin series for $e^z,$ your answer should come out to a nice clean integer.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-42-2">Problem 42-2<a class="anchor-link" href="#Problem-42-2">&#182;</a></h1><p><strong>Grading:</strong> 4 points for correct predictions and 4 points for code quality</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/logistic_regressor.py</code><br>
+<code>machine-learning/tests/test_logistic_regressor.py</code><br></p>
+</blockquote>
+<p>If you have existing logistic regressor files and tests, rename them as follows:</p>
+<blockquote><p><code>machine-learning/src/deprecated_logistic_regressor.py</code><br>
+<code>machine-learning/tests/test_deprecated_logistic_regressor.py</code></p>
+</blockquote>
+<p>Now, create a new class <code>LinearRegressor</code> in <code>machine-learning/src/logistic_regressor.py</code> and <code>assert</code> that it passes the following tests. Put your tests in <code>tests/test_logistic_regressor.py</code>.</p>
+<p><strong>IMPORTANT:</strong> Your code must satisfy the following specifications:</p>
+<ul>
+<li><p><code>LogisticRegressor</code> should inherit from <code>LinearRegressor</code>.</p>
+</li>
+<li><p><code>LogisticRegressor</code> should compute its coefficients by first replacing the <code>prediction_column</code> with the appropriate transformed values, and then fitting a linear regression.</p>
+</li>
+<li><p><code>LogisticRegressor</code> should make a prediction by first computing the linear regression output using its coefficients, and then passing the result as input into the sigmoid function.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> If you have a deprecated <code>LogisticRegressor</code>, then you can use parts of it for inspiration, but I don't want to see any old dead code in this new class.</p>
+
+<pre><code>(continued from LinearRegressor tests...)
+
+&gt;&gt;&gt; df = df.apply('rating', lambda x: 0.1 if x==0 else x)
+
+^ Note: a "lambda" function is a way of writing a function on a single line,
+kind of like a list comprehension. The above lambda function just replaces any
+values of 0 with 0.1.
+
+&gt;&gt;&gt; regressor = LogisticRegressor(df, prediction_column = 'rating', max_value = 10)
+
+^ Note: the logistic regression model is 
+prediction_column = max_value / [ 1 + e^( sum of products of inputs and
+                                          their corresponding multipliers ) ]
+
+&gt;&gt;&gt; regressor.multipliers
+{
+    'beef': -0.03900793,
+    'pb': -0.02047944,
+    'mayo': 1.74825378,
+    'jelly': -0.39777219,
+    'beef_pb': 0.14970983,
+    'beef_mayo': -0.74854916,
+    'beef_jelly': 0.46821312,
+    'pb_mayo': 0.32958369,
+    'pb_jelly': -0.5288267,
+    'mayo_jelly': 2.64413352,
+    'constant': 1.01248436
+}
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 5,
+    'pb': 5,
+    'mayo': 1,
+    'jelly': 1,
+})
+0.023417479576338825
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 0,
+    'pb': 3,
+    'mayo': 0,
+    'jelly': 1,
+})
+7.375370259327203
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 1,
+    'pb': 1,
+    'mayo': 1,
+    'jelly': 0,
+})
+0.8076522077650409
+
+&gt;&gt;&gt; regressor.predict({
+    'beef': 6,
+    'pb': 0,
+    'mayo': 1,
+    'jelly': 0,
+})
+8.770303903540402</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-41-1">Problem 41-1<a class="anchor-link" href="#Problem-41-1">&#182;</a></h1><p><strong>Locations:</strong> <code>assignment-problems/assignment_41_stats.txt</code> AND <code>assignment-problems/assignment_41_stats.py</code></p>
 <p><strong>Grading:</strong> 1 point per part (6 points total)</p>
 <hr>
@@ -13135,7 +13262,7 @@ $$p_k(x) = \begin{cases} \dfrac{1}{k} &amp; x \in \left\{1,2,\ldots,k\right\} \\
 <li><p><strong>Compute the likelihood function</strong> $\mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\} ).$ Remember that the likelihood is just the probability of getting the result $ \left\{  1, 17, 8, 25, 3 \right\}$ under the assumption that the data was sampled from the distribution $p_k(x).$ Your answer should be a piecewise function expressed in terms of $k.$</p>
 </li>
 <li><p>"Normalize" the likelihood function by multiplying it by some constant $c$ such that sums to $1.$ That is, <strong>find the constant $c$ such that</strong>
-$$\sum_{k=1}^\infty c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\}) \, \textrm{d}k = 1.$$
+$$\sum_{k=1}^\infty c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\}) = 1.$$
 This way, we can treat $c \cdot \mathcal{L}$ as a probability distribution for $k:$
 $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong>SUPER IMPORTANT:</strong> You won't be able to figure this out analytically (i.e. just using pen and paper). Instead, you should write a Python script in <code>assignment-problems/assignment_41_stats.py</code> to approximate the sum by evaluating it for a very large number of terms. You should use as many terms as you need until the result appears to converge.</p>
 </li>
@@ -13156,7 +13283,7 @@ $$p(k) = c \cdot \mathcal{L}(k | \left\{  1, 17, 8, 25, 3 \right\})$$<br><strong
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-41-2">Problem 41-2<a class="anchor-link" href="#Problem-41-2">&#182;</a></h1><p><strong>Grading:</strong> 4 points for each correct predictions and 4 points for code quality</p>
+<h1 id="Problem-41-2">Problem 41-2<a class="anchor-link" href="#Problem-41-2">&#182;</a></h1><p><strong>Grading:</strong> 4 points for correct predictions and 4 points for code quality</p>
 <p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/linear_regressor.py</code><br>
 <code>machine-learning/tests/test_linear_regressor.py</code><br>
