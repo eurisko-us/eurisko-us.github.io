@@ -13119,7 +13119,50 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-11-1">Problem 11-1<a class="anchor-link" href="#Problem-11-1">&#182;</a></h1><p><strong>Locations:</strong></p>
+<h1 id="Problem-11-1">Problem 11-1<a class="anchor-link" href="#Problem-11-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/kl_divergence_for_monte_carlo_simulations.py</code></p>
+<p><strong>Grading:</strong> 10 points total</p>
+<p>The <strong>Kullback–Leibler divergence</strong> (or <strong>relative entropy</strong>) between two probability distributions $p(n)$ and $q(n)$ is defined as</p>
+\begin{align*}
+\mathcal{D}(p \, || \, q) = \sum\limits_{n \text{ such that} \\ p(n), q(n) \neq 0} p(n) \ln \left( \dfrac{p(n)}{q(n)} \right)
+\end{align*}<p>Intuitively, the divergence measures how "different" the two distributions are.</p>
+<p><strong>a.</strong> (4 points)</p>
+<p>Write a function <code>kl_divergence(p, q)</code> that computes the KL divergence between two probability distributions <code>p</code> and <code>q</code>, represented as arrays. Test your function by <code>assert</code>ing that it passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; p = [0.2, 0.5, 0, 0.3]
+&gt;&gt;&gt; q = [0.1, 0.8, 0.1, 0]
+&gt;&gt;&gt; kl_divergence(p,q)
+-0.09637237851    (in your test, you can round to 6 decimal places)
+
+Note: the computation for the above is
+0.2*ln(0.2/0.1) + 0.5*ln(0.5/0.8)
+
+we exclude the terms 0*ln(0/0.1) and 0.3*ln(0.3/0)
+because we're only summing over terms where neither
+p(n) nor q(n) is equal to 0</code></pre>
+<p><strong>b.</strong> (4 points)</p>
+<p>Compute the KL divergence where <code>p</code> is the Monte Carlo distribution and <code>q</code> is the true distribution for the number of heads in 8 coin tosses, using 1,000 samples in your Monte Carlo simulation (that's the default number from the previous assignment).</p>
+<p>Then do the same computation with 100 samples, and then with 10,000 samples. Print out the results for all 3 computations:</p>
+
+<pre><code>&gt;&gt;&gt; python assignment-problems/kl_divergence_for_monte_carlo_simulations.py
+
+Testing KL Divergence... Passed!
+
+Computing KL Divergence for MC Simulations...
+100 samples --&gt; KL Divergence = ___
+1,000 samples --&gt; KL Divergence = ___
+10,000 samples --&gt; KL Divergence = ___</code></pre>
+<p><strong>c.</strong> (2 points)</p>
+<p>In a comment in your code, write down what the general trend is and why:</p>
+
+<pre><code># As the number of samples increases, the KL divergence approaches __________ because _______________________________.</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-11-2">Problem 11-2<a class="anchor-link" href="#Problem-11-2">&#182;</a></h1><p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/matrix.py</code><br>
 <code>machine-learning/tests/test_matrix.py</code></p>
 </blockquote>
@@ -13340,7 +13383,10 @@ the result is
 <p><strong>c.</strong> Put all your plots on the same graph, label them with a legend to indicate whether each plot is the true distribution or a monte carlo simulation, and save the figure as <code>plot.png</code>.</p>
 <blockquote><p>Legend: True, MC 1, MC 2, MC 3, MC 4, MC 5.</p>
 </blockquote>
-<p>Make the true distribution thick (<code>linewidth=2.5</code>) and the monte carlo distributions thin (<code>linewidth=0.75</code>). A plotting example is shown below to assist you.</p>
+<p>Make the true distribution thick (<code>linewidth=2.5</code>) and the monte carlo distributions thin (<code>linewidth=0.75</code>). A plotting example for 4 coin flips is shown below to assist you.</p>
+<ul>
+<li><strong>Note: You will need to modify the plotting example to make it for 8 coin flips instead of 4.</strong></li>
+</ul>
 
 </div>
 </div>
