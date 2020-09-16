@@ -7,9 +7,8 @@ author_profile: false
 
 # [<center>Courses</center>](#top)
 
-<div style="width:100%; max-width:800px; margin:auto">  
-## [Computation and Modeling](#computation-and-modeling)
-</div>
+
+## [<div style="width:100%; max-width:800px; margin:auto">Computation and Modeling</div>](#computation-and-modeling)
 
 <div style="width:100%; max-width:800px; margin:auto">  
     
@@ -26,9 +25,8 @@ author_profile: false
 
 </div>
 
-<div style="width:100%; max-width:800px; margin:auto">  
-## [Machine Learning](#machine-learning)
-</div>
+ 
+## [<div style="width:100%; max-width:800px; margin:auto">Machine Learning</div>](#machine-learning)
 
 <div style="width:100%; max-width:800px; margin:auto">  
 
