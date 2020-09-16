@@ -26,7 +26,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Wednesday, September 16</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/457827187">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/458663827">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-10-1">Plotting Probability Distributions</a></li>
