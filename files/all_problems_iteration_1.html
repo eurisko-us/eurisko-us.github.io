@@ -13219,14 +13219,14 @@ prediction_column = max_value / [ 1 + e^( sum of products of inputs and
 
 &gt;&gt;&gt; euler.point
 (1,4)
-&gt;&gt;&gt; euler.calc_derivative()
+&gt;&gt;&gt; euler.calc_derivative_at_point()
 2     (because the derivative is f'(x)=x+1, so f'(1)=2)
 
 &gt;&gt;&gt; euler.step_forward(0.1)
 &gt;&gt;&gt; euler.point
 (1.1, 4.2)        (because 4 + 0.1*2 = 4.2)
 
-&gt;&gt;&gt; euler.calc_derivative()
+&gt;&gt;&gt; euler.calc_derivative_at_point()
 2.1
 &gt;&gt;&gt; euler.step_forward(-0.5)
 &gt;&gt;&gt; euler.point
