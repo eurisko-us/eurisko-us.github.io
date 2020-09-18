@@ -17,7 +17,7 @@ author_profile: false
     <li>George Meza '22 <!-- - <font size="2em"><a class="body" target="_blank" href="https://github.com/geomeza">Github</a></font>--></li>
     <li>Riley Paddock '22 <!-- - <font size="2em"><a class="body" target="_blank" href="https://github.com/RileyPaddock">Github</a></font>--></li>
     <li>Colby Roberts '22 <!-- - <font size="2em"><a class="body" target="_blank" href="https://github.com/C0BBL3">Github</a></font>--></li>
-    <li>Elijah Tarr '22 <!-- - <font size="2em"><a class="body" target="_blank" href="https://github.com/eoriont">Github</a></font>--></li>
+    <li><a class="body" target="_blank" href="https://oriont.net/">Elijah Tarr</a> '22 <!-- - <font size="2em"><a class="body" target="_blank" href="https://github.com/eoriont">Github</a></font>--></li>
 </ul></font> 
 
 </div>
