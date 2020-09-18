@@ -14,13 +14,24 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="43">
+<font size="3em"><ol reversed start="44">
+    <li><b>Friday, September 18</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/458663820">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-1">Solving Magic Squares via Backtracking</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-2">Joint Distributions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-3">Plotting with EulerEstimator</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-4">Finish DumbPlayer / CombatPlayer Tests</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 16</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/458663820">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-42-1">LogisticRegressor Integration with LinearRegressor and DataFrame</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-42-2">EulerEstimator</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-43-1">LogisticRegressor Integration with LinearRegressor and DataFrame</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-43-2">EulerEstimator</a></li>
         </ul></font>
     </li>
     <br>
