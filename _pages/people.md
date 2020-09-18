@@ -9,7 +9,7 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto">  
     
-<p>Eurisko is run by Jason Roberts and Justin Skycak.</p>
+<p>Eurisko is run by Jason Roberts and <a class="body" target="_blank" href="http://www.justinmath.com/">Justin Skycak</a>.</p>
 
 <br><b>Current Students</b>
 <font size="3em"><ul>
