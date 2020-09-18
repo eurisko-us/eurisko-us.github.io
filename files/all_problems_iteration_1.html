@@ -13119,6 +13119,285 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-45-1">Problem 45-1<a class="anchor-link" href="#Problem-45-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/ufo_stats.txt</code></p>
+<p><strong>Grading:</strong> 2 points per part</p>
+<p>Several witnesses reported seeing a UFO during the following time intervals:</p>
+$$
+\text{data}=\bigg\{ [12,13], \, [12,13.5], \, [14,15], \, [14,16] \bigg\}
+$$<p>The times represent hours in military time:</p>
+<ul>
+<li>$12$ is noon,</li>
+<li>$13$ is 1 pm,</li>
+<li>$13.5$ is 1:30 pm,</li>
+<li>...</li>
+</ul>
+<p>Suppose you want to quantify your certainty regarding when the UFO arrived and when it left.</p>
+<p>Assume the data came from $\mathcal{U}[a,b],$ the uniform distribution on the interval $[a,b].$ This means the UFO arrived at time $a$ and left at time $b.$</p>
+<p><strong>a.</strong> Compute the likelihood function $\mathcal{L}([a,b]\,|\,\text{data}).$</p>
+<ul>
+<li>Your result should come out to $\dfrac{3}{(b-a)^4}.$</li>
+</ul>
+<p><strong>b.</strong> Normalize the likelihood function so that it can be interpreted as a probability density.</p>
+<ul>
+<li><p>As an intermediate step to solve for the constant of normalization, you will have to take a double integral $\displaystyle \int_{b_\text{min}}^{b_\text{max}} \int_{a_\text{min}}^{a_\text{max}} \mathcal{L}([a,b]\,|\,\text{data}) \, \text{d}a \, \text{d}b$. Two of the bounds will be infinite, and two of the bounds will be finite.</p>
+</li>
+<li><p>To figure out the appropriate intervals of integration for $a,b,$ ask yourself the following:</p>
+<ul>
+<li><p>What is the highest possible value for $a$ (i.e. the latest the UFO could have arrived) given the data?</p>
+</li>
+<li><p>What is the lowest possible value for $b$ (i.e. the earliest the UFO could have left) given the data?</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>c.</strong> What is the probability that the UFO came and left sometime during the day that it was sighted? In other words, what is the probability that $0&lt;a&lt;a_\text{max}$ and $b_\text{min} &lt; b &lt; 24?$</p>
+<ul>
+<li>Your answer should come out to $\frac{41}{48}.$</li>
+</ul>
+<p><strong>d.</strong> What is the probability that the UFO arrived before 10am?</p>
+<ul>
+<li>Your answer should come out to $\frac{4}{9}.$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-45-2">Problem 45-2<a class="anchor-link" href="#Problem-45-2">&#182;</a></h1><p>euler estimation -- generalize to system of diff eq's, simulate predator-prey model &amp; make plots: <a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-1">Problem 44-1<a class="anchor-link" href="#Problem-44-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/magic_square.py</code></p>
+<p>In this problem, you will solve for all arrangements of digits $1,2,\ldots, 9$ in a $3 \times 3$ "magic square" where all the rows, columns, and diagonals add up to $15$ and no digits are repeated.</p>
+<p><strong>a.</strong> (4 points)</p>
+<p>First, create a function <code>is_valid(arr)</code> that checks if a possibly-incomplete array is a valid magic square "so far". In order to be valid, all the rows, columns, and diagonals in an array <em>that have been completely filled in</em> must sum to $15.$</p>
+
+<pre><code>&gt;&gt;&gt; arr1 = [[1,2,None],
+           [None,3,None],
+           [None,None,None]]
+&gt;&gt;&gt; is_valid(arr1)
+True    (because no rows, columns, or diagonals are completely filled in) 
+
+&gt;&gt;&gt; arr2 = [[1,2,None],
+           [None,3,None],
+           [None,None,4]] 
+&gt;&gt;&gt; is_valid(arr2)
+False   (because a diagonal is filled in and it doesn't sum to 15)
+
+&gt;&gt;&gt; arr3 = [[1,2,None],
+           [None,3,None],
+           [5,6,4]] 
+&gt;&gt;&gt; is_valid(arr3)
+False   (because a diagonal is filled in and it doesn't sum to 15)
+        (it doesn't matter that the bottom row does sum to 15)
+
+&gt;&gt;&gt; arr4 = [[None,None,None],
+           [None,3,None],
+           [5,6,4]] 
+&gt;&gt;&gt; is_valid(arr4)
+True   (because there is one row that's filled in and it sums to 15)</code></pre>
+<p><strong>b.</strong> (6 points)</p>
+<p>Now, write a script to start filling in numbers of the array -- but whenever you reach a configuration that can no longer become a valid magic square, you should not explore that configuration any further. Once you reach a valid magic square, print it out.</p>
+<ul>
+<li><strong>Tip:</strong> An ugly but straightforward way to solve this is to use 9 nested <code>if</code> statements, along with <code>continue</code> statements where appropriate. (A <code>continue</code> statement allows you to immediately continue to the next item in a <code>for</code> loop, without executing any of the code below the <code>continue</code> statement.)</li>
+</ul>
+<p>Some of the first steps are shown below to give a concrete demonstration of the procedure:</p>
+
+<pre><code>Filling...
+
+[[_,_,_],
+ [_,_,_],
+ [_,_,_]]
+
+[[1,_,_],
+ [_,_,_],
+ [_,_,_]]
+
+[[1,2,_],
+ [_,_,_],
+ [_,_,_]]
+
+[[1,2,3],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,2,4],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,2,5],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+...
+
+[[1,2,9],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,3,2],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,3,4],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,3,5],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+...
+
+[[1,3,9],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,4,2],
+ [_,_,_],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+...
+
+[[1,5,9],
+ [_,_,_],
+ [_,_,_]]
+
+[[1,5,9],
+ [2,_,_],
+ [_,_,_]]
+
+[[1,5,9],
+ [2,3,_],
+ [_,_,_]]
+
+[[1,5,9],
+ [2,3,4],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+[[1,5,9],
+ [2,3,5],
+ [_,_,_]]
+
+^ no longer can become a valid magic square
+
+...</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-2">Problem 44-2<a class="anchor-link" href="#Problem-44-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/joint_distributions.txt</code></p>
+<p><strong>Grading:</strong> 1 point per item (8 points total)</p>
+<p>A <strong>joint distribution</strong> is a probability distribution on two or more random variables. To work with joint distributions, you will need to use multi-dimensional integrals.</p>
+<p>For example, given a joint distribution $p(x,y),$ the probability that $(X,Y) \in [a,b] \times [c,d]$ is given by</p>
+$$
+\begin{align*}
+P((X,Y) \in [a,b] \times [c,d]) = \displaystyle \iint_{[a,b] \times [c,d]} p(x,y) \, \text{d}A,
+\end{align*}
+$$<p>or equivalently,</p>
+$$
+\begin{align*}
+P(a &lt; X \leq b, \, c &lt; Y \leq d) = \displaystyle \int_c^d \int_a^b p(x,y) \, \text{d}x \, \text{d}y.
+\end{align*}
+$$<p><strong>Part A</strong></p>
+<p>The joint uniform distribution $\mathcal{U}([a,b]\times[c,d])$ is a distribution such that all points $(x,y)$ have equal probability in the region $[a,b]\times[c,d]$ and zero probability elsewhere. So, it takes the form</p>
+$$p(x,y) = \begin{cases} k &amp; (x,y) \in [a,b] \times [c,d] \\ 0 &amp; (x,y) \not\in [a,b] \times [c,d] \end{cases}$$<p>for some constant $k.$</p>
+<ol>
+<li><p>Find the value of $k$ such that $p(x,y)$ is a valid probability distribution. Your answer should be in terms of $a,b,c,d.$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $\text{E}[X]$ and $\text{E}[Y].$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $\text{Var}[X]$ and $\text{Var}[Y].$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $P\left( (X,Y) \in \left[ \dfrac{a}{2}, \dfrac{b}{2} \right] \times \left[ \dfrac{c}{3}, \dfrac{d}{3} \right] \right).$</p>
+</li>
+</ol>
+<p><strong>Part B</strong></p>
+<p>Now consider the joint exponential distribution defined by</p>
+$$p(x,y) = \begin{cases} k e^{-n x - q y} &amp; x,y \geq 0 \\ 0 &amp; x&lt;0 \text{ or } y &lt; 0 \end{cases}.$$<ol>
+<li><p>Find the value of $k$ such that $p(x,y)$ is a valid probability distribution. Your answer should be in terms of $n,q.$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $\text{E}[X]$ and $\text{E}[Y].$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $\text{Var}[X]$ and $\text{Var}[Y].$</p>
+</li>
+<li><p>Given that $(X,Y) \sim p,$ compute $P\left( X &lt; a, \, Y &lt; b \right).$</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-3">Problem 44-3<a class="anchor-link" href="#Problem-44-3">&#182;</a></h1><p>Euler estimation solver - implement plotting capability for single-variable diff eq's</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>assignment-problems/euler_estimator.py</code><br>
+<code>assignment-problems/parabola_plot.py</code><br></p>
+</blockquote>
+<p>Update <code>EulerEstimator</code> to make plots:</p>
+
+<pre><code>&gt;&gt;&gt; euler = EulerEstimator(derivative = (lambda x: x+1),
+                           point = (1,4))
+
+&gt;&gt;&gt; euler.plot([-5,5], step_size = 0.1, filename = 'plot.png')
+
+generates a plot of the function for x-values in the
+interval [-5,5] separated by a length of step_size
+
+for this example, the plot should look like the parabola
+y = 0.5x^2 + x + 2.5</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-4">Problem 44-4<a class="anchor-link" href="#Problem-44-4">&#182;</a></h1><p><strong>a.</strong> (1 point)</p>
+<p>Update the CP in your <code>DumbPlayer</code> tests. Players start with 0 CP, and the home colony generates 20 CP per round.</p>
+<p><strong>b.</strong> (5 points)</p>
+<p>If you haven't already, modify your game so that whenever a colony ship moves onto a space with a planet, the game asks the player if they want to colonize. Your <code>DumbPlayer</code> and <code>CombatPlayer</code> should both choose not to colonize any planets -- but the game should ask them anyway. <strong>When you submit, include the link to the file where your game asks the players if they want to colonize, so I can verify.</strong></p>
+<p><strong>c.</strong> (2 points)</p>
+<p>Make sure your <code>DumbPlayer</code> and <code>CombatPlayer</code> tests all pass. Let's get this done once and for all so that we can move onto a manual strategy player!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-43-1">Problem 43-1<a class="anchor-link" href="#Problem-43-1">&#182;</a></h1><p><strong>Grading:</strong> 4 points for correct predictions and 4 points for code quality</p>
 <p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/logistic_regressor.py</code><br>
