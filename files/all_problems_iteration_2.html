@@ -13167,6 +13167,78 @@ Computing KL Divergence for MC Simulations...
 <code>machine-learning/tests/test_matrix.py</code></p>
 </blockquote>
 <p><strong>Grading:</strong> 5 points for each passing test, 10 points code quality (so 20 points total)</p>
+<hr>
+<p><strong>MINOR CODE UPDATES BEFORE YOU DO THE ACTUAL PROBLEM:</strong></p>
+<p>Before you do this problem, you need to update some of your previous code so that you don't run into any mutation issues.</p>
+<p>First, update your <code>copy()</code> method so that when it creates a copied matrix, it uses a completely separate list of elements (albeit with the same entries). You can do it like this:</p>
+
+<pre><code>def copy(self):
+    copied_elements = [row for row in self.elements]
+    return Matrix(copied_elements)</code></pre>
+<p>Second, update your helper methods <code>self.swap_rows()</code>, <code>self.normalize_row()</code>, <code>self.clear_below()</code>, and <code>self.clear_above()</code> so that they don't affect the original matrix <code>self</code>. In these methods, instead of modifying <code>self.elements</code> you should create a copy of <code>self.elements</code>, modify the copy, and then return the matrix whose elements are the copy.</p>
+<p>You will need to update your tests to use <code>A = A.swap_rows()</code>, <code>A = A.normalize_row()</code>, <code>A = A.clear_below()</code>, and <code>A = A.clear_above()</code> as follows:</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix(elements = [[0, 1, 2],
+                           [3, 6, 9],
+                           [2, 6, 8]])
+&gt;&gt;&gt; A.get_pivot_row(0)
+1
+
+&gt;&gt;&gt; A = A.swap_rows(0,1)
+&gt;&gt;&gt; A.elements
+[[3, 6, 9]
+ [0, 1, 2]
+ [2, 6, 8]]
+
+&gt;&gt;&gt; A = A.normalize_row(0)
+&gt;&gt;&gt; A.elements
+[[1, 2, 3]
+ [0, 1, 2]
+ [2, 6, 8]]
+
+&gt;&gt;&gt; A = A.clear_below(0)
+&gt;&gt;&gt; A.elements
+[[1, 2, 3]
+ [0, 1, 2]
+ [0, 2, 2]]
+
+&gt;&gt;&gt; A = A.get_pivot_row(1)
+1
+
+&gt;&gt;&gt; A = A.normalize_row(1)
+&gt;&gt;&gt; A.elements
+[[1, 2, 3]
+ [0, 1, 2]
+ [0, 2, 2]]
+
+&gt;&gt;&gt; A = A.clear_below(1)
+&gt;&gt;&gt; A.elements
+[[1, 2, 3]
+ [0, 1, 2]
+ [0, 0, -2]]
+
+&gt;&gt;&gt; A.get_pivot_row(2)
+2
+
+&gt;&gt;&gt; A = A.normalize_row(2)
+&gt;&gt;&gt; A.elements
+[[1, 2, 3]
+ [0, 1, 2]
+ [0, 0, 1]]
+
+&gt;&gt;&gt; A = A.clear_above(2)
+&gt;&gt;&gt; A.elements
+[[1, 2, 0]
+ [0, 1, 0]
+ [0, 0, 1]]
+
+&gt;&gt;&gt; A = A.clear_above(1)
+&gt;&gt;&gt; A.elements
+[[1, 0, 0]
+ [0, 1, 0]
+ [0, 0, 1]]</code></pre>
+<hr>
+<p><strong>THE ACTUAL PROBLEM:</strong></p>
 <p>Extend your <code>Matrix</code> class to include a method <code>rref</code> that converts the matrix to reduced row echelon form. You should use the <a href="https://textbooks.math.gatech.edu/ila/row-reduction.html">row reduction</a> algorithm, which goes like this:</p>
 
 <pre><code>create a copy of the original matrix
@@ -13569,34 +13641,34 @@ $$13 \to 40 \to 20 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$$<hr>
 &gt;&gt;&gt; A.get_pivot_row(0)
 1
 
-&gt;&gt;&gt; A.swap_rows(0,1)
+&gt;&gt;&gt; A = A.swap_rows(0,1)
 &gt;&gt;&gt; A.elements
 [[3, 6, 9]
  [0, 1, 2]
  [2, 6, 8]]
 
-&gt;&gt;&gt; A.normalize_row(0)
+&gt;&gt;&gt; A = A.normalize_row(0)
 &gt;&gt;&gt; A.elements
 [[1, 2, 3]
  [0, 1, 2]
  [2, 6, 8]]
 
-&gt;&gt;&gt; A.clear_below(0)
+&gt;&gt;&gt; A = A.clear_below(0)
 &gt;&gt;&gt; A.elements
 [[1, 2, 3]
  [0, 1, 2]
  [0, 2, 2]]
 
-&gt;&gt;&gt; A.get_pivot_row(1)
+&gt;&gt;&gt; A = A.get_pivot_row(1)
 1
 
-&gt;&gt;&gt; A.normalize_row(1)
+&gt;&gt;&gt; A = A.normalize_row(1)
 &gt;&gt;&gt; A.elements
 [[1, 2, 3]
  [0, 1, 2]
  [0, 2, 2]]
 
-&gt;&gt;&gt; A.clear_below(1)
+&gt;&gt;&gt; A = A.clear_below(1)
 &gt;&gt;&gt; A.elements
 [[1, 2, 3]
  [0, 1, 2]
@@ -13605,19 +13677,19 @@ $$13 \to 40 \to 20 \to 10 \to 5 \to 16 \to 8 \to 4 \to 2 \to 1$$<hr>
 &gt;&gt;&gt; A.get_pivot_row(2)
 2
 
-&gt;&gt;&gt; A.normalize_row(2)
+&gt;&gt;&gt; A = A.normalize_row(2)
 &gt;&gt;&gt; A.elements
 [[1, 2, 3]
  [0, 1, 2]
  [0, 0, 1]]
 
-&gt;&gt;&gt; A.clear_above(2)
+&gt;&gt;&gt; A = A.clear_above(2)
 &gt;&gt;&gt; A.elements
 [[1, 2, 0]
  [0, 1, 0]
  [0, 0, 1]]
 
-&gt;&gt;&gt; A.clear_above(1)
+&gt;&gt;&gt; A = A.clear_above(1)
 &gt;&gt;&gt; A.elements
 [[1, 0, 0]
  [0, 1, 0]
