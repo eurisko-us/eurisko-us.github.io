@@ -13169,13 +13169,14 @@ Computing KL Divergence for MC Simulations...
 <p><strong>Grading:</strong> 5 points for each passing test, 10 points code quality (so 20 points total)</p>
 <hr>
 <p><strong>MINOR CODE UPDATES BEFORE YOU DO THE ACTUAL PROBLEM:</strong></p>
-<p>Before you do this problem, you need to update some of your previous code so that you don't run into any mutation issues.</p>
-<p>First, update your <code>copy()</code> method so that when it creates a copied matrix, it uses a completely separate list of elements (albeit with the same entries). You can do it like this:</p>
+<p>Before you do this problem, you need to update some of your previous code so that you don't run into any mutation issues where running methods affects the underlying elements.</p>
+<p><strong>a.</strong> <u>First, update your `copy()` method so that when it creates a copied matrix, it uses a completely separate array of elements</u> (albeit with the same entries). You can do it like this:</p>
 
 <pre><code>def copy(self):
-    copied_elements = [row for row in self.elements]
+    copied_elements = [[entry for entry in row] for row in self.elements]
     return Matrix(copied_elements)</code></pre>
-<p>Second, update your helper methods <code>self.swap_rows()</code>, <code>self.normalize_row()</code>, <code>self.clear_below()</code>, and <code>self.clear_above()</code> so that they don't affect the original matrix <code>self</code>. In these methods, instead of modifying <code>self.elements</code> you should create a copy of <code>self.elements</code>, modify the copy, and then return the matrix whose elements are the copy.</p>
+<p>(The reason why we need to do this is that whenever Python sees any sort of assignment with an existing list, it doesn't actually make a separate copy of the list. It just "points" to the existing list. We want the copied elements to be <em>completely separate</em> from <code>self.elements</code>.)</p>
+<p><strong>b.</strong> <u>Second, update your helper methods `self.swap_rows()`, `self.normalize_row()`, `self.clear_below()`, and `self.clear_above()` so that they don't affect the original matrix `self`.</u> In these methods, instead of modifying <code>self.elements</code> you should create a copy of <code>self.elements</code>, modify the copy, and then return the matrix whose elements are the copy.</p>
 <p>You will need to update your tests to use <code>A = A.swap_rows()</code>, <code>A = A.normalize_row()</code>, <code>A = A.clear_below()</code>, and <code>A = A.clear_above()</code> as follows:</p>
 
 <pre><code>&gt;&gt;&gt; A = Matrix(elements = [[0, 1, 2],
