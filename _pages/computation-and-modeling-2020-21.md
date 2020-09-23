@@ -21,7 +21,7 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-12-1">Tally Sort</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-12-2">Inheritance with Squares / Rectangles</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-12-2">Shape Classes: Rectangles and Triangles</a></li>
         </ul></font>
     </li>
     <br>
