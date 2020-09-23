@@ -16,6 +16,15 @@ author_profile: false
 <br><br>
 
 <font size="3em"><ol reversed start="11">
+    <li><b>Wednesday, September 23</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/459566574">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-12-1">Tally Sort</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-12-2">Inheritance with Squares / Rectangles</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, September 18</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/459566574">Class Recording</a>
         <br>Assignment Problems:
