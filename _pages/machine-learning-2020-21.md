@@ -19,8 +19,9 @@ author_profile: false
         <!--<br><a class="body" target="_blank" href="https://vimeo.com/459566564">Class Recording</a>-->
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-1">Bayesian Inference with Joint Distributions</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-2">EulerEstimator for Systems of ODEs</a></li>
+        <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-1">Bayesian Inference with Joint Distributions</a></li>-->
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-1">EulerEstimator for Systems of ODEs</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-2">Catch Up: Magic Squares, Joint Distributions, Space Empires</a></li>
         <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-3">Theory - Joint Distributions</a></li>-->
         </ul></font>
     </li>
