@@ -21,6 +21,7 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-1">Bayesian Inference with Joint Distributions</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-2">EulerEstimator for Systems of ODEs</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-45-3">Theory of Joint Distributions</a></li>
         </ul></font>
     </li>
     <br>
