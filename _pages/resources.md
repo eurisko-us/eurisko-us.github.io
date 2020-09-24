@@ -52,6 +52,9 @@ author_profile: false
 
 <br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, and satisfies ALL the requirements outlined in the assignment!
 
+<br><br>Assignments requiring writing of text or math should be done in LaTeX using the <a class="body" href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko assignment template</a>.
+
+
 <!--
 <br><br>
 <details>
