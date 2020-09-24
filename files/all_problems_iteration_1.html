@@ -13238,29 +13238,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-46-1">Problem 46-1<a class="anchor-link" href="#Problem-46-1">&#182;</a></h1><p>use your linear regressor class to do some interesting regressions by just putting those additional columns in your dataframe</p>
-<p>Part A</p>
-<p>Polynomial regression problem</p>
-<p>Part B</p>
-<p>sine/cosine regression with various frequencies -- signal separation for a combined signal</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-46-2">Problem 46-2<a class="anchor-link" href="#Problem-46-2">&#182;</a></h1><p>Bayes theorem iteratively updating prior. You’re on a spaceship, trying to find where enemy is. you lost your data in an explosion, but you still have the most recent model. Can you continue updating it even without the old data? Yes! Bayes theorem; prior distribution</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-46-3">Problem 46-3<a class="anchor-link" href="#Problem-46-3">&#182;</a></h1><p>Write up specifications for your own strategy player. Justify your choices and put it in overleaf doc. Make tests for your strategy player that other people can use to verify they've implemented it correctly.</p>
-<p>Next time, let's implement everyone's strategy players -- e.g. ColbyManualStrategyPlayer, ElijahManualStrategyPlayer, ... -- and make sure we all get the same results.</p>
-<p>We also need to make sure to put planets at the same locations -- let's force it to be at corners and center</p>
 
 </div>
 </div>
@@ -13276,7 +13254,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-47-1">Problem 47-1<a class="anchor-link" href="#Problem-47-1">&#182;</a></h1><p><strong>Location:</strong> overleaf.com</p>
+<h1 id="Problem-47-1">Problem 47-1<a class="anchor-link" href="#Problem-47-1">&#182;</a></h1><p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/project/5f6bbacd7995310001c1fba6">this template</a>.</p>
 <p><strong>Grading:</strong> 2 points per part</p>
 <p>Several witnesses reported seeing a UFO during the following time intervals:</p>
 $$
@@ -13322,8 +13300,74 @@ $$<p>The times represent hours in military time:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-46-1">Problem 46-1<a class="anchor-link" href="#Problem-46-1">&#182;</a></h1><p><strong>Grading:</strong> 8 points total</p>
-<p><strong>Location:</strong> overleaf.com</p>
+<h1 id="Problem-46-1">Problem 46-1<a class="anchor-link" href="#Problem-46-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/signal_separation.py</code></p>
+<p><strong>Grading:</strong> 6 points total</p>
+<p>Use your <code>DataFrame</code> and <code>LinearRegressor</code> to solve the following regression problems.</p>
+<p><strong>PART A</strong> (2 points)</p>
+<p>The following dataset takes the form $$y = a + bx + cx^2 + dx^3$$ for some constants $a,b,c,d.$ Use linear regression to determine the best-fit values of $a,b,c,d.$</p>
+
+<pre><code>[(0.0, 4.0),
+ (0.2, 8.9),
+ (0.4, 17.2),
+ (0.6, 28.3),
+ (0.8, 41.6),
+ (1.0, 56.5),
+ (1.2, 72.4),
+ (1.4, 88.7),
+ (1.6, 104.8),
+ (1.8, 120.1),
+ (2.0, 134.0),
+ (2.2, 145.9),
+ (2.4, 155.2),
+ (2.6, 161.3),
+ (2.8, 163.6),
+ (3.0, 161.5),
+ (3.2, 154.4),
+ (3.4, 141.7),
+ (3.6, 122.8),
+ (3.8, 97.1),
+ (4.0, 64.0),
+ (4.2, 22.9),
+ (4.4, -26.8),
+ (4.6, -85.7),
+ (4.8, -154.4)]</code></pre>
+<p><strong>PART B</strong> (4 points)</p>
+<p>The following dataset takes the form $$y = a \sin(x) + b \cos(x) + c \sin(2x) + d \cos(2x)$$ for some constants $a,b,c,d.$ Use linear regression to determine the best-fit values of $a,b,c,d.$</p>
+
+<pre><code>[(0.0, 2.0),
+ (0.2, 4.65),
+ (0.4, -2.19),
+ (0.6, -2.68),
+ (0.8, 0.9),
+ (1.0, -2.02),
+ (1.2, 0.03),
+ (1.4, 5.14),
+ (1.6, -0.17),
+ (1.8, -3.66),
+ (2.0, 0.52),
+ (2.2, -1.02),
+ (2.4, -1.57),
+ (2.6, 4.52),
+ (2.8, 2.08),
+ (3.0, -3.83),
+ (3.2, -0.55),
+ (3.4, 0.08),
+ (3.6, -2.41),
+ (3.8, 3.02),
+ (4.0, 3.96),
+ (4.2, -3.01),
+ (4.4, -1.96),
+ (4.6, 0.79),
+ (4.8, -2.36)]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-46-2">Problem 46-2<a class="anchor-link" href="#Problem-46-2">&#182;</a></h1><p><strong>Grading:</strong> 8 points total</p>
+<p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/project/5f6bbacd7995310001c1fba6">this template</a>.</p>
 <p><strong>PART A</strong> (2 points per part)</p>
 <p><em>The following statements are false. For each statement, explain why it is false, and give a concrete counterexample that illustrates that it is false.</em></p>
 <ol>
@@ -13336,6 +13380,35 @@ $$<p>The times represent hours in military time:</p>
 <p><em>The following statement is true. First, give a concrete example on which the statement holds true. Then, construct a <u>thorough</u> proof.</em></p>
 <ol>
 <li>If $f(x)$ and $g(y)$ are valid probability distributions, and we create a function $h(x,y) = f(x)g(y),$ then $h(x,y)$ is a valid probability distribution.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-46-3">Problem 46-3<a class="anchor-link" href="#Problem-46-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points total (2 points for each strategy description + justification)</p>
+<p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/project/5f6bbacd7995310001c1fba6">this template</a>.</p>
+<p>Write up specifications for your own custom strategy player.</p>
+<ul>
+<li><p>Make the specifications simple enough that you will be able to implement them next week without too much trouble.</p>
+</li>
+<li><p>Make sure that your player is able to consistently beat <code>DumbPlayer</code> and <code>CombatPlayer</code>. But don't tailor your strategies to these opponents -- your player will battle against other classmates' players soon.</p>
+</li>
+</ul>
+<p>In your LaTeX doc, outline your strategy in each of the following components, and <strong>justify your reasoning for the strategy</strong>. And again, make sure it's simple enough for you to implement next week.</p>
+<ol>
+<li><p>How will you decide where to move your ships?</p>
+</li>
+<li><p>How will you decide what to buy during the economic phase?</p>
+</li>
+<li><p>If you are unable to pay all your maintenance costs, how will you decide what ship to remove?</p>
+</li>
+<li><p>If you come across a planet, how will you decide whether or not to colonize it?</p>
+</li>
+<li><p>During battle with the enemy, when it's your ship's turn to attack an enemy ship, how will you decide which ship to attack?</p>
+</li>
 </ol>
 
 </div>
@@ -13378,26 +13451,26 @@ x_2'(t) &amp;= 2x_1(t)
 [1.1, 0.1, 0]
 &gt;&gt;&gt; euler.step_forward(-0.5)
 &gt;&gt;&gt; euler.point
-(-0.4, (-0.45, 0.05, 0))
+(-0.4, (-0.45, -0.05, 0))
 
 &gt;&gt;&gt; euler.go_to_input(5, step_size = 2)
 
 notes to help you debug:
 
-point: (-0.4, (-0.45, 0.05, 0))
-derivative: (0.55, -0.4, -0.9)
-deltas: (2, (1.1, -0.8, -1.8))
+point: (-0.4, (-0.45, -0.05, 0))
+derivative: (0.55, -0.5, -0.1)
+deltas: (2, (1.1, -1, -0.2))
 
-point: (1.6, (0.65, -0.75, -1.8))
-derivative: (1.65, -0.1, 1.3)
-deltas: (2, (3.3, -0.2, 2.6))
+point: (1.6, (0.65, -1.05, -0.2))
+derivative: (1.65, -0.4, -2.1)
+deltas: (2, (3.3, -0.8, 4.2))
 
-point: (3.6, (3.95, -0.95, 0.8))
-derivative: (4.95, 3, 7.9)
-deltas: (1.4, (6.93, 4.2, 11.06))
+point: (3.6, (3.95, -1.85, 4))
+derivative: (4.95, 2.1, -3.7)
+deltas: (1.4, (9.8, 4.2, -7.4))
 
 &gt;&gt;&gt; euler.point
-(10.88, 3.25, 11.86)</code></pre>
+(13.75, 2.35, -3.4)</code></pre>
 <p>Also, implement plotting capability.</p>
 
 <pre><code>(continued from above tests)
