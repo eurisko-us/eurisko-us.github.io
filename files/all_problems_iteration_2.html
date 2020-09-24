@@ -13119,8 +13119,199 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-15-1">Problem 15-1<a class="anchor-link" href="#Problem-15-1">&#182;</a></h1><p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/project/5f6bbacd7995310001c1fba6">this template</a>.</p>
+<p><strong>PART A</strong></p>
+<p><em>The following statements are <b>false</b>. For each statement, explain why it is false, and give a concrete counterexample that illustrates that it is false.</em></p>
+<ol>
+<li><p>(1 point) If you push 3 elements onto the stack, and then pop off 2 elements, you end up with the last element you pushed.</p>
+</li>
+<li><p>(1 point) If you push 3 elements onto a queue, and then pop off 2 elements, you end up with the first element you pushed.</p>
+</li>
+<li><p>(2 points) Swap sort and simple sort both involve repeatedly comparing two elements. For any given list, the number of pairs of elements that need to be compared by each algorithm is exactly the same.</p>
+</li>
+</ol>
+<p><strong>PART B</strong> (4 points)</p>
+<p><em>The following statement is <b>true</b>. First, give a concrete example on which the statement holds true. Then, construct a <u>thorough</u> proof.</em></p>
+<p>Say we flip a coin $n$ times. Let $\widehat{P}(x)$ be the probability of getting $x$ heads according to a Monte Carlo simulation with $N$ samples. Then</p>
+$$\widehat{P}(0) + \widehat{P}(1) + \widehat{P}(2) + \cdots + \widehat{P}(n) = 1.$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-15-2">Problem 15-2<a class="anchor-link" href="#Problem-15-2">&#182;</a></h1><p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/matrix.py</code><br>
+`machine-learning/tests/test_matrix.py<br></p>
+</blockquote>
+<p><strong>Grading:</strong> 4 points for each method with tests</p>
+<p>In your <code>Matrix</code> class, write methods <code>augment(other_matrix)</code>, <code>get_rows(row_nums)</code>, and <code>get_columns(col_nums)</code> that satisfy the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([
+    [1, 2,   3,  4],
+    [5, 6,   7,  8],
+    [9, 10, 11, 12]
+])
+&gt;&gt;&gt; B = Matrix([
+    [13, 14],
+    [15, 16],
+    [17, 18]
+])
+
+&gt;&gt;&gt; A_augmented = A.augment(B)
+&gt;&gt;&gt; A_augmented.elements
+[
+    [1, 2,   3,  4, 13, 14],
+    [5, 6,   7,  8, 15, 16],
+    [9, 10, 11, 12, 17, 18]
+]
+
+&gt;&gt;&gt; rows_02 = A_augmented.get_rows([0, 2])
+&gt;&gt;&gt; rows_02.elements
+[
+    [1, 2,   3,  4, 13, 14],
+    [9, 10, 11, 12, 17, 18]
+]
+
+&gt;&gt;&gt; cols_0123 = A.augmented.get_columns([0, 1, 2, 3])
+&gt;&gt;&gt; cols_0123.elements
+[
+    [1, 2,   3,  4],
+    [5, 6,   7,  8],
+    [9, 10, 11, 12]
+]
+
+&gt;&gt;&gt; cols_45 = A.augmented.get_columns([4, 5])
+&gt;&gt;&gt; cols_45.elements
+[
+    [13, 14],
+    [15, 16],
+    [17, 18]
+]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-14-1">Problem 14-1<a class="anchor-link" href="#Problem-14-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/shapes.py</code></p>
+<p><strong>Grading:</strong> 4 points</p>
+<p>Write a class <code>Shape</code> with</p>
+<ul>
+<li><p>attributes <code>base</code>, <code>height</code>, and <code>color</code></p>
+</li>
+<li><p>methods <code>describe()</code> and <code>render()</code></p>
+</li>
+</ul>
+<p>Then, rewrite your classes <code>Rectangle</code> and <code>RightTriangle</code> so that they are child classes that inherit from the parent class <code>Shape</code>.</p>
+<p>The reason why we might do this is that we'd like to avoid duplicating the <code>describe()</code> and <code>render()</code> methods in each subclass. This way, you'll only have to write the these methods once, in the <code>Shape</code> class.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-14-2">Problem 14-2<a class="anchor-link" href="#Problem-14-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/card_sort.py</code></p>
+<p><strong>Grading:</strong> 4 points</p>
+<p>Write a function <code>card_sort(num_list)</code> that sorts the list <code>num_list</code> from least to greatest by using the method that a person would use to sort cards by hand.</p>
+<p>For example, to sort <code>num_list = [12, 11, 13, 5, 6]</code>, we would go through the list and repeatedly put the next number we encounter in the appropriate place relative to the numbers that we have already gone through.</p>
+
+<pre><code>starting list: [12, 11, 13, 5, 6]
+initialize sorted list: []
+
+first element is 12
+put it in the sorted list:
+[12]
+
+next element is 11
+put it in the sorted list at the appropriate position:
+[11, 12]
+
+next element is 13
+put it in the sorted list at the appropriate position:
+[11, 12, 13]
+
+next element is 5
+put it in the sorted list at the appropriate position:
+[5, 11, 12, 13]
+
+next element is 6
+put it in the sorted list at the appropriate position:
+[5, 6, 11, 12, 13]
+
+final sorted list: [5, 6, 11, 12, 13]</code></pre>
+<p><strong>Note:</strong> You'll have to do a bit of thinking regarding how to put an element in the sorted list at the appropriate position. I'd recommend creating a helper function <code>insert_element_into_sorted_list(element, sorted_list)</code> to do this so that you can solve that problem on its own, and then use that helper function as a part of your main function <code>card_sort</code>.</p>
+<p><strong>Tests:</strong> Assert that your function <code>card_sort</code> sorts the following lists correctly:</p>
+
+<pre><code>&gt;&gt;&gt; card_sort([12, 11, 13, 5, 6])
+[5, 6, 11, 12, 13]
+
+&gt;&gt;&gt; card_sort([5, 7, 3, 5, 1, 3, -1, 1, -3, -1, -3, -1])
+[-3, -3, -1, -1, -1, 1, 1, 3, 3, 5, 5, 7]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-13-1">Problem 13-1<a class="anchor-link" href="#Problem-13-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/shapes.py</code></p>
+<p><strong>Grading:</strong> 4 points</p>
+<p>Write a class <code>Square</code> that inherits from <code>Rectangle</code>. <a href="https://www.w3schools.com/python/python_inheritance.asp">Here's an example of how to implement inheritance.</a></p>
+<p><strong>Note:</strong> You should <strong>not</strong> be manually writing any methods in the <code>Square</code> class. The whole point of using inheritance is so that you don't have to duplicate code.</p>
+
+<pre><code>&gt;&gt;&gt; sq = Square(5,'green')
+&gt;&gt;&gt; sq.describe()
+Base: 5
+Height: 5
+Color: green
+Perimeter: 20
+Area: 25
+Vertices: [(0,0), (5,0), (5,5), (0,5)]
+&gt;&gt;&gt; sq.render()</code></pre>
+<p><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/square.png' border='0'/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-13-2">Problem 13-2<a class="anchor-link" href="#Problem-13-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/detecting_biased_coins.py</code></p>
+<p><strong>Grading:</strong> 4 points</p>
+<p>Suppose that you run an experiment where you flip a coin 3 times, and repeat that trial 25 times. You run this experiment on 3 different coins, and get the following results:</p>
+
+<pre><code>coin_1 = ['TTH', 'HHT', 'HTH', 'TTH', 'HTH',
+          'TTH', 'TTH', 'TTH', 'THT', 'TTH',
+          'HTH', 'HTH', 'TTT', 'HTH', 'HTH',
+          'TTH', 'HTH', 'TTT', 'TTT', 'TTT',
+          'HTT', 'THT', 'HHT', 'HTH', 'TTH']
+coin_2 = ['HTH', 'HTH', 'HTT', 'THH', 'HHH',
+          'THH', 'HHH', 'HHH', 'HTT', 'TTH',
+          'TTH', 'HHT', 'TTH', 'HTH', 'HHT',
+          'THT', 'THH', 'THT', 'TTH', 'TTT',
+          'HHT', 'THH', 'THT', 'THT', 'TTT']
+coin_3 = ['HHH', 'THT', 'HHT', 'HHT', 'HTH',
+          'HHT', 'HHT', 'HHH', 'TTT', 'THH',
+          'HHH', 'HHH', 'TTH', 'THH', 'THH',
+          'TTH', 'HTT', 'TTH', 'HTT', 'HHT',
+          'TTH', 'HTH', 'THT', 'THT', 'HTH']</code></pre>
+<p>Let $P_i(x)$ be the experimental probability of getting $x$ heads in a trial of 3 tosses, using the $i$th coin. Plot the distributions $P_1(x),$ $P_2(x),$ and $P_3(x)$ on the same graph. Be sure to label them.</p>
+<ul>
+<li>(This is similar to when you plotted the Monte Carlo distributions, but this time you're given the simulation results.)</li>
+</ul>
+<p>Based on the plot of the distributions, what conclusions can you make about the coins? For each coin, does it appear to be fair, biased towards heads, or biased towards tails? Write your answer as a comment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-12-1">Problem 12-1<a class="anchor-link" href="#Problem-12-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/tally_sort.py</code></p>
-<p><strong>Grading:</strong> 4 point</p>
+<p><strong>Grading:</strong> 4 points</p>
 <p>Write a function <code>tally_sort(num_list)</code> that sorts the list <code>num_list</code> from least to greatest using the following process:</p>
 <ol>
 <li><p>Subtract the minimum from the list so that the minimum is now 0.</p>
@@ -13140,10 +13331,51 @@ div#notebook {
 
 subtract off the minimum: [0, 3, 0, 1, 6, 4, 1]
 
-Tally up the counts
+array of tallies: [number of instances of 0, number of instances of 1, number of instances of 2, number of instances of 3, number of instances of 4, number of instances of 5, number of instances of 6]
 
-Tally:   | 2 | 2 | 0 | 1 | 1 | 0 | 1 |
-Index:   | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+array of tallies: [0, 0, 0, 0, 0, 0, 0]
+
+loop through the list [0, 3, 0, 1, 6, 4, 1]
+
+first element: 0
+increment the array of tallies at index 0
+array of tallies: [1, 0, 0, 0, 0, 0, 0]
+
+next element: 3
+increment the array of tallies at index 3
+array of tallies: [1, 0, 0, 1, 0, 0, 0]
+
+next element: 0
+increment the array of tallies at index 0
+array of tallies: [2, 0, 0, 1, 0, 0, 0]
+
+next element: 1
+increment the array of tallies at index 1
+array of tallies: [2, 1, 0, 1, 0, 0, 0]
+
+next element: 6
+increment the array of tallies at index 6
+array of tallies: [2, 1, 0, 1, 0, 0, 1]
+
+next element: 4
+increment the array of tallies at index 4
+array of tallies: [2, 1, 0, 1, 1, 0, 1]
+
+next element: 1
+increment the array of tallies at index 1
+array of tallies: [2, 2, 0, 1, 1, 0, 1]
+
+final array of tallies: [2, 2, 0, 1, 1, 0, 1]
+
+remember what array of tallies represents: [number of instances of 0, number of instances of 1, number of instances of 2, number of instances of 3, number of instances of 4, number of instances of 5, number of instances of 6]
+
+2 instances of 0  --&gt; 0, 0
+2 instances of 1  --&gt; 1, 1
+0 instances of 2  --&gt;
+1 instances of 3  --&gt; 3
+1 instances of 4  --&gt; 4
+0 instances of 5  --&gt;
+1 instances of 6  --&gt; 6
 
 Transform the tallies into the sorted list (with minimum still equal to 0)
 [0, 0, 1, 1, 3, 4, 6]
@@ -13161,7 +13393,7 @@ Add the minimum back: [2, 2, 3, 3, 5, 6, 8]</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-12-2">Problem 12-2<a class="anchor-link" href="#Problem-12-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/shapes.py</code></p>
-<p><strong>Grading:</strong> 8 points total</p>
+<p><strong>Grading:</strong> 4 points total</p>
 <p><strong>a.</strong> (2 points)</p>
 <p>Write a class <code>Rectangle</code>.</p>
 <ul>
@@ -13214,27 +13446,6 @@ Area: 5
 Vertices: [(0,0), (5,0), (0,2)]
 &gt;&gt;&gt; tri.render()</code></pre>
 <p><img height=200 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/rightTriangle.png' border='0'/></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>c.</strong> (4 points)</p>
-<p>Write a class <code>Square</code> that inherits from <code>Rectangle</code>. <a href="https://www.w3schools.com/python/python_inheritance.asp">Here's an example of how to implement inheritance.</a></p>
-<p><strong>Note:</strong> You should <strong>not</strong> be manually writing any methods in the <code>Square</code> class. The whole point of using inheritance is so that you don't have to duplicate code.</p>
-
-<pre><code>&gt;&gt;&gt; sq = Square(5,'green')
-&gt;&gt;&gt; sq.describe()
-Base: 5
-Height: 5
-Color: green
-Perimeter: 20
-Area: 25
-Vertices: [(0,0), (5,0), (5,5), (0,5)]
-&gt;&gt;&gt; sq.render()</code></pre>
-<p><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/square.png' border='0'/></p>
 
 </div>
 </div>
