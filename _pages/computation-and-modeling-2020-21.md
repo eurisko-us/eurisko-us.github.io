@@ -16,6 +16,33 @@ author_profile: false
 <br><br>
 
 <font size="3em"><ol reversed start="12">
+    <li><b>Wednesday, September 30</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-15-1">Theory Questions Using LaTeX</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-15-2">Augmented Matrix Helper Functions</a></li>
+        </ul></font>
+    </li>
+    <br>
+    <li><b>Monday, September 28</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-14-1">Shape Classes: Everything Inherits from Shape</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-14-2">Card Sort</a></li>
+        </ul></font>
+    </li>
+    <br>
+    <li><b>Friday, September 25</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-13-1">Shape Classes: Square Inherits from Rectangle</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-13-2">Detecting Biased Coins</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 23</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>
         <br>Assignment Problems:
