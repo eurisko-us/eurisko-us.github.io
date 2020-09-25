@@ -35,7 +35,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Friday, September 25</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/461911929">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/461911914">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-13-1">Shape Classes: Square Inherits from Rectangle</a></li>
