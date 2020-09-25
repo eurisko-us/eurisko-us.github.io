@@ -13431,9 +13431,9 @@ x_2'(t) &amp;= 2x_1(t)
 
 <pre><code>&gt;&gt;&gt; euler = EulerEstimator(
                 derivatives = [
-                    (lambda x: x[0] + 1),
-                    (lambda x: x[0] + x[1]) 
-                    (lambda x: 2*x[1]) 
+                    (lambda t,x: x[0] + 1),
+                    (lambda t,x: x[0] + x[1]),
+                    (lambda t,x: 2*x[1]) 
                     ],
                 point = (0,(0,0,0))
             )
