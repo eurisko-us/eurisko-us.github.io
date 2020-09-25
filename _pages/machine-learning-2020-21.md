@@ -24,6 +24,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-46-2">Specifications for Custom Game-Playing Agent</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, September 23</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/461088295">Class Recording</a>
         <br>Assignment Problems:
