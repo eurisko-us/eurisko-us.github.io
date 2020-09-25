@@ -106,7 +106,8 @@ author_profile: false
 <font size="3em"><ul>
   <li><b>Assignments (30%).</b> Every class, you will have an assignment consisting of multiple problems from a variety of domains. Assignments will be graded for both functionality and code quality.</li>
   <li><b>Biweekly Quizzes (30%).</b> We will have quizzes every other week. They will consist of free-response problems focused on the core principles covered in the assignments.</li>
-  <li><b>Library Quality (30%).</b> At the end of the course, your code libraries will be graded for both functionality and code quality. So, be sure to refactor your code appropriately each time you do an assignment!</li>
+  <li><b>Library Quality (15%).</b> At the end of the course, your code libraries will be graded for code quality. So, be sure to refactor your code appropriately each time you do an assignment!</li>
+  <li><b>Final (15%).</b> There will be a cumulative final exam.</li>
   <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 3 specific things that could be improved.</li>
 </ul></font>
 
