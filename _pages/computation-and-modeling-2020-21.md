@@ -26,7 +26,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Monday, September 28</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/462708264">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-14-1">Shape Classes: Everything Inherits from Shape</a></li>
