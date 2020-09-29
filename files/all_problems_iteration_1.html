@@ -13237,7 +13237,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-47-1">Problem 47-1<a class="anchor-link" href="#Problem-47-1">&#182;</a></h1><p>implement strategy player over the weekend</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>implement strategy player over the weekend</p>
 
 </div>
 </div>
@@ -13245,7 +13245,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-46-1">Problem 46-1<a class="anchor-link" href="#Problem-46-1">&#182;</a></h1><p>derive lotka volterra</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>derive lotka volterra</p>
 <p>simulate predator-prey model &amp; make plots: <a href="https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations">https://en.wikipedia.org/wiki/Lotka%E2%80%93Volterra_equations</a></p>
 
 </div>
@@ -13254,39 +13254,16 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-46-2">Problem 46-2<a class="anchor-link" href="#Problem-46-2">&#182;</a></h1><p>Finish implementing your custom strategy player as <code>(YourName)StrategyPlayer</code>. In this assignment, you will implement the remaining components of your strategy which are related to economics and battle.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Finish implementing your custom strategy player as <code>(YourName)StrategyPlayer</code>. In this assignment, you will implement the remaining components of your strategy which are related to economics and battle.</p>
 <p>Again, assume a $13 \times 13$ board.</p>
-<p><strong>a.</strong> (2 points) Implement your purchasing logic within the method <code>Player.decide_purchases(available_purchases, board)</code> that returns a list of purchases from</p>
-<p><strong>b.</strong> (2 points) Implement your ship removal logic within the method <code>Player.decide_removals(available_purchases, board)</code></p>
+<p><strong>a.</strong> (2 points) Implement your purchasing logic within the method <code>Player.decide_purchases(available_purchases, game)</code> that returns a list of purchases from</p>
+<p><strong>b.</strong> (2 points) Implement your ship removal logic within the method <code>Player.decide_removals(available_purchases, game)</code></p>
 <ul>
 <li>If you are unable to pay all your maintenance costs, how will you decide what ship to remove?</li>
 </ul>
-<p><strong>c.</strong> (2 points) Implement your combat logic within the method <code>Player.decide_which_ship_to_attack(opponent_ships_in_combat_order, board)</code></p>
+<p><strong>c.</strong> (2 points) Implement your combat logic within the method <code>Player.decide_which_ship_to_attack(opponent_ships_in_combat_order, game)</code></p>
 <ul>
 <li>During battle with the enemy, when it's your ship's turn to attack an enemy ship, how will you decide which ship to attack?</li>
-</ul>
-<hr>
-<p>How will you decide what to buy during the economic phase?</p>
-<p>During battle with the enemy, when it's your ship's turn to attack an enemy ship, how will you decide which ship to attack?</p>
-<p><strong>a.</strong> (2 points) Implement your colonization logic within the method <code>Player.will_colonize_planet(colony_ship, planet, board)</code> that returns either <code>True</code> or <code>False</code>.</p>
-<ul>
-<li><p>This function should be called whenever a player's colony ship lands on a planet.</p>
-</li>
-<li><p>The game should ask the player whether it wants to colonize a particular planet, and the player will use the <code>board</code> data to determine whether it wants to colonize.</p>
-</li>
-<li><p>If the player decides to colonize, then <strong>THE GAME, NOT THE PLAYER, should make the corresponding updates to the board.</strong></p>
-</li>
-</ul>
-<p><strong>b.</strong> (6 points) Implement your movement logic within the method <code>Player.move_ship(ship, available_spaces, movement_round, moves_remaining_in_round, board)</code> that returns the coordinates to which the player wishes to move their ship.</p>
-<ul>
-<li><p>The output of <code>move</code> should be a coordinate pair that is included in the list <code>available_spaces</code></p>
-</li>
-<li><p><code>movement_round</code> is 1, 2, or 3 depending on whether the game is in Movement Round 1, Movement Round 2, or Movement Round 3.</p>
-</li>
-<li><p><code>moves_remaining_in_round</code> will usually be set to <code>1</code>, unless the player has purchased movement technology, in which case they may be allowed more than one move in the current round.</p>
-</li>
-<li><p>If the player decides to move, then <strong>THE GAME, NOT THE PLAYER, should make the corresponding updates to the board.</strong></p>
-</li>
 </ul>
 
 </div>
