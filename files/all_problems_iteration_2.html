@@ -13119,7 +13119,80 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-15-1">Problem 15-1<a class="anchor-link" href="#Problem-15-1">&#182;</a></h1><p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/project/5f6bbacd7995310001c1fba6">this template</a>.</p>
+<h1 id="Problem-16-1">Problem 16-1<a class="anchor-link" href="#Problem-16-1">&#182;</a></h1><p><strong>a.</strong> Write a function <code>count_compression(string)</code> that takes a string and compresses it into a list of tuples, where each tuple indicates the count of times a particular symbol was repeated.</p>
+
+<pre><code>&gt;&gt;&gt; count_compression('aaabbcaaaa')
+[('a',3), ('b',2), ('c',1), ('a',4)]
+&gt;&gt;&gt; count_compression('22344444')
+[(2,2), (3,1), (4,5)]</code></pre>
+<p><strong>b.</strong> Write a function <code>count_decompression(compressed_string)</code> that decompresses a compressed string to return the original result.</p>
+
+<pre><code>&gt;&gt;&gt; count_decompression([('a',3), ('b',2), ('c',1), ('a',4)])
+'aaabbcaaaa'
+&gt;&gt;&gt; count_decompression([(2,2), (3,1), (4,5)])
+'22344444'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-16-2">Problem 16-2<a class="anchor-link" href="#Problem-16-2">&#182;</a></h1><p>Extend your <code>Matrix</code> class to include a method <code>inverse()</code> that computes the inverse matrix using <a href="https://en.wikipedia.org/wiki/Gaussian_elimination#Finding_the_inverse_of_a_matrix">Gaussian elimination</a> (i.e. your <code>rref</code> method).</p>
+<p>If the matrix is not invertible, print a message that explains why -- is it be cause it's singular, or because it's non-square?</p>
+<p><strong>Test your <code>inverse</code> method on 2 different examples. Verify that when you multiply the original matrix by its inverse, you get the identity matrix.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-16-3">Problem 16-3<a class="anchor-link" href="#Problem-16-3">&#182;</a></h1><p>Create a class <code>LinkedList</code> and a class <code>Node</code> which together implement a <a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html">singly linked list</a>.</p>
+<ul>
+<li><p>The class <code>LinkedList</code> should have <strong>exactly one</strong> attribute:</p>
+<ul>
+<li><code>head</code>: gives the node at the beginning of the linked list</li>
+</ul>
+</li>
+<li><p>Each node should have <strong>exactly two</strong> attributes:</p>
+<ul>
+<li><code>data</code>: returns the contents of the node</li>
+<li><code>next</code>: returns the next node</li>
+</ul>
+</li>
+<li><p><code>LinkedList</code> should have <strong>exactly three</strong> methods:</p>
+<ul>
+<li><code>print()</code>: prints the contents of the nodes, starting at the head</li>
+<li><code>length()</code>: returns the number of nodes in the linked list</li>
+<li><code>append()</code>: appends a new node to the tail of the linked list</li>
+</ul>
+</li>
+</ul>
+<p>For this assignment, you only need to implement the functionality above. We will continue this problem on the next assignment (in which you will implement <code>insert</code>, <code>delete</code>, and <code>search</code>). But you don't have to do that yet.</p>
+<p>Make sure not to use any python lists in your answer.</p>
+
+<pre><code>&gt;&gt;&gt; x = LinkedList(4)
+&gt;&gt;&gt; x.head.data
+4
+&gt;&gt;&gt; x.append(8)
+&gt;&gt;&gt; x.head.next.data
+8
+&gt;&gt;&gt; x.append(9)
+&gt;&gt;&gt; x.print()
+4
+8
+9
+&gt;&gt;&gt; x.length()
+3</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-15-1">Problem 15-1<a class="anchor-link" href="#Problem-15-1">&#182;</a></h1><p><strong>Location:</strong> Write your answers in LaTeX on Overleaf.com using <a href="https://www.overleaf.com/read/wjmgkxpccvpj">this template</a>.</p>
 <p><strong>PART A</strong></p>
 <p><em>The following statements are <b>false</b>. For each statement, explain why it is false, and give a concrete counterexample that illustrates that it is false.</em></p>
 <ol>
