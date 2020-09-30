@@ -52,7 +52,7 @@
     </h2>
     
     <p class="page__meta"><time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
-      <p class="page__meta">{{ post.author }}</p>
+      <p class="page__meta">Author: {{ post.author }}</p>
     <!--{% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
