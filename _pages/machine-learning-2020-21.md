@@ -20,7 +20,7 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-1">Predator-Prey Modeling</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-2">CustomStrategyPlayer - Economic and Combat Methods</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-2">Strategy Classes and Game State</a></li>
         </ul></font>
     </li>
     <br>
