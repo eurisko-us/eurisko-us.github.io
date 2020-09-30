@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="15">
     <li><b>Wednesday, September 30</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/461088311">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/463542590">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-15-1">Theory Questions Using LaTeX</a></li>
