@@ -13264,7 +13264,11 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Bayes theorem iteratively updating prior. You’re on a spaceship, trying to find where enemy is. you lost your data in an explosion, but you still have the most recent model. Can you continue updating it even without the old data? Yes! Bayes theorem; prior distribution</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> (20 points) Integrate your strategy player into your game. Your strategy player and game need to follow the specifications below, so that you'll be able to run the strategy players of your classmates as well.</p>
+<ul>
+<li>asdf</li>
+</ul>
+<p><strong>b.</strong> (10 points) Write a test <code>tests/test_strategy_player.py</code> that runs a game with your strategy player against the dumb player and verifies that your strategy player wins.</p>
 
 </div>
 </div>
@@ -13272,11 +13276,41 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-49-1">Problem 49-1<a class="anchor-link" href="#Problem-49-1">&#182;</a></h1><p><strong>a.</strong> (20 points) Integrate your strategy player into your game. Your strategy player and game need to follow the specifications below, so that you'll be able to run the strategy players of your classmates as well.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Derive the time complexity for merge sort and binary search using a recurrence equation</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-49-1">Problem 49-1<a class="anchor-link" href="#Problem-49-1">&#182;</a></h1><p>Rewrite your <code>DumbPlayer</code> so that it uses the following specifications:</p>
 <ul>
-<li>asdf</li>
+<li><p>same methods as your custom player</p>
+</li>
+<li><p>game does the actual movement of players</p>
+</li>
+<li><p>should still pass the original tests</p>
+</li>
 </ul>
-<p><strong>b.</strong> (10 points) Write a test <code>tests/test_strategy_player.py</code> that runs a game with your strategy player against the dumb player and verifies that your strategy player wins.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-49-2">Problem 49-2<a class="anchor-link" href="#Problem-49-2">&#182;</a></h1><p>Bayes theorem iteratively updating prior. You’re on a spaceship, trying to find where enemy is. you lost your data in an explosion, but you still have the most recent model. Can you continue updating it even without the old data? Yes! Bayes theorem; prior distribution</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-49-3">Problem 49-3<a class="anchor-link" href="#Problem-49-3">&#182;</a></h1><p>Review:</p>
+<p><strong>a.</strong> Use "merge sort" to sort the list <code>[4,8,7,7,4,2,3,1]</code>. Do the problem by hand and show your work at each step of the way. See problem 23-3 for a refresher on merge sort.</p>
+<p><strong>b.</strong> Use bisection search to estimate $\sqrt{5}$ to $4$ decimal places by hand, showing your work at each step of the way. See problem 5-2 for a refresher on bisection search.</p>
 
 </div>
 </div>
@@ -13322,11 +13356,32 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-48-2">Problem 48-2<a class="anchor-link" href="#Problem-48-2">&#182;</a></h1><p>Finish implementing your custom strategy player as <code>(YourName)StrategyPlayer</code>. In this assignment, you will write pseudocode for the remaining components of your strategy which are related to economics and battle.</p>
-<p>Again, assume a $13 \times 13$ board.</p>
-<p><strong>a.</strong> (2 points) Write your purchasing logic within the method <code>Player.decide_purchases(game)</code> that returns a list of ship and/or technology types that you want to purchase. This method will be called during each economic round.</p>
-<p><strong>b.</strong> (2 points) Write your ship removal logic within the method <code>Player.decide_removals(total_maintenance_cost, game)</code> that returns a list of ships that you want to remove in the case that your <code>total_maintenance_cost</code> exceeds your CP.</p>
-<p><strong>c.</strong> (2 points) Write your attack selection logic within the method <code>Player.decide_which_ship_to_attack(ships_in_combat_order, game)</code> that looks at the ships in the array <code>ships_in_combat_order</code> and decides which of these ships to attack.</p>
+<h1 id="Problem-48-2">Problem 48-2<a class="anchor-link" href="#Problem-48-2">&#182;</a></h1><p><strong>a.</strong> (2 points) Refactor your <code>Player</code> class so that a player is initialized with a strategy class, and the strategy class is stored within <code>player.strategy</code>.</p>
+<p><strong>b.</strong> (4 points) In <code>Game</code>, create a method <code>generate_state()</code> that looks at the game board, players, units, etc and puts all the relevant information into a nested "state" dictionary. In the next class, we will come to an agreement about how this "state" dictionary should be structured, but for now, I want everyone to give it a shot and we'll see what we come up with.</p>
+<hr>
+<p><strong>Note:</strong> DON'T do this now, but just to let you know what's coming -- once we've come to an agreement regarding the structure of the "state" dictionary, you will be doing the following:</p>
+<ul>
+<li><p>Rename <code>dumb_player.py</code> to <code>deprecated_dumb_player.py</code>, rename <code>combat_player.py</code> to <code>deprecated_combat_player.py</code>, and rename <code>yourname_strategy_player.py</code> to <code>deprecated_yourname_strategy_player.py</code>.</p>
+</li>
+<li><p>Write classes <code>DumbStrategy</code>, <code>CombatStrategy</code>, and <code>YourNameStrategy</code> that each contain the strategies for following methods:</p>
+<ul>
+<li><p><code>will_colonize_planet(colony_ship, game_state)</code>: returns either <code>True</code> or <code>False</code>; will be called whenever a player's colony ship lands on an uncolonized planet</p>
+</li>
+<li><p><code>decide_ship_movement(ship, game_state)</code>: returns the coordinates to which the player wishes to move their ship.</p>
+</li>
+<li><p><code>decide_purchases(game_state)</code>: returns a list of ship and/or technology types that you want to purchase; will be called during each economic round.</p>
+</li>
+<li><p><code>decide_removals(game_state)</code>: returns a list of ships that you want to remove; will be called during any economic round when your total maintenance cost exceeds your CP.</p>
+</li>
+<li><p><code>decide_which_ship_to_attack(attacking_ship, game_state)</code>: looks at the ships in the combat order and decides which to attack; will be called whenever it's your turn to attack</p>
+</li>
+</ul>
+</li>
+<li><p>Make sure your tests work when you use players with <code>DumbStrategy</code> or <code>CombatStrategy</code></p>
+</li>
+<li><p>Run a game with <code>YourNameStrategy</code> vs <code>DumbStrategy</code> and ensure that your strategy beats the dumb strategy.</p>
+</li>
+</ul>
 
 </div>
 </div>
