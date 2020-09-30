@@ -22,6 +22,8 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-1">Predator-Prey Modeling</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-2">Strategy Classes and Game State</a></li>
         </ul></font>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-48-3">Blog Post Preference Rankings</a></li>
+        </ul></font>
     </li>
     <br>
     <li><b>Monday, September 28</b>
