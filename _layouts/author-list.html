@@ -6,27 +6,69 @@ layout: archive
 
 {{ content }}
 
+<!-- ADMINS -->
 {% for authorTuple in site.data.authors %}
 
   {% assign author = authorTuple[1] %}
 
-  <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
-    
-  <h2>{{ author.name }}</h2>
+  {% if author.role == 'admin' %}
 
-  <div style="width:25%;float:left;">
+      <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
 
-  {% if author.avatar contains "://" %}
-        <img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
-      {% else %}
-        <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+      <h2>{{ author.name }}</h2>
+
+      <div style="width:25%;float:left;">
+
+      {% if author.avatar contains "://" %}
+            <img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+          {% else %}
+            <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+          {% endif %}
+      </div>
+
+      <div style="width:70%;float:right;">
+        {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }}</p>{% endif %}
+      </div>
+
+      </div>
+
+  {% endif %}
+
+{% endfor %}
+
+<h2>Students - Machine Learning</h2>
+
+<!-- MACHINE LEARNING STUDENTS -->
+
+{% for authorTuple in site.data.authors %}
+
+  {% assign author = authorTuple[1] %}
+
+  {% if author.role == 'student' %}
+
+      {% if author.class == 'Machine Learning' %}
+
+          <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
+
+          <h2>{{ author.name }}</h2>
+
+          <div style="width:25%;float:left;">
+
+          {% if author.avatar contains "://" %}
+                <img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+              {% else %}
+                <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+              {% endif %}
+          </div>
+
+          <div style="width:70%;float:right;">
+            {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }}</p>{% endif %}
+          </div>
+
+          </div>
+
       {% endif %}
-  </div>
 
-  <div style="width:70%;float:right;">
-    {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }}</p>{% endif %}
-  </div>
-
-  </div>
+  {% endif %}
 
 {% endfor %}
