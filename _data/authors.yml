@@ -18,6 +18,7 @@ Colby Roberts:
   avatar      : "bio-photo.jpg"
   role        : "student"
   class       : "Machine Learning"
+  graduationYear : "'22"
 
 David Gieselman:
   name        : "David Gieselman"
@@ -25,6 +26,7 @@ David Gieselman:
   avatar      : "bio-photo.jpg"
   role        : "student"
   class       : "Machine Learning"
+  graduationYear : "'22"
   
 George Meza:
   name        : "George Meza"
@@ -32,6 +34,7 @@ George Meza:
   avatar      : "bio-photo.jpg"
   role        : "student"
   class       : "Machine Learning"
+  graduationYear : "'22"
   
 Riley Paddock:
   name        : "Riley Paddock"
@@ -39,13 +42,15 @@ Riley Paddock:
   avatar      : "bio-photo.jpg"
   role        : "student"
   class       : "Machine Learning"
+  graduationYear : "'22"
   
 Elijah Tarr:
   name        : "Elijah Tarr"
   bio         : ""
   avatar      : "bio-photo.jpg"
   role        : "student"
-  class       : "Computation & Modeling"
+  class       : "Machine Learning"
+  graduationYear : "'22"
 
 Eobard Thawne:
   name        : "Eobard Thawne"
@@ -53,3 +58,4 @@ Eobard Thawne:
   avatar      : "bio-photo.jpg"
   role        : ""
   class       : ""
+  gradueationYear : "'22"
