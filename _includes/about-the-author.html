@@ -20,10 +20,7 @@
  
 <div style="width:70%;float:right;">
   <br><br>
-  site.data.authors: {{ site.data.authors }}<br><br>
-  page author: {{ page.author }}<br><br>
-  assigned author: {{ author }}<br><br>
-<!--<a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> is...  (include excerpt-{{ page.author | slugify | downcase }}.html) Author bio author bio author bio-->
+ <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> is...  (include excerpt-{{ page.author | slugify | downcase }}.html) Author bio author bio author bio-->
   {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> {{ author.bio }}</p>{% endif %}
 </div>
   
