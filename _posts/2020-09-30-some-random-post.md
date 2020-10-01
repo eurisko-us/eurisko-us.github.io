@@ -1,6 +1,6 @@
 ---
 title: "Some Random Post"
-author: Eobard Thawne
+author: "Eobard Thawne"
 tags:
   - Machine Learning
   - Autonomous Agents
