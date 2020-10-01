@@ -14,5 +14,5 @@ I run Eurisko together with Jason Roberts. I teach all the classes, create the c
 <li>worked on two particle physics research projects that involved improving data transmission in CERN and Fermilab particle detectors.</li>
 </ul>
 
-I also have a personal site at http://www.justinmath.com/ if you'd like to know more about me. But the basic idea is -- if you want to learn how to apply advanced math and computer science, then I'm your guy!
+I also have a personal site at <a class="body" target="_blank" src="http://www.justinmath.com/">justinmath.com</a> if you'd like to know more about me. But the basic idea is -- if you want to learn how to apply advanced math and computer science, then I'm your guy!
 </font>
