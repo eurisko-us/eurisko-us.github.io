@@ -29,7 +29,7 @@ layout: archive
 
 <div style="width:100%; max-width:800px; margin:auto; clear:both;">
 
-<h2 class="archive__subtitle">Posts</h2>
+<h2 class="archive__subtitle"><br>Posts</h2>
     
 {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
