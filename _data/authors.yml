@@ -2,17 +2,10 @@
 
 Justin Skycak:
   name        : "Justin Skycak"
-  uri         : "http://www.justinmath.com"
-  email       : "name@name.com"
-  bio         : "This is the bio for Justin Skycak."
+  bio         : " runs Eurisko together with Jason Roberts. He teaches all the classes, creates the curriculum / problem sets, and maintains the Eurisko website. He also works extensively with Math Academy, developing algorithms and content for the online system. If you'd like to know more about Justin, check out his personal site at <a class='body' target='_blank' href='http://www.justinmath.com/'>justinmath.com</a>. The basic idea is -- if you want to learn how to apply advanced math and computer science, then he's your guy!'
   avatar      : "headshots/justin-skycak.png"
-  twitter     : "name"
-  google_plus : "Name"
 
 Eobard Thawne:
   name        : "Eobard Thawne"
-  email       : "name2@name2.com"
-  bio         : "I ordered what?"
+  bio         : "I am a made-up person."
   avatar      : "bio-photo.jpg"
-  twitter     : "name2"
-  google_plus : "Name"
