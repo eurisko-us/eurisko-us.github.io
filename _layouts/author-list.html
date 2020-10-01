@@ -8,11 +8,15 @@ layout: archive
 
 {% for author in site.data.authors %}
 
+  <div style="width:100%; max-width:800px; margin:auto;"> 
+    
   <h2>{{ author.name }}</h2>
 
-  {{ author }}
-
-  <div style="width:100%; max-width:800px; margin:auto;"> 
+  author: {{ author }}<br><br>
+    
+  name: {{ author.name }}<br><br>
+    
+  bio: {{ author.bio }}<br><br>
 
   <div style="width:25%;float:left;">
   <!--<img src="https://eurisko-us.github.io/files/headshots/{{ page.author | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">-->
