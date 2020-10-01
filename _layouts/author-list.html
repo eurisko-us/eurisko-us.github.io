@@ -6,21 +6,13 @@ layout: archive
 
 {{ content }}
 
-{% for author in site.data.authors %}
+{% for authorTuple in site.data.authors %}
+
+  {% assign author = authorTuple[1] %}
 
   <div style="width:100%; max-width:800px; margin:auto;"> 
     
   <h2>{{ author.name }}</h2>
-
-  author: {{ author }}<br><br>
-    
-  author[0]: {{ author[0] }}<br><br>
-    
-  author[1]: {{ author[1] }}<br><br>
-    
-  name: {{ author.name }}<br><br>
-    
-  bio: {{ author.bio }}<br><br>
 
   <div style="width:25%;float:left;">
   <!--<img src="https://eurisko-us.github.io/files/headshots/{{ page.author | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">-->
