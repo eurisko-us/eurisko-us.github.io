@@ -12,14 +12,6 @@ Jason Roberts:
   avatar      : "bio-photo.jpg"
   role        : "admin"
 
-Colby Roberts:
-  name        : "Colby Roberts"
-  bio         : ""
-  avatar      : "bio-photo.jpg"
-  role        : "student"
-  class       : "Machine Learning"
-  graduationYear : "'22"
-
 David Gieselman:
   name        : "David Gieselman"
   bio         : ""
@@ -43,7 +35,15 @@ Riley Paddock:
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
-  
+
+Colby Roberts:
+  name        : "Colby Roberts"
+  bio         : ""
+  avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Machine Learning"
+  graduationYear : "'22"
+
 Elijah Tarr:
   name        : "Elijah Tarr"
   bio         : ""
