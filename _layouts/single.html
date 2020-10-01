@@ -62,22 +62,7 @@ layout: default
       </section>
       
       <!-- author profile -->
-      <h2>About the Author 1</h2>
-      {% include author-profile.html %}
-      
-<h2>About the Author</h2>
-<div style="width:100%; max-width:800px; margin:auto;"> 
-    
-<div style="width:25%;float:left;">
-<img src="https://eurisko-us.github.io/files/headshots/{{ page.author | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
-</div>
- 
-<div style="width:70%;float:right;">
-  <br>
-<a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> is...  (include excerpt-{{ page.author | slugify | downcase }}.html) Author bio author bio author bio
-</div>
-    
-</div>
+      {% include about-the-author.html %}
       <!-- end author profile -->
 
       <footer class="page__meta">
