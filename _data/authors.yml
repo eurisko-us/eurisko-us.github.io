@@ -4,38 +4,52 @@ Justin Skycak:
   name        : "Justin Skycak"
   bio         : " runs Eurisko together with Jason Roberts. He teaches all the classes, creates the curriculum / problem sets, and maintains the Eurisko website. He also works extensively with Math Academy, developing algorithms and content for the online system. If you'd like to know more about Justin, check out his personal site at <a class='body' target='_blank' href='http://www.justinmath.com/'>justinmath.com</a>. The basic idea is -- if you want to learn how to apply advanced math and computer science, then he's your guy!"
   avatar      : "headshots/justin-skycak.png"
+  role        : "admin"
   
 Jason Roberts:
   name        : "Jason Roberts"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "admin"
 
 Colby Roberts:
   name        : "Colby Roberts"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Computation & Modeling"
 
 David Gieselman:
   name        : "David Gieselman"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Computation & Modeling"
   
 George Meza:
   name        : "George Meza"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Computation & Modeling"
   
 Riley Paddock:
   name        : "Riley Paddock"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Computation & Modeling"
   
 Elijah Tarr:
   name        : "Elijah Tarr"
   bio         : ""
   avatar      : "bio-photo.jpg"
+  role        : "student"
+  class       : "Computation & Modeling"
 
 Eobard Thawne:
   name        : "Eobard Thawne"
   bio         : " is a made-up person."
   avatar      : "bio-photo.jpg"
+  role        : ""
+  class       : ""
