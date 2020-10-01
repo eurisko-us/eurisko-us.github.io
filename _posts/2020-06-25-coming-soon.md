@@ -1,6 +1,6 @@
 ---
 title: "Coming Soon!"
-author: Justin Skycak
+author: "Justin Skycak"
 tags:
   - Machine Learning
   - Autonomous Agents
