@@ -4,20 +4,19 @@ layout: archive
 
 <div style="width:100%; max-width:800px; margin:auto;"> 
     
-<div style="width:25%;float:left; display: inline-block">
+<div style="width:25%;float:left;">
 <img src="https://eurisko-us.github.io/files/headshots/{{ page.title | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
  
-<div style="width:70%;float:right; display: inline-block">
+<div style="width:70%;float:right;">
   <br>
 {{ content }}
 </div>
     
 </div>
 
-<div style="width:100%; max-width:800px; margin:auto;">
+<div style="width:100%; max-width:800px; margin:auto; clear:both;">
 
-<div style="width:100%; max-width:800px; inline-block"> 
 <h2 class="archive__subtitle">Posts</h2>
     
 {% assign postsByYear = site.posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
@@ -34,5 +33,4 @@ layout: archive
   </section>
 {% endfor %}
 
-</div>
 </div>
