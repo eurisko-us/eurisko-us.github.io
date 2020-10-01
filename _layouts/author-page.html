@@ -11,7 +11,6 @@ layout: archive
 <div style="width:100%; max-width:800px; margin:auto;"> 
     
 <div style="width:25%;float:left;">
-<!--<img src="https://eurisko-us.github.io/images/headshots/{{ page.title | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">-->
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
     {% else %}
@@ -20,9 +19,7 @@ layout: archive
 </div>
  
 <div style="width:70%;float:right;">
-  <br>
   {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> {{ author.bio }}</p>{% endif %}
-  <br>
 {{ content }}
 </div>
     
