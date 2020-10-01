@@ -14,8 +14,8 @@ layout: archive
     <!--<h2 class="archive__subtitle">{{ year.name }}</h2>-->
     <div class="entries-{{ page.entries_layout | default: 'list' }}">
       {% for post in year.items %}
-        <!--{% if post.author == 'Justin Skycak' %}-->
-        {% if post.author == page.title %}
+        {% if post.author == 'Justin Skycak' %}
+        <!--{% if post.author == page.title %}-->
            {% include archive-single.html type=page.entries_layout %}
         {% endif %}
       {% endfor %}
