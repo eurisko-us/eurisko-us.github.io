@@ -34,7 +34,7 @@
       {% endif %}
     </h2>
     
-    <p class="page__meta">By {{ post.author }} on <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
+    <p class="page__meta">By <a class="body" target="_blank" href="https://mathacademy.us">{{ post.author }}</a> on <time datetime="{{ post.date | default: "1900-01-01" | date_to_xmlschema }}">{{ post.date | default: "1900-01-01" | date: "%B %d, %Y" }}</time></p>
     <!--{% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
