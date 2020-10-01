@@ -24,7 +24,6 @@ layout: archive
           {% else %}
             <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
           {% endif %}
-      <br><br>
       </div>
 
       <div style="width:70%;float:right;">
@@ -34,6 +33,8 @@ layout: archive
       </div>
 
   {% endif %}
+
+  <br>
 
 {% endfor %}
 
@@ -63,7 +64,6 @@ layout: archive
               {% else %}
                 <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
               {% endif %}
-          <br><br>
           </div>
 
           <div style="width:70%;float:right;">
@@ -75,5 +75,7 @@ layout: archive
       {% endif %}
 
   {% endif %}
+
+  <br>
 
 {% endfor %}
