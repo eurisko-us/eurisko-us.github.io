@@ -7,7 +7,7 @@ author_profile: false
 
 I run Eurisko together with Jason Roberts. I teach all the classes, create the curriculum / problem sets, and maintain the Eurisko website. I also work extensively with Math Academy, developing algorithms and content for the online system.
 
-Before working on Eurisko / Math Academy, I
+<font size="3em">Before working on Eurisko / Math Academy, I
 <ul>
 <li>spent several years building machine learning models as a data scientist at a consulting company called Aunalytics,</li>
 <li>modified a deep neural network to more closely emulate a brain during an internship at Los Alamos National Laboratory, and</li>
@@ -15,3 +15,4 @@ Before working on Eurisko / Math Academy, I
 </ul>
 
 I also have a personal site at http://www.justinmath.com/ if you'd like to know more about me. But the basic idea is -- if you want to learn how to apply advanced math and computer science, then I'm your guy!
+</font>
