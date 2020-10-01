@@ -20,6 +20,7 @@
  
 <div style="width:70%;float:right;">
   <br>
+  page author: {{ page.author }}, site author: {{ site.author }}, assigned author: {{ author.name }}, assigned author avatar: {{ author.avatar }}, assigned author bio: {{ author.bio }}
 <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> is...  (include excerpt-{{ page.author | slugify | downcase }}.html) Author bio author bio author bio-->
   {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> {{ author.bio }}</p>{% endif %}
 </div>
