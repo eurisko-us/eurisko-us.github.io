@@ -19,7 +19,7 @@ layout: archive
 </div>
  
 <div style="width:70%;float:right;">
-  {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko-us.github.io/{{ page.author | slugify | downcase }}">{{ page.author }}</a> {{ author.bio }}</p>{% endif %}
+  {% if author.bio %}{{ page.title }} {{ author.bio }}</p>{% endif %}
 {{ content }}
 </div>
     
