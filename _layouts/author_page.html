@@ -1,0 +1,24 @@
+---
+layout: archive
+---
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+    
+{{ content }}
+
+<h2 class="archive__subtitle">Posts</h2>
+
+  {% for page in site.pages %}
+    {% if pages.author == "Viruses" %}
+      <section id="{{ tag[0] | slugify | downcase }}" class="taxonomy__section">
+        <div class="entries-{{ page.entries_layout | default: 'list' }}">
+          {% for post in tag.last %}
+            {% include archive-single.html type=page.entries_layout %}
+          {% endfor %}
+        </div>
+        <a href="#top" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
+      </section>
+    {% endif %}
+  {% endfor %}
+
+</div>
