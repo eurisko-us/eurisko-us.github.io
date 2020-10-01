@@ -8,13 +8,11 @@ layout: archive
 
 {% for author in site.data.authors %}
 
-  <h2>About the Author</h2>
+  <h2>{{ author.name }}</h2>
 
 {{ author }}
 
   <div style="width:100%; max-width:800px; margin:auto;"> 
-    
-    {{ author }}
 
   <div style="width:25%;float:left;">
   <!--<img src="https://eurisko-us.github.io/files/headshots/{{ page.author | slugify | downcase }}.png" align="left" style="border: none; /* height: 10em; */" alt="icon">-->
