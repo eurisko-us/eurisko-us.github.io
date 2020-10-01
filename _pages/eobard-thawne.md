@@ -1,6 +1,6 @@
 ---
 layout: author-page
-title: Eobard Thawne
+title: "Eobard Thawne"
 permalink: /eobard-thawne/
 author_profile: false
 ---
