@@ -1,6 +1,5 @@
 ---
 title: "Some Random Post"
-layout: archive
 author: Eobard Thawne
 tags:
   - Machine Learning
