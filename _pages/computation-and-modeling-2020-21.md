@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="15">
+<font size="3em"><ol reversed start="16">
+    <li><b>Friday, October 2</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/463542590">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-16-1">Huffman Compression</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-16-2">Linked List</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-16-3">Catch-Up: RREF</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, September 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/463542590">Class Recording</a>
         <br>Assignment Problems:
