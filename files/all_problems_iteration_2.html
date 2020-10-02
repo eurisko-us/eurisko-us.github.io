@@ -13119,27 +13119,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-16-1">Problem 16-1<a class="anchor-link" href="#Problem-16-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/count_compression.py</code></p>
-<p><strong>a.</strong> (2 points) Write a function <code>count_compression(string)</code> that takes a string and compresses it into a list of tuples, where each tuple indicates the count of times a particular symbol was repeated.</p>
-
-<pre><code>&gt;&gt;&gt; count_compression('aaabbcaaaa')
-[('a',3), ('b',2), ('c',1), ('a',4)]
-&gt;&gt;&gt; count_compression('22344444')
-[(2,2), (3,1), (4,5)]</code></pre>
-<p><strong>b.</strong> (2 points) Write a function <code>count_decompression(compressed_string)</code> that decompresses a compressed string to return the original result.</p>
-
-<pre><code>&gt;&gt;&gt; count_decompression([('a',3), ('b',2), ('c',1), ('a',4)])
-'aaabbcaaaa'
-&gt;&gt;&gt; count_decompression([(2,2), (3,1), (4,5)])
-'22344444'</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-16-2">Problem 16-2<a class="anchor-link" href="#Problem-16-2">&#182;</a></h1><p><strong>Locations:</strong></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/matrix.py</code><br>
 <code>machine-learning/tests/test_matrix.py</code></p>
 </blockquote>
@@ -13189,7 +13169,27 @@ Error: cannot invert a singular matrix</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-16-3">Problem 16-3<a class="anchor-link" href="#Problem-16-3">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/linked_list.py</code></p>
+<h1 id="Problem-16-1">Problem 16-1<a class="anchor-link" href="#Problem-16-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/count_compression.py</code></p>
+<p><strong>a.</strong> (2 points) Write a function <code>count_compression(string)</code> that takes a string and compresses it into a list of tuples, where each tuple indicates the count of times a particular symbol was repeated.</p>
+
+<pre><code>&gt;&gt;&gt; count_compression('aaabbcaaaa')
+[('a',3), ('b',2), ('c',1), ('a',4)]
+&gt;&gt;&gt; count_compression('22344444')
+[(2,2), (3,1), (4,5)]</code></pre>
+<p><strong>b.</strong> (2 points) Write a function <code>count_decompression(compressed_string)</code> that decompresses a compressed string to return the original result.</p>
+
+<pre><code>&gt;&gt;&gt; count_decompression([('a',3), ('b',2), ('c',1), ('a',4)])
+'aaabbcaaaa'
+&gt;&gt;&gt; count_decompression([(2,2), (3,1), (4,5)])
+'22344444'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-16-2">Problem 16-2<a class="anchor-link" href="#Problem-16-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/linked_list.py</code></p>
 <p><strong>Grading:</strong> 6 points</p>
 <p>Create a class <code>LinkedList</code> and a class <code>Node</code> which together implement a <a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html">singly linked list</a>.</p>
 <ul>
@@ -13228,6 +13228,27 @@ Error: cannot invert a singular matrix</code></pre>
 9
 &gt;&gt;&gt; x.length()
 3</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-16-3">Problem 16-3<a class="anchor-link" href="#Problem-16-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Make sure your <code>rref()</code> method works.</p>
+<ul>
+<li><p>If it already does, then you are done with this problem and you get a free 5 points.</p>
+</li>
+<li><p>If it doesn't, you need to fix it this weekend. The next assignment will have a problem that builds on it, so if you don't have it working, you're going to start digging yourself into a hole.</p>
+<ul>
+<li><p>To debug, use the same method I demonstrated in class on Wednesday: print out everything that's going on, and match it up with the log. Take a look at the recording if you need a refresher on how to do this.</p>
+</li>
+<li><p>Post on Slack about any issues you have while debugging, that you can't figure out. I'm happy to look at your code if needed, provided that you've already printed everything out and identified where things first start looking different from the log.</p>
+</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
