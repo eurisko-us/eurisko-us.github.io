@@ -13276,6 +13276,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Bayesian analysis: how many people need to get covid vaccine before you're sure that the probability of adverse event is lower than probability of death from covid? (First, the case when there are no adverse events. Then, the case when there are few adverse events.)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Derive the time complexity for merge sort and binary search using a recurrence equation</p>
 
 </div>
@@ -13284,7 +13292,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-49-1">Problem 49-1<a class="anchor-link" href="#Problem-49-1">&#182;</a></h1><p>Rewrite your <code>DumbPlayer</code> so that it uses the following specifications:</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Rewrite your <code>DumbPlayer</code> so that it uses the following specifications:</p>
 <ul>
 <li><p>same methods as your custom player</p>
 </li>
@@ -13300,7 +13308,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-49-2">Problem 49-2<a class="anchor-link" href="#Problem-49-2">&#182;</a></h1><p>Bayes theorem iteratively updating prior. You’re on a spaceship, trying to find where enemy is. you lost your data in an explosion, but you still have the most recent model. Can you continue updating it even without the old data? Yes! Bayes theorem; prior distribution</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Refactor your game state generator so that it uses the following specifications:</p>
 
 </div>
 </div>
@@ -13308,9 +13316,124 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-49-3">Problem 49-3<a class="anchor-link" href="#Problem-49-3">&#182;</a></h1><p>Review:</p>
-<p><strong>a.</strong> Use "merge sort" to sort the list <code>[4,8,7,7,4,2,3,1]</code>. Do the problem by hand and show your work at each step of the way. See problem 23-3 for a refresher on merge sort.</p>
-<p><strong>b.</strong> Use bisection search to estimate $\sqrt{5}$ to $4$ decimal places by hand, showing your work at each step of the way. See problem 5-2 for a refresher on bisection search.</p>
+<h1 id="Problem-49-1">Problem 49-1<a class="anchor-link" href="#Problem-49-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 11 points total</p>
+<p><strong>a.</strong> (1 point) Given that $X \sim p(x),$ where $p(x)$ is a continuous distribution, prove that for any real number $a$ we have $E[aX] = aE[X].$</p>
+<ul>
+<li>You should start by writing $E[aX]$ as an integral, manipulating it, and then simplifying the result into $aE[X].$ The manipulation will just be 1 step.</li>
+</ul>
+<p><strong>b.</strong> (1 point) Given that $X_1, X_2 \sim p(x),$ where $p(x)$ is a continuous distribution, prove that $E[X_1 + X_2] = E[X_1] + E[X_2].$</p>
+<ul>
+<li>You should start by writing $E[X_1 + X_2]$ as an integral, manipulating it, and then simplifying the result into $E[X_1] + E[X_2].$ The manipulation will just be 1 step.</li>
+</ul>
+<p><strong>c.</strong> (3 points) Given that $X \sim p(x)$ where $p(x)$ is a continuous probability distribution, prove the identity $\text{Var}[X] = E[X^2] - E[X]^2.$</p>
+<ul>
+<li>You should start by writing $\text{Var}[X]$ as an integral, expanding it out, into multiple integrals, and then simplifying the result into $E[X^2] - E[X]^2.$ The manipulation will involve several steps.</li>
+</ul>
+<p><strong>d.</strong> (3 points) Use bisection search to estimate $\sqrt{5}$ to $4$ decimal places by hand, showing your work at each step of the way. See problem 5-2 for a refresher on bisection search.</p>
+<p><strong>e.</strong> (3 points) Use "merge sort" to sort the list <code>[4,8,7,7,4,2,3,1]</code>. Do the problem by hand and show your work at each step of the way. See problem 23-3 for a refresher on merge sort.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-49-2">Problem 49-2<a class="anchor-link" href="#Problem-49-2">&#182;</a></h1><p>We've been doing a lot of likelihood estimation. However, we've been hand-waving the fact that the likelihood actually represents the correct probability distribution of a parameter once we normalize it.</p>
+<p>The mathematical reason why the normalized likelihood actually represents the correct probability distribution is <strong>Bayes' theorem</strong>. Bayes' theorem states that for any two events $A$ and $B,$ if $B,$ occurred, then the probability of $A$ occurring is</p>
+$$\begin{align}
+P(A \, | \, B) = \dfrac{P(A \text{ and } B)}{P(B)}.
+\end{align}$$<p>Note that Bayes' theorem comes from the "multiplication law" for conditional probability:</p>
+$$\begin{align}
+P(A \text{ and } B) = P(A \, | \, B)P(B).
+\end{align}$$<hr>
+<p>In most of our contexts, we're interested in the probability of a parameter taking a particular value, given some observed data. So, using Bayes' theorem and the multiplication law, we have</p>
+$$\begin{align*}
+P(\text{parameter}=k \, | \, \text{data}) &amp;= \dfrac{P(\text{parameter}=k \text{ and data})}{P(\text{data})} \\
+&amp;= \dfrac{P(\text{data} \, | \, \text{parameter}=k) P(\text{parameter}=k)}{P(\text{data})}.
+\end{align*}$$<p>Now, $P(\text{data})$ is just a constant, so we have</p>
+$$\begin{align*}
+P(\text{parameter}=k \, | \, \text{data}) &amp;= \dfrac{P(\text{data} \, | \, \text{parameter}=k) P(\text{parameter}=k)}{\text{some constant}} \\
+&amp;\propto P(\text{data} \, | \, \text{parameter}=k) P(\text{parameter}=k)
+\end{align*}$$<p>where the "$\propto$" symbol means "proportional to".</p>
+<ul>
+<li><p>The term $P(\text{parameter}=k)$ is called the <strong>prior distribution</strong> and represents the information that we know about the parameter <em>before</em> we have observed the data. If we haven't observed any data, we often take this prior distribution to be the uniform distribution.</p>
+</li>
+<li><p>The term $P(\text{data} \, | \, \text{parameter}=k)$ is the probability of observing the data, given that the parameter is $k.$ This is equivalent to the <strong>likelihood</strong> of the parameter $k,$ given the data.</p>
+</li>
+<li><p>The term $P(\text{parameter}=k \, | \, \text{data})$ is called the <strong>posterior distribution</strong> and represents the information that we know about the parameter <em>after</em> we have observed the data.</p>
+</li>
+</ul>
+<hr>
+<p>In all the problems that we have done until now, we have taken the prior distribution to be the uniform distribution, meaning that we don't know anything about the parameter until we have gathered some data. Since the uniform distribution is constant, we have</p>
+$$\begin{align*}
+P(\text{parameter}=k \, | \, \text{data}) &amp;\propto P(\text{data} \, | \, \text{parameter}=k) P(\text{parameter}=k) \\
+&amp;\propto P(\text{data} \, | \, \text{parameter}=k) (\text{some constant}) \\
+&amp;\propto P(\text{data} \, | \, \text{parameter}=k).
+\end{align*}$$<p>Remember that $P(\text{data} \, | \, \text{parameter}=k)$ is just the likelihood, $\mathcal{L}(\text{parameter}=k \, | \, \text{data}),$ so we have</p>
+$$\begin{align*}
+P(\text{parameter}=k \, | \, \text{data}) \propto \mathcal{L}(\text{parameter}=k \, | \, \text{data}).
+\end{align*}$$<p>And there we go! The distribution of the parameter is proportional to the likelihood.</p>
+<hr>
+<p><strong>THE ACTUAL QUESTION BEGINS HERE...</strong></p>
+<p><strong>Grading:</strong> 13 points possible</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p>Suppose a wormhole opens and people begin testing it out for travel purposes. You want to use the wormhole too, but you're not sure whether it's safe. Some other people don't seem to care whether it's safe, so you decide to count the number of successful travels by others until you're $99\%$ sure the risk of disappearing forever into the wormhole is no more than your risk of dying from a car crash in a given year ($1$ in $10\,000$).</p>
+<p>You model the situation as $P(\text{success}) = k$ and $P(\text{failure}) = 1-k.$ "Success" means successfully entering and successfully exiting the wormhole, while "failure" means entering but failing to exit the wormhole.</p>
+<p><strong>PART 1 (Bayesian inference with a uniform prior)</strong></p>
+<p>Start by assuming a uniform prior distribution (i.e. you know nothing about $k$ until you've collected some data). So, $k$ initially follows the uniform distribution over the interval $[0,1]\mathbin{:}$</p>
+$$P(k) = \dfrac{1}{1-0} = 1, \quad k \in [0,1]$$<blockquote><p><strong>a.</strong> (1 point) Other people make $1\,000$ successful trips through the wormhole with no failures. What is the likelihood function for $k$ given these $1\,000$ successful trips?</p>
+<ul>
+<li>When you plug in $k=0.99,$ you should get $\mathcal{L}(k=0.99 \, | \, 1\,000 \text{ successes}) = 0.000043$ (rounded to 6 decimal places).</li>
+</ul>
+<p><strong>b.</strong> (1 point) What is the posterior distribution for $k$ given these $1\,000$ successful trips? (This is the same as just normalizing the likelihood function).</p>
+<ul>
+<li>When you plug in $k=0.99,$ you should get $p(k=0.99 \, | \, 1\,000 \text{ successes}) = 0.043214$ (rounded to 6 decimal places).</li>
+</ul>
+<p><strong>c.</strong> (2 points) Assuming that you will use the wormhole $500$ times per year, what is the posterior probability that the risk of disappearing forever into the wormhole is no more than your risk of dying from a car crash in a given year ($1$ in $10\,000$)? In other words, what is $P \left( 1-k^{500} \leq \dfrac{1}{10\,000} \, \Bigg| \, 1\,000 \text{ successes} \right)?$</p>
+<ul>
+<li>You should get $0.000200$ (rounded to 4 decimal places)</li>
+</ul>
+</blockquote>
+<p><strong>PART 2 (Updating by inspecting the posterior)</strong></p>
+<p>You keep on collecting data until your posterior distribution is $P(k \, | \, \text{? successes}) = 5\,001 k^{5\,000}.$ But then you forget how many successes you have counted. Because this is a rather simple scenario, it's easy to find this number by inspecting your posterior distribution.</p>
+<blockquote><p><strong>a.</strong> (1 point) Looking at the given posterior distribution, how many successes have you counted?</p>
+<p><strong>b.</strong> (2 points) Suppose you observe $2\,000$ <u>more</u> successes. What is the posterior distribution now?</p>
+<ul>
+<li>When you plug $k=0.999$ into your posterior distribution, you should get $P(k=0.999 \, | \, 2\,000 \text{ more successes}) = 6.362$ (rounded to 3 decimal places).</li>
+</ul>
+</blockquote>
+<p><strong>PART 3 (Bayesian updating)</strong></p>
+<p>To get some practice with the general procedure of Bayesian inference with a non-uniform prior, let's re-do Part 2, supposing you weren't able to remember the number of successes by inspecting your posterior distribution.</p>
+<p>This time, you'll use $P(k \, | \, \text{? successes}) = 5\,001 k^{5\,000}$ as your <strong>prior</strong> distribution.</p>
+<blockquote><p><strong>a.</strong> (3 points) Suppose you observe $2\,000$ more successes.  Fill in the blanks:
+$$\begin{align*}
+\text{prior distribution: }&amp; P(k) = 5\,001 k^{5\,000} \\
+\text{likelihood: }&amp; P(2\,000 \text{ more successes} \, | \, k) = \_\_\_ \\
+\text{prior } \times \text{likelihood: }&amp; P(2\,000 \text{ more successes} \, | \, k)P(k) = \_\_\_ \\
+\text{posterior distribution: } &amp; P(k \, | \, 2\,000 \text{ more successes}) = \_\_\_
+\end{align*}$$</p>
+<ul>
+<li>When you plug in $k=0.999$ to your likelihood, you should $P(2\,000 \text{ more successes} \, | \, k = 0.999) = 0.1351$ (rounded to 4 decimal places)</li>
+<li>Your posterior distribution should be <em>exactly</em> the same as in 2b.</li>
+</ul>
+</blockquote>
+<p><strong>PART 4 (Inference)</strong></p>
+<p>Let's go back to the moment when you forgot the number of successes, and your posterior distribution was is $P(k \, | \, \text{? successes}) = 5\,001 k^{5\,000}.$</p>
+<blockquote><p><strong>a.</strong> (3 points) Assuming that you will use the wormhole $500$ times per year, how many more people do you need to observe successfully come out of the wormhole to be $99\%$ sure the risk of disappearing forever into the wormhole is no more than your risk of dying from a car crash in a given year ($1$ in $10\,000$)?</p>
+<ul>
+<li>In other words, find the least $N$ such that $P\left(1-k^{500} \leq \dfrac{1}{10\,000} \, \Bigg| \, N \text{ more successes} \right) = 0.99 \, .$</li>
+<li>Your answer should come out to $N = 23 \, 024 \, 699.$</li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-49-3">Problem 49-3<a class="anchor-link" href="#Problem-49-3">&#182;</a></h1><p>If your EulerEstimator is not currently working, then fix it. Make sure to write a post if you run into any issues you're not able to solve.</p>
 
 </div>
 </div>
