@@ -13191,7 +13191,7 @@ Error: cannot invert a singular matrix</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-16-2">Problem 16-2<a class="anchor-link" href="#Problem-16-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/linked_list.py</code></p>
 <p><strong>Grading:</strong> 6 points</p>
-<p>Create a class <code>LinkedList</code> and a class <code>Node</code> which together implement a <a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html">singly linked list</a>.</p>
+<p>Create a class <code>LinkedList</code> and a class <code>Node</code> which together implement a <a href="https://www.cs.cmu.edu/~adamchik/15-121/lectures/Linked%20Lists/linked%20lists.html">singly linked list</a>. A singly linked list is just bunch of <code>Node</code>s connected up in a line.</p>
 <ul>
 <li><p>The class <code>LinkedList</code> should have <strong>exactly one</strong> attribute:</p>
 <ul>
@@ -13206,27 +13206,38 @@ Error: cannot invert a singular matrix</code></pre>
 </li>
 <li><p><code>LinkedList</code> should have <strong>exactly three</strong> methods:</p>
 <ul>
-<li><code>print()</code>: prints the contents of the nodes, starting at the head</li>
+<li><code>print_data()</code>: prints the data of the nodes, starting at the head</li>
 <li><code>length()</code>: returns the number of nodes in the linked list</li>
 <li><code>append()</code>: appends a new node to the tail of the linked list</li>
 </ul>
 </li>
 </ul>
 <p><strong>Don't use any Python lists, anywhere.</strong></p>
-<p>Assert that your LinkedList passes the following tests:</p>
+<p>Assert that your <code>Node</code> class passes the following tests:</p>
 
-<pre><code>&gt;&gt;&gt; x = LinkedList(4)
-&gt;&gt;&gt; x.head.data
+<pre><code>&gt;&gt;&gt; A = Node(4)
+&gt;&gt;&gt; A.data
 4
-&gt;&gt;&gt; x.append(8)
-&gt;&gt;&gt; x.head.next.data
+&gt;&gt;&gt; A.next
+None
+&gt;&gt;&gt; B = Node(8)
+&gt;&gt;&gt; A.next = B
+&gt;&gt;&gt; A.next.data
+8</code></pre>
+<p>Assert that your <code>LinkedList</code> class passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; linked_list = LinkedList(4)
+&gt;&gt;&gt; linked_list.head.data
+4
+&gt;&gt;&gt; linked_list.append(8)
+&gt;&gt;&gt; linked_list.head.next.data
 8
-&gt;&gt;&gt; x.append(9)
-&gt;&gt;&gt; x.print()
+&gt;&gt;&gt; linked_list.append(9)
+&gt;&gt;&gt; linked_list.print_data()
 4
 8
 9
-&gt;&gt;&gt; x.length()
+&gt;&gt;&gt; linked_list.length()
 3</code></pre>
 
 </div>
