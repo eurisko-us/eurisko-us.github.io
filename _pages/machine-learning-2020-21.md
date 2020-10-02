@@ -21,10 +21,10 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-1">Review: Stats Proofs, Bisection Search, MergeSort</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-2">Intro to Bayesian Inference with Non-Uniform Prior</a></li>
-        </ul></font>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-3">Catch Up on EulerEstimator / Predator-Prey</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, September 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/463542586">Class Recording</a>
         <br>Assignment Problems:
