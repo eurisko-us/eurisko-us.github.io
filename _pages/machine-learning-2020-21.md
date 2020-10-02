@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="49">
     <li><b>Friday, October 2</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/463542586">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/464318309">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-1">Review: Stats Proofs, Bisection Search, MergeSort</a></li>
