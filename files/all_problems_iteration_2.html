@@ -13175,12 +13175,12 @@ Error: cannot invert a singular matrix</code></pre>
 <pre><code>&gt;&gt;&gt; count_compression('aaabbcaaaa')
 [('a',3), ('b',2), ('c',1), ('a',4)]
 &gt;&gt;&gt; count_compression('22344444')
-[(2,2), (3,1), (4,5)]</code></pre>
+[('2',2), ('3',1), ('4',5)]</code></pre>
 <p><strong>b.</strong> (2 points) Write a function <code>count_decompression(compressed_string)</code> that decompresses a compressed string to return the original result.</p>
 
 <pre><code>&gt;&gt;&gt; count_decompression([('a',3), ('b',2), ('c',1), ('a',4)])
 'aaabbcaaaa'
-&gt;&gt;&gt; count_decompression([(2,2), (3,1), (4,5)])
+&gt;&gt;&gt; count_decompression([('2',2), ('3',1), ('4',5)])
 '22344444'</code></pre>
 
 </div>
