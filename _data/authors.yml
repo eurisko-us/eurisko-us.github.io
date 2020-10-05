@@ -51,6 +51,78 @@ Elijah Tarr:
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
+  
+Nathan Allen:
+  name        : "Nathan Allen"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Maia Dimas:
+  name        : "Maia Dimas"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Justin Hong:
+  name        : "Justin Hong"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Cayden Lau:
+  name        : "Cayden Lau"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Anton Perez:
+  name        : "Anton Perez"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Nathan Reynoso:
+  name        : "Nathan Reynoso"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Spencer Timmons:
+  name        : "Spencer Timmons"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+William Wallius:
+  name        : "William Wallius"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
+  
+Charlie Weinberger:
+  name        : "Charlie Weinberger"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  class       : "Computation & Modeling"
+  graduationYear : "'23"
 
 Eobard Thawne:
   name        : "Eobard Thawne"
