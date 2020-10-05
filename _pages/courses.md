@@ -26,7 +26,7 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto">  
 
 <br><b>Machine Learning</b>
-<br><font size="3em"><i>Prerequisites: Computation & Modeling</i></font>
+<br><font size="3em"><i>Prerequisites: Computation & Modeling, Multivariable Calculus / Linear Algebra</i></font>
 <p><font size="3em">
     Machine Learning is a comprehensive, college-level course that integrates predictive modeling, clustery & dimensionality reduction, and reinforcement learning. This is an elective course associated with a radically-accelerated math sequence intended for highly-gifted math students. It covers methods of building models to draw insights and make predictions based on data, implementing a massively multiplayer game, and developing self-improving game-playing agents. This is a year-long course for high school students that introduces techniques from predictive modeling (naive Bayes, decision trees, support vector machines, neural networks, random forests); clustering & dimensionality reduction (k-nearest neighbors, k-means, DBSCAN, t-SNE, PCA/ICA, expectation maximization, hierarchical clustering); and reinforcement learning (Markov decision processes, policy iteration, value iteration, temporal difference learning, SARSA, q-learning).
     </font></p>
