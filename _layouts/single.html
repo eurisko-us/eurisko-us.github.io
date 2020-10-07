@@ -61,9 +61,10 @@ layout: default
         {% if page.link %}<div><a href="{{ page.link }}" class="btn">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
       
-      <!-- author profile -->
+      <!-- author profile / acknowledgements -->
+      {% include acknowledgements.html %}      
       {% include about-the-author.html %}
-      <!-- end author profile -->
+      <!-- end author profile / acknowledgements -->
 
       <footer class="page__meta">
         {% if site.data.ui-text[site.locale].meta_label %}
