@@ -4,10 +4,9 @@
   <div style="width:100%; max-width:800px; margin:auto"> 
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
-  {% assign counter = 0 %}
   {% assign numReviewers = page.reviewers.length %}
   {% for reviewer in page.reviewers %}
-    <br>counter: {{ counter }}
+    <br>index: {{ forloop.index }}
     <br>numReviewers: {{ numReviewers }}
     <br>
     {% assign counter = counter + 1 %}
@@ -16,7 +15,7 @@
     {% else %}
       {{ reviewer }}
     {% endif %}
-    {% if counter < numReviewers %}
+    {% if forloop.index < numReviewers %}
         ,&nbsp;
     {% endif %}
   {% endfor %}
