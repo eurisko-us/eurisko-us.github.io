@@ -5,11 +5,28 @@
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
   {% for reviewer in page.reviewers %}
-
-    {% if forloop.index < forloop.length %}
-      {% assign endChar = "," %}
+    
+    {% if forloop.length == 2 %}
+    
+      {% if forloop.index == 1 %}
+        {% assign endChar = " and"
+      {% else %}
+        {% assign endChar = "" %}
+      {% endif %}
+    
     {% else %}
-      {% assign endChar = "" %}
+    
+      {% if forloop.index < forloop.length-1 %}
+        {% assign endChar = "," %}                                    
+      {% else %}
+                                            
+        {% if forloop.index == forloop.length-1 %}
+          {% assign endChar = ", and " %}
+        {% else %}
+          {% assign endChar = "" %}
+                                            
+      {% endif %}
+    
     {% endif %}
                                         
     {% if site.data.authors[reviewer] %}
