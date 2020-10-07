@@ -13119,11 +13119,51 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Locations:</strong></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/approximations_of_randomness.py</code></p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>During class, each person created a distribution of coin flips.</p>
+
+<pre><code>flips = {
+    'George': 'THTH HTHT THTH HHTH THTH TTHT THTH TTTH THTH TTHT THHT HTTH THTH THHT THHT THTH THTH THHT THTH THTH',
+    'David': 'TTHH HHTT HHTT TTHH HTHT THTH THTH THTH HTHT HTHT THTH HTHT THHH THTH HHTT HHTT TTTH HHTH HTHH TTTH',
+    'Elijah': 'THTT HTHT HTHH HHHT TTHH THHH TTTT HHTT TTTH TTHH HTHT HTHT TTTT HTTT TTTH HTTT TTHH THTH THHH HTHH',
+    'Colby': 'HTTH HTHH THTT HHTH TTHT HTTT THHH TTHH HHTT THTH HHTT THTH THHH TTHH THTT HHTH HTTH HTHH TTHT HTTT',
+    'Justin': 'THTT HTHT TTTH THHT HTHH TTTH THTH HHTH TTTT HTTH HHTT THHH HHHH THTH HTTH TTHH HTHT HHHT THHT TTTH'
+}</code></pre>
+<p>a) Treating these coin flips as simulations of 20 samples of 4 flips, compute the KL divergence between each simulation and the true distribution. Print out your results.</p>
+<p>b) Print out the answer to the following question: whose simulation was the best approximation of true random coin flipping?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-17-1">Problem 17-1<a class="anchor-link" href="#Problem-17-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/zero_of_tangent_line.py</code></p>
+<p>Notice that we can approximate a zero of a function by repeatedly computing the zero of the tangent line:</p>
+<p><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/newtonsMethod.gif' border='0'/></p>
+<p><strong>a.</strong> (2 points) Create a function <code>zero_of_tangent_line(c)</code> that computes the zero of the tangent line to the function $f(x)=x^3+x-1$ at the point $x=c.$</p>
+<p>Assert that your code passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; zero_of_tangent_line(0.5)
+0.714286</code></pre>
+<p><strong>b.</strong> (2 points) Create a function <code>estimate_solution(precision)</code> that estimates the solution to $f(x) = x^3+x-1$ by repeatedly calling <code>zero_of_tangent_line</code> until the next guess is within <code>precision</code> of the previous guess.</p>
+<p>Asser that your code passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; estimate_solution(0.01)
+0.6823284</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-17-2">Problem 17-2<a class="anchor-link" href="#Problem-17-2">&#182;</a></h1><p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/matrix.py</code><br>
 <code>machine-learning/tests/test_matrix.py</code></p>
 </blockquote>
-<p><strong>Grading:</strong> 8 points</p>
+<p><strong>Grading:</strong> 4 points</p>
 <p>Extend your <code>Matrix</code> class to include a method <code>inverse()</code> that computes the inverse matrix using <a href="https://en.wikipedia.org/wiki/Gaussian_elimination#Finding_the_inverse_of_a_matrix">Gaussian elimination</a> (i.e. your <code>rref</code> method).</p>
 <p>You should do the following:</p>
 <ol>

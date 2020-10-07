@@ -13421,9 +13421,22 @@ $$<p>You should get the following result:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-51-1">Problem 51-1<a class="anchor-link" href="#Problem-51-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
-<p><strong>a.</strong> (2 points) State and justify a recurrence equation for the time complexity of binary search on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
-<p><strong>b.</strong> (2 points) State and justify a recurrence equation for the time complexity of merge sort on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>State and justify a recurrence equation for the time complexity of merge sort on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-51-1">Problem 51-1<a class="anchor-link" href="#Problem-51-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf; <code>assignment-problems/binary_search.py</code></p>
+<p><strong>a.</strong> (2 points) Write a function <code>binary_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list, and then recursing on the lower or upper half of the list as appropriate.(If there is no midpoint, then round up or round down consistently.)</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; binary_search(7, [2, 3, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16])
+3</code></pre>
+<p><strong>b.</strong> (2 points) Suppose you have a sorted list of 20 elements. How many iterations of binary search are needed to ? Justify your answer.</p>
+<p><strong>c.</strong> (2 points) State and justify a recurrence equation for the time complexity of binary search on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
 
 </div>
 </div>
@@ -13446,7 +13459,91 @@ $$<p>You should get the following result:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-51-3">Problem 51-3<a class="anchor-link" href="#Problem-51-3">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
-<p>Write an outline of the first part of your blog post. (Problem still being written)</p>
+<p>Write a first draft of your blog post. If you have any images in mind, you can just describe the image verbally, as follows. We'll fill in images later.</p>
+
+<pre><code>This is my post. I'm writing some content. I'm going to
+start talking about a graph.
+
+[image: graph of sigmoidal data with a sigmoid function
+running through it]
+
+Now I'm talking about the graph above. It's a very pretty
+graph. It also looks very impressive.</code></pre>
+<p><strong>George: Linear and Logistic Regression, Part 1: Understanding the Models</strong></p>
+<ul>
+<li><p>What is "regression", and why do we care about it?</p>
+</li>
+<li><p>In particular, what are linear and logistic regression? What "shape" of data do they model, what is the mathematical form for each of them? (<em>Don't</em> explain how to actually fit the model. This will be done by George in part 2.)</p>
+</li>
+<li><p>Give some examples of situations in which you'd use linear regression instead of logistic regression. Then, give some examples of situations in which you'd use logistic regression instead of linear regression. Make sure you explain <em>why</em> you'd use one model instead of the other.</p>
+</li>
+<li><p>Explain how in particular, logistic regression can be used to model probability. Give some examples of probabilities that we might model using logistic regression. Why can't we use linear regression to model probability?</p>
+</li>
+<li><p>Explain how a logistic regression model can be adjusted to model variables that range from 0 to some maximum other than 1. Give a couple examples of situations in which we'd want to do this (e.g. ratings on a scale of 0-10).</p>
+</li>
+<li><p>Explain how a logistic model can be adjusted to model variables that range from some general lower bound $a$ to some general upper bound $b.$ Give a couple examples of situations in which we'd want to do this.</p>
+</li>
+</ul>
+<p><strong>Colby: Linear and Logistic Regression, Part 2: Fitting the Models</strong></p>
+<ul>
+<li><p>Briefly recap: what "shape" of data do linear and logistic regression model, and what are their mathematical forms?</p>
+</li>
+<li><p>How do you fit a linear regression model using matrix algebra? What is the pseudoinverse, and why is it needed?</p>
+</li>
+<li><p>How do you fit a logistic regression model using matrix algebra?</p>
+</li>
+<li><p>How is logistic regression related to linear regression? (Logistic regression is really just linear regression on a transformation of variables.)</p>
+</li>
+<li><p>Explain how you made LogisticRegressor really compact by having it inherit from LinearRegressor.</p>
+</li>
+</ul>
+<p><strong>Riley: Linear and Logistic Regression, Part 3: Categorical Variables, Interaction Terms, and Nonlinear Transformations of Variables</strong></p>
+<ul>
+<li><p>What if you want to model a dataset using linear or logistic regression, but it has categorical variables? Give a couple examples of situations in which this might happen.</p>
+</li>
+<li><p>In order to model the dataset, what do you have to do to the categorical variables, and why?</p>
+</li>
+<li><p>What are "interactions" between variables? Give a couple examples of situations when you might need to incorporate interactions into the models.</p>
+</li>
+<li><p>As-is, can linear or logistic regression capture interactions between variables? Why not? Explain some bad things that might happen if you use vanilla linear or logistic regression in a case when it's important to capture interactions between variables.</p>
+</li>
+<li><p>What do you have to do to the dataset in order to for your linear or logistic regression to capture interactions?</p>
+</li>
+<li><p>You can transform the dataset in any way before fitting a linear regression. Consequently, you can actually model many types of nonlinear data by reducing the task down to a linear regression. For example, you can fit a polynomial model using linear regression. Give an example scenario of when you might want to do this. How can you do this?</p>
+</li>
+<li><p>Logistic regression reduces to linear regression. Polynomial regression reduces to linear regression. Is there any type of regression model that you can't just reduce down to a linear regression? How can you tell whether or not a regression model can be reduced to linear regression?</p>
+</li>
+</ul>
+<p><strong>David: Predator-Prey Modeling with Euler Estimation</strong></p>
+<ul>
+<li><p>What is a predator-prey relationship? Give several concrete examples.</p>
+</li>
+<li><p>How can we model a predator-prey relationship using differential equations? How do you set up the system of differential equations, and why do you set the system up that way?</p>
+</li>
+<li><p>What is Euler estimation, and how can you use it to plot the approximate solution to systems of differential equations? Write some code.</p>
+</li>
+<li><p>How do you choose your step size? What bad thing happens if you choose a step size that is too big? What bad thing happens if you choose a really really really small step size?</p>
+</li>
+<li><p>Why do oscillations arise in the plot? What do they actually represent in terms of the predator and prey?</p>
+</li>
+</ul>
+<p><strong>Elijah: Solving Magic Squares using Backtracking</strong></p>
+<ul>
+<li><p>What is a magic square? Talk about it in general, not just the 3x3 case. This link will be helpful: <a href="https://mathworld.wolfram.com/MagicSquare.html">https://mathworld.wolfram.com/MagicSquare.html</a></p>
+</li>
+<li><p>How can you solve a magic square using brute-force search? Write some code.</p>
+</li>
+<li><p>What's the problem with brute-force search? Run some actual simulations to see how long it takes you to find a solution to a 3x3 magic square using brute force. Then try the 4x4, 5x5, etc and make a graph. State the results as something ridiculous -- e.g. (it'll take me years to solve a something-by-something magic square)</p>
+</li>
+<li><p>What is the most obvious inefficiency in brute-force search? (It spends a lot of time exploring invalid combinations.)</p>
+</li>
+<li><p>How can you overcome this inefficiency using "backtracking", i.e. intelligent search? <a href="https://en.wikipedia.org/wiki/Sudoku_solving_algorithms#Backtracking">https://en.wikipedia.org/wiki/Sudoku_solving_algorithms#Backtracking</a></p>
+</li>
+<li><p>Write some code for how to implement backtracking using a bunch of nested for loops (i.e. the ugly solution). Run some actual simulations to see how long it takes you to find a solution to a 3x3 magic square using backtracking. Then try the 4x4, 5x5, etc and make a graph.</p>
+</li>
+<li><p>How can you write the code more compactly using a single while loop?</p>
+</li>
+</ul>
 
 </div>
 </div>
