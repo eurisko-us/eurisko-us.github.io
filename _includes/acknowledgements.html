@@ -2,7 +2,7 @@
 
 {% assign reviewers = [] %}
 {% if page.reviewers %}
-
+  <div style="width:100%; max-width:800px; margin:auto"> 
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
   {% for reviewer in page.reviewers %}
@@ -13,5 +13,6 @@
     {% endif %}
   {% endfor %}
   for reviewing this post.</p>
+  </div>
   
 {% endif %}
