@@ -13567,7 +13567,7 @@ P(\text{two rolls of 1 and three rolls of 2} \, | \, \text{switch}) =
 <li><strong>Hint:</strong> you'll need to use combinations.</li>
 </ul>
 <p><strong>PART 1</strong></p>
-<p>Suppose that, before the magician rolled the die, you were agnostic: you believed there was a $50\%$ chance that the die was fair.</p>
+<p>Suppose that, before the magician rolled the die, you were agnostic: you believed there was a $50\%$ chance that the die was fair (i.e. a $50\%$ chance that the die was switched out for a biased one).</p>
 <p><strong>a.</strong> Given your prior belief, what is the prior distribution $P(\text{switch})?$</p>
 $$
 P(\textrm{switch}) = 
@@ -13582,22 +13582,7 @@ P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2}) =
 0.004, \quad \textrm{switch = False} \\
 \end{cases}$$</p>
 <p><strong>PART 2</strong></p>
-<p>Suppose that, before the magician rolled the die, you were optimistic: you believed there was a $99\%$ chance that the die was fair.</p>
-<p><strong>a.</strong> Given your prior belief, what is the prior distribution $P(\text{switch})?$</p>
-$$
-P(\textrm{switch}) = 
-\begin{cases}
-\_\_\_, \quad \textrm{switch = True} \\
-\_\_\_, \quad \textrm{switch = False} \\
-\end{cases}$$<p><strong>b.</strong> What is the posterior distribution $P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2})?$ Your work should lead to the following result:
-$$
-P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2}) = 
-\begin{cases}
-0.99996, \quad \textrm{switch = True} \\
-0.00004, \quad \textrm{switch = False} \\
-\end{cases}$$</p>
-<p><strong>PART 3</strong></p>
-<p>Suppose that, before the magician rolled the die, you were pessimistic: you believed there was a $1\%$ chance that the die was fair.</p>
+<p>Suppose that, before the magician rolled the die, you were optimistic: you believed there was a $99\%$ chance that the die was fair (i.e. a $1\%$ chance that the die was switched out for a biased one).</p>
 <p><strong>a.</strong> Given your prior belief, what is the prior distribution $P(\text{switch})?$</p>
 $$
 P(\textrm{switch}) = 
@@ -13610,6 +13595,21 @@ P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2}) =
 \begin{cases}
 0.711, \quad \textrm{switch = True} \\
 0.289, \quad \textrm{switch = False} \\
+\end{cases}$$</p>
+<p><strong>PART 3</strong></p>
+<p>Suppose that, before the magician rolled the die, you were pessimistic: you believed there was a $1\%$ chance that the die was fair (i.e. a $99\%$ chance that the die was switched out for a biased one).</p>
+<p><strong>a.</strong> Given your prior belief, what is the prior distribution $P(\text{switch})?$</p>
+$$
+P(\textrm{switch}) = 
+\begin{cases}
+\_\_\_, \quad \textrm{switch = True} \\
+\_\_\_, \quad \textrm{switch = False} \\
+\end{cases}$$<p><strong>b.</strong> What is the posterior distribution $P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2})?$ Your work should lead to the following result:
+$$
+P(\text{switch} \, | \, \text{two rolls of 1 and three rolls of 2}) = 
+\begin{cases}
+0.99996, \quad \textrm{switch = True} \\
+0.00004, \quad \textrm{switch = False} \\
 \end{cases}$$</p>
 
 </div>
@@ -13657,45 +13657,57 @@ $$<p><strong>b.</strong> Plot the system and include the plot in your Overleaf d
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-50-3">Problem 50-3<a class="anchor-link" href="#Problem-50-3">&#182;</a></h1><p><strong>Location:</strong> <code>space-empires/src/game.py generate_state()</code></p>
 <p><strong>Grading:</strong> 7 points</p>
-<p>Refactor your game state generator to use the structure shown below.</p>
+<p>Refactor your game state generator to use the structure shown below. Print out your game state at each moment in your <code>DumbPlayer</code> tests. (In the next assignment, we will refactor the tests to actually <em>use</em> the game state, but for now, just print it out.)</p>
 
 <pre><code>game_state = {
     'turn': 4,
     'phase': 'Combat', # Can be 'Movement', 'Economic', or 'Combat'
     'round': None, # if the phase is movement, then round is 1, 2, or 3
-    'player': 0, # index of player whose turn it is (or whose ship is attacking during battle),
+    'player_whose_turn': 0, # index of player whose turn it is (or whose ship is attacking during battle),
     'winner': None,
-    'combat': {
-        'location': (1,2),
+    'combats': [
+        {'location': (1,2),
         'order': [{'player': 1, 'unit': 0},
                  {'player': 0, 'unit': 1},
-                 {'player': 0, 'unit': 1}],
+                 {'player': 1, 'unit': 1}],
         'attacker': 2 # index of ship that is currently the attacker. In this 
                       #  case, it's that last ship in the combat order.
-    },
+        },
+        {'location': (5,10),
+        'order': [{'player': 0, 'unit': 0},
+                 {'player': 1, 'unit': 2},
+                 {'player': 1, 'unit': 4}],
+        'attacker': 0 # index of ship that is currently the attacker. In this 
+                      #  case, it's that last ship in the combat order.
+        },
+        ],
     'players': [
         {'cp': 9
         'units': [
-            {'location': (5,4),
-            'type': Scout
+            {'location': (5,10),
+            'type': Scout,
+            'hits': 0,
             'technology': {
                 'attack': 1,
                 'defense': 0,
                 'movement': 3
             }},
             {'location': (1,2),
-            'type': Destroyer
+            'type': Destroyer,
+            'hits': 0,
             'technology': {
                 'attack': 0,
                 'defense': 0,
                 'movement': 2
             }},
             {'location': (6,0),
-            'type': HomeBase,
+            'type': Homeworld,
+            'hits': 0,
             'turn_created': 0
             },
             {'location': (5,3),
             'type': Colony,
+            'hits': 0,
             'turn created': 2
             }],
         'technology': {'attack': 1, 'defense': 0, 'movement': 3, 'ship size': 0}
@@ -13703,21 +13715,32 @@ $$<p><strong>b.</strong> Plot the system and include the plot in your Overleaf d
     {'cp': 15
         'units': [
         {'location': (1,2),
-        'type': Battlecruiser
+        'type': Battlecruiser,
+        'hits': 1,
         'technology': {
             'attack': 0,
             'defense': 0,
             'movement': 0
         }},
         {'location': (1,2),
-        'type': Scout
+        'type': Scout,
+        'hits': 0,
+        'technology': {
+            'attack': 1,
+            'defense': 0,
+            'movement': 0
+        }},
+        {'location': (5,10),
+        'type': Scout,
+        'hits': 0,
         'technology': {
             'attack': 1,
             'defense': 0,
             'movement': 0
         }},
         {'location': (6,12),
-        'type': HomeBase,
+        'type': Homeworld,
+        'hits': 0,
         'turn_created': 0
         },
         {'location': (5,10),
