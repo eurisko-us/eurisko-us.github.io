@@ -5,9 +5,6 @@
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
   {% for reviewer in page.reviewers %}
-    <br>index: {{ forloop.index }}
-    <br>length: {{ forloop.length }}
-    <br>
     {% if site.data.authors[reviewer] %}
       <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>,
     {% else %}
