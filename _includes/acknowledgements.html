@@ -5,10 +5,15 @@
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
   {% for reviewer in page.reviewers %}
-    {% if site.data.authors[reviewer] %}
-      <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>,
+    {% if forloop.index < forloop.length %}
+      {% assign endChar = ',' %}
     {% else %}
-      {{ reviewer }},
+      {% assign endChar = '' %}
+    {% endif %}
+    {% if site.data.authors[reviewer] %}
+      <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>{{ endchar }}
+    {% else %}
+      {{ reviewer }}{{ endchar }}
     {% endif %}
   {% endfor %}
   for reviewing this post.</p>
