@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="16">
+<font size="3em"><ol reversed start="17">
+    <li><b>Wednesday, October 7</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/464318320">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-17-1">Newton-Rhapson Method</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-17-2">Matrix Inverse via RREF on Augmented Matrix</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, October 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/464318320">Class Recording</a>
         <br>Assignment Problems:
