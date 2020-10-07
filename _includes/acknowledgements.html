@@ -4,17 +4,16 @@
   <div style="width:100%; max-width:800px; margin:auto"> 
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
-  {% assign numReviewers = page.reviewers.length %}
   {% for reviewer in page.reviewers %}
     <br>index: {{ forloop.index }}
-    <br>numReviewers: {{ numReviewers }}
+    <br>length: {{ forloop.length }}
     <br>
     {% if site.data.authors[reviewer] %}
       <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>
     {% else %}
       {{ reviewer }}
     {% endif %}
-    {% if forloop.index < numReviewers %}
+    {% if forloop.index < forloop.length %}
         ,&nbsp;
     {% endif %}
   {% endfor %}
