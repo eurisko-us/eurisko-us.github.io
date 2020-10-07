@@ -1,16 +1,20 @@
 {% include base_path %}
 
-<p>Acknowledgements: {{ page.reviewers }}</p>
-
 {% if page.reviewers %}
   <div style="width:100%; max-width:800px; margin:auto"> 
   <p class="author__bio">
   <b>Acknowledgements:</b> Thanks to
+  {% assign counter = 0 %}
+  {% assign numReviewers = page.reviewers.length %}
   {% for reviewer in page.reviewers %}
+    {% counter = counter + 1 %}
     {% if site.data.authors[reviewer] %}
-      <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>,
+      <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>
     {% else %}
-      {{ reviewer }},
+      {{ reviewer }}
+    {% endif %}
+    {% if counter < numReviewers %}
+        ,&nbsp;
     {% endif %}
   {% endfor %}
   for reviewing this post.</p>
