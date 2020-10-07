@@ -7,7 +7,7 @@
   {% assign counter = 0 %}
   {% assign numReviewers = page.reviewers.length %}
   {% for reviewer in page.reviewers %}
-    {% counter++ %}
+    {% assign counter = counter + 1 %}
     {% if site.data.authors[reviewer] %}
       <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>
     {% else %}
