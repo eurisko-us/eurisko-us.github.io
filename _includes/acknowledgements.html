@@ -9,12 +9,14 @@
     <br>length: {{ forloop.length }}
     <br>
     {% if site.data.authors[reviewer] %}
-      <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>
+      {% assign reviewerText = '<a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>' %}
     {% else %}
-      {{ reviewer }}
+      {% assign reviewerText = {{ reviewer }} %}
     {% endif %}
     {% if forloop.index < forloop.length %}
-        ,&nbsp;
+        {{ reviewerText }},&nbsp;
+    {% else %}
+        {{ reviewerText }}
     {% endif %}
   {% endfor %}
   for reviewing this post.</p>
