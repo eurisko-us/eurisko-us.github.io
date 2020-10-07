@@ -9,7 +9,6 @@
     <br>index: {{ forloop.index }}
     <br>numReviewers: {{ numReviewers }}
     <br>
-    {% assign counter = counter + 1 %}
     {% if site.data.authors[reviewer] %}
       <a class="body" target="_blank" href="https://eurisko-us.github.io/{{ reviewer | slugify | downcase }}">{{ reviewer }}</a>
     {% else %}
