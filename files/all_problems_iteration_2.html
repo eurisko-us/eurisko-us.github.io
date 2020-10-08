@@ -13145,13 +13145,15 @@ div#notebook {
 <p><strong>a.</strong> (2 points) Create a function <code>zero_of_tangent_line(c)</code> that computes the zero of the tangent line to the function $f(x)=x^3+x-1$ at the point $x=c.$</p>
 <p>Assert that your code passes the following test:</p>
 
-<pre><code>&gt;&gt;&gt; zero_of_tangent_line(0.5)
+<pre><code>&gt;&gt;&gt; answer = zero_of_tangent_line(0.5)
+&gt;&gt;&gt; round(answer,6)
 0.714286</code></pre>
-<p><strong>b.</strong> (2 points) Create a function <code>estimate_solution(precision)</code> that estimates the solution to $f(x) = x^3+x-1$ by repeatedly calling <code>zero_of_tangent_line</code> until the next guess is within <code>precision</code> of the previous guess.</p>
+<p><strong>b.</strong> (2 points) Create a function <code>estimate_solution(initial_guess, precision)</code> that estimates the solution to $f(x) = x^3+x-1$ by starting with <code>initial_guess</code> and repeatedly calling <code>zero_of_tangent_line</code> until the next guess is within <code>precision</code> of the previous guess.</p>
 <p>Asser that your code passes the following test:</p>
 
-<pre><code>&gt;&gt;&gt; estimate_solution(0.01)
-0.6823284</code></pre>
+<pre><code>&gt;&gt;&gt; answer = estimate_solution(0.5, 0.01)
+&gt;&gt;&gt; round(answer, 6)
+0.682328</code></pre>
 
 </div>
 </div>
