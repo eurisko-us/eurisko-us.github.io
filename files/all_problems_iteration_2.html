@@ -13119,19 +13119,67 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/approximations_of_randomness.py</code></p>
+<h1 id="Problem-18-1">Problem 18-1<a class="anchor-link" href="#Problem-18-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/approximations_of_randomness.py</code></p>
 <p><strong>Grading:</strong> 5 points</p>
 <p>During class, each person created a distribution of coin flips.</p>
 
 <pre><code>flips = {
-    'George': 'THTH HTHT THTH HHTH THTH TTHT THTH TTTH THTH TTHT THHT HTTH THTH THHT THHT THTH THTH THHT THTH THTH',
-    'David': 'TTHH HHTT HHTT TTHH HTHT THTH THTH THTH HTHT HTHT THTH HTHT THHH THTH HHTT HHTT TTTH HHTH HTHH TTTH',
-    'Elijah': 'THTT HTHT HTHH HHHT TTHH THHH TTTT HHTT TTTH TTHH HTHT HTHT TTTT HTTT TTTH HTTT TTHH THTH THHH HTHH',
-    'Colby': 'HTTH HTHH THTT HHTH TTHT HTTT THHH TTHH HHTT THTH HHTT THTH THHH TTHH THTT HHTH HTTH HTHH TTHT HTTT',
-    'Justin': 'THTT HTHT TTTH THHT HTHH TTTH THTH HHTH TTTT HTTH HHTT THHH HHHH THTH HTTH TTHH HTHT HHHT THHT TTTH'
+    'Justin S': 'HTTH HHTT TTHH TTTH HHTH TTHT HHHH THHT THTT HTHH TTTT HTHT TTHH THTH HTTH HHTH HHHT TTTH HTTH HTHT',
+    'Nathan R': 'HTTH HHTH HTTT HTHH HTTH HHHH TTHH TTHT THTT HTHT HHTH TTTT THHT HTTH HTHH THHH HTTH THTT HHHT HTHH',
+    'Justin H': 'HHHT HHTH HHTT THHT HTTT HTTT HHHT HTTT TTTT HTHT THHH TTHT TTHH HTHT TTTT HHHH THHH THTH HHHH THHT',
+    'Nathan A': 'HTTH HHHH THHH TTTH HTTT THTT HTHT THHT HTTH TTTT HHHH TTHH HHTH TTTH HHHH THTT HTHT TTTT HHTT HHTT',
+    'Cayden': 'HTHT HHTT HTTH THTH THHT TTHH HHHH TTTH HHHT HTTT TTHT HHTH HTHH THTT HHHH THTT HTTT HTHH TTTT HTTH',
+    'Maia': 'HTHH THTH HTTH TTTT TTHT HHHH HHTT THHH TTHH HHTH THHT HHHH THTT HHTH HTHT TTHH TTHH HHHH TTTT HHHT',
+    'Spencer': 'HHHT HTTH HTTT HTHH THTT TTHT TTTT HTTH HHTH TTHT TTHH HTHT THHT TTHT THTT THTH HTTH THHT TTTH HHHH',
+    'Charlie': 'HHHH HHHT HHTT HTTT TTTT TTTH TTHH THHH THTH HTHT HHTH HTHH TTHT THTT THTH TTHT HTHT THHT HTTH THTH',
+    'Anton': 'HHTH THTH TTTT HTTH THTT TTTH THHH TTHH THHT HHHH TTHT HTTT THTH HHHT HHTH HHHH TTTH HTHT TTTT HHTT',
+    'William': 'THTT HHHT HTTH THHT THTH HHHT TTTH HHTH THTH HTHT HHHT TTHT HHHT THTT HHTT TTHH HHTH TTTT THTH TTHT'
 }</code></pre>
-<p>a) Treating these coin flips as simulations of 20 samples of 4 flips, compute the KL divergence between each simulation and the true distribution. Print out your results.</p>
-<p>b) Print out the answer to the following question: whose simulation was the best approximation of true random coin flipping?</p>
+<p><strong>a.</strong> Treating these coin flips as simulations of 20 samples of 4 flips, compute the KL divergence between each simulation and the true distribution. Print out your results sorted from "best approximation of randomness" to "worst approximation of randomness".</p>
+<p><strong>b.</strong> Whose coin flips were the best approximation of truly random coin flips?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-18-2">Problem 18-2<a class="anchor-link" href="#Problem-18-2">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Extend your class <code>Node</code> class to have an additional attribute <code>index</code> that is set by the <code>LinkedList</code>. The head node in the <code>LinkedList</code> will have index <code>0</code>, the next node will have index <code>1</code>, and so on.</p>
+<p>Extend your class <code>LinkedList</code> to have the following methods:</p>
+<ul>
+<li><p><code>length()</code> - return the number of nodes in the linked list</p>
+</li>
+<li><p><code>push(new_data)</code> - insert a new node at the head of the linked list, containing the <code>new_data</code></p>
+</li>
+<li><p><code>get_node(index)</code> - get the node at <code>index</code></p>
+</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; linked_list = LinkedList('b')
+&gt;&gt;&gt; linked_list.append('e')
+&gt;&gt;&gt; linked_list.append('f')
+&gt;&gt;&gt; linked_list.push('a')
+&gt;&gt;&gt; linked_list.length()
+4
+
+&gt;&gt;&gt; linked_list.head.index
+0
+&gt;&gt;&gt; linked_list.head.next.index
+1
+&gt;&gt;&gt; linked_list.head.next.next.index
+2
+&gt;&gt;&gt; linked_list.head.next.next.next.index
+3
+
+&gt;&gt;&gt; linked_list.get_node(0).data
+'a'
+&gt;&gt;&gt; linked_list.get_node(1).data
+'b'
+&gt;&gt;&gt; linked_list.get_node(2).data
+'e'
+&gt;&gt;&gt; linked_list.get_node(3).data
+'f'</code></pre>
 
 </div>
 </div>
