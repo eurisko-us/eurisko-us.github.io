@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="17">
+<font size="3em"><ol reversed start="18">
+    <li><b>Friday, October 9</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/466647458">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-18-1">Ranking Approximations of Randomness</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-18-2">Indexing a Linked List</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, October 7</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/465871756">Class Recording</a>
         <br>Assignment Problems:
