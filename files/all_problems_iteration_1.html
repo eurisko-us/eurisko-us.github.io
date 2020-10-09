@@ -13430,13 +13430,13 @@ $$<p>You should get the following result:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-51-1">Problem 51-1<a class="anchor-link" href="#Problem-51-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf; <code>assignment-problems/binary_search.py</code></p>
-<p><strong>a.</strong> (2 points) Write a function <code>binary_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list, and then recursing on the lower or upper half of the list as appropriate.(If there is no midpoint, then round up or round down consistently.)</p>
+<p><strong>a.</strong> (4 points) Write a function <code>binary_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list, and then recursing on the lower or upper half of the list as appropriate.(If there is no midpoint, then round up or round down consistently.)</p>
 <p>Assert that your function passes the following test:</p>
 
 <pre><code>&gt;&gt;&gt; binary_search(7, [2, 3, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16])
 3</code></pre>
 <p><strong>b.</strong> (2 points) Suppose you have a sorted list of 20 elements. How many iterations of binary search are needed to ? Justify your answer.</p>
-<p><strong>c.</strong> (2 points) State and justify a recurrence equation for the time complexity of binary search on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
+<p><strong>c.</strong> (4 points) State and justify a recurrence equation for the time complexity of binary search on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
 
 </div>
 </div>
@@ -13445,8 +13445,26 @@ $$<p>You should get the following result:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-51-2">Problem 51-2<a class="anchor-link" href="#Problem-51-2">&#182;</a></h1><p><strong>Location:</strong> <code>space-empires/tests/test_game_state_dumb_player.py</code></p>
-<p><strong>Grading:</strong> 5 points</p>
-<p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>a.</strong> (4 points) In <code>CombatEngine</code>, write a method <code>generate_combat_array()</code> that returns an array of combat states:</p>
+
+<pre><code>[
+    {'location': (1,2),
+    'order': [{'player': 1, 'unit': 0},
+                {'player': 0, 'unit': 1},
+                {'player': 1, 'unit': 1}],
+    'attacker': 2 # index of ship that is currently the attacker. In this 
+                  #  case, it's that last ship in the combat order.
+    },
+    {'location': (5,10),
+    'order': [{'player': 0, 'unit': 0},
+                {'player': 1, 'unit': 2},
+                {'player': 1, 'unit': 4}],
+    'attacker': 0 # index of ship that is currently the attacker. In this 
+                  #  case, it's that last ship in the combat order.
+    },
+],</code></pre>
+<p><strong>b.</strong> (6 points) Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
 
 <pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
 &gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
@@ -13459,6 +13477,7 @@ $$<p>You should get the following result:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-51-3">Problem 51-3<a class="anchor-link" href="#Problem-51-3">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 20 points for a good effort that is factually correct with proper grammar and usage of transitions / paragraphs</p>
 <p>Write a first draft of your blog post. If you have any images in mind, you can just describe the image verbally, as follows. We'll fill in images later.</p>
 
 <pre><code>This is my post. I'm writing some content. I'm going to
@@ -13665,22 +13684,6 @@ $$<p><strong>b.</strong> Plot the system and include the plot in your Overleaf d
     'round': None, # if the phase is movement, then round is 1, 2, or 3
     'player_whose_turn': 0, # index of player whose turn it is (or whose ship is attacking during battle),
     'winner': None,
-    'combats': [
-        {'location': (1,2),
-        'order': [{'player': 1, 'unit': 0},
-                 {'player': 0, 'unit': 1},
-                 {'player': 1, 'unit': 1}],
-        'attacker': 2 # index of ship that is currently the attacker. In this 
-                      #  case, it's that last ship in the combat order.
-        },
-        {'location': (5,10),
-        'order': [{'player': 0, 'unit': 0},
-                 {'player': 1, 'unit': 2},
-                 {'player': 1, 'unit': 4}],
-        'attacker': 0 # index of ship that is currently the attacker. In this 
-                      #  case, it's that last ship in the combat order.
-        },
-        ],
     'players': [
         {'cp': 9
         'units': [
