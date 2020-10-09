@@ -16,12 +16,12 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="51">
     <li><b>Friday, October 9</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/465871746">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/466647455">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-51-1">Binary Search & Big-O Recurrence</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-51-2">CombatEngine State</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-51-3">Blog Post</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-51-3">Blog Post (First Draft)</a></li>
         </ul></font>
     </li>
     <br>
