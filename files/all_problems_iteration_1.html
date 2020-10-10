@@ -13184,14 +13184,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>naive bayes</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Implement ColbyManualStrategyPlayer and make sure we all pass the tests</p>
 
 </div>
@@ -13249,6 +13241,14 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Make sure strategy player defeats combat player</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>PageRank</p>
 
 </div>
 </div>
@@ -13490,12 +13490,12 @@ $$<p>You should get the following result:</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-51-1">Problem 51-1<a class="anchor-link" href="#Problem-51-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf for explanations; <code>assignment-problems/binary_search.py</code> for code</p>
-<p><strong>a.</strong> (2 points) Write a function <code>binary_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list, and then recursing on the lower or upper half of the list as appropriate.(If there is no midpoint, then round up or round down consistently.)</p>
+<p><strong>a.</strong> (2 points) Write a function <code>binary_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list, and then recursing on the lower or upper half of the list as appropriate. (If there is no midpoint, then round up or round down consistently.)</p>
 <p>Assert that your function passes the following test:</p>
 
 <pre><code>&gt;&gt;&gt; binary_search(7, [2, 3, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16])
 3</code></pre>
-<p><strong>b.</strong> (1 points) Suppose you have a sorted list of 20 elements. How many iterations of binary search are needed to find the minimum element? Justify your answer.</p>
+<p><strong>b.</strong> (1 points) Suppose you have a sorted list of 16 elements. What is the greatest number of iterations of binary search that would be needed to find the index of any particular element in the list? Justify your answer.</p>
 <p><strong>c.</strong> (2 points) State and justify a recurrence equation for the time complexity of binary search on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
 
 </div>
@@ -13509,16 +13509,16 @@ $$<p>You should get the following result:</p>
 
 <pre><code>[
     {'location': (1,2),
-    'order': [{'player': 1, 'unit': 0},
-                {'player': 0, 'unit': 1},
-                {'player': 1, 'unit': 1}],
+    'order': [{'player': 1, 'unit': 0,},
+              {'player': 0, 'unit': 1},
+              {'player': 1, 'unit': 1}],
     'attacker': 2 # index of ship that is currently the attacker. In this 
                   #  case, it's that last ship in the combat order.
     },
     {'location': (5,10),
     'order': [{'player': 0, 'unit': 0},
-                {'player': 1, 'unit': 2},
-                {'player': 1, 'unit': 4}],
+              {'player': 1, 'unit': 2},
+              {'player': 1, 'unit': 4}],
     'attacker': 0 # index of ship that is currently the attacker. In this 
                   #  case, it's that last ship in the combat order.
     },
