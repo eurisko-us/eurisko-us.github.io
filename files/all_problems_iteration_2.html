@@ -13119,6 +13119,81 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-19-1">Problem 19-1<a class="anchor-link" href="#Problem-19-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/zero_of_tangent_line.py</code></p>
+<p><strong>a.</strong> (1 point) Write a function <code>estimate_derivative(f, c, delta)</code> that estimates the derivative of the function <code>f(x)</code> at the point <code>x=c</code> using a symmetric difference quotient:</p>
+$$
+\text{estimate_derivative}(f,c,\delta) = \dfrac{f(c + 0.5 \, \delta) - f(c - 0.5 \, \delta)}{\delta}
+$$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivative</code>, generalize your functions <code>zero_of_tangent_line</code> and <code>estimate_solution</code> to work for any input function <code>f(x)</code>. They should now have the following inputs:</p>
+<ul>
+<li><p><code>zero_of_tangent_line(f, c)</code> - compute the zero of the tangent line to the function <code>f(x)</code> at the point <code>x=c</code></p>
+</li>
+<li><p><code>estimate_solution(f, initial_guess, precision)</code> - estimate the zero of <code>f(x)</code> by starting with <code>initial_guess</code> and repeatedly calling <code>zero_of_tangent_line</code> until the next guess is within <code>precision</code> of the previous guess.</p>
+</li>
+</ul>
+<p><strong>Note:</strong> You should no longer hard-code the derivative. Instead, you'll use <code>estimate_derivative</code>, which should work on any function that is passed in as input.</p>
+<p>Assert that your code passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; def f(x):
+        return x**3 + x - 1
+&gt;&gt;&gt; answer = zero_of_tangent_line(f, 0.5)
+&gt;&gt;&gt; round(answer,6)
+0.714286
+&gt;&gt;&gt; answer = estimate_solution(f, 0.5, 0.01)
+&gt;&gt;&gt; round(answer, 6)
+0.682328</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-19-2">Problem 19-2<a class="anchor-link" href="#Problem-19-2">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 7 points</p>
+<p>To say that a random variable $N$ follows a probability distribution $p(n),$ is to say that $P(N=n) = p(n).$ Symbolically, we write $X \sim p.$</p>
+<p>The <strong>expected value</strong> (also known as the <strong>mean</strong>) of a random variable $N \sim p$ is defined as the weighted sum of possible values, where the weights are given by the probability.</p>
+<ul>
+<li>In other words, $E[N] = \sum n \cdot p(n).$</li>
+</ul>
+<p>The <strong>variance</strong> of a random variable is the expected squared deviation from the mean.</p>
+<ul>
+<li>In other words, $\text{Var}[N] = E[(N-E[N])^2]$</li>
+</ul>
+<hr>
+<p><strong>Warning: No points will be given if you don't show your work.</strong></p>
+<hr>
+<p><strong>PART 1</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<p><strong>a.</strong> Write the probability distribution $p_{4}(n)$ for getting $n$ heads on $4$ coin flips, where the coin is a fair coin (i.e. it lands on heads with probability $0.5$).</p>
+<p><strong>b.</strong> Let $N$ be the number of heads in $4$ coin flips. Then $N \sim p_{4}.$ Intuitively, what is the expected value of $N?$ Explain the reasoning behind your intuition.</p>
+<p><strong>c.</strong> Compute the expected value of $N,$ <em>using the definition</em> $E[N] = \sum n \cdot p(n).$</p>
+<ul>
+<li>The answer you get should match your answer from (b).</li>
+</ul>
+<p><strong>d.</strong> Compute the variance of $N,$ <em>using the definition</em> $\text{Var}[N] = E[(N-E[N])^2].$</p>
+<ul>
+<li>Your answer should come out to $1.$</li>
+</ul>
+<hr>
+<p><strong>Part 2</strong> (1 point per correct answer <em>with supporting work</em>)</p>
+<p><strong>a.</strong> Write the probability distribution $p_{4,k}(n)$ for getting $n$ heads on $4$ coin flips, where the coin is a <strong>biased</strong> coin that lands on heads with probability $k.$</p>
+<ul>
+<li>If you substitute $k=0.5,$ you should get the same result that you did in part 1a.</li>
+</ul>
+<p><strong>b.</strong> Let $N$ be the number of heads in $4$ coin flips of a biased coin. Then $Y \sim p_{4,k}.$ Intuitively, what is the expected value of $N?$ Your answer should be in terms of $k.$ Explain the reasoning behind your intuition.</p>
+<ul>
+<li>If you substitute $k=0.5,$ you should get the same result that you did in part 1b.</li>
+</ul>
+<p><strong>c.</strong> Compute the expected value of $N,$ <em>using the definition</em> $E[N] = \sum n \cdot p(n).$</p>
+<ul>
+<li>The answer you get should match your answer from (b).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-18-1">Problem 18-1<a class="anchor-link" href="#Problem-18-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/approximations_of_randomness.py</code></p>
 <p><strong>Grading:</strong> 5 points</p>
 <p>During class, each person created a distribution of coin flips.</p>

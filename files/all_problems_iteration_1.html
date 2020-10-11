@@ -13315,21 +13315,179 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Expectation, variance, covariance for random variables that are composed of multiple distributions</p>
-<p><strong>a.</strong> Using the identity $\text{Var}[X] = \text{E}[X^2] - \text{E}[X]^2,$ compute the $\text{Var}[X]$ if $X$ is sampled from the continuous uniform distribution $U[a,b].$ (You should get the same result that you've gotten previously, using the definition of variance.)</p>
-<p><strong>b.</strong> Using the identity $\text{Var}[X] = \text{E}[X^2] - \text{E}[X]^2,$ compute the $\text{Var}[X]$ if $X$ is sampled from the exponential distribution $p(x) = \lambda e^{-\lambda x}, \, x \geq 0.$ (You should get the same result that you've gotten previously, using the definition of variance.)</p>
-<p><strong>c.</strong> Using the identity $\text{Var}[N] = \text{E}[N^2] - \text{E}[N]^2,$ compute the $\text{Var}[N]$ if $N$ is sampled from the Poisson distribution $p(n) = \dfrac{\lambda^n e^{-\lambda}}{n!}, \, n \in \left\{ 0, 1, 2, \ldots \right\}.$ (You should get the same result that you've gotten previously, using the definition of variance.)</p>
-<p><strong>d.</strong> The <em>covariance</em> of two random variables $X_1,X_2$ is defined as</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Rename <code>dumb_player.py</code> to <code>deprecated_dumb_player.py</code>. Then do the following.</p>
+<p><strong>a.</strong> (5 points) Write a class <code>DumbStrategy</code> that contains the strategies for following methods:</p>
+<ul>
+<li><p><code>will_colonize_planet(colony_ship, game_state)</code>: returns either <code>True</code> or <code>False</code>; will be called whenever a player's colony ship lands on an uncolonized planet</p>
+</li>
+<li><p><code>decide_ship_movement(ship, game_state)</code>: returns the coordinates to which the player wishes to move their ship.</p>
+</li>
+<li><p><code>decide_purchases(game_state)</code>: returns a list of ship and/or technology types that you want to purchase; will be called during each economic round.</p>
+</li>
+<li><p><code>decide_removals(game_state)</code>: returns a list of ships that you want to remove; will be called during any economic round when your total maintenance cost exceeds your CP.</p>
+</li>
+<li><p><code>decide_which_ship_to_attack(attacking_ship, game_state)</code>: looks at the ships in the combat order and decides which to attack; will be called whenever it's your turn to attack</p>
+</li>
+</ul>
+<p><strong>b.</strong> (5 points) Make sure that all your tests in <code>tests/test_game_state_dumb_player.py</code> still pass.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>WeightedGraph class + Dijkstra's algorithm method</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Weighted graph - Dijkstra's algorithm by hand</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+
+<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
+&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
+<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create <code>EconomicEngine</code> with <code>generate_economic_state()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Multinomial logistic regression</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>RandomForestClassifier</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (2 layers, gini impurity). Then, <code>DecisiontreeClassifier</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Naive bayes -- simple case, by hand</p>
+$$\begin{align*}
+\text{class} &amp;= \underset{\text{class}}{\arg\max} \, P(\text{class} \, | \, \text{data}) \\
+&amp;= \underset{\text{class}}{\arg\max} \, \dfrac{P(\text{data} \, | \, \text{class}) P(\text{class})}{P(\text{data})} \\
+&amp;= \underset{\text{class}}{\arg\max} \,  P(\text{data} \, | \, \text{class}) P(\text{class})\\
+\end{align*}$$<p>then, simple script</p>
+<p>then, <code>NaiveBayesClassifier</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>kNearestNeighbors</code></p>
+<ol>
+<li>classification by hand</li>
+<li><code>kNearestNeighborsClassifier</code></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create <code>MovementEngine</code> with <code>generate_movement_state()</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>State and justify a recurrence equation for the time complexity of merge sort on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Suppose you want to estimate the probability that you will get into a particular competitive college. You had a bunch of friends a year ahead of you that applied to the college, and these are their results:</p>
+<ul>
+<li><p>Martha was accepted. She was the 95th percentile of her class, got a 33 on the ACT, and had an internship at a well-known company the summer before she applied to college.</p>
+</li>
+<li><p>Jeremy was rejected. He was in the 95th percentile of his class and got a 34 on the ACT.</p>
+</li>
+<li><p>Alphie was accepted. He was in the 92nd percentile of his class, got a 35 on the ACT, and had agreed to play on the college's basketball team if accepted.</p>
+</li>
+<li><p>Dennis was rejected. He was in the 85th percentile of his class, got a 30 on the ACT, and had committed to run on the college's track team if accepted.</p>
+</li>
+<li><p>Jennifer was accepted. She was in the 80th percentile of her class, got a 36 on the ACT, and had a side business in 3D printing that was making $15,000 per year.</p>
+</li>
+<li><p>Martin was rejected. He was in the 85th percentile of his class, got a 29 on the ACT, and had was a finalist in an international science fair.</p>
+</li>
+<li><p>Mary was accepted. She was in the 95th percentile of her class, got a 36 on the ACT, and was a national finalist in the math olympiad.</p>
+</li>
+<li><p>Dean was rejected. He was in the 87th percentile of his class, got a 31 on the ACT, and was a national finalist in the chemistry olympiad.</p>
+</li>
+<li><p>Adam was accepted. He was in the 99th percentile of his class and got a 36 on the ACT.</p>
+</li>
+<li><p>Jeremy was rejected. He was in the 95th percentile of his class and got a 32 on the ACT.</p>
+</li>
+</ul>
+<hr>
+<p><strong>a.</strong> Create a quantitative dataset to represent this information. Name your features appropriately.</p>
+<p><strong>b.</strong> Decide what type of model you will use to model the probability of acceptance as a function of the features in your dataset.</p>
+<p><strong>c.</strong> Fit the model to the data. For each feature, answer the following questions:</p>
+<blockquote><p>According to your model, as that variable increases, does the estimated probability of acceptance increase or decrease? Does that result make sense? If so, why? (If not, then something is wrong with your model, and you need to figure out what's going wrong.)</p>
+</blockquote>
+<p><strong>d.</strong> Estimate your probability of being accepted if you are in the 95th percentile of your class and got a 34 on the ACT.</p>
+<p><strong>e.</strong> Now suppose that you have an opportunity to do an internship at a well-known company the summer before you apply to college. If you do it, what will your estimated probability of acceptance become?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> The <em>covariance</em> of two random variables $X_1,X_2$ is defined as</p>
 $$\text{Cov}[X_1,X_2] = \text{E}[(X_1 - \overline{X}_1)(X_2 - \overline{X}_2)].$$<p>Given that $X \sim U[0,1],$ compute $\text{Cov}[X,X^2].$</p>
 <ul>
 <li>You should get a result of $\dfrac{1}{12}.$</li>
 </ul>
-<p><strong>e.</strong> Given that $X_1, X_2 \sim U[0,1],$ compute $\text{Cov}[X_1, X_2].$</p>
+<p><strong>b.</strong> Given that $X_1, X_2 \sim U[0,1],$ compute $\text{Cov}[X_1, X_2].$</p>
 <ul>
 <li>You should get a result of $0.$ (It will always turn out that the covariance of independent random variables is zero.)</li>
 </ul>
-<p><strong>f.</strong> Prove that</p>
-$$\text{Var}[X_1 + X_2] = \text{Var}[X_1] + \text{Var}[X_2] + 2 \text{Cov}[X_1,X_2].$$<p><strong>g.</strong> Prove that</p>
+<p><strong>c.</strong> Prove that</p>
+$$\text{Var}[X_1 + X_2] = \text{Var}[X_1] + \text{Var}[X_2] + 2 \text{Cov}[X_1,X_2].$$<p><strong>d.</strong> Prove that</p>
 $$\text{Cov}[X_1,X_2] = E[X_1 X_2] - E[X_1] E[X_2].$$
 </div>
 </div>
@@ -13337,7 +13495,29 @@ $$\text{Cov}[X_1,X_2] = E[X_1 X_2] - E[X_1] E[X_2].$$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>The Nobel Prize in Physiology or Medicine 1963 was awarded jointly to Sir John Carew Eccles, Alan Lloyd Hodgkin and Andrew Fielding Huxley for their 1952 model of "spikes" (called "action potentials") in the voltage of neurons, using differential equations.</p>
+<h1 id="Problem-52-1">Problem 52-1<a class="anchor-link" href="#Problem-52-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>a.</strong> (2 points) Using the identity $\text{Var}[X] = \text{E}[X^2] - \text{E}[X]^2,$ compute $\text{Var}[X]$ if $X$ is sampled from the continuous uniform distribution $U[a,b].$</p>
+<ul>
+<li>You should get the same result that you've gotten previously, using the definition of variance.</li>
+</ul>
+<p><strong>b.</strong> (2 points) Using the identity $\text{Var}[X] = \text{E}[X^2] - \text{E}[X]^2,$ compute $\text{Var}[X]$ if $X$ is sampled from the exponential distribution $p(x) = \lambda e^{-\lambda x}, \, x \geq 0.$</p>
+<ul>
+<li>You should get the same result that you've gotten previously, using the definition of variance.</li>
+</ul>
+<p><strong>c.</strong> (2 points) Using the identity $\text{Var}[N] = \text{E}[N^2] - \text{E}[N]^2,$ compute $\text{Var}[N]$ if $N$ is sampled from the Poisson distribution $p(n) = \dfrac{\lambda^n e^{-\lambda}}{n!}, \, n \in \left\{ 0, 1, 2, \ldots \right\}.$</p>
+<ul>
+<li>You should get the same result that you've gotten previously, using the definition of variance.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-52-2">Problem 52-2<a class="anchor-link" href="#Problem-52-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hodgkin_huxley.py</code></p>
+<p><strong>Grading:</strong> 14 points</p>
+<p>The Nobel Prize in Physiology or Medicine 1963 was awarded jointly to Sir John Carew Eccles, Alan Lloyd Hodgkin and Andrew Fielding Huxley for their 1952 model of "spikes" (called "action potentials") in the voltage of neurons, using differential equations.</p>
 <p>Watch <a href="https://www.youtube.com/watch?v=cUGuWh2UeMk">this video to learn about neurons</a>, and <a href="https://www.youtube.com/watch?v=W2hHt_PXe5o">this video to learn about action potentials</a>.</p>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/">Here is a link to the Hodgkin-Huxley paper.</a> I've outlined the key points of the model below.</p>
 <p><br><strong>Idea 0: Start with physics fundamentals</strong></p>
@@ -13393,96 +13573,6 @@ s(t) = \begin{cases}
 \end{cases}
 $$<p>You should get the following result:</p>
 <center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley.png' border='0'/></center>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Rename <code>dumb_player.py</code> to <code>deprecated_dumb_player.py</code>. Then do the following.</p>
-<p><strong>a.</strong> (5 points) Write a class <code>DumbStrategy</code> that contains the strategies for following methods:</p>
-<ul>
-<li><p><code>will_colonize_planet(colony_ship, game_state)</code>: returns either <code>True</code> or <code>False</code>; will be called whenever a player's colony ship lands on an uncolonized planet</p>
-</li>
-<li><p><code>decide_ship_movement(ship, game_state)</code>: returns the coordinates to which the player wishes to move their ship.</p>
-</li>
-<li><p><code>decide_purchases(game_state)</code>: returns a list of ship and/or technology types that you want to purchase; will be called during each economic round.</p>
-</li>
-<li><p><code>decide_removals(game_state)</code>: returns a list of ships that you want to remove; will be called during any economic round when your total maintenance cost exceeds your CP.</p>
-</li>
-<li><p><code>decide_which_ship_to_attack(attacking_ship, game_state)</code>: looks at the ships in the combat order and decides which to attack; will be called whenever it's your turn to attack</p>
-</li>
-</ul>
-<p><strong>b.</strong> (5 points) Make sure that all your tests in <code>tests/test_game_state_dumb_player.py</code> still pass.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>WeightedGraph class + Dijkstra's algorithm method</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Weighted graph - Dijkstra's algorithm by hand</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
-
-<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
-&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
-<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Naive Bayes classifier</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create <code>EconomicEngine</code> with <code>generate_economic_state()</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Naive bayes -- simple case, by hand</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create <code>MovementEngine</code> with <code>generate_movement_state()</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>State and justify a recurrence equation for the time complexity of merge sort on a list of $n$ elements. Then, use it to derive the time complexity of binary search on a list of $n$ elements.</p>
-
 </div>
 </div>
 </div>
