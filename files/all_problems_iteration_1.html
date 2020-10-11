@@ -13623,18 +13623,48 @@ $$<p>You should get the following result:</p>
 <h1 id="Problem-51-3">Problem 51-3<a class="anchor-link" href="#Problem-51-3">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
 <p><strong>Grading:</strong> 20 points for a complete draft that is factually correct with proper grammar and usage of transitions / paragraphs, along with descriptions of several images and code snippets to be included in your post.</p>
 <p>Write a first draft of your blog post. If you have any images / code snippets in mind, you can just describe them verbally, as follows. We'll fill in images and code later.</p>
+<p>Here is an example snippet:</p>
 
-<pre><code>This is my post. I'm writing some content. I'm going to
-start talking about a graph.
+<pre><code>...
+
+To squash the possible outputs into the interval [0,1], we
+need to use a sigmoid function of the form
+
+$$y = \dfrac{1}{1+e^{\beta x}}.$$
 
 [image: graph of sigmoidal data with a sigmoid function
 running through it]
 
-Now I'm talking about the graph above. It's a very pretty
-graph. It also looks very impressive. Here is how you fit
-the sigmoid function to the data.
+When we wish to fit the logistic regression for multiple input
+variables, we can replace the exponent with a linear combination
+of features:
 
-[code: transform y, fit linear regression, reverse-transform y]</code></pre>
+$$y = \dfrac{1}{1+e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n}}.$$
+
+The sigmoid function is nonlinear, so it may seem that we
+need to take a different approach to fitting the logistic
+regression. Howerver, using a bit of algebra, we can transform the
+logistic regression problem into a linear regression problem:
+
+\begin{align*}
+y &amp;= \dfrac{1}{1+e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n}} \\
+1+e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n} &amp;= \dfrac{1}{y} \\
+e^{\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n} &amp;= \dfrac{1}{y} - 1 \\
+\beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n &amp;= \ln \left( \dfrac{1}{y} - 1 \right) \\
+\end{align*}
+
+So, if we transform the $y$-values of the dataset as
+
+$$y \to \ln \left( \dfrac{1}{y} - 1 \right),$$
+
+then the logistic regression problem reduces to a linear regression
+problem using the transformed $y$-values. To obtain our logistic
+regression coefficients, we transform $y$ and fit the linear regression
+as follows:
+
+[code: transform y, fit linear regression]
+
+...</code></pre>
 <p>We're shooting for something in the style of <a href="https://news.ycombinator.com/">Hacker News posts</a>. Here are some examples of the kind of style that we're looking for:</p>
 <ul>
 <li><a href="http://karpathy.github.io/2016/05/31/rl/">http://karpathy.github.io/2016/05/31/rl/</a></li>
