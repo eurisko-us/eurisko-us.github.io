@@ -13125,9 +13125,9 @@ $$
 \text{estimate_derivative}(f,c,\delta) = \dfrac{f(c + 0.5 \, \delta) - f(c - 0.5 \, \delta)}{\delta}
 $$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivative</code>, generalize your functions <code>zero_of_tangent_line</code> and <code>estimate_solution</code> to work for any input function <code>f(x)</code>. They should now have the following inputs:</p>
 <ul>
-<li><p><code>zero_of_tangent_line(f, c)</code> - compute the zero of the tangent line to the function <code>f(x)</code> at the point <code>x=c</code></p>
+<li><p><code>zero_of_tangent_line(f, c, delta)</code> - compute the zero of the tangent line to the function <code>f(x)</code> at the point <code>x=c</code>, using a symmetric difference quotient with parameter <code>delta</code></p>
 </li>
-<li><p><code>estimate_solution(f, initial_guess, precision)</code> - estimate the zero of <code>f(x)</code> by starting with <code>initial_guess</code> and repeatedly calling <code>zero_of_tangent_line</code> until the next guess is within <code>precision</code> of the previous guess.</p>
+<li><p><code>estimate_solution(f, initial_guess, delta, precision)</code> - estimate the zero of <code>f(x)</code> by starting with <code>initial_guess</code> and repeatedly calling <code>zero_of_tangent_line</code> (with parameter <code>delta</code>) until the next guess is within <code>precision</code> of the previous guess.</p>
 </li>
 </ul>
 <p><strong>Note:</strong> You should no longer hard-code the derivative. Instead, you'll use <code>estimate_derivative</code>, which should work on any function that is passed in as input.</p>
@@ -13135,10 +13135,10 @@ $$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivativ
 
 <pre><code>&gt;&gt;&gt; def f(x):
         return x**3 + x - 1
-&gt;&gt;&gt; answer = zero_of_tangent_line(f, 0.5)
+&gt;&gt;&gt; answer = zero_of_tangent_line(f, 0.5, 0.001)
 &gt;&gt;&gt; round(answer,6)
 0.714286
-&gt;&gt;&gt; answer = estimate_solution(f, 0.5, 0.01)
+&gt;&gt;&gt; answer = estimate_solution(f, 0.5, 0.001, 0.01)
 &gt;&gt;&gt; round(answer, 6)
 0.682328</code></pre>
 
