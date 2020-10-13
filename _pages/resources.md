@@ -74,7 +74,7 @@ author_profile: false
     <li>copy (i.e. plagiarize) others' code. (If you copy code and then change the variable names, it still counts as plagiarism.)</li>
   </ol>
   
-  <br><b>Penalty:</b> Violation of this collaboration policy will result in earning no credit on the affected problem(s), with no opportunity for resubmission.
+  <br><b>Penalty:</b> Violation of this collaboration policy will result in earning no credit on the assignment, with no opportunity for resubmission.
   
 <br><br>Here are some examples of things you can vs cannot do:<br><br>
 
