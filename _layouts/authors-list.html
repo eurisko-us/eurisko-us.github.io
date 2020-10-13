@@ -15,14 +15,14 @@ layout: archive
 
       <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
 
-      <h2><br>{{ author.name }}</h2>
+      <h2><br>{{ author.name }} asdf</h2>
 
       <div style="width:25%;float:left;">
 
       {% if author.avatar contains "://" %}
             <img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
           {% else %}
-            <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
+            <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
           {% endif %}
       </div>
 
