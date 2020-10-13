@@ -29,14 +29,15 @@ redirect_from:
 
 <font size="3em">
 These students have already learned a large amount of college-level math, including multivariable calculus, linear algebra, and differential equations, so our Computation & Modeling and Machine Learning courses are presented at a level of rigor comparable to those offered at elite technical universities. Furthermore, students write all their code from scratch without the use of external libraries.
+</font>
   
-<b>What kinds of things are the students building?</b><br>
+<br><br><b>What kinds of things are the students building?</b><br>
   
-<br><br>First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, decision trees, random forests, neural networks, and various reinforcement learning models) on top of these classes. Students also implement their own optimization algorithms, reinforcement learning algorithms, clustering & dimenionality reduction algorithms, and differential equations simulators. To tie everything together, students write their own massively multiplayer game and develop self-improving game-playing agents.
+<font size="3em">First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, decision trees, random forests, neural networks, and various reinforcement learning models) on top of these classes. Students also implement their own optimization algorithms, reinforcement learning algorithms, clustering & dimenionality reduction algorithms, and differential equations simulators. To tie everything together, students write their own massively multiplayer game and develop self-improving game-playing agents.</font>
 
-<b>Do the students learn theory, too?</b><br>
+<br><br><b>Do the students learn theory, too?</b><br>
 
-<br><br>Yes. Alongside the code, students also learn the theory and applications of probability & statistics, including advanced techniques such as Bayesian inference and stochastic differential equations.
+<font size="3em">Yes. Alongside the code, students also learn the theory and applications of probability & statistics, including advanced techniques such as Bayesian inference and stochastic differential equations.
 </font>
 
 
