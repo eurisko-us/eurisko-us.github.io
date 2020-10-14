@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="19">
+<font size="3em"><ol reversed start="20">
+    <li><b>Wednesday, October 14</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/467426699">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-20-1">Expectation and Variance of an Exponential Distribution</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-20-2">LinkedList: Delete, Insert</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, October 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/467426699">Class Recording</a>
         <br>Assignment Problems:
