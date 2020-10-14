@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="53">
     <li><b>Wednesday, October 14</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/467426689">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/468272553">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-53-1">Introduction to Covariance</a></li>
