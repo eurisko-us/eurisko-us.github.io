@@ -13119,6 +13119,93 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-20-1">Problem 20-1<a class="anchor-link" href="#Problem-20-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<hr>
+<p>Continuous distributions are defined similarly to discrete distributions. There are only 2 big differences:</p>
+<ul>
+<li><p>We use an integral to compute expectation: if $X \sim p,$ then $$E[X] = \int_{-\infty}^\infty x \, p(x) \, \mathrm{d}x.$$</p>
+</li>
+<li><p>We talk about probability on an interval rather than at a point: if $X \sim p,$ then $$P(a &lt; X \leq b) = \int_a^b p(x) \, \mathrm{d}x$$</p>
+</li>
+</ul>
+<hr>
+<p><strong>Grading:</strong> 1 point per correct answer <em>with supporting work</em></p>
+<p>Consider the exponential distribution defined by $$p_2(x) = \begin{cases} 2 e^{-2 x} &amp; x \geq 0 \\ 0 &amp; x &lt; 0 \end{cases}.$$</p>
+<p><strong>a.</strong> Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
+<p><strong>b.</strong> Given that $X \sim p_2,$ compute $P(0 &lt; X \leq 1).$</p>
+<ul>
+<li>You should get a result of $1-e^{-2}.$</li>
+</ul>
+<p><strong>c.</strong> Given that $X \sim p_2,$ compute $E[X].$</p>
+<ul>
+<li>You should get a result of $\dfrac{1}{2}.$</li>
+</ul>
+<p><strong>d.</strong> Given that $X \sim p_2,$ compute $\text{Var}[X].$</p>
+<ul>
+<li>You should get a result of $\dfrac{1}{4}.$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-20-2">Problem 20-2<a class="anchor-link" href="#Problem-20-2">&#182;</a></h1><p><strong>Grading:</strong> 4 points</p>
+<p>Extend your <code>LinkedList</code> to have two additional methods:</p>
+<ul>
+<li><p><code>delete(index)</code> - delete the node at the given <code>index</code></p>
+</li>
+<li><p><code>insert(new_data, index)</code> - insert a node at the given <code>index</code>, containing the given <code>new_data</code></p>
+</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; linked_list = LinkedList('a')
+&gt;&gt;&gt; linked_list.append('b')
+&gt;&gt;&gt; linked_list.append('c')
+&gt;&gt;&gt; linked_list.append('d')
+&gt;&gt;&gt; linked_list.append('e')
+&gt;&gt;&gt; linked_list.length()
+5
+&gt;&gt;&gt; linked_list.print()
+a
+b
+c
+d
+e
+
+&gt;&gt;&gt; linked_list.get_node(2).data
+'c'
+&gt;&gt;&gt; linked_list.delete(2)
+&gt;&gt;&gt; linked_list.length()
+4
+&gt;&gt;&gt; linked_list.get_node(2).data
+'d'
+&gt;&gt;&gt; linked_list.print()
+a
+b
+d
+e
+
+&gt;&gt;&gt; linked_list.insert('f', 2)
+&gt;&gt;&gt; linked_list.length()
+5
+&gt;&gt;&gt; linked_list.get_node(2).data
+'f'
+&gt;&gt;&gt; linked_list.print()
+a
+b
+f
+d
+e</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-19-1">Problem 19-1<a class="anchor-link" href="#Problem-19-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/zero_of_tangent_line.py</code></p>
 <p><strong>a.</strong> (1 point) Write a function <code>estimate_derivative(f, c, delta)</code> that estimates the derivative of the function <code>f(x)</code> at the point <code>x=c</code> using a symmetric difference quotient:</p>
 $$
@@ -13135,9 +13222,15 @@ $$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivativ
 
 <pre><code>&gt;&gt;&gt; def f(x):
         return x**3 + x - 1
+
+&gt;&gt;&gt; answer = estimate_derivative(f, 0.5, 0.001)
+&gt;&gt;&gt; round(answer,6)
+1.75
+
 &gt;&gt;&gt; answer = zero_of_tangent_line(f, 0.5, 0.001)
 &gt;&gt;&gt; round(answer,6)
 0.714286
+
 &gt;&gt;&gt; answer = estimate_solution(f, 0.5, 0.001, 0.01)
 &gt;&gt;&gt; round(answer, 6)
 0.682328</code></pre>
@@ -13179,7 +13272,7 @@ $$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivativ
 <ul>
 <li>If you substitute $k=0.5,$ you should get the same result that you did in part 1a.</li>
 </ul>
-<p><strong>b.</strong> Let $N$ be the number of heads in $4$ coin flips of a biased coin. Then $N \sim p_{4,k}.$ Intuitively, what is the expected value of $N?$ Your answer should be in terms of $k.$ Explain the reasoning behind your intuition.</p>
+<p><strong>b.</strong> Let $N$ be the number of heads in $4$ coin flips of a biased coin. Then $N\sim p_{4,k}.$ Intuitively, what is the expected value of $N?$ Your answer should be in terms of $k.$ Explain the reasoning behind your intuition.</p>
 <ul>
 <li>If you substitute $k=0.5,$ you should get the same result that you did in part 1b.</li>
 </ul>
@@ -13223,8 +13316,6 @@ $$<p><strong>b.</strong> (4 points) Using your function <code>estimate_derivativ
 <p>Extend your class <code>Node</code> class to have an additional attribute <code>index</code> that is set by the <code>LinkedList</code>. The head node in the <code>LinkedList</code> will have index <code>0</code>, the next node will have index <code>1</code>, and so on.</p>
 <p>Extend your class <code>LinkedList</code> to have the following methods:</p>
 <ul>
-<li><p><code>length()</code> - return the number of nodes in the linked list</p>
-</li>
 <li><p><code>push(new_data)</code> - insert a new node at the head of the linked list, containing the <code>new_data</code></p>
 </li>
 <li><p><code>get_node(index)</code> - get the node at <code>index</code></p>
