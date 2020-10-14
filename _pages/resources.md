@@ -141,6 +141,7 @@ author_profile: false
 <ul>
   <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code>, not <code>$my_variable = 2$</code></li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code>, not <code>$( \dfrac{1}{2} )$</code></li>
+  <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code></li>
   </ul>
 </div>
 
