@@ -139,8 +139,8 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 <ul>
-  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code>, not `<code>$my_variable = 2$</code></li>
-  <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code>, not `<code>$( \dfrac{1}{2} )$</code></li>
+  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code>, not <code>$my_variable = 2$</code></li>
+  <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code>, not <code>$( \dfrac{1}{2} )$</code></li>
   </ul>
 </div>
 
