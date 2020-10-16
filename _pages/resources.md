@@ -145,6 +145,7 @@ author_profile: false
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code></li>
   <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code>, not <code>$int x dx$</code></li>
   <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code>, not <code>$\frac{x^2}{2} \right|_12^15$</code>
+  <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code>, not <code>$\lim_{x \to 0} f(x)$</code>
   </ul>
 </div>
 
