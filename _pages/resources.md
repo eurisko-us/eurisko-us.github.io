@@ -143,6 +143,7 @@ author_profile: false
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code>, not <code>$( \dfrac{1}{2} )$</code></li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code>, not <code>$2^10$</code></li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code></li>
+  <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code>, not <code>$int x dx$</code></li>
   </ul>
 </div>
 
