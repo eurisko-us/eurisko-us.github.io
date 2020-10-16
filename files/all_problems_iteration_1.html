@@ -13420,7 +13420,54 @@ $$\begin{align*}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Suppose you want to estimate the probability that you will get into a particular competitive college. You had a bunch of friends a year ahead of you that applied to the college, and these are their results:</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Weighted graph - Dijkstra's algorithm by hand</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-54-1">Problem 54-1<a class="anchor-link" href="#Problem-54-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<p>The dataset below displays the ratio of ingredients for various cookie recipes.</p>
+
+<pre><code>['ID', 'Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+
+[[ 1 , 'Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+[ 2  , 'Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+[ 3  , 'Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+[ 4  , 'Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+[ 5  , 'Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+[ 6  , 'Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+[ 7  , 'Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+[ 8  , 'Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+[ 9  , 'Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+[ 10 , 'Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+[ 11 , 'Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+[ 12 , 'Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+[ 13 , 'Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]]</code></pre>
+<p>Suppose you're given a cookie recipe and you want to determine whether it is a shortbread cookie, a sugar cookie, or a fortune cookie. The cookie recipe consists of 0.10 portion eggs, 0.15 portion butter, 0.30 portion sugar, and 0.45 portion flour. We will infer the classification of this cookie using the "$k$ nearest neighbors" approach.</p>
+<p><strong>Part 1: How to do $k$ nearest neighbors.</strong></p>
+<p><strong>a.</strong> This cookie can be represented as the point $P(0.10, 0.15, 0.30, 0.45).$ Compute the Euclidean distance between $P$ and each of the points corresponding to cookies in the dataset.</p>
+<p><strong>b.</strong> Consider the 5 points that are closest to $P.$ (These are the 5 "nearest neighbors".) What cookie IDs are they, and what types of cookies are represented by these points?</p>
+<p><strong>c.</strong> What cookie classification showed up most often in the 5 nearest neighbors? What inference can you make about the recipe corresponding to the point $P$?</p>
+<p><strong>Part 2: The danger of using too large a $k$</strong></p>
+<p><strong>a.</strong> What happens if we try to perform the $k$ nearest neighbors approach with $k=13$ (i.e. the full dataset) to infer the cookie classification of point $P?$ What issue occurs, and why does it occur?</p>
+<p><strong>b.</strong> For each classification of cookie, find the average distance between $P$ and the points corresponding to the cookies in that classification. Explain how this resolves the issue you identified in part (a).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-54-2">Problem 54-2<a class="anchor-link" href="#Problem-54-2">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<hr>
+<p>Suppose you want to estimate the probability that you will get into a particular competitive college. You had a bunch of friends a year ahead of you that applied to the college, and these are their results:</p>
 <ul>
 <li><p>Martha was accepted. She was the 95th percentile of her class, got a 33 on the ACT, and had an internship at a well-known company the summer before she applied to college.</p>
 </li>
@@ -13444,13 +13491,15 @@ $$\begin{align*}
 </li>
 </ul>
 <hr>
-<p><strong>a.</strong> Create a quantitative dataset to represent this information. Name your features appropriately.</p>
-<p><strong>b.</strong> Decide what type of model you will use to model the probability of acceptance as a function of the features in your dataset.</p>
+<p><strong>Create a writeup in Overleaf that contains the following parts.</strong></p>
+<p><strong>a.</strong> Create a quantitative dataset to represent this information, and include it in your writeup. Name your features appropriately.</p>
+<p><strong>b.</strong> Decide what type of model you will use to model the probability of acceptance as a function of the features in your dataset. State and justify the form of the model in your writeup.</p>
 <p><strong>c.</strong> Fit the model to the data. For each feature, answer the following questions:</p>
 <blockquote><p>According to your model, as that variable increases, does the estimated probability of acceptance increase or decrease? Does that result make sense? If so, why? (If not, then something is wrong with your model, and you need to figure out what's going wrong.)</p>
 </blockquote>
-<p><strong>d.</strong> Estimate your probability of being accepted if you are in the 95th percentile of your class and got a 34 on the ACT.</p>
-<p><strong>e.</strong> Now suppose that you have an opportunity to do an internship at a well-known company the summer before you apply to college. If you do it, what will your estimated probability of acceptance become?</p>
+<p><strong>d.</strong> Estimate the probability of being accepted for each of the data points that you used to fit the model. How well does this match up with reality?</p>
+<p><strong>e.</strong> Estimate your probability of being accepted if you are in the 95th percentile of your class and got a 34 on the ACT. Justify why your model's prediction is reasonable.</p>
+<p><strong>f.</strong> Now suppose that you have an opportunity to do an internship at a well-known company the summer before you apply to college. If you do it, what will your estimated probability of acceptance become? Based on this information, how much does the internship matter in terms of getting into the college you want?</p>
 
 </div>
 </div>
@@ -13458,27 +13507,8 @@ $$\begin{align*}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-54-1">Problem 54-1<a class="anchor-link" href="#Problem-54-1">&#182;</a></h1><p><code>kNearestNeighbors</code></p>
-<ol>
-<li>classification by hand</li>
-<li><code>kNearestNeighborsClassifier</code></li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-54-2">Problem 54-2<a class="anchor-link" href="#Problem-54-2">&#182;</a></h1><p>Weighted graph - Dijkstra's algorithm by hand</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-54-3">Problem 54-3<a class="anchor-link" href="#Problem-54-3">&#182;</a></h1><p>For blog post draft #2, I want you to finish addressing all of the key parts in the content. We'll worry about grammar / phrasing / writing style later.</p>
+<h1 id="Problem-54-3">Problem 54-3<a class="anchor-link" href="#Problem-54-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>For blog post draft #2, I want you to finish addressing all of the key parts in the content. We'll worry about grammar / phrasing / writing style later.</p>
 <p>Here are the things that you still need to address...</p>
 <p><strong>George: Linear and Logistic Regression, Part 1: Understanding the Models</strong></p>
 <ol>
