@@ -139,13 +139,13 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 <ul>
-  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code>, not <code>$my_variable = 2$</code></li>
-  <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code>, not <code>$( \dfrac{1}{2} )$</code></li>
-  <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code>, not <code>$2^10$</code></li>
-  <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code></li>
-  <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code>, not <code>$int x dx$</code></li>
-  <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code>, not <code>$\frac{x^2}{2} \right|_12^15$</code>
-  <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code>, not <code>$\lim_{x \to 0} f(x)$</code>
+  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
+  <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$</li>
+  <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
+  <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</li>
+  <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code> $\displaystyle \int_0^1 x \, \textrm{d}x,$ not <code>$\int x dx$</code>$\int_0^1 x dx$</li>
+  <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code> $\left. \dfrac{x^2}{2} \right|_{12}^{15},$ not <code>$\frac{x^2}{2} \right|_12^15$</code> $\frac{x^2}{2} \right|_12^15.$
+  <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code> $\lim\limits_{x \to 0} f(x),$ not <code>$\lim_{x \to 0} f(x)$</code> $\lim_{x \to 0} f(x).$
   </ul>
 </div>
 
