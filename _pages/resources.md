@@ -5,8 +5,6 @@ permalink: /resources/
 author_profile: false
 --- 
 
-testing... testing again...
-
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
