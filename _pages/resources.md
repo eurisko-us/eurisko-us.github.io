@@ -5,7 +5,7 @@ permalink: /resources/
 author_profile: false
 --- 
 
-testing2...
+testing... testing again...
 
 # [<center>Resources</center>](#top)
 
