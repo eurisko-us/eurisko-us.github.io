@@ -144,7 +144,7 @@ author_profile: false
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</li>
   <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code> $\displaystyle \int_0^1 x \, \textrm{d}x,$ not <code>$\int x dx$</code>$\int_0^1 x dx$</li>
-  <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code> $\left. \dfrac{x^2}{2} \right|_{12}^{15},$ not <code>$\frac{x^2}{2} \right|_12^15$</code> $\frac{x^2}{2} \right|_12^15.$
+  <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code> $\left. \dfrac{x^2}{2} \right|_{12}^{15},$ not <code>$\frac{x^2}{2} \right|_12^15$</code> $\frac{x^2}{2} |_12^15.$
   <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code> $\lim\limits_{x \to 0} f(x),$ not <code>$\lim_{x \to 0} f(x)$</code> $\lim_{x \to 0} f(x).$
   </ul>
 </div>
