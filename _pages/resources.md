@@ -422,7 +422,7 @@ author_profile: false
 <details>
   <summary>My repl won't push code up to Github, and I've made changes to my code in a ton of different files since I last pushed up to Github. How can I start working from a new repl without losing all my changes?</summary><br>
   
-  First of all, you should be pushing to Github often enough that this doesn't happen. But nevertheless, now that you're in this situation, let's get you out of it.
+  First of all, you should be pushing to Github often enough that this doesn't happen. But now that you're in this situation, let's get you out of it.
   
   <br>
   
