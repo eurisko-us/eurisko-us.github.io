@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="21">
+<font size="3em"><ol reversed start="22">
+    <li><b>Wednesday, October 21</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/469033987">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-22-1">Single-Variable Gradient Descent</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-22-2">Introduction to Merge Sort</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, October 16</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/469033987">Class Recording</a>
         <br>Assignment Problems:
