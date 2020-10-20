@@ -427,7 +427,7 @@ author_profile: false
   <br>
   
   <ol>
-    <li>Zip all your current code into a single zip file. You can do this by clicking on the three dots in the main heading of the "Files" panel and selecting "Download as zip".</code></li>
+    <li>Zip all your current code into a single zip file. You can do this by clicking on the three dots in the main heading of the "Files" panel and selecting "Download as zip".</li>
     <li>Manually upload your zip file to Github. You can do this by going to your Github repository, clicking "Upload a file", dragging your zip file, and committing.</li>
     <li>Create a new repl with the same name as the old repl.</li>
     <li>Connect the new repl to the existing github repository.</li>
