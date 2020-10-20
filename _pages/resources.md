@@ -418,6 +418,27 @@ author_profile: false
   </ol>
   
 </details>
+
+<details>
+  <summary>My repl won't push code up to Github, and I've made changes to my code in a ton of different files since I last pushed up to Github. How can I start working from a new repl without losing all my changes?</summary><br>
+  
+  First of all, you should be pushing to Github often enough that this doesn't happen. But nevertheless, now that you're in this situation, let's get you out of it.
+  
+  <br>You need to zip up all your current code into a single zip file, manually upload it to Github, go through the usual repl replacement steps, then use that zip file to replace your old code.
+  
+  <ol>
+    <li>Zip all your current code into a single zip file. You can do this by clicking on the three dots in the main heading of the "Files" panel and selecting "Download as zip".</code></li>
+    <li>Manually upload your zip file to Github. You can do this by going to your Github repository, clicking "Upload a file", dragging your zip file, and committing.</li>
+    <li>Create a new repl with the same name as the old repl.</li>
+    <li>Connect the new repl to the existing github repository.</li>
+    <li>Pull the github repository to your new repl.</li>
+    <li>In your new repl, unzip your zip file by typing <code>unzip -o filename.zip</code> into the command line. (You should replace "filename" with the actual file name of your zip file.)</li>
+    <li>Delete your zip file by typing <code>rm filename.zip</code> into the command line.</li>
+    <li>In your new repl, push your code back up to your existing github repository.</li>
+    <li>Your new repl is now fully up-to-date and connected to your github, so you can delete the old repl.</li>
+  </ol>
+  
+</details>
   
 </font>
 </div>
