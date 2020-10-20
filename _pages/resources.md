@@ -424,7 +424,7 @@ author_profile: false
   
   First of all, you should be pushing to Github often enough that this doesn't happen. But nevertheless, now that you're in this situation, let's get you out of it.
   
-  <br>You need to zip up all your current code into a single zip file, manually upload it to Github, go through the usual repl replacement steps, then use that zip file to replace your old code.
+  <br>
   
   <ol>
     <li>Zip all your current code into a single zip file. You can do this by clicking on the three dots in the main heading of the "Files" panel and selecting "Download as zip".</code></li>
