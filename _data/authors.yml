@@ -14,8 +14,8 @@ Jason Roberts:
 
 David Gieselman:
   name        : "David Gieselman"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his eagle scout rank in boy scouts. David plans on studying aerospace engineering in college."
+  avatar      : "headshots/david-gieselman.png"
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
