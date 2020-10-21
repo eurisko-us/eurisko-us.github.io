@@ -46,7 +46,7 @@ David Gieselman:
 
 Elijah Tarr:
   name        : "Elijah Tarr"
-  bio         : " Elijah Tarr is a junior at Tamalpais High School as well as participating in Math Academy and Eurisko. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains his <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> and his <a class='body' target='_blank' href='https://github.com/eoriont'>GitHub account</a> for displaying his projects."
+  bio         : " is a junior at Tamalpais High School who also participates in Math Academy and Eurisko. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains a <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> and <a class='body' target='_blank' href='https://github.com/eoriont'>GitHub account</a> for displaying his projects."
   avatar      : "headshots/elijah-tarr.png"
   role        : "student"
   class       : "Machine Learning"
