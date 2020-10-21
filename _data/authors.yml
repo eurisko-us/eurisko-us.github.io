@@ -11,11 +11,11 @@ Jason Roberts:
   bio         : ""
   avatar      : "headshots/jason-roberts.png"
   role        : "admin"
-
-David Gieselman:
-  name        : "David Gieselman"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college."
-  avatar      : "headshots/david-gieselman.png"
+  
+Colby Roberts:
+  name        : "Colby Roberts"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>."
+  avatar      : "headshots/colby-roberts.png"
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
@@ -35,19 +35,19 @@ Riley Paddock:
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
-
-Colby Roberts:
-  name        : "Colby Roberts"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>."
-  avatar      : "headshots/colby-roberts.png"
+  
+David Gieselman:
+  name        : "David Gieselman"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college."
+  avatar      : "headshots/david-gieselman.png"
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
 
 Elijah Tarr:
   name        : "Elijah Tarr"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " Elijah Tarr is a junior at Tamalpais High School as well as participating in Math Academy and Eurisko. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains his <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> and his <a class='body' target='_blank' href='https://github.com/eoriont'>GitHub account</a> for displaying his projects."
+  avatar      : "headshots/elijah-tarr.png"
   role        : "student"
   class       : "Machine Learning"
   graduationYear : "'22"
