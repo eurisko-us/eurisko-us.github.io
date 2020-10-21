@@ -13119,7 +13119,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment_problems/gradient_descent.py</code></p>
+<h1 id="Problem-22-1">Problem 22-1<a class="anchor-link" href="#Problem-22-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment_problems/gradient_descent.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <hr>
 <p>Write a function <code>gradient_descent(f,x0,alpha=0.01,delta=0.0001,iterations=10000)</code> that uses <em>gradient descent</em> to estimate the minimum of $f(x),$ given the initial guess $x=x_0.$ <a href="https://www.youtube.com/watch?v=ClotAJHZ3oE">Here's a visualization of how it works.</a></p>
@@ -13133,6 +13133,67 @@ $$f'(x_n) \approx \dfrac{f(x_n+0.5 \, \delta) - f(x_n- 0.5 \, \delta)}{\delta},$
 $$f(x)=x^2+2x+1$$<p>using the initial guess $x_0 = 0.$ (Note: do <strong>not</strong> work out the derivative by hand! You should estimate it numerically.)</p>
 <p><strong>b.</strong> Use <code>gradient_descent</code> to estimate the minimum value of</p>
 $$f(x)=\frac{x^{2}+\cos\left(x\right)}{e^{\sin\left(x\right)}}$$<p>using the initial guess $x_0 = 0.$ (Note: do <strong>not</strong> work out the derivative by hand! You should estimate it numerically.) Check your answer by plotting the graph on Desmos.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-22-2">Problem 22-2<a class="anchor-link" href="#Problem-22-2">&#182;</a></h1><p>Here is pseudocode for a sorting algorithm called <code>merge_sort</code>:</p>
+
+<pre><code>merge_sort(input list):
+    if the input list consists of more than one element:
+        break up the input list into its left and right halves
+        sort the left and right halves by recursively calling merge_sort
+        merge the two sorted halves
+        return the result
+    otherwise, if the input list consists of only one element, then it is already sorted,
+        and you can just return it.</code></pre>
+<p>Here is an example of how <code>merge_sort</code> sorts a list:</p>
+
+<pre><code>input list:[6,9,7,4,2,1,8,5]
+break it in half: [6,9,7,4] [2,1,8,5]
+use merge_sort recursively to sort the two halves
+
+    input list: [6,9,7,4]
+    break it in half: [6,9] [7,4]
+    use merge_sort recursively to sort the two halves
+
+        input list: [6,9]
+        break it in half: [6] [9]
+        the two halves have only one element each, so they are already sorted
+        so we can merge them to get [6,9]
+
+        input list: [7,4]
+        break it in half: [7] [4]
+        the two halves have only one element each, so they are already sorted
+        so we can merge them to get [4,7]
+
+    now we have two sorted lists [6,9] and [4,7]
+    so we can merge them to get [4,6,7,9]
+
+    input list: [2,1,8,5]
+    break it in half: [2,1] [8,5]
+    use merge_sort recursively to sort the two halves
+
+        input list: [2,1]
+        break it in half: [2] [1]
+        the two halves have only one element each, so they are already sorted
+        so we can merge them to get [1,2]
+
+        input list: [8,5]
+        break it in half: [8] [5]
+        the two halves have only one element each, so they are already sorted
+        so we can merge them to get [5,8]
+
+    now we have two sorted lists [1,2] and [5,8]
+    so we can merge them to get [1,2,5,8]
+
+now we have two sorted lists [4,6,7,9] and [1,2,5,8]
+so we can merge them to get [1,2,4,5,6,7,8,9]</code></pre>
+<hr>
+<p><strong>Here is your problem:</strong> Manually walk through the steps used to sort the list <code>[4,8,7,7,4,2,3,1]</code> using <code>merge_sort</code>. Use the same format as is shown above.</p>
 
 </div>
 </div>
