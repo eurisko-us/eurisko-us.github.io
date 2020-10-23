@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="22">
+<font size="3em"><ol reversed start="23">
+    <li><b>Friday, October 23</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/471478206">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-23-1">Merge Sort</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-23-2">Expectation/Variance of General Exponential/Uniform Distributions</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, October 21</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/470683572">Class Recording</a>
         <br>Assignment Problems:
