@@ -13119,6 +13119,43 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-23-1">Problem 23-1<a class="anchor-link" href="#Problem-23-1">&#182;</a></h1><p>Implement the algorithm <code>merge_sort</code> that you carried by hand in Assignment 22. Make sure to follow the pseudocode that was provided. Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; merge_sort([4,8,7,7,4,2,3,1])
+[1,2,4,5,6,7,8,9]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-23-2">Problem 23-2<a class="anchor-link" href="#Problem-23-2">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 8 points</p>
+<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<hr>
+<p><strong>PART 1</strong></p>
+<p>Consider the general exponential distribution defined by $$p_\lambda(x) = \begin{cases} \lambda e^{-\lambda x} &amp; x \geq 0 \\ 0 &amp; x &lt; 0 \end{cases}.$$</p>
+<p><strong>a.</strong> Using integration, show that this is a valid distribution, i.e. all the probability integrates to $1.$</p>
+<p><strong>b.</strong> Given that $X \sim p_\lambda,$ compute $P(0 &lt; X &lt; 1).$</p>
+<p><strong>c.</strong> Given that $X \sim p_\lambda,$ compute $\mathrm{E}[X].$</p>
+<p><strong>d.</strong> Given that $X \sim p_\lambda,$ compute $\text{Var}[X].$</p>
+<p><strong>Note:</strong> Your answers should match those from Assignment 20 when you substitute $\lambda = 2.$</p>
+<hr>
+<p><strong>PART 2</strong></p>
+<p>Consider the general uniform distribution on the interval $[a,b].$ It takes the following form for some constant $k\mathbin{:}$</p>
+$$p(x) = \begin{cases} k &amp; x \in [a,b] \\ 0 &amp; x \not\in [a,b] \end{cases}$$<p>a) Find the value of $k$ such that $p(x)$ is a valid probability distribution. Your answer should be in terms of $a$ and $b.$</p>
+<p>b) Given that $X \sim p,$ compute the cumulative distribution $P(X \leq x).$ Your answer should be a piecewise function:</p>
+$$P(X \leq x) = \begin{cases} \_\_\_ &amp;\text{ if } x &lt; a \\ \_\_\_ &amp;\text{ if } a \leq x \leq b \\ \_\_\_ &amp;\text{ if } b &lt; x \end{cases}$$<p>c) Given that $X \sim p,$ compute $\mathrm{E}[X].$</p>
+<p>d) Given that $X \sim p,$ compute $\text{Var}[X].$</p>
+<p><strong>Note:</strong> Your answers should match those from Assignment 21 when you substitute $a = 3, b=7.$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-22-1">Problem 22-1<a class="anchor-link" href="#Problem-22-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment_problems/gradient_descent.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <hr>
@@ -13221,7 +13258,7 @@ so we can merge them to get [1,2,4,5,6,7,8,9]</code></pre>
 <p>A <strong>uniform distribution</strong> on the interval $[3,7]$ is a probability distribution $p(x)$ that takes the following form for some constant $k\mathbin{:}$</p>
 $$p(x) = \begin{cases} k &amp; x \in [3,7] \\ 0 &amp; x \not\in [3,7] \end{cases}$$<p>It is also $\mathcal{U}[3,7].$ So, to say that $X \sim \mathcal{U}[3,7],$ is to say that $X \sim p$ for the function $p$ shown above.</p>
 <p><strong>a.</strong> Find the value of $k$ such that $p(x)$ is a valid probability distribution. (Remember that for a function to be a valid probability distribution, it must integrate to 1.)</p>
-<p><strong>b.</strong> Given that $X \sim \mathcal{U}[3,7],$ compute $E[X].$</p>
+<p><strong>b.</strong> Given that $X \sim \mathcal{U}[3,7],$ compute $\text{E}[X].$</p>
 <ul>
 <li>Check: does your result make intuitive sense? If you pick a bunch of numbers from the interval $[3,7],$ and all of those numbers are equally likely choices, then what would you expect to be the average of the numbers you pick?</li>
 </ul>
