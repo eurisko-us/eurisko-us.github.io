@@ -15,7 +15,7 @@ author_profile: false
 
 <br><br>
 <font size="3em"><ol reversed start="56">
-    <li><b>Wednesday, October 21</b>
+    <li><b>Friday, October 23</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/471478658">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
