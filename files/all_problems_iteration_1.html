@@ -13345,18 +13345,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
-
-<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
-&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
-<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Multinomial logistic regression</p>
 
 </div>
@@ -13366,14 +13354,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>RandomForestClassifier</code></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (2 layers, gini impurity). Then, <code>DecisiontreeClassifier</code></p>
 
 </div>
 </div>
@@ -13421,22 +13401,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>4-neuron HH network on a digraph</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>2 HH neurons connected together</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>write SQL-like query language from scratch on dictionary of dataframes</p>
 
 </div>
@@ -13470,7 +13434,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>KMeans clustering</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Download sports prediction data (or movie prediction data), clean it up, make predictions using linear regression / logistic regression / Decision tree / random forest</p>
 
 </div>
 </div>
@@ -13478,7 +13442,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-57-1">Problem 57-1<a class="anchor-link" href="#Problem-57-1">&#182;</a></h1><p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>boosting</p>
 
 </div>
 </div>
@@ -13486,49 +13450,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-1">Problem 56-1<a class="anchor-link" href="#Problem-56-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/tests/test_data_frame.py</code></p>
-<p><strong>Grading:</strong> 10 points</p>
-<p>Implement the following functionality in your <code>DataFrame</code>, and <strong>assert that these tests pass.</strong></p>
-<p><strong>a.</strong> Loading an array</p>
-
-<pre><code>&gt;&gt;&gt; columns = ['firstname', 'lastname', 'age']
-&gt;&gt;&gt; arr = [['Kevin', 'Fray', 5],
-           ['Charles', 'Trapp', 17],
-           ['Anna', 'Smith', 13],
-           ['Sylvia', 'Mendez', 9]]
-&gt;&gt;&gt; df = DataFrame(arr)</code></pre>
-<p><strong>b.</strong> Selecting columns by name</p>
-
-<pre><code>&gt;&gt;&gt; df.select_columns(['firstname','age']).to_array()
-[['Kevin', 5],
-['Charles', 17],
-['Anna', 13],
-['Sylvia', 9]]</code></pre>
-<p><strong>c.</strong> Selecting rows by index</p>
-
-<pre><code>&gt;&gt;&gt; df.select_rows([1,3]).to_array()
-[['Charles', 'Trapp', 17],
-['Sylvia', 'Mendez', 9]]</code></pre>
-<p><strong>d.</strong> Selecting rows which satisfy a particular condition (given as a lambda function)</p>
-
-<pre><code>&gt;&gt;&gt; df.select_rows_where(
-    lambda row: len(row['firstname']) &gt;= len(row['lastname'])
-                and row['age'] &gt; 10
-    ).to_array()
-[['Charles', 'Trapp', 17]]</code></pre>
-<p><strong>e.</strong> Ordering the rows by given column</p>
-
-<pre><code>&gt;&gt;&gt; df.order_by('age', ascending=True).to_array()
-[['Kevin', 'Fray', 5],
-['Sylvia', 'Mendez', 9],
-['Anna', 'Smith', 13],
-['Charles', 'Trapp', 17]]
-
-&gt;&gt;&gt; df.order_by('firstname', ascending=False).to_array()
-[['Sylvia', 'Mendez', 9],
-['Kevin', 'Fray', 5],
-['Charles', 'Trapp', 17],
-['Anna', 'Smith', 13]]</code></pre>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>RandomForest</code></p>
 
 </div>
 </div>
@@ -13536,7 +13458,91 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-2">Problem 56-2<a class="anchor-link" href="#Problem-56-2">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/k_nearest_neighbors_classifier</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>DecisiontreeClassifier</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>KMeans class</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>5-neuron HH network on a graph</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>KMeans clustering by hand</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>DataFrame - left joins</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+
+<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
+&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
+<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Complete Module 3 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of your module quiz results and submit it with your assignment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>2 HH neurons connected together</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/k_nearest_neighbors_classifier</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Create a class <code>KNearestNeighborsClassifier</code> that works as follows. <strong>Leverage existing methods in your DataFrame class to do the brunt of the processing.</strong></p>
 
@@ -13614,7 +13620,49 @@ Note: the above has been rounded to 3 decimal places for ease of viewing, but yo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-3">Problem 56-3<a class="anchor-link" href="#Problem-56-3">&#182;</a></h1><p>blog post revisions</p>
+<h1 id="Problem-56-1">Problem 56-1<a class="anchor-link" href="#Problem-56-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/tests/test_data_frame.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Implement the following functionality in your <code>DataFrame</code>, and <strong>assert that these tests pass.</strong></p>
+<p><strong>a.</strong> Loading an array</p>
+
+<pre><code>&gt;&gt;&gt; columns = ['firstname', 'lastname', 'age']
+&gt;&gt;&gt; arr = [['Kevin', 'Fray', 5],
+           ['Charles', 'Trapp', 17],
+           ['Anna', 'Smith', 13],
+           ['Sylvia', 'Mendez', 9]]
+&gt;&gt;&gt; df = DataFrame(arr)</code></pre>
+<p><strong>b.</strong> Selecting columns by name</p>
+
+<pre><code>&gt;&gt;&gt; df.select_columns(['firstname','age']).to_array()
+[['Kevin', 5],
+['Charles', 17],
+['Anna', 13],
+['Sylvia', 9]]</code></pre>
+<p><strong>c.</strong> Selecting rows by index</p>
+
+<pre><code>&gt;&gt;&gt; df.select_rows([1,3]).to_array()
+[['Charles', 'Trapp', 17],
+['Sylvia', 'Mendez', 9]]</code></pre>
+<p><strong>d.</strong> Selecting rows which satisfy a particular condition (given as a lambda function)</p>
+
+<pre><code>&gt;&gt;&gt; df.select_rows_where(
+    lambda row: len(row['firstname']) &gt;= len(row['lastname'])
+                and row['age'] &gt; 10
+    ).to_array()
+[['Charles', 'Trapp', 17]]</code></pre>
+<p><strong>e.</strong> Ordering the rows by given column</p>
+
+<pre><code>&gt;&gt;&gt; df.order_by('age', ascending=True).to_array()
+[['Kevin', 'Fray', 5],
+['Sylvia', 'Mendez', 9],
+['Anna', 'Smith', 13],
+['Charles', 'Trapp', 17]]
+
+&gt;&gt;&gt; df.order_by('firstname', ascending=False).to_array()
+[['Sylvia', 'Mendez', 9],
+['Kevin', 'Fray', 5],
+['Charles', 'Trapp', 17],
+['Anna', 'Smith', 13]]</code></pre>
 
 </div>
 </div>
@@ -13622,7 +13670,120 @@ Note: the above has been rounded to 3 decimal places for ease of viewing, but yo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-4">Problem 56-4<a class="anchor-link" href="#Problem-56-4">&#182;</a></h1><p>Complete Module 1 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of your module quiz results and submit it with your assignment.</p>
+<h1 id="Problem-56-2">Problem 56-2<a class="anchor-link" href="#Problem-56-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>For blog post draft #3, I want you to do the following:</p>
+<p><strong>George: Linear and Logistic Regression, Part 1: Understanding the Models</strong></p>
+<ol>
+<li><p>Make plots of the images you wanted to include, and insert them into your post. You can use character arguments in <code>plt.plot()</code>; here's <a href="https://matplotlib.org/2.1.2/api/_as_gen/matplotlib.pyplot.plot.html">a reference</a></p>
+</li>
+<li><p>You haven't really hit on <em>why</em> the logistic model takes a sigmoid shape. You should talk about the $e^{\beta x}$ term, where $\beta$ is negative. What happens when $x$ gets really negative? What happens when $x$ gets really positive?</p>
+</li>
+<li><p>For your linear regression, you should use coefficients $\beta_0, \beta_1, \ldots$ just like you did in the logistic regression. This will help drive the point home that logistic regression is just a transformation of linear regression.</p>
+</li>
+<li><p>We're ready to move onto the text editing phase! The next time you submit your blost, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Colby: Linear and Logistic Regression, Part 2: Fitting the Models</strong></p>
+<ol>
+<li><p>You haven't defined what $y'$ means. Be sure to do that</p>
+</li>
+<li><p>You've got run-on sentences and incorrect comma usage everywhere. Fix that. Read each sentence aloud and make sure it makes sense as a complete sentence.</p>
+</li>
+<li><p>In your explanation of the pseudoinverse, you say that it's a generalization of the matrix inverse when the matrix may not be invertible. That's correct. But you should also explain why, in our case, the matrix $X$ is not expected to be invertible. (Think: only square matrices are invertible. Is $X$ square?)</p>
+</li>
+<li><p>Your matrix entries are backwards. For example, the first row should be $x_{11}, x_{12}, \ldots, x_{1n}.$</p>
+</li>
+<li><p>Wherever you use <code>ln</code>, you should use <code>\ln</code> instead.</p>
+</li>
+<li><p>In your linear/logistic regression functions, you should use $x_1, x_2, \ldots, x_m$ instead of $a,b, \ldots z.$</p>
+</li>
+<li><p>In your examples of the linear and logistic regression, you should use 3-dimensional data points instead of just 2-dimensional data point. This way, your example can demonstrate how you deal with multiple input variables. Also, you should set up some context around the example. Come up with a concrete situation in which your data points could be observations, and you want to predict something.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Riley: Linear and Logistic Regression, Part 3: Categorical Variables, Interaction Terms, and Nonlinear Transformations of Variables</strong></p>
+<ol>
+<li><p>Instead of inserting a screenshot of the raw data, put it in a data table. See the <a href="https://www.overleaf.com/read/wjmgkxpccvpj">template</a> for how to create data tables.</p>
+</li>
+<li><p>You have some models in text: <code>y = a(roast
+beef)+b(peanut butter)</code> and <code>y = a(roast beef)+b(peanut butter)+c(roast beef)(peanut butter).</code> These should be on their own lines, as equations.</p>
+</li>
+<li><p>There are some sections where the wording is really confusing. Proofread your paper and make sure that everything is expressed clearly. For example, this is not expressed clearly:</p>
+<blockquote><p><code>So for example we could not regress y = x^a. The most important attribute of this is that we can plot a logistic regression using this method. This is possible because the format of the logistic regression is ...</code>.</p>
+</blockquote>
+</li>
+<li><p>At the very end, when you talk about transforming a dataset to fit a quadratic, it's not clear what you're doing. (I know what you're trying to say, but if I didn't already know, then I'd probably be confused.) You should explain how, in general, if we want to fit a nonlinear regression model
+$$
+y= \beta_1 f_2(x_1) + \beta_2 f_2(x_2) + \cdots,
+$$
+then we have to transform the data as
+$$
+(x_1, x_2, \ldots ,y) \to  (f_1(x_1), f_2(x_2), \ldots, y)
+$$
+and then fit a linear regression to the points of the form $(f_1(x_1), f_2(x_2), \ldots, y).$</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>David: Predator-Prey Modeling with Euler Estimation</strong></p>
+<ol>
+<li><p>Fix your latex formatting -- follow the <a href="https://eurisko-us.github.io/resources/#latex-commandments">latex commandments</a>.</p>
+</li>
+<li><p>Use pseudocode formatting (see the <a href="https://www.overleaf.com/read/wjmgkxpccvpj">template</a>)</p>
+</li>
+<li><p>In the predator-prey model that you stated, you need to explain where each term comes from. You've sort of hit on this below the model, but you haven't explicitly paired each individual term with its explanation. Also, why do we multiply the $DW$ together for some of the terms? Imagine that the reader knows what a derivative is, but has no experience using a differential equation for modeling purposes.</p>
+</li>
+<li><p>You should also explain that this equation is difficult to solve analytically, so that's why we're going to turn to Euler estimation.</p>
+</li>
+<li><p>You should explain where these recurrences come from. Why does this provide a good estimation of the function? (You should talk about rates of change)
+$$\begin{align*}D(t + \Delta t) &amp;\approx D(t) + D'(t) \Delta t \\ W(t + \Delta t) &amp;\approx W(t) + W'(t) \Delta t \end{align*}$$</p>
+</li>
+<li><p>When explaining Euler estimation, you should show the computations for the first few points in the plot. This way, the reader can see a concrete example of the process that you're actually carrying out to generate the plot.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Elijah: Solving Magic Squares using Backtracking</strong></p>
+<p>Make sure that the rest of your content is there on the next draft:</p>
+<ol>
+<li><p>How can you overcome the inefficiency of brute-force search using "backtracking", i.e. intelligent search? <a href="https://en.wikipedia.org/wiki/Sudoku_solving_algorithms#Backtracking">https://en.wikipedia.org/wiki/Sudoku_solving_algorithms#Backtracking</a></p>
+</li>
+<li><p>Write some code for how to implement backtracking using a bunch of nested for loops (i.e. the ugly solution). Run some actual simulations to see how long it takes you to find a solution to a 3x3 magic square using backtracking. Then try the 4x4, 5x5, etc and make a graph.</p>
+</li>
+<li><p>How can you write the code more compactly using a single while loop?</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-56-3">Problem 56-3<a class="anchor-link" href="#Problem-56-3">&#182;</a></h1><p>Complete Module 1 AND Module 2 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of your quiz results for each module and submit both screenshots with your assignment.</p>
 
 </div>
 </div>
@@ -13641,7 +13802,7 @@ $$\begin{align*}
 &amp;= \underset{\text{class}}{\arg\max} \,  P(\text{class}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{class}) \\
 \end{align*}$$<p>The key assumption (used in the final line) is that all the features are independent:</p>
 $$\begin{align*}
-P(\text{observation} \, | \, \text{class}) = \prod\limits_{\text{observed} \\ \text{features}} P(\text{feature} \, | \, \text{class})
+P(\text{observed features} \, | \, \text{class}) = \prod\limits_{\text{observed} \\ \text{features}} P(\text{feature} \, | \, \text{class})
 \end{align*}$$<hr>
 <p>Suppose that you want to find a way to classify whether an email is a phishing scam or not, based on whether it has errors and whether it contains links.</p>
 <p>After checking 10 emails in your inbox, you came up with the following data set:</p>
@@ -13653,7 +13814,7 @@ P(\text{observation} \, | \, \text{class}) = \prod\limits_{\text{observed} \\ \t
 <li>No errors, contains links; NOT scam</li>
 <li>Contains errors, contains links; SCAM</li>
 <li>Contains errors, no links; NOT scam</li>
-<li>No errors, contsins links; NOT scam</li>
+<li>No errors, contains links; NOT scam</li>
 <li>Contains errors, no links; SCAM</li>
 <li>No errors, contains links; NOT scam</li>
 </ol>
@@ -13670,7 +13831,7 @@ P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature}
 $$<p><strong>c.</strong> Contains errors, no links. You should get</p>
 $$
 P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = \dfrac{1}{10} \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{20}.
-$$<p><strong>d.</strong> No links, contains errors. You should get</p>
+$$<p><strong>d.</strong> No errors, contains links. You should get</p>
 $$
 P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = 0 \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{4}.
 $$
