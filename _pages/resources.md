@@ -140,7 +140,7 @@ author_profile: false
   <br>Assignments requiring written text or math should be done in LaTeX using the <a class="body" href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko assignment template</a>.<br>
   
 <font size="3em"><ul>
-  <li><b>Text inside of equations:</b> use <code>$\mathrm{my_variable} = 2$</code> $\mathrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
+  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$</li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</li>
