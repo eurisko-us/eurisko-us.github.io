@@ -52,8 +52,6 @@ author_profile: false
 
 <br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, and satisfies ALL the requirements outlined in the assignment!
 
-<br><br>Assignments requiring written text or math should be done in LaTeX using the <a class="body" href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko assignment template</a>.
-
 
 <!--
 <br><br>
@@ -138,15 +136,18 @@ author_profile: false
 ## [<center>LaTeX Commandments</center>](#latex-commandments)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
+  
+  <br>Assignments requiring written text or math should be done in LaTeX using the <a class="body" href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko assignment template</a>.<br>
+  
 <font size="3em"><ul>
-  <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
+  <li><b>Text inside of equations:</b> use <code>$\mathrm{my_variable} = 2$</code> $\mathrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$</li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment: <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</li>
-  <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \textrm{d}x$</code> $\displaystyle \int_0^1 x \, \textrm{d}x,$ not <code>$\int x dx$</code>$\int_0^1 x dx$</li>
+  <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \mathrm{d}x$</code> $\displaystyle \int_0^1 x \, \mathrm{d}x,$ not <code>$\int x dx$</code>$\int_0^1 x dx$</li>
   <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code> $\left. \dfrac{x^2}{2} \right|_{12}^{15},$ not <code>$\frac{x^2}{2} \right|_12^15$</code> $\frac{x^2}{2} |_12^15.$</li>
   <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code> $\lim\limits_{x \to 0} f(x),$ not <code>$\lim_{x \to 0} f(x)$</code> $\lim_{x \to 0} f(x).$</li>
-  <li><b>Expectation and variance:</b> use <code>$\text{E}[X] \text{Var}[X]$</code> $\text{E}[X] \, \text{Var}[X],$ not <code>$E[X] Var[X]$</code> $E[X] \, Var[X].$</li>
+  <li><b>Expectation and variance:</b> use <code>$\mathrm{E}[X] \mathrm{Var}[X]$</code> $\mathrm{E}[X] \, \mathrm{Var}[X],$ not <code>$E[X] Var[X]$</code> $E[X] \, Var[X].$</li>
   </ul></font>
 </div>
 
