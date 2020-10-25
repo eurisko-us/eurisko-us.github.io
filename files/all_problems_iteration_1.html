@@ -13248,14 +13248,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>PageRank</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> (20 points) Integrate your strategy player into your game. Your strategy player and game need to follow the specifications below, so that you'll be able to run the strategy players of your classmates as well.</p>
 <ul>
 <li>asdf</li>
@@ -13527,16 +13519,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>PageRank by hand</p>
-<p><a href="https://www.coursera.org/lecture/networks-illustrated/pagerank-example-calculation-iSfuF">https://www.coursera.org/lecture/networks-illustrated/pagerank-example-calculation-iSfuF</a></p>
-<p><a href="http://www.cs.cmu.edu/~elaw/pagerank.pdf">http://www.cs.cmu.edu/~elaw/pagerank.pdf</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
 
 </div>
@@ -13586,6 +13568,51 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/hebbian_learning.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Spike-timing dependent plasticity -- causal updates</p>
+$$\begin{align*}
+\dfrac{\textrm d w_{\textrm{pre},\textrm{post}}}{\textrm dt} &amp;= \int_{\delta}^{-\delta} V_\textrm{post}(t) V_\textrm{pre}(t - \tau)  \cdot \tau e^{-|\tau / 10 \, \textrm{ms}|} \, \textrm d\tau
+\end{align*}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/hebbian_learning.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Update weight from presynaptic neuron to postsynaptic neuron.</p>
+<p>Hebbian weight updates: fire together, wire together</p>
+$$
+\dfrac{\textrm d w_{\textrm{pre},\textrm{post}}}{\textrm dt} = \int_{\delta}^{-\delta} V_\textrm{post}(t) V_\textrm{pre}(t - \tau) \cdot e^{-|\tau/10\, \textrm{ms}|} \, \textrm d\tau
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/different_network_types.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Generate raster plots for: small world, scale free, ...</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>PageRank by hand. Later, implement in directed graph.</p>
+<p><a href="https://www.coursera.org/lecture/networks-illustrated/pagerank-example-calculation-iSfuF">https://www.coursera.org/lecture/networks-illustrated/pagerank-example-calculation-iSfuF</a></p>
+<p><a href="http://www.cs.cmu.edu/~elaw/pagerank.pdf">http://www.cs.cmu.edu/~elaw/pagerank.pdf</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/10-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p><strong>a.</strong> Simulate a 10-neuron network with connectivity $1 \to 2 \to 3 \to \cdots \to 10.$ You should get the following result:</p>
@@ -13628,7 +13655,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-57-1">Problem 57-1<a class="anchor-link" href="#Problem-57-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/k_nearest_neighbors_classifier</code></p>
+<h1 id="Problem-57-1">Problem 57-1<a class="anchor-link" href="#Problem-57-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/k_nearest_neighbors_classifier.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Create a class <code>KNearestNeighborsClassifier</code> that works as follows. <strong>Leverage existing methods in your DataFrame class to do the brunt of the processing.</strong></p>
 
@@ -13781,6 +13808,15 @@ The neural network resembles a directed graph:
 &gt;&gt;&gt; euler.plot([0, 80], step_size = 0.001)</code></pre>
 <p>You should get the following result:</p>
 <center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-57-3">Problem 57-3<a class="anchor-link" href="#Problem-57-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Complete Module 3 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+
 </div>
 </div>
 </div>
