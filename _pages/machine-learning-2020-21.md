@@ -21,6 +21,7 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-1">KNearestNeighborsClassifier</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-2">BiologicalNeuralNetwork - 3 Neurons</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-3">Sololearn C++ Module 3</a></li>
         </ul></font>
     </li>
     <br>
