@@ -149,7 +149,7 @@ author_profile: false
   <li><b>Arrows under limits:</b> use <code>$\lim\limits_{x \to 0} f(x)$</code> $\lim\limits_{x \to 0} f(x),$ not <code>$\lim_{x \to 0} f(x)$</code> $\lim_{x \to 0} f(x).$</li>
   <li><b>Expectation and variance:</b> use <code>$\mathrm{E}[X] \mathrm{Var}[X]$</code> $\mathrm{E}[X] \, \mathrm{Var}[X],$ not <code>$E[X] Var[X]$</code> $E[X] \, Var[X].$</li>
   <li><b>Conditional probability:</b> use <code>$P(\textrm{new event} \, | \, \textrm{old event})$</code> $P(\textrm{new event} \, | \, \textrm{old event}),$ not <code>$P(new event | old event)$</code> $P(new event | old event).$</li>
-  <li><b>Multiplication:</b> use <code>$P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B)$</code> $P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B),$ not <code>$P(A) * P(B).$</li>
+  <li><b>Multiplication:</b> use <code>$P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B)$</code> $P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B),$ not <code>$P(A) * P(B)$</code> $P(A) * P(B).$</li>
   </ul></font>
 </div>
 
