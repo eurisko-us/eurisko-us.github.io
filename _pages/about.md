@@ -33,11 +33,12 @@ These students have already learned a large amount of college-level math, includ
   
 <br><br><b>What kinds of things are the students building?</b><br>
   
-<font size="3em">First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, decision trees, random forests, neural networks, and various reinforcement learning models) on top of these classes. Students also implement their own optimization algorithms, reinforcement learning algorithms, clustering & dimenionality reduction algorithms, and differential equations simulators. To tie everything together, students write their own massively multiplayer game and develop self-improving game-playing agents.</font>
+<font size="3em">First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, decision trees, random forests, neural networks, and various reinforcement learning models) on top of these classes. Students also implement their own optimization algorithms, reinforcement learning algorithms, clustering & dimenionality reduction algorithms, and differential equations simulators. To tie everything together, students write their own massively multiplayer game and develop self-improving game-playing agents. Alongside the code, students also learn the theory and applications of probability & statistics, including Bayesian inference.</font>
 
-<br><br><b>Do the students learn more math, too?</b><br>
+<br><br><b>Where does the name "Eurisko" come from?</b><br>
 
-<font size="3em">Yes. Alongside the code, students also learn the theory and applications of probability & statistics, including advanced techniques such as Bayesian inference and stochastic differential equations.
+<font size="3em">
+  "Eurisko" is Greek for "I discover", and is the namesake of an AI system from the 1980s that won a particular game competition twice in a row, even when the rules were changed in attempt to handicap it (<a class="body" target="_blank" href="https://en.wikipedia.org/wiki/Eurisko">read more here</a>). We're all about discovering and applying knowledge.
 </font>
 
 
