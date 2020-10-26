@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="24">
     <li><b>Monday, October 26</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/471478206">Class Recording</a>-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/472298620">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-24-1">EulerEstimator</a></li>
