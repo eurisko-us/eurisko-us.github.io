@@ -13527,7 +13527,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/hebbian_learning.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/hebbian_learning.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Spike-timing dependent plasticity -- causal updates</p>
 $$\begin{align*}
@@ -13539,7 +13539,7 @@ $$\begin{align*}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/hebbian_learning.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/hebbian_learning.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Update weight from presynaptic neuron to postsynaptic neuron.</p>
 <p>Hebbian weight updates: fire together, wire together</p>
@@ -13552,7 +13552,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/different_network_types.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/different_network_types.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Generate raster plots for: small world, scale free, ...</p>
 
@@ -13572,7 +13572,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/10-neuron-network.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/10-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p><strong>a.</strong> Simulate a 10-neuron network with connectivity $1 \to 2 \to 3 \to \cdots \to 10.$ You should get the following result:</p>
 <center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-10neurons.png' border='0'/></center><p><strong>b.</strong> The plot above is really hard to interpret! So let's plot it a way that makes the most important information more clear. The most important information is when the neurons spiked. We'll say that a spike occurs whenever $V &gt; 50 \, \textrm{mV}.$</p>
@@ -13678,7 +13678,7 @@ $$</p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Create a class <code>KNearestNeighborsClassifier</code> that works as follows. <strong>Leverage existing methods in your DataFrame class to do the brunt of the processing.</strong></p>
 
-<pre><code>&gt;&gt;&gt; df = DataFrame(
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
     [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
     ['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
     ['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
@@ -13694,7 +13694,6 @@ $$</p>
     ['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]],
     columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
     )
-&gt;&gt;&gt; df = df.remove_columns(['ID'])
 &gt;&gt;&gt; knn = KNearestNeighborsClassifier(df, prediction_column = 'Cookie Type')
 &gt;&gt;&gt; observation = {
     'Portion Eggs': 0.10,
