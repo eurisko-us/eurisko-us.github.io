@@ -8,7 +8,7 @@ author_profile: false
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
-<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#troubleshooting">Troubleshooting</a></b></center></font>
+<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#debugging101">Debugging 101</a> • <a class="body" href="https://eurisko-us.github.io/resources/#replit-github-integration-troubleshooting">Repl.it-Github Integration Troubleshooting</a></b></center></font>
 </div>
 
 ## [<center>Class Meetings</center>](#class-meetings)
@@ -397,7 +397,18 @@ author_profile: false
   
 </div>
 
-## [<center>Troubleshooting</center>](#troubleshooting)
+## [<center>Debugging 101</center>](#debugging101)
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+  
+  <br>Coming soon!<br>
+  
+<font size="3em"><ul>
+  <li><b>asdf:</b> asdf</li>
+  </ul></font>
+</div>
+
+## [<center>Repl.it-Github Integration Troubleshooting</center>](#replit-github-integration-troubleshooting)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 
