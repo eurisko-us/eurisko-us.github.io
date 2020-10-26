@@ -401,11 +401,14 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto"> 
   
-  <br>Coming soon!<br>
+  <br>Before you ask for help on a problem, you need to make a thorough effort to debug the issue on your own. Here is how you debug:<br>
   
-<font size="3em"><ul>
-  <li><b>asdf:</b> asdf</li>
-  </ul></font>
+<font size="3em"><ol>
+  <li><b>Print out everything.</b> Within the function that you're debugging, print out every manipulation that your code makes, even if you don't think it's making a mistake there. (Bugs often show up in places you don't expect.) Also, don't just print out the values of variables -- rather, you should label your printouts with text descriptions of what they represent.</li>
+  <li><b>Identify the first discrepancy.</b> Manually work out what the printouts should be, and then look for the first instance when the actual printouts deviate from what you're expecting.</li>
+  <li><b>If the discrepancy involves a helper function, then isolate the issue in a separate file and return to step 1.</b> If the issue is occuring when you're passing inputs into a helper function, then create a separate file where all you do is pass those inputs into the helper function. Now, you need to debug the helper function, which means you go back to step 1 (print out everything) with this helper function.</li>
+  <li><b>If the discrepancy does not involve a helper function and you still can't figure out what's going wrong, then post on #help.</b> In your post, explain what you've done to debug the issue so far, including the furthest point back to which you've traced the bug. Keep your debugging print statements in your function.</li>
+  </ol></font>
 </div>
 
 ## [<center>Repl.it-Github Integration Troubleshooting</center>](#replit-github-integration-troubleshooting)
