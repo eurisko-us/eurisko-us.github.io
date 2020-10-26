@@ -13466,14 +13466,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>KMeans class</p>
 
 </div>
@@ -13519,14 +13511,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>HH network -- how many neurons until you get an infinite loop of spikes?</p>
 
 </div>
@@ -13536,31 +13520,6 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>blog post</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
-
-<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
-&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
-<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><ul>
-<li><p>Complete Module 3 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of your module quiz results and submit it with your assignment.</p>
-</li>
-<li><p>Complete Module 1 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of your module quiz results and submit it with your assignment.</p>
-</li>
-</ul>
 
 </div>
 </div>
@@ -13633,7 +13592,23 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/3-neuron-network.py</code></p>
+<h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-2">Problem 59-2<a class="anchor-link" href="#Problem-59-2">&#182;</a></h1><p><code>KFoldCrossValidator</code> class - should work with <code>kNearestNeighbors</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-3">Problem 59-3<a class="anchor-link" href="#Problem-59-3">&#182;</a></h1><p><strong>Location:</strong> <code>simulations/analysis/3-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>There are a couple things we need to update in our <code>BiologicalNeuron</code> and <code>BiologicalNeuralNetwork</code>, to make the model more realistic.</p>
 <p><strong>a.</strong> A synapse only releases neurotransmitters when a neuron has "fired". So, the voltage due to synapse inputs should not be a sum of all the raw voltages of the corresponding neurons. Instead, we should only sum the voltages that are over some threshold, say, $50 \, \textrm{mV}.$</p>
@@ -13649,6 +13624,50 @@ s(t) = \begin{cases}
 $$</p>
 <p>You should get the following result:</p>
 <center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons-improved.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-4">Problem 59-4<a class="anchor-link" href="#Problem-59-4">&#182;</a></h1><ul>
+<li><p>Complete Module 4 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+</li>
+<li><p>Complete Module 1 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-2">Problem 58-2<a class="anchor-link" href="#Problem-58-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+
+<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
+&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
+<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-3">Problem 58-3<a class="anchor-link" href="#Problem-58-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>blog post</p>
+
 </div>
 </div>
 </div>
@@ -13765,9 +13784,26 @@ Note: the above has been rounded to 3 decimal places for ease of viewing, but yo
 <li><p><code>synapses</code> - a list of "directed edges" that correspond to connections between neurons</p>
 </li>
 </ul>
-<p>To simulate your <code>BiologicalNeuralNetwork</code>, you will use an <code>EulerEstimator</code> where <code>x</code> is a long array of derivatives of <code>V,n,m,h</code> for each neuron. So, if you are simulating 3 neurons, then your <code>x</code> will be an array of $4 \times 3 = 12$ functions.</p>
-<p>Note that you will have to add extra terms to the voltage derivatives represent the synapses. The updated derivative of voltage is as follows:
+<p>To simulate your <code>BiologicalNeuralNetwork</code>, you will use an <code>EulerEstimator</code> where <code>x</code> is a long array of <code>V,n,m,h</code> for each neuron. So, if you are simulating 3 neurons (neurons 0,1,2), then you will be passing in $4 \times 3 = 12$ derivatives:</p>
+$$
+\mathbf{x} = (V_0, n_0, m_0, h_0, V_1, n_1, m_1, h_1, V_2, n_2, m_2, h_2)
+$$<p>Note that you will have to add extra terms to the voltage derivatives represent the synapses. The updated derivative of voltage is as follows:
 $$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \end{matrix}} V_{\text{other neuron}}(t) \right)}_\text{interactions with other neurons}.$$</p>
+<p>So, in the case of 3 neurons connected as $0 \to 1 \to 2,$ the full system of equations would be as follows:</p>
+$$\begin{align*}
+\dfrac{\textrm dV_0}{\textrm dt} &amp;= \textrm{neuron_0.dV}(V_0,n_0,m_0,h_0) \\
+\dfrac{\textrm dn_0}{\textrm dt} &amp;= \textrm{neuron_0.dn}(V_0,n_0,m_0,h_0) \\
+\dfrac{\textrm dm_0}{\textrm dt} &amp;= \textrm{neuron_0.dm}(V_0,n_0,m_0,h_0) \\
+\dfrac{\textrm dh_0}{\textrm dt} &amp;= \textrm{neuron_0.dh}(V_0,n_0,m_0,h_0) \\
+\dfrac{\textrm dV_1}{\textrm dt} &amp;= \textrm{neuron_1.dV}(V_1,n_1,m_1,h_1) + \dfrac{1}{\textrm{neuron_1.C}} V_0(t) \\
+\dfrac{\textrm dn_1}{\textrm dt} &amp;= \textrm{neuron_1.dn}(V_1,n_1,m_1,h_1) \\
+\dfrac{\textrm dm_1}{\textrm dt} &amp;= \textrm{neuron_1.dm}(V_1,n_1,m_1,h_1) \\
+\dfrac{\textrm dh_1}{\textrm dt} &amp;= \textrm{neuron_1.dh}(V_1,n_1,m_1,h_1) \\
+\dfrac{\textrm dV_2}{\textrm dt} &amp;= \textrm{neuron_2.dV}(V_2,n_2,m_2,h_2) + \dfrac{1}{\textrm{neuron_2.C}} V_1(t) \\
+\dfrac{\textrm dn_2}{\textrm dt} &amp;= \textrm{neuron_2.dn}(V_2,n_2,m_2,h_2) \\
+\dfrac{\textrm dm_2}{\textrm dt} &amp;= \textrm{neuron_2.dm}(V_2,n_2,m_2,h_2) \\
+\dfrac{\textrm dh_2}{\textrm dt} &amp;= \textrm{neuron_2.dh}(V_2,n_2,m_2,h_2)
+\end{align*}$$<p>Test your <code>BiologicalNeuralNetwork</code> as follows:</p>
 
 <pre><code>&gt;&gt;&gt; def electrode_voltage(t):
         if t &gt; 10 and t &lt; 11:
@@ -13790,10 +13826,10 @@ $$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\te
             return 150
         return 0
 
-&gt;&gt;&gt; neuron_1 = BiologicalNeuron(stimulus = electrode_voltage)
+&gt;&gt;&gt; neuron_0 = BiologicalNeuron(stimulus = electrode_voltage)
+&gt;&gt;&gt; neuron_1 = BiologicalNeuron()
 &gt;&gt;&gt; neuron_2 = BiologicalNeuron()
-&gt;&gt;&gt; neuron_3 = BiologicalNeuron()
-&gt;&gt;&gt; neurons = [neuron_1, neuron_2, neuron_3]
+&gt;&gt;&gt; neurons = [neuron_0, neuron_1, neuron_2]
 
 &gt;&gt;&gt; synapses = [(0,1), (1,2)]
 The neural network resembles a directed graph:
@@ -13806,8 +13842,7 @@ The neural network resembles a directed graph:
     )
 &gt;&gt;&gt; plt.plot([n/2 for n in range(160)], [electrode_voltage(n/2) for n in range(160)])
 &gt;&gt;&gt; euler.plot([0, 80], step_size = 0.001)</code></pre>
-<p>You should get the following result:</p>
-<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons.png' border='0'/></center>
+<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons-noDelay.png' border='0'/></center>
 </div>
 </div>
 </div>
