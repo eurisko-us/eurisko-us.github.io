@@ -5,6 +5,10 @@ permalink: /courses/
 author_profile: false
 ---
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><b><hr>Links to current assignments: <a class="body" target="_blank" href="https://eurisko-us.github.io/computation-and-modeling-2020-21">Computation & Modeling</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/machine-learning-2020-21">Machine Learning</a><hr></b></center></p>
+</div>
+
 # [<center>Courses</center>](#top)
 
 <div style="width:100%; max-width:800px; margin:auto">  
