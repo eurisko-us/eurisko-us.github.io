@@ -14,13 +14,23 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="57">
+<font size="3em"><ol reversed start="58">
+    <li><b>Wednesday, October 28</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/472298648">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-1">Introduction to Cross-Validation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-2">BiologicalNeuralNetwork - 3 Neurons (Fully Working Code)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-3">Blog Post Draft 4</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, October 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/472298648">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-1">KNearestNeighborsClassifier</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-2">BiologicalNeuralNetwork - 3 Neurons</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-2">BiologicalNeuralNetwork - 3 Neurons (Skeleton Code)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-57-3">Sololearn C++ Module 3</a></li>
         </ul></font>
     </li>
