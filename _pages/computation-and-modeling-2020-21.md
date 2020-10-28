@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="24">
+<font size="3em"><ol reversed start="25">
+    <li><b>Wednesday, October 28</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/472298620">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-25-1">2-Variable Gradient Descent</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-25-2">DataFrame: Select</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, October 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/472298620">Class Recording</a>
         <br>Assignment Problems:
