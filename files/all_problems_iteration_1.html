@@ -13592,7 +13592,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Quicksort</p>
 
 </div>
 </div>
@@ -13600,7 +13600,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-59-2">Problem 59-2<a class="anchor-link" href="#Problem-59-2">&#182;</a></h1><p><code>KFoldCrossValidator</code> class - should work with <code>kNearestNeighbors</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>KFoldCrossValidator</code> class - should work with <code>kNearestNeighbors</code></p>
 
 </div>
 </div>
@@ -13608,7 +13608,23 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-59-3">Problem 59-3<a class="anchor-link" href="#Problem-59-3">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/3-neuron-network.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>All of these: <a href="https://napier.sqlzoo.net/wiki/SQL_Tutorial">https://napier.sqlzoo.net/wiki/SQL_Tutorial</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/3-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>There are a couple things we need to update in our <code>BiologicalNeuron</code> and <code>BiologicalNeuralNetwork</code>, to make the model more realistic.</p>
 <p><strong>a.</strong> A synapse only releases neurotransmitters when a neuron has "fired". So, the voltage due to synapse inputs should not be a sum of all the raw voltages of the corresponding neurons. Instead, we should only sum the voltages that are over some threshold, say, $50 \, \textrm{mV}.$</p>
@@ -13630,7 +13646,21 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-59-4">Problem 59-4<a class="anchor-link" href="#Problem-59-4">&#182;</a></h1><ul>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+
+<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
+&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
+<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<ul>
 <li><p>Complete Module 4 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
 </li>
 <li><p>Complete Module 1 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
@@ -13644,7 +13674,43 @@ $$</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
-<p>kNN - create test set; choose k so as to minimize error on test set. k-fold cross val</p>
+<p>Recall the following cookie dataset (that has been augmented with some additional examples):</p>
+
+<pre><code>['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+[['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
+['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
+['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
+['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
+['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]]</code></pre>
+<p>When fitting our k-nearest neighbors models, we have been using this dataset to predict the type of a cookie based on its ingredient portions. We've also seen that issues can arise when $k$ is too small or too large.</p>
+<p><strong>So, what is a good value of $k?$</strong></p>
+<p><strong>a.</strong> To explore this question, plot the function
+$$
+y= \text{percent_correct}(k), \qquad k=1,2,3, \ldots, 16,
+$$
+where $\text{percent_correct}(k)$ is the percentage of points in the dataset that the $k$-nearest neighbors model would classify correctly.</p>
+
+<pre><code>for each data point:
+    1. fit a kNN model to all the data EXCEPT that data point
+    2. use the kNN model to classify the data point
+    3. determine whether the kNN classification matches up
+       with the actual class of the data point
+
+percent_correct = num_correct_classifications / tot_num_data_points</code></pre>
+<p><strong>b.</strong> What does the general shape of the plot look like? Based on what you know about what happens when $k$ is too small or too large, does the shape of your plot makes sense?</p>
+<p><strong>c.</strong> What would be an appropriate value (or range of values) of $k$ for this modeling task? Justify your answer by referring to your plot.</p>
 
 </div>
 </div>
@@ -13653,11 +13719,57 @@ $$</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-58-2">Problem 58-2<a class="anchor-link" href="#Problem-58-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
-<p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
+<p>Get your <code>BiologicalNeuralNetwork</code> fully working. Note that there's a particular issue with defining functions within for loops that Elijah pointed out on Slack:</p>
+<blockquote><p>Consider the following code:</p>
 
-<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
-&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
-<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+<pre><code>funcs = []
+for i in range(10):
+    funcs.append(lambda x: x * i)
+for f in funcs:
+    print(f(5))</code></pre>
+<p>You'd expect to see 5, 10, 15, 20, 25, etc.<br>
+BUT what you actually get is 50, 50, 50, 50, 50, etc.<br>
+Instead of <code>i * 5</code>, it is just doing <code>10 * 5</code> <br>
+This is because the lambda refers to the place that <code>i</code> is stored in memory, which ends as <code>10</code>
+So instead of taking the current value of <code>i</code> and using it in the lambda, it will take the last value it was set to, before it is actually called.
+The way you fix this problem is:</p>
+
+<pre><code>funcs = []
+for i in range(10):
+    funcs.append(lambda x, i=i: x * i)
+for f in funcs:
+    print(f(5))</code></pre>
+</blockquote>
+<p>So, when you're getting your derivatives, you'll need to do the following:</p>
+
+<pre><code>network_derivatives = []
+for each neuron:
+
+    parent_indices = indices of neurons that send synapses to neuron i
+
+    # x is [V0, n0, m0, h0,
+    #       V1, n1, m1, h1,
+    #       V2, n2, m2, h2, ...]
+
+    network_derivatives += [
+        (
+            lambda t, x, i=i, neuron=neuron:
+                neuron.dV(t, x[4*i : (i+1)*4]) 
+                + 1/neuron.C * sum(x[p*4] for p in parent_indices)
+        ),
+        (
+            lambda t, x, i=i, neuron=neuron:
+                neuron.dn(t, x[4*i : (i+1)*4])
+        ),
+        (
+            lambda t, x, i=i, neuron=neuron:
+                neuron.dm(t, x[4*i : (i+1)*4])
+        ),
+        (
+            lambda t, x, i=i, neuron=neuron:
+                neuron.dh(t, x[4*i : (i+1)*4])
+        )
+    ]</code></pre>
 
 </div>
 </div>
@@ -13665,8 +13777,102 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-58-3">Problem 58-3<a class="anchor-link" href="#Problem-58-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
-<p>blog post</p>
+<h1 id="Problem-58-3">Problem 58-3<a class="anchor-link" href="#Problem-58-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>For blog post draft #4, I want you to do the following:</p>
+<p><strong>[to update] George: Linear and Logistic Regression, Part 1: Understanding the Models</strong></p>
+<ol>
+<li><p>Make plots of the images you wanted to include, and insert them into your post. You can use character arguments in <code>plt.plot()</code>; here's <a href="https://matplotlib.org/2.1.2/api/_as_gen/matplotlib.pyplot.plot.html">a reference</a></p>
+</li>
+<li><p>You haven't really hit on <em>why</em> the logistic model takes a sigmoid shape. You should talk about the $e^{\beta x}$ term, where $\beta$ is negative. What happens when $x$ gets really negative? What happens when $x$ gets really positive?</p>
+</li>
+<li><p>For your linear regression, you should use coefficients $\beta_0, \beta_1, \ldots$ just like you did in the logistic regression. This will help drive the point home that logistic regression is just a transformation of linear regression.</p>
+</li>
+<li><p>We're ready to move onto the text editing phase! The next time you submit your blost, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Colby: Linear and Logistic Regression, Part 2: Fitting the Models</strong></p>
+<ol>
+<li><p>In your explanation of the pseudoinverse, make sure to state that in most modeling contexts, our matrix $X$ is taller than it is wide, because we have lots of data points. So our matrix $X$ is usually not invertible because it is a tall rectangular matrix.</p>
+</li>
+<li><p>In your explanation of the pseudoinverse, be more careful with your language: the pseudoinverse $(\mathbf{X}^T\mathbf{X})^{-1}$ is <em>not</em> equivalent to the standard inverse $\mathbf{X}^{-1}.$ The equation $\mathbf{X} \vec \beta = \vec y$ is usually not solvable, because the standard inverse $\mathbf{X}^{-1}$ usually <em>does not exist.</em> But the pseudoinverse $(\mathbf{X}^T\mathbf{X})^{-1}$ usually does exist, and the solution $\vec \beta = (\mathbf{X}^T\mathbf{X})^{-1} \mathbf{X}^T \vec y$ minimizes the sum of squared error between the desired output $\vec y$ and the actual output $\mathbf{X} \vec \beta.$</p>
+</li>
+<li><p>Decide between bracket matrices (<code>bmatrix</code>) and parenthesis matrices (<code>pmatrix</code>). You sometiemes use <code>bmatrix</code>, and other times <code>pmatrix</code>. Choose one convention and stick to it.</p>
+</li>
+<li><p>On page 2, show the following intermediate steps (fill in the dots):
+$$\begin{align*}
+\vec \beta &amp;= \ldots \\
+\vec \beta &amp;= \begin{pmatrix} \cdot &amp; \cdot &amp; \cdot \\ \cdot &amp; \cdot &amp; \cdot \\ \cdot &amp; \cdot &amp; \cdot \end{pmatrix}^{-1} \begin{pmatrix} 1 &amp; 1 &amp; 1 &amp; 1 \\ 0 &amp; 1 &amp; 0 &amp; 4 \\ 0 &amp; 0 &amp; 2 &amp; 5 \end{pmatrix} \begin{pmatrix} 0.1 \\ 0.2 \\ 0.5 \\ 0.6 \end{pmatrix} \\
+\vec \beta &amp;= \begin{pmatrix} \cdot &amp; \cdot &amp; \cdot &amp; \cdot \\ \cdot &amp; \cdot &amp; \cdot &amp; \cdot \\ \cdot &amp; \cdot &amp; \cdot &amp; \cdot \\ \cdot &amp; \cdot &amp; \cdot &amp; \cdot \end{pmatrix} \begin{pmatrix} 0.1 \\ 0.2 \\ 0.5 \\ 0.6 \end{pmatrix} \\
+\vec \beta &amp;= \ldots
+\end{align*}$$</p>
+</li>
+<li><p>Remove any parts of your code that are not relevant to the blog post (even if you used them for some part of an assignment). For example, you should remove the rounding part from <code>apply_coeffs</code>.</p>
+</li>
+<li><p>Make sure your code follows the same conventions everywhere. For example, you sometimes say <code>coefficients</code>, and other times just <code>coeffs</code>. For the purposes of this blog post, we want to be as clear as possible, so always use <code>coefficients</code> instead of <code>coeffs</code>.</p>
+</li>
+<li><p>Make your code tight so that there is zero redundancy. For example, in <code>__init__</code>, the argument <code>ratings</code> is redundant because these values are already in your dataframe, and you already have a variable <code>prediction_column</code> that indicates the relevant column in your dataframe. So eliminate <code>ratings</code> from your code.</p>
+</li>
+<li><p>After you do the steps above, we're ready to move onto the text editing phase! The next time you submit your blog post, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Riley: Linear and Logistic Regression, Part 3: Categorical Variables, Interaction Terms, and Nonlinear Transformations of Variables</strong></p>
+<ol>
+<li><p>In the statements of your models, you need a constant term, and you need to standardize your coefficient labels and your variable names. You use different conventions in a lot of places -- sometimes you call the coefficients $a,b,c,\ldots,$ other times $c_1, c_2, c_3,\ldots,$ and other times $\beta_1,\beta_2,\beta_3,\ldots.$ Likewise, you sometimes say "beef" and "pb", while other times you say "roast beef" and "peanut butter". You need to standardize these names. I think using $\beta$'s or $c$'s for coefficients and abbreviations for variable names is preferable. So, for example, one of your equations would turn into $y = \beta_0 + \beta_1(\textrm{beef}) + \beta_2(\textrm{pb}) + \beta_3(\textrm{mayo}) + \beta_4(\textrm{jelly})$ or $y = c_0 + c_1(\textrm{beef}) + c_2(\textrm{pb}) + c_3(\textrm{mayo}) + c_4(\textrm{jelly}).$</p>
+</li>
+<li><p>After you do the steps above, we're ready to move onto the text editing phase! The next time you submit your blog post, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>David: Predator-Prey Modeling with Euler Estimation</strong></p>
+<ol>
+<li><p>Explain this more clearly:</p>
+<blockquote><p>Euler estimation works by adding the derivative of an equation to each given
+value over and over again. This is because the derivatives are the instantaneous
+rates of change so we add it at each point to accurately show the the equation.
+Adding each point up from an equation is also equivalent to an integral.</p>
+</blockquote>
+</li>
+<li><p>Clean up your code on page 3. It's hard to tell what's going on. Put these code snippets into a single clean function, and change up the naming/structure so that it's clear what's going on. The code doesn't have to be the same as what's actually in your Euler estimator.</p>
+</li>
+<li><p>After you do the steps above, we're ready to move onto the text editing phase! The next time you submit your blog post, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Elijah: Solving Magic Squares using Backtracking</strong></p>
+<ol>
+<li><p>In your nested for loops, you should be using <code>range(1,10)</code> because <code>0</code> is not considered as an element of the magic square.</p>
+</li>
+<li><p>In your code snippets, you should name everything very descriptively so that it's totally obvious what things represent. For example, instead of <code>s = int(len(arr)**0.5)</code>, you could say <code>side_length = int(len(arr)**0.5)</code>.</p>
+</li>
+<li><p>After you do the steps above, we're ready to move onto the text editing phase! The next time you submit your blog post, put it in a Google Doc and share it with me so that I can make "suggestions" on it.</p>
+</li>
+</ol>
 
 </div>
 </div>
@@ -13763,6 +13969,9 @@ Note: the above has been rounded to 3 decimal places for ease of viewing, but yo
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-57-2">Problem 57-2<a class="anchor-link" href="#Problem-57-2">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/3-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 15 points</p>
+<hr>
+<p><strong>IMPORTANT UPDATE:</strong>  I'm not going to take points off if your <code>BiologicalNeuralNetwork</code> isn't fully working. I'll expect to see at least the skeleton of it written, but there's this subtle thing with lambda functions that Elijah pointed out, that we need to talk about in class tomorrow.</p>
+<hr>
 <p>Create a Github repository named <code>simulation</code>, and organize the code as follows:</p>
 
 <pre><code>simulation/

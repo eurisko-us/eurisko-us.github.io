@@ -13119,7 +13119,104 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-24-1">Problem 24-1<a class="anchor-link" href="#Problem-24-1">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<h1 id="Problem-26-1">Problem 26-1<a class="anchor-link" href="#Problem-26-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p><strong>a.</strong> Extend your <code>Matrix</code> class to include a method <code>cofactor_method_determinant()</code> that computes the determinant recursively using the cofactor method.</p>
+<ul>
+<li><p><a href="https://www.chilimath.com/lessons/advanced-algebra/determinant-3x3-matrix/">Here</a> is an example of using the cofactor method on a $3 \times 3$ matrix</p>
+</li>
+<li><p><a href="http://mathcentral.uregina.ca/QQ/database/QQ.09.07/h/rav1.html">Here</a> is an example of using the cofactor method on a $4 \times 4$ matrix</p>
+</li>
+</ul>
+<p><strong>b.</strong> Ensure that your <code>cofactor_method_determinant()</code> passes the same exact tests that you already have for your <code>determinant()</code>.</p>
+<p><strong>c.</strong> In a file <code>machine-learning/analysis/rref_vs_cofactor_method_determinant.py</code>, create a $10 \times 10$ matrix and compute the determinant using <code>determinant()</code> and then <code>cofactor_method_determinant()</code>. Which one is faster, and why do you think it's faster? <strong>Write your answer as a comment in your code.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-25-1">Problem 25-1<a class="anchor-link" href="#Problem-25-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment_problems/gradient_descent.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<hr>
+<p>Extend your gradient descent function</p>
+
+<pre><code>gradient_descent(f,initial_point,alpha=0.01,delta=0.0001,num_iterations=10000)</code></pre>
+<p>to work on <strong>2-variable functions</strong>. The <code>initial_point</code> will take the form $(x_0, y_0),$ and you will repeatedly update your guesses as follows:</p>
+\begin{align*}
+x_{n+1} &amp;= x_n - \alpha f_x(x_n, y_n) \\
+y_{n+1} &amp;= y_n - \alpha f_y(x_n, y_n)
+\end{align*}<p>To estimate the partial derivatives $f_x(x_n,y_n)$ and $f_y(x_n,y_n),$ you will again use a central difference quotient:</p>
+\begin{align*}
+f_x(x_n, y_n) &amp;\approx \dfrac{f(x_n+ 0.5 \, \delta, y_n) - f(x_n- 0.5 \, \delta, y_n)}{\delta} \\
+f_y(x_n, y_n) &amp;\approx \dfrac{f(x_n, y_n+ 0.5 \, \delta) - f(x_n, y_n- 0.5 \, \delta)}{\delta} \\
+\end{align*}<hr>
+<p><strong>a.</strong> State the minimum of the function $f(x,y)=1+x^2+y^2.$ Put this as a comment in your code. (Don't use gradient descent yet -- you should be able to tell the minimum just by looking at the function.)</p>
+<p><strong>b.</strong> Use your gradient descent function to minimize $f(x,y)=1+x^2+y^2$ starting with the initial guess $(1,2).$</p>
+<ul>
+<li>Be sure to set the <code>num_iterations</code> high enough that you get very close to the actual minimum. Your result should match up with what you said in part (a).</li>
+</ul>
+<p><strong>c.</strong> Find the minimum of the function $f(x,y)=1+x^2 + 2x +y^2 - 9y$ using algebra. (You should complete the square -- <a href="https://math.stackexchange.com/questions/2746595/finding-the-equation-of-the-ellipse-by-completing-the-square">here's a refresher if you need it</a>.) Show the steps of your algebra as a comment in your code.</p>
+<p><strong>d.</strong> Use your gradient descent function to minimize $f(x,y)=1+x^2 + 2x +y^2 - 4y$ starting with the initial guess $(0,0).$</p>
+<ul>
+<li>Again, be sure to set the <code>num_iterations</code> high enough that you get very close to the actual minimum. Your result should match up with what you said in part (c).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-25-2">Problem 25-2<a class="anchor-link" href="#Problem-25-2">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/dataframe.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Create a class <code>DataFrame</code> that implements the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sarah': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
+&gt;&gt;&gt; df1.data_dict
+{
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sarah': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1.columns
+['Pete', 'John', 'Sarah']
+
+&gt;&gt;&gt; df1.to_array()
+[[1, 2, 3]
+ [0, 1, 1]
+ [1, 0, 4]
+ [0, 2, 0]]
+
+&gt;&gt;&gt; df2 = df1.select_columns(['Sarah', 'Pete'])
+&gt;&gt;&gt; df2.to_array()
+[[3, 1],
+ [1, 0],
+ [4, 1],
+ [0, 0]]
+
+&gt;&gt;&gt; df2.columns
+['Sarah', 'Pete']
+
+&gt;&gt;&gt; df3 = df1.select_rows([1,3])
+&gt;&gt;&gt; df3.to_array()
+[[0, 1, 1]
+ [0, 2, 0]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-24-1">Problem 24-1<a class="anchor-link" href="#Problem-24-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
 <p><strong>Locations:</strong></p>
 <blockquote><p><code>simulation/src/euler_estimator.py</code><br>
 <code>simulation/tests/test_euler_estimator.py</code><br></p>
@@ -13198,7 +13295,12 @@ $$\begin{align*}
 \begin{align*}
 P(\text{HHTTH} \, | \, k=0.5) &amp;= P(\text{H}\, | \, k=0.5) \cdot P(\text{H}\, | \, k=0.5) \cdot P(\text{T}\, | \, k=0.5) \cdot P(\text{T}\, | \, k=0.5) \cdot P(\text{H}\, | \, k=0.5) \\
 &amp;= \, ?
-\end{align*}<p><em>Check: your answer should come out to $0.03125 \, .$</em></p>
+\end{align*}
+<pre><code>\begin{align*}
+P(\text{HHTTH} \, | \, k=0.5) &amp;= P(\text{H}\, | \, k=0.5) \cdot P(\text{H}\, | \, k=0.5) \cdot P(\text{T}\, | \, k=0.5) \cdot P(\text{T}\, | \, k=0.5) \cdot P(\text{H}\, | \, k=0.5) \\
+&amp;= \, ?
+\end{align*}</code></pre>
+<p><em>Check: your answer should come out to $0.03125 \, .$</em></p>
 <hr>
 <p><strong>b.</strong> Compute the likelihood of the observed outcome if the coin were slightly biased towards heads, say $k=0.55.$ SHOW YOUR WORK!</p>
 \begin{align*}
@@ -13213,7 +13315,7 @@ P(\text{HHTTH} \, | \, k) &amp;= P(\text{H}\, | \, k) \cdot P(\text{H}\, | \, k)
 \end{align*}<p><em>Check: When you plug in $k=0.5,$ you should get the answer from part (a), and when you plug in $k=0.55,$ you should get the answer from part (b).</em></p>
 <hr>
 <p><strong>d.</strong> Plot a graph of $P(\text{HHTTH} \, | \, k)$ for $0 \leq k \leq 1,$ and <strong>include the graph in your writeup.</strong> (The <a href="https://eurisko-us.github.io/resources/#latex-commandments">template</a> includes an example of how to insert an image into a latex document.)</p>
-<p><em>Note: You can use the same plotting code as usual. You'll just need to come up with a list of many data points on the function $y = P(\text{HHTTH} \, | \, k).$</em></p>
+<p>For your plot, you can either use <code>tikzpicture</code> as shown in the template, or you can create a Python plot and insert it as a <code>png</code>.</p>
 
 </div>
 </div>
