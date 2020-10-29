@@ -395,50 +395,6 @@ author_profile: false
   <br>
 </details>
 
-<details>
-  <summary>waste other people's time</summary>
-  <br><font color="red"><b>Don't do this:</b></font>
-  <pre><code>
-  you get an error, and you think about for 30 seconds,
-  and then you post about it asking for help
-  </code></pre>
-  
-  <font color="green"><b>Do this instead:</b></font>
-  <pre><code>
-  do all that you can to figure out the error before asking for help
-  1. google the error!
-  2. keep clicking on links until everything you've read starts to sound
-     like something you read previously
-  3. walk away from the problem and then come back to it later
-  4. if you still can't figure it out, then write up a post on Slack.
-     Include the following:
-        * the error
-        * the part of your code
-        * the things that you've tried. This is really important for
-          the following reasons:
-              1. rubber ducky test (teddy bear test)
-              2. so other people don't think you're wasting their time
-  </code></pre>
-  <br>
-</details>
-
-<details>
-  <summary>waste your own time</summary>
-  <br><font color="red"><b>Don't do this:</b></font>
-  <pre><code>
-  spending 2 hours messing around with broken code
-  when you've already tried everything you can think of
-  </code></pre>
-  
-  <font color="green"><b>Do this instead:</b></font>
-  <pre><code>
-  Walk away from the problem and then come back to it later. 
-  If you still can't figure it out, then make a post for help
-  (that includes mention of all the things you've tried).
-  </code></pre>
-  <br>
-</details>
-
 </font>
   
 </div>
