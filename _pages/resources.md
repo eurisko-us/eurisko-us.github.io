@@ -146,7 +146,7 @@ author_profile: false
   <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$ This applies to brackets, braces, absolute value signs, etc, as well.</li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
-  <li><b>Vertical bars:</b> whenever you want to use a vertical bar <code>$|$</code> $|,$ it has to be in a math environment (e.g. between dollar signs, or in an align environment). Otherwise, if you try to use it as plain text, it will turn into a horizontal bar: <code>|</code> $\threeemdash$</li>
+  <li><b>Vertical bars:</b> whenever you want to use a vertical bar <code>$|$</code> $|,$ it has to be in a math environment (e.g. between dollar signs, or in an align environment). Otherwise, if you try to use it as plain text, it will turn into a horizontal bar: <code>|</code> ———</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment:<br>
     <pre><code>
     \begin{align*}
@@ -172,7 +172,7 @@ author_profile: false
   <li><b>Expectation and variance:</b> use <code>$\mathrm{E}[X] \mathrm{Var}[X]$</code> $\mathrm{E}[X] \, \mathrm{Var}[X],$ not <code>$E[X] Var[X]$</code> $E[X] \, Var[X].$</li>
   <li><b>Conditional probability:</b> use <code>$P(\textrm{new event} \, | \, \textrm{old event})$</code> $P(\textrm{new event} \, | \, \textrm{old event}),$ not <code>$P(new event | old event)$</code> $P(new event | old event).$</li>
   <li><b>Multiplication:</b> use <code>$P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B)$</code> $P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B),$ not <code>$P(A) * P(B)$</code> $P(A) * P(B).$</li>
-  <li><b>Running off the page:</b> if a line of math is running off the page, break it after a term midway and put the rest on the next line.<br>
+  <li><b>Running off the page:</b> if a line of math is running off the page, break it after a term midway and put the rest on the next line like this:<br>
     <pre><code>
     \begin{align*}
     \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x
@@ -187,7 +187,7 @@ author_profile: false
          &\quad + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x \\
          &\quad + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x,
      \end{align*}$<br>
-    not<br>
+    Don't keep it all on one line. So, don't do this:<br>
     <pre></code>
     \begin{align*}
     \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x = \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x
