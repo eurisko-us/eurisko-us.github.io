@@ -50,7 +50,7 @@ author_profile: false
 
 <br>Assignments will be submitted on Canvas. You will just need to paste links to your  repl.it files, e.g. <font size="3em"><code>https://repl.it/@jpskycak/assignment-problems/convert_numbers.py</code></font>
 
-<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, and satisfies ALL the requirements outlined in the assignment!
+<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, and satisfies ALL the requirements outlined in the assignment! Poor-quality assignments will not be graded.
 
 
 <!--
