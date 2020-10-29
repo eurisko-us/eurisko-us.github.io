@@ -5,8 +5,6 @@ permalink: /resources/
 author_profile: false
 --- 
 
-testing...
-
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
@@ -148,9 +146,16 @@ testing...
   <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$ This applies to brackets, braces, absolute value signs, etc, as well.</li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
-  <li><b>Vertical bars:</b> whenever you want to use a vertical bar <code>$|$</code> $|,$ it has to be in a math environment (e.g. between dollar signs, or in an align environment). Otherwise, if you try to use it as plain text, it will turn into a horizontal bar: <code>|</code> $---$</li>
+  <li><b>Vertical bars:</b> whenever you want to use a vertical bar <code>$|$</code> $|,$ it has to be in a math environment (e.g. between dollar signs, or in an align environment). Otherwise, if you try to use it as plain text, it will turn into a horizontal bar: <code>|</code> $\threeemdash$</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment:<br>
-    <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code><br>
+    <pre><code>
+    \begin{align*}
+    3x+2 &= 5 \\
+    3x &= 3 \\
+    x &= 1
+    \end{align*}
+    </code></pre>
+    <br>
     $\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1. \end{align*}$<br>
     Likewise, whenever you are simplifying an expression through multiple steps, use an align environment:<br>
 <pre><code>
@@ -170,21 +175,26 @@ testing...
   <li><b>Running off the page:</b> if a line of math is running off the page, break it after a term midway and put the rest on the next line.<br>
     <pre><code>
     \begin{align*}
-    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x &= \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x \\
-                                                          &\quad + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x
+    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x
+         &= \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x \\
+         &\quad + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x \\
+         &\quad + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x
      \end{align*}
-    </code></pre>
+    </code></pre><br>
     $\begin{align*}
-    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x &= \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x \\
-                                                          &\quad + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x,
-     \end{align*}$
-    not
+    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x
+         &= \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x \\
+         &\quad + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x \\
+         &\quad + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x,
+     \end{align*}$<br>
+    not<br>
+    <pre></code>
     \begin{align*}
-    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x = \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x
+    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x = \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x
      \end{align*}
-    </code></pre>
+    </code></pre><br>
     $\begin{align*}
-    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x = \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x,
+    \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x = \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x + \int x^7 \, \textrm{d}x + \int x^8 \, \textrm{d}x + \int x^9 \, \textrm{d}x.
      \end{align*}$</li>
   </ul></font>
 </div>
