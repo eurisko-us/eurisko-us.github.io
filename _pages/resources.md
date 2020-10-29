@@ -154,9 +154,8 @@ author_profile: false
     3x &= 3 \\
     x &= 1
     \end{align*}
-    </code></pre>
-    <br>
-    $\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1. \end{align*}$<br>
+    </code></pre><br>
+    $\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1. \end{align*}$<br><br>
     Likewise, whenever you are simplifying an expression through multiple steps, use an align environment:<br>
 <pre><code>
 \begin{align*}
