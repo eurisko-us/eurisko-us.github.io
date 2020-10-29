@@ -157,7 +157,7 @@ author_profile: false
   <li><b>Multiplication:</b> use <code>$P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B)$</code> $P(A)P(B), \, P(A) \cdot P(B), \, P(A) \times P(B),$ not <code>$P(A) * P(B)$</code> $P(A) * P(B).$</li>
   <li><b>Running off the page:</b> if a line of math is running off the page, break it after a term midway and put the rest on the next line.<br>
     not <code>$\begin{align*} \int x \textrm{d}x + \int 2x \textrm{d}x + \int 3x \textrm{d}x + \int 4x \textrm{d}x + \int 5x \textrm{d}x + \int 6x \textrm{d}x \end{align*}$</code><br>
-    $\begin{align*} \int x \textrm{d}x + \int 2x \textrm{d}x + \int 3x \textrm{d}x + \int 4x \textrm{d}x + \int 5x \textrm{d}x + \int 6x \textrm{d}x. \end{align*}$</li>
+    $\begin{align*} \int (x + x^2 + x^3 + x^4 + x^5 + x^6) \, \textrm{d}x &= \int x \, \textrm{d}x + \int x^2 \, \textrm{d}x + \int x^3 \, \textrm{d}x + \int x^4 \, \textrm{d}x + \int x^5 \, \textrm{d}x + \int x^6 \, \textrm{d}x. \end{align*}$</li>
   </ul></font>
 </div>
 
