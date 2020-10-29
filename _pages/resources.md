@@ -152,10 +152,13 @@ testing
     <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code><br>
     $\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1. \end{align*}$<br>
     Likewise, whenever you are simplifying an expression through multiple steps, use an align environment:<br>
-<pre><code>$\begin{align*} \int_1^2 x \, \textrm{d}x &= \left. \dfrac{x^2}{2} \right|_1^2 \\
-                                                &= \dfrac{2^2}{2} - \dfrac{1^2}{2} \\
-                                                &= \dfrac{4}{2} - \dfrac{1}{2} \\
-                                                &= \dfrac{3}{2} \end{align*}$</code></pre><br>
+<pre><code>
+\begin{align*}
+\int_1^2 x \, \textrm{d}x &= \left. \dfrac{x^2}{2} \right|_1^2 \\
+                          &= \dfrac{2^2}{2} - \dfrac{1^2}{2} \\
+                          &= \dfrac{4}{2} - \dfrac{1}{2} \\
+                          &= \dfrac{3}{2}
+\end{align*}</code></pre><br>
     $\begin{align*} \int_1^2 x \, \textrm dx &= \left. \dfrac{x^2}{2} \right|_1^2 \\ &= \dfrac{2^2}{2} - \dfrac{1^2}{2} \\ &= \dfrac{4}{2} - \dfrac{1}{2} \\ &= \dfrac{3}{2} \end{align*}$</li>
   <li><b>Integral formatting:</b> use <code>$\displaystyle \int x \, \mathrm{d}x$</code> $\displaystyle \int_0^1 x \, \mathrm{d}x,$ not <code>$\int x dx$</code>$\int_0^1 x dx$</li>
   <li><b>Evaluating at bounds:</b> use <code>$\left. \dfrac{x^2}{2} \right|_{12}^{15}$</code> $\left. \dfrac{x^2}{2} \right|_{12}^{15},$ not <code>$\frac{x^2}{2} \right|_12^15$</code> $\frac{x^2}{2} |_12^15.$</li>
