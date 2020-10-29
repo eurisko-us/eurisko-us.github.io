@@ -148,6 +148,7 @@ testing
   <li><b>Text inside of equations:</b> use <code>$\textrm{my_variable} = 2$</code> $\textrm{my_variable} = 2,$ not <code>$my_variable = 2$</code> $my_variable = 2.$</li>
   <li><b>Parentheses around fractions:</b> use <code>$\left( \dfrac{1}{2} \right)$</code> $\left( \dfrac{1}{2} \right),$ not <code>$( \dfrac{1}{2} )$</code> $( \dfrac{1}{2} ).$ This applies to brackets, braces, absolute value signs, etc, as well.</li>
   <li><b>Exponents and subscripts:</b> use <code>$2^{10}$</code> $2^{10},$ not <code>$2^10$</code> $2^10$</li>
+  <li><b>Vertical bars:</b> whenever you want to use a vertical bar <code>$|$</code> $|,$ it has to be in a math environment (e.g. between dollar signs, or in an align environment). Otherwise, if you try to use it as plain text, it will turn into a horizontal bar: <code>|</code> $---$</li>
   <li><b>Align environments:</b> whenever you are manipulating an equation, use an align environment:<br>
     <code>$\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1 \end{align*}$</code><br>
     $\begin{align*} 3x+2 &= 5 \\ 3x &= 3 \\ x &= 1. \end{align*}$<br>
