@@ -458,7 +458,7 @@ testing
 <details>
   <summary>My repl was originally successfully pushing code up to Github, but now it keeps failing to do so. What should I do?</summary><br>
   
-  First, try refreshing the page and pushing again. If it still fails, then keep reading.
+  First, try refreshing the page and pushing again. If it still fails, then keep reading.<br>
   
   <br>It's been known to happen that a repl might randomly stop being able to push to Github. It's not clear why this happens, but the solution is just to move your code over to a new repl, and then replace the old repl with the new repl. Here's an efficient way to do that, without having to copy and paste all of your files:
   
