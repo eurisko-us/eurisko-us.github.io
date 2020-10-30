@@ -13616,14 +13616,6 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Decision tree by hand (3 layers, gini impurity).</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/3-neuron-network.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>There are a couple things we need to update in our <code>BiologicalNeuron</code> and <code>BiologicalNeuralNetwork</code>, to make the model more realistic.</p>
@@ -13646,12 +13638,33 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
-<p>Create a file <code>tests/test_game_state_dumb_player.py</code> that tests the same conditions for DumbPlayer as you have in <code>tests/test_dumb_player.py</code>, but this time, you should be checking the actual game state:</p>
-
-<pre><code>&gt;&gt;&gt; desired state = {... fill in this dictionary ...}
-&gt;&gt;&gt; assert game.generate_state() == desired_state</code></pre>
-<p>Make sure that when you run <code>tests/test_game_state_dumb_player.py</code>, the tests still work.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Construct a decision tree model for the following data.</p>
+<center><img height=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/intro-decision-trees-1.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Construct a decision tree model for the following data, using the splits shown.</p>
+<center><img height=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/intro-decision-trees-0.jpg' border='0'/></center><p>Remember that the formula for Gini impurity for a group with class distribution $\vec p$ is</p>
+$$
+G(\vec p) = \sum_i p_i (1-p_i)
+$$<p>and that the "goodness-of-split" is quantified as</p>
+$$
+\text{goodness} = G(\vec p_\text{pre-split}) - \sum_\text{post-split groups} \dfrac{N_\text{group}}{N_\text{parent}} G(\vec p_\text{group}).
+$$<p>See the updated <a href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko Assignment Template</a> for an example of constructing a decision tree in latex for a graph with given splits.</p>
+<ul>
+<li><p>Be sure to include the class counts, impurity, and goodness of split at each node</p>
+</li>
+<li><p>Be sure to label each edge with the corresponding decision criterion.</p>
+</li>
+</ul>
+<p><a href="https://w3.cs.jmu.edu/spragunr/CS444/activities/trees_bagging/decision_trees.pdf">This resource may also be helpful for reference.</a></p>
 
 </div>
 </div>
@@ -13659,7 +13672,51 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<h1 id="Problem-59-2">Problem 59-2<a class="anchor-link" href="#Problem-59-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points (5 points for writing tests, 5 points for passing tests)</p>
+<p>Revise <code>tests/test_dumb_player.py</code>, so that it uses the actual game state. You can refer to Problem 23-3 for the tests.</p>
+<p>For example, the first test is as follows:</p>
+
+<pre><code>At the end of Turn 1 Movement Phase:
+    Player 0 has 3 scouts at (4,0)
+    Player 1 has 3 scouts at (4,4)</code></pre>
+<p>Phrased in terms of the game state, we could write the test as</p>
+
+<pre><code>game_state = game.generate_state()
+player_0_scout_locations = [u.location for u in game_state.players[0].units if unit.type == Scout]
+player_1_scout_locations = [u.location for u in game_state.players[0].units if unit.type == Scout]
+assert set(player_0_scout_locations) == set([(4,0), (4,0), (4,0)])
+assert set(player_1_scout_locations) == set([(4,4), (4,4), (4,4)])</code></pre>
+<p>Given the refactoring that we've been doing, your tests might not run successfully the first time. <strong>But don't spend all your time on this problem only. If your tests don't pass, then make sure to complete all the other problems in this assignment before you start debugging your game.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-3">Problem 59-3<a class="anchor-link" href="#Problem-59-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Make suggestions on your assigned classmate's blog post. If anything is unclear, uninteresting, or awkwardly phrased, make a suggestion to improve it. You should the "suggesting" feature of Google Docs and type in how you would rephrase or rewrite the particular portions.</p>
+<p>Be sure to look for and correct any grammar mistakes as well. You'll be graded on how thorough your suggestions are. Everyone should be making plenty of suggestions (there's definitely at least 10 suggestions to be made on everyone's drafts).</p>
+<ul>
+<li><p>Elijah: review <a href="https://docs.google.com/document/d/1rJh8bJ0i4eKg86njCrodPwkHfPGCsYBf_KBa_ecbz34/edit?ts=5f9c45e2">Colby</a>'s</p>
+</li>
+<li><p>Riley: review David's</p>
+</li>
+<li><p>George: review <a href="https://docs.google.com/document/d/1HzgKQxv1-eLMKzRXUmGRmTtKjpioAd54JGnS5FI1R9c/edit?usp=sharing">Riley</a>'s</p>
+</li>
+<li><p>David: review <a href="https://docs.google.com/document/d/1eqWhCZx_DIzHTk1ewnWNggPlgSUfjkOlwQ_FRRu8sdg/edit?usp=sharing">George</a>'s</p>
+</li>
+<li><p>Colby: review <a href="https://docs.google.com/document/d/1F0xGxBa7DUq3X9SFutmtrryRjx4ddxNFCM8hS9UrGBs/edit?usp=sharing">Elijah</a>'s</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-4">Problem 59-4<a class="anchor-link" href="#Problem-59-4">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
 <ul>
 <li><p>Complete Module 4 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
 </li>

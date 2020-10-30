@@ -13120,15 +13120,146 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-26-1">Problem 26-1<a class="anchor-link" href="#Problem-26-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p><strong>Note:</strong> If you're approaching it the right way, this problem will be really quick (15 minutes or less to do both parts).</p>
+<p><strong>a.</strong> In your <code>Matrix</code> class, implement a method <code>exponent</code>.</p>
+<ul>
+<li>Remember that to take the exponent of a matrix, you need to repeatedly multiply the matrix by itself using <em>matrix multiplication</em>. (Don't just exponentiate each element separately.)</li>
+</ul>
+<p>Include the following test in <code>tests/test_matrix.py</code>.</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([[1, 1, 0],
+                [2, -1, 0],
+                [0, 0, 3]])
+&gt;&gt;&gt; A.exponent(3).elements
+[[3, 3, 0],
+ [6, -3, 0],
+ [0, 0, 27]]</code></pre>
+<p><strong>b.</strong> Also, <a href="https://www.geeksforgeeks.org/operator-overloading-in-python/">overload</a> the following operators:</p>
+<ul>
+<li><code>+</code> (<code>__add__</code>) for matrix addition,</li>
+<li><code>-</code> (<code>__sub__</code>) for matrix subtraction,</li>
+<li><code>*</code> (<code>__mul__</code>) for scalar multiplication,</li>
+<li><code>@</code> (<code>__matmul__</code>) for matrix multiplication,</li>
+<li><code>==</code> (<code>__eq__</code>) for equality</li>
+</ul>
+<p>Include the following test in <code>tests/test_matrix.py</code>.</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix(
+    [[1,0,2,0,3],
+    [0,4,0,5,0],
+    [6,0,7,0,8],
+    [-1,-2,-3,-4,-5]]
+    )
+
+&gt;&gt;&gt; A_t = A.transpose()
+&gt;&gt;&gt; A_t.elements
+[[ 1,  0,  6, -1],
+ [ 0,  4,  0, -2],
+ [ 2,  0,  7, -3],
+ [ 0,  5,  0, -4],
+ [ 3,  0,  8, -5]]
+
+&gt;&gt;&gt; B = A_t @ A
+&gt;&gt;&gt; B.elements
+[[38,  2, 47,  4, 56],
+ [ 2, 20,  6, 28, 10],
+ [47,  6, 62, 12, 77],
+ [ 4, 28, 12, 41, 20],
+ [56, 10, 77, 20, 98]]
+
+&gt;&gt;&gt; C = 0.1 * B
+&gt;&gt;&gt; C.elements
+[[3.8,  .2, 4.7,  .4, 5.6],
+ [ .2, 2.0,  .6, 2.8, 1.0],
+ [4.7,  .6, 6.2, 1.2, 7.7],
+ [ .4, 2.8, 1.2, 4.1, 2.0],
+ [5.6, 1.0, 7.7, 2.0, 9.8]]
+
+&gt;&gt;&gt; D = B - C
+&gt;&gt;&gt; D.elements
+[[34.2,  1.8, 42.3,  3.6, 50.4]
+ [ 1.8, 18. ,  5.4, 25.2,  9. ]
+ [42.3,  5.4, 55.8, 10.8, 69.3]
+ [ 3.6, 25.2, 10.8, 36.9, 18. ]
+ [50.4,  9. , 69.3, 18. , 88.2]]
+
+&gt;&gt;&gt; E = D + C
+[[38,  2, 47,  4, 56],
+ [ 2, 20,  6, 28, 10],
+ [47,  6, 62, 12, 77],
+ [ 4, 28, 12, 41, 20],
+ [56, 10, 77, 20, 98]]
+
+&gt;&gt;&gt; E == B
+True
+
+&gt;&gt; E == C
+False</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-26-2">Problem 26-2<a class="anchor-link" href="#Problem-26-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
 <p><strong>a.</strong> Extend your <code>Matrix</code> class to include a method <code>cofactor_method_determinant()</code> that computes the determinant recursively using the cofactor method.</p>
 <ul>
 <li><p><a href="https://www.chilimath.com/lessons/advanced-algebra/determinant-3x3-matrix/">Here</a> is an example of using the cofactor method on a $3 \times 3$ matrix</p>
 </li>
 <li><p><a href="http://mathcentral.uregina.ca/QQ/database/QQ.09.07/h/rav1.html">Here</a> is an example of using the cofactor method on a $4 \times 4$ matrix</p>
 </li>
+<li><p><em>Don't</em> cram everything into the method <code>cofactor_method_determinant()</code>. You will need to write at least one helper function (if you think about the cofactor method, you should be able to realize what the helper function would need to do).</p>
+</li>
 </ul>
 <p><strong>b.</strong> Ensure that your <code>cofactor_method_determinant()</code> passes the same exact tests that you already have for your <code>determinant()</code>.</p>
 <p><strong>c.</strong> In a file <code>machine-learning/analysis/rref_vs_cofactor_method_determinant.py</code>, create a $10 \times 10$ matrix and compute the determinant using <code>determinant()</code> and then <code>cofactor_method_determinant()</code>. Which one is faster, and why do you think it's faster? <strong>Write your answer as a comment in your code.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-26-3">Problem 26-3<a class="anchor-link" href="#Problem-26-3">&#182;</a></h1><p><strong>Location</strong>: Overleaf</p>
+<p><strong>Grading:</strong> 10 points for correct answers <em>with supporting work</em></p>
+<p><strong>Note:</strong> For every question, you need to justify your answer, but you <em>don't</em> have to show every single step your work. For example, if you're computing a probability, it would be sufficient to write down the statement of the probability, the corresponding integral, the antiderivative, and then the answer. For example, if</p>
+$$
+X \sim p(x) = \dfrac{1}{\pi} x \sin x, \quad 0 \leq x \leq \pi,$$<p>then to compute $P\left( X &gt; \dfrac{\pi}{2} \right),$ all you would have to write down is</p>
+$$\begin{align*}
+P\left( X &gt; \dfrac{\pi}{2} \right) &amp;= \int_{\pi/2}^\pi \dfrac{1}{\pi} x \sin x \, \textrm dx \\
+&amp;= \dfrac{1}{\pi} \left[ \sin x - x \cos x \right]_{\pi/2}^\pi \quad \textrm{(IBP)} \\
+&amp;= \dfrac{\pi - 1}{\pi}.
+\end{align*}$$<hr>
+<p><strong>Part 1</strong></p>
+<p>Suppose that you take a bus to work every day. Bus A arrives at 8am but is $x$ minutes late with $x \sim U(0,20).$ Bus B arrives at 8:10 but with $x \sim U(0,10).$ The bus ride is 20 minutes and you need to arrive at work by 8:30.</p>
+<ul>
+<li><p>Remember that $U(a,b)$ means the uniform distribution on $[a,b].$ See problem 23-2 if you need a refresher on exponential distributions.</p>
+</li>
+<li><p>Recall the formulas for the mean and variance of uniform distributions: If $X \sim \mathcal{U}(a,b),$ then $\textrm{E}[X] = \dfrac{a+b}{2}$ and $\textrm{Var}(X) = \dfrac{(b-a)^2}{12}.$ You can use these formulas without any further justification.</p>
+</li>
+</ul>
+<p><strong>a.</strong> If you take bus A, what time do you expect to arrive at work? Justify your answer.</p>
+<p><strong>b.</strong> If you take bus B, what time do you expect to arrive at work? Justify your answer.</p>
+<p><strong>c.</strong> If you take bus A, what is the probability that you will arrive on time to work? Justify your answer.</p>
+<p><strong>d.</strong> If you take bus B, what is the probability that you will arrive on time to work? Justify your answer.</p>
+<hr>
+<p><strong>Part 2</strong></p>
+<p>Continuing the scenario above, there is a third option that you can use to get to work: you can jump into a wormhole and (usually) come out almost instantly at the other side. The only issue is that time runs differently inside the wormhole, and while you're probably going to arrive at the other end very quickly, there's a small chance that you could get stuck in there for a really long time.</p>
+<p>The number of <strong>seconds</strong> it takes you to come out the other end of the wormhole follows an exponential distribution $\textrm{Exp}(\lambda = 4).$</p>
+<ul>
+<li><p>See problem 23-2 if you need a refresher on exponential distributions.</p>
+</li>
+<li><p>Recall the formulas for the mean and variance of exponential distributions: If $X \sim \textrm{Exp}(\lambda),$ then $\textrm{E}[X] = \dfrac{1}{\lambda}$ and $\textrm{Var}(X) = \dfrac{1}{\lambda^2}.$ You can use these formulas without any further justification.</p>
+</li>
+</ul>
+<p><strong>a.</strong> How long do you expect it to take you to come out of the wormhole? Justify your answer.</p>
+<p><strong>b.</strong> What's the probability of taking longer than a second to come out of the wormhole? Justify your answer.</p>
+<p><strong>c.</strong> Fill in the blank: the probability of coming out of the wormhole within ___ seconds is $99.999\%.$ Justify your answer.</p>
+<p><strong>d.</strong> Your friend says that you shouldn't use the wormhole because there's always a chance that you might get stuck in it for over a day, and if you use the wormhole often, then that'll probably happen sometime within your lifetime. Is this a reasonable fear? Why or why not? Justify your answer by computing the probability that you'll get stuck in the wormhole for over a day if you use the wormhole $10$ times each day for $80$ years.</p>
+<ul>
+<li>Hint: It's easier to start by computing the probability that you <em>won't</em> get stuck in the wormhole for over a day on any given trip through the wormhole, and then use that to compute the probability that you <em>won't</em> get stuck in the wormhole for over a day if you use the wormhole $10$ times each day for $80$ years.</li>
+</ul>
 
 </div>
 </div>
