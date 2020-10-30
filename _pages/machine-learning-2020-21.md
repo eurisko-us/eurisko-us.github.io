@@ -14,7 +14,18 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="58">
+<font size="3em"><ol reversed start="59">
+    <li><b>Friday, October 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/473948137">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-59-1">Introduction to Decision Trees</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-59-2">State-Based DumbPlayer Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-59-3">Blog Post Review 1</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-59-4">Sololearn C++ Module 4, SQL Module 1</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, October 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/473116120">Class Recording</a>
         <br>Assignment Problems:
