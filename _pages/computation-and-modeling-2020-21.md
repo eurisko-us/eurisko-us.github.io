@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="25">
+<font size="3em"><ol reversed start="26">
+    <li><b>Friday, October 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/473948148">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-26-1">Exponents of Matrices; Operator Overloading</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-26-2">Determinant via Cofactor Method, + Comparison to Determinant via RREF Method</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-26-3">Application of Uniform & Exponential Distributions</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, October 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/473116132">Class Recording</a>
         <br>Assignment Problems:
