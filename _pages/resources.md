@@ -121,7 +121,7 @@ author_profile: false
 <br><br>For each part you missed, you need to answer the following:
 <font size="3em">
   <ol>
-    <li>What was your misconception in your original answer? Why is it a misconception? What did you learn?</li>
+    <li>What was your misconception in your original answer? Why is it a misconception? What did you learn? (Note: *don't* just say that you didn't understand something. Explain what it was in particular that you didn't understand.)</li>
     <li>What is the actual answer and why is it correct? Show all steps in your work.</li>
   </ol>
  </font>
