@@ -8,7 +8,7 @@ author_profile: false
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
-<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submit-assignment">Submit Assignment</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#debugging">Debugging</a> • <a class="body" href="https://eurisko-us.github.io/resources/#replit-github-integration-troubleshooting">Repl.it-Github Integration Troubleshooting</a></b></center></font>
+<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submitting-assignments">Submitting Assignments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#debugging">Debugging</a> • <a class="body" href="https://eurisko-us.github.io/resources/#replit-github-integration-troubleshooting">Repl.it-Github Integration Troubleshooting</a></b></center></font>
 </div>
 
 ## [<center>Class Meetings</center>](#class-meetings)
@@ -44,7 +44,7 @@ author_profile: false
 
 <!--</div>-->
 
-## [<center>Submit Assignment</center>](#submit-assignment)
+## [<center>Submitting Assignments</center>](#submitting-assignments)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 
@@ -53,7 +53,7 @@ author_profile: false
   and <i>shareable</i> links to your Overleaf documents, e.g.
   <font size="3em"><code>https://www.overleaf.com/read/wjmgkxpccvpj</code></font>.
 
-<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, and satisfies ALL the requirements outlined in the assignment! Poor-quality assignments will not be graded.
+<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, the <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX commandments</a>, and satisfies ALL the requirements outlined in the assignment! Poor-quality assignments will not be graded.
 
 
 <!--
@@ -116,17 +116,20 @@ author_profile: false
 
 <b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late. The late penalty is on a per-question basis, not a whole-assignment basis -- so it's always better to turn in a partially completed homework on time and turn in the remaining bit late, than to turn in everything late.<br><br>
 
-<b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%. You can also submit quiz corrections, and get up to 30% of the points back that you originally missed. 
+<b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.<br><br>
 
-<br><br>For each part you missed, you need to answer the following:
+Note that you can only resubmit <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to resubmit, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.
+
+<b>Corrections Policy:</b>You can also submit quiz corrections, and get up to 30% of the points back that you originally missed. For each part you missed, you need to answer the following:
 <font size="3em">
   <ol>
-    <li>What was your misconception in your original answer? Why is it a misconception? What did you learn? (Note: *don't* just say that you didn't understand something. Explain what it was in particular that you didn't understand.)</li>
+    <li>What was your misconception in your original answer? Why is it a misconception? What did you learn?</li>
+        <ul><li>*Don't* just say that you didn't understand something. Explain what it was in particular that you didn't understand. If you don't do this, your corrections will not be graded.</li></ul>
     <li>What is the actual answer and why is it correct? Show all steps in your work.</li>
   </ol>
  </font>
 
-<br>Note that you can only submit corrections <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to make your corrections, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.
+<br>Note that you can only submit corrections <i>once</i> -- so make sure that you correct all problems and explain your misconceptions thoroughly. You have as long as you need to make your corrections, so only submit your corrections once you're 100% sure there's nothing else you need to fix.
 
 </div>
 
