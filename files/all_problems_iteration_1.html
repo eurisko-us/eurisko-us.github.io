@@ -13683,7 +13683,7 @@ $$<p>See the updated <a href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisk
 
 <pre><code>game_state = game.generate_state()
 player_0_scout_locations = [u.location for u in game_state.players[0].units if unit.type == Scout]
-player_1_scout_locations = [u.location for u in game_state.players[0].units if unit.type == Scout]
+player_1_scout_locations = [u.location for u in game_state.players[1].units if unit.type == Scout]
 assert set(player_0_scout_locations) == set([(4,0), (4,0), (4,0)])
 assert set(player_1_scout_locations) == set([(4,4), (4,4), (4,4)])</code></pre>
 <p>Given the refactoring that we've been doing, your tests might not run successfully the first time. <strong>But don't spend all your time on this problem only. If your tests don't pass, then make sure to complete all the other problems in this assignment before you start debugging your game.</strong></p>
