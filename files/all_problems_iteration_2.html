@@ -13119,7 +13119,24 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>include a link to your github; I'm going to put in grade for code quality. It will be graded again at the end of the semester, so fix anything that's costing you points</p>
+<h1 id="Problem-26-1">Problem 26-1<a class="anchor-link" href="#Problem-26-1">&#182;</a></h1><p><strong>Grading:</strong> 2 points</p>
+<p>In your <code>Matrix</code> class, overload <code>__rmul__</code>and <code>__pow__</code> so that you pass the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; A = Matrix([[1, 1, 0],
+                [2, -1, 0],
+                [0, 0, 3]])
+
+&gt;&gt;&gt; B = 0.1 * A
+&gt;&gt;&gt; B.elements
+[[0.1, 0.1, 0],
+ [0.2, -0.1, 0],
+ [0, 0, 0.3]]
+
+&gt;&gt;&gt; C = A**3
+&gt;&gt;&gt; C.elements
+[[3, 3, 0],
+ [6, -3, 0],
+ [0, 0, 27]]</code></pre>
 
 </div>
 </div>
@@ -13127,7 +13144,54 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Matrix: <code>__rmul__</code>, <code>__pow__</code></p>
+<h1 id="Problem-26-2">Problem 26-2<a class="anchor-link" href="#Problem-26-2">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Update <code>EulerEstimator</code> to make plots:</p>
+
+<pre><code>&gt;&gt;&gt; euler = EulerEstimator(derivative = lambda t: t+1)
+
+&gt;&gt;&gt; euler.plot(point=(-5,10), step_size=0.1, num_steps=100)
+
+for this example, the plot should look like the parabola
+y = 0.5x^2 + x + 2.5
+on the domain -5 &lt;= x &lt;= 5</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-26-3">Problem 26-3<a class="anchor-link" href="#Problem-26-3">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Suppose you toss a coin $10$ times and get the result $\text{HHHHT HHHHH}.$ From this result, you estimate that the coin is biased and generally lands on heads $90\%$ of the time. But how sure can you be? Let's quantify it.</p>
+<p><strong>a.</strong> <strong>Compute the likelihood</strong> $P(k | \text{HHHHT HHHHH})$ where $P(H)=k.$ Remember that the likelihood is just the probability of getting the result $\text{HHHHT HHHHH}$ under the assumption that $P(H)=k.$ Your answer should be expressed in terms of $k.$</p>
+<p><strong>b.</strong> The likelihood $P(\text{HHHHT HHHHH} \, | \, k)$ can <em>almost</em> be interpreted as a probability distribution for $k.$ The only problem is that it doesn't integrate to $1.$</p>
+<p>Create a probability distribution $P(k \, | \, \text{HHHHT HHHHH})$ that is proportional to the likelihood $P(\text{HHHHT HHHHH} \, | \, k).$ In other words, find the function $P(k)$ such that</p>
+$$
+P(k) = c \cdot P(\text{HHHHT HHHHH} \, | \, k)
+$$<p>for some constant $c,$ and $\displaystyle \int_0^1 P(k \, | \, \text{HHHHT HHHHH}) = 1.$</p>
+<ul>
+<li><p>Note: the distribution $P(k \, | \, \text{HHHHT HHHHH})$ is called the "posterior" distribution because it represents the probability distribution of $k$ <em>after</em> we have observed the event $\text{HHHHT HHHHH}.$</p>
+</li>
+<li><p>The probability distribution of $k$ <em>before</em> we observed the event is called the "prior" distribution and in this case was given by $P(k) \sim \mathcal{U}[0,1]$ since we did not know anything about whether or not the coin is biased (or how biased it is).</p>
+</li>
+</ul>
+<p><strong>c.</strong> Using the prior distribution $P(k) \sim \mathcal{U}[0,1],$ what was the prior probability that the coin was biased towards heads? In other words, what was $P(k &gt; 0.5)?$</p>
+<p><strong>d.</strong> Using the posterior distribution $P(k \, | \, \text{HHHHT HHHHH}),$ what was the posterior probability that the coin was biased towards heads? In other words, what is $P(k &gt; 0.5 \, | \, \text{HHHHT HHHHH})?$</p>
+<p><strong>e.</strong> Compare your answers in parts (c) and (d). Did the probability that the coin was biased towards heads increase or decrease, after observing the sequence of flips? Why does this make intuitive sense?</p>
+<p><strong>f.</strong> Using the posterior distribution, what is the most probable value of $k?$ In other words, what is value of $k$ at which $P(k \, | \, \text{HHHHT HHHHH})$ reaches a maximum? Show your work using the first or second derivative test.</p>
+<p><strong>g.</strong> Why does your answer to (f) make sense? What's the intuition here?</p>
+<p><strong>h.</strong> What is the probability that the bias $k$ lies within $0.05$ of your answer to part (g)? In other words, what is the probability that $0.85 &lt; k &lt; 0.95?$</p>
+<p><strong>i.</strong> Fill in the blank: you can be $99\%$ sure that $P(H)$ is at least $\_\_\_.$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-26-4">Problem 26-4<a class="anchor-link" href="#Problem-26-4">&#182;</a></h1><p><strong>Grading:</strong> this assignment will not be graded unless you do this problem</p>
+<p>When you submit your assignment, include a link to your github so that I can review your code. I'm going to put in grade for code quality. The code quality will be graded again at the end of the semester, so you will have an opportunity fix anything that's costing you points before the end of the semester.</p>
 
 </div>
 </div>
