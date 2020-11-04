@@ -14,7 +14,19 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="59">
+<font size="3em"><ol reversed start="60">
+    <li><b>Wednesday, November 4</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/475575711">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-1">Formal Definition of Big-O Notation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-2">Probability Review Problems</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-3">Linear Regression Review Problems</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-4">Sololearn C++ Module 5, SQL Module 2</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-5">Blog Post + Catch-Up</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, October 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/473948137">Class Recording</a>
         <br>Assignment Problems:
