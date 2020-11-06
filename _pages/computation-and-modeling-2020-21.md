@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="28">
     <li><b>Friday, November 6</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/475575723">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/476398132">Class Recording</a>: 26-3, 27-3, 28-1
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-28-1">Fitting a Linear Regression by Hand</a></li>
