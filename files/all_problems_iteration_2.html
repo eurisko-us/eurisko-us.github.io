@@ -13119,6 +13119,69 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-28-1">Problem 28-1<a class="anchor-link" href="#Problem-28-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Suppose you are given the following dataset:</p>
+
+<pre><code>data = [(1,0.2), (2,0.25), (3,0.5)]</code></pre>
+<p>Fit a linear regression model $y=a+bx$ <strong>by hand</strong> by</p>
+<ol>
+<li>setting up a system of equations,</li>
+<li>turning the system into a matrix equation,</li>
+<li>finding the best approximation to the solution of that matrix equation by using the pseudoinverse, and</li>
+<li>substituting your solution for the coefficients of the model.</li>
+</ol>
+<p>Show all of your steps. No code allowed!</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-28-2">Problem 28-2<a class="anchor-link" href="#Problem-28-2">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Create an <code>apply</code> method in your <code>DataFrame</code>, that passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; data_dict = {
+    'Pete': [1, 0, 1, 0],
+    'John': [2, 1, 0, 2],
+    'Sarah': [3, 1, 4, 0]
+}
+
+&gt;&gt;&gt; df1 = DataFrame(data_dict, column_order = ['Pete', 'John', 'Sarah'])
+&gt;&gt;&gt; df2 = df1.apply('John', lambda x: 7 * x)
+&gt;&gt;&gt; df2.data_dict
+{
+    'Pete': [1, 0, 1, 0],
+    'John': [14, 7, 0, 7],
+    'Sarah': [3, 1, 4, 0]
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-28-3">Problem 28-3<a class="anchor-link" href="#Problem-28-3">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>If you didn't get 100% on the likelihood estimation problem, revise it and submit it again on this assignment. If you already got 100%, then these 5 points are free.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-28-4">Problem 28-4<a class="anchor-link" href="#Problem-28-4">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Complete Module 1 AND Module 2 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of each completed module, with your user profile showing, and submit both screenshots along with the assignment.</p>
+<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/sololearn-screenshot-1.png' border='0'/></center><center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/sololearn-screenshot-2.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-27-1">Problem 27-1<a class="anchor-link" href="#Problem-27-1">&#182;</a></h1><p><strong>Grading:</strong> 2 points</p>
 <p>In your <code>Matrix</code> class, overload <code>__rmul__</code>and <code>__pow__</code> so that you pass the following tests:</p>
 
@@ -13183,6 +13246,20 @@ $$<p>for some constant $c,$ and $\displaystyle \int_0^1 P(k \, | \, \text{HHHHT 
 <p><strong>g.</strong> Why does your answer to (f) make sense? What's the intuition here?</p>
 <p><strong>h.</strong> What is the probability that the bias $k$ lies within $0.05$ of your answer to part (g)? In other words, what is the probability that $0.85 &lt; k &lt; 0.95?$</p>
 <p><strong>i.</strong> Fill in the blank: you can be $99\%$ sure that $P(H)$ is at least $\_\_\_.$</p>
+<hr>
+<p>Here's a bit more context about the whole situation and what we're trying to do by calculating these things:</p>
+<ul>
+<li><p>We're flipping a coin and we don't know if it's biased.</p>
+</li>
+<li><p>We let k represent the probability of getting heads. Initially we don't know if the coin is biased, so we'll just say that k has equal probability of being anything. It might be 0.5 (unbiased), or it might be 0.1 (tails more often), or it might be 0.9 (heads more often), or anything. So the probability of k, denoted P(k). This is called our "prior" distribution because it represents our belief "prior" to flipping the coin.</p>
+</li>
+<li><p>After we flip the coin 10 times and get HHHHT HHHHH, we gain information about how biased our coin is. It looks like it's way biased towards heads. So we need to update our probability distribution. We will call the updated distribution P(k | HHHHT HHHHH), which is "the probability of k given that we got the flips HHHHT HHHHH". This is called our "posterior" distribution because it represents our belief "posterior" or "after" flipping the coin.</p>
+</li>
+<li><p>But how do we actually get the posterior distribution? It turns out that (as we will prove later), the posterior distribution is proportional to the likelihood of observing the data that we did. In other words, posterior = c <em> likelihood, which becomes P(k | HHHHT HHHHH) = c </em> P(HHHHT HHHHH | k).</p>
+</li>
+<li><p>Now, for any probability calculations involving k, we can get more accurate probability measurements by using the posterior distribution P(k | HHHT HHHHH) instead of the prior distribution P(k).</p>
+</li>
+</ul>
 
 </div>
 </div>
