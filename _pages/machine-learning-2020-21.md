@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="61">
     <li><b>Friday, November 6</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/475575711">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/475575711">Class Recording</a>: 60-2, 60-3
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-1">Manually Creating a Decision Tree Model</a></li>
