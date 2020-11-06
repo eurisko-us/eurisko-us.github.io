@@ -14,7 +14,19 @@ author_profile: false
 <br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
 
 <br><br>
-<font size="3em"><ol reversed start="60">
+<font size="3em"><ol reversed start="61">
+    <li><b>Friday, November 6</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/475575711">Class Recording</a>
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-1">Manually Creating a Decision Tree Model</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-2">Making BiologicalNeuralNetwork More Realistic</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-3">Blog Post Review 2</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-4">Probability Review Problems</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-5">Sololearn SQL Module 3</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, November 4</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/475575711">Class Recording</a>
         <br>Assignment Problems:
