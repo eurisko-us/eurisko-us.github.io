@@ -13624,7 +13624,130 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Quicksort</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>ID3 algorithm</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<ul>
+<li>Complete Module 6 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>NOTE: NEED TO MODIFY EULERESTIMATOR TO MAKE THIS EASIER TO IMPLEMENT</p>
+<p>When a neuron fires, the action potential does not reach the synapse instantaneously. There is a small delay depending on how far away the synapse is. Let's say the delay is about $2 \, \textrm{ms}.$ Then we have</p>
+$$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \\ \textrm{with } V(t-2) &gt; 50 \end{matrix}} V_{\text{other neuron}}(t-2) \right)}_\text{interactions with other neurons}.$$<p>Taking the above changes into account, simulate 3 neurons connected in the fashion $1 \to 2 \to 3,$ where neuron $1$ receives the following electrode stimulus:
+$$
+s(t) = \begin{cases}
+50, &amp; t \in [10,11] \cup [20,21] \cup [30,40] \cup [50,51] \cup [53,54] \\
+ &amp; \phantom{t \in [} \cup [56,57] \cup [59,60] \cup [62,63] \cup [65,66] \\
+ 0 &amp; \text{otherwise}
+\end{cases}
+$$</p>
+<p>You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons-improved.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-005.png' border='0'/></center><br></p>
+<p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-008.png' border='0'/></center><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-62-1">Problem 62-1<a class="anchor-link" href="#Problem-62-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Create a class <code>NaiveBayesClassifier</code> withing <code>machine-learning/src/naive_bayes_classifier.py</code> that passes the following tests. These tests should be written in <code>tests/test_naive_bayes_classifier.py</code> using assert statements.</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [
+        [False, False, False],
+        [True, True, True],
+        [True, True, True],
+        [False, False, False],
+        [False, True, False],
+        [True, True, True],
+        [True, False, False],
+        [False, True, False],
+        [True, False, True],
+        [False, True, False]
+    ]
+    columns = ['errors', 'links', 'scam']
+)
+&gt;&gt;&gt; naive_bayes = NaiveBayesClassifier(df, dependent_variable='scam')
+
+&gt;&gt;&gt; naive_bayes.probability('scam_True')
+0.4
+&gt;&gt;&gt; naive_bayes.probability('scam_False')
+0.6
+
+&gt;&gt;&gt; naive_bayes.conditional_probability('errors_True', given='scam_True')
+1.0
+&gt;&gt;&gt; naive_bayes.conditional_probability('links_False', given='scam_True')
+0.25
+
+&gt;&gt;&gt; naive_bayes.conditional_probability('errors_True', given='scam_False')
+0.16666666666666666
+&gt;&gt;&gt; naive_bayes.conditional_probability('links_False', given='scam_False')
+0.5
+
+&gt;&gt;&gt; observed_features = {
+    'errors': True,
+    'links': False
+}
+&gt;&gt;&gt; naive_bayes.likelihood('scam_True', observed_features)
+0.1
+&gt;&gt;&gt; naive_bayes.likelihood('scam_False', observed_features)
+0.05
+
+&gt;&gt;&gt; naive_bayes.classify(observed_features)
+'scam_True'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-62-2">Problem 62-2<a class="anchor-link" href="#Problem-62-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Implement a function <code>quicksort</code>. Here is a description of the algorithm: <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU">https://www.youtube.com/watch?v=XE4VP_8Y0BU</a></p>
+<p>Use your function to sort the list <code>[5,8,-1,9,10,3.14,2,0,7,6]</code> (write a test with an assert statement). Choose the pivot as the rightmost entry.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-62-3">Problem 62-3<a class="anchor-link" href="#Problem-62-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p><strong>Location:</strong> Writeup in Overleaf; code in <code>machine-learning/analysis/assignment_62.py</code></p>
+<p><strong>a.</strong> Create a dataset as follows:</p>
+$$
+\left\{ (x, y) \, \Bigg| \, \begin{matrix} x=0.1, 0.2, \ldots, 10 \\ y=3+0.5x^2 + \epsilon, \, \epsilon \sim \mathcal{U}(-5, 5) \end{matrix} \right\}
+$$<p>Split the dataset into two subsets:</p>
+<ul>
+<li>a <em>training</em> dataset consisting of 80% of the data points, and</li>
+<li>a <em>testing</em> dataset consisting of 20% of the data points.</li>
+</ul>
+<p>Make sure that your training and testing datasets are evenly distributed throughout the data region. To do this, you should choose the first 4 points as training, the next point as testing, the next 4 points as training, the next point as testing, and so on.</p>
+<p><strong>b.</strong> Fit 5 models to the data: a linear regressor, a quadratic regressor, a cubic regressor, a quartic regressor, and a quintic regressor. Compute the <a href="https://en.wikipedia.org/wiki/Residual_sum_of_squares">residual sum of squares (RSS)</a> for each model on the training data. Which model is most accurate on the training data? Explain why.</p>
+<p><strong>c.</strong> Compute the RSS for each model on the <em>testing</em> data. Which model is most accurate on the testing data? Explain why.</p>
+<p><strong>d.</strong> Based on your findings, which model is the best model for the data? Justify your choice.</p>
 
 </div>
 </div>
@@ -13643,21 +13766,12 @@ $$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-61-2">Problem 61-2<a class="anchor-link" href="#Problem-61-2">&#182;</a></h1><p><strong>Location:</strong> <code>simulation/analysis/3-neuron-network.py</code></p>
-<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Grading:</strong> 5 points</p>
 <p>There are a couple things we need to update in our <code>BiologicalNeuron</code> and <code>BiologicalNeuralNetwork</code>, to make the model more realistic.</p>
-<p><strong>a.</strong> A synapse only releases neurotransmitters when a neuron has "fired". So, the voltage due to synapse inputs should not be a sum of all the raw voltages of the corresponding neurons. Instead, we should only sum the voltages that are over some threshold, say, $50 \, \textrm{mV}.$</p>
+<p>The first thing is that the synapse only releases neurotransmitters when a neuron has "fired". So, the voltage due to synapse inputs should not be a sum of all the raw voltages of the corresponding neurons. Instead, we should only sum the voltages that are over some threshold, say, $50 \, \textrm{mV}.$</p>
 <p>So, our model becomes</p>
-$$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \\ \textrm{with } V(t) &gt; 50 \end{matrix}} V_{\text{other neuron}}(t) \right)}_\text{interactions with other neurons}.$$<p><strong>b.</strong> When a neuron fires, the action potential does not reach the synapse instantaneously. There is a small delay depending on how far away the synapse is. Let's say the delay is about $2 \, \textrm{ms}.$ Then we have</p>
-$$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \\ \textrm{with } V(t-2) &gt; 50 \end{matrix}} V_{\text{other neuron}}(t-2) \right)}_\text{interactions with other neurons}.$$<p>Taking the above changes into account, simulate 3 neurons connected in the fashion $1 \to 2 \to 3,$ where neuron $1$ receives the following electrode stimulus:
-$$
-s(t) = \begin{cases}
-50, &amp; t \in [10,11] \cup [20,21] \cup [30,40] \cup [50,51] \cup [53,54] \\
- &amp; \phantom{t \in [} \cup [56,57] \cup [59,60] \cup [62,63] \cup [65,66] \\
- 0 &amp; \text{otherwise}
-\end{cases}
-$$</p>
-<p>You should get the following result:</p>
-<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley-3neurons-improved.png' border='0'/></center>
+$$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \\ \textrm{with } V(t) &gt; 50 \end{matrix}} V_{\text{other neuron}}(t) \right)}_\text{interactions with other neurons}.$$<p>Update your <code>BiologicalNeuralNetwork</code> using the above model. The resulting graph should stay mostly the same (but this update to the model will be important when we're simulating many neurons).</p>
+
 </div>
 </div>
 </div>
