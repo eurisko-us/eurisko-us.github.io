@@ -11,7 +11,7 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto">  
     
-<br><br><font size="3em">In general, all assignments are due by midnight the night before the next class. (So if we have class on Wednesday, and the next class is Friday, then the assignment assigned on Wednesday is due Thursday night at midnight.)</font>
+<br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
 <font size="3em"><ol reversed start="61">
