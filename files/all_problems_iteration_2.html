@@ -13119,6 +13119,87 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-29-1">Problem 29-1<a class="anchor-link" href="#Problem-29-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>The <strong>Poisson distribution</strong> can be used to model how many times an event will occur within some continuous interval of time, given that occurrences of an event are independent of one another.</p>
+<p>Its probability function is given by
+\begin{align*}
+p_\lambda(n) = \dfrac{\lambda^n e^{-\lambda}}{n!}, \quad n \in \left\{ 0, 1, 2, \ldots \right\},
+\end{align*}</p>
+<p>where $\lambda$ is the mean number of events that occur in the particular time interval.</p>
+<p><strong>SUPER IMPORTANT:</strong> Manipulating the Poisson distribution involves using infinite sums. However, these sums can be easily expressed using the Mclaurin series for $e^x\mathbin{:}$</p>
+\begin{align*}
+e^x = 1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \ldots
+\end{align*}<p><strong>a.</strong> Consider the Poisson distribution defined by $$p_2(n) = \dfrac{2^n e^{-2}}{n!}.$$ Show that this is a valid probability distribution, i.e. all the probability sums to $1.$</p>
+<p><strong>b.</strong> Given that $N \sim p_2,$ compute $P(10 &lt; N \leq 12).$ Leave your answer in exact form, and don't expand out the factorials. Pay close attention to the "less than" vs "less than or equal to" symbols.</p>
+<p><strong>c.</strong> Given that $N \sim p_2,$ compute $E[N].$</p>
+<ul>
+<li><p>Using the Mclaurin series for $e^x,$ your answer should simplify to $2.$</p>
+</li>
+<li><p>When doing your series manipulations, <strong>don't</strong> use sigma notation. Instead, write out the first several terms of the series, followed by "dot dot dot", as shown in the Mclaurin series under the "SUPER IMPORTANT" label.</p>
+</li>
+</ul>
+<p><strong>d.</strong> Given that $N \sim p_2,$ compute $\text{Var}[N].$ Using the Mclaurin series for $e^x,$ your answer should come out to a nice clean integer.</p>
+<ul>
+<li><p>Using the Mclaurin series for $e^x,$ your answer should again simplify to $2.$</p>
+</li>
+<li><p>Again, when doing your series manipulations, <strong>don't</strong> use sigma notation. Instead, write out the first several terms of the series, followed by "dot dot dot", as shown in the Mclaurin series under the "SUPER IMPORTANT" label.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-29-2">Problem 29-2<a class="anchor-link" href="#Problem-29-2">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/tests/test_data_frame.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Implement the following functionality in your <code>DataFrame</code>, and <strong>assert that these tests pass.</strong></p>
+<p><strong>a.</strong> Loading an array. You'll need to use <code>@classmethod</code> for this one (<a href="https://stackabuse.com/pythons-classmethod-and-staticmethod-explained/">read about it here</a>).</p>
+
+<pre><code>&gt;&gt;&gt; columns = ['firstname', 'lastname', 'age']
+&gt;&gt;&gt; arr = [['Kevin', 'Fray', 5],
+           ['Charles', 'Trapp', 17],
+           ['Anna', 'Smith', 13],
+           ['Sylvia', 'Mendez', 9]]
+&gt;&gt;&gt; df = DataFrame.from_array(arr, columns)</code></pre>
+<p><strong>b.</strong> Selecting rows which satisfy a particular condition (given as a lambda function)</p>
+
+<pre><code>&gt;&gt;&gt; df.select_rows_where(
+    lambda row: len(row['firstname']) &gt;= len(row['lastname'])
+                and row['age'] &gt; 10
+    ).to_array()
+[['Charles', 'Trapp', 17]]</code></pre>
+<p><strong>c.</strong> Ordering the rows by given column</p>
+
+<pre><code>&gt;&gt;&gt; df.order_by('age', ascending=True).to_array()
+[['Kevin', 'Fray', 5],
+['Sylvia', 'Mendez', 9],
+['Anna', 'Smith', 13],
+['Charles', 'Trapp', 17]]
+
+&gt;&gt;&gt; df.order_by('firstname', ascending=False).to_array()
+[['Sylvia', 'Mendez', 9],
+['Kevin', 'Fray', 5],
+['Charles', 'Trapp', 17],
+['Anna', 'Smith', 13]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-28-3">Problem 28-3<a class="anchor-link" href="#Problem-28-3">&#182;</a></h1><p><strong>Grading:</strong> 5 points</p>
+<p>Complete Module 1 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-28-1">Problem 28-1<a class="anchor-link" href="#Problem-28-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>Suppose you are given the following dataset:</p>

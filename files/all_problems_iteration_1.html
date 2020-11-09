@@ -13644,6 +13644,13 @@ $$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>NOTE: NEED TO MODIFY EULERESTIMATOR TO MAKE THIS EASIER TO IMPLEMENT</p>
+<ul>
+<li><p>store a list of points</p>
+</li>
+<li><p>one possibility: reference as <code>x[get_num_steps(t)][0]</code>. Whenever you want to reference the most recent points, use <code>x[-1][0]</code></p>
+</li>
+</ul>
+<hr>
 <p>When a neuron fires, the action potential does not reach the synapse instantaneously. There is a small delay depending on how far away the synapse is. Let's say the delay is about $2 \, \textrm{ms}.$ Then we have</p>
 $$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right]}_\text{neuron in isolation} +  \underbrace{\dfrac{1}{C} \left( \sum\limits_{\begin{matrix} \textrm{synapses from} \\ \textrm{other neurons} \\ \textrm{with } V(t-2) &gt; 50 \end{matrix}} V_{\text{other neuron}}(t-2) \right)}_\text{interactions with other neurons}.$$<p>Taking the above changes into account, simulate 3 neurons connected in the fashion $1 \to 2 \to 3,$ where neuron $1$ receives the following electrode stimulus:
 $$
@@ -13664,6 +13671,14 @@ $$</p>
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
 <p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-005.png' border='0'/></center><br></p>
 <p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-008.png' border='0'/></center><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Resolve blog post comments &amp; submit latex to Justin</p>
 
 </div>
 </div>
@@ -13726,6 +13741,9 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-62-2">Problem 62-2<a class="anchor-link" href="#Problem-62-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
 <p>Implement a function <code>quicksort</code>. Here is a description of the algorithm: <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU">https://www.youtube.com/watch?v=XE4VP_8Y0BU</a></p>
+<ul>
+<li>Note: <code>quicksort</code> is very similar to <code>mergesort</code>.</li>
+</ul>
 <p>Use your function to sort the list <code>[5,8,-1,9,10,3.14,2,0,7,6]</code> (write a test with an assert statement). Choose the pivot as the rightmost entry.</p>
 
 </div>
@@ -13736,6 +13754,7 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-62-3">Problem 62-3<a class="anchor-link" href="#Problem-62-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
 <p><strong>Location:</strong> Writeup in Overleaf; code in <code>machine-learning/analysis/assignment_62.py</code></p>
+<p><strong>Watch this video FIRST:</strong> <a href="https://youtu.be/EuBBz3bI-aA?t=29">https://youtu.be/EuBBz3bI-aA?t=29</a></p>
 <p><strong>a.</strong> Create a dataset as follows:</p>
 $$
 \left\{ (x, y) \, \Bigg| \, \begin{matrix} x=0.1, 0.2, \ldots, 10 \\ y=3+0.5x^2 + \epsilon, \, \epsilon \sim \mathcal{U}(-5, 5) \end{matrix} \right\}
@@ -13744,7 +13763,7 @@ $$<p>Split the dataset into two subsets:</p>
 <li>a <em>training</em> dataset consisting of 80% of the data points, and</li>
 <li>a <em>testing</em> dataset consisting of 20% of the data points.</li>
 </ul>
-<p>Make sure that your training and testing datasets are evenly distributed throughout the data region. To do this, you should choose the first 4 points as training, the next point as testing, the next 4 points as training, the next point as testing, and so on.</p>
+<p>To do this, you can randomly remove 20% of the data points from the dataset.</p>
 <p><strong>b.</strong> Fit 5 models to the data: a linear regressor, a quadratic regressor, a cubic regressor, a quartic regressor, and a quintic regressor. Compute the <a href="https://en.wikipedia.org/wiki/Residual_sum_of_squares">residual sum of squares (RSS)</a> for each model on the training data. Which model is most accurate on the training data? Explain why.</p>
 <p><strong>c.</strong> Compute the RSS for each model on the <em>testing</em> data. Which model is most accurate on the testing data? Explain why.</p>
 <p><strong>d.</strong> Based on your findings, which model is the best model for the data? Justify your choice.</p>
@@ -13784,9 +13803,9 @@ $$\dfrac{\textrm dV}{\textrm dt} = \underbrace{\dfrac{1}{C} \left[ s(t) - I_{\te
 <ul>
 <li><p>Riley: review <a href="https://docs.google.com/document/d/1ZCgmAeP3gLiKEXkz34678WTNI1OODbYgYdc1U0n-VO4/edit?usp=sharing">Colby</a>'s</p>
 </li>
-<li><p>Elijah: review David's</p>
+<li><p>Elijah: review <a href="https://docs.google.com/document/d/1qfYpVkRc9SicJT15BGraOB0tih9WZyU_d0wqJRANhsU/edit?usp=sharing">David</a>'s</p>
 </li>
-<li><p>George: review <a href="https://docs.google.com/document/d/1F0xGxBa7DUq3X9SFutmtrryRjx4ddxNFCM8hS9UrGBs/edit?usp=sharing">Elijah</a>'s</p>
+<li><p>George: review <a href="https://docs.google.com/document/d/17F_j-8rVYDJDWSApa-yq0EDh7xjaul7RiQXw66UHgJc/edit?usp=sharing">Elijah</a>'s</p>
 </li>
 <li><p>Colby: review <a href="https://docs.google.com/document/d/1q8rrOdbsFLKCCPW-z4GlSKjRmx-iJdUYRoj76alWvN4/edit?usp=sharing">Riley</a>'s</p>
 </li>
