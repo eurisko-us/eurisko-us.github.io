@@ -91,7 +91,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Friday, October 16</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/469033993">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/476978779">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-54-1">Introduction to K Nearest Neighbors</a></li>
