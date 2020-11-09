@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="28">
+<font size="3em"><ol reversed start="29">
+    <li><b>Monday, November 9</b>
+        <!--<br><a class="body" target="_blank" href="https://vimeo.com/476398132">Class Recording</a>: started 26-2-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-29-1">Intro to Poisson Distribution</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-29-2">DataFrame: loading from array, selecting, ordering</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-29-3">Sololearn SQL Module 1</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, November 6</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/476398132">Class Recording</a>: 26-3, 27-3, 28-1
         <br>Assignment Problems:
