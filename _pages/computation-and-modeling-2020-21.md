@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="29">
     <li><b>Monday, November 9</b>
-        <!--<br><a class="body" target="_blank" href="https://vimeo.com/476398132">Class Recording</a>: started 26-2-->
+        <br><a class="body" target="_blank" href="https://vimeo.com/477248517">Class Recording</a>: started 26-2
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-29-1">Intro to Poisson Distribution</a></li>
