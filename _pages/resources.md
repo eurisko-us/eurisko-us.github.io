@@ -109,7 +109,7 @@ author_profile: false
   <li><b>Biweekly Quizzes (30%).</b> We will have quizzes every other week. They will consist of free-response problems focused on the core principles covered in the assignments.</li>
   <li><b>Library Quality (15%).</b> At the end of the course, your code libraries will be graded for code quality. So, be sure to refactor your code appropriately each time you do an assignment!</li>
   <li><b>Final (15%).</b> There will be a cumulative final exam.</li>
-  <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 3 specific things that could be improved.</li>
+  <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 2 specific things that could be improved.</li>
 </ul></font>
 
 <br>
