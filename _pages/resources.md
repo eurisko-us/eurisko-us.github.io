@@ -118,7 +118,7 @@ author_profile: false
 
 <b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.<br><br>
 
-Note that you can only resubmit <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to resubmit, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.
+Note that you can only resubmit <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to resubmit, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.<br><br>
 
 <b>Corrections Policy:</b>You can also submit quiz corrections, and get up to 30% of the points back that you originally missed. For each part you missed, you need to answer the following:
 <font size="3em">
