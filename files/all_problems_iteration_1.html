@@ -13666,6 +13666,14 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Quicksort with swaps</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-63-1">Problem 63-1<a class="anchor-link" href="#Problem-63-1">&#182;</a></h1><p><strong>Grading:</strong> 20 points</p>
 <p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
 <p><strong>a.</strong></p>
@@ -13768,8 +13776,8 @@ $$</p>
 &gt;&gt;&gt; naive_bayes.likelihood(('scam',False), observed_features)
 0.05
 
-&gt;&gt;&gt; naive_bayes.classify(observed_features)
-'scam_True'</code></pre>
+&gt;&gt;&gt; naive_bayes.classify('scam', observed_features)
+True</code></pre>
 
 </div>
 </div>
@@ -13778,9 +13786,10 @@ $$</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-62-2">Problem 62-2<a class="anchor-link" href="#Problem-62-2">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
-<p>Implement a function <code>quicksort</code>. Here is a description of the algorithm: <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU">https://www.youtube.com/watch?v=XE4VP_8Y0BU</a></p>
+<p><strong>Location:</strong> <code>assignment-problems/quicksort_without_swaps.py</code></p>
+<p>Implement a function <code>quicksort</code> that implements the variant of quicksort described here: <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU">https://www.youtube.com/watch?v=XE4VP_8Y0BU</a></p>
 <ul>
-<li>Note: <code>quicksort</code> is very similar to <code>mergesort</code>.</li>
+<li>Note: this variant of <code>quicksort</code> is very similar to <code>mergesort</code>.</li>
 </ul>
 <p>Use your function to sort the list <code>[5,8,-1,9,10,3.14,2,0,7,6]</code> (write a test with an assert statement). Choose the pivot as the rightmost entry.</p>
 
