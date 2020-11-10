@@ -124,7 +124,7 @@ Note that you can only resubmit <i>once</i> -- so make sure that you fully corre
 <font size="3em">
   <ol>
     <li>What was your misconception in your original answer? Why is it a misconception? What did you learn?</li>
-        <ul><li>*Don't* just say that you didn't understand something. Explain what it was in particular that you didn't understand. If you don't do this, your corrections will not be graded.</li></ul>
+    <ul><li>DON'T just say that you didn't understand something. Explain what it was in particular that you didn't understand. If you don't do this, your corrections will not be graded.</li></ul>
     <li>What is the actual answer and why is it correct? Show all steps in your work.</li>
   </ol>
  </font>
