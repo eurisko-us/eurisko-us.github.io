@@ -15,7 +15,19 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="29">
+Veterans Day - no class, but there is an assignment
+
+<font size="3em"><ol reversed start="30">
+    <li><b>Wednesday, November 11</b>
+        <br>Veterans Day - no class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-30-1">Probability & Statistics Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-30-2">Doubly Linked List</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-30-3">Sololearn SQL Module 2, C++ Module 3</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, November 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/477248517">Class Recording</a>: started 26-2
         <br>Assignment Problems:
