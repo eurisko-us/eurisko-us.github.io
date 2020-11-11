@@ -14,13 +14,23 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="62">
+<font size="3em"><ol reversed start="63">
+    <li><b>Wednesday, November 8</b>
+        <br>Veterans Day - no class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-63-1">Probability & Statistics Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-63-2">Sololearn C++ & SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-63-3">Blog Post Revisions</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, November 6</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/477248481">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-62-1">NaiveBayesClassifier</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-62-2">Quicksort</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-62-2">Quicksort Without Swaps</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-62-3">Model Complexity vs Performance on Train/Test Data: Polynomial Regressors</a></li>
         </ul></font>
     </li>
