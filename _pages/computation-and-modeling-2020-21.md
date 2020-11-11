@@ -15,8 +15,6 @@ author_profile: false
 
 <br><br>
 
-Veterans Day - no class, but there is an assignment
-
 <font size="3em"><ol reversed start="30">
     <li><b>Wednesday, November 11</b>
         <br>Veterans Day - no class, but there is an assignment
