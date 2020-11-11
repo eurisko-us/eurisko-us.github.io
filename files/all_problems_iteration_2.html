@@ -13119,6 +13119,253 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Write a function <code>cartesian_product(arrays)</code> that computes the <a href="https://en.wikipedia.org/wiki/Cartesian_product">Cartesian product</a> of all the lists in <code>arrays</code>.</p>
+
+<pre><code>&gt;&gt;&gt; cartesian_product([['a'], [1,2,3], ['Y','Z']])
+[['a',1,'Y'], ['a',1,'Z'], ['a',2,'Y'], ['a',2,'Z'], ['a',3,'Y'], ['a',3,'Z']]</code></pre>
+<p><strong>NOTE: This is a reasonably short function if you use the following procedure. You'll probably have to think a bit in order to get the implementation correct, though.</strong></p>
+<ol>
+<li><p>Create a variable <code>points</code> that will be a list of all the points in the cartesian product. Initially, set <code>points</code> to consist of a single empty point: <code>points = [[]]</code>.</p>
+</li>
+<li><p>For each array in the input, create a new list of points.</p>
+<ul>
+<li><p>The new set of points can be constructed by looping through each existing point and, for each existing point, adding several new points.</p>
+<ul>
+<li>For a given point, the new points can be constructed by appending each element of the array onto a copy of the given point.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Return the list of points.</p>
+</li>
+</ol>
+<p><strong>Worked Example:</strong></p>
+
+<pre><code>arrays = [['a'], [1,2,3], ['Y','Z']]
+
+points: [[]]
+considering array ['a']
+considering element 'a'
+new point ['a']
+
+points: [['a']]
+considering array [1,2,3]
+considering element 1
+new point ['a',1]
+considering element 2
+new point ['a',2]
+considering element 3
+new point ['a',3]
+
+points: [['a',1], ['a',2], ['a',3]]
+considering array ['Y','Z']
+considering element 'Y'
+new points ['a',1,'Y'], ['a',2,'Y'], ['a',3,'Y']
+considering element 'Z'
+new points ['a',1,'Z'], ['a',2,'Z'], ['a',3,'Z']
+
+points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c','Z']]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>a) In <code>GradientDescent</code>, clean up <code>tests/test_gradient_descent.py</code>.</p>
+<ul>
+<li><p>For each comparison of floating-point decimals, <strong>round to 10 decimal places</strong> before you check for equality.</p>
+</li>
+<li><p>The only things you should print are the name of each test, and if the test fails, then your custom error message. You can use the format below, or come up with your own format provided that it meets the specifications in the previous sentence.</p>
+</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; python tests/test_gradient_descent.py
+
+Testing...
+
+compute_gradient
+    single_variable_function
+    two_variable_function
+    three_variable_function
+    six_variable_function
+
+descend
+    single_variable_function
+    two_variable_function
+
+AssertionError: incorrect output for descend on three_variable_function
+OUTPUT: [3.0020000000000000018, 2.0030001000000000055, 1.004000400000000004]
+DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</code></pre>
+<p>b) In <code>GradientDescent</code>, generalize your <code>grid_search</code> to work on objective functions of any number of variables.</p>
+<ul>
+<li><p><strong>HINT: You wrote a <code>cartesian_product</code> function in Problem 1, so use it here as a helper function! Just loop over the cartesian product of the input arrays.</strong></p>
+</li>
+<li><p><em>Note: For now, don't worry about applying gradient descent within the grid search. Just find the grid point with the lowest value of the function.</em></p>
+</li>
+</ul>
+<p><strong>Lastly, use <code>assert</code> statements to write the following additional tests for your <code>GradientDescent</code> class, and make sure all your tests pass.</strong> Put these additional tests in <code>tests/test_gradient_descent.py</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+
+<pre><code>&gt;&gt;&gt; def single_variable_function(x):
+        return (x-1)**2
+&gt;&gt;&gt; def two_variable_function(x, y):
+        return (x-1)**2 + (y-1)**3
+&gt;&gt;&gt; def three_variable_function(x, y, z):
+        return (x-1)**2 + (y-1)**3 + (z-1)**4
+&gt;&gt;&gt; def six_variable_function(x1, x2, x3, x4, x5, x6):
+        return (x1-1)**2 + (x2-1)**3 + (x3-1)**4 + x4 + 2*x5 + 3*x6
+
+&gt;&gt;&gt; minimizer = GradientDescent(single_variable_function)
+&gt;&gt;&gt; minimizer.grid_search([[0, 0.25, 0.75]])
+&gt;&gt;&gt; minimizer.minimum
+[0.75]
+
+&gt;&gt;&gt; minimizer = GradientDescent(two_variable_function)
+&gt;&gt;&gt; minimizer.grid_search([[0, 0.25, 0.75], [0.9, 1, 1.1]])
+&gt;&gt;&gt; minimizer.minimum
+[0.75, 0.9]
+
+&gt;&gt;&gt; minimizer = GradientDescent(three_variable_function)
+&gt;&gt;&gt; minimizer.grid_search([[0, 0.25, 0.75], [0.9, 1, 1.1], [0, 1, 2, 3]])
+&gt;&gt;&gt; minimizer.minimum
+[0.75, 0.9, 1]
+
+&gt;&gt;&gt; minimizer = GradientDescent(six_variable_function)
+&gt;&gt;&gt; minimizer.grid_search([[0, 0.25, 0.75], [0.9, 1, 1.1], [0, 1, 2, 3],
+                          [-2, -1, 0, 1, 2], [-2, -1, 0, 1, 2], [-2, -1, 0, 1, 2]])
+&gt;&gt;&gt; minimizer.minimum
+[0.75, 0.9, 1, -2, -2, -2]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Extend your <code>machine-learning</code> library to include the following 8 tests for <code>GradientDescent.py</code>.</strong> For each function, test that <code>GradientDescent</code> computes the correct gradient, and that the minimum is correct after descending once along the gradient.</p>
+
+<pre><code>&gt;&gt;&gt; def single_variable_function(x):
+        return (x-1)**2
+&gt;&gt;&gt; def two_variable_function(x, y):
+        return (x-1)**2 + (y-1)**3
+&gt;&gt;&gt; def three_variable_function(x, y, z):
+        return (x-1)**2 + (y-1)**3 + (z-1)**4
+&gt;&gt;&gt; def six_variable_function(x1, x2, x3, x4, x5, x6):
+        return (x1-1)**2 + (x2-1)**3 + (x3-1)**4 + x4 + 2*x5 + 3*x6
+
+&gt;&gt;&gt; minimizer = GradientDescent(single_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018]
+
+&gt;&gt;&gt; minimizer = GradientDescent(two_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018, -0.0030001000000000055]
+
+&gt;&gt;&gt; minimizer = GradientDescent(three_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]
+
+&gt;&gt;&gt; minimizer = GradientDescent(six_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035, 1.0000000000000009, 2.0000000000000018, 3.0000000000000027]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+(0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004, -0.0010000000000000009, -0.0020000000000000018, -0.0030000000000000027)</code></pre>
+<p>You should be able to execute the tests by running <code>tests/test_GradientDescent.py</code>. <strong>MAKE SURE THAT ALL YOUR TESTS PASS, and make sure to push your finished code to Github for safekeeping.</strong></p>
+
+<pre><code>machine-learning/
+|- src/
+.  |- Matrix.py
+.  |- PolynomialRegressor.py
+.  |- GradientDescent.py
+|- tests/
+.  |- test_GradientDescent.py</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-30-1">Problem 30-1<a class="anchor-link" href="#Problem-30-1">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-010.png' border='0'/><br><br></p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-003.png' border='0'/></p>
+<ul>
+<li><strong>Check:</strong> you should get a result of $0.1813.$ If you get stuck, then <a href="https://math.stackexchange.com/questions/193099/conditional-probabilities-involving-the-exponential-distribution/193130">here's a link</a> to a similar example, worked out.</li>
+</ul>
+<p><br></p>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-008.png' border='0'/><br><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-30-2">Problem 30-2<a class="anchor-link" href="#Problem-30-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/doubly_linked_list.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Create a class <code>DoublyLinkedList</code> that is similar to <code>LinkedList</code>, except that each <code>Node</code> has an additional attribute, <code>prev</code>, which returns the previous node. (It is the opposite of the <code>next</code> attribute.)</p>
+<p>Make sure that <code>prev</code> is updated correctly in each of the operations.</p>
+<p>Assert that the following test passes:</p>
+
+<pre><code>&gt;&gt;&gt; doubly_linked_list = DoublyLinkedList('a')
+&gt;&gt;&gt; doubly_linked_list.append('c')
+&gt;&gt;&gt; doubly_linked_list.append('d')
+&gt;&gt;&gt; doubly_linked_list.append('e')
+&gt;&gt;&gt; doubly_linked_list.insert('b',1)
+&gt;&gt;&gt; doubly_linked_list.delete(3)
+
+Note: at this point, the list looks like this:
+a &lt;--&gt; b &lt;--&gt; c &lt;--&gt; e
+
+&gt;&gt;&gt; current_node = doubly_linked_list.get_node(3)
+&gt;&gt;&gt; node_values = [current_node.data]
+&gt;&gt;&gt; for _ in range(3):
+        current_node = current_node.prev
+        node_values.append(current_node.data)
+&gt;&gt;&gt; node_values
+['e', 'c', 'b', 'a']</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-30-3">Problem 30-3<a class="anchor-link" href="#Problem-30-3">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<ul>
+<li><p>Complete Module 3 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of each completed module, with your user profile showing, and submit both screenshots along with the assignment.</p>
+</li>
+<li><p>Complete Module 2 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-29-1">Problem 29-1<a class="anchor-link" href="#Problem-29-1">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
 <p><strong>Grading:</strong> 10 points</p>
 <p>The <strong>Poisson distribution</strong> can be used to model how many times an event will occur within some continuous interval of time, given that occurrences of an event are independent of one another.</p>
@@ -13171,6 +13418,15 @@ e^x = 1 + x + \dfrac{x^2}{2!} + \dfrac{x^3}{3!} + \ldots
                 and row['age'] &gt; 10
     ).to_array()
 [['Charles', 'Trapp', 17]]</code></pre>
+<ul>
+<li><strong>Note:</strong> It's true that if you're just working with a plain old array, you can't do stuff like <code>row['firstname']</code>. But we're working with a DataFrame class, which means we've got some creative freedom. You'll have to find way to convert a row array to a row dictionary, behind the scenes. In other words, make a function <code>convert_row_from_array_to_dict</code> that takes a row <code>['Kevin', 'Fray', 5]</code> and converts it to
+<pre><code>{
+  'firstname': 'Kevin',
+  'lastname': 'Fray',
+  'age': 5
+}</code></pre>
+before you apply the lambda function.</li>
+</ul>
 <p><strong>c.</strong> Ordering the rows by given column</p>
 
 <pre><code>&gt;&gt;&gt; df.order_by('age', ascending=True).to_array()
