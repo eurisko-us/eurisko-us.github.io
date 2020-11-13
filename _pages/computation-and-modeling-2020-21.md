@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="30">
+<font size="3em"><ol reversed start="31">
+    <li><b>Friday, November 13</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/479055809">Class Recording</a>: 26-2, 29-1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-31-1">Review - Probability & Statistics (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-31-2">Sololearn SQL Module 3, C++ Module 4</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, November 11</b>
         <br>Veterans Day - no class, but there is an assignment
         <br>Assignment Problems:
