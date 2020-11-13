@@ -13600,14 +13600,6 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>All of these: <a href="https://napier.sqlzoo.net/wiki/SQL_Tutorial">https://napier.sqlzoo.net/wiki/SQL_Tutorial</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>PageRank</p>
 
 </div>
@@ -13666,7 +13658,76 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Quicksort with swaps</p>
+<h1 id="Problem-64-1">Problem 64-1<a class="anchor-link" href="#Problem-64-1">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
+<p><strong>Location:</strong> <code>assignment-problems/quicksort.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Previously, you wrote a variant of quicksort that involved splitting the list into two parts (one part $\leq$ the pivot, and another part $&gt;$ the pivot), and then recursively calling quicksort on those parts.</p>
+<p>However, this algorithm can be made more efficient by keeping everything in the same list (rather than creating two new lists). You can do this by <em>swapping</em> elements rather than breaking them out into new lists.</p>
+<p><strong>Your task is to write a quicksort algorithm that uses only one list, and uses swaps to re-order elements within that list, per the quicksort algorithm. <a href="https://www.youtube.com/watch?v=cnzIChso3cc" target="_blank">Here is an example of how to do that.</a></strong></p>
+<p>Make sure your algorithm passes the same test as the quicksort without swaps (that you did on the previous assignment).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-64-2">Problem 64-2<a class="anchor-link" href="#Problem-64-2">&#182;</a></h1><p><strong>Estimated time:</strong> 30 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Complete queries 1-10 in the <a href="https://napier.sqlzoo.net/wiki/SELECT_names" target="_blank">SQL Zoo</a>. <a href="https://www.w3schools.com/sql/sql_like.asp" target="_blank">Here's a reference</a> for the LIKE operator, which will come in handy.</p>
+<p>Take a screenshot of each successful query and put them in an overleaf doc. When a query is successful, you'll see a smiley face appear. Your screenshots should look like this:</p>
+<p><img width=800 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/sqlzoo-example.png' border='0'/><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-64-4">Problem 64-4<a class="anchor-link" href="#Problem-64-4">&#182;</a></h1><p><strong>Estimated Time:</strong> 60 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-002.png' border='0'/><br></p>
+<ul>
+<li>The PMF tells you the probabilities of values of $X.$ For example, from the PMF, we have $P(X=0) = 0.2.$ You just need to plug in these values of $X$ into the function $Y=X(X-1)(X-2)$ and sum up any probabilities for which the same value of $Y$ is obtained.</li>
+</ul>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-004.png' border='0'/></p>
+<ul>
+<li>Remember Bayes' rule: $P(A \, | \, B) = \dfrac{P(A \cap B)}{P(B)}$</li>
+</ul>
+<p><br></p>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-004.png' border='0'/></p>
+<ul>
+<li><p>If two events $X$ and $Y$ are "independent", then $P(X \cup Y) = P(X) P(Y).$</p>
+</li>
+<li><p>If two events $X$ and $Y$ are "disjoint", then $P(X \cap Y) = 0.$</p>
+</li>
+</ul>
+<p><br></p>
+<p><strong>d.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-009.png' border='0'/></p>
+<ul>
+<li>Try setting up a system of equations.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-64-4">Problem 64-4<a class="anchor-link" href="#Problem-64-4">&#182;</a></h1><p><strong>Estimated Time:</strong> 15 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>(Taken from <em>Introduction to Statistical Learning</em>)</p>
+<p>This problem is VERY similar to the test/train analysis you did in the previous assignment. But this time, you don't have to actually code up anything. You just have to use the concepts of overfitting and underfitting to justify your answers.</p>
+<p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/isl-ch3-002-a.png' border='0'/></center><br></p>
+<p><center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/isl-ch3-002-b.png' border='0'/></center><br></p>
 
 </div>
 </div>
@@ -13677,31 +13738,35 @@ $$</p>
 <h1 id="Problem-63-1">Problem 63-1<a class="anchor-link" href="#Problem-63-1">&#182;</a></h1><p><strong>Grading:</strong> 20 points</p>
 <p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
 <p><strong>a.</strong></p>
-<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-010.png' border='0'/><br><br></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-010.png' border='0'/><br></p>
 <p><strong>b.</strong></p>
-<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-005.png' border='0'/><br><br></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-005.png' border='0'/></p>
+<ul>
+<li>This problem involves summing up probabilities over all possible paths that lead to a desired outcome. An easy way to do this is to use a <a href="https://www.mathsisfun.com/data/probability-tree-diagrams.html" target="_blank">tree diagram</a>.</li>
+</ul>
+<p><br></p>
 <p><strong>c.</strong></p>
-<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-008.png' border='0'/><br><br></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-008.png' border='0'/><br></p>
 <p><strong>d.</strong></p>
 <p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-001.png' border='0'/></p>
 <ul>
 <li>Note: "with replacement" means that each time a ball is drawn, it is put back in for the next draw. So, it would be possible to draw the same ball more than once.</li>
 </ul>
-<p><br><br></p>
+<p><br></p>
 <p><strong>e.</strong></p>
 <p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-002.png' border='0'/></p>
 <ul>
 <li>Note: "without replacement" means that each time a ball is drawn, it is NOT put back in for the next draw. So, it would NOT be possible to draw the same ball more than once.</li>
 </ul>
-<p><br><br></p>
+<p><br></p>
 <p><strong>f.</strong></p>
 <p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-001.png' border='0'/></p>
 <ul>
 <li>Note: CDF stands for "Cumulative Distribution Function" and is defined as $\textrm{CDF}(x) = P(X \leq x).$ </li>
 </ul>
-<p><br><br></p>
+<p><br></p>
 <p><strong>g.</strong></p>
-<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-003.png' border='0'/><br><br></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-003.png' border='0'/><br></p>
 
 </div>
 </div>
