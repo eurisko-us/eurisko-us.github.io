@@ -14,8 +14,19 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="63">
-    <li><b>Wednesday, November 8</b>
+<font size="3em"><ol reversed start="64">
+    <li><b>Friday, November 13</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/479056179">Class Recording</a>: 63-1, 62-3
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-1">Quicksort with Swaps/a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-2">SQL Zoo Module 1, 1-10</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-3">Review - Probability (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-4">Review - Intro to Statistical Learning</a></li>
+        </ul></font>
+    </li>
+    <br>
+    <li><b>Wednesday, November 11</b>
         <br>Veterans Day - no class, but there is an assignment
         <br>Assignment Problems:
         <font size="2em"><ul>
@@ -25,7 +36,7 @@ author_profile: false
         </ul></font>
     </li>
     <br>
-    <li><b>Monday, November 6</b>
+    <li><b>Monday, November 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/477248481">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
