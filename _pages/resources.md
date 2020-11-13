@@ -53,7 +53,9 @@ author_profile: false
   and <i>shareable</i> links to your Overleaf documents, e.g.
   <font size="3em"><code>https://www.overleaf.com/read/wjmgkxpccvpj</code></font>.
 
-<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, the <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX commandments</a>, and satisfies ALL the requirements outlined in the assignment! Poor-quality assignments will not be graded.
+<br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, the <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX commandments</a>, and satisfies ALL the requirements outlined in the assignment!
+
+<br><br>You are welcome (and encouraged) to send me their assignments on Slack to get feedback before you submit. I'm usually able to identify any obvious issues just by taking a quick glance, and it's easiest to fix those issues right away before submitting (as opposed to waiting until "later" to resubmit the assignment after it's already been graded).
 
 
 <!--
@@ -114,9 +116,9 @@ author_profile: false
 
 <br>
 
-<b>Late Assignments Policy:</b> Late assignments are marked down by 20% per day late. The late penalty is on a per-question basis, not a whole-assignment basis -- so it's always better to turn in a partially completed homework on time and turn in the remaining bit late, than to turn in everything late.<br><br>
+<b>Late Assignments Policy:</b> Currently, late assignments are marked down by 20% per day late. The late penalty is on a per-question basis, not a whole-assignment basis -- so it's always better to turn in a partially completed homework on time and turn in the remaining bit late, than to turn in everything late. Note that, starting in January, there will be a new late assignments policy: the grade on a late assignment will immediately be multiplied by 60% with no opportunity for resubmission.<br><br>
 
-<b>Resubmissions Policy:</b> You can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.<br><br>
+<b>Resubmissions Policy:</b> If you submitted the assignment on time, then you can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.<br><br>
 
 Note that you can only resubmit <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to resubmit, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.<br><br>
 
@@ -129,7 +131,9 @@ Note that you can only resubmit <i>once</i> -- so make sure that you fully corre
   </ol>
  </font>
 
-<br>Note that you can only submit corrections <i>once</i> -- so make sure that you correct all problems and explain your misconceptions thoroughly. You have as long as you need to make your corrections, so only submit your corrections once you're 100% sure there's nothing else you need to fix.
+<br>Note that you can only submit corrections <i>once</i> -- so make sure that you correct all problems and explain your misconceptions thoroughly. You have as long as you need to make your corrections, so only submit your corrections once you're 100% sure there's nothing else you need to fix.<br><br>
+
+<b>Grades of Zero:</b> You should be checking the grade and comments on each assignment. If you turned in an assignment but received a grade of 0, that just means there's something you need to fix before I grade it. You can read the comment on your assignment in Canvas to figure out what you need to fix. Sometimes, it can be as simple as putting your code in the correct folder/file. But in order to have your grade updated, you need to fix and resubmit the assignment.
 
 </div>
 
