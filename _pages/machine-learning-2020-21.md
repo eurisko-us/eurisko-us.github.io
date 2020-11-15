@@ -19,7 +19,7 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/479056179">Class Recording</a>: 63-1, 62-3
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-1">Quicksort with Swaps/a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-1">Quicksort with Swaps</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-2">SQL Zoo Module 1, 1-10</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-3">Review - Probability (Pishro-Nik)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-64-4">Review - Intro to Statistical Learning</a></li>
