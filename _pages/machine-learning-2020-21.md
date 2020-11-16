@@ -14,7 +14,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="64">
+<font size="3em"><ol reversed start="65">
+    <li><b>Monday, November 16</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-1">LeaveOneOutCrossValidator</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-2">Review - Probability (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-3">SQL Zoo Module 1, 11-15</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, November 13</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/479056179">Class Recording</a>: 63-1, 62-3
         <br>Assignment Problems:
