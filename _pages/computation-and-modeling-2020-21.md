@@ -15,7 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="31">
+<font size="3em"><ol reversed start="32">
+    <li><b>Monday, November 16</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-33-1">LinearRegressor</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-33-2">Review - Probability & Statistics (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-33-2">Sololearn SQL Module 4, C++ Module 5</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, November 13</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/479055809">Class Recording</a>: 26-2, 29-1
         <br>Assignment Problems:
