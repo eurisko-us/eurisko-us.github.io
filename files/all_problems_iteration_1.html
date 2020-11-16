@@ -13658,6 +13658,165 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-1">Problem 65-1<a class="anchor-link" href="#Problem-65-1">&#182;</a></h1><p><strong>Estimated time:</strong> 90 min</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/dataframe.py</code><br>
+<code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
+<code>machine-learning/tests/test_dataframe.py</code><br>
+<code>machine-learning/tests/test_leave_one_out_cross_validator.py</code></p>
+</blockquote>
+<p><strong>Grading:</strong> 15 points</p>
+<p>Update your <code>DataFrame</code> to include a method <code>to_json()</code> and write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
+
+<pre><code>&gt;&gt;&gt; columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+&gt;&gt;&gt; data = [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+['Sugar'       ,     0.02     ,       0.08     ,      0.45     ,     0.45      ],
+['Sugar'       ,     0.10     ,       0.15     ,      0.35     ,     0.40      ],
+['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
+['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
+['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
+['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
+['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]]
+&gt;&gt;&gt; df = DataFrame.from_array(data, columns)
+&gt;&gt;&gt; json_data = df.to_json()
+&gt;&gt;&gt; json_data
+[
+    {'Cookie Type': 'Shortbread',
+    'Portion Eggs': 0.14,
+    'Portion Butter': 0.14,
+    'Portion Sugar': 0.28,
+    'Portion Flour': 0.44},
+    {'Cookie Type': 'Shortbread',
+    'Portion Eggs': 0.12,
+    'Portion Butter': 0.10,
+    'Portion Sugar': 0.33,
+    'Portion Flour': 0.45},
+    ...
+]
+
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(df, prediction_column = 'Cookie Type')
+&gt;&gt;&gt; classifier = lambda observation: knn.classify(observation, 5)
+&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(classifier, json_data)
+&gt;&gt;&gt; cv.accuracy()
+0.6842105263157895
+
+Note: the following is included to help you debug.
+Row 0 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 1 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 2 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 3 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 4 -- True Class is Sugar; Predicted Class was Sugar
+Row 5 -- True Class is Sugar; Predicted Class was Sugar
+Row 6 -- True Class is Sugar; Predicted Class was Sugar
+Row 7 -- True Class is Sugar; Predicted Class was Shortbread
+Row 8 -- True Class is Sugar; Predicted Class was Shortbread
+Row 9 -- True Class is Sugar; Predicted Class was Sugar
+Row 10 -- True Class is Fortune; Predicted Class was Shortbread
+Row 11 -- True Class is Fortune; Predicted Class was Fortune
+Row 12 -- True Class is Fortune; Predicted Class was Fortune
+Row 13 -- True Class is Fortune; Predicted Class was Shortbread
+Row 14 -- True Class is Fortune; Predicted Class was Shortbread
+Row 15 -- True Class is Shortbread; Predicted Class was Sugar
+Row 16 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 17 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
+
+&gt;&gt;&gt; accuracies = []
+&gt;&gt;&gt; for k in range(1, len(data)-1):
+&gt;&gt;&gt;    classifier = lambda observation: knn.classify(observation, k)
+&gt;&gt;&gt;    cv = LeaveOneOutCrossValidator(classifier, json_data)
+&gt;&gt;&gt;    accuracies.append(cv.accuracy())
+
+&gt;&gt;&gt; accuracies
+[0.5789473684210527,
+ 0.5263157894736842,
+ 0.5789473684210527,
+ 0.5789473684210527,
+ 0.6842105263157895,
+ 0.6842105263157895,
+ 0.5789473684210527,
+ 0.631578947368421,
+ 0.5789473684210527,
+ 0.5263157894736842,
+ 0.5263157894736842,
+ 0.42105263157894735,
+ 0.47368421052631576,
+ 0.42105263157894735,
+ 0.42105263157894735,
+ 0.3157894736842105,
+ 0.42105263157894735]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-2">Problem 65-2<a class="anchor-link" href="#Problem-65-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 15 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-005.png' border='0'/></p>
+<ul>
+<li>Tip: for (b), compute $1-P(\textrm{complement}).$ Here, the complement is the event that you get no aces.<br></li>
+</ul>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-012.png' border='0'/></p>
+<ul>
+<li>Tip: again, compute $1-P(\textrm{complement}).$</li>
+</ul>
+<p><br></p>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-006.png' border='0'/></p>
+<ul>
+<li><p>Remember that PMF means "probability mass function". This is just the function $P(Z=z).$</p>
+</li>
+<li><p>Tip: Find the possible values of $Z,$ and then find the probabilities of those values of $Z$ occurring. Your answer will be a piecewise function:
+$$
+P(z) = \begin{cases}
+\_\_\_, \, z=\_\_\_ \\
+\_\_\_, \, z=\_\_\_ \\
+\ldots
+\end{cases}
+$$</p>
+</li>
+</ul>
+<p><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-3">Problem 65-3<a class="anchor-link" href="#Problem-65-3">&#182;</a></h1><p><strong>Estimated time:</strong> 30 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 5 points</p>
+<ul>
+<li><p>Complete queries 11-15 in the <a href="https://napier.sqlzoo.net/wiki/SELECT_names" target="_blank">SQL Zoo</a>. Take a screenshot of each successful query <strong>(with the successful smiley face showing)</strong> and put them in the overleaf doc.</p>
+</li>
+<li><p>Complete Module 7 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and put it in the overleaf doc.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-64-1">Problem 64-1<a class="anchor-link" href="#Problem-64-1">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
 <p><strong>Location:</strong> <code>assignment-problems/quicksort.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>

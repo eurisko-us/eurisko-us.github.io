@@ -13303,6 +13303,70 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-32-1">Problem 32-1<a class="anchor-link" href="#Problem-32-1">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
+<p><strong>Grading:</strong> 15 points</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/linear_regressor.py</code><br>
+<code>machine-learning/tests/test_linear_regressor.py</code><br></p>
+</blockquote>
+<p>Create a class <code>LinearRegressor</code> that works as follows. <strong>Make sure your code is general.</strong> In other words, do not assume the dataset always consists of 3 points, do not assume the independent variable is always named <code>'progress'</code>, etc.</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[1,0.2],
+     [2,0.25],
+     [3,0.5]],
+    columns = ['hours worked', 'progress']
+)
+&gt;&gt;&gt; regressor = LinearRegressor(df, independent_variable='progress')
+&gt;&gt;&gt; regressor.coefficients
+[0.01667, 0.15] # meaning that the model is progress = 0.01667 + 0.15 * (hours worked)
+# these coefficients are rounded, but you should not round except for
+# in your assert statement
+
+&gt;&gt;&gt; regressor.predict({'hours worked': 4})
+0.61667</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-32-2">Problem 32-2<a class="anchor-link" href="#Problem-32-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 15 min</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-005.png' border='0'/></p>
+<ul>
+<li>Tip: for (b), compute $1-P(\textrm{complement}).$ Here, the complement is the event that you get no aces.<br></li>
+</ul>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-012.png' border='0'/></p>
+<ul>
+<li>Tip: again, compute $1-P(\textrm{complement}).$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-32-3">Problem 32-3<a class="anchor-link" href="#Problem-32-3">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 min</p>
+<p><strong>Grading:</strong> 10 points</p>
+<ul>
+<li><p>Complete Module 5 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of each completed module, with your user profile showing, and submit both screenshots along with the assignment.</p>
+</li>
+<li><p>Complete Module 4 of <a href="https://www.sololearn.com/Course/SQL/">Sololearn's SQL Course</a>. Take a screenshot of the completed module, with your user profile showing, and submit it along with the assignment.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-31-1">Problem 31-1<a class="anchor-link" href="#Problem-31-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 60 min</p>
 <p><strong>Grading:</strong> 20 points</p>
 <p><strong>a.</strong></p>
