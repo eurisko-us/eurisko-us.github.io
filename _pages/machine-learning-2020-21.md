@@ -85,7 +85,7 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/473116120">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-58-1">Introduction to Cross-Validation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-58-1">Leave-One-Out Cross Validation with K-Nearest Neighbors</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-58-2">BiologicalNeuralNetwork - 3 Neurons (Fully Working Code)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-58-3">Blog Post Draft 4</a></li>
         </ul></font>
