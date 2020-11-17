@@ -19,9 +19,9 @@ author_profile: false
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-1">LeaveOneOutCrossValidator</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-2">Review - Probability (Pishro-Nik)</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-3">SQL Zoo Module 1, 11-15</a></li>
+        <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-1">LeaveOneOutCrossValidator</a></li>-->
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-1">Review - Probability (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-2">SQL Zoo Module 1, 11-15</a></li>
         </ul></font>
     </li>
     <br>
