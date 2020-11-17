@@ -13658,7 +13658,16 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-65-1">Problem 65-1<a class="anchor-link" href="#Problem-65-1">&#182;</a></h1><p><strong>Estimated time:</strong> 90 min</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><hr>
+<p>NOTE: This problem is in need of revision</p>
+<p>we'll have adjust  KNearestNeighborsClassifier so that k is defined upon initialization, and the data &amp; prediction column are passed in via a fit attribute</p>
+
+<pre><code>&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
+        under the hood: creates leave_one_out_df and does knn.fit(leave_one_out_df, prediction_column='Cookie Type')
+&gt;&gt;&gt; cv.accuracy()</code></pre>
+<hr>
+<p><strong>Estimated time:</strong> 90 min</p>
 <p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/dataframe.py</code><br>
 <code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
@@ -13763,7 +13772,7 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-65-2">Problem 65-2<a class="anchor-link" href="#Problem-65-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 min</p>
+<h1 id="Problem-65-1">Problem 65-1<a class="anchor-link" href="#Problem-65-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 min</p>
 <p><strong>Location:</strong> Overleaf</p>
 <p><strong>Grading:</strong> 15 points</p>
 <p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
@@ -13801,7 +13810,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-65-3">Problem 65-3<a class="anchor-link" href="#Problem-65-3">&#182;</a></h1><p><strong>Estimated time:</strong> 30 min</p>
+<h1 id="Problem-65-2">Problem 65-2<a class="anchor-link" href="#Problem-65-2">&#182;</a></h1><p><strong>Estimated time:</strong> 30 min</p>
 <p><strong>Location:</strong> Overleaf</p>
 <p><strong>Grading:</strong> 5 points</p>
 <ul>
