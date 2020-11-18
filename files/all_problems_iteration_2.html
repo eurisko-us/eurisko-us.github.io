@@ -13317,7 +13317,7 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
      [3,0.5]],
     columns = ['hours worked', 'progress']
 )
-&gt;&gt;&gt; regressor = LinearRegressor(df, independent_variable='progress')
+&gt;&gt;&gt; regressor = LinearRegressor(df, dependent_variable='progress')
 &gt;&gt;&gt; regressor.coefficients
 [0.01667, 0.15] # meaning that the model is progress = 0.01667 + 0.15 * (hours worked)
 # these coefficients are rounded, but you should not round except for
