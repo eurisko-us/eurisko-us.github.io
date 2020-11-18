@@ -13669,13 +13669,20 @@ $$</p>
 <hr>
 <p><strong>Estimated time:</strong> 90 min</p>
 <p><strong>Locations:</strong></p>
-<blockquote><p><code>machine-learning/src/dataframe.py</code><br>
+<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
 <code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
-<code>machine-learning/tests/test_dataframe.py</code><br>
+<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br>
 <code>machine-learning/tests/test_leave_one_out_cross_validator.py</code></p>
 </blockquote>
 <p><strong>Grading:</strong> 15 points</p>
-<p>Update your <code>DataFrame</code> to include a method <code>to_json()</code> and write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
+<p>Update your <code>KNearestNeighborsClassifier</code> so that <code>k</code> is defined upon initialization, and the model is fit by calling <code>fit</code></p>
+
+<pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+&gt;&gt;&gt; knn.fit(df, dependent_variable='Cookie Type') # dependent_variable is the new name for prediction_column
+&gt;&gt;&gt; df = the observation that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn.classify(observation) # we no longer pass in k</code></pre>
+<p>to include a method <code>to_json()</code> and write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
 
 <pre><code>&gt;&gt;&gt; columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
 &gt;&gt;&gt; data = [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
@@ -13765,6 +13772,65 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
  0.42105263157894735,
  0.3157894736842105,
  0.42105263157894735]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-1">Problem 66-1<a class="anchor-link" href="#Problem-66-1">&#182;</a></h1><p><strong>Estimated time:</strong> 45 min</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
+<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code></p>
+</blockquote>
+<p><strong>Grading:</strong> 15 points</p>
+<p>Update your <code>KNearestNeighborsClassifier</code> so that</p>
+<ul>
+<li><code>k</code> is defined upon initialization,</li>
+<li>the model is fit by calling <code>fit</code>, and passing in the data &amp; dependent variable, and</li>
+<li>when we classify an observation, all we need to pass in is the observation.</li>
+</ul>
+<p>Update the tests, too, and make sure they still pass.</p>
+
+<pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+&gt;&gt;&gt; knn.fit(df, dependent_variable='Cookie Type') # dependent_variable is the new name for prediction_column
+&gt;&gt;&gt; df = the observation that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn.classify(observation) # we no longer pass in k</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-2">Problem 66-2<a class="anchor-link" href="#Problem-66-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 45 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 15 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-012.png' border='0'/><br></p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-013.png' border='0'/><br></p>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-014.png' border='0'/><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-3">Problem 66-3<a class="anchor-link" href="#Problem-66-3">&#182;</a></h1><p><strong>Estimated time:</strong> 30 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<ul>
+<li><p>Complete queries 1-5 in <a href="https://napier.sqlzoo.net/wiki/SELECT_names" target="_blank">SQL Zoo Module 2</a>. Take a screenshot of each successful query <strong>(with the successful smiley face showing)</strong> and put them in the overleaf doc.</p>
+</li>
+<li><p>Complete Module 8 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take a screenshot of the completed module, with your user profile showing, and put it in the overleaf doc.</p>
+</li>
+</ul>
 
 </div>
 </div>
