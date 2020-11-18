@@ -14,7 +14,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="65">
+<font size="3em"><ol reversed start="66">
+    <li><b>Wednesday, November 18</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/480904222">Class Recording</a>: 64-3, 65-1, 61-1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-66-1">Refactoring KNearestNeighbors</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-66-2">Review - Probability (Pishro-Nik)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-66-3">Sololearn C++ Module 8; SQL Zoo Module 2, 1-5</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, November 16</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
