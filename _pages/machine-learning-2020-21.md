@@ -17,7 +17,7 @@ author_profile: false
 <font size="3em"><ol reversed start="67">
     <li><b>Friday, November 20</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/481797094">Class Recording</a>: 66-2
-        <br><b>Note</b>: This assignment is due on Sunday, 11/29, because of Thanksgiving Break.
+        <br><b>Note</b>: This assignment is due on NEXT Sunday, 11/29, because of Thanksgiving Break.
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-67-1">Game Refactoring - Strategy Classes</a></li>
