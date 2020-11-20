@@ -15,7 +15,19 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="33">
+<font size="3em"><ol reversed start="34">
+    <li><b>Friday, November 20</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/481797099">Class Recording</a>: 33-1, 33-2
+        <br><b>Note</b>: This assignment is due on NEXT Sunday, 11/29, because of Thanksgiving Break.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-34-1">Cartesian Product</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-34-2">GradientDescent (General Class)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-34-3">Sololearn C++ Modules 7 and SQL Zoo Module 1</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-34-3">Resubmissions + Corrections</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, November 18</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/480904232">Class Recording</a>: 30-1, 31-1, 32-2
         <br>Assignment Problems:
