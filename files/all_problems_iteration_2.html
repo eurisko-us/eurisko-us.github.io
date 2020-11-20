@@ -13119,59 +13119,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Write a function <code>cartesian_product(arrays)</code> that computes the <a href="https://en.wikipedia.org/wiki/Cartesian_product">Cartesian product</a> of all the lists in <code>arrays</code>.</p>
-
-<pre><code>&gt;&gt;&gt; cartesian_product([['a'], [1,2,3], ['Y','Z']])
-[['a',1,'Y'], ['a',1,'Z'], ['a',2,'Y'], ['a',2,'Z'], ['a',3,'Y'], ['a',3,'Z']]</code></pre>
-<p><strong>NOTE: This is a reasonably short function if you use the following procedure. You'll probably have to think a bit in order to get the implementation correct, though.</strong></p>
-<ol>
-<li><p>Create a variable <code>points</code> that will be a list of all the points in the cartesian product. Initially, set <code>points</code> to consist of a single empty point: <code>points = [[]]</code>.</p>
-</li>
-<li><p>For each array in the input, create a new list of points.</p>
-<ul>
-<li><p>The new set of points can be constructed by looping through each existing point and, for each existing point, adding several new points.</p>
-<ul>
-<li>For a given point, the new points can be constructed by appending each element of the array onto a copy of the given point.</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Return the list of points.</p>
-</li>
-</ol>
-<p><strong>Worked Example:</strong></p>
-
-<pre><code>arrays = [['a'], [1,2,3], ['Y','Z']]
-
-points: [[]]
-considering array ['a']
-considering element 'a'
-new point ['a']
-
-points: [['a']]
-considering array [1,2,3]
-considering element 1
-new point ['a',1]
-considering element 2
-new point ['a',2]
-considering element 3
-new point ['a',3]
-
-points: [['a',1], ['a',2], ['a',3]]
-considering array ['Y','Z']
-considering element 'Y'
-new points ['a',1,'Y'], ['a',2,'Y'], ['a',3,'Y']
-considering element 'Z'
-new points ['a',1,'Z'], ['a',2,'Z'], ['a',3,'Z']
-
-points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c','Z']]</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>a) In <code>GradientDescent</code>, clean up <code>tests/test_gradient_descent.py</code>.</p>
 <ul>
 <li><p>For each comparison of floating-point decimals, <strong>round to 10 decimal places</strong> before you check for equality.</p>
@@ -13303,7 +13250,145 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-34-1">Problem 34-1<a class="anchor-link" href="#Problem-34-1">&#182;</a></h1><p><code>LogisticRegressor</code> - inherit from linear regressor, but just transform the <code>y</code> beforehand</p>
+<h1 id="Problem-34-1">Problem 34-1<a class="anchor-link" href="#Problem-34-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/cartesian_product.py</code></p>
+<p><strong>Estimated Time:</strong> 45 minutes</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Write a function <code>cartesian_product(arrays)</code> that computes the <a href="https://en.wikipedia.org/wiki/Cartesian_product">Cartesian product</a> of all the lists in <code>arrays</code>.</p>
+
+<pre><code>&gt;&gt;&gt; cartesian_product([['a'], [1,2,3], ['Y','Z']])
+[['a',1,'Y'], ['a',1,'Z'], ['a',2,'Y'], ['a',2,'Z'], ['a',3,'Y'], ['a',3,'Z']]</code></pre>
+<p><strong>NOTE: This is a reasonably short function if you use the following procedure. You'll probably have to think a bit in order to get the implementation correct, though. (Make sure to post for help if you get stuck!)</strong></p>
+<ol>
+<li><p>Create a variable <code>points</code> that will be a list of all the points in the cartesian product. Initially, set <code>points</code> to consist of a single empty point: <code>points = [[]]</code>.</p>
+</li>
+<li><p>For each array in the input, create a new list of points.</p>
+<ul>
+<li><p>The new set of points can be constructed by looping through each existing point and, for each existing point, adding several new points.</p>
+<ul>
+<li>For a given point, the new points can be constructed by appending each element of the array onto a copy of the given point.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Return the list of points.</p>
+</li>
+</ol>
+<p><strong>Worked Example:</strong></p>
+
+<pre><code>arrays = [['a'], [1,2,3], ['Y','Z']]
+
+points: [[]]
+considering array ['a']
+considering element 'a'
+new point ['a']
+
+points: [['a']]
+considering array [1,2,3]
+considering element 1
+new point ['a',1]
+considering element 2
+new point ['a',2]
+considering element 3
+new point ['a',3]
+
+points: [['a',1], ['a',2], ['a',3]]
+considering array ['Y','Z']
+considering element 'Y'
+new points ['a',1,'Y'], ['a',2,'Y'], ['a',3,'Y']
+considering element 'Z'
+new points ['a',1,'Z'], ['a',2,'Z'], ['a',3,'Z']
+
+points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c','Z']]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-34-2">Problem 34-2<a class="anchor-link" href="#Problem-34-2">&#182;</a></h1><p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/gradient_descent.py</code><br>
+<code>machine-learning/tests/test_gradient_descent.py</code></p>
+</blockquote>
+<p><strong>Estimated Time:</strong> 60 minutes</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Write a class <code>GradientDescent</code> that performs gradient descent on an input function with any number of arguments. This builds on top of Problem 25-1.</p>
+<ul>
+<li><p><strong>Tip:</strong> if you have a function <code>f(x,y,z)</code> and a list <code>args = [0,5,3]</code>, then you can pass <code>f(*args)</code> to evaluate <code>f(0,5,3)</code>.**</p>
+</li>
+<li><p><strong>Tip:</strong> to get the number of variables that a function accepts as input, use <code>f.__code__.co_argcount</code>. For example:</p>
+
+<pre><code>&gt;&gt;&gt; def f(x,y): return x**2 + y**2
+&gt;&gt;&gt; f.__code__.co_argcount
+2</code></pre>
+</li>
+</ul>
+<p>Assert that your <code>GradientDescent</code> passses the following tests. (Make sure to post for help if you get stuck!)</p>
+
+<pre><code>&gt;&gt;&gt; def single_variable_function(x):
+        return (x-1)**2
+&gt;&gt;&gt; def two_variable_function(x, y):
+        return (x-1)**2 + (y-1)**3
+&gt;&gt;&gt; def three_variable_function(x, y, z):
+        return (x-1)**2 + (y-1)**3 + (z-1)**4
+&gt;&gt;&gt; def six_variable_function(x1, x2, x3, x4, x5, x6):
+        return (x1-1)**2 + (x2-1)**3 + (x3-1)**4 + x4 + 2*x5 + 3*x6
+
+&gt;&gt;&gt; minimizer = GradientDescent(single_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018]
+
+&gt;&gt;&gt; minimizer = GradientDescent(two_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018, -0.0030001000000000055]
+
+&gt;&gt;&gt; minimizer = GradientDescent(three_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+[0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]
+
+&gt;&gt;&gt; minimizer = GradientDescent(six_variable_function)
+&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
+[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035, 1.0000000000000009, 2.0000000000000018, 3.0000000000000027]
+&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
+&gt;&gt;&gt; minimizer.minimum
+(0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004, -0.0010000000000000009, -0.0020000000000000018, -0.0030000000000000027)</code></pre>
+<p><strong>Make sure to push your finished code to Github with a commit message that says what you added/changed (you should always commit your code to Github after an assignment).</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-34-2">Problem 34-2<a class="anchor-link" href="#Problem-34-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 60 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<ul>
+<li><p>Complete Modules 7 AND 8 of <a href="https://www.sololearn.com/Course/CPlusPlus/">Sololearn's C++ Course</a>. Take screenshots of the completed modules, with your user profile showing, and submit them along with the assignment.</p>
+</li>
+<li><p>Complete queries 1-15 in Module 1 of the <a href="https://napier.sqlzoo.net/" target="_blank">SQL Zoo</a>. <a href="https://www.w3schools.com/sql/sql_like.asp" target="_blank">Here's a reference</a> for the LIKE operator, which will come in handy.</p>
+</li>
+</ul>
+<p>Take a screenshot of each successful query and put them in an overleaf doc. When a query is successful, you'll see a smiley face appear. Your screenshots should look like this:</p>
+<p><img width=800 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/sqlzoo-example.png' border='0'/><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-34-3">Problem 34-3<a class="anchor-link" href="#Problem-34-3">&#182;</a></h1><p>Take a look at all your assignments so far in this course. If there are any assignments with low grades, that you haven't already resubmitted, then be sure to resubmit them.</p>
+<p>Also, if you haven't already, submit quiz corrections for all of the quizzes we've had so far!</p>
 
 </div>
 </div>
@@ -13332,6 +13417,55 @@ plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro') # plot red ('r') circles ('o')</code
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span> <span class="c1"># plot red (&#39;r&#39;) circles (&#39;o&#39;)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7fb8ca5bf438&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">

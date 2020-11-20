@@ -13307,28 +13307,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Rename <code>dumb_player.py</code> to <code>deprecated_dumb_player.py</code>. Then do the following.</p>
-<p><strong>a.</strong> (5 points) Write a class <code>DumbStrategy</code> that contains the strategies for following methods:</p>
-<ul>
-<li><p><code>will_colonize_planet(colony_ship, game_state)</code>: returns either <code>True</code> or <code>False</code>; will be called whenever a player's colony ship lands on an uncolonized planet</p>
-</li>
-<li><p><code>decide_ship_movement(ship, game_state)</code>: returns the coordinates to which the player wishes to move their ship.</p>
-</li>
-<li><p><code>decide_purchases(game_state)</code>: returns a list of ship and/or technology types that you want to purchase; will be called during each economic round.</p>
-</li>
-<li><p><code>decide_removals(game_state)</code>: returns a list of ships that you want to remove; will be called during any economic round when your total maintenance cost exceeds your CP.</p>
-</li>
-<li><p><code>decide_which_ship_to_attack(attacking_ship, game_state)</code>: looks at the ships in the combat order and decides which to attack; will be called whenever it's your turn to attack</p>
-</li>
-</ul>
-<p><strong>b.</strong> (5 points) Make sure that all your tests in <code>tests/test_game_state_dumb_player.py</code> still pass.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>WeightedGraph class + Dijkstra's algorithm method</p>
 
 </div>
@@ -13658,72 +13636,23 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><hr>
-<p>NOTE: This problem is in need of revision</p>
-<p>we'll have adjust  KNearestNeighborsClassifier so that k is defined upon initialization, and the data &amp; prediction column are passed in via a fit attribute</p>
-
-<pre><code>&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
-&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
-        under the hood: creates leave_one_out_df and does knn.fit(leave_one_out_df, prediction_column='Cookie Type')
-&gt;&gt;&gt; cv.accuracy()</code></pre>
-<hr>
-<p><strong>Estimated time:</strong> 90 min</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 45 min</p>
+<p><strong>Grading:</strong> 10 points</p>
 <p><strong>Locations:</strong></p>
-<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
-<code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
-<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br>
+<blockquote><p><code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
 <code>machine-learning/tests/test_leave_one_out_cross_validator.py</code></p>
 </blockquote>
-<p><strong>Grading:</strong> 15 points</p>
-<p>Update your <code>KNearestNeighborsClassifier</code> so that <code>k</code> is defined upon initialization, and the model is fit by calling <code>fit</code></p>
+<p>Write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
+<p>Assert that <code>LeaveOneOutCrossValidator</code> passes the following tests:</p>
 
 <pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
 &gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
-&gt;&gt;&gt; knn.fit(df, dependent_variable='Cookie Type') # dependent_variable is the new name for prediction_column
-&gt;&gt;&gt; df = the observation that's in test_k_nearest_neighbors_classifier.py
-&gt;&gt;&gt; knn.classify(observation) # we no longer pass in k</code></pre>
-<p>to include a method <code>to_json()</code> and write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
 
-<pre><code>&gt;&gt;&gt; columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
-&gt;&gt;&gt; data = [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
-['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
-['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
-['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
-['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
-['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
-['Sugar'       ,     0.02     ,       0.08     ,      0.45     ,     0.45      ],
-['Sugar'       ,     0.10     ,       0.15     ,      0.35     ,     0.40      ],
-['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
-['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
-['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
-['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
-['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
-['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
-['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
-['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
-['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
-['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
-['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]]
-&gt;&gt;&gt; df = DataFrame.from_array(data, columns)
-&gt;&gt;&gt; json_data = df.to_json()
-&gt;&gt;&gt; json_data
-[
-    {'Cookie Type': 'Shortbread',
-    'Portion Eggs': 0.14,
-    'Portion Butter': 0.14,
-    'Portion Sugar': 0.28,
-    'Portion Flour': 0.44},
-    {'Cookie Type': 'Shortbread',
-    'Portion Eggs': 0.12,
-    'Portion Butter': 0.10,
-    'Portion Sugar': 0.33,
-    'Portion Flour': 0.45},
-    ...
-]
+&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
+    [ Note: under the hood, the LeaveOneOutCrossValidator should
+      create a leave_one_out_df and do
+      knn.fit(leave_one_out_df, prediction_column='Cookie Type') ]
 
-&gt;&gt;&gt; knn = KNearestNeighborsClassifier(df, prediction_column = 'Cookie Type')
-&gt;&gt;&gt; classifier = lambda observation: knn.classify(observation, 5)
-&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(classifier, json_data)
 &gt;&gt;&gt; cv.accuracy()
 0.6842105263157895
 
@@ -13750,8 +13679,8 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 
 &gt;&gt;&gt; accuracies = []
 &gt;&gt;&gt; for k in range(1, len(data)-1):
-&gt;&gt;&gt;    classifier = lambda observation: knn.classify(observation, k)
-&gt;&gt;&gt;    cv = LeaveOneOutCrossValidator(classifier, json_data)
+&gt;&gt;&gt;    knn = KNearestNeighborsClassifier(k)
+&gt;&gt;&gt;    cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
 &gt;&gt;&gt;    accuracies.append(cv.accuracy())
 
 &gt;&gt;&gt; accuracies
@@ -13779,7 +13708,8 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-67-1">Problem 67-1<a class="anchor-link" href="#Problem-67-1">&#182;</a></h1><p><code>LeaveOneOutCrossValidator</code></p>
+<h1 id="Problem">Problem<a class="anchor-link" href="#Problem">&#182;</a></h1><p>GameState with getters &amp; setters</p>
+<p>strategies can only use setters</p>
 
 </div>
 </div>
@@ -13787,7 +13717,42 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-67-2">Problem 67-2<a class="anchor-link" href="#Problem-67-2">&#182;</a></h1><p>Game</p>
+<h1 id="Problem-67-1">Problem 67-1<a class="anchor-link" href="#Problem-67-1">&#182;</a></h1><p><strong>Estimated time:</strong> 0-10 hours (?)</p>
+<p><strong>Grading:</strong> 1,000,000,000 points (okay, not actually that many, but this is IMPORTANT because we need to get our game working for the opportunity with Caltech)</p>
+<hr>
+<p>Problem 59-2 was to refactor the <code>DumbPlayer</code> tests to use the game state, and make sure they pass. If you haven't completed this yet, you'll need to do that before starting on this problem.</p>
+<p>This problem involves refactoring the way we structure players. Currently, we have a class <code>DumbPlayer</code> that does everything we'd expect from a dumb player. But really, the only reason why <code>DumbPlayer</code> is dumb is that it uses a dumb strategy.</p>
+<p>So, we are going to replace <code>DumbPlayer</code> with a class <code>DumbStrategy</code>, and refactor <code>Player</code> so that we can initialize like this:</p>
+
+<pre><code>&gt;&gt;&gt; dumb_player_1 = Player(strategy = DumbStrategy)
+&gt;&gt;&gt; dumb_player_2 = Player(strategy = DumbStrategy)
+&gt;&gt;&gt; game = Game(dumb_player_1, dumb_player_2)</code></pre>
+<hr>
+<p><strong>a.</strong> Write a class <code>DumbStrategy</code> in the file <code>src/strategies/dumb_strategy.py</code> that contains the strategies for following methods:</p>
+<ul>
+<li><p><code>will_colonize_planet(colony_ship, game_state)</code>: returns either <code>True</code> or <code>False</code>; will be called whenever a player's colony ship lands on an uncolonized planet</p>
+</li>
+<li><p><code>decide_ship_movement(ship, game_state)</code>: returns the coordinates to which the player wishes to move their ship.</p>
+</li>
+<li><p><code>decide_purchases(game_state)</code>: returns a list of ship and/or technology types that you want to purchase; will be called during each economic round.</p>
+</li>
+<li><p><code>decide_removals(game_state)</code>: returns a list of ships that you want to remove; will be called during any economic round when your total maintenance cost exceeds your CP.</p>
+</li>
+<li><p><code>decide_which_ship_to_attack(attacking_ship, game_state)</code>: looks at the ships in the combat order and decides which to attack; will be called whenever it's your turn to attack</p>
+</li>
+</ul>
+<p><strong>b.</strong> Refactor your class <code>Player</code> so that you can initialize a dumb player like this:</p>
+
+<pre><code>&gt;&gt;&gt; dumb_player_1 = Player(strategy = DumbStrategy)
+&gt;&gt;&gt; dumb_player_2 = Player(strategy = DumbStrategy)
+&gt;&gt;&gt; game = Game(dumb_player_1, dumb_player_2)</code></pre>
+<p><strong>c.</strong> Make sure that all your tests in <code>tests/test_game_state_dumb_player.py</code> still pass.</p>
+<p><strong>d.</strong> Write a class <code>CombatStrategy</code> in the file <code>src/strategies/combat_strategy.py</code> that contains the strategies for the same methods as <code>DumbStrategy</code>. But this time, the strategies should be the same as those that are used in <code>CombatPlayer</code>.</p>
+<p><strong>e.</strong> Refactor your tests in <code>tests/test_game_state_dumb_player.py</code> and make sure they still pass. When you initialize the game, you should do so like this:</p>
+
+<pre><code>&gt;&gt;&gt; combat_player_1 = Player(strategy = CombatStrategy)
+&gt;&gt;&gt; combat_player_2 = Player(strategy = CombatStrategy)
+&gt;&gt;&gt; game = Game(combat_player_1, combat_player_2)</code></pre>
 
 </div>
 </div>
@@ -13795,7 +13760,8 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-67-3">Problem 67-3<a class="anchor-link" href="#Problem-67-3">&#182;</a></h1><p>catch-up</p>
+<h1 id="Problem-67-3">Problem 67-3<a class="anchor-link" href="#Problem-67-3">&#182;</a></h1><p>Take a look at all your assignments so far in this course. If there are any assignments with low grades, that you haven't already resubmitted, then be sure to resubmit them.</p>
+<p>Also, if you haven't already, submit quiz corrections for all of the quizzes we've had so far!</p>
 
 </div>
 </div>
