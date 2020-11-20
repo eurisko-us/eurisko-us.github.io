@@ -14,7 +14,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="66">
+<font size="3em"><ol reversed start="67">
+    <li><b>Friday, November 20</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/481797094">Class Recording</a>: 66-2
+        <br><b>Note</b>: This assignment is due on Sunday, 11/29, because of Thanksgiving Break.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-67-1">Game Refactoring - Strategy Classes</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-67-2">Resubmissions + Corrections (and David -- update the rest of your Github repositories!)</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, November 18</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/480904222">Class Recording</a>: 64-3, 65-1, 61-1
         <br>Assignment Problems:
