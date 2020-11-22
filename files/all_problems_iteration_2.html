@@ -13334,7 +13334,7 @@ points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c'
 &gt;&gt;&gt; def six_variable_function(x1, x2, x3, x4, x5, x6):
         return (x1-1)**2 + (x2-1)**3 + (x3-1)**4 + x4 + 2*x5 + 3*x6
 
-&gt;&gt;&gt; minimizer = GradientDescent(f=single_variable_function, initial_point=0)
+&gt;&gt;&gt; minimizer = GradientDescent(f=single_variable_function, initial_point=[0])
 &gt;&gt;&gt; minimizer.point
 [0]
 &gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
