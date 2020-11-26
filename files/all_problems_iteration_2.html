@@ -13324,6 +13324,7 @@ points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c'
 </li>
 </ul>
 <p>Assert that your <code>GradientDescent</code> passses the following tests. (Make sure to post for help if you get stuck!)</p>
+<p><strong>Note: the tests below are shown rounded to 5 decimal places.</strong></p>
 
 <pre><code>&gt;&gt;&gt; def single_variable_function(x):
         return (x-1)**2
@@ -13337,38 +13338,38 @@ points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c'
 &gt;&gt;&gt; minimizer = GradientDescent(f=single_variable_function, initial_point=[0])
 &gt;&gt;&gt; minimizer.point
 [0]
-&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018]
+&gt;&gt;&gt; ans = minimizer.compute_gradient(delta=0.01)
+[-2.00000] # rounded to 5 decimal places
 &gt;&gt;&gt; minimizer.descend(alpha=0.001, delta=0.01, num_steps=1)
 &gt;&gt;&gt; minimizer.point
-[0.0020000000000000018]
+[0.00200]
 
 &gt;&gt;&gt; minimizer = GradientDescent(f=two_variable_function, initial_point=[0,0])
 &gt;&gt;&gt; minimizer.point
 [0,0]
 &gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055]
+[-2.00000, 3.00010]
 &gt;&gt;&gt; minimizer.descend(alpha=0.001, delta=0.01, num_steps=1)
 &gt;&gt;&gt; minimizer.point
-[0.0020000000000000018, -0.0030001000000000055]
+[0.00200, -0.00300]
 
 &gt;&gt;&gt; minimizer = GradientDescent(f=three_variable_function, initial_point=[0,0,0])
 &gt;&gt;&gt; minimizer.point
 [0,0,0]
 &gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035]
+[-2.00000, 3.00010, -4.00040]
 &gt;&gt;&gt; minimizer.descend(alpha=0.001, delta=0.01, num_steps=1)
 &gt;&gt;&gt; minimizer.point
-[0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]
+[0.00200, -0.00300, 0.00400]
 
 &gt;&gt;&gt; minimizer = GradientDescent(f=six_variable_function, initial_point=[0,0,0,0,0,0])
 &gt;&gt;&gt; minimizer.point
 [0,0,0,0,0,0]
 &gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035, 1.0000000000000009, 2.0000000000000018, 3.0000000000000027]
+[-2.00000, 3.00010, -4.00040, 1.00000, 2.00000, 3.00000]
 &gt;&gt;&gt; minimizer.descend(alpha=0.001, delta=0.01, num_steps=1)
 &gt;&gt;&gt; minimizer.point
-[0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004, -0.0010000000000000009, -0.0020000000000000018, -0.0030000000000000027]</code></pre>
+[0.00200, -0.00300, 0.00400, -0.00100, -0.00200, -0.00300]</code></pre>
 <p><strong>Make sure to push your finished code to Github with a commit message that says what you added/changed (you should always commit your code to Github after an assignment).</strong></p>
 
 </div>
