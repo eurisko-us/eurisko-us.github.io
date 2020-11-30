@@ -13717,6 +13717,134 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Euler estimator -- keep track of lag variables.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-68-1">Problem 68-1<a class="anchor-link" href="#Problem-68-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 2-3 hours</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
+<code>machine-learning/tests/test_decision_tree.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 15</p>
+<p>In this problem, you will create the first iteration of a class <code>DecisionTree</code> that builds a decision tree by repeatedly looping through all possible splits and choosing the split with the highest "goodness of split".</p>
+<p>We will use the following simple dataset:</p>
+
+<pre><code>['x', 'y', 'class']
+[1, 11, 'A']
+[1, 12, 'A']
+[2, 11, 'A']
+[1, 13, 'B']
+[2, 13, 'B']
+[3, 12, 'B']
+[3, 13, 'B']</code></pre>
+<p>For this dataset, "all possible splits" mean all midpoints between distinct entries in sorted data columns.</p>
+<ul>
+<li><p>The sorted distinct entries of <code>x</code> are 1, 2, 3.</p>
+</li>
+<li><p>The sorted distinct entries of <code>y</code> are 11, 12, 13.</p>
+</li>
+</ul>
+<p>So, "all possible splits" are <code>x=1.5, x=2.5, y=11.5, y=12.5.</code></p>
+<p><strong>Assert that the following tests pass. Note that you will need to create a <code>Node</code> class for the nodes in your decision tree.</strong></p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[1, 11, 'A'],
+    [1, 12, 'A'],
+    [2, 11, 'A'],
+    [1, 13, 'B'],
+    [2, 13, 'B'],
+    [3, 13, 'B'],
+    [3, 11, 'B']],
+    columns = ['x', 'y', 'class']
+)
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+&gt;&gt;&gt; dt.root.row_indices
+[0, 1, 2, 3, 4, 5, 6] # these are the indices of data points in the root node
+
+&gt;&gt;&gt; dt.root.class_counts
+{
+    'A': 3,
+    'B': 4
+}
+
+&gt;&gt;&gt; dt.root.impurity
+0.490 # rounded to 3 decimal places
+
+&gt;&gt;&gt; dt.root.possible_splits.to_array()
+# dt.possible_splits is a dataframe with columns
+# ['feature', 'value', 'goodness of split']
+# Note: below is rounded to 3 decimal places
+
+[['x', 1.5,  0.085],
+ ['x', 2.5,  0.147],
+ ['y', 11.5, 0.085],
+ ['y', 12.5, 0.276]]
+
+&gt;&gt;&gt; dt.root.best_split
+('y', 12.5)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                      (3A, 4B)
+                      /      \   
+            (y &lt; 12.5)       (y &gt;= 12.5)
+            (3A, 1B)         (3B)
+
+# "low" refers to the "&lt;" child node
+# "high" refers to the "&gt;=" child node
+&gt;&gt;&gt; dt.root.low.row_indices
+[0, 1, 2, 6]
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+
+&gt;&gt;&gt; dt.root.low.impurity
+0.375
+&gt;&gt;&gt; dt.root.high.impurity
+0
+
+&gt;&gt;&gt; dt.root.low.possible_splits.to_array()
+
+[['x', 1.5,  0.125],
+ ['x', 2.5,  0.375],
+ ['y', 11.5, 0.042]]
+
+&gt;&gt;&gt; dt.root.low.best_split
+('x', 2.5)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]
+
+&gt;&gt;&gt; dt.root.low.low.impurity
+0
+&gt;&gt;&gt; dt.root.low.high.impurity
+0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-67-1">Problem 67-1<a class="anchor-link" href="#Problem-67-1">&#182;</a></h1><p><strong>Estimated time:</strong> 0-10 hours (?)</p>
 <p><strong>Grading:</strong> 1,000,000,000 points (okay, not actually that many, but this is IMPORTANT because we need to get our game working for the opportunity with Caltech)</p>
 <hr>
@@ -13760,7 +13888,7 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-67-3">Problem 67-3<a class="anchor-link" href="#Problem-67-3">&#182;</a></h1><p>Take a look at all your assignments so far in this course. If there are any assignments with low grades, that you haven't already resubmitted, then be sure to resubmit them.</p>
+<h1 id="Problem-67-2">Problem 67-2<a class="anchor-link" href="#Problem-67-2">&#182;</a></h1><p>Take a look at all your assignments so far in this course. If there are any assignments with low grades, that you haven't already resubmitted, then be sure to resubmit them.</p>
 <p>Also, if you haven't already, submit quiz corrections for all of the quizzes we've had so far!</p>
 
 </div>

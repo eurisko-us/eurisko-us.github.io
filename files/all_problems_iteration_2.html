@@ -13250,6 +13250,71 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-35-1">Problem 35-1<a class="anchor-link" href="#Problem-35-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 60 minutes</p>
+<p><strong>Locations:</strong> Overleaf AND <code>assignment-problems/assignment_35_stats.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>In this problem, you will perform another round of Bayesian inference, but this time on a different distribution. It will be very similar to Problem 27-3.</p>
+<hr>
+<p>Your friend is randomly stating positive integers that are less than some upper bound (which your friend knows, but you don't know). The numbers your friend states are as follows:</p>
+<blockquote><p>1, 17, 8, 25, 3</p>
+</blockquote>
+<p>You assume that the numbers come from a <strong>discrete uniform distribution</strong> $U\left\{1,2,\ldots,k\right\}$ defined as follows:</p>
+$$p_k(x) = \begin{cases} \dfrac{1}{k} &amp; x \in \left\{1,2,\ldots,k\right\} \\ 0 &amp; x \not\in \left\{1,2,\ldots,k\right\} \end{cases}$$<p><strong>a.</strong> <strong>Compute the likelihood</strong> $P(\left\{  1, 17, 8, 25, 3 \right\} \, | \, k).$ Remember that the likelihood is just the probability of getting the result $ \left\{  1, 17, 8, 25, 3 \right\}$ under the assumption that the data was sampled from the distribution $p_k(x).$ Your answer should be a piecewise function expressed in terms of $k.$</p>
+<p><strong>b.</strong> <strong>Compute the posterior distribution</strong> by normalizing the likelihood. That is to say, find the constant $c$ such that
+$$\sum_{k=1}^\infty c \cdot P(\left\{  1, 17, 8, 25, 3 \right\} \, | \, k) = 1.$$
+Then, the posterior distribution will be
+$$P(k \, | \, \left\{  1, 17, 8, 25, 3 \right\})= c \cdot P(\left\{  1, 17, 8, 25, 3 \right\} \, | \, k).$$</p>
+<ul>
+<li><strong>SUPER IMPORTANT:</strong> You won't be able to figure this out analytically (i.e. just using pen and paper). Instead, you should write a Python script in <code>assignment-problems/assignment_35_stats.py</code> to approximate the sum by evaluating it for a very large number of terms. You should use as many terms as you need until the result appears to converge.</li>
+</ul>
+<p><strong>c.</strong> What is the most probable value of $k?$ You can tell this just by looking at the distribution $p(k),$ but make sure to justify your answer with an explanation.</p>
+<p><strong>d.</strong> The largest number in the dataset is $25.$ What is the probability that $25$ is actually the upper bound chosen by your friend?</p>
+<p><strong>e.</strong> What is the probability that the upper bound is less than or equal to $30?$</p>
+<p><strong>f.</strong> Fill in the blank: you can be $95\%$ sure that the upper bound is less than $\_\_\_.$</p>
+<ul>
+<li><strong>SUPER IMPORTANT:</strong> You won't be able to figure this out analytically (i.e. just using pen and paper). Instead, you should write another Python function in <code>assignment-problems/assignment_35_stats.py</code> to approximate value of $k$ needed (i.e. the number of terms needed) to have $p(K \leq k) = 0.95.$</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-35-2">Problem 35-2<a class="anchor-link" href="#Problem-35-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 minutes</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>A <strong>joint distribution</strong> is a probability distribution on two or more random variables. To work with joint distributions, you will need to use multi-dimensional integrals.</p>
+<p>For example, given a joint distribution $p(x,y),$ the probability that $(X,Y) \in [a,b] \times [c,d]$ is given by</p>
+$$
+\begin{align*}
+P((X,Y) \in [a,b] \times [c,d]) = \displaystyle \iint_{[a,b] \times [c,d]} p(x,y) \, \text{d}A,
+\end{align*}
+$$<p>or equivalently,</p>
+$$
+\begin{align*}
+P(a &lt; X \leq b, \, c &lt; Y \leq d) = \displaystyle \int_c^d \int_a^b p(x,y) \, \text{d}x \, \text{d}y.
+\end{align*}
+$$<hr>
+<p>The joint uniform distribution $\mathcal{U}([a,b]\times[c,d])$ is a distribution such that all points $(x,y)$ have equal probability in the region $[a,b]\times[c,d]$ and zero probability elsewhere. So, it takes the form</p>
+$$p(x,y) = \begin{cases} k &amp; (x,y) \in [a,b] \times [c,d] \\ 0 &amp; (x,y) \not\in [a,b] \times [c,d] \end{cases}$$<p>for some constant $k.$</p>
+<p><strong>a.</strong> Find the value of $k$ such that $p(x,y)$ is a valid probability distribution. Your answer should be in terms of $a,b,c,d.$</p>
+<p><strong>b.</strong> Given that $(X,Y) \sim p,$ compute $\text{E}[X]$ and $\text{E}[Y].$ You should get $\text{E}[X] = \dfrac{a+b}{2}$ and $\text{E}[Y] = \dfrac{c+d}{2}$</p>
+<p><strong>c.</strong> Geometrically, $[a,b] \times [c,d]$ represents a rectangle bounded by $x=a,$ $x=b,$ $y=c,$ and $y=d.$ What is the geometric interpretation of the point $(\text{E}[X], \text{E}[Y])$ in this rectangle?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-34-1">Problem 34-1<a class="anchor-link" href="#Problem-34-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/cartesian_product.py</code></p>
 <p><strong>Estimated Time:</strong> 45 minutes</p>
 <p><strong>Grading:</strong> 10 points</p>
@@ -13299,6 +13364,8 @@ considering element 'Z'
 new points ['a',1,'Z'], ['a',2,'Z'], ['a',3,'Z']
 
 points: [[1,'a','Y'], [1,'a','Z'], [1,'b','Y'], [1,'b','Z'], [1,'c','Y'], [1,'c','Z']]</code></pre>
+<p><strong>Watch out!</strong> If you write <code>new_point = old_point</code>, then this just makes it so that <code>new_point</code> refers to <code>old_point</code>. So then whenever you change one of those variables, the other will change as well.</p>
+<p>To actually make a separate independent copy, you can use <code>new_point = list(old_point)</code>. That way, when you change one of the variables, it will have no effect on the other.</p>
 
 </div>
 </div>
