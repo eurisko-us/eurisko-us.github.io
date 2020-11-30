@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="34">
+<font size="3em"><ol reversed start="35">
+    <li><b>Monday, November 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/485584984">Class Recording</a>: 34-1, 34-2, Quiz 6 Problem 1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-35-1">Bayesian Inference of an Unknown Upper Bound</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-35-2">Introduction to Joint Distributions</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, November 20</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/481797099">Class Recording</a>: 33-1, 33-2
         <br><b>Note</b>: This assignment is due on NEXT Sunday, 11/29, because of Thanksgiving Break.
