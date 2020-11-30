@@ -14,7 +14,15 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="67">
+<font size="3em"><ol reversed start="68">
+    <li><b>Monday, November 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/485584970">Class Recording</a>: 67-1, Quiz 6 Problem 1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-68-1">DecisionTreeClassifier (Iteration 1)</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, November 20</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/481797094">Class Recording</a>: 66-2
         <br><b>Note</b>: This assignment is due on NEXT Sunday, 11/29, because of Thanksgiving Break.
