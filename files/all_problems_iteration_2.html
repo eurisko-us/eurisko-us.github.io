@@ -13119,32 +13119,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>a) In <code>GradientDescent</code>, clean up <code>tests/test_gradient_descent.py</code>.</p>
-<ul>
-<li><p>For each comparison of floating-point decimals, <strong>round to 10 decimal places</strong> before you check for equality.</p>
-</li>
-<li><p>The only things you should print are the name of each test, and if the test fails, then your custom error message. You can use the format below, or come up with your own format provided that it meets the specifications in the previous sentence.</p>
-</li>
-</ul>
-
-<pre><code>&gt;&gt;&gt; python tests/test_gradient_descent.py
-
-Testing...
-
-compute_gradient
-    single_variable_function
-    two_variable_function
-    three_variable_function
-    six_variable_function
-
-descend
-    single_variable_function
-    two_variable_function
-
-AssertionError: incorrect output for descend on three_variable_function
-OUTPUT: [3.0020000000000000018, 2.0030001000000000055, 1.004000400000000004]
-DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</code></pre>
-<p>b) In <code>GradientDescent</code>, generalize your <code>grid_search</code> to work on objective functions of any number of variables.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>In <code>GradientDescent</code>, generalize your <code>grid_search</code> to work on objective functions of any number of variables.</p>
 <ul>
 <li><p><strong>HINT: You wrote a <code>cartesian_product</code> function in Problem 1, so use it here as a helper function! Just loop over the cartesian product of the input arrays.</strong></p>
 </li>
@@ -13196,53 +13171,12 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Extend your <code>machine-learning</code> library to include the following 8 tests for <code>GradientDescent.py</code>.</strong> For each function, test that <code>GradientDescent</code> computes the correct gradient, and that the minimum is correct after descending once along the gradient.</p>
-
-<pre><code>&gt;&gt;&gt; def single_variable_function(x):
-        return (x-1)**2
-&gt;&gt;&gt; def two_variable_function(x, y):
-        return (x-1)**2 + (y-1)**3
-&gt;&gt;&gt; def three_variable_function(x, y, z):
-        return (x-1)**2 + (y-1)**3 + (z-1)**4
-&gt;&gt;&gt; def six_variable_function(x1, x2, x3, x4, x5, x6):
-        return (x1-1)**2 + (x2-1)**3 + (x3-1)**4 + x4 + 2*x5 + 3*x6
-
-&gt;&gt;&gt; minimizer = GradientDescent(single_variable_function)
-&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018]
-&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
-&gt;&gt;&gt; minimizer.minimum
-[0.0020000000000000018]
-
-&gt;&gt;&gt; minimizer = GradientDescent(two_variable_function)
-&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055]
-&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
-&gt;&gt;&gt; minimizer.minimum
-[0.0020000000000000018, -0.0030001000000000055]
-
-&gt;&gt;&gt; minimizer = GradientDescent(three_variable_function)
-&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035]
-&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
-&gt;&gt;&gt; minimizer.minimum
-[0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]
-
-&gt;&gt;&gt; minimizer = GradientDescent(six_variable_function)
-&gt;&gt;&gt; minimizer.compute_gradient(delta=0.01)
-[-2.0000000000000018, 3.0001000000000055, -4.0004000000000035, 1.0000000000000009, 2.0000000000000018, 3.0000000000000027]
-&gt;&gt;&gt; minimizer.descend(scaling_factor=0.001, delta=0.01, num_steps=1)
-&gt;&gt;&gt; minimizer.minimum
-(0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004, -0.0010000000000000009, -0.0020000000000000018, -0.0030000000000000027)</code></pre>
-<p>You should be able to execute the tests by running <code>tests/test_GradientDescent.py</code>. <strong>MAKE SURE THAT ALL YOUR TESTS PASS, and make sure to push your finished code to Github for safekeeping.</strong></p>
-
-<pre><code>machine-learning/
-|- src/
-.  |- Matrix.py
-.  |- PolynomialRegressor.py
-.  |- GradientDescent.py
-|- tests/
-.  |- test_GradientDescent.py</code></pre>
+<h1 id="Problem-36-1">Problem 36-1<a class="anchor-link" href="#Problem-36-1">&#182;</a></h1><p><strong>Estimated time:</strong> 45 minutes</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p>Suppose you are a mission control analyst who is looking down at an enemy headquarters through a satellite view, and you want to get an estimate of how many tanks they have. Most of the headquarters is hidden, but you notice that near the entrance, there are four tanks visible, and these tanks are labeled with the numbers $52, 30, 68, 7.$ So, you assume that they have $N$ tanks that they have labeled with numbers from $1$ to $N.$</p>
+<p>Your commander asks you for an estimate: <strong>with $95\%$ certainty, what's the max number of tanks they have?</strong></p>
+<p>In this problem, you'll answer that question using the same process that you used in 35-1 (a,b,f). In your answer, show your work and justify every step of the way.</p>
 
 </div>
 </div>
@@ -13250,6 +13184,31 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-36-2">Problem 36-2<a class="anchor-link" href="#Problem-36-2">&#182;</a></h1><p><strong>Estimated time:</strong> 45 minutes</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Location:</strong> <code>assignment-problems/grid_search.py</code></p>
+<p>Write a function <code>grid_search(objective_function, grid_lines)</code> that takes the Cartesian product of the <code>grid_lines</code> in the search space, evaluates the <code>objective_function</code> at all points of intersection, and returns the point where the <code>objective_function</code> takes the lowest value.</p>
+<p>Assert that it passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; def two_variable_function(x, y):
+        return (x-1)**2 + (y-1)**3
+
+&gt;&gt;&gt; x_lines = [0, 0.25, 0.75]
+&gt;&gt;&gt; y_lines = [0.9, 1, 1.1, 1.2]
+&gt;&gt;&gt; grid_lines = [x_lines, y_lines]
+&gt;&gt;&gt; grid_search(two_variable_function, grid_lines)
+[0.75, 0.9]
+
+Note: behind the scenes, grid_search is computing all
+intersections of x_lines with y_lines to get the following
+points:
+
+[0, 0.9], [0, 1], [0, 1.1], [0, 1.2]
+[0.25, 0.9], [0.25, 1], [0.25, 1.1], [0.25, 1.2]
+[0.75, 0.9], [0.75, 1], [0.75, 1.1], [0.75, 1.2]
+
+Then, it evaluates the function at these points and returns
+the point that gave the lowest value.</code></pre>
 
 </div>
 </div>
