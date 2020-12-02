@@ -13266,7 +13266,10 @@ DESIRED: [0.0020000000000000018, -0.0030001000000000055, 0.004000400000000004]</
 <blockquote><p>1, 17, 8, 25, 3</p>
 </blockquote>
 <p>You assume that the numbers come from a <strong>discrete uniform distribution</strong> $U\left\{1,2,\ldots,k\right\}$ defined as follows:</p>
-$$p_k(x) = \begin{cases} \dfrac{1}{k} &amp; x \in \left\{1,2,\ldots,k\right\} \\ 0 &amp; x \not\in \left\{1,2,\ldots,k\right\} \end{cases}$$<p><strong>a.</strong> <strong>Compute the likelihood</strong> $P(\left\{  1, 17, 8, 25, 3 \right\} | \, k).$ Remember that the likelihood is just the probability of getting the result $ \left\{  1, 17, 8, 25, 3 \right\}$ under the assumption that the data was sampled from the distribution $p_k(x).$ Your answer should be a <strong>piecewise function</strong> expressed in terms of $k.$</p>
+$$p_k(x) = \begin{cases} \dfrac{1}{k} &amp; x \in \left\{1,2,\ldots,k\right\} \\ 0 &amp; x \not\in \left\{1,2,\ldots,k\right\} \end{cases}$$<p><strong>a.</strong> <strong>Compute the likelihood</strong> $P(\left\{  1, 17, 8, 25, 3 \right\} | \, k).$ Remember that the likelihood is just the probability of getting the result $ \left\{  1, 17, 8, 25, 3 \right\}$ under the assumption that the data was sampled from the distribution $p_k(x).$ Your answer should be a <strong>piecewise function</strong> expressed in terms of $k\mathbin{:}$</p>
+$$P(\left\{  1, 17, 8, 25, 3 \right\} | \, k) = \begin{cases} \_\_\_ &amp; k \geq \_\_\_ \\ 0 &amp; \textrm{otherwise} \end{cases}$$<ul>
+<li><strong>Note:</strong> To figure out the $k \geq \_\_\_$ part, keep in mind that the data $\left\{  1, 17, 8, 25, 3 \right\}$ is drawn from $\left\{  1, 2, \ldots, k \right\}.$</li>
+</ul>
 <p><strong>b.</strong> <strong>Compute the posterior distribution</strong> by normalizing the likelihood. That is to say, find the constant $c$ such that
 $$\sum_{k=1}^\infty c \cdot P(\left\{  1, 17, 8, 25, 3 \right\} | \, k) = 1.$$
 Then, the posterior distribution will be
