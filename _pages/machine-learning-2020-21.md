@@ -14,7 +14,26 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="68">
+<font size="3em"><ol reversed start="70">
+    <li><b>Friday, December 4</b>
+        <br>Note: This assignment will be assigned on FRIDAY. It is posted in advance. Wendesday's assignment is #69.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-70-1">LeaveOneOutCrossValidator</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-70-2">Bayesian Inference: Estimating the Size of an Enemy Fleet</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-70-3">Probability Review</a></li>
+        </ul></font>
+    </li>
+    <br>
+    <li><b>Wednesday, December 2</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/486504629">Class Recording</a>: 68-1, Quiz 6 Problem 2 (1-6)
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-69-1">Catch-Up</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-69-2">Extra Credit: Solving Sudoku Using Intelligent Search</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, November 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/485584970">Class Recording</a>: 67-1, Quiz 6 Problem 1
         <br>Assignment Problems:
