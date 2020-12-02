@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="35">
+<font size="3em"><ol reversed start="36">
+    <li><b>Wednesday, December 2</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/486504640">Class Recording</a>: 35-1, 35-2
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-36-1">Bayesian Inference: Estimating the Size of an Enemy Fleet</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-36-2">Grid Search</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, November 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/485584984">Class Recording</a>: 34-1, 34-2, Quiz 6 Problem 1
         <br>Assignment Problems:
