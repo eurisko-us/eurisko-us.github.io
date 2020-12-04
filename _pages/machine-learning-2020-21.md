@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="70">
     <li><b>Friday, December 4</b>
-        <br>Note: This assignment will be assigned on FRIDAY. It is posted in advance. Wendesday's assignment is #69.
+        <br><a class="body" target="_blank" href="https://vimeo.com/487344688">Class Recording</a>: Reviewing for 70-2; general discussion
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-70-1">LeaveOneOutCrossValidator</a></li>
