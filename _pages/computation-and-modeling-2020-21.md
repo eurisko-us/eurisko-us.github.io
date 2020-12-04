@@ -16,6 +16,16 @@ author_profile: false
 <br><br>
 
 <font size="3em"><ol reversed start="36">
+    <li><b>Friday, December 4</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/486504640">Class Recording</a>: Quiz 6 Problem 2
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-37-1">Introduction to Trees</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-37-2">Multiple Linear / Logistic Regression</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-37-3">Joint Exponential Distribution</a></li>
+            </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, December 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/486504640">Class Recording</a>: 35-1, 35-2
         <br>Assignment Problems:
