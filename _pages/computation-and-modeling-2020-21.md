@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="36">
     <li><b>Friday, December 4</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/486504640">Class Recording</a>: Quiz 6 Problem 2
+        <br><a class="body" target="_blank" href="https://vimeo.com/487344696">Class Recording</a>: Quiz 6 Problem 2; 37-1
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-37-1">Introduction to Trees</a></li>
