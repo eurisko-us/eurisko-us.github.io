@@ -15,8 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="36">
-    <li><b>Friday, December 4</b>
+<font size="3em"><ol reversed start="38">
+    <li><b>Monday, December 7</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-38-1">Covariance Proofs</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-38-2">Sololearn C++ Module 8</a></li>
+            </ul></font>
+    </li>
+    <br>
+<li><b>Friday, December 4</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/487344696">Class Recording</a>: Quiz 6 Problem 2; 37-1
         <br>Assignment Problems:
         <font size="2em"><ul>
