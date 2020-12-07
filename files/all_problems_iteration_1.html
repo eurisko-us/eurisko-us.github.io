@@ -13653,6 +13653,118 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-1">Problem 71-1<a class="anchor-link" href="#Problem-71-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 45 minutes</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
+<code>machine-learning/tests/test_decision_tree.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 15</p>
+<p>If you haven't already, create a <code>split()</code> method in your <code>DecisionTree</code> (not the same as the <code>split()</code> method in your <code>Node</code>!) that splits the tree at the node with highest impurity.</p>
+<p>Then, create a <code>fit()</code> method in your <code>DecisionTree</code> that keeps on <code>split()</code>-ing until all terminal nodes are completely pure.</p>
+<p>Assert that the following tests pass:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[1, 11, 'A'],
+    [1, 12, 'A'],
+    [2, 11, 'A'],
+    [1, 13, 'B'],
+    [2, 13, 'B'],
+    [3, 13, 'B'],
+    [3, 11, 'B']],
+    columns = ['x', 'y', 'class']
+)
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+# currently, the decision tree looks like this:
+
+                      (3A, 4B)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                      (3A, 4B)
+                      /      \   
+            (y &lt; 12.5)       (y &gt;= 12.5)
+            (3A, 1B)         (3B)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]
+
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+# currently, the decision tree looks like this:
+
+                      (3A, 4B)
+
+&gt;&gt;&gt; dt.fit()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-2">Problem 71-2<a class="anchor-link" href="#Problem-71-2">&#182;</a></h1><p><strong>Estimated time:</strong> 45 minutes</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<ul>
+<li>Complete queries 6-13 in <a href="https://napier.sqlzoo.net/" target="_blank">SQL Zoo Module 2</a>. Take a screenshot of each successful query <strong>(with the successful smiley face showing)</strong> and put them in the overleaf doc.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-3">Problem 71-3<a class="anchor-link" href="#Problem-71-3">&#182;</a></h1><p><strong>Estimated time:</strong> 45 minutes</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-005.png' border='0'/><br></p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-007-a.png' border='0'/><br></p>
+<p><img width=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-007-b.png' border='0'/><br></p>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-006.png' border='0'/><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-70-1">Problem 70-1<a class="anchor-link" href="#Problem-70-1">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
 <p><strong>Grading:</strong> 10 points</p>
 <p><strong>Locations:</strong></p>
