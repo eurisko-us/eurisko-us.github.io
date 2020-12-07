@@ -14,8 +14,18 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="70">
-    <li><b>Friday, December 4</b>
+<font size="3em"><ol reversed start="71">
+    <li><b>Monday, December 7</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-71-1">DecisionTree Class (Iteration 2)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-71-2">SQL Zoo Module 2</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-71-3">Probability Review</a></li>
+        </ul></font>
+    </li>
+    <br>
+<li><b>Friday, December 4</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/487344688">Class Recording</a>: Reviewing for 70-2; general discussion
         <br>Assignment Problems:
         <font size="2em"><ul>
