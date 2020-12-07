@@ -13671,7 +13671,7 @@ $$</p>
       knn.fit(leave_one_out_df, prediction_column='Cookie Type') ]
 
 &gt;&gt;&gt; cv.accuracy()
-0.6842105263157895
+0.7894736842105263 (Updated!)
 
 Note: the following is included to help you debug.
 Row 0 -- True Class is Shortbread; Predicted Class was Shortbread
@@ -13684,11 +13684,11 @@ Row 6 -- True Class is Sugar; Predicted Class was Sugar
 Row 7 -- True Class is Sugar; Predicted Class was Shortbread
 Row 8 -- True Class is Sugar; Predicted Class was Shortbread
 Row 9 -- True Class is Sugar; Predicted Class was Sugar
-Row 10 -- True Class is Fortune; Predicted Class was Shortbread
+Row 10 -- True Class is Fortune; Predicted Class was Fortune (Updated!)
 Row 11 -- True Class is Fortune; Predicted Class was Fortune
 Row 12 -- True Class is Fortune; Predicted Class was Fortune
 Row 13 -- True Class is Fortune; Predicted Class was Shortbread
-Row 14 -- True Class is Fortune; Predicted Class was Shortbread
+Row 14 -- True Class is Fortune; Predicted Class was Fortune (Updated!)
 Row 15 -- True Class is Shortbread; Predicted Class was Sugar
 Row 16 -- True Class is Shortbread; Predicted Class was Shortbread
 Row 17 -- True Class is Shortbread; Predicted Class was Shortbread
@@ -13701,22 +13701,22 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 &gt;&gt;&gt;    accuracies.append(cv.accuracy())
 
 &gt;&gt;&gt; accuracies
-[0.5789473684210527,
- 0.5263157894736842,
+ [0.5789473684210527,
+ 0.5789473684210527, #(Updated!)
  0.5789473684210527,
  0.5789473684210527,
+ 0.7894736842105263, #(Updated!)
  0.6842105263157895,
- 0.6842105263157895,
  0.5789473684210527,
- 0.631578947368421,
- 0.5789473684210527,
+ 0.5789473684210527, #(Updated!)
+ 0.6842105263157895, #(Updated!)
  0.5263157894736842,
- 0.5263157894736842,
+ 0.47368421052631576, #(Updated!)
  0.42105263157894735,
- 0.47368421052631576,
- 0.42105263157894735,
- 0.42105263157894735,
- 0.3157894736842105,
+ 0.42105263157894735, #(Updated!)
+ 0.3684210526315789, #(Updated!)
+ 0.3684210526315789, #(Updated!)
+ 0.3684210526315789, #(Updated!)
  0.42105263157894735]</code></pre>
 
 </div>
