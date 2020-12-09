@@ -15,8 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="38">
-    <li><b>Monday, December 7</b>
+<font size="3em"><ol reversed start="39">
+    <li><b>Wednesday, December 9</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/489092543">Class Recording</a>: Quiz 6 Problem 3 & Bonus; 39-1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-39-1">Building a Tree from Edges</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-39-2">Probability Review</a></li>
+            </ul></font>
+    </li>
+    <br>
+<li><b>Monday, December 7</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
         <font size="2em"><ul>
