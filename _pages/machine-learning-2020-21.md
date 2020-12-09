@@ -14,8 +14,19 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="71">
-    <li><b>Monday, December 7</b>
+<font size="3em"><ol reversed start="72">
+    <li><b>Wednesday, December 9</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/487344688">Class Recording</a>: agreeing upon standards for game strategy classes
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-1">Scatter Plot</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-2">Decision Tree - More Complex Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-3">Probability Review - Conditional Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-4">SQL Zoo</a></li>
+        </ul></font>
+    </li>
+    <br>
+<li><b>Monday, December 7</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
         <font size="2em"><ul>
