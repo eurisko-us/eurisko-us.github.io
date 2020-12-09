@@ -13119,6 +13119,158 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-1">Problem 39-1<a class="anchor-link" href="#Problem-39-1">&#182;</a></h1><p><strong>Estimated time:</strong> 90 minutes</p>
+<p><strong>Grading:</strong> 15 points</p>
+<p><strong>Location:</strong> <code>graph/src/tree.py</code></p>
+<p>In this problem, you will start writing a class <code>Tree</code> that goes in a repository <code>graph</code>. (A tree is a special case of the more general concept of a graph.)</p>
+<p>Your <code>Tree</code> class will take in a list of edges, and then the <code>build_from_edges()</code> method will connect up some <code>Node</code>s with that arrangement of edges. It will be similar to <code>LinkedList</code>, but now a node can have more than one child.</p>
+<p>The easiest way to build the tree is as follows:</p>
+<ol>
+<li>Look at the edges, identify the root, and create a node for the root.</li>
+<li>Look at the edges, identify the children of the root, create a node for each of them, and put that node in the root's <code>children</code> attribute.</li>
+<li>For each of those children, identify <em>their</em> children, create a node for each, and put that node in its parent's <code>children</code> attribute.</li>
+<li>Keep repeating this procedure until there are no more children to go through</li>
+</ol>
+
+<pre><code>&gt;&gt;&gt; edges = [('a','c'), ('e','g'), ('e','i'), ('e','a'), ('g','b'), ('a','d'), ('d','f'), ('f','h'), ('d','j'), ('c','k')]
+&gt;&gt;&gt; tree = Tree(edges)
+&gt;&gt;&gt; tree.build_from_edges()
+
+first, create the root node: e
+
+    e
+
+then, create nodes for the children of e:
+    e has children a, i, g
+
+    e
+   /|\
+  a i g
+
+then, create nodes for the children of a, i, g:
+    a has children c, d
+    i has no children
+    g has a child b
+
+    e
+   /|\
+  a i g
+ /|   |
+c d   b
+
+then, create nodes for the children of c, d, b:
+    c has a child k
+    d has children j and f
+    b has no children
+
+    e
+   /|\
+  a i g
+ /|   |
+c d   b
+| |\
+k j f
+
+then, create nodes for the children of k, j, f:
+    k has no children
+    j has no children
+    f has a child h
+
+    e
+   /|\
+  a i g
+ /|   |
+c d   b
+| |\
+k j f
+    |
+    h
+
+then, create nodes for the children of h:
+    h has no children
+
+    e
+   /|\
+  a i g
+ /|   |
+c d   b
+| |\
+k j f
+    |
+    h
+
+we've run out of children, so we're done
+
+&gt;&gt;&gt; tree.root.value
+'e'
+
+&gt;&gt;&gt; [node.value for node in tree.root.children]
+['a', 'i', 'g']
+
+# you may need to change the output of this test (and future tests)
+# for example, if you have ['g', 'i', 'a'], then that's fine
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children] # children of a
+['c', 'd']
+
+# you may need to change the output of this test (and future tests)
+# for example, if you had ['g', 'i', 'a'] earlier, then the 
+# output would be the children of 'g', which is just ['b']
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[1].children] # children of i
+[]
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[2].children] # children of g
+['b']
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[0].children] # children of c
+['k']
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[1].children] # children of d
+['j', 'f']
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[2].children[0].children] # children of b
+[]
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[0].children[0].children] # children of k
+[]
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[1].children[0].children] # children of j
+[]
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[1].children[1].children] # children of f
+['h']
+
+&gt;&gt;&gt; [node.value for node in tree.root.children[0].children[1].children[1].children[0].children] # children of f
+[]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-39-2">Problem 39-2<a class="anchor-link" href="#Problem-39-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 20 min</p>
+<p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 5 points</p>
+<p>(Taken from <em>Introduction to Probability: Statistics and Random Processes</em> by Hossein Pishro-Nik)</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-012.png' border='0'/><br></p>
+<ul>
+<li>Draw a Venn diagram and use Bayes' Theorem: $P(A \, | \, B) = \dfrac{P(A \textrm{ and } B)}{P(B)}$</li>
+</ul>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch1-014.png' border='0'/><br></p>
+<ul>
+<li>Again, use Bayes' Theorem (but this time, you don't need a Venn diagram).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-38-1">Problem 38-1<a class="anchor-link" href="#Problem-38-1">&#182;</a></h1><p><strong>Estimated time:</strong> 90 minutes</p>
 <p><strong>Grading:</strong> 15 points</p>
 <p><strong>Location:</strong> Overleaf</p>
