@@ -13733,7 +13733,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -13750,7 +13750,7 @@ $$</p>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[7]:</div>
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
 
 
 
@@ -13800,26 +13800,26 @@ $$</p>
 
 The tree should look like this:
 
-                         (13A, 15B)
-                          /      \   
-                (y &lt; 12.5)       (y &gt;= 12.5)
-                (13A, 3B)        (12B)
-                /         \
-        (x &lt; 2.5)          (x &gt;= 2.5)
-        (2A, 2B)                (11A, 1B)
-       /     \                  /        \
-(y &lt; 11)   (y &gt;= 11)     (y &lt; 10.75)     (y &gt;= 10.75)
-(2A)       (2B)          (1A, 1B)        (10A)
-                         /      \
-                (x &lt; 3.5)        (x &gt;= 3.5)
-                     (1B)        (1A)
+                           (13A, 15B)
+                            /      \   
+                  (y &lt; 12.5)       (y &gt;= 12.5)
+                  (13A, 3B)        (12B)
+                  /         \
+          (x &lt; 2.5)          (x &gt;= 2.5)
+          (2A, 2B)                (11A, 1B)
+         /     \                  /        \
+(y &lt; 11.25)   (y &gt;= 11.25)  (y &lt; 10.75)     (y &gt;= 10.75)
+(2A)          (2B)          (1A, 1B)        (10A)
+                            /      \
+                   (x &lt; 3.5)        (x &gt;= 3.5)
+                        (1B)        (1A)
 
 &gt;&gt;&gt; dt.root.best_split
 ('y', 12.5)
 &gt;&gt;&gt; dt.root.low.best_split
 ('x', 2.5)
 &gt;&gt;&gt; dt.root.low.low.best_split
-('y', 11)
+('y', 11.25)
 &gt;&gt;&gt; dt.root.low.high.best_split
 ('y', 10.75)
 &gt;&gt;&gt; dt.root.low.high.low.best_split
