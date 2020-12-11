@@ -13645,7 +13645,8 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Euler estimator -- keep track of lag variables.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Euler estimator -- keep track of lag variables</p>
+<p>generalize the idea of points -- a point takes the form <code>point[variable_name][num_lookback_steps]</code>, where each component has a max number of lookback steps (defined upon intialization). Then we can reference in our derivatives: <code>x['voltage1'][-2/step_size]</code> for delay; <code>x['voltage2'][0]</code> for no delay</p>
 
 </div>
 </div>
@@ -13661,7 +13662,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-74-3">Problem 74-3<a class="anchor-link" href="#Problem-74-3">&#182;</a></h1><p>Random split decision tree</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Random split decision tree</p>
 
 </div>
 </div>
@@ -13669,29 +13670,144 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-73-1">Problem 73-1<a class="anchor-link" href="#Problem-73-1">&#182;</a></h1><p>Refactor your game so that strategies adhere to this format <strong>exactly</strong>. Put the strategies as separate files in `src/strategies</p>
+<h1 id="Problem-73-1">Problem 73-1<a class="anchor-link" href="#Problem-73-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 2 hours</p>
+<p><strong>Points:</strong> 20</p>
+<p>Refactor your game so that strategies adhere to this format <strong>exactly</strong>. Put the strategies as separate files in <code>src/strategies</code>.</p>
+<p><strong>Note:</strong> If you have any disagreements with the strategy template below, post on Slack, and we can discuss.</p>
 
-<pre><code>class DumbStrategy:
+<pre><code>from units.base import Base
+from units.battlecruiser import Battlecruiser
+from units.battleship import Battleship
+from units.colony import Colony
+from units.cruiser import Cruiser
+from units.destroyer import Destroyer
+from units.dreadnaught import Dreadnaught
+from units.scout import Scout
+from units.shipyard import Shipyard
+
+class CombatStrategy:
 
     def __init__(self, player_index):
         self.player_index = player_index
 
     def will_colonize_planet(self, coordinates, game_state):
         ...
-        returns either True or False
+        return either True or False
 
     def decide_ship_movement(self, unit_index, game_state):
         ...
-        returns a "translation" which is a tuple representing the direction in which the ship moves
+        return a "translation" which is a tuple representing
+        the direction in which the ship moves.
 
-    def decide_purchases():
-        to discuss
+        # For example, if a unit located at (1,2) wanted to
+        # move to (1,1), then the translation would be (0,-1).
 
-    def decide_removals():
-        to discuss
+    def decide_purchases(self, game_state):
+        ...
+        return {
+            'units': list of unit objects you want to buy,
+            'technology': list of technology attributes you want to upgrade
+        }
 
-    def decide_which_ship_to_attack():
-        to discuss</code></pre>
+        # for example, if you wanted to buy 2 Scouts, 1 Destroyer, 
+        # upgrade defense technology once, and upgrade attack
+        # technology twice, you'd return
+        # {
+        #     'units': [Scout, Scout, Destroyer],
+        #     'technology': ['defense', 'attack', 'attack'] 
+        # }
+
+    def decide_removals(self, game_state):
+        ...
+        return a list of unit indices of ships that you want to remove.
+
+        # for example, if you want to remove your 0th and 3rd units, you'd
+        # return [0, 3]
+
+    def decide_which_unit_to_attack(self, combat_state, attacker_index):
+
+        # combat_state is the combat_state for the particular battle
+        # being considered. It will take the form
+        # {'location': (1,2),
+        #     'order': [{'player': 1, 'unit': 0},
+        #               {'player': 0, 'unit': 1},
+        #               {'player': 1, 'unit': 1},
+        #               {'player': 1, 'unit': 2}],
+        # }.
+
+        # attacker_index is the index of your unit, whose turn it is
+        # to attack.
+
+        ...
+
+        return the index of the ship you want to attack in the 
+        combat order.
+
+        # in the above example, if you want to attack player 1's unit 1,
+        # then you'd return 2 because it corresponds to
+        # combat_state['order'][2]
+
+    def decide_which_units_to_screen(self, combat_state):
+
+        # again, the combat_state is the combat_state for the 
+        # particular battle
+
+        ...
+
+        return the indices of the ships you want to screen
+        in the combat order
+
+        # in the above example, if you are player 1 and you want
+        # to screen units 1 and 2, you'd return [2,3] because
+        # the ships you want to screen are
+        # combat_state['order'][2] and combat_state['order'][3]
+
+        # NOTE: FOR COMBATSTRATEGY AND DUMBSTRATEGY,
+        # YOU CAN JUST RETURN AN EMPTY ARRAY</code></pre>
+<p><strong>Note:</strong> for technology upgrades, you'll likely have to translate between strings of technology names and technology stored as <code>Player</code> attributes. The <code>setattr</code> and <code>getattr</code> functions may be helpful:</p>
+
+<pre><code>&gt;&gt;&gt; class Cls:
+        pass
+&gt;&gt;&gt; obj = Cls()
+&gt;&gt;&gt; setattr(obj, "foo", "bar")
+&gt;&gt;&gt; obj.foo
+'bar'
+&gt;&gt;&gt; getattr(obj, "foo")
+'bar'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-73-2">Problem 73-2<a class="anchor-link" href="#Problem-73-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 1 hour</p>
+<p><strong>Points:</strong> 15</p>
+<p>We need to extend our <code>EulerEstimator</code> to allow for "time delay". To do this, we'll need to keep a cache of data for the necessary variables. However, it's going to be very hard to build this if we always have to refer to variables by their index in the point. So, in this problem, we're going to update our <code>EulerEstimator</code> so that we can refer to variables by their actual names.</p>
+<hr>
+<p>Refactor your <code>EulerEstimator</code> so that <code>x</code> is a dictionary instead of an array. This way, we can reference components of <code>x</code> by their actual labels rather than having to always use indices.</p>
+<p>For example, to run our SIR model, we originally did this:</p>
+
+<pre><code>derivatives = [
+    (lambda t, x: -0.0003*x[0]*x[1]),
+    (lambda t, x: 0.0003*x[0]*x[1] - 0.02*x[1]),
+    (lambda t, x: 0.02*x[1])
+]
+starting_point = (0, (1000, 1, 0))
+
+estimator = EulerEstimator(derivatives, starting_point)</code></pre>
+<p>Now, we need to refactor it into this:</p>
+
+<pre><code>derivatives = {
+    'susceptible': (lambda t, x: -0.0003*x['Susceptible']*x['Infected']),
+    'infected': (lambda t, x: 0.0003*x['susceptible']*x['infected'] - 0.02*x['infected']),
+    'recovered': (lambda t, x: 0.02*x['infected'])
+}
+starting_point = (0, {'susceptible': 1000, 'recovered': 1, 'infected': 0})
+
+estimator = EulerEstimator(derivatives, starting_point)</code></pre>
+<p>Update the code in <code>test_euler_estimator.py</code> and <code>3_neuron_network.py</code> to adhere to this new convention.</p>
+<p>When I check your submission, I'm going to check that your <code>EulerEstimator</code> has been initialized with a dictionary in each of these files, and I'm going to run each of these files to make sure that they generate the same plots as before.</p>
 
 </div>
 </div>
@@ -13853,7 +13969,7 @@ The tree should look like this:
 <li>For part (a), you need to compute the probability of each "path" to the desired outcome:</li>
 </ul>
 $$\begin{align*}
-P(\geq \text{2 born in same month}) &amp;= P(\geq \text{2 born in same month} \, | \, k=5) P(k=5) \\
+P( \geq \text{2 born in same month}) &amp;= P( \geq \text{2 born in same month} \, | \, k=5) P(k=5) \\
 &amp;\quad + P(\geq \text{2 born in same month} \, | \, k=10) P(k=10) \\
 &amp;\quad + P(\geq \text{2 born in same month} \, | \, k=15) P(k=15)
 \end{align*}$$<ul>

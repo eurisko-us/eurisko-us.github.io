@@ -13119,6 +13119,91 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-40-1">Problem 40-1<a class="anchor-link" href="#Problem-40-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 30 minutes</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/linear-regressor.py</code><br>
+<code>machine-learning/tests/test_linear-regressor.py</code><br></p>
+</blockquote>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Extend your <code>LinearRegressor</code> to handle data points of any dimension. Assert that the following tests pass:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[0, 0, 0.1],
+     [1, 0, 0.2],
+     [0, 2, 0.5],
+     [4,5,0.6]],
+    columns = ['scoops of chocolate', 'scoops of vanilla', 'taste rating']
+)
+&gt;&gt;&gt; regressor = LinearRegressor(df, dependent_variable='taste rating')
+
+&gt;&gt;&gt; regressor.coefficients
+[0.19252336, -0.05981308. 0.13271028]
+# these coefficients are rounded, you should only round 
+# in your assert statement
+
+&gt;&gt;&gt; regressor.predict({
+    'scoops of chocolate': 2,
+    'scoops of vanilla': 3
+    })
+0.47102804</code></pre>
+<p><strong>Note:</strong> Your class should NOT be tailored to 3-dimensional data points. It should be data points to any number of dimensions.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-40-2">Problem 40-2<a class="anchor-link" href="#Problem-40-2">&#182;</a></h1><p><strong>Estimated Time:</strong> 90 minutes</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>assignment-problems/euler_estimator.py</code><br></p>
+</blockquote>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Generalize your <code>EulerEstimator</code> to systems of differential equations. For example, we should be able to model the system</p>
+$$\begin{align*}
+A'(t) &amp;= A(t) + 1 \\
+B'(t) &amp;= A(t) + B(t) \\
+C'(t) &amp;= 2B(t)
+\end{align*}$$<p>starting at the point $\left( t, \begin{bmatrix} A \\ B \\ C \end{bmatrix} \right) = \left( 0, \begin{bmatrix} 0 \\ 0 \\ 0 \end{bmatrix} \right)$ as follows:</p>
+
+<pre><code>&gt;&gt;&gt; derivatives = {
+        'A': (lambda t,x: x['A'] + 1),
+        'B': (lambda t,x: x['A'] + x['B']),
+        'C': (lambda t,x: 2*x['B']) 
+    }
+&gt;&gt;&gt; euler = EulerEstimator(derivatives = derivatives)
+
+&gt;&gt;&gt; initial_values = {'A': 0, 'B': 0, 'C': 0}
+&gt;&gt;&gt; initial_point = (0, initial_values)
+
+&gt;&gt;&gt; euler.calc_derivative_at_point(initial_point)
+{'A': 1, 'B': 0, 'C': 0}
+
+&gt;&gt;&gt; point_2 = euler.step_forward(point = initial_point, step_size = 0.1)
+&gt;&gt;&gt; point_2
+(0.1, {'A': 0.1, 'B': 0, 'C': 0})
+
+&gt;&gt;&gt; euler.calc_derivative_at_point(point_2)
+{'A': 1.1, 'B': 0.1, 'C': 0}
+
+&gt;&gt;&gt; point_3 = euler.step_forward(point = point_2, step_size = -0.5)
+&gt;&gt;&gt; point_3
+(-0.4, {'A': -0.45, 'B': -0.05, 'C': 0})
+
+&gt;&gt;&gt; euler.calc_estimated_points(point=point_3, step_size=2, num_steps=3)
+[
+   (-0.4, {'A': -0.45, 'B': -0.05, 'C': 0}), # starting point 
+   (1.6, {'A': 0.65, 'B': -1.05, 'C': -0.2)), # after 1st step
+   (3.6, {'A': 3.95, 'B': -1.85, 'C': -4.4)), # after 2nd step
+   (5.6, {'A': 13.85, 'B': 2.35, 'C': -11.8)) # after 3rd step
+]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-39-1">Problem 39-1<a class="anchor-link" href="#Problem-39-1">&#182;</a></h1><p><strong>Estimated time:</strong> 90 minutes</p>
 <p><strong>Grading:</strong> 15 points</p>
 <p><strong>Location:</strong> <code>graph/src/tree.py</code></p>
