@@ -14,8 +14,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="72">
-    <li><b>Wednesday, December 9</b>
+<font size="3em"><ol reversed start="73">
+    <li><b>Friday, December 11</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/489949981">Class Recording</a>: 72-3, 71-3, 70-3
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-1">Standardizing the Strategy Class</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-2">Refactoring EulerEstimator to use Dictionaries</a></li>
+        </ul></font>
+    </li>
+    <br>
+<li><b>Wednesday, December 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/489092539">Class Recording</a>: agreeing upon standards for game strategy classes
         <br>Assignment Problems:
         <font size="2em"><ul>
