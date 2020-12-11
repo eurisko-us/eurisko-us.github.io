@@ -16,7 +16,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="72">
     <li><b>Wednesday, December 9</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/487344688">Class Recording</a>: agreeing upon standards for game strategy classes
+        <br><a class="body" target="_blank" href="https://vimeo.com/489092539">Class Recording</a>: agreeing upon standards for game strategy classes
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-1">Scatter Plot</a></li>
