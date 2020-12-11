@@ -15,8 +15,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="39">
-    <li><b>Wednesday, December 9</b>
+<font size="3em"><ol reversed start="40">
+    <li><b>Friday, December 11</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/489949987">Class Recording</a>: 40-2, 39-2
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-40-1">Generalizing the LinearRegressor</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-40-2">Extending EulerEstimator to Systems</a></li>
+            </ul></font>
+    </li>
+    <br>
+<li><b>Wednesday, December 9</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/489092543">Class Recording</a>: Quiz 6 Problem 3 & Bonus; 39-1
         <br>Assignment Problems:
         <font size="2em"><ul>
