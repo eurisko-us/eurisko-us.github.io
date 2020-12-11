@@ -13131,6 +13131,11 @@ div#notebook {
 <li>For each of those children, identify <em>their</em> children, create a node for each, and put that node in its parent's <code>children</code> attribute.</li>
 <li>Keep repeating this procedure until there are no more children to go through</li>
 </ol>
+<p>The easiest way is to do a while loop: make a <code>node_array</code> that's initialized as <code>node_array = [self.root]</code>, and while <code>node_array</code> is nonempty, do the following:</p>
+<ol>
+<li>loop through all nodes in that array, set their children, and put their children in a child_array</li>
+<li>Set <code>node_array = list(child_array)</code> .</li>
+</ol>
 
 <pre><code>&gt;&gt;&gt; edges = [('a','c'), ('e','g'), ('e','i'), ('e','a'), ('g','b'), ('a','d'), ('d','f'), ('f','h'), ('d','j'), ('c','k')]
 &gt;&gt;&gt; tree = Tree(edges)
