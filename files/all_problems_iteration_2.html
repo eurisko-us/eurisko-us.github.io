@@ -13137,7 +13137,12 @@ div#notebook {
 &gt;&gt;&gt; regressor = LinearRegressor(df, dependent_variable='taste rating')
 
 &gt;&gt;&gt; regressor.coefficients
-[0.19252336, -0.05981308. 0.13271028]
+{
+    'constant': 0.19252336,
+    'scoops of chocolate': -0.05981308,
+    'scoops of vanilla': 0.13271028
+}
+
 # these coefficients are rounded, you should only round 
 # in your assert statement
 
