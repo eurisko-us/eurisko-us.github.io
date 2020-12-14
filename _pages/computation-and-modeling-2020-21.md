@@ -17,7 +17,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="41">
     <li><b>Monday, December 14</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/490840890">Class Recording</a> - unfortunately, audio was not recorded.
+        <br><a class="body" target="_blank" href="https://vimeo.com/490840890">Class Recording</a> - 40-1. Unfortunately, audio was not recorded.
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-41-1">Semester Wrap-Up</a></li>
