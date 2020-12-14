@@ -15,7 +15,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="40">
+<font size="3em"><ol reversed start="41">
+    <li><b>Monday, December 14</b>
+        <br><!--<a class="body" target="_blank" href="https://vimeo.com/489949987">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-41-1">Semester Wrap-Up</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-41-2">Final Study Guide</a></li>
+            </ul></font>
+    </li>
+    <br>
     <li><b>Friday, December 11</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/489949987">Class Recording</a>: 40-2, 39-2
         <br>Assignment Problems:
