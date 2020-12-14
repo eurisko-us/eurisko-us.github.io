@@ -14,13 +14,22 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="73">
+<font size="3em"><ol reversed start="74">
+    <li><b>Monday, December 14</b>
+        <br><!--<a class="body" target="_blank" href="https://vimeo.com/489949981">Class Recording</a>-->
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-1">Semester Wrap-Up</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-2">Final Study Guide</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, December 11</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/489949981">Class Recording</a>: 72-3, 71-3, 70-3
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-1">Standardizing the Strategy Class</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-72-2">Refactoring EulerEstimator to use Dictionaries</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-73-1">Standardizing the Strategy Class</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-73-2">Refactoring EulerEstimator to use Dictionaries</a></li>
         </ul></font>
     </li>
     <br>
