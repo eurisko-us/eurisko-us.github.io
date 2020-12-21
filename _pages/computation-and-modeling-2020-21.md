@@ -47,7 +47,7 @@ author_profile: false
 </center>
 
 <br><br>
-<b>Assignments</b><br><br>
+<b>Assignments</b>
 
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
