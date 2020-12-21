@@ -116,6 +116,8 @@ author_profile: false
 
 <b>Late Assignments and Resubmissions:</b> On each assignment, you can resubmit to get back 50% of the points you missed. If an assignment is late, it earns 0 points (but you can resubmit to get up to 50%). So, it's always better to turn in a partially completed homework on time and resubmit the rest, than to turn in everything late. An assignment is late if it is not turned in by the beginning of class on the day that it is due.<br><br>
 
+<b>Quiz Corrections:</b> Quiz corrections will be assigned as an homework problem. If you don't submit corrections, then you will lose points on the homework.<br><br>
+
 <b>Grades of Zero:</b> You should check the grade and comments on each assignment. If you turned in an assignment but received a grade of 0, that just means there's something you need to fix before I grade it. You can read the comment on your assignment in Canvas to figure out what you need to fix. Usually, you just need to clean up your LaTeX or code so that it follows the commandments. But in order to have your grade updated, you need to fix and resubmit the assignment.
 
 </div>
