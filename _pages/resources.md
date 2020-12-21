@@ -125,7 +125,7 @@ author_profile: false
 ## [<center>Code Reviews</center>](#code-reviews)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
-<br>On each assignment, you will make a GitHub issue on another student's machine-learning, simulation, graph, or space-empires repository (NOT the assignment-problems repository), and you will resolve an issue that another student has made on your own repository. To find the student whose code you are supposed to review, add your student number to the assignment number, modulo the number of students in your class.<br><br>
+<br>On each assignment, you will make a GitHub issue on another student's machine-learning, simulation, graph, or space-empires repository (NOT the assignment-problems repository), and you will resolve an issue that another student has made on your own repository. To find the student whose code you are supposed to review, add your student number to the assignment number, modulo the number of students in your class. (Note: once in a while, you will make an issue on your own code.)<br><br>
  
  Machine Learning
  <font size="3em"><ol start="0">
