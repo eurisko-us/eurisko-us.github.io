@@ -16,32 +16,39 @@ author_profile: false
 <center>
 <table style="width:80%">
   <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Final-1" target="_blank">Final 1</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Final-1" target="_blank">Final 1</a></center></td>
+    <td width="33%"><center>Thursday, December 17</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
   <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-6" target="_blank">Quiz 1-6</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-6" target="_blank">Quiz 1-6</a></center></td>
+    <td width="33%"><center>Friday, November 19</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
     <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-5" target="_blank">Quiz 1-5</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-5" target="_blank">Quiz 1-5</a></center></td>
+        <td width="33%"><center>Friday, October 30</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
     <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-4" target="_blank">Quiz 1-4</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-4" target="_blank">Quiz 1-4</a></center></td>
+        <td width="33%"><center>Friday, October 16</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
     <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-3" target="_blank">Quiz 1-3</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-3" target="_blank">Quiz 1-3</a></center></td>
+        <td width="33%"><center>Friday, October 2</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
     <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-2" target="_blank">Quiz 1-2</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-2" target="_blank">Quiz 1-2</a></center></td>
+        <td width="33%"><center>Friday, September 18</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
     <tr>
-    <td width="50%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-1" target="_blank">Quiz 1-1</a></center></td>
-    <td width="50%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-1" target="_blank">Quiz 1-1</a></center></td>
+        <td width="33%"><center>Friday, September 4</center></td>
+    <td width="33%"><center>[ link to review ]</center></td>
   </tr>
 </table>
 </center>
