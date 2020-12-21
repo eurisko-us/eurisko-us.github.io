@@ -107,33 +107,16 @@ author_profile: false
 <br>Your final grade will be a weighted average of the following categories:<br>
   
 <font size="3em"><ul>
-  <li><b>Assignments (30%).</b> Every class, you will have an assignment consisting of multiple problems from a variety of domains. Assignments will be graded for both functionality and code quality.</li>
-  <li><b>Biweekly Quizzes (30%).</b> We will have quizzes every other week. They will consist of free-response problems focused on the core principles covered in the assignments.</li>
+  <li><b>Assignments (40%).</b> Every class, you will have an assignment consisting of multiple problems from a variety of domains. Assignments will be graded for both functionality and code quality, and you'll need to submit links to your GitHub commits, the GitHub issue you made, and the GitHub issue your resolved.</li>
+  <li><b>Biweekly Quizzes (40%).</b> We will have quizzes every other week. The problems will focus on the core principles covered in the assignments.</li>
   <li><b>Final (20%).</b> There will be a cumulative final exam.</li>
-  <li><b>Library Quality (10%).</b> At the end of the course, your code libraries will be graded for code quality. So, be sure to refactor your code appropriately each time you do an assignment!</li>
-  <li><b>Code Review (10%).</b> Each assignment, you will review another student's code and identify 2 specific things that could be improved.</li>
 </ul></font>
 
 <br>
 
-<b>Late Assignments Policy:</b> Currently, late assignments are marked down by 20% per day late. The late penalty is on a per-question basis, not a whole-assignment basis -- so it's always better to turn in a partially completed homework on time and turn in the remaining bit late, than to turn in everything late. Note that, starting in January, there will be a new late assignments policy: the grade on a late assignment will immediately be multiplied by 60% with no opportunity for resubmission.<br><br>
+<b>Late Assignments and Resubmissions:</b> On each assignment, you can resubmit to get back 50% of the points you missed. If an assignment is late, it earns 0 points (but you can resubmit to get up to 50%). So, it's always better to turn in a partially completed homework on time and resubmit the rest, than to turn in everything late. An assignment is late if it is not turned in by the beginning of class on the day that it is due.<br><br>
 
-<b>Resubmissions Policy:</b> If you submitted the assignment on time, then you can resubmit an assignment with corrections, and get up to 60% of the points back that you originally missed. For example, if you got a 70% and resubmitted after fixing all the issues in your assignment, then you could get back 60% of the original 30% that you missed, leaving you with a final score of 88%.<br><br>
-
-Note that you can only resubmit <i>once</i> -- so make sure that you fully correct the assignment before resubmitting. You have as long as you need to resubmit, so only resubmit the assignment once you're 100% sure there's nothing else you need to fix.<br><br>
-
-<b>Corrections Policy:</b>You can also submit quiz corrections, and get up to 30% of the points back that you originally missed. For each part you missed, you need to answer the following:
-<font size="3em">
-  <ol>
-    <li>What was your misconception in your original answer? Why is it a misconception? What did you learn?</li>
-    <ul><li>DON'T just say that you didn't understand something. Explain what it was in particular that you didn't understand. If you don't do this, your corrections will not be graded.</li></ul>
-    <li>What is the actual answer and why is it correct? Show all steps in your work.</li>
-  </ol>
- </font>
-
-<br>Note that you can only submit corrections <i>once</i> -- so make sure that you correct all problems and explain your misconceptions thoroughly. You have as long as you need to make your corrections, so only submit your corrections once you're 100% sure there's nothing else you need to fix.<br><br>
-
-<b>Grades of Zero:</b> You should be checking the grade and comments on each assignment. If you turned in an assignment but received a grade of 0, that just means there's something you need to fix before I grade it. You can read the comment on your assignment in Canvas to figure out what you need to fix. Sometimes, it can be as simple as putting your code in the correct folder/file. But in order to have your grade updated, you need to fix and resubmit the assignment.
+<b>Grades of Zero:</b> You should check the grade and comments on each assignment. If you turned in an assignment but received a grade of 0, that just means there's something you need to fix before I grade it. You can read the comment on your assignment in Canvas to figure out what you need to fix. Usually, you just need to clean up your LaTeX or code so that it follows the commandments. But in order to have your grade updated, you need to fix and resubmit the assignment.
 
 </div>
 
