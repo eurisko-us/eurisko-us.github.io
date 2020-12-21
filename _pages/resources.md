@@ -122,6 +122,33 @@ author_profile: false
 
 </div>
 
+## [<center>Code Reviews</center>](#code-reviews)
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+<br>On each assignment, you will make a GitHub issue on another student's machine-learning, simulation, graph, or space-empires repository (NOT the assignment-problems repository). To find the student whose code you are supposed to review, add your class-student number to the assignment number, modulo the number of students in your class.<br><br>
+ 
+ Machine Learning
+ <font size="3em"><ol start="0">
+  <li><a href="https://github.com/DrM00G" target="_blank">David Gieselman</a></li>
+  <li><a href="https://github.com/geomeza" target="_blank">George Meza</a></li>
+  <li><a href="https://github.com/RileyPaddock" target="_blank">Riley Paddock</a></li>
+  <li><a href="https://github.com/C0BBL3" target="_blank">Colby Roberts</a></li>
+  <li><a href="https://github.com/eoriont" target="_blank">Elijah Tarr</a></li>
+  </ol></font>
+  
+ Computation and Modeling
+ <font size="3em"><ol start="0">
+  <li><a href="https://github.com/" target="_blank">Nathan Allen</a></li>
+  <li><a href="https://github.com/" target="_blank">Maia Dimas</a></li>
+  <li><a href="https://github.com/" target="_blank">Justin Hong</a></li>
+  <li><a href="https://github.com/" target="_blank">Cayden Lau</a></li>
+  <li><a href="https://github.com/" target="_blank">Anton Perez</a></li>
+  <li><a href="https://github.com/" target="_blank">Nathan Reynoso</a></li>
+  <li><a href="https://github.com/" target="_blank">William Wallius</a></li>
+  <li><a href="https://github.com/" target="_blank">Charlie Weinberger</a></li>
+  </ol></font>
+</div>
+
 ## [<center>Study Tips</center>](#study-tips)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
