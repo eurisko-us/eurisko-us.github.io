@@ -138,14 +138,14 @@ author_profile: false
   
  Computation and Modeling
  <font size="3em"><ol start="0">
-  <li><a href="https://github.com/" target="_blank">Nathan Allen</a></li>
-  <li><a href="https://github.com/" target="_blank">Maia Dimas</a></li>
-  <li><a href="https://github.com/" target="_blank">Justin Hong</a></li>
-  <li><a href="https://github.com/" target="_blank">Cayden Lau</a></li>
-  <li><a href="https://github.com/" target="_blank">Anton Perez</a></li>
-  <li><a href="https://github.com/" target="_blank">Nathan Reynoso</a></li>
-  <li><a href="https://github.com/" target="_blank">William Wallius</a></li>
-  <li><a href="https://github.com/" target="_blank">Charlie Weinberger</a></li>
+  <li><a href="https://github.com/NateOwl1108" target="_blank">Nathan Allen</a></li>
+  <li><a href="https://github.com/snowthesprite" target="_blank">Maia Dimas</a></li>
+  <li><a href="https://github.com/JHpusd" target="_blank">Justin Hong</a></li>
+  <li><a href="https://github.com/RavenHex1296" target="_blank">Cayden Lau</a></li>
+  <li><a href="https://github.com/anton-perez" target="_blank">Anton Perez</a></li>
+  <li><a href="https://github.com/nathan-create" target="_blank">Nathan Reynoso</a></li>
+  <li><a href="https://github.com/walliuswilliam" target="_blank">William Wallius</a></li>
+  <li><a href="https://github.com/charliebrown364" target="_blank">Charlie Weinberger</a></li>
   </ol></font>
 </div>
 
