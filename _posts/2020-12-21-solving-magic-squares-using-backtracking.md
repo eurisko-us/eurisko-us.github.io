@@ -47,14 +47,14 @@ $\begin{align*}
 
 It may seem like a $3 \times 3$ magic square can have multiple solutions. But looking closer allows us to see that the two matrices above are actually both the same configuration. The second matrix is just the first matrix rotated $180$ degrees. In general, rotating and flipping a magic square in any direction will still yield a valid magic square.
 
-<h3>Solving a Magic Square Using Brute Force</h3>
+<h2>Solving a Magic Square Using Brute Force</h2>
 
 How can we build a program to construct one of these magic squares?
 
 Just like every problem, the simplest way to solve a magic square is to use brute force. It will be the most inefficient solution we can think of, but it will give us some grounding to see which areas we need to improve it in. To get some code down, we can write something like this:
 
 <font size="3em">
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>():
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>():
     <span style="color: #008800; font-weight: bold">for</span> x1 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
         <span style="color: #008800; font-weight: bold">for</span> x2 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
             <span style="color: #008800; font-weight: bold">for</span> x3 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
@@ -64,8 +64,9 @@ Just like every problem, the simplest way to solve a magic square is to use brut
                             <span style="color: #008800; font-weight: bold">for</span> x7 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
                                 <span style="color: #008800; font-weight: bold">for</span> x8 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
                                     <span style="color: #008800; font-weight: bold">for</span> x9 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
-                                        square <span style="color: #333333">=</span> [[x1, x2, x3], [
-                                            x4, x5, x6], [x7, x8, x9]]
+                                        square <span style="color: #333333">=</span> [[x1, x2, x3],
+                                                  [x4, x5, x6],
+                                                  [x7, x8, x9]]
                                         <span style="color: #008800; font-weight: bold">if</span> is_valid(square, <span style="color: #0000DD; font-weight: bold">15</span>):
                                             <span style="color: #008800; font-weight: bold">return</span> square
 </pre></div>
@@ -92,7 +93,7 @@ To write the <code>is_valid</code> function, we need to check for duplicate valu
 
 Because I want this function to be able to run on squares larger than just $3 \times 3,$ I pass in the constant as $n$. For a $3 \times 3$ square, we would set $n=15.$ For a $4 \times 4$ square, we would set $n=34.$
 
-<h3>Brute Force Takes Forever!</h3>
+<h2>Brute Force Takes Forever!</h2>
 
 Let's talk about timing. We have $9$ nested for loops, and the <code>is_valid</code> operation is in the deepest one. Since each loop is going to run $9$ times to test each number $1-9$ in each element of the square, it's going to run the <code>is_valid</code> function $9^9$ times, which is absolutely insane.
 
@@ -106,9 +107,9 @@ Using Python's <code>timeit</code> module, we can see how long the <code>is_vali
 
 With this brute force algorithm, we can expect that the vast majority of iterations are going to have duplicate values in them. So, I'll be generous and say that each time it runs, $1.6 \, \mu\textrm{s}$ pass. That means the amount of time it takes is $9^9 \times 1.6 \textrm{ usecs} \sim 10.3 \textrm{ minutes}.$
 
-What if we wanted a $4 \times 4$ magic square? Well, we can use the equation again: $16^{16} \times 1.6 \textrm{ usec} \sim \textbf{\emph{600 millennia}}.$ It's very unlikely that the human race will even exist for that long; we might have destroyed the earth along with the computer that was running this algorithm by then. We need to write a more efficient algorithm.
+What if we wanted a $4 \times 4$ magic square? Well, we can use the equation again: $16^{16} \times 1.6 \mu\textrm{s} \sim \textbf{600 millennia}.$ It's very unlikely that the human race will even exist for that long; we might have destroyed the earth along with the computer that was running this algorithm by then. We need to write a more efficient algorithm.
 
-<h3>Backtracking</h3>
+<h2>Backtracking</h2>
 
 The problem with brute force is that it spends too much time looking through solutions that will never work. For example, the algorithm starts out with the square
 
@@ -208,7 +209,7 @@ With this new algorithm, we skip all squares which repeat numbers, which will al
 
 Now, this method speeds up our code, but by how much? Theoretically, it takes $P(10, 9) * 1.6 \mu\textrm{s} \sim 5.8 \mu\textrm{s}$ to just run all the validations. (We introduced a bunch of 'if' statements in between each of the for loops, so it will take a bit longer in reality.) But the point is, our new algorithm works $10,600\%$ faster than the old one!
 
-<h3>Using a While Loop</h3>
+<h2>Using a While Loop</h2>
 
 Still, we have another problem left, and that is the quality of the code. No one wants to have to look at a cascading abyss of for loops and if statements while writing their code, so let's see if we can combine all this into a single while loop.
 
