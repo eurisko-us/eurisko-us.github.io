@@ -111,82 +111,61 @@ First, let's go through the code for the linear regressor. We start by importing
 ```python
 from matrix import Matrix
 from dataframe import DataFrame
-  import math
+import math
 
-  class LinearRegressor:
-      def __init__(self, dataframe, dependent_variable='ratings'):
-          self.dependent_variable = dependent_variable
-          self.independent_variables = [column for column in dataframe.columns if column != dependent_variable]
-          X_dataframe = dataframe.select.columns(self.independent_variables)
-          y_dataframe = dataframe.select_columns([self.dependent_variable])
-          self.X = Matrix(X_dataframe.to_array())
-          self.y = Matrix(X_dataframe.to_array())
-          self.coefficients = {}
+class LinearRegressor:
+    def __init__(self, dataframe, dependent_variable='ratings'):
+        self.dependent_variable = dependent_variable
+        self.independent_variables = [column for column in dataframe.columns if column != dependent_variable]
+        X_dataframe = dataframe.select.columns(self.independent_variables)
+        y_dataframe = dataframe.select_columns([self.dependent_variable])
+        self.X = Matrix(X_dataframe.to_array())
+        self.y = Matrix(X_dataframe.to_array())
+        self.coefficients = {}
  ```
 
---
-     
-    \lstset{frame=tb,
-            language=Python,
-            aboveskip=3mm,
-            belowskip=3mm,
-            showstringspaces=false,
-            columns=flexible,
-            basicstyle={\small\ttfamily},
-            numbers=none,
-            numberstyle=\tiny\color{gray},
-            keywordstyle=\color{blue},
-            stringstyle=\color{brown},
-            breaklines=true,
-        }
-    \begin{lstlisting}[language=Python]
-    	from matrix import Matrix
-    	from dataframe import DataFrame
-        import math
-        
-        class LinearRegressor:
-            def __init__(self, dataframe, dependent_variable='ratings'):
-                self.dependent_variable = dependent_variable
-                self.independent_variables = [column for column in dataframe.columns if column != dependent_variable]
-                X_dataframe = dataframe.select.columns(self.independent_variables)
-                y_dataframe = dataframe.select_columns([self.dependent_variable])
-                self.X = Matrix(X_dataframe.to_array())
-                self.y = Matrix(X_dataframe.to_array())
-                self.coefficients = {}
-    \end{lstlisting}
-    The way we would solve to get the $\vec{\beta}$’s is as follows:
-     \begin{lstlisting}[language=Python]
-        def solve_coefficients(self):
-            beta = (((self.X.transpose() @ self.X).inverse()) @ self.X.transpose()) @ self.y
-            self.set_coefficients(beta)
-    
-        def set_coefficients(self, beta):
-            for i, column_name in enumerate(self.dependent_variables):
-                self.coefficients[column_name] = beta[i]
-    \end{lstlisting}
-    In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\hdots, x_n)=\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n.$ 
-    \begin{lstlisting}[language=Python]
-        def predict(self, input_dict):
-            return self.regression_function(input_dict)
+The way we would solve to get the $\vec{\beta}$’s is as follows:
 
-        def regression_function(self, input_dict):
-            return sum([input_dict[key] * self.coefficients[key] for key in input_dict])
-    \end{lstlisting} 
+```python
+  def solve_coefficients(self):
+      beta = (((self.X.transpose() @ self.X).inverse()) @ self.X.transpose()) @ self.y
+      self.set_coefficients(beta)
+
+  def set_coefficients(self, beta):
+      for i, column_name in enumerate(self.dependent_variables):
+          self.coefficients[column_name] = beta[i]
+ ```
+
+In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\hdots, x_n)=\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n.$ 
+
+```python
+  def predict(self, input_dict):
+      return self.regression_function(input_dict)
+
+  def regression_function(self, input_dict):
+      return sum([input_dict[key] * self.coefficients[key] for key in input_dict])
+```
+
+For the logistic regression, it's the same process but we need to transform the $y$ values:
     
-    For the logistic regression, it's the same process but we need to transform the $y$ values:
-    
-    \begin{lstlisting}[language=Python]
-        class LogisticRegressor(LinearRegressor):
-            def __init__(self, dataframe, dependent_variable='ratings'):
-                super().__init__(dataframe, dependent_variable='ratings')
-                self.y = self.y.apply(lambda y: math.log(1/y - 1))
-    \end{lstlisting}     
+```python
+class LogisticRegressor(LinearRegressor):
+    def __init__(self, dataframe, dependent_variable='ratings'):
+        super().__init__(dataframe, dependent_variable='ratings')
+        self.y = self.y.apply(lambda y: math.log(1/y - 1))
+```
+
 And we use a different regression function:
 
-$$f(x_1,\hdots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}$$
+<center>
+$\begin{align*}
+f(x_1,\hdots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}
+\end{align*}$
+</center>
+<br>
 
-    \begin{lstlisting}[language=Python]
-        def regression_function(self, input_dict):
-            linear_sum = sum([gathered_inputs[key] * coefficients[key] for key in gathered_inputs])
-            return 1 / (1 + math.e ** linear_sum)
-    \end{lstlisting}
+```python
+  def regression_function(self, input_dict):
+      linear_sum = sum([gathered_inputs[key] * coefficients[key] for key in gathered_inputs])
+      return 1 / (1 + math.e ** linear_sum)
+```
