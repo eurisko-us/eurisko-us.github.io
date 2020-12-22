@@ -27,97 +27,97 @@ For this blog post, you have to understand the general idea of fitting a line to
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[]$</center></td>
+    <td><center>[]</center></td>
     <td><center>$1$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``mayo''}]$</center></td>
+    <td><center>['mayo']</center></td>
     <td><center>$1$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``jelly''}]$</center></td>
+    <td><center>['jelly']</center></td>
     <td><center>$4$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
+    <td><center>['mayo', 'jelly']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[]$</center></td>
+    <td><center>[]</center></td>
     <td><center>$4$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``mayo''}]$</center></td>
+    <td><center>['mayo']</center></td>
     <td><center>$8$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``jelly''}]$</center></td>
+    <td><center>['jelly']</center></td>
     <td><center>$1$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
+    <td><center>['mayo', 'jelly']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[]$</center></td>
+    <td><center>[]</center></td>
     <td><center>$5$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``mayo''}]$</center></td>
+    <td><center>['mayo']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``jelly''}]$</center></td>
+    <td><center>['jelly']</center></td>
     <td><center>$9$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
+    <td><center>['mayo', 'jelly']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[]$</center></td>
+    <td><center>[]</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``mayo''}]$</center></td>
+    <td><center>['mayo']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``jelly''}]$</center></td>
+    <td><center>['jelly']</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
+    <td><center>['mayo', 'jelly']</center></td>
     <td><center>$0$</center></td>
   </tr>
 </table>
