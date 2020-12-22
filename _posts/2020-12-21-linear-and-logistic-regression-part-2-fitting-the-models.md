@@ -136,7 +136,7 @@ The way we would solve to get the $\vec{\beta}$’s is as follows:
           self.coefficients[column_name] = beta[i]
  ```
 
-In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\hdots, x_n)=\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n.$ 
+In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n.$ 
 
 ```python
   def predict(self, input_dict):
@@ -159,7 +159,7 @@ And we use a different regression function:
 
 <center>
 $\begin{align*}
-f(x_1,\hdots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}
+f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n}}
 \end{align*}$
 </center>
 <br>
