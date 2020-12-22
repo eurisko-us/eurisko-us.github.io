@@ -16,26 +16,22 @@ This is a blog post exploring how to fit linear and logistic regressions. First,
 Also note that the same procedure can be used to fit a linear or logistic regressor, because the logistic equation can be rearranged to become a linear one.
 
 <center>
-$\begin{center}
-        \begin{tabular}{ c | c }
+$\begin{tabular}{ c | c }
             Linear Function & Logistic Function \\ 
             $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n=y$ & $\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}=y$ \\  
             & $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)$
-        \end{tabular}
-            \end{center}$
+        \end{tabular}$
 </center>
 <br>
         
 Let $y^\prime = y$ for the case of a linear regression, and $y^\prime = \ln\left(\dfrac{1}{y}-1\right)$ for the case of a logistic regression. Then, we need to fit the regression to the following dataset:
 
 <center>
-$\begin{center}
-        \begin{tabular}{ c | c }
+$\begin{tabular}{ c | c }
             Linear Function & Logistic Function \\ 
             $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n=y$ & $\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}=y$ \\  
             & $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)$
-        \end{tabular}
-            \end{center}$
+        \end{tabular}$
 </center>
 <br>
 
