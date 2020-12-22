@@ -16,8 +16,6 @@ For this blog post, you have to understand the general idea of fitting a line to
 
 "Condiments" is a categorical variable because it takes non-numeric values. Each entry is a list of condiments that may include mayo, jelly, both, or neither. In other words, the condiments variable is "categorized" as mayo, jelly, both, or none. An example set of data points is shown below. Each row corresponds to a different sandwich.
 
-<br>
-
 <center>
 <table style="width:80%">
   <tr>
@@ -129,8 +127,6 @@ For this blog post, you have to understand the general idea of fitting a line to
 As you can see here, we have numeric values for beef and peanut butter because the number of slices of beef and tablespoons of peanut butter can vary. But we don't have a number to plug in the condiments variable. Sometimes there is mayo or jelly in the sandwich, or there isn't. That is why they aren't represented by a number but rather by name. 
 
 The way you interpret these categorical variables is true or false, which can be represented numerically as a $1$ or a $0.$ So we merely break down this condiments variable into a mayo variable and a jelly variable, each of which is a $1$ if it appears on the sandwich or a $0$ if it doesn't.
-
-<br>
 
 <center>
 <table style="width:80%">
