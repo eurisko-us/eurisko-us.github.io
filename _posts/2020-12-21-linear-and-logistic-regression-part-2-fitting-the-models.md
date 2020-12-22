@@ -94,7 +94,7 @@ $\begin{align*}
 </center>
 <br>
 
-Now we know the logistic $\beta$'s which are $\beta_0 = 1.567 \ \& \ \beta_1 = 0.278 \ \& \ \beta_2 = -0.640,$ so we plug in a variable $x_1, \ \& \ x_2$ into the equation: 
+Now we know the logistic $\beta$'s which are $\beta_0 = 1.567 \ \& \ \beta_1 = 0.278 \ \& \ \beta_2 = -0.640,$ so we plug in the variables $x_1, \ \& \ x_2$ into the equation: 
 
 <center>
 $\begin{align*}
