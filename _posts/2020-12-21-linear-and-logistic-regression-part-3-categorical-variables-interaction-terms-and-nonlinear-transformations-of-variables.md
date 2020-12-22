@@ -21,7 +21,7 @@ For this blog post, you have to understand the general idea of fitting a line to
 $\begin{align*}
 \begin{tabular}{ |c|c|c|c| } 
     \hline
-    beef & pb & condiments & rating \\ [0.5ex] 
+    beef & pb & condiments & rating \\
     \hline
     0 & 0 & [] & 1\\
     0 & 0 & ['mayo'] & 1  \\
