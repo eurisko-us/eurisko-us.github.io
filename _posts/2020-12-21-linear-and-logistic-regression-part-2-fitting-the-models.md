@@ -110,6 +110,22 @@ Because very little changes from the linear regressor to the logistic regressor,
      
 First, let's go through the code for the linear regressor. We start by importing a Matrix class and a Dataframe class that I had written to help process data. Then, we initialize the linear regressor:
 
+```python
+from matrix import Matrix
+from dataframe import DataFrame
+  import math
+
+  class LinearRegressor:
+      def __init__(self, dataframe, dependent_variable='ratings'):
+          self.dependent_variable = dependent_variable
+          self.independent_variables = [column for column in dataframe.columns if column != dependent_variable]
+          X_dataframe = dataframe.select.columns(self.independent_variables)
+          y_dataframe = dataframe.select_columns([self.dependent_variable])
+          self.X = Matrix(X_dataframe.to_array())
+          self.y = Matrix(X_dataframe.to_array())
+          self.coefficients = {}
+ ```
+
 --
      
     \lstset{frame=tb,
