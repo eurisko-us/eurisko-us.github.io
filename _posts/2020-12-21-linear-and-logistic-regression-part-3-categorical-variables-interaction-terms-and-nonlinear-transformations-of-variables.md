@@ -10,7 +10,7 @@ tags:
 
 This blog post will explore categorical variables, interaction terms, and non-linear transformations variables. All of these topics revolve around linear regression, which is a way of solving for the coefficients of a linear function that best fits a set of data points. If you want to understand how linear regressions work, look at <a class="body" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/" target="_blank">Part 1</a> and <a class="body" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/" target="_blank">Part 2</a>.
 
-<h3>Using Linear and Logistic Regression with Categorical Variables</h3>
+<h2>Using Linear and Logistic Regression with Categorical Variables</h2>
 
 For this blog post, you have to understand the general idea of fitting a line to a data set. However, keep an open mind about what the collection of data can be. It is not always as simple as $(x,y)$ coordinates. For most of this post, we will use the example of solving for the rating of a sandwich that can have some number of slices beef, some number of tablespoons of peanut butter, and some condiments (mayo and jelly).
 
@@ -108,7 +108,7 @@ y = \beta_0+\beta_1(\textrm{beef})+\beta_2(\textrm{pb})+\beta_3(\textrm{beef})(\
 When either beef or peanut butter is $0,$ the interaction term will be $0$ and will not influence the rating. However, if we have beef and peanut butter, the interaction term will be able to bring down the rating by a lot.
 
 
-<h3>Fitting Non-Linear Data with a Linear Regression</h3>
+<h2>Fitting Non-Linear Data with a Linear Regression</h2>
 
 An exciting property of linear regressions is that many non-linear models (such as polynomials) can be fit using linear regression. The trick is to use linear regression to solve for the coefficient of a \emph{function} of $x$ like seen here:
 
