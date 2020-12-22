@@ -71,6 +71,7 @@ Just like every problem, the simplest way to solve a magic square is to use brut
                                             <span style="color: #008800; font-weight: bold">return</span> square
 </pre></div>
 </font>
+<br>
 
 The classic $9$-nested-for-loop approach. It is quite inefficient, but it will do the job. Each $x_k$ variable represents a space in the square. There are 9 spaces, so we nest $9$ loops, $1$ for each space. Each loop will loop through all the possible numbers in that space, $1$ through $9.$ 
 
@@ -90,6 +91,7 @@ To write the <code>is_valid</code> function, we need to check for duplicate valu
     <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">all</span>(<span style="color: #007020">sum</span>(arr) <span style="color: #333333">==</span> n <span style="color: #008800; font-weight: bold">for</span> arr <span style="color: #000000; font-weight: bold">in</span> arrs <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">None</span> <span style="color: #000000; font-weight: bold">not</span> <span style="color: #000000; font-weight: bold">in</span> r)
 </pre></div>
 </font>
+<br>
 
 Because I want this function to be able to run on squares larger than just $3 \times 3,$ I pass in the constant as $n$. For a $3 \times 3$ square, we would set $n=15.$ For a $4 \times 4$ square, we would set $n=34.$
 
@@ -202,6 +204,7 @@ To implement backtracking, we'll start by skipping over configurations with dupl
                                             <span style="color: #008800; font-weight: bold">return</span> square
 </pre></div>
 </font>
+<br>
 
 Once we run this code, we notice a massive improvement in performance! Within only a couple of seconds, our algorithm actually finds multiple squares.
 
@@ -221,6 +224,7 @@ If you think about it, we can treat the square as a list of numbers instead of a
     <span style="color: #008800; font-weight: bold">return</span> [arr[i:i<span style="color: #333333">+</span>side_length] <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">0</span>, <span style="color: #007020">len</span>(arr), side_length)]
 </pre></div>
 </font>
+<br>
 
 Now, let's think of how we can structure the while loop. We want the loop to keep going until both the value None is nowhere to be found in the list, and the square is valid. We can use the 'or' operator to run the loop if None is in the square, or the square isn't valid, like this:
 
@@ -234,6 +238,7 @@ Now, let's think of how we can structure the while loop. We want the loop to kee
     <span style="color: #008800; font-weight: bold">return</span> arr_to_square(square)
 </pre></div>
 </font>
+<br>
 
 You'll notice I use the function <code>get_magic_const</code>, which computes the magic constant, like this:
 
@@ -242,6 +247,7 @@ You'll notice I use the function <code>get_magic_const</code>, which computes th
     <span style="color: #008800; font-weight: bold">return</span> side_length<span style="color: #333333">*</span>(side_length<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span><span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>)<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>
 </pre></div>
 </font>
+<br>
 
 We will need a variable to store the index of the element we want to modify. So, let's set <code>index</code> to $0$ at the beginning. Now, we want to add $1$ to the value at <code>index</code> so we can keep searching through for the correct square. We start out with $9$ <code>None</code> values in the list, so if the value is <code>None</code>, we should just set it to $1$ instead of adding $1.$ However, setting the value to $0$ if <code>None</code> before adding $1$ will save us an extra line of code.
 
@@ -254,6 +260,7 @@ We will need a variable to store the index of the element we want to modify. So,
     <span style="color: #888888"># ...</span>
 </pre></div>
 </font>
+<br>
 
 Next, we want to check if the index has any duplicates in the list. If it does, we should keep incrementing the current element, and we can do that by just continuing to the next iteration.
 
@@ -262,6 +269,7 @@ Next, we want to check if the index has any duplicates in the list. If it does, 
     <span style="color: #008800; font-weight: bold">continue</span>
 </pre></div>
 </font>
+<br>
 
 Another constraint we have is how large the element can be. Each magic square has to have $1$ of each number from $1$ to its length, so we check if the current element is within that range. If it is out of that range, we know we can't increase the number any further, because that will also be out of range, and we also know we can't go to the next index, because we still will have an out-of-range number. This is a good opportunity for backtracking, so we can just set the current element back to None and subtract $1$ from the index, like this:
 
@@ -272,6 +280,7 @@ Another constraint we have is how large the element can be. Each magic square ha
     <span style="color: #008800; font-weight: bold">continue</span>
 </pre></div>
 </font>
+<br>
 
 Lastly, if the square does actually turn out to be valid, we should add $1$ to the <code>index</code>.
 
@@ -280,6 +289,7 @@ Lastly, if the square does actually turn out to be valid, we should add $1$ to t
     current_index <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
 </pre></div>
 </font>
+<br>
 
 Now, we can combine all these sections of code into a single grand function, like so:
 
@@ -303,5 +313,6 @@ Now, we can combine all these sections of code into a single grand function, lik
     <span style="color: #008800; font-weight: bold">return</span> arr_to_square(square)
 </pre></div>
 </font>
+<br>
 
 At long last, we can run the function! It goes through about $5,000$ iterations before returning the square we want, which is about $1,000$ times faster better than the $3,000,000$ iterations when we were just skipping configurations with repeat numbers, and about $80,000$ times faster than $9^9$ iterations needed for pure brute-force. We can even solve for $4 \times 4$ magic squares fairly quickly, in about 4204 seconds. It isn't the absolute most efficient possible, but at least it finishes before the human race does!
