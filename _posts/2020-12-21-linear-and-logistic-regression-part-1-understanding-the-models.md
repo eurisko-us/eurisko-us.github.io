@@ -8,7 +8,7 @@ tags:
   - Autonomous Agents
 ---
 
-Regression is when you measure specific data points, and fit a function to the trend. This can be used to establish connections between known variables and uncertainties, like the probability of a heart attack occurring via known traits. Another example could be determining the perfect amount of something, like the perfect amount of toppings on a pizza. You can relate the amount of toppings with customer satisfaction and determine an average amount of toppings that would lead to best reviews from customers.
+Regression is when you measure specific data points and fit a function to the trend. This can be used to establish connections between known variables and uncertainties, like the probability of a heart attack occurring via known traits. Another example could be determining the perfect amount of something, like the perfect amount of toppings on a pizza. You can relate the amount of toppings with customer satisfaction and determine an average amount of toppings that would lead to best reviews from customers.
 
 There are two main types of regression I'm going to talk about, linear and logistic. Linear regression comes in the form of a straight line:
 
@@ -62,7 +62,7 @@ For example, say we want to model the population of a species in a new environme
 
 Linear regression, on the other hand, doesn't have bounds and is used to model different scenarios. Say you're modeling experience with a game versus how many points you can score. The more you practice, the better you get, and the more points you can score. You could also use linear regression to model the yield of crops depending on how much water or fertilizer you use.\newline
 
-<h2>More on Logistic Regression<h2>
+<h2>More on Logistic Regression</h2>
 
 Logistic regression is also perfect for determining probabilities. The reason you can use it to predict probabilities is due to its limits. Probability must be between $0\%$ and $100\%.$ A specific example of this is the weather. You can determine the chance of rain or sunshine using past weather patterns. Linear regression can't model probabilities because there are no limits. There isn't a $200\%$ of something happening.\newline
 
