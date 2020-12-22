@@ -57,11 +57,11 @@ For example, if we began working out the deer-wolf model with a step size of $\D
 
 <center>
 $\begin{align*}
-    D(0.1) & =D(0)+D ^\prime (0) \cdot (0.1)\\
-    &=100-10 \cdot (0.1)\\
+    D(0.1) & =D(0)+D ^\prime (0) * 0.1\\
+    &=100-10 * 0.1\\
     &=99 \\ \\
-    W(0.1)&=W(0)+W ^\prime (0) \cdot (0.1)\\
-    &=10+11 \cdot (0.1)\\
+    W(0.1)&=W(0)+W ^\prime (0) * 0.1\\
+    &=10+11 * 0.1\\
     &=11.1
 \end{align*}$
 </center>
