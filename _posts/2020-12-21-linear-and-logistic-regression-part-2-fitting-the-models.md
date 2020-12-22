@@ -148,6 +148,7 @@ The way we would solve to get the $\vec{\beta}$’s is as follows:
           <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[column_name] <span style="color: #333333">=</span> beta[i]
 </pre></div>
 </font>
+<br>
 
 In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n.$ 
 
@@ -159,6 +160,7 @@ In order to find the actual prediction that the regression with the $\beta$’s,
       <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">sum</span>([input_dict[key] <span style="color: #333333">*</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> input_dict])
 </pre></div>
   </font>
+  <br>
 
 For the logistic regression, it's the same process but we need to transform the $y$ values:
     
@@ -168,8 +170,8 @@ For the logistic regression, it's the same process but we need to transform the 
         <span style="color: #007020">super</span>()<span style="color: #333333">.</span>__init__(dataframe, dependent_variable<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;ratings&#39;</span>)
         <span style="color: #007020">self</span><span style="color: #333333">.</span>y <span style="color: #333333">=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>y<span style="color: #333333">.</span>apply(<span style="color: #008800; font-weight: bold">lambda</span> y: math<span style="color: #333333">.</span>log(<span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">/</span>y <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>))
 </pre></div>
-
   </font>
+  <br>
 
 And we use a different regression function:
 
@@ -186,3 +188,4 @@ f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n
       <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> math<span style="color: #333333">.</span>e <span style="color: #333333">**</span> linear_sum)
 </pre></div>
 </font>
+<br>
