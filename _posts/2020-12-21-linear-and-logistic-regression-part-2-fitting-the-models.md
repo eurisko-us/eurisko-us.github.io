@@ -64,7 +64,16 @@ $\begin{align*}
 
 This way of finding $\vec{\beta}$ involves using the pseudoinverse, $\left( \mathbf{X}^T \mathbf{X} \right)^{-1} \mathbf{X}^T.$ A matrix is not invertible unless it is square and we cannot guarantee this for $\mathbf{X},$ so we must take the pseudoinverse. By multiplying a $\mathbf{X}$ by its transpose, we can ensure that the result is square, and therefore, we can compute the inverse. Using the pseudoinverse minimizes the sum of squared error between the desired output  $\vec{y}$ and the actual output  $\mathbf{X}\vec{\beta}.$
     
-For example, let's fit a logistic regression to a medical data set $[(0, 0, 0.1), (1, 0, 0.2), (0, 2, 0.5), (4,5,0.6)]$ which takes the form
+For example, let's fit a logistic regression to a medical data set
+
+<center>
+$\begin{align*}
+[(0, 0, 0.1), (1, 0, 0.2), (0, 2, 0.5), (4,5,0.6)]
+\end{align*}$
+</center>
+<br>
+
+which takes the form
 
 <center>
 $\begin{align*}
