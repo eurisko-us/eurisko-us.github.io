@@ -291,7 +291,7 @@ Lastly, if the square does actually turn out to be valid, we should add $1$ to t
 </font>
 <br>
 
-Now, we can combine all these sections of code into a single grand function, like so:
+Now, we can combine all these sections of code into a single grand function, like so: 
 
 <font size="3em">
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>(size):
