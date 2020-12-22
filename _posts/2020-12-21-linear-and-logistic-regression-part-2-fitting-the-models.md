@@ -45,7 +45,7 @@ So, we need to solve the matrix equation
 
 <center>
 $\begin{align*}
-\begin{matrix} 1 & x_{11} & x_{12} & \ldots & x_{1n} \\ 1 & x_{21} & x_{22} & \ldots & x_{2n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_{m1} & x_{m2} & \ldots & x_{mn} \end{pmatrix} \begin{pmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_m \end{pmatrix} &\approx \begin{pmatrix} y_1^\prime \\ y_2^\prime \\ \vdots \\ y_m^\prime \end{pmatrix}.
+\begin{pmatrix} 1 & x_{11} & x_{12} & \ldots & x_{1n} \\ 1 & x_{21} & x_{22} & \ldots & x_{2n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_{m1} & x_{m2} & \ldots & x_{mn} \end{pmatrix} \begin{pmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_m \end{pmatrix} &\approx \begin{pmatrix} y_1^\prime \\ y_2^\prime \\ \vdots \\ y_m^\prime \end{pmatrix}.
 \end{align*}$
 </center>
 <br>
