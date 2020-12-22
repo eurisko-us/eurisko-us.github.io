@@ -22,10 +22,10 @@ Also note that the same procedure can be used to fit a linear or logistic regres
     <td width="50%"><b><center>Logistic Function</center></b></td>
   </tr>
   <tr>
-   <td>$\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n=y$</td>
+   <td>$\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n=y$</td>
    <td>$\begin{align*}
-\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n}}&=y \\
-  \beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n &= \ln\left(\dfrac{1}{y}-1\right)
+\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n}}&=y \\
+  \beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n &= \ln\left(\dfrac{1}{y}-1\right)
 \end{align*}$</td>
   </tr>
 </table>
@@ -98,7 +98,7 @@ Now we know the logistic $\beta$'s which are $\beta_0 = 1.567 \ \& \ \beta_1 = 0
 
 <center>
 $\begin{align*}
-     f(x_1,x_2) &=\dfrac{1}{1 + e ^ {\beta_0 + \beta_1 \cdot x_1 + \beta_2 \cdot x_2}} \\
+     f(x_1,x_2) &=\dfrac{1}{1 + e ^ {\beta_0 + \beta_1  x_1 + \beta_2  x_2}} \\
      &=\dfrac{1}{1 + e ^ {1.567 + 0.278 x_1 -0.640 x_2}}
 \end{align*}$
 </center>
@@ -136,7 +136,7 @@ The way we would solve to get the $\vec{\beta}$’s is as follows:
           self.coefficients[column_name] = beta[i]
  ```
 
-In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n.$ 
+In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n.$ 
 
 ```python
   def predict(self, input_dict):
@@ -159,7 +159,7 @@ And we use a different regression function:
 
 <center>
 $\begin{align*}
-f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n}}
+f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n}}
 \end{align*}$
 </center>
 <br>
