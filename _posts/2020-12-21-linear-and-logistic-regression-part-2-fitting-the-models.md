@@ -22,11 +22,11 @@ Also note that the same procedure can be used to fit a linear or logistic regres
     <td width="50%"><b><center>Logistic Function</center></b></td>
   </tr>
   <tr>
-   <td>$\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n=y$</td>
-   <td>$\begin{align*}
+    <td><center>$\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n=y$</center></td>
+   <td><center>$\begin{align*}
 \dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n}}&=y \\
   \beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n &= \ln\left(\dfrac{1}{y}-1\right)
-\end{align*}$</td>
+     \end{align*}$</center></td>
   </tr>
 </table>
 </center>
