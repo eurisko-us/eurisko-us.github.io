@@ -1,5 +1,5 @@
 ---
-title: "Solving Magic Squares using Backtracking"
+title: "Solving Magic Squares Using Backtracking"
 author: "Elijah Tarr"
 reviewers:
   - "Colby Roberts"
