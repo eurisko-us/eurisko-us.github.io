@@ -139,13 +139,13 @@ First, let's go through the code for the linear regressor. We start by importing
 The way we would solve to get the $\vec{\beta}$’s is as follows:
 
 <font size="3em">
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">solve_coefficients</span>(<span style="color: #007020">self</span>):
-      beta <span style="color: #333333">=</span> (((<span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose() <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X)<span style="color: #333333">.</span>inverse()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>y
-      <span style="color: #007020">self</span><span style="color: #333333">.</span>set_coefficients(beta)
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">solve_coefficients</span>(<span style="color: #007020">self</span>):
+        beta <span style="color: #333333">=</span> (((<span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose() <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X)<span style="color: #333333">.</span>inverse()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>y
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>set_coefficients(beta)
 
-  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">set_coefficients</span>(<span style="color: #007020">self</span>, beta):
-      <span style="color: #008800; font-weight: bold">for</span> i, column_name <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>dependent_variables):
-          <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[column_name] <span style="color: #333333">=</span> beta[i]
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">set_coefficients</span>(<span style="color: #007020">self</span>, beta):
+        <span style="color: #008800; font-weight: bold">for</span> i, column_name <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>dependent_variables):
+            <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[column_name] <span style="color: #333333">=</span> beta[i]
 </pre></div>
 </font>
 <br>
@@ -153,11 +153,11 @@ The way we would solve to get the $\vec{\beta}$’s is as follows:
 In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n.$ 
 
 <font size="3em">
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">predict</span>(<span style="color: #007020">self</span>, input_dict):
-      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>regression_function(input_dict)
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">predict</span>(<span style="color: #007020">self</span>, input_dict):
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>regression_function(input_dict)
 
-  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
-      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">sum</span>([input_dict[key] <span style="color: #333333">*</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> input_dict])
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">sum</span>([input_dict[key] <span style="color: #333333">*</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> input_dict])
 </pre></div>
   </font>
   <br>
@@ -183,9 +183,9 @@ f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n
 <br>
 
 <font size="3em">
- <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
-      linear_sum <span style="color: #333333">=</span> <span style="color: #007020">sum</span>([gathered_inputs[key] <span style="color: #333333">*</span> coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> gathered_inputs])
-      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> math<span style="color: #333333">.</span>e <span style="color: #333333">**</span> linear_sum)
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
+        linear_sum <span style="color: #333333">=</span> <span style="color: #007020">sum</span>([gathered_inputs[key] <span style="color: #333333">*</span> coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> gathered_inputs])
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> math<span style="color: #333333">.</span>e <span style="color: #333333">**</span> linear_sum)
 </pre></div>
 </font>
 <br>
