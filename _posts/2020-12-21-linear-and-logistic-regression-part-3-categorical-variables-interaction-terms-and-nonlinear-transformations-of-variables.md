@@ -16,32 +16,111 @@ For this blog post, you have to understand the general idea of fitting a line to
 
 "Condiments" is a categorical variable because it takes non-numeric values. Each entry is a list of condiments that may include mayo, jelly, both, or neither. In other words, the condiments variable is "categorized" as mayo, jelly, both, or none. An example set of data points is shown below. Each row corresponds to a different sandwich.
 
-
 <center>
-$\begin{align*}
-\begin{tabular}{ |c|c|c|c| } 
-    \hline
-    beef & pb & condiments & rating \\
-    \hline
-    0 & 0 & [] & 1\\
-    0 & 0 & ['mayo'] & 1  \\
-    0 & 0 & ['jelly'] & 4\\
-    0 & 0 & ['mayo','jelly']&0 \\
-    5 & 0 & []&4 \\
-    5 & 0 & ['mayo']&8 \\
-    5 & 0 & ['jelly']&1 \\
-    5 & 0 & ['mayo','jelly'] &0\\
-    0 & 5 & []&5  \\
-    0 & 5 & ['mayo'] &0 \\
-    0 & 5 & ['jelly'] &9 \\
-    0 & 5 & ['mayo','jelly'] &0 \\
-    5 & 5 & []&0  \\
-    5 & 5 & ['mayo'] &0 \\
-    5 & 5 & ['jelly'] &0 \\
-    5 & 5 & ['mayo','jelly'] &0 \\
-    \hline
-\end{tabular}
-\end{align*}$
+<table style="width:80%">
+  <tr>
+    <td width="25%"><b><center>beef</center></b></td>
+    <td width="25%"><b><center>pb</center></b></td>
+        <td width="25%"><b><center>condiments</center></b></td>
+        <td width="25%"><b><center>rating</center></b></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[]$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'mayo'}]$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'jelly'}]$</center></td>
+    <td><center>$4$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'mayo'}, \textrm{'jelly'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[]$</center></td>
+    <td><center>$4$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'mayo'}]$</center></td>
+    <td><center>$8$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'jelly'}]$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$[\textrm{'mayo'}, \textrm{'jelly'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[]$</center></td>
+    <td><center>$5$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'mayo'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'jelly'}]$</center></td>
+    <td><center>$9$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'mayo'}, \textrm{'jelly'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'mayo'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'jelly'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$[\textrm{'mayo'}, \textrm{'jelly'}]$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+</table>
 </center>
 <br>
 
