@@ -129,30 +129,127 @@ As you can see here, we have numeric values for beef and peanut butter because t
 The way you interpret these categorical variables is true or false, which can be represented numerically as a $1$ or a $0.$ So we merely break down this condiments variable into a mayo variable and a jelly variable, each of which is a $1$ if it appears on the sandwich or a $0$ if it doesn't.
 
 <center>
-$\begin{align*}
-\begin{tabular}{ |c|c|c|c|c| } 
-    \hline
-    beef & pb & mayo & jelly & rating \\ [0.5ex] 
-    \hline
-    0 & 0 & 0 & 0 &1\\
-    0 & 0 & 1 & 0 &1 \\
-    0 & 0 & 0 & 1 &4\\
-    0 & 0 & 1 & 1 &0\\
-    5 & 0 & 0 & 0 &4\\
-    5 & 0 & 1 & 0 &8\\
-    5 & 0 & 0 & 1 &1\\
-    5 & 0 & 1 & 1 &0\\
-    0 & 5 & 0 & 0 &5 \\
-    0 & 5 & 1 & 0 &0 \\
-    0 & 5 & 0 & 1 &9 \\
-    0 & 5 & 1 & 1  &0\\
-    5 & 5 & 0 & 0  &0\\
-    5 & 5 & 1 & 0  &0\\
-    5 & 5 & 0 & 1  &0\\
-    5 & 5 & 1 & 1  &0\\
-    \hline
-\end{tabular}
-\end{align*}$
+<table style="width:80%">
+  <tr>
+    <td width="20%"><b><center>beef</center></b></td>
+    <td width="20%"><b><center>pb</center></b></td>
+        <td width="20%"><b><center>mayo</center></b></td>
+    <td width="20%"><b><center>jelly</center></b></td>
+        <td width="20%"><b><center>rating</center></b></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$4$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$4$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$8$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$1$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$9$</center></td>
+  </tr>
+  <tr>
+    <td><center>$0$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$0$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+  <tr>
+    <td><center>$5$</center></td>
+    <td><center>$5$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$1$</center></td>
+    <td><center>$0$</center></td>
+  </tr>
+</table>
 </center>
 <br>
 
