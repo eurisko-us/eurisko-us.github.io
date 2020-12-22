@@ -35,7 +35,7 @@ Let $y^\prime = y$ for the case of a linear regression, and $y^\prime = \ln\left
 
 <center>
 $\begin{align*}
-\begin{pmatrix} (x_1_1, & x_1_2, & \ldots & x_1_n, & y_1^\prime) \\ (x_2_1, & x_2_2, & \ldots & x_2_n, & y_2^\prime) \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ (x_m_1, & x_m_2, & \ldots & x_m_n, & y_m^\prime) \end{pmatrix}
+\begin{pmatrix} (x_{11}, & x_{12}, & \ldots & x_{1n}, & y_1^\prime) \\ (x_{21}, & x_{22}, & \ldots & x_{2n}, & y_2^\prime) \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ (x_{m1}, & x_{m2}, & \ldots & x_{mn}, & y_m^\prime) \end{pmatrix}
 \end{align*}$
 </center>
 <br>
