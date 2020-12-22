@@ -5,7 +5,6 @@ reviewers:
   - "David Gieselman"
 tags:
   - Machine Learning
-  - Autonomous Agents
 ---
 
 Regression is when you measure specific data points and fit a function to the trend. This can be used to establish connections between known variables and uncertainties, like the probability of a heart attack occurring via known traits. Another example could be determining the perfect amount of something, like the perfect amount of toppings on a pizza. You can relate the amount of toppings with customer satisfaction and determine an average amount of toppings that would lead to best reviews from customers.
