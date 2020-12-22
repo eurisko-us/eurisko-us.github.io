@@ -172,7 +172,7 @@ $\begin{align*}
 To implement backtracking, we'll start by skipping over configurations with duplicates. In each for loop, before entering the next loop, we will check if the number has been duplicated anywhere. We will only check the rest of the square if the number isn’t duplicated. Implementing this, we end up with the following code:
 
 <font size="3em">
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>()
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>()
     <span style="color: #008800; font-weight: bold">for</span> x1 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
         <span style="color: #008800; font-weight: bold">for</span> x2 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
             <span style="color: #008800; font-weight: bold">if</span> x2 <span style="color: #000000; font-weight: bold">in</span> [x1]:
@@ -198,8 +198,9 @@ To implement backtracking, we'll start by skipping over configurations with dupl
                                     <span style="color: #008800; font-weight: bold">for</span> x9 <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">1</span>, <span style="color: #0000DD; font-weight: bold">10</span>):
                                         <span style="color: #008800; font-weight: bold">if</span> x9 <span style="color: #000000; font-weight: bold">in</span> [x1, x2, x3, x4, x5, x6, x7, x8]:
                                             <span style="color: #008800; font-weight: bold">continue</span>
-                                        square <span style="color: #333333">=</span> [[x1, x2, x3], [
-                                            x4, x5, x6], [x7, x8, x9]]
+                                        square <span style="color: #333333">=</span> [[x1, x2, x3],
+                                                  [x4, x5, x6],
+                                                  [x7, x8, x9]]
                                         <span style="color: #008800; font-weight: bold">if</span> is_valid(square, <span style="color: #0000DD; font-weight: bold">15</span>):
                                             <span style="color: #008800; font-weight: bold">return</span> square
 </pre></div>
