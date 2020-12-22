@@ -33,19 +33,19 @@ For this blog post, you have to understand the general idea of fitting a line to
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}]$</center></td>
     <td><center>$1$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``jelly''}]$</center></td>
     <td><center>$4$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}, \textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
@@ -57,19 +57,19 @@ For this blog post, you have to understand the general idea of fitting a line to
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}]$</center></td>
     <td><center>$8$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``jelly''}]$</center></td>
     <td><center>$1$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$0$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}, \textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
@@ -81,19 +81,19 @@ For this blog post, you have to understand the general idea of fitting a line to
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``jelly''}]$</center></td>
     <td><center>$9$</center></td>
   </tr>
   <tr>
     <td><center>$0$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}, \textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
@@ -105,19 +105,19 @@ For this blog post, you have to understand the general idea of fitting a line to
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``jelly''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
   <tr>
     <td><center>$5$</center></td>
     <td><center>$5$</center></td>
-    <td><center>$[\textrm{\lq mayo\rq}, \textrm{\lq jelly\rq}]$</center></td>
+    <td><center>$[\textrm{``mayo''}, \textrm{``jelly''}]$</center></td>
     <td><center>$0$</center></td>
   </tr>
 </table>
@@ -344,4 +344,4 @@ $\begin{align*}
 </center>
 <br>
 
-which fits in our category of $\beta \cdot f(x).$ 
+which fits in our category of $\beta \cdot f(x).$
