@@ -118,6 +118,23 @@ Because very little changes from the linear regressor to the logistic regressor,
      
 First, let's go through the code for the linear regressor. We start by importing a Matrix class and a Dataframe class that I had written to help process data. Then, we initialize the linear regressor:
 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">matrix</span> <span style="color: #008800; font-weight: bold">import</span> Matrix
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">dataframe</span> <span style="color: #008800; font-weight: bold">import</span> DataFrame
+<span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">math</span>
+
+<span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">LinearRegressor</span>:
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>, dataframe, dependent_variable<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;ratings&#39;</span>):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>dependent_variable <span style="color: #333333">=</span> dependent_variable
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>independent_variables <span style="color: #333333">=</span> [column <span style="color: #008800; font-weight: bold">for</span> column <span style="color: #000000; font-weight: bold">in</span> dataframe<span style="color: #333333">.</span>columns <span style="color: #008800; font-weight: bold">if</span> column <span style="color: #333333">!=</span> dependent_variable]
+        X_dataframe <span style="color: #333333">=</span> dataframe<span style="color: #333333">.</span>select<span style="color: #333333">.</span>columns(<span style="color: #007020">self</span><span style="color: #333333">.</span>independent_variables)
+        y_dataframe <span style="color: #333333">=</span> dataframe<span style="color: #333333">.</span>select_columns([<span style="color: #007020">self</span><span style="color: #333333">.</span>dependent_variable])
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>X <span style="color: #333333">=</span> Matrix(X_dataframe<span style="color: #333333">.</span>to_array())
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>y <span style="color: #333333">=</span> Matrix(X_dataframe<span style="color: #333333">.</span>to_array())
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients <span style="color: #333333">=</span> {}
+</pre></div>
+
+<br>
+
 ```python
 from matrix import Matrix
 from dataframe import DataFrame
