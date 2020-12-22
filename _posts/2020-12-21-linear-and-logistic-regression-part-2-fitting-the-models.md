@@ -25,7 +25,7 @@ Also note that the same procedure can be used to fit a linear or logistic regres
    <td>$\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n=y$</td>
    <td>$\begin{align*}
 \dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n}}&=y \\
-  \beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)
+  \beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n &= \ln\left(\dfrac{1}{y}-1\right)
 \end{align*}$</td>
   </tr>
 </table>
