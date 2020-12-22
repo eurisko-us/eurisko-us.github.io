@@ -23,21 +23,15 @@ Also note that the same procedure can be used to fit a linear or logistic regres
   </tr>
   <tr>
    <td>$\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n=y$</td>
-   <td>$\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}=y$<br>$\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)$</td>
+   <td>$\begin{align*}
+\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n}}&=y \\
+  \beta_0 + \beta_1 \cdot x_1 + \ldots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)
+\end{align*}$</td>
   </tr>
 </table>
 </center>
         
 Let $y^\prime = y$ for the case of a linear regression, and $y^\prime = \ln\left(\dfrac{1}{y}-1\right)$ for the case of a logistic regression. Then, we need to fit the regression to the following dataset:
-
-<center>
-$\begin{tabular}{ c | c }
-            Linear Function & Logistic Function \\ 
-            $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n=y$ & $\dfrac{1}{1+e^{\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n}}=y$ \\  
-            & $\beta_0 + \beta_1 \cdot x_1 + \hdots + \beta_n \cdot x_n = \ln\left(\dfrac{1}{y}-1\right)$
-        \end{tabular}$
-</center>
-<br>
 
 <center>
 $\begin{align*}
