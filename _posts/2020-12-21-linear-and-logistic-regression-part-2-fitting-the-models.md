@@ -36,7 +36,7 @@ Let $y^\prime = y$ for the case of a linear regression, and $y^\prime = \ln\left
 
 <center>
 $\begin{align*}
-\begin{pmatrix} (x_{11}, & x_{12}, & \ldots & x_{1n}, & y_1^\prime) \\ (x_{21}, & x_{22}, & \ldots & x_{2n}, & y_2^\prime) \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ (x_{m1}, & x_{m2}, & \ldots & x_{mn}, & y_m^\prime) \end{pmatrix}
+\left\{ \begin{matrix} (x_{11}, & x_{12}, & \ldots & x_{1n}, & y_1^\prime) \\ (x_{21}, & x_{22}, & \ldots & x_{2n}, & y_2^\prime) \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ (x_{m1}, & x_{m2}, & \ldots & x_{mn}, & y_m^\prime) \end{matrix} \right\}
 \end{align*}$
 </center>
 <br>
@@ -45,7 +45,7 @@ So, we need to solve the matrix equation
 
 <center>
 $\begin{align*}
-\begin{pmatrix} 1 & x_1_1 & x_1_2 & \ldots & x_1_n \\ 1 & x_2_1 & x_2_2 & \ldots & x_2_n \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_m_1 & x_m_2 & \ldots & x_m_n \end{pmatrix} \begin{pmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_m \end{pmatrix} &\approx \begin{pmatrix} y_1^\prime \\ y_2^\prime \\ \vdots \\ y_m^\prime \end{pmatrix}.
+\begin{matrix} 1 & x_{11} & x_{12} & \ldots & x_{1n} \\ 1 & x_{21} & x_{22} & \ldots & x_{2n} \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_{m1} & x_{m2} & \ldots & x_{mn} \end{pmatrix} \begin{pmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_m \end{pmatrix} &\approx \begin{pmatrix} y_1^\prime \\ y_2^\prime \\ \vdots \\ y_m^\prime \end{pmatrix}.
 \end{align*}$
 </center>
 <br>
