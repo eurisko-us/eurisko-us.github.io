@@ -134,55 +134,42 @@ First, let's go through the code for the linear regressor. We start by importing
         <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients <span style="color: #333333">=</span> {}
 </pre></div>
 </font>
-
 <br>
-
-```python
-from matrix import Matrix
-from dataframe import DataFrame
-import math
-
-class LinearRegressor:
-    def __init__(self, dataframe, dependent_variable='ratings'):
-        self.dependent_variable = dependent_variable
-        self.independent_variables = [column for column in dataframe.columns if column != dependent_variable]
-        X_dataframe = dataframe.select.columns(self.independent_variables)
-        y_dataframe = dataframe.select_columns([self.dependent_variable])
-        self.X = Matrix(X_dataframe.to_array())
-        self.y = Matrix(X_dataframe.to_array())
-        self.coefficients = {}
- ```
 
 The way we would solve to get the $\vec{\beta}$’s is as follows:
 
-```python
-  def solve_coefficients(self):
-      beta = (((self.X.transpose() @ self.X).inverse()) @ self.X.transpose()) @ self.y
-      self.set_coefficients(beta)
+<font size="3em">
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">solve_coefficients</span>(<span style="color: #007020">self</span>):
+      beta <span style="color: #333333">=</span> (((<span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose() <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X)<span style="color: #333333">.</span>inverse()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>X<span style="color: #333333">.</span>transpose()) <span style="color: #FF0000; background-color: #FFAAAA">@</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>y
+      <span style="color: #007020">self</span><span style="color: #333333">.</span>set_coefficients(beta)
 
-  def set_coefficients(self, beta):
-      for i, column_name in enumerate(self.dependent_variables):
-          self.coefficients[column_name] = beta[i]
- ```
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">set_coefficients</span>(<span style="color: #007020">self</span>, beta):
+      <span style="color: #008800; font-weight: bold">for</span> i, column_name <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">enumerate</span>(<span style="color: #007020">self</span><span style="color: #333333">.</span>dependent_variables):
+          <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[column_name] <span style="color: #333333">=</span> beta[i]
+</pre></div>
+</font>
 
 In order to find the actual prediction that the regression with the $\beta$’s, we need to plug the $\beta$'s into the regression function. For the linear regressor, this is just a linear function $f(x_1,\ldots, x_n)=\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n.$ 
 
-```python
-  def predict(self, input_dict):
-      return self.regression_function(input_dict)
+<font size="3em">
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">predict</span>(<span style="color: #007020">self</span>, input_dict):
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>regression_function(input_dict)
 
-  def regression_function(self, input_dict):
-      return sum([input_dict[key] * self.coefficients[key] for key in input_dict])
-```
+  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">sum</span>([input_dict[key] <span style="color: #333333">*</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> input_dict])
+</pre></div>
+  </font>
 
 For the logistic regression, it's the same process but we need to transform the $y$ values:
     
-```python
-class LogisticRegressor(LinearRegressor):
-    def __init__(self, dataframe, dependent_variable='ratings'):
-        super().__init__(dataframe, dependent_variable='ratings')
-        self.y = self.y.apply(lambda y: math.log(1/y - 1))
-```
+<font size="3em">
+  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">LogisticRegressor</span>(LinearRegressor):
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>, dataframe, dependent_variable<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;ratings&#39;</span>):
+        <span style="color: #007020">super</span>()<span style="color: #333333">.</span>__init__(dataframe, dependent_variable<span style="color: #333333">=</span><span style="background-color: #fff0f0">&#39;ratings&#39;</span>)
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>y <span style="color: #333333">=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>y<span style="color: #333333">.</span>apply(<span style="color: #008800; font-weight: bold">lambda</span> y: math<span style="color: #333333">.</span>log(<span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">/</span>y <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>))
+</pre></div>
+
+  </font>
 
 And we use a different regression function:
 
@@ -193,8 +180,9 @@ f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n
 </center>
 <br>
 
-```python
-  def regression_function(self, input_dict):
-      linear_sum = sum([gathered_inputs[key] * coefficients[key] for key in gathered_inputs])
-      return 1 / (1 + math.e ** linear_sum)
-```
+<font size="3em">
+ <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">  <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">regression_function</span>(<span style="color: #007020">self</span>, input_dict):
+      linear_sum <span style="color: #333333">=</span> <span style="color: #007020">sum</span>([gathered_inputs[key] <span style="color: #333333">*</span> coefficients[key] <span style="color: #008800; font-weight: bold">for</span> key <span style="color: #000000; font-weight: bold">in</span> gathered_inputs])
+      <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">/</span> (<span style="color: #0000DD; font-weight: bold">1</span> <span style="color: #333333">+</span> math<span style="color: #333333">.</span>e <span style="color: #333333">**</span> linear_sum)
+</pre></div>
+</font>
