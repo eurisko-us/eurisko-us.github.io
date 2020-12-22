@@ -118,6 +118,7 @@ Because very little changes from the linear regressor to the logistic regressor,
      
 First, let's go through the code for the linear regressor. We start by importing a Matrix class and a Dataframe class that I had written to help process data. Then, we initialize the linear regressor:
 
+<font size="3em">
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">matrix</span> <span style="color: #008800; font-weight: bold">import</span> Matrix
 <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">dataframe</span> <span style="color: #008800; font-weight: bold">import</span> DataFrame
 <span style="color: #008800; font-weight: bold">import</span> <span style="color: #0e84b5; font-weight: bold">math</span>
@@ -132,6 +133,7 @@ First, let's go through the code for the linear regressor. We start by importing
         <span style="color: #007020">self</span><span style="color: #333333">.</span>y <span style="color: #333333">=</span> Matrix(X_dataframe<span style="color: #333333">.</span>to_array())
         <span style="color: #007020">self</span><span style="color: #333333">.</span>coefficients <span style="color: #333333">=</span> {}
 </pre></div>
+</font>
 
 <br>
 
