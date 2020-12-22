@@ -75,10 +75,10 @@ Just like every problem, the simplest way to solve a magic square is to use brut
 
 The classic $9$-nested-for-loop approach. It is quite inefficient, but it will do the job. Each $x_k$ variable represents a space in the square. There are 9 spaces, so we nest $9$ loops, $1$ for each space. Each loop will loop through all the possible numbers in that space, $1$ through $9.$ 
 
-To write the <code>is_valid</code> function, we need to check for duplicate values, which can easily be done with the use of a set. Then we have to check if each row, column, and diagonal adds up to a certain number, so we can just make a list of all those and check if they are equal to 15 at the end.
+To write the <code>is_valid</code> function, we need to check for duplicate values, which can easily be done with the use of a set. Then we have to check if each row, column, and diagonal adds up to a certain number, so we can just make a list of all those and check if they are equal to $15$ at the end.
 
 <font size="3em">
-  <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">is_valid</span>(square, n):
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">is_valid</span>(square, n):
     vals <span style="color: #333333">=</span> [entry <span style="color: #008800; font-weight: bold">for</span> row <span style="color: #000000; font-weight: bold">in</span> square <span style="color: #008800; font-weight: bold">for</span> entry <span style="color: #000000; font-weight: bold">in</span> row <span style="color: #008800; font-weight: bold">if</span> entry <span style="color: #333333">!=</span> <span style="color: #007020">None</span>]
     <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">len</span>(<span style="color: #007020">set</span>(vals)) <span style="color: #333333">&lt;</span> <span style="color: #007020">len</span>(vals): <span style="color: #888888"># check for duplicates</span>
         <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">False</span>
@@ -88,6 +88,7 @@ To write the <code>is_valid</code> function, we need to check for duplicate valu
         <span style="color: #333333">+</span> [<span style="color: #007020">list</span>(arr) <span style="color: #008800; font-weight: bold">for</span> arr <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">zip</span>(<span style="color: #333333">*</span>square)] \ <span style="color: #888888"># columns</span>
         <span style="color: #333333">+</span> [square[i][i] <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #007020">len</span>(square))] <span style="color: #888888"># main diagonal</span>
         <span style="color: #333333">+</span> [square[i][num_rows<span style="color: #333333">-</span>i<span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(num_rows)] <span style="color: #888888"># anti-diagonal</span>
+        
     <span style="color: #008800; font-weight: bold">return</span> <span style="color: #007020">all</span>(<span style="color: #007020">sum</span>(arr) <span style="color: #333333">==</span> n <span style="color: #008800; font-weight: bold">for</span> arr <span style="color: #000000; font-weight: bold">in</span> arrs <span style="color: #008800; font-weight: bold">if</span> <span style="color: #007020">None</span> <span style="color: #000000; font-weight: bold">not</span> <span style="color: #000000; font-weight: bold">in</span> r)
 </pre></div>
 </font>
@@ -227,7 +228,7 @@ If you think about it, we can treat the square as a list of numbers instead of a
 </font>
 <br>
 
-Now, let's think of how we can structure the while loop. We want the loop to keep going until both the value None is nowhere to be found in the list, and the square is valid. We can use the 'or' operator to run the loop if None is in the square, or the square isn't valid, like this:
+Now, let's think of how we can structure the while loop. We want the loop to keep going until both the value None is nowhere to be found in the list, and the square is valid. We can use the <code>or</code> operator to run the loop if <code>None</code> is in the square, or the square isn't valid, like this:
 
 <font size="3em">
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>(size):
@@ -236,6 +237,7 @@ Now, let's think of how we can structure the while loop. We want the loop to kee
     
     <span style="color: #008800; font-weight: bold">while</span> <span style="color: #007020">None</span> <span style="color: #000000; font-weight: bold">in</span> square <span style="color: #000000; font-weight: bold">or</span> <span style="color: #000000; font-weight: bold">not</span> is_valid(arr_to_square(square), n):
         <span style="color: #008800; font-weight: bold">pass</span>
+        
     <span style="color: #008800; font-weight: bold">return</span> arr_to_square(square)
 </pre></div>
 </font>
@@ -298,19 +300,24 @@ Now, we can combine all these sections of code into a single grand function, lik
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">gen_magic_square</span>(size):
     n <span style="color: #333333">=</span> get_magic_const(size)
     square <span style="color: #333333">=</span> [<span style="color: #007020">None</span> <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(size<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">2</span>)]
+
     current_index <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
     <span style="color: #008800; font-weight: bold">while</span> <span style="color: #007020">None</span> <span style="color: #000000; font-weight: bold">in</span> square <span style="color: #000000; font-weight: bold">or</span> <span style="color: #000000; font-weight: bold">not</span> is_valid(arr_to_square(square), n):
         <span style="color: #008800; font-weight: bold">if</span> square[current_index] <span style="color: #333333">==</span> <span style="color: #007020">None</span>:
             square[current_index] <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
         square[current_index] <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+
         <span style="color: #008800; font-weight: bold">if</span> square<span style="color: #333333">.</span>count(square[current_index]) <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">1</span>:
             <span style="color: #008800; font-weight: bold">continue</span>
+
         <span style="color: #008800; font-weight: bold">if</span> square[current_index] <span style="color: #333333">&gt;=</span> <span style="color: #007020">len</span>(square)<span style="color: #333333">+</span><span style="color: #0000DD; font-weight: bold">1</span>:
             square[current_index] <span style="color: #333333">=</span> <span style="color: #007020">None</span>
             current_index <span style="color: #333333">-=</span> <span style="color: #0000DD; font-weight: bold">1</span>
             <span style="color: #008800; font-weight: bold">continue</span>
+
         <span style="color: #008800; font-weight: bold">if</span> is_valid(arr_to_square(square), n):
             current_index <span style="color: #333333">+=</span> <span style="color: #0000DD; font-weight: bold">1</span>
+            
     <span style="color: #008800; font-weight: bold">return</span> arr_to_square(square)
 </pre></div>
 </font>
