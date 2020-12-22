@@ -86,8 +86,8 @@ If we wanted to get to a $t$ of say, $t=100,$ doing this by hand would take hour
 In my Euler estimation code, there is a class EulerEstimator with 2 main methods: 
 
 <ol>
-  <li><code>calculate_derivative_at_point()</code> - finds how much the equation is increasing at a point by plugging it into the differential equation
-  <li><code>step_forward(step_size)</code> - is repeated over and over
+  <li><code>calculate_derivative_at_point()</code> - finds how much the equation is increasing at a point by plugging it into the differential equation</li>
+  <li><code>step_forward(step_size)</code> - is repeated over and over</li>
 </ol>
 
 In the code for <code>step\_forward(step\_size),</code> the derivative is multiplied by the step size and added to each of the $y$ variables.
@@ -102,6 +102,7 @@ new_point <span style="color: #333333">=</span> []
     new_point<span style="color: #333333">.</span>append(point_entry <span style="color: #333333">+</span> step_size <span style="color: #333333">*</span> derivative_entry)
 </pre></div>
 </font>
+<br>
 
 The graph below shows the plot of the Euler estimation of the wolf and deer populations.
 
