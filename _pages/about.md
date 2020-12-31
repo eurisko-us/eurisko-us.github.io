@@ -38,7 +38,7 @@ These students have already learned a large amount of college-level math, includ
 <br><br><b>Where does the name "Eurisko" come from?</b><br>
 
 <font size="3em">
-  "Eurisko" is Greek for "I discover", and is the namesake of an AI system from the 1980s that won a particular game competition twice in a row, even when the rules were changed in attempt to handicap it (<a class="body" target="_blank" href="https://en.wikipedia.org/wiki/Eurisko">read more here</a>). We're all about discovering and applying knowledge.
+  "Eurisko" is Greek for "I discover", and is the namesake of an AI system from the 1980s that won a particular game competition twice in a row, even when the rules were changed in attempt to handicap it (<a class="body" target="_blank" href="https://en.wikipedia.org/wiki/Eurisko">read more here</a>). We're all about discovering and applying knowledge. 
 </font>
 
 
