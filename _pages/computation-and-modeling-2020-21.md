@@ -18,7 +18,7 @@ author_profile: false
   <tr>
     <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Final-1" target="_blank">Final 1</a></center></td>
     <td width="33%"><center>Thursday, December 17</center></td>
-    <td width="33%"><center>[ link to review ]</center></td>
+    <td width="33%"><center><a class="body" href="https://vimeo.com/496684498" target="_blank">link to video</a></center></td>
   </tr>
   <tr>
     <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-6" target="_blank">Quiz 1-6</a></center></td>
