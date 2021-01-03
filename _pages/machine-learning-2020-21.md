@@ -59,7 +59,18 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="74">
+<font size="3em"><ol reversed start="75">
+    <li><b>Monday, January 4</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-1">Random Split Decision Tree</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-2">Final Corrections</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-3">Make sure your strategy classes are formatted correctly</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-74-4">Review / Commit</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, December 14</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/490846464">Class Recording</a> - "blooper reel" kahoot. Unfortunately, audio was not recorded.
         <br>Assignment Problems:
