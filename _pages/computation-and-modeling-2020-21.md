@@ -70,9 +70,9 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/490846464">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-43-1">Primary: Euler Estimator - Plotting Systems</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-43-2">Supplementary: Roulette Probability Selection, Haskell, C++, Bash, SQL, Probability</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-43-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-1">Primary: Euler Estimator - Plotting Systems</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-2">Supplementary: Roulette Probability Selection, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-3">Commit / Review</a></li>
         </ul></font>
     </li>
     <br>
