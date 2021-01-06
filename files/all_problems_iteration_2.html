@@ -13119,6 +13119,152 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Final corrections</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-43-1">Problem 43-1<a class="anchor-link" href="#Problem-43-1">&#182;</a></h1><p><em>Primary problem; 40% of assignment grade; 60 minutes estimate</em></p>
+<p>In your <code>EulerEstimator</code>, update the <code>plot()</code> method to work with systems of equations. (We wrote this method a while ago, but we've significantly refactored our estimator since then.)</p>
+<p>Use the <code>plot()</code> method to plot the system from problem 40-2 on the interval $[0,5],$ using the initial condition $A(0) = B(0) = C(0) = 0$ and step size $\Delta t = 0.01.$</p>
+<ul>
+<li><p>Starting at $t=0,$ step forward with a step size of $\Delta t = 0.01$ until you get to the value $t=5.$</p>
+</li>
+<li><p>Keep track of the values of the independent variable ($t$) and the dependent variables ($A,B,C$ in this case) as you step forward.</p>
+</li>
+<li><p>Using the values that you kept track of, plot the curves $y = A(t),$ $y = B(t),$ and $y = C(t)$ on the same graph. Make them different colors.</p>
+</li>
+</ul>
+<p><strong>Once you've got a plot, post it on the #computation-and-modeling channel in Slack to compare with your classmates.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-43-2">Problem 43-2<a class="anchor-link" href="#Problem-43-2">&#182;</a></h1><p><em>Supplemental problems; 50% of assignment grade; 75 minutes estimate</em></p>
+<p><strong>PART 1</strong></p>
+<p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Write a function <code>random_draw(distribution)</code> that draws a random number from the probability distribution. Assume that the distribution is an array such that <code>distribution[i]</code> represents the probability of drawing <code>i</code>.</p>
+<p>Here are some examples:</p>
+<ul>
+<li><p><code>random_draw([0.5, 0.5])</code> will return <code>0</code> or <code>1</code> with equal probability</p>
+</li>
+<li><p><code>random_draw([0.25, 0.25, 0.5])</code> will return <code>0</code> a quarter of the time, <code>1</code> a quarter of the time, and <code>2</code> half of the time</p>
+</li>
+<li><p><code>random_draw([0.05, 0.2, 0.15, 0.3, 0.1, 0.2])</code> will return <code>0</code> 5% of the time, <code>1</code> 20% of the time, <code>2</code> 15% of the time, <code>3</code> 30% of the time, <code>4</code> 10% of the time, and <code>0.2</code> 20% of the time.</p>
+</li>
+</ul>
+<p>The way to implement this is to</p>
+<ol>
+<li>turn the distribution into a cumulative distribution, </li>
+<li>choose a random number between 0 and 1, and then </li>
+<li>find the index of the first value in the cumulative distribution that is greater than the random number.</li>
+</ol>
+
+<pre><code>Distribution:
+    [0.05, 0.2, 0.15, 0.3, 0.1, 0.2]
+
+Cumulative distribution:
+    [0.05, 0.25, 0.4, 0.7, 0.8, 1.0]
+
+Choose a random number between 0 and 1:
+    0.77431
+
+The first value in the cumulative distribution that is 
+greater than 0.77431 is 0.8.
+
+This corresponds to the index 4.
+
+So, return 4.</code></pre>
+<p>To test your function, generate 1000 random numbers from each distribution and ensure that their average is close to the true expected value of the distribution.</p>
+<p>In other words, for each of the following distributions, print out the true expected value, and then print out the average of 1000 random samples.</p>
+<ul>
+<li><code>[0.5, 0.5]</code> </li>
+<li><code>[0.25, 0.25, 0.5]</code></li>
+<li><code>[0.05, 0.2, 0.15, 0.3, 0.1, 0.2]</code></li>
+</ul>
+<p><strong>PART 2</strong></p>
+<p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following sections of <a href="http://learnyouahaskell.com/starting-out">http://learnyouahaskell.com/starting-out</a>.</p>
+<ul>
+<li>Ready, set, go!</li>
+<li>Baby's first functions</li>
+</ul>
+<p>Create Haskell file <code>ClassifyNumber.hs</code> and write a function <code>classifyNumber</code> in Haskell that takes an input number <code>x</code> and returns</p>
+<ul>
+<li><code>"negative"</code> if <code>x</code> is negative</li>
+<li><code>"nonnegative"</code> if <code>x</code> is nonnegative.</li>
+</ul>
+<p>Then, apply this function to the input <code>5</code>.</p>
+<p>Your file will look like this:</p>
+
+<pre><code>classifyNumber = (your code here)
+main = putStrLn (classifyNumber 5)</code></pre>
+<p>Now, run your function by typing the following into the command line:</p>
+
+<pre><code>&gt;&gt;&gt; ghc --make classifyNumber
+&gt;&gt;&gt; ./classifyNumber</code></pre>
+<p><code>ghc</code> is a Haskell compiler. It will compile or "make" an executable object using your <code>.hs</code> file. The command <code>./classifyNumber</code>. actually runs your executable object.</p>
+<p><strong>PART 3</strong></p>
+<p>Complete this introductory C++ coding challenge: <a href="https://www.hackerrank.com/challenges/cpp-input-and-output/problem">https://www.hackerrank.com/challenges/cpp-input-and-output/problem</a></p>
+<p>Submit a screenshot that includes the name of the problem (top left), your username (top right), and Status: Accepted (bottom).</p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hackerrank-screenshot-2.png' border='0'/></p>
+<p><strong>PART 4</strong></p>
+<p>Complete this introductory Shell coding challenge: <a href="https://www.hackerrank.com/challenges/bash-tutorials---looping-and-skipping/problem">https://www.hackerrank.com/challenges/bash-tutorials---looping-and-skipping/problem</a></p>
+<p>The following example of a <code>for</code> loop will be helpful:</p>
+
+<pre><code>for i in {2..10}
+do
+    ((n = 5 * i))
+    echo $n
+done</code></pre>
+<p><em>Note</em>: You can solve this problem with just a single for loop</p>
+<p>Again, submit a screenshot that includes the name of the problem (top left), your username (top right), and Status: Accepted (bottom), just like in part 3.</p>
+<p><strong>PART 5</strong></p>
+<p>Complete queries 11-14 here: <a href="https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial">https://sqlzoo.net/wiki/SELECT_from_Nobel_Tutorial</a></p>
+<p>As usual, include a screenshot for each problem that includes the problem number, the successful smiley face, and your query.</p>
+<p><strong>PART 6</strong></p>
+<p><em>Location:</em> Overleaf</p>
+<p>Complete the following probability problems:</p>
+<p><strong>a.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-007.png' border='0'/></p>
+<ul>
+<li>Use conditional probability. In other words, compute the probability that C has exactly $4$ spaces, <em>given</em> that A and B have exactly 7 spaces (together).</li>
+</ul>
+<p><br></p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch3-008.png' border='0'/></p>
+<ul>
+<li>Write your answer using sigma notation or "dot dot dot" notation.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-43-3">Problem 43-3<a class="anchor-link" href="#Problem-43-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make a GitHub issue on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include a link to the issue you created.</p>
+</li>
+<li><p>Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-42-1">Problem 42-1<a class="anchor-link" href="#Problem-42-1">&#182;</a></h1><p><strong>Estimated Time:</strong> 60 minutes</p>
 <p><strong>Grade Weighting:</strong> 50%</p>
 <p>Complete SQL Zoo Modules 2 (all of it), and problems 1-10 in Module 3 (<a href="https://sqlzoo.net/">https://sqlzoo.net/</a>). Put screenshots in an overleaf doc or submit them separately on Canvas (up to you).</p>
