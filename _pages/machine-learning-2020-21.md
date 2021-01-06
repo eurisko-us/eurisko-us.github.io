@@ -64,7 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="75">
+<font size="3em"><ol reversed start="76">
+    <li><b>Wednesday, January 6</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/490846464">Class Recording</a> (ML is second half) - discuss random forest / game refactoring
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-76-1">Primary: Random Forest, Game Refactoring</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-76-2">Supplementary: Roulette Probability Selection, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-76-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, January 4</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
