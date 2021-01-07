@@ -66,7 +66,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="76">
     <li><b>Wednesday, January 6</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/490846464">Class Recording</a> (ML is second half) - roulette probability, random forest, game refactoring
+        <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (ML is second half) - roulette probability, random forest, game refactoring
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-76-1">Primary: Random Forest, Game Refactoring</a></li>
