@@ -67,7 +67,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="43">
     <li><b>Wednesday, January 6</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/490846464">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
+        <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-1">Primary: Euler Estimator - Plotting Systems</a></li>
