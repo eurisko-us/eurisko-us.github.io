@@ -13119,6 +13119,14 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>BFS and DFS in tree</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-44-1">Problem 44-1<a class="anchor-link" href="#Problem-44-1">&#182;</a></h1><p><em>Primary problem; 45% of assignment grade; 75 minutes estimate</em></p>
 <p><em>Location:</em> Overleaf</p>
 <p><strong>a.</strong> Submit corrections to final (put your corrections in an overleaf doc). I made a final review video that goes through each problem, available here: <a href="https://vimeo.com/496684498">https://vimeo.com/496684498</a></p>
@@ -13146,6 +13154,129 @@ $$ \text{rating} = \beta_0 + \beta_1 \times (\text{slices beef}) + \beta_2 \time
 <p><strong>(ii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef and no peanut butter. State the prediction in your Overleaf document.</p>
 <p><strong>(iii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef AND $5$ tablespoons of peanut butter (both ingredients on the same sandwich). State the prediction in your Overleaf document.</p>
 <p><strong>(iv)</strong> Look back at your answers to (ii) and (iii). One of these predictions can be trusted, while the other cannot. Which can be trusted, and why can it be trusted? Which cannot be trusted, and why can't it be trusted? Why is it possible for the model to give a prediction that can't be trusted?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-2">Problem 44-2<a class="anchor-link" href="#Problem-44-2">&#182;</a></h1><p><em>Supplemental problems; 45% of assignment grade; 75 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>In your <code>machine-learning</code> repository, create a folder <code>machine-learning/datasets/</code>. Go to <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html</a>, download the file <code>airtravel.csv</code>, and put it in your <code>datasets/</code> folder.</p>
+<p>In Python, you can read a csv as follows:</p>
+
+<pre><code>&gt;&gt;&gt; path_to_datasets = '/home/runner/machine-learning/datasets/'
+&gt;&gt;&gt; filename = 'airtravel.csv' 
+&gt;&gt;&gt; with open(path_to_datasets + filename, "r") as file:
+   print(file.read())
+
+"Month", "1958", "1959", "1960"
+"JAN",  340,  360,  417
+"FEB",  318,  342,  391
+"MAR",  362,  406,  419
+"APR",  348,  396,  461
+"MAY",  363,  420,  472
+"JUN",  435,  472,  535
+"JUL",  491,  548,  622
+"AUG",  505,  559,  606
+"SEP",  404,  463,  508
+"OCT",  359,  407,  461
+"NOV",  310,  362,  390
+"DEC",  337,  405,  432</code></pre>
+<p>Write a <code>@classmethod</code> called <code>DataFrame.from_csv(path_to_csv, header=True)</code> that constructs a <code>DataFrame</code> from a csv file (similar to how <code>DataFrame.from_array(arr)</code> constructs the <code>DataFrame</code> from an array).</p>
+<p>Test your method as follows:</p>
+
+<pre><code>&gt;&gt;&gt; path_to_datasets = '/home/runner/machine-learning/datasets/'
+&gt;&gt;&gt; filename = 'airtravel.csv' 
+&gt;&gt;&gt; filepath = path_to_datasets + filename
+&gt;&gt;&gt; df = DataFrame.from_csv(filepath, header=True)
+
+&gt;&gt;&gt; df.to_array()
+[["Month", "1958", "1959", "1960"],
+["JAN",  340,  360,  417],
+["FEB",  318,  342,  391],
+["MAR",  362,  406,  419],
+["APR",  348,  396,  461],
+["MAY",  363,  420,  472],
+["JUN",  435,  472,  535],
+["JUL",  491,  548,  622],
+["AUG",  505,  559,  606],
+["SEP",  404,  463,  508],
+["OCT",  359,  407,  461],
+["NOV",  310,  362,  390],
+["DEC",  337,  405,  432]]</code></pre>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/starting-out">http://learnyouahaskell.com/starting-out</a>.</p>
+<blockquote><p>An intro to lists</p>
+</blockquote>
+<p>Create Haskell file <code>ListProcessing.hs</code> and write a function <code>prodFirstLast</code> in Haskell that takes an input list <code>arr</code> and computes the product of the first and last elements of the list. Then, apply this function to the input <code>[4,2,8,5]</code>.</p>
+<p><em>Tip: use the <code>!!</code> operator and the <code>length</code> function.</em></p>
+<p>Your file will look like this:</p>
+
+<pre><code>prodFirstLast arr = (your code here)
+main = print (prodFirstLast [4,2,8,5])</code></pre>
+<p><strong>Note that, to print out an integer, we use <code>print</code> instead of <code>putStrLn</code>.</strong></p>
+<p>(You can also use <code>print</code> for most strings. The difference is that <code>putStrLn</code> can show non-ASCII characters like "я" whereas <code>print</code> cannot.)</p>
+<p>Run your function and make sure it gives the desired output (which is 20).</p>
+<h3 id="PART-3">PART 3<a class="anchor-link" href="#PART-3">&#182;</a></h3><p><strong>a.</strong> Complete these introductory C++ coding challenges and submit screenshots:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem">https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem">https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem</a></p>
+</blockquote>
+<p><strong>b.</strong> Complete these Bash coding challenges and submit screenshots:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem">https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem">https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem</a></p>
+</blockquote>
+<p>(Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.)</p>
+<p><strong>c.</strong> Complete SQL queries 1-3 here and submit screenshots:</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a></p>
+</blockquote>
+<p>(Each screenshot should include the problem number, the successful smiley face, and your query.)</p>
+<h3 id="PART-4">PART 4<a class="anchor-link" href="#PART-4">&#182;</a></h3><p><strong>a.</strong> As we will see in the near future, the <em>standard normal distribution</em> comes up A LOT in the context of statistics. It is defined as</p>
+$$
+p(x) = \dfrac{1}{\sqrt{2\pi}} e^{-x^2/2}.
+$$<p>The reason why we haven't encountered it until now is that it's difficult to integrate. In practice, it's common to use a pre-computed table of values to look up probabilities from this distribution.</p>
+<p><em>The actual problem:</em> Write a function <code>calc_standard_normal_probability(a,b)</code> to approximate $P(a \leq X \leq b)$ for the standard normal distribution, using a Riemann sum with step size 0.001.</p>
+<p>To check your function, print out estimates of the following probabilities:</p>
+<ul>
+<li><p>$P(-1 \leq x \leq 1)$</p>
+</li>
+<li><p>$P(-2 \leq x \leq 3)$</p>
+</li>
+<li><p>$P(-3 \leq x \leq 3)$</p>
+</li>
+</ul>
+<p>Your estimates should come out close to 0.68, 0.955, 0.997 respectively. (<a href="https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule">https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule</a>)</p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch4-000.png' border='0'/></p>
+<ul>
+<li><p>"CDF" stands for Cumulative Distribution Function. The CDF of a probability distribution $f(x)$ is defined as
+$$
+F(x) = P(X \leq x) = \int_{-\infty}^x f(x) \, \textrm dx.
+$$</p>
+</li>
+<li><p>Your answer for the CDF will be a piecewise function (3 pieces).</p>
+</li>
+<li><p>$EX$ means $E[X].$</p>
+</li>
+</ul>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-008.png' border='0'/><br></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-44-3">Problem 44-3<a class="anchor-link" href="#Problem-44-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
 
 </div>
 </div>

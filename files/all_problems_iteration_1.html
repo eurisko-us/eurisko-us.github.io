@@ -13756,11 +13756,20 @@ sql.query</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-77-1">Problem 77-1<a class="anchor-link" href="#Problem-77-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 75 minutes estimate</em></p>
-<p><strong>a.</strong> <strong>[INCOMPLETE]</strong> (You'll need to do part 1 of the supplemental problem before you do this.) Split csv dataset into train/test. Make a table of the % accuracy for the following models, and put it in Overleaf</p>
+<p><strong>a.</strong> (You'll need to do part 1 of the supplemental problem before you do this problem.)</p>
+<p><strong>(i)</strong> Download the <code>freshman_lbs.csv</code> dataset from <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html</a>, read it into a <code>DataFrame</code>, and create 5 test-train splits:</p>
+<ol>
+<li>Testing data = first 20% of the records, training data = remaining 80%</li>
+<li>Testing data = second 20% of the records, training data = remaining 80%</li>
+<li>Testing data = third 20% of the records, training data = remaining 80%</li>
+<li>Testing data = fourth 20% of the records, training data = remaining 80%</li>
+<li>Testing data = fifth 20% of the records, training data = remaining 80%</li>
+</ol>
+<p><strong>(ii)</strong> For each test-train split, fit each of the following models on the training data and use it to predict the sexes on the testing data. (You are predicting sex as a function of weight and BMI, and you can just use columns corresponding to September data.)</p>
 <ul>
-<li><p>Gini-based</p>
+<li><p>Decision tree using Gini split criterion</p>
 </li>
-<li><p>Random decision tree</p>
+<li><p>A single random decision tree</p>
 </li>
 <li><p>Random forest with 10 trees</p>
 </li>
@@ -13768,10 +13777,10 @@ sql.query</code></pre>
 </li>
 <li><p>Random forest with 1000 trees</p>
 </li>
-<li><p>Random forest with the max number of trees you can choose, to run in 1 minute or less</p>
-</li>
 </ul>
-<p>Explain the table in overleaf. Did you expect these results, or did they surprise you? Why do you think you got the results you did?</p>
+<p><strong>(iii)</strong> For each model, compute the accuracy (count the total number of <em>correct</em> classifications and divide by the total number of classifications). Put these results in a table in an Overleaf document.</p>
+<p>Note that the total number of classifications should be equal to the total number of records in the dataset (you did 5 train-test splits, and each train-test split involved testing on 20% of the data).</p>
+<p><strong>(iv)</strong> Below the table, analyze the results. Did you expect these results, or did they surprise you? Why do you think you got the results you did?</p>
 <p><strong>b.</strong> For each of your classmates, copy over their <code>DumbStrategy</code> and <code>CombatStrategy</code> and run your DumbPlayer/CombatPlayer tests using <strong>your classmate's</strong> strategy. Fill out the following information <em>for each classmate:</em></p>
 <ul>
 <li><p>Name of classmate</p>
@@ -13810,7 +13819,7 @@ sql.query</code></pre>
 "OCT",  359,  407,  461
 "NOV",  310,  362,  390
 "DEC",  337,  405,  432</code></pre>
-<p>Write a <code>@classmethod</code> called <code>DataFrame.from_csv(path_to_csv, header_rows=None)</code> that constructs a <code>DataFrame</code> from a csv file (similar to how <code>DataFrame.from_array(arr)</code> constructs the <code>DataFrame</code> from an array).</p>
+<p>Write a <code>@classmethod</code> called <code>DataFrame.from_csv(path_to_csv, header=True)</code> that constructs a <code>DataFrame</code> from a csv file (similar to how <code>DataFrame.from_array(arr)</code> constructs the <code>DataFrame</code> from an array).</p>
 <p>Test your method as follows:</p>
 
 <pre><code>&gt;&gt;&gt; path_to_datasets = '/home/runner/machine-learning/datasets/'
@@ -13840,7 +13849,7 @@ sql.query</code></pre>
 <p><em>Tip: use the <code>!!</code> operator and the <code>length</code> function.</em></p>
 <p>Your file will look like this:</p>
 
-<pre><code>prodFirstLast = (your code here)
+<pre><code>prodFirstLast arr = (your code here)
 main = print (prodFirstLast [4,2,8,5])</code></pre>
 <p><strong>Note that, to print out an integer, we use <code>print</code> instead of <code>putStrLn</code>.</strong></p>
 <p>(You can also use <code>print</code> for most strings. The difference is that <code>putStrLn</code> can show non-ASCII characters like "я" whereas <code>print</code> cannot.)</p>
@@ -13858,9 +13867,36 @@ main = print (prodFirstLast [4,2,8,5])</code></pre>
 <blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a></p>
 </blockquote>
 <p>(Each screenshot should include the problem number, the successful smiley face, and your query.)</p>
-<h3 id="PART-6">PART 6<a class="anchor-link" href="#PART-6">&#182;</a></h3><p><em>Location:</em> Overleaf</p>
-<p>Complete the following probability problems:</p>
-<p><strong>[INCOMPLETE -- choose problems from new chapters]</strong></p>
+<h3 id="PART-4">PART 4<a class="anchor-link" href="#PART-4">&#182;</a></h3><p><strong>a.</strong> As we will see in the near future, the <em>standard normal distribution</em> comes up A LOT in the context of statistics. It is defined as</p>
+$$
+p(x) = \dfrac{1}{\sqrt{2\pi}} e^{-x^2/2}.
+$$<p>The reason why we haven't encountered it until now is that it's difficult to integrate. In practice, it's common to use a pre-computed table of values to look up probabilities from this distribution.</p>
+<p><em>The actual problem:</em> Write a function <code>calc_standard_normal_probability(a,b)</code> to approximate $P(a \leq X \leq b)$ for the standard normal distribution, using a Riemann sum with step size 0.001.</p>
+<p>To check your function, print out estimates of the following probabilities:</p>
+<ul>
+<li><p>$P(-1 \leq x \leq 1)$</p>
+</li>
+<li><p>$P(-2 \leq x \leq 3)$</p>
+</li>
+<li><p>$P(-3 \leq x \leq 3)$</p>
+</li>
+</ul>
+<p>Your estimates should come out close to 0.68, 0.955, 0.997 respectively. (<a href="https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule">https://en.wikipedia.org/wiki/68%E2%80%9395%E2%80%9399.7_rule</a>)</p>
+<p><strong>b.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pishro-nik-ch4-000.png' border='0'/></p>
+<ul>
+<li><p>"CDF" stands for Cumulative Distribution Function. The CDF of a probability distribution $f(x)$ is defined as
+$$
+F(x) = P(X \leq x) = \int_{-\infty}^x f(x) \, \textrm dx.
+$$</p>
+</li>
+<li><p>Your answer for the CDF will be a piecewise function (3 pieces).</p>
+</li>
+<li><p>$EX$ means $E[X].$</p>
+</li>
+</ul>
+<p><strong>c.</strong></p>
+<p><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/pistro-nik-ch2-008.png' border='0'/><br></p>
 
 </div>
 </div>
