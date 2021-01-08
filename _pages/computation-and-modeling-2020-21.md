@@ -65,7 +65,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="43">
+<font size="3em"><ol reversed start="44">
+    <li><b>Friday, January 8</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (C&M is second half) - 43-2 probability, intro to breadth-first search and depth-first search
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-1">Primary: Final Corrections, Sandwich Regression 1</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-2">Supplementary: Reading CSV Into DataFrame, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, January 6</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
         <br>Assignment Problems:
