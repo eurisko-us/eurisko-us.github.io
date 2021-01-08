@@ -13119,7 +13119,33 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Final corrections</p>
+<h1 id="Problem-44-1">Problem 44-1<a class="anchor-link" href="#Problem-44-1">&#182;</a></h1><p><em>Primary problem; 45% of assignment grade; 75 minutes estimate</em></p>
+<p><em>Location:</em> Overleaf</p>
+<p><strong>a.</strong> Submit corrections to final (put your corrections in an overleaf doc). I made a final review video that goes through each problem, available here: <a href="https://vimeo.com/496684498">https://vimeo.com/496684498</a></p>
+<p>For each correction, explain</p>
+<ol>
+<li>what misunderstanding you had, and</li>
+<li>how you get to the correct result.</li>
+</ol>
+<p><em>Important:</em> The majority of the misunderstandings should NOT be "I ran out of time", and when you explain how to get to the correct result, SHOW ALL WORK.</p>
+<p><strong>b.</strong> A food manufacturing company is testing out some recipes for roast beef sandwiches and peanut butter sandwiches. They fed sandwiches to several subjects, and the subjects rated the sandwiches.</p>
+
+<pre><code>Slices of Roast Beef | Tablespoons of Peanut Butter | Rating |
+--------------------------------------------------------------
+         0           |               0              |    1   |
+         1           |               0              |    2   |
+         2           |               0              |    4   |
+         4           |               0              |    8   |
+         6           |               0              |    9   |
+         0           |               2              |    2   |
+         0           |               4              |    5   |
+         0           |               6              |    7   |
+         0           |               8              |    6   |</code></pre>
+<p><strong>(i)</strong> Create a file <code>machine-learning/analysis/sandwich_ratings.py</code> where you use your linear regressor to fit the following model:</p>
+$$ \text{rating} = \beta_0 + \beta_1 \times (\text{slices beef}) + \beta_2 \times (\text{tbsp peanut butter})$$<p>State this model in your Overleaf document.</p>
+<p><strong>(ii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef and no peanut butter. State the prediction in your Overleaf document.</p>
+<p><strong>(iii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef AND $5$ tablespoons of peanut butter (both ingredients on the same sandwich). State the prediction in your Overleaf document.</p>
+<p><strong>(iv)</strong> Look back at your answers to (ii) and (iii). One of these predictions can be trusted, while the other cannot. Which can be trusted, and why can it be trusted? Which cannot be trusted, and why can't it be trusted? Why is it possible for the model to give a prediction that can't be trusted?</p>
 
 </div>
 </div>
@@ -13203,7 +13229,7 @@ So, return 4.</code></pre>
 <p>Then, apply this function to the input <code>5</code>.</p>
 <p>Your file will look like this:</p>
 
-<pre><code>classifyNumber = (your code here)
+<pre><code>classifyNumber x = (your code here)
 main = putStrLn (classifyNumber 5)</code></pre>
 <p>Now, run your function by typing the following into the command line:</p>
 

@@ -13755,6 +13755,135 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-77-1">Problem 77-1<a class="anchor-link" href="#Problem-77-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 75 minutes estimate</em></p>
+<p><strong>a.</strong> <strong>[INCOMPLETE]</strong> (You'll need to do part 1 of the supplemental problem before you do this.) Split csv dataset into train/test. Make a table of the % accuracy for the following models, and put it in Overleaf</p>
+<ul>
+<li><p>Gini-based</p>
+</li>
+<li><p>Random decision tree</p>
+</li>
+<li><p>Random forest with 10 trees</p>
+</li>
+<li><p>Random forest with 100 trees</p>
+</li>
+<li><p>Random forest with 1000 trees</p>
+</li>
+<li><p>Random forest with the max number of trees you can choose, to run in 1 minute or less</p>
+</li>
+</ul>
+<p>Explain the table in overleaf. Did you expect these results, or did they surprise you? Why do you think you got the results you did?</p>
+<p><strong>b.</strong> For each of your classmates, copy over their <code>DumbStrategy</code> and <code>CombatStrategy</code> and run your DumbPlayer/CombatPlayer tests using <strong>your classmate's</strong> strategy. Fill out the following information <em>for each classmate:</em></p>
+<ul>
+<li><p>Name of classmate</p>
+</li>
+<li><p>When you copied over their <code>DumbStrategy</code> and ran your DumbPlayer tests, did they pass? If not, then what's the issue? Is it a problem with your game, or with their strategy class?</p>
+</li>
+<li><p>When you copied over their <code>CombatStrategy</code> and ran your CombatPlayer tests, did they pass? If not, then what's the issue? Is it a problem with your game, or with their strategy class?</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-77-2">Problem 77-2<a class="anchor-link" href="#Problem-77-2">&#182;</a></h1><p><em>Supplemental problems; 45% of assignment grade; 75 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>In your <code>machine-learning</code> repository, create a folder <code>machine-learning/datasets/</code>. Go to <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html</a>, download the file <code>airtravel.csv</code>, and put it in your <code>datasets/</code> folder.</p>
+<p>In Python, you can read a csv as follows:</p>
+
+<pre><code>&gt;&gt;&gt; path_to_datasets = '/home/runner/machine-learning/datasets/'
+&gt;&gt;&gt; filename = 'airtravel.csv' 
+&gt;&gt;&gt; with open(path_to_datasets + filename, "r") as file:
+   print(file.read())
+
+"Month", "1958", "1959", "1960"
+"JAN",  340,  360,  417
+"FEB",  318,  342,  391
+"MAR",  362,  406,  419
+"APR",  348,  396,  461
+"MAY",  363,  420,  472
+"JUN",  435,  472,  535
+"JUL",  491,  548,  622
+"AUG",  505,  559,  606
+"SEP",  404,  463,  508
+"OCT",  359,  407,  461
+"NOV",  310,  362,  390
+"DEC",  337,  405,  432</code></pre>
+<p>Write a <code>@classmethod</code> called <code>DataFrame.from_csv(path_to_csv, header_rows=None)</code> that constructs a <code>DataFrame</code> from a csv file (similar to how <code>DataFrame.from_array(arr)</code> constructs the <code>DataFrame</code> from an array).</p>
+<p>Test your method as follows:</p>
+
+<pre><code>&gt;&gt;&gt; path_to_datasets = '/home/runner/machine-learning/datasets/'
+&gt;&gt;&gt; filename = 'airtravel.csv' 
+&gt;&gt;&gt; filepath = path_to_datasets + filename
+&gt;&gt;&gt; df = DataFrame.from_csv(filepath, header=True)
+
+&gt;&gt;&gt; df.to_array()
+[["Month", "1958", "1959", "1960"],
+["JAN",  340,  360,  417],
+["FEB",  318,  342,  391],
+["MAR",  362,  406,  419],
+["APR",  348,  396,  461],
+["MAY",  363,  420,  472],
+["JUN",  435,  472,  535],
+["JUL",  491,  548,  622],
+["AUG",  505,  559,  606],
+["SEP",  404,  463,  508],
+["OCT",  359,  407,  461],
+["NOV",  310,  362,  390],
+["DEC",  337,  405,  432]]</code></pre>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/starting-out">http://learnyouahaskell.com/starting-out</a>.</p>
+<blockquote><p>An intro to lists</p>
+</blockquote>
+<p>Create Haskell file <code>ListProcessing.hs</code> and write a function <code>prodFirstLast</code> in Haskell that takes an input list <code>arr</code> and computes the product of the first and last elements of the list. Then, apply this function to the input <code>[4,2,8,5]</code>.</p>
+<p><em>Tip: use the <code>!!</code> operator and the <code>length</code> function.</em></p>
+<p>Your file will look like this:</p>
+
+<pre><code>prodFirstLast = (your code here)
+main = print (prodFirstLast [4,2,8,5])</code></pre>
+<p><strong>Note that, to print out an integer, we use <code>print</code> instead of <code>putStrLn</code>.</strong></p>
+<p>(You can also use <code>print</code> for most strings. The difference is that <code>putStrLn</code> can show non-ASCII characters like "я" whereas <code>print</code> cannot.)</p>
+<p>Run your function and make sure it gives the desired output (which is 20).</p>
+<h3 id="PART-3">PART 3<a class="anchor-link" href="#PART-3">&#182;</a></h3><p><strong>a.</strong> Complete these introductory C++ coding challenges and submit screenshots:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem">https://www.hackerrank.com/challenges/c-tutorial-basic-data-types/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem">https://www.hackerrank.com/challenges/c-tutorial-conditional-if-else/problem</a></p>
+</blockquote>
+<p><strong>b.</strong> Complete these Bash coding challenges and submit screenshots:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem">https://www.hackerrank.com/challenges/bash-tutorials---a-personalized-echo/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem">https://www.hackerrank.com/challenges/bash-tutorials---the-world-of-numbers/problem</a></p>
+</blockquote>
+<p>(Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.)</p>
+<p><strong>c.</strong> Complete SQL queries 1-3 here and submit screenshots:</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a></p>
+</blockquote>
+<p>(Each screenshot should include the problem number, the successful smiley face, and your query.)</p>
+<h3 id="PART-6">PART 6<a class="anchor-link" href="#PART-6">&#182;</a></h3><p><em>Location:</em> Overleaf</p>
+<p>Complete the following probability problems:</p>
+<p><strong>[INCOMPLETE -- choose problems from new chapters]</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-77-3">Problem 77-3<a class="anchor-link" href="#Problem-77-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-76-1">Problem 76-1<a class="anchor-link" href="#Problem-76-1">&#182;</a></h1><p><em>Primary problems; 40% of assignment grade; 60 minutes estimate</em></p>
 <p><strong>a.</strong> Create a <code>RandomForest</code> class in <code>machine-learning/src/random-forest</code> that is initialized with a value <code>n</code> that represents the number of random decision trees to use.</p>
 <p>The <code>RandomForest</code> should have a <code>fit()</code> method and a <code>predict()</code> method, just like the <code>DecisionTree</code>.</p>
@@ -13764,6 +13893,12 @@ sql.query</code></pre>
 <li><p>The <code>predict()</code> method should get a prediction from each random decision tree, and then return the prediction that occurred most frequently. (If there are multiple predictions that occurred most frequently, then choose randomly among them.)</p>
 </li>
 </ul>
+<p>So it should work like this:</p>
+
+<pre><code>rf = RandomForest(10) # random forest consisting of 10 random trees
+rf.fit(df) # fit all 10 of those trees to the dataframe
+rf.predict(observation) # have each of the 10 trees make a prediction, and
+                        # return the majority vote of the 10 trees</code></pre>
 <p><strong>b.</strong> Refactor the <code>combat_state</code> in your game.</p>
 <p>Previously, it looked like this:</p>
 
@@ -13870,7 +14005,7 @@ So, return 4.</code></pre>
 <p>Then, apply this function to the input <code>5</code>.</p>
 <p>Your file will look like this:</p>
 
-<pre><code>classifyNumber = (your code here)
+<pre><code>classifyNumber x = (your code here)
 main = putStrLn (classifyNumber 5)</code></pre>
 <p>Now, run your function by typing the following into the command line:</p>
 
