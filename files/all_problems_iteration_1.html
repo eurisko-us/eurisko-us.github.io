@@ -13747,7 +13747,37 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Fit random forest to some larger dataset (maybe iris). Compare validation accuracy of n-tree random forest (n=1, 10, 100, 1000) against Gini-based tree.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Regular problem in which we take a dataset and do a prediction task using all the models we've built</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>single-layer perceptron</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Refactor to make a random forest faster &amp; do another comparison</p>
+<ul>
+<li><p>max depth (so that the trees train faster)</p>
+</li>
+<li><p>each tree is only trained on a subset of the training data given to the random forest (fixed percentage, randomly sampled with replacement)</p>
+</li>
+<li><p>each tree only selects a subset of features</p>
+</li>
+<li><p>correction: random decision tree should select random feature, but we should still use the gini metric to find the best split in the randomly selected set of columns</p>
+</li>
+<li><p>do it with a messier / more high-dimensional dataset</p>
+</li>
+<li><p>put kNN and naive bayes and linear regressor in the comparison as well</p>
+</li>
+</ul>
 
 </div>
 </div>
@@ -13756,7 +13786,7 @@ sql.query</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-77-1">Problem 77-1<a class="anchor-link" href="#Problem-77-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 75 minutes estimate</em></p>
-<p><strong>a.</strong> (You'll need to do part 1 of the supplemental problem before you do this problem.)</p>
+<p><strong>a.</strong> <strong>You'll need to do part 1 of the supplemental problem before you do this problem.</strong></p>
 <p><strong>(i)</strong> Download the <code>freshman_lbs.csv</code> dataset from <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html</a>, read it into a <code>DataFrame</code>, and create 5 test-train splits:</p>
 <ol>
 <li>Testing data = first 20% of the records, training data = remaining 80%</li>
@@ -13765,6 +13795,19 @@ sql.query</code></pre>
 <li>Testing data = fourth 20% of the records, training data = remaining 80%</li>
 <li>Testing data = fifth 20% of the records, training data = remaining 80%</li>
 </ol>
+<p>Note that you'll need to convert the appropriate entries to numbers (instead of strings) in the dataset. There are 2 options for doing this:</p>
+<ul>
+<li><p><strong>Option 1:</strong> don't worry about fixing the format within the <code>read_csv</code> method. Just do something like
+<code>df = df.apply('weight', lambda x: int(x))</code>
+afterwards, before you pass the dataframe into your model.</p>
+</li>
+<li><p><strong>Option 2:</strong> when you read in the csv, after you do the</p>
+
+<pre><code>lines = file.read().split('\n')
+entries = [line.split(',') for line in lines]</code></pre>
+<p>thing, you can loop through the entries, and if <code>entry[0]+entry[-1] == '""'</code>, then you can set <code>entry = entry[1:-1]</code> to remove the quotes. Otherwise, if <code>entry[0]+entry[-1] != '""'</code>, then you can try to do <code>entry = float(entry[1:-1])</code>.</p>
+</li>
+</ul>
 <p><strong>(ii)</strong> For each test-train split, fit each of the following models on the training data and use it to predict the sexes on the testing data. (You are predicting sex as a function of weight and BMI, and you can just use columns corresponding to September data.)</p>
 <ul>
 <li><p>Decision tree using Gini split criterion</p>
@@ -13828,19 +13871,19 @@ sql.query</code></pre>
 &gt;&gt;&gt; df = DataFrame.from_csv(filepath, header=True)
 
 &gt;&gt;&gt; df.to_array()
-[["Month", "1958", "1959", "1960"],
-["JAN",  340,  360,  417],
-["FEB",  318,  342,  391],
-["MAR",  362,  406,  419],
-["APR",  348,  396,  461],
-["MAY",  363,  420,  472],
-["JUN",  435,  472,  535],
-["JUL",  491,  548,  622],
-["AUG",  505,  559,  606],
-["SEP",  404,  463,  508],
-["OCT",  359,  407,  461],
-["NOV",  310,  362,  390],
-["DEC",  337,  405,  432]]</code></pre>
+[['"Month"', '"1958"', '"1959"', '"1960"'],
+['"JAN"',  '340',  '360',  '417'],
+['"FEB"',  '318',  '342',  '391'],
+['"MAR"',  '362',  '406',  '419'],
+['"APR"',  '348',  '396',  '461'],
+['"MAY"',  '363',  '420',  '472'],
+['"JUN"',  '435',  '472',  '535'],
+['"JUL"',  '491',  '548',  '622'],
+['"AUG"',  '505',  '559',  '606'],
+['"SEP"',  '404',  '463',  '508'],
+['"OCT"',  '359',  '407',  '461'],
+['"NOV"',  '310',  '362',  '390'],
+['"DEC"',  '337',  '405',  '432']]</code></pre>
 <h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
 <p>Skim the following section of <a href="http://learnyouahaskell.com/starting-out">http://learnyouahaskell.com/starting-out</a>.</p>
 <blockquote><p>An intro to lists</p>
@@ -13876,7 +13919,7 @@ $$<p>The reason why we haven't encountered it until now is that it's difficult t
 <ul>
 <li><p>$P(-1 \leq x \leq 1)$</p>
 </li>
-<li><p>$P(-2 \leq x \leq 3)$</p>
+<li><p>$P(-2 \leq x \leq 2)$</p>
 </li>
 <li><p>$P(-3 \leq x \leq 3)$</p>
 </li>
