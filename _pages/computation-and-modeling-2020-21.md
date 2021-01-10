@@ -82,7 +82,7 @@ author_profile: false
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-probability-42">Nathan A</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-probability-42">Maia</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-probability-42">Justin</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-probability-42">Cayden>/a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-probability-42">Cayden</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-probability-42">Anton</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-probability-42">Nathan R</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-probability-42">William</a>,
