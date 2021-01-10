@@ -78,7 +78,8 @@ author_profile: false
     <br>
     <li><b>Wednesday, January 6</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
-        <br>Student submissions (probability section):
+        <br>Student submissions (probability section) -
+        <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-probability-42">Nathan A</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-probability-42">Maia</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-probability-42">Justin</a>,
@@ -87,6 +88,7 @@ author_profile: false
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-probability-42">Nathan R</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-probability-42">William</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-probability-42">Charlie</a>
+        </font>
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-1">Primary: Euler Estimator - Plotting Systems</a></li>
