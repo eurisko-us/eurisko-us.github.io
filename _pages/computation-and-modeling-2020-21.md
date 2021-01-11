@@ -65,14 +65,14 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="44">
+<font size="3em"><ol reversed start="45">
     <li><b>Monday, January 11</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (C&M is second half) - 43-2 csv, probability, 73-1 breadth-first search and depth-first search
+        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (C&M is second half) - 44-2 csv, probability, 45-1 breadth-first search and depth-first search
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-1">Primary: Breadth-First and Depth-First Search</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-2">Supplementary: Numerical Integration, Haskell, C++, Bash, SQL, Probability</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-45-1">Primary: Breadth-First and Depth-First Search</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-45-2">Supplementary: Numerical Integration, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-45-3">Commit / Review</a></li>
         </ul></font>
     </li>
     <br>
@@ -80,15 +80,15 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (C&M is second half) - 43-2 probability, intro to breadth-first search and depth-first search
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-1">Primary: Final Corrections, Sandwich Regression 1</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-2">Supplementary: Reading CSV Into DataFrame, Haskell, C++, Bash, SQL, Probability</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-43-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-1">Primary: Final Corrections, Sandwich Regression 1</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-2">Supplementary: Reading CSV Into DataFrame, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-3">Commit / Review</a></li>
         </ul></font>
     </li>
     <br>
     <li><b>Wednesday, January 6</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
-        <br>Student submissions (probability section) -
+        <br>Student submissions (probability section of Assignment 42) -
         <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-probability-42">Nathan A</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-probability-42">Maia</a>,
