@@ -13130,11 +13130,35 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-45-1">Problem 45-1<a class="anchor-link" href="#Problem-45-1">&#182;</a></h1><p><em>Primary problem; 30% of assignment grade; 45 minutes estimate</em></p>
-<p>In your <code>Tree</code> class, write two methods <code>print_breadth_first</code>, <code>print_depth_first</code>.</p>
+<p>In your <code>Tree</code> class, write two methods <code>nodes_breadth_first()</code>, <code>nodes_depth_first()</code>.</p>
 <ul>
-<li><p><code>print_breadth_first()</code> - Add the root node to a queue. Then, repeatedly print the next node in the queue, remove it from the queue, and add its children to the queue. Keep doing this until the queue is empty.</p>
+<li><p><code>nodes_breadth_first()</code></p>
+
+<pre><code>initialize queue with root node
+
+  queue = [e], visited = []
+‎
+repeatedly apply this procedure until the queue is empty:
+  1. remove node from queue
+  2. append node to visited
+  3. append children to queue
+‎
+return visited</code></pre>
 </li>
-<li><p><code>print_depth_first()</code> - Add the root node to a stack. Then, repeatedly print the top node in the stack, remove it from the stack, and add its children to the stack. Keep doing this until the stack is empty.</p>
+<li><p><code>nodes_depth_first()</code></p>
+
+<pre><code>initialize stack with root node
+
+  stack = [e], visited = []
+‎
+repeatedly apply this procedure until the stack is empty:
+  1. remove node from stack
+  2. append node to visited
+  3. PREpend children to stack
+      ("prepend" means to add the children
+        on the left of the stack)
+‎
+return visited</code></pre>
 </li>
 </ul>
 
@@ -13152,21 +13176,149 @@ b j fk
     |
     h
 
-&gt;&gt;&gt; tree_A.print_breadth_first()
-Prints the nodes in a depth-first ordering.
+&gt;&gt;&gt; nodes = tree_A.print_breadth_first()
+&gt;&gt;&gt; [node.value for node in nodes]
+[e,a,i,g,c,d,b,j,f,k,h]
 
-e a i g c d b j f k h
+Note that other answers are permissible, such as
 
-(other answers are permissible, e.g.
-e g i a c d j f b k h)
+    [e,g,i,a,c,d,j,f,b,k,h],
 
-&gt;&gt;&gt; tree_A.print_depth_first()
-Prints the nodes in a depth-first ordering.
+provided they are in some breadth-first ordering.
 
-e a c d b j f h k i g
+DEBUGGING NOTES:
 
-(other answers are permissible, e.g.
-e i g a d f h b j k c)</code></pre>
+initialize queue with root node
+
+    queue = [e], visited = []
+
+node: e
+children: a,i,g
+
+    queue = [a,i,g], visited = [e]
+
+node: a
+children: c,d
+
+    queue = [i,g,c,d], visited = [e,a]
+
+node: i
+children: (none)
+
+    queue = [g,c,d], visited = [e,a,i]
+
+node: g
+children: (none)
+
+    queue = [c,d], visited = [e,a,i,g]
+
+node: c
+children: (none)
+
+    queue = [d], visited = [e,a,i,g,c]
+
+node: d
+children: b,j,f,k
+
+    queue = [b,j,f,k], visited = [e,a,i,g,c,d]
+
+node: b
+children: (none)
+
+    queue = [j,f,k], visited = [e,a,i,g,c,d,b]
+
+node: j
+children: (none)
+
+    queue = [f,k], visited = [e,a,i,g,c,d,b,j]
+
+node: f
+children: h
+
+    queue = [k,h], visited = [e,a,i,g,c,d,b,j,f]
+
+node: k
+children: (none)
+
+    queue = [h], visited = [e,a,i,g,c,d,b,j,f,k]
+
+node: h
+children: (none)
+
+    queue = [], visited = [e,a,i,g,c,d,b,j,f,k,h]
+
+####################################################
+
+&gt;&gt;&gt; nodes = tree_A.nodes_depth_first()
+&gt;&gt;&gt; [node.value for node in nodes]
+[e,a,c,d,b,j,f,h,k,i,g]
+
+Note that other answers are permissible, such as
+
+    [e,i,g,a,d,f,h,b,j,k,c],
+
+provided they are in some depth-first ordering.
+
+DEBUGGING NOTES:
+
+initialize stack with root node
+
+    stack = [e], visited = []
+
+node: e
+children: a,i,g
+
+    stack = [a,i,g], visited = [e]
+
+node: a
+children: c,d
+
+    stack = [c,d,i,g], visited = [e,a]
+
+node: c
+children: (none)
+
+    stack = [d,i,g], visited = [e,a,c]
+
+node: d
+children: b,j,f,k
+
+    stack = [b,j,f,k,i,g], visited = [e,a,c,d]
+
+node: b
+children: (none)
+
+    stack = [j,f,k,i,g], visited = [e,a,c,d,b]
+
+node: j
+children: (none)
+
+    stack = [f,k,i,g], visited = [e,a,c,d,b,j]
+
+node: f
+children: h
+
+    stack = [h,k,i,g], visited = [e,a,c,d,b,j,f]
+
+node: h
+children: (none)
+
+    stack = [k,i,g], visited = [e,a,c,d,b,j,f,h]
+
+node: k
+children: (none)
+
+    stack = [i,g], visited = [e,a,c,d,b,j,f,h,k]
+
+node: i
+children: (none)
+
+    stack = [g], visited = [e,a,c,d,b,j,f,h,k,i]
+
+node: g
+children: (none)
+
+    stack = [], visited = [e,a,c,d,b,j,f,h,k,i,g]</code></pre>
 
 </div>
 </div>
