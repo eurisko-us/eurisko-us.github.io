@@ -64,7 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="77">
+<font size="3em"><ol reversed start="79">
+    <li><b>Monday, January 11</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (ML is second half) - walkthrough of primary problems
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-78-1">Primary: Gini Decision Tree vs Random Decision Tree vs Random Forest, Game Integration Testing (Specific List of Issues)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-78-2">Supplementary: Numerical Integration, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-78-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 8</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (ML is second half) - walkthrough of primary problems
         <br>Assignment Problems:
