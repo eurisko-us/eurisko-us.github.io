@@ -66,6 +66,16 @@ author_profile: false
 <br><br>
 
 <font size="3em"><ol reversed start="44">
+    <li><b>Monday, January 11</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (C&M is second half) - 43-2 csv, probability, 73-1 breadth-first search and depth-first search
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-1">Primary: Breadth-First and Depth-First Search</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-2">Supplementary: Numerical Integration, Haskell, C++, Bash, SQL, Probability</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 8</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (C&M is second half) - 43-2 probability, intro to breadth-first search and depth-first search
         <br>Assignment Problems:
