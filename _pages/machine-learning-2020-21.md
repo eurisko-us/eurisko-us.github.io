@@ -64,7 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="79">
+<font size="3em"><ol reversed start="80">
+    <li><b>Wednesday, January 13</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) -  Intro to 8 queens problem, 45-2 probability, game state refactoring
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-79-1">Primary: Game Refactoring, Random Optimizer for 8 Queens Problem</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-79-2">Supplementary: Refactoring Practice, Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-79-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Monday, January 11</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (ML is second half) - 77-2 csv, probability
         <br>Assignment Problems:
