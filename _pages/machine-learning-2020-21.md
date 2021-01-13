@@ -64,7 +64,7 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="80">
+<font size="3em"><ol reversed start="79">
     <li><b>Wednesday, January 13</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) -  Intro to 8 queens problem, 45-2 probability, game state refactoring
         <br>Assignment Problems:
