@@ -13785,9 +13785,19 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Random forest improvements:</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> Refactor to make a random forest faster &amp; do another comparison</p>
+<ul>
+<li><p>max depth (so that the trees train faster)</p>
+</li>
+<li><p>each tree is only trained on a subset of the training data given to the random forest (so that the trees train faster; fixed percentage, randomly sampled with replacement)</p>
+</li>
+<li><p>now that the trees are faster, we can afford to bring back gini. But we don't want to force</p>
 <ul>
 <li>random decision tree should select random feature, but we should still use the gini metric to find the best split in the randomly selected set of columns</li>
+</ul>
+</li>
+<li><p>put kNN and naive bayes and linear regressor in the comparison as well</p>
+</li>
 </ul>
 
 </div>
@@ -13796,15 +13806,343 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> Refactor to make a random forest faster &amp; do another comparison</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>Adjustments...</p>
 <ul>
-<li><p>max depth (so that the trees train faster)</p>
+<li><p>If you have <code>grid_size</code>, rename to <code>board_size</code>. It should be a tuple <code>(x,y)</code> instead of just 1 integer</p>
 </li>
-<li><p>each tree is only trained on a subset of the training data given to the random forest (fixed percentage, randomly sampled with replacement)</p>
+<li><p>In game state, change <code>"location"</code> to <code>"coords"</code></p>
 </li>
-<li><p>put kNN and naive bayes and linear regressor in the comparison as well</p>
+<li><p>In combat strategy <code>decide_purchases</code>, the units should be strings (not objects)</p>
+</li>
+<li><p>In game state,</p>
 </li>
 </ul>
+
+<pre><code>game_state = {
+    'turn': 4,
+    'phase': 'Combat', # Can be 'Movement', 'Economic', or 'Combat'
+    'round': None, # if the phase is movement, then round is 1, 2, or 3
+    'player_whose_turn': 0, # index of player whose turn it is (or whose ship is attacking during battle),
+    'winner': None,
+    'players': [
+        {'cp': 9
+        'units': [
+            {'coords': (5,10),
+            'type': Scout,
+            'hits': 0,
+            'technology': {
+                'attack': 1,
+                'defense': 0,
+                'movement': 3
+            }},
+            {'coords': (1,2),
+            'type': Destroyer,
+            'hits': 0,
+            'technology': {
+                'attack': 0,
+                'defense': 0,
+                'movement': 2
+            }},
+            {'coords': (6,0),
+            'type': Homeworld,
+            'hits': 0,
+            'turn_created': 0
+            },
+            {'coords': (5,3),
+            'type': Colony,
+            'hits': 0,
+            'turn created': 2
+            }],
+        'technology': {'attack': 1, 'defense': 0, 'movement': 3, 'ship size': 0}
+    },
+    {'cp': 15
+        'units': [
+        {'coords': (1,2),
+        'type': Battlecruiser,
+        'hits': 1,
+        'technology': {
+            'attack': 0,
+            'defense': 0,
+            'movement': 0
+        }},
+        {'coords': (1,2),
+        'type': Scout,
+        'hits': 0,
+        'technology': {
+            'attack': 1,
+            'defense': 0,
+            'movement': 0
+        }},
+        {'coords': (5,10),
+        'type': Scout,
+        'hits': 0,
+        'technology': {
+            'attack': 1,
+            'defense': 0,
+            'movement': 0
+        }},
+        {'coords': (6,12),
+        'type': Homeworld,
+        'hits': 0,
+        'turn_created': 0
+        },
+        {'coords': (5,10),
+        'type': Colony,
+        'turn created': 1
+        }],
+        'technology': {'attack': 1, 'defense': 0, 'movement': 0, 'ship size': 0}
+    }],
+    'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
+    'unit_data': {
+        # check this against eli's
+        'Scout': {'cp_cost': _, 'hullsize': _},
+        'Scout': {'cp_cost': _, 'hullsize': _},
+        'Scout': {'cp_cost': _, 'hullsize': _},
+    },
+    'technology_data': {
+        'shipsize': [5, 10, 15, 25] # list containing price at each level
+    }
+}</code></pre>
+<p>Note: check out technology levels...</p>
+
+<pre><code>{'atk': {'lvls' : [-1,0,1,2], 'prices' : [20, 50 , 90], 'max' : 4}, 'def': {'lvls' : [-1,0,1,2], 'prices' : [20, 50 , 90], 'max' : 4}, 'move': {'lvls': [0,1,2,3,4,5], 'prices': [20, 50, 90, 130, 170], 'max' : 6}, 'shpyrd': {'lvls' : [0.5, 1.0, 1.5], 'prices' : [20, 50], 'max' : 2.0}, 'ss' : {'lvls': [0,1,2,3,4,5], 'prices' : [10,15,20,25,30], 'max' : 6}}</code></pre>
+
+<pre><code>
+class CombatStrategy:
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def will_colonize_planet(self, coordinates, game_state):
+        ...
+        return either True or False
+
+    def decide_ship_movement(self, unit_index, game_state):
+        ...
+        return a "translation" which is a tuple representing
+        the direction in which the ship moves.
+
+        # For example, if a unit located at (1,2) wanted to
+        # move to (1,1), then the translation would be (0,-1).
+
+    def decide_purchases(self, game_state):
+        ...
+        return {
+            'units': list of unit objects you want to buy,
+            'technology': list of technology attributes you want to upgrade
+        }
+
+        # for example, if you wanted to buy 2 Scouts, 1 Destroyer, 
+        # upgrade defense technology once, and upgrade attack
+        # technology twice, you'd return
+        # {
+        #     'units': ['Scout', 'Scout', 'Destroyer'],
+        #     'technology': ['defense', 'attack', 'attack'] 
+        # }
+
+    def decide_removals(self, game_state):
+        ...
+        return a list of unit indices of ships that you want to remove.
+
+        # for example, if you want to remove your 0th and 3rd units, you'd
+        # return [0, 3]
+
+    def decide_which_unit_to_attack(self, combat_state, attacker_index):
+
+        # combat_state is the combat_state for the particular battle
+        # being considered. It will take the form
+        # {'location': (1,2),
+        #     'order': [{'player': 1, 'unit': 0},
+        #               {'player': 0, 'unit': 1},
+        #               {'player': 1, 'unit': 1},
+        #               {'player': 1, 'unit': 2}],
+        # }.
+
+        # attacker_index is the index of your unit, whose turn it is
+        # to attack.
+
+        ...
+
+        return the index of the ship you want to attack in the 
+        combat order.
+
+        # in the above example, if you want to attack player 1's unit 1,
+        # then you'd return 2 because it corresponds to
+        # combat_state['order'][2]
+
+    def decide_which_units_to_screen(self, combat_state):
+
+        # again, the combat_state is the combat_state for the 
+        # particular battle
+
+        ...
+
+        return the indices of the ships you want to screen
+        in the combat order
+
+        # in the above example, if you are player 1 and you want
+        # to screen units 1 and 2, you'd return [2,3] because
+        # the ships you want to screen are
+        # combat_state['order'][2] and combat_state['order'][3]
+
+        # NOTE: FOR COMBATSTRATEGY AND DUMBSTRATEGY,
+        # YOU CAN JUST RETURN AN EMPTY ARRAY</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-79-1">Problem 79-1<a class="anchor-link" href="#Problem-79-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 90 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>I'm still working on the strategy class refactoring. I'll update the assignment later tonight with this part. In the mean time, work on the rest of the assignment.</p>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/analysis/8_queens.py</code></p>
+<p>We're going to be exploring approaches to solving the 8-queens problem on the next couple assignments.</p>
+<p>The 8-queens problem is a challenge to place 8 queens on a chess board in a way that none can attack each other. Remember that in chess, queens can attack any piece that is on the same row, column, or diagonal. So, the 8-queens problem is to place 8 queens on a chess board so that none of them are on the same row, column, or diagonal.</p>
+<p><strong>a.</strong> Write a function <code>show_board(locations)</code> that takes a list of locations of 8 queens and prints out the corresponding board by placing periods in empty spaces and the index of the location in any space occupied by a queen.</p>
+
+<pre><code>&gt;&gt;&gt; locations = [(0,0), (6,1), (2,2), (5,3), (4,4), (7,5), (1,6), (2,6)]
+&gt;&gt;&gt; show_board(locations)
+0  .  .  .  .  .  .  .
+.  .  .  .  .  .  6  .
+.  .  2  .  .  .  7  .
+.  .  .  .  .  .  .  .
+.  .  .  .  4  .  .  .
+.  .  .  3  .  .  .  .
+.  1  .  .  .  .  .  .
+.  .  .  .  .  5  .  .</code></pre>
+<p><strong>Tip:</strong> To print out a row, you can first construct it as an array and then print the corresponding string, which consists of the array entries separated by two spaces:</p>
+
+<pre><code>&gt;&gt;&gt; row_array = ['0', '.', '.', '.', '.', '.', '.', '.']
+&gt;&gt;&gt; row_string = '  '.join(row_array) # note that '  ' is TWO spaces
+&gt;&gt;&gt; print(row_string)
+0  .  .  .  .  .  .  .</code></pre>
+<p><strong>b.</strong> Write a function that <code>calc_cost(locations)</code> computes the "cost", i.e. the number of pairs of queens that are on the same row, column, or diagonal.</p>
+<p>For example, in the board above, the cost is 10:</p>
+<ol>
+<li>Queen 2 and queen 7 are on the same row</li>
+<li>Queen 6 and queen 7 are on the same column</li>
+<li>Queen 0 and queen 2 are on the same diagonal</li>
+<li>Queen 0 and queen 4 are on the same diagonal</li>
+<li>Queen 2 and queen 4 are on the same diagonal</li>
+<li>Queen 3 and queen 4 are on the same diagonal</li>
+<li>Queen 4 and queen 7 are on the same diagonal</li>
+<li>Queen 3 and queen 7 are on the same diagonal</li>
+<li>Queen 1 and queen 6 are on the same diagonal</li>
+<li>Queen 3 and queen 5 are on the same diagonal</li>
+</ol>
+<p>Verify that the cost of the above configuration is 10:</p>
+
+<pre><code>&gt;&gt;&gt; calc_cost(locations)
+10</code></pre>
+<p><strong>Tip 1:</strong> It will be easier to debug your code if you write several helper functions -- one which takes two coordinate pairs and determines whether they're on the same row, another which determines whether they're on the same column, another which determines if they're on the same diagonal.</p>
+<p><strong>Tip 2:</strong> To check if two locations are on the same diagonal, you can compute the slope between those two points and check if the slope comes out to $1$ or $-1.$</p>
+<p><strong>c.</strong> Write a function <code>random_optimizer(n)</code> that generates <code>n</code> random <code>locations</code> arrays for the 8 queens, and returns the following dictionary:</p>
+
+<pre><code>{
+    'locations': array that resulted in the lowest cost,
+    'cost': the actual value of that lowest cost
+}</code></pre>
+<p>Then, print out the cost of your <code>random_optimizer</code> for <code>n=10,50,100,500,1000</code>. Once you have those printouts, post it on Slack in the #results channel.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-79-2">Problem 79-2<a class="anchor-link" href="#Problem-79-2">&#182;</a></h1><p><em>Supplemental problems; 45% of assignment grade; 60 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p><em>Location:</em> <code>assignment-problems/refactor_linear_regressor.py</code></p>
+<p>The following code is taken from a <code>LinearRegressor</code> class. While most of the code will technically work, there may be a couple subtle issues, and the code is difficult to read.</p>
+<p>Refactor this code so that it is more readable. It should be easy to glance at and understand what's going on.</p>
+<p><strong>Note:</strong> You don't have to actually run the code. This is just an exercise in improving code readability.</p>
+
+<pre><code>  def calculate_coefficients(self):
+    final_dict = {}
+    mat = [[1 for x in list(self.df.data_dict.values())[0][0]]]
+    mat_dict = {}
+    for key in self.df.data_dict:
+      if key != self.dependent_variable:
+        mat_dict[key] = self.df.data_dict[key]
+    for row in range(len(mat_dict)):
+      mat.append(list(self.df.data_dict.values())[row][0])
+    mat = Matrix(mat)
+    mat = mat.transpose()
+    mat_t = mat.transpose()
+    mat_mult = mat_t.matrix_multiply(mat)
+    mat_inv = mat_mult.inverse()
+    mat_pseudoinv = mat_inv.matrix_multiply(mat_t)
+    multiplier = [[num] for num in list(self.df.data_dict.values())[1][0]]
+    multiplier_mat = mat_pseudoinv.matrix_multiply(Matrix(multiplier))
+    for num in range(len(multiplier_mat.elements)):
+      if num == 0:
+        key = 'constant'
+      else:
+        key = list(self.df.data_dict.keys())[num-1]
+      final_dict[key] = [row[0] for row in multiplier_mat.elements][num]
+    return final_dict</code></pre>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/syntax-in-functions">http://learnyouahaskell.com/syntax-in-functions</a>.</p>
+<blockquote><p>Pattern matching</p>
+</blockquote>
+<p>Create <strong>Haskell</strong> file <code>CrossProduct.hs</code> and write a function <code>crossProduct</code> in that takes an two input 3-dimensional tuples, <code>(x1,x2,x3)</code> and <code>(y1,y2,y3)</code> and computes the cross product.</p>
+<p>To check your function, print <code>crossProduct (1,2,3) (3,2,1)</code>. You should get a result of <code>(-4,8,4)</code>.</p>
+<p><strong>Note:</strong> This part of the section will be very useful:</p>
+
+<pre><code>addVectors :: (Num a) =&gt; (a, a) -&gt; (a, a) -&gt; (a, a)  
+addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)</code></pre>
+<p>Note that the top line just states the "type" of <code>addVectors</code>. This line says that <code>addVectors</code> works with <code>Num</code>bers <code>a</code>, and it takes two inputs of the form <code>(a, a)</code> and <code>(a, a)</code> and gives an output of the form <code>(a, a)</code>. Here, <code>a</code> just stands for the type, <code>Num</code>ber.</p>
+<h3 id="PART-3">PART 3<a class="anchor-link" href="#PART-3">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/c-tutorial-pointer/problem">https://www.hackerrank.com/challenges/c-tutorial-pointer/problem</a></p>
+</blockquote>
+<ul>
+<li>Don't overthink this one. The solution is very, very short. Be sure to ask if you have trouble.</li>
+</ul>
+<p><strong>Shell</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/bash-tutorials---arithmetic-operations/problem">https://www.hackerrank.com/challenges/bash-tutorials---arithmetic-operations/problem</a></p>
+</blockquote>
+<ul>
+<li>Be sure to check out the top-right "Tutorial" tab to read about the commands necessary to solve this problem.</li>
+</ul>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a> (queries 7,8)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-79-3">Problem 79-3<a class="anchor-link" href="#Problem-79-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>PART 1
+repl.it link: ___
+
+PART 2
+refactor_linear_regressor repl.it link: _____
+Repl.it link to Haskell code: _____
+Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+PART 3
+Issue 1: _____
+Issue 2: _____</code></pre>
 
 </div>
 </div>
