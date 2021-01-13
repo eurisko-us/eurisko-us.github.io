@@ -67,7 +67,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="46">
     <li><b>Wednesday, January 13</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) - 45-2 probability, Intro to 8 queens problem
+        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) -  Intro to 8 queens problem, 45-2 probability
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-46-1">Primary: Random Optimizer for 8 Queens Problem</a></li>
