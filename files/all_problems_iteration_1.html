@@ -13806,15 +13806,71 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>Adjustments...</p>
+<h1 id="Problem-79-1">Problem 79-1<a class="anchor-link" href="#Problem-79-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 90 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>Adjustments to the game...</p>
 <ul>
 <li><p>If you have <code>grid_size</code>, rename to <code>board_size</code>. It should be a tuple <code>(x,y)</code> instead of just 1 integer</p>
 </li>
-<li><p>In game state, change <code>"location"</code> to <code>"coords"</code></p>
+<li><p>Updates to combat strategy:</p>
+<ul>
+<li><code>decide_purchases</code>, the units should be strings (not objects)</li>
+</ul>
 </li>
-<li><p>In combat strategy <code>decide_purchases</code>, the units should be strings (not objects)</p>
+<li><p>Updates to game state:</p>
+<ul>
+<li><p>Change <code>"location"</code> to <code>"coords"</code></p>
 </li>
-<li><p>In game state,</p>
+<li><p>Unit types should be strings</p>
+</li>
+<li><p>Add a dictionaries <code>unit_data</code> and <code>technology_data</code></p>
+</li>
+</ul>
+</li>
+<li><p>Person-specific corrections (if you haven't addressed these already):</p>
+<ul>
+<li><p><strong>Colby</strong></p>
+<ul>
+<li><p>The conventions for his shipyard/colonyship class naming are incorrect: He has an underscore, he uses something called 'movement_round' in the gamestate.</p>
+</li>
+<li><p>There are a ton of other really small naming differences in the gamestate, like a player's units vs ships Board_size vs grid_size</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Riley</strong></p>
+<ul>
+<li><p>Board_size vs grid_size</p>
+</li>
+<li><p>decide_which_ship_to_attack arguments are reversed</p>
+</li>
+<li><p>combat_state is in a different format</p>
+</li>
+</ul>
+</li>
+<li><p><strong>George</strong></p>
+<ul>
+<li><p>His unit folder is called "units" (plural)</p>
+</li>
+<li><p>Shipyard and colonyship filenames don't have underscores</p>
+</li>
+<li><p>Shipyard vs ShipYard</p>
+</li>
+<li><p>coords vs pos in ship state</p>
+</li>
+<li><p>name vs type in ship state</p>
+</li>
+</ul>
+</li>
+<li><p><strong>David</strong></p>
+<ul>
+<li><p>It looks like he passes in some datastruct instead of a dictionary and accesses properties using a dot instead of square brackets.</p>
+</li>
+<li><p>He used some non-python syntax (++ increment) in his CombatStrategy</p>
+</li>
+<li><p>In decide_ship_movement he has the ship index as the attribute, which is correct, but then he uses ship.coordinates as if he is handling the object.</p>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -13828,7 +13884,7 @@ sql.query</code></pre>
         {'cp': 9
         'units': [
             {'coords': (5,10),
-            'type': Scout,
+            'type': 'Scout',
             'hits': 0,
             'technology': {
                 'attack': 1,
@@ -13836,7 +13892,7 @@ sql.query</code></pre>
                 'movement': 3
             }},
             {'coords': (1,2),
-            'type': Destroyer,
+            'type': 'Destroyer',
             'hits': 0,
             'technology': {
                 'attack': 0,
@@ -13844,21 +13900,21 @@ sql.query</code></pre>
                 'movement': 2
             }},
             {'coords': (6,0),
-            'type': Homeworld,
+            'type': 'Homeworld',
             'hits': 0,
             'turn_created': 0
             },
             {'coords': (5,3),
-            'type': Colony,
+            'type': 'Colony',
             'hits': 0,
             'turn created': 2
             }],
-        'technology': {'attack': 1, 'defense': 0, 'movement': 3, 'ship size': 0}
+        'technology': {'attack': 1, 'defense': 0, 'movement': 3, 'shipsize': 0}
     },
     {'cp': 15
         'units': [
         {'coords': (1,2),
-        'type': Battlecruiser,
+        'type': 'Battlecruiser',
         'hits': 1,
         'technology': {
             'attack': 0,
@@ -13866,7 +13922,7 @@ sql.query</code></pre>
             'movement': 0
         }},
         {'coords': (1,2),
-        'type': Scout,
+        'type': 'Scout',
         'hits': 0,
         'technology': {
             'attack': 1,
@@ -13874,7 +13930,7 @@ sql.query</code></pre>
             'movement': 0
         }},
         {'coords': (5,10),
-        'type': Scout,
+        'type': 'Scout',
         'hits': 0,
         'technology': {
             'attack': 1,
@@ -13882,30 +13938,38 @@ sql.query</code></pre>
             'movement': 0
         }},
         {'coords': (6,12),
-        'type': Homeworld,
+        'type': 'Homeworld',
         'hits': 0,
         'turn_created': 0
         },
         {'coords': (5,10),
-        'type': Colony,
-        'turn created': 1
+        'type': 'Colony',
+        'turn_created': 1
         }],
-        'technology': {'attack': 1, 'defense': 0, 'movement': 0, 'ship size': 0}
+        'technology': {'attack': 1, 'defense': 0, 'movement': 0, 'shipsize': 0}
     }],
     'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
     'unit_data': {
-        # check this against eli's
-        'Scout': {'cp_cost': _, 'hullsize': _},
-        'Scout': {'cp_cost': _, 'hullsize': _},
-        'Scout': {'cp_cost': _, 'hullsize': _},
+        'Battleship': {'cp_cost': 20, 'hullsize': 3},
+        'Battlecruiser': {'cp_cost': 15, 'hullsize': 2},
+        'Cruiser': {'cp_cost': 12, 'hullsize': 2},
+        'Destroyer': {'cp_cost': 9, 'hullsize': 1},
+        'Dreadnaught': {'cp_cost': 24, 'hullsize': 3},
+        'Scout': {'cp_cost': 6, 'hullsize': 1},
+        'Shipyard': {'cp_cost': 3, 'hullsize': 1},
+        'Decoy': {'cp_cost': 1, 'hullsize': 0},
+        'Colonyship': {'cp_cost': 8, 'hullsize': 1},
+        'Base': {'cp_cost': 12, 'hullsize': 3},
     },
     'technology_data': {
-        'shipsize': [5, 10, 15, 25] # list containing price at each level
+        # lists containing price to purchase the next level level
+        'shipsize': [10, 15, 20, 25, 30],
+        'attack': [20, 30, 40],
+        'defense': [20, 30, 40],
+        'movement': [20, 30, 40, 40, 40],
+        'shipyard': [20, 30]
     }
 }</code></pre>
-<p>Note: check out technology levels...</p>
-
-<pre><code>{'atk': {'lvls' : [-1,0,1,2], 'prices' : [20, 50 , 90], 'max' : 4}, 'def': {'lvls' : [-1,0,1,2], 'prices' : [20, 50 , 90], 'max' : 4}, 'move': {'lvls': [0,1,2,3,4,5], 'prices': [20, 50, 90, 130, 170], 'max' : 6}, 'shpyrd': {'lvls' : [0.5, 1.0, 1.5], 'prices' : [20, 50], 'max' : 2.0}, 'ss' : {'lvls': [0,1,2,3,4,5], 'prices' : [10,15,20,25,30], 'max' : 6}}</code></pre>
 
 <pre><code>
 class CombatStrategy:
@@ -13940,23 +14004,26 @@ class CombatStrategy:
         #     'technology': ['defense', 'attack', 'attack'] 
         # }
 
-    def decide_removals(self, game_state):
+    def decide_removal(self, game_state):
         ...
-        return a list of unit indices of ships that you want to remove.
+        return the unit index of the ship that you want to remove.
 
-        # for example, if you want to remove your 0th and 3rd units, you'd
-        # return [0, 3]
+        for example, if you want to remove the unit at index 2,
+        return 2
 
-    def decide_which_unit_to_attack(self, combat_state, attacker_index):
+    def decide_which_unit_to_attack(self, combat_state, coords, attacker_index)
 
-        # combat_state is the combat_state for the particular battle
-        # being considered. It will take the form
-        # {'location': (1,2),
-        #     'order': [{'player': 1, 'unit': 0},
-        #               {'player': 0, 'unit': 1},
-        #               {'player': 1, 'unit': 1},
-        #               {'player': 1, 'unit': 2}],
-        # }.
+        # combat_state is a dictionary in the form coordinates : combat_order 
+        # {
+        #    (1,2): [{'player': 1, 'unit': 0},
+        #            {'player': 0, 'unit': 1},
+        #            {'player': 1, 'unit': 1},
+        #            {'player': 1, 'unit': 2}],
+        #    (2,2): [{'player': 2, 'unit': 0},
+        #            {'player': 3, 'unit': 1},
+        #            {'player': 2, 'unit': 1},
+        #            {'player': 2, 'unit': 2}]
+        # }
 
         # attacker_index is the index of your unit, whose turn it is
         # to attack.
@@ -13987,15 +14054,6 @@ class CombatStrategy:
 
         # NOTE: FOR COMBATSTRATEGY AND DUMBSTRATEGY,
         # YOU CAN JUST RETURN AN EMPTY ARRAY</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-79-1">Problem 79-1<a class="anchor-link" href="#Problem-79-1">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 90 minutes estimate</em></p>
-<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p>I'm still working on the strategy class refactoring. I'll update the assignment later tonight with this part. In the mean time, work on the rest of the assignment.</p>
 <h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/analysis/8_queens.py</code></p>
 <p>We're going to be exploring approaches to solving the 8-queens problem on the next couple assignments.</p>
 <p>The 8-queens problem is a challenge to place 8 queens on a chess board in a way that none can attack each other. Remember that in chess, queens can attack any piece that is on the same row, column, or diagonal. So, the 8-queens problem is to place 8 queens on a chess board so that none of them are on the same row, column, or diagonal.</p>
@@ -14149,7 +14207,8 @@ addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)</code></pre>
 <h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
 
 <pre><code>PART 1
-repl.it link: ___
+repl.it link for space-empires refactoring: ____
+repl.it link for 8 queens: ____
 
 PART 2
 refactor_linear_regressor repl.it link: _____
