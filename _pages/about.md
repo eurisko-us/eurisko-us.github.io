@@ -33,7 +33,7 @@ Eurisko one of the most advanced high school math/CS sequences in the world. Stu
   
 <br><br><b>What kinds of things are the students building?</b><br>
   
-<font size="3em">First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, k-nearest neighbors and naive Bayes classifiers, decision trees, random forests, and neural networks) on top of these classes. Students also implement their own differential equations simulator and write their own SQL parser. To tie everything together, students write their own massively multiplayer game and develop self-improving game-playing agents. Additionally, students learn Bayesian inference, write academic blog posts, and work with several programming languages including Python, C++, and Haskell.</font>
+<font size="3em">First, students first write their own Matrix, DataFrame, and Graph classes, and then they write their own machine learning library (including linear and logistic regressors, k-nearest neighbors and naive Bayes classifiers, decision trees, random forests, and neural networks) on top of these classes. Students also implement their own differential equations simulator and write their own SQL parser. To tie everything together, students write their own massively multiplayer game and develop intelligent game-playing agents. Additionally, students learn Bayesian inference, write academic blog posts, and work with several programming languages including Python, C++, and Haskell.</font>
 
 <br><br><b>Where does the name "Eurisko" come from?</b><br>
 
