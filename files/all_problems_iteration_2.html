@@ -13173,6 +13173,150 @@ div#notebook {
 <p>If <code>plot=True</code>, then your function should also make a graph that plots the lowest cost at each iteration (there are <code>n</code> iterations).</p>
 <p><strong>d.</strong> Post a plot for <code>n=1000</code> iterations on #plots. Note that you'll have to join this channel on Slack by hovering over "channels", clicking the "+" that appears on the right, and browsing for "#plots".</p>
 <hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-47-1">Problem 47-1<a class="anchor-link" href="#Problem-47-1">&#182;</a></h1><p><em>Primary problems; 50% of assignment grade; 60 minutes estimate</em></p>
+<p><strong>a.</strong></p>
+<p><strong>(i)</strong> In your <code>DataFrame</code>, write a method <code>create_interaction_terms</code> that takes in the names of 2 columns and then creates another column which contains the products of the values of those columns.</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[0, 0, 1], 
+    [1, 0, 2], 
+    [2, 0, 4], 
+    [4, 0, 8], 
+    [6, 0, 9], 
+    [0, 2, 2], 
+    [0, 4, 5], 
+    [0, 6, 7], 
+    [0, 8, 6],
+    [2, 2, 0],
+    [3, 4, 0]]
+    columns = ['beef', 'pb', 'rating']
+)
+
+&gt;&gt;&gt; df = df.create_interaction_terms('beef', 'pb')
+&gt;&gt;&gt; df.columns = ['beef', 'pb', 'rating', 'beef * pb']
+&gt;&gt;&gt; df.to_array()
+    [[0, 0, 1, 0], 
+    [1, 0, 2, 0], 
+    [2, 0, 4, 0], 
+    [4, 0, 8, 0], 
+    [6, 0, 9, 0], 
+    [0, 2, 2, 0], 
+    [0, 4, 5, 0], 
+    [0, 6, 7, 0], 
+    [0, 8, 6, 0],
+    [2, 2, 0, 4],
+    [3, 4, 0, 12]]</code></pre>
+<p><strong>(ii)</strong> Fit a linear regression on the dataset above.</p>
+$$ \text{rating} = \beta_0 + \beta_1 \times (\text{beef}) + \beta_2 \times (\text{pb}) + \beta_3 \times (\text{beef})(\text{pb})$$<p>State this model in your Overleaf document, and post it on #results once you've got it.</p>
+<p><strong>(iii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef and no peanut butter. State the prediction in your Overleaf document.</p>
+<p><strong>(iv)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef AND $5$ tablespoons of peanut butter (both ingredients on the same sandwich). State the prediction in your Overleaf document.</p>
+<p><strong>(v)</strong> Look back at your answers to (iii) and (iv). Can both predictions be trusted now?</p>
+<p><strong>b.</strong> <strong>[THIS PROBLEM IS STILL BEING DEVELOPED. IT'LL BE A SHORT ONE. WILL BE UPDATED SOMETIME LATER TODAY (FRIDAY)]</strong></p>
+<p>In the near future, we're going to start building a game called Space Empires. This project will serve several purposes:</p>
+<ul>
+<li><p>It's going to be very fun -- we're going to develop intelligent game-playing agents (i.e. the software version of autonomous robots) and have them play against each other.</p>
+</li>
+<li><p>It's going to give you practice organizing, writing, and debugging code that's spread over multiple folders and files.</p>
+</li>
+<li><p>It's going to provide a real use-case for all the algorithms and machine learning stuff we have been doing and have yet to do.</p>
+</li>
+</ul>
+<p>For now, I just want you to get acquainted with the rules of the game. I will tell you some rules of the game, and I'll ask you some true/false questions afterwards.</p>
+<ol>
+<li><p>There are 2 players on a $7 \times 7$ grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scout ships and 3 Colony ships. The players also have 0 Construction Points (CPs) to begin with.</p>
+</li>
+<li><p>Scout ships and Colony ships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack level, defense level, attack technology level, defense technology level, health level.</p>
+</li>
+<li><p>On each turn, there 3 phases: economic, movement, and combat.</p>
+</li>
+<li><p>During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship. A player can also</p>
+</li>
+<li></li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-47-2">Problem 47-2<a class="anchor-link" href="#Problem-47-2">&#182;</a></h1><p><em>Supplemental problems; 40% of assignment grade; 60 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p><em>Location:</em> <code>assignment-problems/refactor_string_processing.py</code></p>
+<p>The following code is supposed to turn a string into an array. Currently, it's messy, and there's some subtle issues with the code. Clean up the code and get it to work.</p>
+<p>Some particular things to fix are:</p>
+<ul>
+<li><p>Putting whitespace where appropriate</p>
+</li>
+<li><p>Naming variables clearly</p>
+</li>
+<li><p>Deleting any pieces of code that aren't necessary</p>
+</li>
+</ul>
+
+<pre><code>string = '"alpha","beta","gamma","delta"\n1,2,3,4\n5.0,6.0,7.0.8.0'
+strings = [x.split(',') for x in string.split('\n')]
+length_of_string = len(string)
+arr = []
+for string in strings:
+    newstring = []
+    if len(string) &gt; 0:
+        for char in string:
+            if char[0]=='"' and char[-1]=='"':
+                char = char[1:]
+            elif '.' in char:
+                char = int(char)
+            else:
+                char = float(char)
+            newstring.append(char)
+        arr.append(newstring)
+print(arr)
+
+---
+
+What it should print:
+[['alpha', 'beta', 'gamma', 'delta'], [1, 2, 3, 4], [5.0, 6.0, 7.0, 8.0]]
+
+What actually happens:
+Traceback (most recent call last):
+  File "datasets/myfile.py", line 10, in &lt;module&gt;
+    char = int(char)
+ValueError: invalid literal for int() with base 10: '5.0'</code></pre>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/syntax-in-functions">http://learnyouahaskell.com/syntax-in-functions</a>.</p>
+<blockquote><p>Pattern matching</p>
+</blockquote>
+<p>Create <strong>Haskell</strong> file <code>Fibonacci.hs</code> and write a function <code>nthFibonacciNumber</code> that computes the <code>n</code>th Fibonacci number, <strong>starting with $n=0$</strong>. Remember that the Fibonacci sequence is $0,1,1,2,3,5,8,\ldots$ where each number comes from adding the previous two.</p>
+<p>To check your function, print <code>nthFibonacciNumber 20</code>. You should get a result of <code>6765</code>.</p>
+<p><strong>Note:</strong> This part of the section will be very useful, since it talks about how to write a recursive function.</p>
+
+<pre><code>factorial :: (Integral a) =&gt; a -&gt; a  
+factorial 0 = 1  
+factorial n = n * factorial (n - 1)</code></pre>
+<h3 id="PART-3">PART 3<a class="anchor-link" href="#PART-3">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/arrays-introduction/problem">https://www.hackerrank.com/challenges/arrays-introduction/problem</a></p>
+</blockquote>
+<ul>
+<li>Note that when the input is in the form of numbers separated by a space, you can read it into an array:
+<pre><code>for (int i=0; i&lt;n; i++) {
+      cin &gt;&gt; a[i];
+  }</code></pre>
+You can read the array out in a similar way.</li>
+</ul>
+<p><strong>Shell</strong></p>
 <blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-cut-1/problem">https://www.hackerrank.com/challenges/text-processing-cut-1/problem</a></p>
 </blockquote>
 <ul>
@@ -13183,15 +13327,36 @@ do
 done</code></pre>
 Again, be sure to check out the top-right "Tutorial" tab.</li>
 </ul>
-<blockquote><p><a href="https://www.hackerrank.com/challenges/arrays-introduction/problem">https://www.hackerrank.com/challenges/arrays-introduction/problem</a></p>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a> (queries 9,10)</p>
 </blockquote>
-<ul>
-<li>Note that when the input is in the form of numbers separated by a space, you can read it into an array:
-<pre><code>for (int i=0; i&lt;n; i++) {
-      cin &gt;&gt; a[i];
-  }</code></pre>
-You can read the array out in a similar way.</li>
-</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-47-3">Problem 47-3<a class="anchor-link" href="#Problem-47-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Link to overleaf doc: _____
+Repl.it link to Haskell code: _____
+Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Issue 1: _____
+Issue 2: _____</code></pre>
 
 </div>
 </div>

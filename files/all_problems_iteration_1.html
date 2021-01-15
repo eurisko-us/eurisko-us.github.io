@@ -13731,16 +13731,7 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>machine-learning/analysis/8_queens_hill_climbing.py</code></p>
-<p>Solve the 8-queens problem using hill climbing, randomized hill climbing, and simulated annealing</p>
-<p>Objective function: number of pairs of queens that are on same row, column, or diagonal</p>
-<p>initialize randomly; move 1 queen 1 space</p>
-<p>Steepest-ascent hill climbing: Repeatedly compare all possible next states and choose the one that maximizes the objective function</p>
-<p>Randomized hill climbing: Repeatedly select a neighbor at random, and decides (based on the amount of improvement in that neighbor) whether to move to that neighbor or to examine another. For our purposes, use threshold = increase objective function by 2.</p>
-<p>Random-restart hill climbing (aka "shotgun" hill climbing) -  It iteratively does hill-climbing, each time with a random initial condition $x_{0}.$ The best $x_{m}$ is kept: if a new run of hill climbing produces a better $x_{m}$ than the stored state, it replaces the stored state.</p>
-<p>run each 100 times; compute average running time; compute average ending value of the objective function; compare. Write up result in overleaf.</p>
-<p>Plot each trial on same graph; really thin lines so all 300 can be overlaid</p>
-
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -13799,6 +13790,161 @@ sql.query</code></pre>
 <li><p>put kNN and naive bayes and linear regressor in the comparison as well</p>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>machine-learning/analysis/8_queens_hill_climbing.py</code></p>
+<p>Solve the 8-queens problem using hill climbing, randomized hill climbing, and simulated annealing</p>
+<p>Objective function: number of pairs of queens that are on same row, column, or diagonal</p>
+<p>initialize randomly; move 1 queen 1 space</p>
+<p>Steepest-ascent hill climbing: Repeatedly compare all possible next states and choose the one that maximizes the objective function</p>
+<p>Randomized hill climbing: Repeatedly select a neighbor at random, and decides (based on the amount of improvement in that neighbor) whether to move to that neighbor or to examine another. For our purposes, use threshold = increase objective function by 2.</p>
+<p>Random-restart hill climbing (aka "shotgun" hill climbing) -  It iteratively does hill-climbing, each time with a random initial condition $x_{0}.$ The best $x_{m}$ is kept: if a new run of hill climbing produces a better $x_{m}$ than the stored state, it replaces the stored state.</p>
+<p>run each 100 times; compute average running time; compute average ending value of the objective function; compare. Write up result in overleaf.</p>
+<p>Plot each trial on same graph; really thin lines so all 300 can be overlaid</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-80-1">Problem 80-1<a class="anchor-link" href="#Problem-80-1">&#182;</a></h1><p><em>Primary problems; 50% of assignment grade; 60 minutes estimate</em></p>
+<p><strong>a.</strong></p>
+<p><strong>(i)</strong> In your game state, make the following updates:</p>
+<ul>
+<li><p>Change <code>"hits"</code> to <code>"hits_left"</code></p>
+</li>
+<li><p>Change <code>"Homeworld"</code> to <code>"Colony"</code></p>
+</li>
+<li><p>Put another key in your game state: <code>game_state["players"]["home_coords"]</code></p>
+</li>
+<li><p>Make sure there are no strings with spaces in them -- instead, we'll use underlines</p>
+</li>
+</ul>
+<p><strong>(ii)</strong> Once your game state / strategies are ready to be tested, post on #machine-learning to let your classmates know.</p>
+<p><strong>(iii)</strong> Run your classmates' strategies after they post that the strategies are ready. If there are any issues with their strategy, post on #machine-learning to let them know. I'm hoping that, possibly with a little back-and-forth fixing, we can have all the strategies working in everyone's games by the end of the long weekend.</p>
+<p><strong>b.</strong> <strong>[THIS PROBLEM IS STILL BEING DEVELOPED. IT WILL BE ANOTHER 8 QUEENS PROBLEM, AND THE ASSIGNMENT WILL BE UPDATED TO INCLUDE THIS PROBLEM SOMETIME TODAY (FRIDAY)]</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-80-2">Problem 80-2<a class="anchor-link" href="#Problem-80-2">&#182;</a></h1><p><em>Supplemental problems; 40% of assignment grade; 60 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p><em>Location:</em> <code>assignment-problems/refactor_string_processing.py</code></p>
+<p>The following code is supposed to turn a string into an array. Currently, it's messy, and there's some subtle issues with the code. Clean up the code and get it to work.</p>
+<p>Some particular things to fix are:</p>
+<ul>
+<li><p>Putting whitespace where appropriate</p>
+</li>
+<li><p>Naming variables clearly</p>
+</li>
+<li><p>Deleting any pieces of code that aren't necessary</p>
+</li>
+</ul>
+
+<pre><code>string = '"alpha","beta","gamma","delta"\n1,2,3,4\n5.0,6.0,7.0.8.0'
+strings = [x.split(',') for x in string.split('\n')]
+length_of_string = len(string)
+arr = []
+for string in strings:
+    newstring = []
+    if len(string) &gt; 0:
+        for char in string:
+            if char[0]=='"' and char[-1]=='"':
+                char = char[1:]
+            elif '.' in char:
+                char = int(char)
+            else:
+                char = float(char)
+            newstring.append(char)
+        arr.append(newstring)
+print(arr)
+
+---
+
+What it should print:
+[['alpha', 'beta', 'gamma', 'delta'], [1, 2, 3, 4], [5.0, 6.0, 7.0, 8.0]]
+
+What actually happens:
+Traceback (most recent call last):
+  File "datasets/myfile.py", line 10, in &lt;module&gt;
+    char = int(char)
+ValueError: invalid literal for int() with base 10: '5.0'</code></pre>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/syntax-in-functions">http://learnyouahaskell.com/syntax-in-functions</a>.</p>
+<blockquote><p>Pattern matching</p>
+</blockquote>
+<p>Create <strong>Haskell</strong> file <code>Fibonacci.hs</code> and write a function <code>nthFibonacciNumber</code> that computes the <code>n</code>th Fibonacci number, <strong>starting with $n=0$</strong>. Remember that the Fibonacci sequence is $0,1,1,2,3,5,8,\ldots$ where each number comes from adding the previous two.</p>
+<p>To check your function, print <code>nthFibonacciNumber 20</code>. You should get a result of <code>6765</code>.</p>
+<p><strong>Note:</strong> This part of the section will be very useful, since it talks about how to write a recursive function.</p>
+
+<pre><code>factorial :: (Integral a) =&gt; a -&gt; a  
+factorial 0 = 1  
+factorial n = n * factorial (n - 1)</code></pre>
+<h3 id="PART-3">PART 3<a class="anchor-link" href="#PART-3">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/arrays-introduction/problem">https://www.hackerrank.com/challenges/arrays-introduction/problem</a></p>
+</blockquote>
+<ul>
+<li>Note that when the input is in the form of numbers separated by a space, you can read it into an array:
+<pre><code>for (int i=0; i&lt;n; i++) {
+      cin &gt;&gt; a[i];
+  }</code></pre>
+You can read the array out in a similar way.</li>
+</ul>
+<p><strong>Shell</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-cut-1/problem">https://www.hackerrank.com/challenges/text-processing-cut-1/problem</a></p>
+</blockquote>
+<ul>
+<li>Tip: for the this problem, you can read input lines from a file using the following syntax:
+<pre><code>while read line
+do
+  (your code here)
+done</code></pre>
+Again, be sure to check out the top-right "Tutorial" tab.</li>
+</ul>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial">https://sqlzoo.net/wiki/SELECT_within_SELECT_Tutorial</a> (queries 9,10)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-80-3">Problem 80-3<a class="anchor-link" href="#Problem-80-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to Haskell code: _____
+Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: ____
+Commit link for space-empires repo: ____
+
+Issue 1: _____
+Issue 2: _____</code></pre>
 
 </div>
 </div>
