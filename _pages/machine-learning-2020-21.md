@@ -46,12 +46,12 @@ author_profile: false
     <td width="33%"><center>reviewed in class, ~10/5</center></td>
   </tr>
     <tr>
-    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-2" target="_blank">Quiz 1-2</a></center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-1-2" target="_blank">Quiz 1-2</a></center></td>
         <td width="33%"><center>Friday, September 18</center></td>
     <td width="33%"><center>reviewed in class, ~9/23</center></td>
   </tr>
     <tr>
-    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Quiz-1-1" target="_blank">Quiz 1-1</a></center></td>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-1-1" target="_blank">Quiz 1-1</a></center></td>
         <td width="33%"><center>Friday, September 4</center></td>
     <td width="33%"><center>reviewed in class, ~9/9</center></td>
   </tr>
@@ -64,9 +64,19 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="79">
+<font size="3em"><ol reversed start="80">
+    <li><b>Friday, January 15</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (ML is second half) -  Refactoring, standardizing game state & strategies
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-80-1">Primary: Game Refactoring, Randomized Hill Climbing for 8 Queens Problem</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-80-2">Supplementary: Refactoring Practice, Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-80-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, January 13</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) -  Intro to 8 queens problem, 45-2 probability, game state refactoring
+        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (ML is second half) -  Intro to 8 queens problem, 45-2 probability, game state refactoring
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-79-1">Primary: Game Refactoring, Random Optimizer for 8 Queens Problem</a></li>
