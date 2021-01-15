@@ -67,7 +67,7 @@ author_profile: false
 <font size="3em"><ol reversed start="80">
     <li><b>Friday, January 15</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (ML is second half) -  Refactoring, standardizing game state & strategies
-        <br>Assignment Problems:
+        <br>Assignment Problems: (will be due Monday night instead of Sunday night, since Monday is MLK day)
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-80-1">Primary: Game Refactoring, Randomized Hill Climbing for 8 Queens Problem</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-80-2">Supplementary: Refactoring Practice, Haskell, C++, Bash, SQL</a></li>
