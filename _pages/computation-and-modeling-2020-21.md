@@ -65,9 +65,19 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="46">
+<font size="3em"><ol reversed start="47">
+    <li><b>Friday, January 15</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (C&M is first half) -  Linear regression with interaction terms, refactoring practice
+        <br>Assignment Problems: (will be due Monday night instead of Sunday night, since Monday is MLK day)
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-47-1">Primary: Linear Regression with Interaction Terms</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-47-2">Supplementary: Refactoring Practice, Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-47-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, January 13</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is second half) -  Intro to 8 queens problem, 45-2 probability
+        <br><a class="body" target="_blank" href="https://vimeo.com/500218694">Class Recording</a> (C&M is first half) -  Intro to 8 queens problem, 45-2 probability
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-46-1">Primary: Random Optimizer for 8 Queens Problem</a></li>
@@ -77,7 +87,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Monday, January 11</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (C&M is second half) - 44-2 csv, probability, 45-1 breadth-first search and depth-first search
+        <br><a class="body" target="_blank" href="https://vimeo.com/499304320">Class Recording</a> (C&M is first half) - 44-2 csv, probability, 45-1 breadth-first search and depth-first search
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-45-1">Primary: Breadth-First and Depth-First Search</a></li>
@@ -87,7 +97,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Friday, January 8</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (C&M is second half) - 43-2 probability, intro to breadth-first search and depth-first search
+        <br><a class="body" target="_blank" href="https://vimeo.com/498428306">Class Recording</a> (C&M is first half) - 43-2 probability, intro to breadth-first search and depth-first search
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-44-1">Primary: Final Corrections, Sandwich Regression 1</a></li>
@@ -97,7 +107,7 @@ author_profile: false
     </li>
     <br>
     <li><b>Wednesday, January 6</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is second half) - 42-2, roulette probability, Euler estimator plotting, code review
+        <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is first half) - 42-2, roulette probability, Euler estimator plotting, code review
         <br>Student submissions (probability section of Assignment 42) -
         <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-probability-42">Nathan A</a>,
