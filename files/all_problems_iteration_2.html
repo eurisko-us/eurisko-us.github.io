@@ -13218,7 +13218,7 @@ $$ \text{rating} = \beta_0 + \beta_1 \times (\text{beef}) + \beta_2 \times (\tex
 <p><strong>(iii)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef and no peanut butter. State the prediction in your Overleaf document.</p>
 <p><strong>(iv)</strong> Use your model to predict the rating of a sandwich with $5$ slices of roast beef AND $5$ tablespoons of peanut butter (both ingredients on the same sandwich). State the prediction in your Overleaf document.</p>
 <p><strong>(v)</strong> Look back at your answers to (iii) and (iv). Can both predictions be trusted now?</p>
-<p><strong>b.</strong> <strong>[THIS PROBLEM IS STILL BEING DEVELOPED. IT'LL BE A SHORT ONE. WILL BE UPDATED SOMETIME LATER TODAY (FRIDAY)]</strong></p>
+<p><strong>b.</strong></p>
 <p>In the near future, we're going to start building a game called Space Empires. This project will serve several purposes:</p>
 <ul>
 <li><p>It's going to be very fun -- we're going to develop intelligent game-playing agents (i.e. the software version of autonomous robots) and have them play against each other.</p>
@@ -13228,17 +13228,54 @@ $$ \text{rating} = \beta_0 + \beta_1 \times (\text{beef}) + \beta_2 \times (\tex
 <li><p>It's going to provide a real use-case for all the algorithms and machine learning stuff we have been doing and have yet to do.</p>
 </li>
 </ul>
-<p>For now, I just want you to get acquainted with the rules of the game. I will tell you some rules of the game, and I'll ask you some true/false questions afterwards.</p>
-<ol>
-<li><p>There are 2 players on a $7 \times 7$ grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scout ships and 3 Colony ships. The players also have 0 Construction Points (CPs) to begin with.</p>
+<p><strong>For now, I just want you to get acquainted with the rules of the game. I will tell you some rules of the game, and I'll ask you some questions afterwards.</strong></p>
+<ul>
+<li><p>There are 2 players on a $7 \times 7$ grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scouts and 3 Colonyships. The players also have 0 Construction Points (CPs) to begin with.</p>
 </li>
-<li><p>Scout ships and Colony ships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack level, defense level, attack technology level, defense technology level, health level.</p>
+<li><p>Scouts and Colonyships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack class, attack strength, defense strength, attack technology level, defense technology level, health level.</p>
 </li>
 <li><p>On each turn, there 3 phases: economic, movement, and combat.</p>
+<ul>
+<li><p>Economic phase</p>
+<ul>
+<li><p>During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship.</p>
 </li>
-<li><p>During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship. A player can also</p>
+<li><p>A player can also build ships with any CPs it has remaining, but the ships must be built at a planet with one or more Shipyards, and the sum of the hull sizes of the ships built at a planet cannot exceed the number of Shipyards at that planet.</p>
 </li>
-<li></li>
+</ul>
+</li>
+<li><p>Movement</p>
+<ul>
+<li>The movement phase consists of 3 rounds of movement. During each round of movement, each player can move each ship by one square in any direction. If a Colonyship lands on a planet, then it can "colonize" the planet by turning into a Colony.</li>
+</ul>
+</li>
+<li><p>Combat phase</p>
+<ul>
+<li><p>During the combat phase, a combat occurs at each square containing ships from both players. Each combat proceeds in rounds until only one player's ships remain at that spot.</p>
+</li>
+<li><p>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</p>
+</li>
+<li><p>Then, a "combat order" is constructed, in which ships are sorted by their attack class. The first ship in the combat order can attack any other ship. A 10-sided die is rolled, and if the attacker's (attack strength + attack technology) minus the defender's (defense strength + defense technology) is less than or equal to the die roll, then a hit is scored. Once a ship sustains a number of hits equal to its hull size, it is destroyed.</p>
+</li>
+<li><p>The above procedure is repeated for each ship in the combat order. Then, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Questions - put your answers in your Overleaf doc</strong></p>
+<ol>
+<li><p>If a player is unable to pay the maintenance cost for one of it ships, what must the player do?</p>
+</li>
+<li><p>Even if a player has a lot of CPs, that doesn't necessarily mean it can build a lot of ships on a single turn. Why not?</p>
+</li>
+<li><p>How many spaces, in total, can a player move a ship during a turn? (Remember that the movement phase consists of multiple rounds of movement)</p>
+</li>
+<li><p>If Player A has 5 ships and Player B has 3 ships in the same square, up to how many ships can Player A screen from combat?</p>
+</li>
+<li><p>Is it possible for any of the losing player's ships to survive a combat?</p>
+</li>
 </ol>
 
 </div>
