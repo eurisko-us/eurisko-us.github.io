@@ -13837,9 +13837,9 @@ sql.query</code></pre>
 <ul>
 <li><p>By "starts with the best of 100 random locations arrays", I mean that you should start by generating 100 random locations arrays and selecting the lowest-cost array to be your initial locations array.</p>
 </li>
-<li><p>There are $8$ queens, and each queen can move in one of $4$ directions (up, down, left, right) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
+<li><p>There are $8$ queens, and each queen can move in one of $8$ directions (up, down, left, right, or in a diagonal direction) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
 </li>
-<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 4 = 32,$ though probably a little bit less. This means that on each iteration, you'll have to check about $32$ possible next location arrays and choose the one that minimies the cost function.</p>
+<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 8 = 64,$ though probably a little bit less. This means that on each iteration, you'll have to check about $64$ possible next location arrays and choose the one that minimies the cost function.</p>
 </li>
 <li><p>If multiple configurations minimize the cost, randomly select one of them. If every next configuration increases the cost, then terminate the algorithm and return the current locations.</p>
 </li>
