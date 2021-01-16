@@ -13801,7 +13801,6 @@ sql.query</code></pre>
 <p>Solve the 8-queens problem using hill climbing, randomized hill climbing, and simulated annealing</p>
 <p>Objective function: number of pairs of queens that are on same row, column, or diagonal</p>
 <p>initialize randomly; move 1 queen 1 space</p>
-<p>Steepest-ascent hill climbing: Repeatedly compare all possible next states and choose the one that maximizes the objective function</p>
 <p>Randomized hill climbing: Repeatedly select a neighbor at random, and decides (based on the amount of improvement in that neighbor) whether to move to that neighbor or to examine another. For our purposes, use threshold = increase objective function by 2.</p>
 <p>Random-restart hill climbing (aka "shotgun" hill climbing) -  It iteratively does hill-climbing, each time with a random initial condition $x_{0}.$ The best $x_{m}$ is kept: if a new run of hill climbing produces a better $x_{m}$ than the stored state, it replaces the stored state.</p>
 <p>run each 100 times; compute average running time; compute average ending value of the objective function; compare. Write up result in overleaf.</p>
@@ -13828,7 +13827,27 @@ sql.query</code></pre>
 </ul>
 <p><strong>(ii)</strong> Once your game state / strategies are ready to be tested, post on #machine-learning to let your classmates know.</p>
 <p><strong>(iii)</strong> Run your classmates' strategies after they post that the strategies are ready. If there are any issues with their strategy, post on #machine-learning to let them know. I'm hoping that, possibly with a little back-and-forth fixing, we can have all the strategies working in everyone's games by the end of the long weekend.</p>
-<p><strong>b.</strong> <strong>[THIS PROBLEM IS STILL BEING DEVELOPED. IT WILL BE ANOTHER 8 QUEENS PROBLEM, AND THE ASSIGNMENT WILL BE UPDATED TO INCLUDE THIS PROBLEM SOMETIME TODAY (FRIDAY)]</strong></p>
+<p><strong>b.</strong></p>
+<p>Create a <code>steepest_descent_optimizer(n)</code> optimizer for the 8 queens problem, which starts with the best of 100 random locations arrays, and on each iteration, repeatedly compares all possible next location arrays that result from moving one queen by one space, and chooses the one that results in the minimum cost. The algorithm will run for <code>n</code> iterations.</p>
+<p>Some clarifications:</p>
+<ul>
+<li><p>By "starts with the best of 100 random locations arrays", I mean that you should start by generating 100 random locations arrays and selecting the lowest-cost array to be your initial locations array.</p>
+</li>
+<li><p>There are $8$ queens, and each queen can move in one of $4$ directions (up, down, left, right) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
+</li>
+<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 4 = 32,$ though probably a little bit less. This means that on each iteration, you'll have to check about $32$ possible next location arrays and choose the one that minimies the cost function.</p>
+</li>
+<li><p>If multiple configurations minimize the cost, randomly select one of them. If every next configuration increases the cost, then terminate the algorithm and return the current locations.</p>
+</li>
+</ul>
+<p><strong>Important:</strong> We didn't discuss this in class, so be sure to post on Slack if you get confused on any part of this problem.</p>
+<p>Your function should again return the following dictionary:</p>
+
+<pre><code>{
+    'locations': array that resulted in the lowest cost,
+    'cost': the actual value of that lowest cost
+}</code></pre>
+<p>Print out the cost of your <code>steepest_descent_optimizer</code> for <code>n=10,50,100,500,1000</code>. Once you have those printouts, post it on Slack in the #results channel.</p>
 
 </div>
 </div>
