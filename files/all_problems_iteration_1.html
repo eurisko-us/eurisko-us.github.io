@@ -13824,6 +13824,10 @@ sql.query</code></pre>
 </li>
 <li><p>Make sure there are no strings with spaces in them -- instead, we'll use underlines</p>
 </li>
+<li><p>Attack and defense tech starts at 0; movement, ship size, and shipyard tech all start at 1</p>
+</li>
+<li><p>Colony ships are not affected by technology in general</p>
+</li>
 </ul>
 <p><strong>(ii)</strong> Once your game state / strategies are ready to be tested, post on #machine-learning to let your classmates know.</p>
 <p><strong>(iii)</strong> Run your classmates' strategies after they post that the strategies are ready. If there are any issues with their strategy, post on #machine-learning to let them know. I'm hoping that, possibly with a little back-and-forth fixing, we can have all the strategies working in everyone's games by the end of the long weekend.</p>
@@ -14084,7 +14088,7 @@ Issue 2: _____</code></pre>
         'technology': {
             'attack': 0,
             'defense': 0,
-            'movement': 0
+            'movement': 1
         }},
         {'coords': (1,2),
         'type': 'Scout',
@@ -14092,7 +14096,7 @@ Issue 2: _____</code></pre>
         'technology': {
             'attack': 1,
             'defense': 0,
-            'movement': 0
+            'movement': 1
         }},
         {'coords': (5,10),
         'type': 'Scout',
@@ -14100,7 +14104,7 @@ Issue 2: _____</code></pre>
         'technology': {
             'attack': 1,
             'defense': 0,
-            'movement': 0
+            'movement': 1
         }},
         {'coords': (6,12),
         'type': 'Homeworld',
@@ -14111,7 +14115,7 @@ Issue 2: _____</code></pre>
         'type': 'Colony',
         'turn_created': 1
         }],
-        'technology': {'attack': 1, 'defense': 0, 'movement': 0, 'shipsize': 0}
+        'technology': {'attack': 1, 'defense': 0, 'movement': 1, 'shipsize': 1}
     }],
     'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
     'unit_data': {
