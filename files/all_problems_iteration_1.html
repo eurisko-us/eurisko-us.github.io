@@ -13830,6 +13830,14 @@ sql.query</code></pre>
 </li>
 <li><p>Add <code>"ship_size_needed"</code> to the <code>"unit_data"</code> key in the game state. Otherwise, the player doesn't know what ship size technology it needs before it can buy a ship.</p>
 </li>
+<li><p>Make <code>combat_state</code> a component of <code>game_state</code>. In the corresponding strategy functions, change any inputs <code>combat_state</code> to <code>game_state</code>.</p>
+<ul>
+<li><p><code>decide_which_unit_to_attack(self, game_state, coords, attacker_index)</code></p>
+</li>
+<li><p><code>decide_which_units_to_screen(self, game_state, coords):</code></p>
+</li>
+</ul>
+</li>
 </ul>
 <p>The updated game state is shown below:</p>
 
@@ -13874,42 +13882,49 @@ sql.query</code></pre>
         {'cp': 15,
         'home_coords': (0,3),
         'units': [
-        {'coords': (1,2),
-        'type': 'Battlecruiser',
-        'hits_left': 1,
-        'technology': {
-            'attack': 0,
-            'defense': 0,
-            'movement': 1
-        }},
-        {'coords': (1,2),
-        'type': 'Scout',
-        'hits_left': 1,
-        'technology': {
-            'attack': 1,
-            'defense': 0,
-            'movement': 1
-        }},
-        {'coords': (5,10),
-        'type': 'Scout',
-        'hits_left': 1,
-        'technology': {
-            'attack': 1,
-            'defense': 0,
-            'movement': 1
-        }},
-        {'coords': (6,12),
-        'type': 'Homeworld',
-        'hits_left': 3,
-        'turn_created': 0
-        },
-        {'coords': (5,10),
-        'type': 'Colony',
-        'hits_left': 3
-        'turn_created': 1
-        }],
+            {'coords': (1,2),
+            'type': 'Battlecruiser',
+            'hits_left': 1,
+            'technology': {
+                'attack': 0,
+                'defense': 0,
+                'movement': 1
+            }},
+            {'coords': (1,2),
+            'type': 'Scout',
+            'hits_left': 1,
+            'technology': {
+                'attack': 1,
+                'defense': 0,
+                'movement': 1
+            }},
+            {'coords': (5,10),
+            'type': 'Scout',
+            'hits_left': 1,
+            'technology': {
+                'attack': 1,
+                'defense': 0,
+                'movement': 1
+            }},
+            {'coords': (6,12),
+            'type': 'Homeworld',
+            'hits_left': 3,
+            'turn_created': 0
+            },
+            {'coords': (5,10),
+            'type': 'Colony',
+            'hits_left': 3
+            'turn_created': 1
+            }],
         'technology': {'attack': 1, 'defense': 0, 'movement': 1, 'shipsize': 1}
     }],
+    'combat_state': {
+            (1,2): [{'player': 0, 'unit': 1},
+                    {'player': 1, 'unit': 1},
+                    {'player': 1, 'unit': 2}],
+            (2,2): [{'player': 0, 'unit': 0},
+                    {'player': 1, 'unit': 2}]
+        },
     'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
     'unit_data': {
         'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5},
@@ -13918,7 +13933,7 @@ sql.query</code></pre>
         'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2},
         'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6},
         'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1},
-        'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1},
+        'Shipyard': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1},
         'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1},
         'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1},
         'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2},
@@ -13932,6 +13947,91 @@ sql.query</code></pre>
         'shipyard': [20, 30]
     }
 }</code></pre>
+<p>The updated <code>Strategy</code> template is shown below:</p>
+
+<pre><code>
+class CombatStrategy:
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def will_colonize_planet(self, coordinates, game_state):
+        ...
+        return either True or False
+
+    def decide_ship_movement(self, unit_index, game_state):
+        ...
+        return a "translation" which is a tuple representing
+        the direction in which the ship moves.
+
+        # For example, if a unit located at (1,2) wanted to
+        # move to (1,1), then the translation would be (0,-1).
+
+    def decide_purchases(self, game_state):
+        ...
+        return {
+            'units': list of unit objects you want to buy,
+            'technology': list of technology attributes you want to upgrade
+        }
+
+        # for example, if you wanted to buy 2 Scouts, 1 Destroyer, 
+        # upgrade defense technology once, and upgrade attack
+        # technology twice, you'd return
+        # {
+        #     'units': ['Scout', 'Scout', 'Destroyer'],
+        #     'technology': ['defense', 'attack', 'attack'] 
+        # }
+
+    def decide_removal(self, game_state):
+        ...
+        return the unit index of the ship that you want to remove.
+
+        for example, if you want to remove the unit at index 2,
+        return 2
+
+    def decide_which_unit_to_attack(self, game_state, coords, attacker_index)
+
+        # combat_state is a dictionary in the form coordinates : combat_order 
+        # {
+        #    (1,2): [{'player': 1, 'unit': 0},
+        #            {'player': 0, 'unit': 1},
+        #            {'player': 1, 'unit': 1},
+        #            {'player': 1, 'unit': 2}],
+        #    (2,2): [{'player': 2, 'unit': 0},
+        #            {'player': 3, 'unit': 1},
+        #            {'player': 2, 'unit': 1},
+        #            {'player': 2, 'unit': 2}]
+        # }
+
+        # attacker_index is the index of your unit, whose turn it is
+        # to attack.
+
+        ...
+
+        return the index of the ship you want to attack in the 
+        combat order.
+
+        # in the above example, if you want to attack player 1's unit 1,
+        # then you'd return 2 because it corresponds to
+        # combat_state['order'][2]
+
+    def decide_which_units_to_screen(self, game_state, coords):
+
+        # again, the combat_state is the combat_state for the 
+        # particular battle
+
+        ...
+
+        return the indices of the ships you want to screen
+        in the combat order
+
+        # in the above example, if you are player 1 and you want
+        # to screen units 1 and 2, you'd return [2,3] because
+        # the ships you want to screen are
+        # combat_state['order'][2] and combat_state['order'][3]
+
+        # NOTE: FOR COMBATSTRATEGY AND DUMBSTRATEGY,
+        # YOU CAN JUST RETURN AN EMPTY ARRAY</code></pre>
 <p><strong>(ii)</strong> Once your game state / strategies are ready to be tested, post on #machine-learning to let your classmates know.</p>
 <p><strong>(iii)</strong> Run your classmates' strategies after they post that the strategies are ready. If there are any issues with their strategy, post on #machine-learning to let them know. I'm hoping that, possibly with a little back-and-forth fixing, we can have all the strategies working in everyone's games by the end of the long weekend.</p>
 <p><strong>b.</strong></p>
