@@ -13828,7 +13828,110 @@ sql.query</code></pre>
 </li>
 <li><p>Colony ships are not affected by technology in general</p>
 </li>
+<li><p>Add <code>"ship_size_needed"</code> to the <code>"unit_data"</code> key in the game state. Otherwise, the player doesn't know what ship size technology it needs before it can buy a ship.</p>
+</li>
 </ul>
+<p>The updated game state is shown below:</p>
+
+<pre><code>game_state = {
+    'turn': 4,
+    'phase': 'Combat', # Can be 'Movement', 'Economic', or 'Combat'
+    'round': None, # if the phase is movement, then round is 1, 2, or 3
+    'player_whose_turn': 0, # index of player whose turn it is (or whose ship is attacking during battle),
+    'winner': None,
+    'players': [
+        {'cp': 9,
+        'home_coords': (6,3),
+        'units': [
+            {'coords': (5,10),
+            'type': 'Scout',
+            'hits_left': 1,
+            'technology': {
+                'attack': 1,
+                'defense': 0,
+                'movement': 3
+            }},
+            {'coords': (1,2),
+            'type': 'Destroyer',
+            'hits_left': 1,
+            'technology': {
+                'attack': 0,
+                'defense': 0,
+                'movement': 2
+            }},
+            {'coords': (6,0),
+            'type': 'Homeworld',
+            'hits_left': 2,
+            'turn_created': 0
+            },
+            {'coords': (5,3),
+            'type': 'Colony',
+            'hits_left': 1,
+            'turn created': 2
+            }],
+        'technology': {'attack': 1, 'defense': 0, 'movement': 3, 'shipsize': 1}
+        },
+        {'cp': 15,
+        'home_coords': (0,3),
+        'units': [
+        {'coords': (1,2),
+        'type': 'Battlecruiser',
+        'hits_left': 1,
+        'technology': {
+            'attack': 0,
+            'defense': 0,
+            'movement': 1
+        }},
+        {'coords': (1,2),
+        'type': 'Scout',
+        'hits_left': 1,
+        'technology': {
+            'attack': 1,
+            'defense': 0,
+            'movement': 1
+        }},
+        {'coords': (5,10),
+        'type': 'Scout',
+        'hits_left': 1,
+        'technology': {
+            'attack': 1,
+            'defense': 0,
+            'movement': 1
+        }},
+        {'coords': (6,12),
+        'type': 'Homeworld',
+        'hits_left': 3,
+        'turn_created': 0
+        },
+        {'coords': (5,10),
+        'type': 'Colony',
+        'hits_left': 3
+        'turn_created': 1
+        }],
+        'technology': {'attack': 1, 'defense': 0, 'movement': 1, 'shipsize': 1}
+    }],
+    'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
+    'unit_data': {
+        'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5},
+        'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4},
+        'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3},
+        'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2},
+        'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6},
+        'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1},
+        'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1},
+        'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1},
+        'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1},
+        'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2},
+    },
+    'technology_data': {
+        # lists containing price to purchase the next level level
+        'shipsize': [10, 15, 20, 25, 30],
+        'attack': [20, 30, 40],
+        'defense': [20, 30, 40],
+        'movement': [20, 30, 40, 40, 40],
+        'shipyard': [20, 30]
+    }
+}</code></pre>
 <p><strong>(ii)</strong> Once your game state / strategies are ready to be tested, post on #machine-learning to let your classmates know.</p>
 <p><strong>(iii)</strong> Run your classmates' strategies after they post that the strategies are ready. If there are any issues with their strategy, post on #machine-learning to let them know. I'm hoping that, possibly with a little back-and-forth fixing, we can have all the strategies working in everyone's games by the end of the long weekend.</p>
 <p><strong>b.</strong></p>
@@ -13872,7 +13975,7 @@ sql.query</code></pre>
 </li>
 </ul>
 
-<pre><code>string = '"alpha","beta","gamma","delta"\n1,2,3,4\n5.0,6.0,7.0.8.0'
+<pre><code>string = '"alpha","beta","gamma","delta"\n1,2,3,4\n5.0,6.0,7.0,8.0'
 strings = [x.split(',') for x in string.split('\n')]
 length_of_string = len(string)
 arr = []
@@ -14119,16 +14222,16 @@ Issue 2: _____</code></pre>
     }],
     'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
     'unit_data': {
-        'Battleship': {'cp_cost': 20, 'hullsize': 3},
-        'Battlecruiser': {'cp_cost': 15, 'hullsize': 2},
-        'Cruiser': {'cp_cost': 12, 'hullsize': 2},
-        'Destroyer': {'cp_cost': 9, 'hullsize': 1},
-        'Dreadnaught': {'cp_cost': 24, 'hullsize': 3},
-        'Scout': {'cp_cost': 6, 'hullsize': 1},
-        'Shipyard': {'cp_cost': 3, 'hullsize': 1},
-        'Decoy': {'cp_cost': 1, 'hullsize': 0},
-        'Colonyship': {'cp_cost': 8, 'hullsize': 1},
-        'Base': {'cp_cost': 12, 'hullsize': 3},
+        'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5},
+        'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4},
+        'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3},
+        'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2},
+        'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6},
+        'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1},
+        'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1},
+        'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1},
+        'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1},
+        'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2},
     },
     'technology_data': {
         # lists containing price to purchase the next level level
