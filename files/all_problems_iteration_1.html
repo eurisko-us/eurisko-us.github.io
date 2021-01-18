@@ -13830,14 +13830,6 @@ sql.query</code></pre>
 </li>
 <li><p>Add <code>"ship_size_needed"</code> to the <code>"unit_data"</code> key in the game state. Otherwise, the player doesn't know what ship size technology it needs before it can buy a ship.</p>
 </li>
-<li><p>Make <code>combat_state</code> a component of <code>game_state</code>. In the corresponding strategy functions, change any inputs <code>combat_state</code> to <code>game_state</code>.</p>
-<ul>
-<li><p><code>decide_which_unit_to_attack(self, game_state, coords, attacker_index)</code></p>
-</li>
-<li><p><code>decide_which_units_to_screen(self, game_state, coords):</code></p>
-</li>
-</ul>
-</li>
 </ul>
 <p>The updated game state is shown below:</p>
 
@@ -13918,13 +13910,6 @@ sql.query</code></pre>
             }],
         'technology': {'attack': 1, 'defense': 0, 'movement': 1, 'shipsize': 1}
     }],
-    'combat_state': {
-            (1,2): [{'player': 0, 'unit': 1},
-                    {'player': 1, 'unit': 1},
-                    {'player': 1, 'unit': 2}],
-            (2,2): [{'player': 0, 'unit': 0},
-                    {'player': 1, 'unit': 2}]
-        },
     'planets': [(5,3), (5,10), (1,2), (4,8), (9,1)],
     'unit_data': {
         'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5},
@@ -13947,7 +13932,7 @@ sql.query</code></pre>
         'shipyard': [20, 30]
     }
 }</code></pre>
-<p>The updated <code>Strategy</code> template is shown below:</p>
+<p>The <code>Strategy</code> template is shown below:</p>
 
 <pre><code>
 class CombatStrategy:
@@ -13989,7 +13974,7 @@ class CombatStrategy:
         for example, if you want to remove the unit at index 2,
         return 2
 
-    def decide_which_unit_to_attack(self, game_state, coords, attacker_index)
+    def decide_which_unit_to_attack(self, combat_state, coords, attacker_index)
 
         # combat_state is a dictionary in the form coordinates : combat_order 
         # {
@@ -14015,7 +14000,7 @@ class CombatStrategy:
         # then you'd return 2 because it corresponds to
         # combat_state['order'][2]
 
-    def decide_which_units_to_screen(self, game_state, coords):
+    def decide_which_units_to_screen(self, combat_state, coords):
 
         # again, the combat_state is the combat_state for the 
         # particular battle
