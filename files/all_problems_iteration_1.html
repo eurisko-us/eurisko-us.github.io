@@ -13830,6 +13830,15 @@ sql.query</code></pre>
 </li>
 <li><p>Add <code>"ship_size_needed"</code> to the <code>"unit_data"</code> key in the game state. Otherwise, the player doesn't know what ship size technology it needs before it can buy a ship.</p>
 </li>
+<li><p>Change the output of <code>decide_purchases</code> to specify locations at which to build the ships, like this:</p>
+
+<pre><code>{
+  'units': [{'type': 'Scout', 'location': (2,1)},
+            {'type': 'Scout', 'location': (2,1)},
+            {'type': 'Destroyer', 'location': (2,1)},
+  'technology': ['defense', 'attack', 'attack'] 
+}</code></pre>
+</li>
 </ul>
 <p>The updated game state is shown below:</p>
 
@@ -13963,8 +13972,10 @@ class CombatStrategy:
         # upgrade defense technology once, and upgrade attack
         # technology twice, you'd return
         # {
-        #     'units': ['Scout', 'Scout', 'Destroyer'],
-        #     'technology': ['defense', 'attack', 'attack'] 
+        #    'units': [{'type': 'Scout', 'location': (2,1)},
+        #            {'type': 'Scout', 'location': (2,1)},
+        #            {'type': 'Destroyer', 'location': (2,1)},
+        #    'technology': ['defense', 'attack', 'attack'] 
         # }
 
     def decide_removal(self, game_state):
