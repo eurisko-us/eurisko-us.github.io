@@ -13200,7 +13200,9 @@ div#notebook {
 )
 
 &gt;&gt;&gt; df = df.create_interaction_terms('beef', 'pb')
-&gt;&gt;&gt; df.columns = ['beef', 'pb', 'rating', 'beef * pb']
+&gt;&gt;&gt; df.columns
+['beef', 'pb', 'rating', 'beef * pb']
+
 &gt;&gt;&gt; df.to_array()
     [[0, 0, 1, 0], 
     [1, 0, 2, 0], 
@@ -13232,7 +13234,7 @@ $$ \text{rating} = \beta_0 + \beta_1 \times (\text{beef}) + \beta_2 \times (\tex
 <ul>
 <li><p>There are 2 players on a $7 \times 7$ grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scouts and 3 Colonyships. The players also have 0 Construction Points (CPs) to begin with.</p>
 </li>
-<li><p>Scouts and Colonyships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack class, attack strength, defense strength, attack technology level, defense technology level, health level.</p>
+<li><p>Scouts and Colonyships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack class, attack strength, defense strength, attack technology level, defense technology level, health level. Regardless of the number needed to hit, a roll of 1 will always score a hit.</p>
 </li>
 <li><p>On each turn, there 3 phases: economic, movement, and combat.</p>
 <ul>
