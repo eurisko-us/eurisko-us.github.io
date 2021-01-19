@@ -17,7 +17,7 @@ author_profile: false
 <table style="width:80%">
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
-    <td width="33%"><center>Friday, January 15</center></td>
+    <td width="33%"><center>Friday, January 29</center></td>
     <td width="33%"><center></center></td>
   </tr>
   <tr>
