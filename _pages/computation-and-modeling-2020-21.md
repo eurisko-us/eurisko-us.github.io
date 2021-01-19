@@ -68,7 +68,7 @@ author_profile: false
 <font size="3em"><ol reversed start="47">
     <li><b>Friday, January 15</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (C&M is first half) -  Linear regression with interaction terms, refactoring practice
-        <br>Assignment Problems: (will be due Monday night instead of Sunday night, since Monday is MLK day)
+        <br>Assignment Problems: (will be due Tuesday night instead of Sunday night, since Monday is a holiday)
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-47-1">Primary: Linear Regression with Interaction Terms</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-47-2">Supplementary: Refactoring Practice, Haskell, C++, Bash, SQL</a></li>
