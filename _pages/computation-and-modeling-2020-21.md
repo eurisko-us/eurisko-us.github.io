@@ -65,7 +65,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="47">
+<font size="3em"><ol reversed start="48">
+    <li><b>Wednesday, January 20</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/502725179">Class Recording</a> (C&M is first half) - logistic regression implementation, refactoring practice
+        <br>Assignment Problems: (will be due Tuesday night instead of Sunday night, since Monday is a holiday)
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-48-1">Primary: LogisticRegressor, Space Empires Rules</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-48-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-48-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 15</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (C&M is first half) -  Linear regression with interaction terms, refactoring practice
         <br>Assignment Problems: (will be due Tuesday night instead of Sunday night, since Monday is a holiday)
