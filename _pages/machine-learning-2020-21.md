@@ -64,7 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="80">
+<font size="3em"><ol reversed start="81">
+    <li><b>Wednesday, January 20</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (ML is second half) -  Refactoring, random forest, Space Empires
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-81-1">Primary: Game Refactoring, Max Depth in Random Decision Tree / Random Forest</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-81-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-81-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 15</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/501012142">Class Recording</a> (ML is second half) -  Refactoring, standardizing game state & strategies
         <br>Assignment Problems: (will be due Tuesday night instead of Sunday night, since Monday is a holiday)
