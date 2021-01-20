@@ -13776,12 +13776,23 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> Refactor to make a random forest faster &amp; do another comparison</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>machine-learning/analysis/8_queens_hill_climbing.py</code></p>
+<p>Solve the 8-queens problem using hill climbing, randomized hill climbing, and simulated annealing</p>
+<p>Objective function: number of pairs of queens that are on same row, column, or diagonal</p>
+<p>initialize randomly; move 1 queen 1 space</p>
+<p>Randomized hill climbing: Repeatedly select a neighbor at random, and decides (based on the amount of improvement in that neighbor) whether to move to that neighbor or to examine another. For our purposes, use threshold = increase objective function by 2.</p>
+<p>Random-restart hill climbing (aka "shotgun" hill climbing) -  It iteratively does hill-climbing, each time with a random initial condition $x_{0}.$ The best $x_{m}$ is kept: if a new run of hill climbing produces a better $x_{m}$ than the stored state, it replaces the stored state.</p>
+<p>run each 100 times; compute average running time; compute average ending value of the objective function; compare. Write up result in overleaf.</p>
+<p>Plot each trial on same graph; really thin lines so all 300 can be overlaid</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Finally, we'll refactor our random forest into a proper random forest</p>
 <ul>
-<li><p>max depth (so that the trees train faster)</p>
-</li>
-<li><p>each tree is only trained on a subset of the training data given to the random forest (so that the trees train faster; fixed percentage, randomly sampled with replacement)</p>
-</li>
 <li><p>now that the trees are faster, we can afford to bring back gini. But we don't want to force</p>
 <ul>
 <li>random decision tree should select random feature, but we should still use the gini metric to find the best split in the randomly selected set of columns</li>
@@ -13797,14 +13808,155 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><code>machine-learning/analysis/8_queens_hill_climbing.py</code></p>
-<p>Solve the 8-queens problem using hill climbing, randomized hill climbing, and simulated annealing</p>
-<p>Objective function: number of pairs of queens that are on same row, column, or diagonal</p>
-<p>initialize randomly; move 1 queen 1 space</p>
-<p>Randomized hill climbing: Repeatedly select a neighbor at random, and decides (based on the amount of improvement in that neighbor) whether to move to that neighbor or to examine another. For our purposes, use threshold = increase objective function by 2.</p>
-<p>Random-restart hill climbing (aka "shotgun" hill climbing) -  It iteratively does hill-climbing, each time with a random initial condition $x_{0}.$ The best $x_{m}$ is kept: if a new run of hill climbing produces a better $x_{m}$ than the stored state, it replaces the stored state.</p>
-<p>run each 100 times; compute average running time; compute average ending value of the objective function; compare. Write up result in overleaf.</p>
-<p>Plot each trial on same graph; really thin lines so all 300 can be overlaid</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Make the following adjustment to your random forest:</p>
+<ul>
+<li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
+<ul>
+<li><p>In our case, we have about 70 records, and in each test-train split, we're using 80% as training data, so that's about 56 records. Now, if we set <code>training_percentage = 0.3</code>, then we randomly choose $0.3 \times 56 \approx 17$ records from the training data to actually fit the decision tree.</p>
+</li>
+<li><p>When randomly selecting the records, use random selection <em>with replacement</em>. In other words, it's okay to select duplicate data records.</p>
+</li>
+</ul>
+</li>
+<li><p>When you initialize the random forest, pass a <code>training_percentage</code> parameter that, in turn, gets passed to the random decision trees.</p>
+</li>
+</ul>
+<p><strong>c.</strong> Repeat problem 77-1 using the following models, with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
+<ul>
+<li><p>A single random decision tree</p>
+</li>
+<li><p>Random forest with 10 trees</p>
+</li>
+<li><p>Random forest with 100 trees</p>
+</li>
+<li><p>Random forest with 1,000 trees</p>
+</li>
+<li><p>Random forest with 10,000 trees</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-81-1">Problem 81-1<a class="anchor-link" href="#Problem-81-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
+<p><strong>a.</strong> If your game doesn't already do this, make it so that if a player commits an invalid move (such as moving off the grid), the game stops.</p>
+<p><strong>b.</strong> Now that we've solved a bunch of issues in our games, it's time to slow down, focus on 1-2 strategies at a time, and make sure that we all get the same results.</p>
+<p>We'll start with Elijah's <code>DumbStrategy</code> AND George's <code>DumbStrategy</code>. Run your DumbPlayer tests with both of these strategies. If they pass, great. If not, then figure out what's going wrong. If it's clear how to fix it, do so. Otherwise, if it's not clear how to fix it, then post on Slack to get help.</p>
+<ul>
+<li>In case you need it: Probem 80-1 has templates of the <code>game_state</code> and the <code>Strategy</code> class.</li>
+</ul>
+<p><strong>c.</strong> Make the following adjustment to your random forest:</p>
+<ul>
+<li><p>In your random decision tree, create a <code>max_depth</code> parameter that stops splitting any nodes beyond the <code>max_depth</code>. For example, if <code>max_depth = 2</code>, then you would stop splitting a node once it is 2 units away from the root of the tree.</p>
+<ul>
+<li>A consequence of this is that the terminal nodes might not be pure. If a terminal node is impure, then it represents the majority class. (If there are equal amounts of each class, just choose randomly.)</li>
+</ul>
+</li>
+<li><p>When you initialize the random forest, pass a <code>max_depth</code> parameter that, in turn, gets passed to the random decision trees.</p>
+</li>
+</ul>
+<p>On the next assignment, we'll make another adjustment, and then on the assignment after that, we'll make one more adjustment, and finally, we'll have "proper" random forests that we'll use to re-run analysis 77-1. But I figured we should break up this task over multiple assignments since it's a bit of work and we've also got to keep making progress on the game refactoring.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-81-2">Problem 81-2<a class="anchor-link" href="#Problem-81-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Observe the following example:</p>
+
+<pre><code>bmiTell :: (RealFloat a) =&gt; a -&gt; a -&gt; String  
+bmiTell weight height  
+    | bmi &lt;= underweightThreshold = "The patient may be underweight. If this is the case, the patient should be recommended a higher-calorie diet."  
+    | bmi &lt;= normalThreshold = "The patient may be at a normal weight."   
+    | otherwise = "The patient may be overweight. If this is the case, the patient should be recommended exercise and a lower-calorie diet."  
+    where bmi = weight / height ^ 2  
+          underweightThreshold = 18.5  
+          normalThreshold = 25.0</code></pre>
+<p>Create a <strong>Haskell</strong> file <code>RecommendClothing.hs</code> and write a function <code>recommendClothing</code> that takes the input <code>degreesCelsius</code>, converts it to <code>degreesFahrenheit</code> (multiply by $\dfrac{9}{5}$ and add $32$), and makes the following recommendations:</p>
+<ul>
+<li><p>If the temperature is $ \geq 80 \, ^\circ \textrm{F},$ then recommend to wear a shortsleeve shirt.</p>
+</li>
+<li><p>If the temperature is $ &gt; 65 \, ^\circ \textrm{F}$ but $ &lt; 80 \, ^\circ \textrm{F},$ then recommend to wear a longsleeve shirt.</p>
+</li>
+<li><p>If the temperature is $ &gt; 50 \, ^\circ \textrm{F}$ but $ &lt; 65 \, ^\circ \textrm{F},$ then recommend to wear a sweater.</p>
+</li>
+<li><p>If the temperature is $ \leq 50 \, ^\circ \textrm{F},$ then recommend to wear a jacket.</p>
+</li>
+</ul>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/c-tutorial-strings/problem">https://www.hackerrank.com/challenges/c-tutorial-strings/problem</a></p>
+</blockquote>
+<ul>
+<li>Note that you can slice strings like this:
+<pre><code>myString.substr(1, 3)</code></pre>
+</li>
+</ul>
+<p><strong>Shell</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-cut-2/problem">https://www.hackerrank.com/challenges/text-processing-cut-2/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-3/problem">https://www.hackerrank.com/challenges/text-processing-cut-3/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-4/problem">https://www.hackerrank.com/challenges/text-processing-cut-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-5/problem">https://www.hackerrank.com/challenges/text-processing-cut-5/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-6/problem">https://www.hackerrank.com/challenges/text-processing-cut-6/problem</a></p>
+</blockquote>
+<ul>
+<li><p>Here are some useful templates:</p>
+<ul>
+<li><p><code>cut -c2-4</code> means print characters $2$ through $4$ for each line in the file.</p>
+</li>
+<li><p><code>cut -d',' -f2-4</code> means print fields $2$ through $4$ for each line the file, where the fields are separated by the delimiter <code>','</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>You can also look at this resource for some examples: <a href="https://www.folkstalk.com/2012/02/cut-command-in-unix-linux-examples.html">https://www.folkstalk.com/2012/02/cut-command-in-unix-linux-examples.html</a></p>
+</li>
+<li><p>These problems are all one-liners. If you find yourself spending more than a couple minutes on these, be sure to ask for help.</p>
+</li>
+</ul>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SUM_and_COUNT">https://sqlzoo.net/wiki/SUM_and_COUNT</a> (queries 1,2,3,4,5)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-81-3">Problem 81-3<a class="anchor-link" href="#Problem-81-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ol>
+<li><p>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</p>
+</li>
+<li><p>~Resolve an issue that has been made on your own GitHub repository. When you submit your assignment, include a link to the issue you resolved. (If you don't have any issues on any of your repositories, then you don't have to do anything, but state that this is the case when you turn in your assignment.)~ <strong>Let's actually hold off on this bit for the next couple weeks, so that we can build up an inventory of issues on our repositories. Then, once we have an inventory of 5-10 issues to choose from each time, we can start resolving them.</strong></p>
+</li>
+</ol>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Link to random forest analysis file: _____
+Overleaf link to random forest results: _____
+
+Repl.it link to Haskell code: _____
+Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Issue 1: _____
+Issue 2: _____</code></pre>
 
 </div>
 </div>
