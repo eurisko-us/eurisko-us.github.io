@@ -14004,9 +14004,9 @@ Issue 2: _____</code></pre>
 <li><p>Change the output of <code>decide_purchases</code> to specify locations at which to build the ships, like this:</p>
 
 <pre><code>{
-  'units': [{'type': 'Scout', 'location': (2,1)},
-            {'type': 'Scout', 'location': (2,1)},
-            {'type': 'Destroyer', 'location': (2,1)},
+  'units': [{'type': 'Scout', 'coords': (2,1)},
+            {'type': 'Scout', 'coords': (2,1)},
+            {'type': 'Destroyer', 'coords': (2,1)},
   'technology': ['defense', 'attack', 'attack'] 
 }</code></pre>
 </li>
@@ -14143,9 +14143,9 @@ class CombatStrategy:
         # upgrade defense technology once, and upgrade attack
         # technology twice, you'd return
         # {
-        #    'units': [{'type': 'Scout', 'location': (2,1)},
-        #            {'type': 'Scout', 'location': (2,1)},
-        #            {'type': 'Destroyer', 'location': (2,1)},
+        #    'units': [{'type': 'Scout', 'coords': (2,1)},
+        #            {'type': 'Scout', 'coords': (2,1)},
+        #            {'type': 'Destroyer', 'coords': (2,1)},
         #    'technology': ['defense', 'attack', 'attack'] 
         # }
 
