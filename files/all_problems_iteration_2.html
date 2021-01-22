@@ -13251,17 +13251,17 @@ This way, you don't have to worry about order.
 
 &gt;&gt;&gt; children = set(tree.root.children)
 
-&gt;&gt;&gt; grandchildren = {}
+&gt;&gt;&gt; grandchildren = set([])
 &gt;&gt;&gt; for child in children:
-        grandchildren += set(child.children)
+        grandchildren = grandchildren.union(set(child.children))
 
-&gt;&gt;&gt; great_grandchildren = {}
+&gt;&gt;&gt; great_grandchildren = set([])
 &gt;&gt;&gt; for grandchild in grandchildren:
-        great_grandchildren += set(grandchild.children)
+        great_grandchildren = great_grandchildren.union(set(grandchild.children))
 
-&gt;&gt;&gt; great_great_grandchildren = {}
+&gt;&gt;&gt; great_great_grandchildren = set([])
 &gt;&gt;&gt; for great_grandchild in great_grandchildren:
-        great_great_grandchildren += set(great_grandchild.children)
+        great_great_grandchildren = great_great_grandchildren.union(set(great_grandchild.children))
 
 &gt;&gt;&gt; {node.index for node in children}
 {0, 8, 6}
@@ -13333,17 +13333,17 @@ b b bb
 
 &gt;&gt;&gt; children = set(tree.root.children)
 
-&gt;&gt;&gt; grandchildren = {}
+&gt;&gt;&gt; grandchildren = set([])
 &gt;&gt;&gt; for child in children:
-        grandchildren += set(child.children)
+        grandchildren = grandchildren.union(set(child.children))
 
-&gt;&gt;&gt; great_grandchildren = {}
+&gt;&gt;&gt; great_grandchildren = set([])
 &gt;&gt;&gt; for grandchild in grandchildren:
-        great_grandchildren += set(grandchild.children)
+        great_grandchildren = great_grandchildren.union(set(grandchild.children))
 
-&gt;&gt;&gt; great_great_grandchildren = {}
+&gt;&gt;&gt; great_great_grandchildren = set([])
 &gt;&gt;&gt; for great_grandchild in great_grandchildren:
-        great_great_grandchildren += set(great_grandchild.children)
+        great_great_grandchildren = great_great_grandchildren.union(set(great_grandchild.children))
 
 &gt;&gt;&gt; {node.index for node in children}
 {0, 8, 6}
