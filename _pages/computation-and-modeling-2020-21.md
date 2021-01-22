@@ -65,9 +65,19 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="48">
+<font size="3em"><ol reversed start="49">
+    <li><b>Friday, January 22</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/503582121">Class Recording</a> (C&M is first half) - space empires rules, node indices in tree
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-49-1">Primary: Node Indices, Logistic Regression on Sandwich Dataset with Interaction Terms</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-49-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-49-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, January 20</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/502725179">Class Recording</a> (C&M is first half) - logistic regression implementation, refactoring practice
+        <br><a class="body" target="_blank" href="https://vimeo.com/502725179">Class Recording</a> (C&M is first half) - logistic regression implementation, space empires rules, refactoring practice
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-48-1">Primary: LogisticRegressor, Space Empires Rules</a></li>
