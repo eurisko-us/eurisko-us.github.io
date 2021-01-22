@@ -13206,7 +13206,7 @@ This means that the nodes will be as follows:
 - the node with index 9 will have value 'j'
 - the node with index 10 will have value 'k'
 
-&gt;&gt;&gt; edges = [(0,2), (4,6), (4,8), (4,0), (6,1), (0,3), (3,5), (5,7), (3,9), (2,10)]
+&gt;&gt;&gt; edges = [(0,2), (4,6), (4,8), (4,0), (3,1), (0,3), (3,5), (5,7), (3,9), (3,10)]
 
 Note: now, we're phrasing the edges in terms of
 node indices instead of node values.
@@ -13214,7 +13214,7 @@ node indices instead of node values.
 The corresponding values would be the ones
 we're already using in our tests:
 
-[('a','c'), ('e','g'), ('e','i'), ('e','a'), ('g','b'), ('a','d'), ('d','f'), ('f','h'), ('d','j'), ('c','k')]
+[('a','c'), ('e','g'), ('e','i'), ('e','a'), ('d','b'), ('a','d'), ('d','f'), ('f','h'), ('d','j'), ('d','k')]
 
 &gt;&gt;&gt; tree = Tree(edges, node_values)
 &gt;&gt;&gt; tree.build_from_edges()
@@ -13299,7 +13299,7 @@ This means that the nodes will be as follows:
 - the node with index 9 will have value 'b'
 - the node with index 10 will have value 'b'
 
-&gt;&gt;&gt; edges = [(0,2), (4,6), (4,8), (4,0), (6,1), (0,3), (3,5), (5,7), (3,9), (2,10)]
+&gt;&gt;&gt; edges = [(0,2), (4,6), (4,8), (4,0), (3,1), (0,3), (3,5), (5,7), (3,9), (3,10)]
 
 &gt;&gt;&gt; tree = Tree(edges, node_values)
 &gt;&gt;&gt; tree.build_from_edges()
