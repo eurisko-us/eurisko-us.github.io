@@ -13370,7 +13370,7 @@ $$
 $$<p>Note that you will have to update your calculation of <code>y_transformed</code> accordingly:</p>
 $$
 y' = \ln \left( \dfrac{\textrm{upper_bound}}{y} - 1 \right)
-$$<p><strong>c.</strong> Use your <code>LogisticRegressor</code> to fit the sandwich dataset <em>with interaction terms</em>.</p>
+$$<p><strong>c.</strong> Use your <code>LogisticRegressor</code> to fit the sandwich dataset <em>with interaction terms</em>. <strong>Note that any ratings of 0 need to be changed to a small positive number, say 0.1, for the logistic regressor to be able to fit the data.</strong></p>
 
 <pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
     [[0, 0, 1], 
@@ -13382,8 +13382,8 @@ $$<p><strong>c.</strong> Use your <code>LogisticRegressor</code> to fit the sand
     [0, 4, 5], 
     [0, 6, 7], 
     [0, 8, 6],
-    [2, 2, 0],
-    [3, 4, 0]]
+    [2, 2, 0.1],
+    [3, 4, 0.1]]
     columns = ['beef', 'pb', 'rating']
 )</code></pre>
 <p>Your logistic regression should take the form</p>
