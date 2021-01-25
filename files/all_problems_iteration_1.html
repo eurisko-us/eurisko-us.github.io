@@ -13808,15 +13808,7 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>a.</strong> In your random decision tree, make the random split selection a little bit smarter. First, randomly choose a feature (i.e. variable name) to split on. But then, instead of choosing a random split for that feature, choose the optimal split as determined by the Gini metric.</p>
-<ul>
-<li>This is technically what's meant by a random decision tree -- it chooses each split <em>feature</em> randomly, but it chooses the best split value for each feature. I intended for us to make this update right after problem 77-1 and compare the results, but I forgot about it, so we'll do it now. (And then, next week, we'll run the analysis again using the <code>max_depth</code> parameter and another speedup trick.)</li>
-</ul>
-<p><strong>b.</strong> Run your analysis from 77-1 again, now that your random decision tree has been updated. Post your results on #results.</p>
-<ul>
-<li>(Don't set a <code>max_depth</code> yet -- we'll do that in the near future.)</li>
-</ul>
-<hr>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><hr>
 <p><strong>a.</strong> Make the following adjustment to your random forest:</p>
 <ul>
 <li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
@@ -13927,6 +13919,141 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><ul>
+<li><p>officially change to [0, 10, 15, ...]</p>
+</li>
+<li><p>David -- add <code>colony_coords</code> to</p>
+</li>
+</ul>
+
+<pre><code>def decide_purchases(self, game_state, colony_coords):
+        ...
+        return {
+            'units': list of unit objects you want to buy,
+            'technology': list of technology attributes you want to upgrade
+        }
+
+        # for example, if you wanted to buy 2 Scouts, 1 Destroyer, 
+        # upgrade defense technology once, and upgrade attack
+        # technology twice, you'd return
+        # {
+        #    'units': [{'type': 'Scout', 'coords': (2,1)},
+        #            {'type': 'Scout', 'coords': (2,1)},
+        #            {'type': 'Destroyer', 'coords': (2,1)},
+        #    'technology': ['defense', 'attack', 'attack'] 
+        # }</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Calc shortest path in weighted graph</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-83-1">Problem 83-1<a class="anchor-link" href="#Problem-83-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
+<p><strong>a.</strong> In your random decision tree, make the random split selection a little bit smarter. First, randomly choose a feature (i.e. variable name) to split on. But then, instead of choosing a random split for that feature, choose the optimal split as determined by the Gini metric.</p>
+<ul>
+<li>This is technically what's meant by a random decision tree -- it chooses each split <em>feature</em> randomly, but it chooses the best split value for each feature. I intended for us to make this update right after problem 77-1 and compare the results, but I forgot about it, so we'll do it now. (And then, in the future, we'll run the analysis again using the <code>max_depth</code> parameter plus another speedup trick.)</li>
+</ul>
+<p><strong>b.</strong> Run your analysis from 77-1 again, now that your random decision tree has been updated. Post your results on #results.</p>
+<ul>
+<li>(Don't set a <code>max_depth</code> yet -- we'll do that in the near future.)</li>
+</ul>
+<p><strong>c.</strong> Create a strategy class <code>AggressiveStrategy</code> that buys ships/technology in the same way as <code>CombatPlayer</code>, but sends all their ships directly upward (or downward) towards the enemy home colony.</p>
+<ul>
+<li><p>This should ideally result in battles in multiple locations on the path between the two home colonies, and there should be an actual winner of the game.</p>
+</li>
+<li><p>Battle two <code>AggressiveStrategy</code> players against each other. Post the following on #results:</p>
+</li>
+</ul>
+
+<pre><code>Ascending die rolls:
+ - num turns: ___
+ - num combats: ___
+ - winner: ___ (Player 0 or Player 1?)
+ - Player 1 ending CP: ___
+ - Player 2 ending CP: ___
+
+Descending die rolls:
+ - num turns: ___
+ - num combats: ___
+ - winner: ___ (Player 0 or Player 1?)
+ - Player 1 ending CP: ___
+ - Player 2 ending CP: ___</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-83-2">Problem 83-2<a class="anchor-link" href="#Problem-83-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<h3 id="PART-1-(to-do)">PART 1 (to do)<a class="anchor-link" href="#PART-1-(to-do)">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/syntax-in-functions">http://learnyouahaskell.com/syntax-in-functions</a>.</p>
+<blockquote><p>Let it be</p>
+</blockquote>
+<p>Pay attention to the following example, especially:</p>
+
+<pre><code>calcBmis :: (RealFloat a) =&gt; [(a, a)] -&gt; [a]  
+calcBmis xs = [bmi | (w, h) &lt;- xs, let bmi = w / h ^ 2, bmi &gt;= 25.0]</code></pre>
+<p>Create a <strong>Haskell</strong> file <code>ProcessPoints.hs</code> and write a function <code>smallestDistances</code> that takes a list of 3-dimensional points and returns the distances of any points that are within 10 units from the origin.</p>
+<p>To check your function, print <code>smallestDistances [(5,5,5), (3,4,5), (8,5,8), (9,1,4), (11,0,0), (12,13,14)]</code>. You should get a result of <code>[8.67, 7.07, 9.90]</code>.</p>
+<ul>
+<li><strong>Note:</strong> The given result is shown to 2 decimal places. You <em>don't</em> have to round your result. I just didn't want to list out all the digits in the test.</li>
+</ul>
+<h3 id="PART-2-(to-do)">PART 2 (to do)<a class="anchor-link" href="#PART-2-(to-do)">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/c-tutorial-struct/problem">https://www.hackerrank.com/challenges/c-tutorial-struct/problem</a></p>
+</blockquote>
+<ul>
+<li><p>You can read more about structs here: <a href="https://www.educative.io/edpresso/what-is-a-cpp-struct">https://www.educative.io/edpresso/what-is-a-cpp-struct</a></p>
+</li>
+<li><p>If you get stuck for more than 10 minutes, post on Slack to get help</p>
+</li>
+</ul>
+<p><strong>Shell</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-cut-7/problem">https://www.hackerrank.com/challenges/text-processing-cut-7/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-8/problem">https://www.hackerrank.com/challenges/text-processing-cut-8/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-cut-9/problem">https://www.hackerrank.com/challenges/text-processing-cut-9/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-head-1/problem">https://www.hackerrank.com/challenges/text-processing-head-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-head-2/tutorial">https://www.hackerrank.com/challenges/text-processing-head-2/tutorial</a></p>
+</blockquote>
+<ul>
+<li><p>Remember to check out the tutorial tabs.</p>
+</li>
+<li><p>Note that if you want to start at the index <code>2</code> and then go until the end of a line, you can just omit the ending index. For example, <code>cut -c2-</code> means print characters $2$ and onwards for each line in the file.</p>
+</li>
+<li><p>Also remember the template <code>cut -d',' -f2-4</code>, which means print fields $2$ through $4$ for each line the file, where the fields are separated by the delimiter <code>','</code>.</p>
+</li>
+<li><p>You can also look at this resource for some examples: <a href="https://www.folkstalk.com/2012/02/cut-command-in-unix-linux-examples.html">https://www.folkstalk.com/2012/02/cut-command-in-unix-linux-examples.html</a></p>
+</li>
+<li><p>These problems are all one-liners. If you find yourself spending more than a couple minutes on these, be sure to ask for help.</p>
+</li>
+</ul>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/SUM_and_COUNT">https://sqlzoo.net/wiki/SUM_and_COUNT</a> (queries 6,7,8)</p>
+<p><a href="https://sqlzoo.net/wiki/The_JOIN_operation">https://sqlzoo.net/wiki/The_JOIN_operation</a> (queries 1,2,3)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-82-1">Problem 82-1<a class="anchor-link" href="#Problem-82-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
 <p><strong>a.</strong> Schedule pair coding sessions to finish game refactoring. Once you've gotten someone else's strategy integrated, update the "Current Completion" portion of the progress sheet: <a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
 <ul>
@@ -13947,7 +14074,7 @@ sql.query</code></pre>
 <ul>
 <li><p>Initialize the <code>WeightedGraph</code> with a <code>weights</code> dictionary instead of an <code>edges</code> list. The <code>edges</code> list just had a list of edges, whereas the <code>weights</code> dictionary will have its keys as edges and its values as the weights of those edges.</p>
 </li>
-<li><p>Implement the method <code>calc_shortest_path</code> using Dijkstra's algorithm (<a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm">https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm</a>). This algorithm works by assigning all other nodes an initial d-value and then iteratively updating those d-values until they actually represent the distances.</p>
+<li><p>Implement the method <code>calc_distance</code> using Dijkstra's algorithm (<a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm">https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm</a>). This algorithm works by assigning all other nodes an initial d-value and then iteratively updating those d-values until they actually represent the distances to those nodes.</p>
 <ul>
 <li><p>Initial d-values: initial node is assigned $0,$ all other nodes are assigned $\infty$ (use a large number like $9999999999$). Set current node to be the initial node.</p>
 </li>
@@ -13955,11 +14082,7 @@ sql.query</code></pre>
 </li>
 <li><p>Update the current node to be the unvisited node that has the smallest d-value, and keep repeating the procedure until the terminal node has been visited. (Once the terminal node has been visited, its d-value is guaranteed to be correct.) <strong>Important: a node is not considered considered visited until it has been set as a current node. Even if you updated the node's d-value at some point, the node is not visited until it is the current node.</strong></p>
 </li>
-<li><p>Once you've done Dijkstra's algorithm and got your distance values, just start at the terminal node and then repeatedly go to the neighbor with the lowest d-value until you hit the initial node. This gives you a "backwards" path, and you just need to reverse it to get the forwards path.</p>
-</li>
 </ul>
-</li>
-<li><p>Implement the method <code>calc_distance</code> by calling <code>calc_shortest_path</code> and then summing up the edge weights.</p>
 </li>
 <li><p>Test your code on the following example:</p>
 </li>
@@ -13977,12 +14100,8 @@ sql.query</code></pre>
     (4,8): 8,
     (8,0): 4
 }
-&gt;&gt;&gt; vertex_values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
+&gt;&gt;&gt; vertex_values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
 &gt;&gt;&gt; weighted_graph = WeightedGraph(weights, vertex_values)
-
-&gt;&gt;&gt; shortest_path = weighted_graph.calc_shortest_path(8,4)
-&gt;&gt;&gt; [node.index for node in shortest_path]
-[8, 0, 3, 4]
 
 &gt;&gt;&gt; weighted_graph.calc_distance(8,4)
 7
