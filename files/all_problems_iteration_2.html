@@ -13250,7 +13250,7 @@ maximum' (x:xs)
 <p>Create a <strong>Haskell</strong> file <code>SmallestPositive.hs</code> and write a function <code>findSmallestPositive</code> that takes a list and returns the smallest positive number in the list.</p>
 <p>The format will be similar to that shown in the <code>maximum'</code> example above.</p>
 <p>To check your function, print <code>findSmallestPositive [8, 3, -1, 2, -5, 7]</code>. You should get a result of <code>2</code>.</p>
-<p><strong>Important:</strong> In your function <code>findSmallestPositve</code>, you will need to compare <code>x</code> to <code>0</code>, which means we must assume that not only can items <code>x</code> be ordered (<code>Ord</code>), they are also numbers (<code>Num</code>). So, you will need to have <code>findSmallestPositive :: (Ord a) =&gt; [a] -&gt; a</code>.</p>
+<p><strong>Important:</strong> In your function <code>findSmallestPositve</code>, you will need to compare <code>x</code> to <code>0</code>, which means we must assume that not only can items <code>x</code> be ordered (<code>Ord</code>), they are also numbers (<code>Num</code>). So, you will need to have <code>findSmallestPositive :: (Num a, Ord a) =&gt; [a] -&gt; a</code>.</p>
 <p><strong>Note:</strong> It is not necessary to put a "prime" at the end of your function name, like is shown in the example.</p>
 <h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
 <ul>
