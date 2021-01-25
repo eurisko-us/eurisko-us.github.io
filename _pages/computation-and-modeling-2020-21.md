@@ -65,7 +65,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="49">
+<font size="3em"><ol reversed start="50">
+    <li><b>Monday, January 25</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-50-1">Primary: SIR Model</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-50-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-50-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/503582121">Class Recording</a> (C&M is first half) - space empires rules, node indices in tree
         <br>Assignment Problems:
