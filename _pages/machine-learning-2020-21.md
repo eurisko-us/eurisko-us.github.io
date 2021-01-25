@@ -64,7 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="82">
+<font size="3em"><ol reversed start="83">
+    <li><b>Monday, January 25</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-83-1">Primary: Random Forest, AggressivePlayer</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-83-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-83-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <br>
     <li><b>Friday, January 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/503582121">Class Recording</a> (ML is second half) -  Space Empires, WeightedGraph class + Dijkstra's algorithm
         <br>Assignment Problems:
