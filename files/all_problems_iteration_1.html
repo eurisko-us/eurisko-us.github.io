@@ -13854,54 +13854,6 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><ul>
-<li><p><strong>David &amp; George</strong></p>
-</li>
-<li><p><strong>Elijah, Colby, &amp; Riley</strong></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
-<p><strong>a.</strong> If your game doesn't already do this, make it so that if a player commits an invalid move (such as moving off the grid), the game stops.</p>
-<p><strong>b.</strong> Now that we've solved a bunch of issues in our games, it's time to slow down, and focus on 1 strategy at a time.</p>
-<ul>
-<li><p><strong>Schedule a pair coding session with your partner(s) below, sometime today or tomorrow. Let me know when you've scheduled it. During your session, make sure that your <code>DumbStrategy</code> passes their tests, and that their <code>DumbStrategy</code> passes your tests.</strong></p>
-<ul>
-<li><p><strong>Riley &amp; David</strong></p>
-</li>
-<li><p><strong>Elijah, Colby, &amp; George</strong></p>
-</li>
-</ul>
-</li>
-<li><p>Refactoring will go a lot faster if we do it synchronously in small groups, instead of doing asynchronous refactoring with the entire group. By doing small-group synchronous refactoring, it'll be easier to keep a stream of communication going until the DumbStrategy works.</p>
-</li>
-<li><p>In case you need it: Probem 80-1 has templates of the <code>game_state</code> and the <code>Strategy</code> class.</p>
-</li>
-</ul>
-<p><strong>c.</strong> Make the following adjustment to your random forest:</p>
-<ul>
-<li><p>In your random decision tree, create a <code>max_depth</code> parameter that stops splitting any nodes beyond the <code>max_depth</code>. For example, if <code>max_depth = 2</code>, then you would stop splitting a node once it is 2 units away from the root of the tree.</p>
-<ul>
-<li>A consequence of this is that the terminal nodes might not be pure. If a terminal node is impure, then it represents the majority class. (If there are equal amounts of each class, just choose randomly.)</li>
-</ul>
-</li>
-<li><p>When you initialize the random forest, pass a <code>max_depth</code> parameter that, in turn, gets passed to the random decision trees.</p>
-</li>
-</ul>
-<p>We've got a couple more adjustments to make, but I figured we should break up this task over multiple assignments since it's a bit of work and we've also got to keep making progress on the game refactoring.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Create <code>[YourNameHere]Player</code> in <code>[your_name_here]_player.py</code>. In <code>tests/test_[your_name_here]_player.py</code>, ensure that your custom player beats both <code>DumbPlayer</code> and <code>CombatPlayer</code>.</p>
 <p>On Wednesday's assignment, we'll conduct a practice tournament for everyone's players to compete.</p>
 <ul>
@@ -13919,29 +13871,12 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><ul>
-<li><p>officially change to [0, 10, 15, ...]</p>
-</li>
-<li><p>David -- add <code>colony_coords</code> to</p>
-</li>
-</ul>
-
-<pre><code>def decide_purchases(self, game_state, colony_coords):
-        ...
-        return {
-            'units': list of unit objects you want to buy,
-            'technology': list of technology attributes you want to upgrade
-        }
-
-        # for example, if you wanted to buy 2 Scouts, 1 Destroyer, 
-        # upgrade defense technology once, and upgrade attack
-        # technology twice, you'd return
-        # {
-        #    'units': [{'type': 'Scout', 'coords': (2,1)},
-        #            {'type': 'Scout', 'coords': (2,1)},
-        #            {'type': 'Destroyer', 'coords': (2,1)},
-        #    'technology': ['defense', 'attack', 'attack'] 
-        # }</code></pre>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Echo server</p>
+<hr>
+<p>Run your analysis from 77-1 again, using <code>max_depth=3</code> for all your decision trees. Post your results on #results, and state how long it took you to train the models now that you're using the <code>max_depth</code> setting.</p>
+<hr>
+<p><strong>b.</strong> test cases for random forest</p>
+<p><strong>b.</strong> 8 queens -- random restart hill climbing</p>
 
 </div>
 </div>
@@ -13949,8 +13884,85 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Calc shortest path in weighted graph</p>
-<p><a href="https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/">https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-greedy-algo-7/</a></p>
+<h1 id="Problem-84-1">Problem 84-1<a class="anchor-link" href="#Problem-84-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
+<p><strong>a.</strong> Implement <code>calc_shortest_path(start_node, end_node)</code> in your weighted graph.</p>
+<ul>
+<li><p>To do this, you first need to carry out Dijkstra's algorithm to find the d-values.</p>
+</li>
+<li><p>Then, you need to find the edges for the shortest-path tree. To do this, loop through all the edges <code>(a,b)</code>, and if the difference in d-values is equal to the weight, i.e. <code>d_b - d_a = w(a,b)</code>, include the edge in your list of edges for the shortest-path tree.</p>
+</li>
+<li><p>Using your list of edges for the shortest-path tree, create a <code>Graph</code> object and run <code>calc_shortest_path</code> on it. By constructing the shortest-path tree, we have reduced the problem of finding the shortest path in a weighted graph to the problem of finding the shortest path in an undirected graph, which we have already solved.</p>
+</li>
+</ul>
+<p>Check your function by carrying out the following tests for the graph given in Problem 83-1.</p>
+
+<pre><code>&gt;&gt;&gt; weighted_graph.calc_shortest_path(8,4)
+[8, 0, 3, 4]
+
+&gt;&gt;&gt; weighted_graph.calc_shortest_path(8,7)
+[8, 0, 1, 7]
+
+&gt;&gt;&gt; weighted_graph.calc_shortest_path(8,6)
+[8, 0, 3, 2, 5, 6]</code></pre>
+<p><strong>b.</strong> Update your game to use <code>0</code> at the head of the prices list for the technologies that start at level 1.</p>
+
+<pre><code>'technology_data': {
+        # lists containing price to purchase the next level level
+        'shipsize': [0, 10, 15, 20, 25, 30],
+        'attack': [20, 30, 40],
+        'defense': [20, 30, 40],
+        'movement': [0, 20, 30, 40, 40, 40],
+        'shipyard': [0, 20, 30]
+    }</code></pre>
+<p>This way, you can do this:</p>
+
+<pre><code>price = game_state['technology_data'][tech_type][level]</code></pre>
+<p>instead of this:</p>
+
+<pre><code>if tech_type in ['shipsize', 'movement', 'shipyard']:
+    price = game_state['technology_data'][tech_type][level-1]
+else:
+    price = game_state['technology_data'][tech_type][level]</code></pre>
+<p><strong>c.</strong> Get <code>AggressiveStrategy</code> to pass the following tests:</p>
+<blockquote><p><strong>TESTS ARE CURRENTLY BEING CREATED. WILL BE POSTED BY TONIGHT (1/27).</strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-84-2">Problem 84-2<a class="anchor-link" href="#Problem-84-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<p><strong>PROBLEM IS CURRENTLY BEING CREATED. WILL BE POSTED BY TONIGHT (1/27).</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-84-3">Problem 84-3<a class="anchor-link" href="#Problem-84-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p>Commit your code to GitHub. When you submit your assignment, include a link to your commit(s). <strong>If you don't do this, your assignment will receive a grade of $0$ until you resubmit with links to your commits.</strong></p>
+<p>Additionally, do the following:</p>
+<ul>
+<li>Make <strong>2 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate. When you submit your assignment, include the links to the issues you created.</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Link to weighted graph tests: _____
+Link to Aggressive strategy tests: _____
+
+Repl.it link to Haskell code: _____
+Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+Commit link for machine-learning repo: _____
+Commit link for graph repo: _____
+Commit link for assignment-problems repo: _____
+
+Issue 1: _____
+Issue 2: _____</code></pre>
 
 </div>
 </div>
@@ -14085,7 +14097,7 @@ Issue 2: _____</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-80-4">Problem 80-4<a class="anchor-link" href="#Problem-80-4">&#182;</a></h1><p>There will be a 45-minute quiz on Friday from 8:30-9:15. It will mainly be a review of the ML algorithms we've implemented so far, and their use for modeling purposes. Know how to do the following things:</p>
+<h1 id="Problem-83-4">Problem 83-4<a class="anchor-link" href="#Problem-83-4">&#182;</a></h1><p>There will be a 45-minute quiz on Friday from 8:30-9:15. It will mainly be a review of the ML algorithms we've implemented so far, and their use for modeling purposes. Know how to do the following things:</p>
 <ul>
 <li><p>Answer questions about similarities and differences between linear regression, logistic regression, k nearest neighbors, naive bayes, and Gini decision trees.</p>
 </li>
@@ -14499,11 +14511,11 @@ Issue 2: _____</code></pre>
     },
     'technology_data': {
         # lists containing price to purchase the next level level
-        'shipsize': [10, 15, 20, 25, 30],
+        'shipsize': [0, 10, 15, 20, 25, 30],
         'attack': [20, 30, 40],
         'defense': [20, 30, 40],
-        'movement': [20, 30, 40, 40, 40],
-        'shipyard': [20, 30]
+        'movement': [0, 20, 30, 40, 40, 40],
+        'shipyard': [0, 20, 30]
     }
 }</code></pre>
 <p>The <code>Strategy</code> template is shown below:</p>
