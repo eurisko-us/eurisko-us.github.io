@@ -64,7 +64,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="83">
+<font size="3em"><ol reversed start="84">
+    <li><b>Friday, January 22</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - shortest path in weighted graph, space empires
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-1">Primary: Shortest Path in Weighted Graph, AggressivePlayer tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, January 25</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
