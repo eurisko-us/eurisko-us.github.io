@@ -13884,12 +13884,67 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>socket connections -- build calculator</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Tests for debugging random decision tree:</p>
+<ul>
+<li>(x,y) product positive or negative
+```
+Training on 100% of the data and testing on 100% of the data:</li>
+<li>Accuracy: 100%</li>
+<li>Num splits: 2</li>
+<li><p>Depth: ___ (how many steps to the furthest node in the tree?)
+```</p>
+</li>
+<li><p>(x,y) absolute value of sum greater than 5 or less than 5</p>
+</li>
+<li><p>(-10, A), (-10, A), (-9, A), (-9, A), ..., (-1, A), (-1, A), (-10, B), (-9, B), ..., (10, B)</p>
+</li>
+</ul>
+
+<pre><code>
+DATASET: 
+
+Training on 100% of the data and testing on 100% of the data:
+- Accuracy: ___
+- Num splits: ___
+- Depth: ___ (how many steps to the furthest node in the tree?)
+
+Training on 50% of the data and testing on the other 50% of the data:
+- Accuracy: ___
+- Num splits: ___
+- Depth: ___ (how many steps to the furthest node in the tree?)</code></pre>
+<p>accuracy when you train and test on the same dataset (should be 100%)</p>
+<p>num splits</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Get <code>AggressiveStrategy</code> to pass the following tests:</p>
+<blockquote><p><strong>TESTS ARE CURRENTLY BEING CREATED. WILL BE POSTED BY TONIGHT (1/27).</strong></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-84-1">Problem 84-1<a class="anchor-link" href="#Problem-84-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
 <p><strong>a.</strong> Implement <code>calc_shortest_path(start_node, end_node)</code> in your weighted graph.</p>
 <ul>
 <li><p>To do this, you first need to carry out Dijkstra's algorithm to find the d-values.</p>
 </li>
-<li><p>Then, you need to find the edges for the shortest-path tree. To do this, loop through all the edges <code>(a,b)</code>, and if the difference in d-values is equal to the weight, i.e. <code>d_b - d_a = w(a,b)</code>, include the edge in your list of edges for the shortest-path tree.</p>
+<li><p>Then, you need to find the edges for the shortest-path tree. To do this, loop through all the edges <code>(a,b)</code>, and if the difference in d-values is equal to the weight, i.e. <code>nodes[b].dvalue - nodes[a].dvalue == weight[(a,b)]</code>, include the edge in your list of edges for the shortest-path tree.</p>
 </li>
 <li><p>Using your list of edges for the shortest-path tree, create a <code>Graph</code> object and run <code>calc_shortest_path</code> on it. By constructing the shortest-path tree, we have reduced the problem of finding the shortest path in a weighted graph to the problem of finding the shortest path in an undirected graph, which we have already solved.</p>
 </li>
@@ -13904,7 +13959,76 @@ sql.query</code></pre>
 
 &gt;&gt;&gt; weighted_graph.calc_shortest_path(8,6)
 [8, 0, 3, 2, 5, 6]</code></pre>
-<p><strong>b.</strong> Update your game to use <code>0</code> at the head of the prices list for the technologies that start at level 1.</p>
+<p><strong>b.</strong> Assert that your random decision tree passes the following tests.</p>
+<p><em>Test 1</em></p>
+<ul>
+<li><p>Create a dataset consisting of 100 points
+$$
+\Big[ (x,y,\textrm{label}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad xy &gt; 0 \\
+\textrm{negative}, \quad xy &lt; 0
+\end{cases}
+$$</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 100%.</p>
+</li>
+</ul>
+<p><em>Test 2</em></p>
+<ul>
+<li><p>Create a dataset consisting of 150 points
+$$
+\begin{align*}
+&amp;\Big[ (x,y,\textrm{A}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \Big] \\
+&amp;+ \Big[ (x,y,\textrm{B}) \mid x,y \in \mathbb{Z}, \,\, 1 \leq x,y \leq 5 \Big] \\
+&amp;+ \Big[ (x,y,\textrm{B}) \mid x,y \in \mathbb{Z}, \,\, 1 \leq x,y \leq 5 \Big]. 
+\end{align*}
+$$
+This dataset consists of $100$ data points labeled "A" distributed evenly throughout the plane and $50$ data points labeled "B" in quadrant I. Each integer pair in quadrant I will have $1$ data point labeled "A" and $2$ data points labeled "B".</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 83.3% (25/150 misclassified)</p>
+</li>
+</ul>
+<p><em>Test 3</em></p>
+<ul>
+<li><p>Create a dataset consisting of 1000 points
+$$
+\Big[ (x,y,z,\textrm{label}) \mid x,y,z \in \mathbb{Z}, \,\, -5 \leq x,y,z \leq 5, \,\, xyz \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad xyz &gt; 0 \\
+\textrm{negative}, \quad xyz &lt; 0
+\end{cases}
+$$</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 100%.</p>
+</li>
+<li><p><strong>Note:</strong> These are a lot of data points, but the tree won't need to do many splits, so the code should run quickly. If the code takes a long time to run, it means you've got an issue, and you should post on Slack if you can't figure out why it's taking so long.</p>
+</li>
+</ul>
+<p><em>Test 4</em></p>
+<ul>
+<li><p>Create a dataset consisting of 150 points
+$$
+\begin{align*}
+&amp;\Big[ (x,y,z,\textrm{A}) \mid x,y,z \in \mathbb{Z}, \,\, -5 \leq x,y,z \leq 5, \,\, xyz \neq 0 \Big] \\
+&amp;+ \Big[ (x,y,z,\textrm{B}) \mid x,y,z \in \mathbb{Z}, \,\, 1 \leq x,y,z \leq 5 \Big] \\
+&amp;+ \Big[ (x,y,z,\textrm{B}) \mid x,y,z \in \mathbb{Z}, \,\, 1 \leq x,y,z \leq 5 \Big]. 
+\end{align*}
+$$
+This dataset consists of $100$ data points labeled "A" distributed evenly throughout a cube and $50$ data points labeled "B" in octant I. Each integer pair in octant I will have $1$ data point labeled "A" and $2$ data points labeled "B".</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 90% (125/1250 misclassified)</p>
+</li>
+<li><p><strong>Note:</strong> These are a lot of data points, but the tree won't need to do many splits, so the code should run quickly. If the code takes a long time to run, it means you've got an issue, and you should post on Slack if you can't figure out why it's taking so long.</p>
+</li>
+</ul>
+<p><strong>c.</strong> Update your game to use <code>0</code> at the head of the prices list for the technologies that start at level 1.</p>
 
 <pre><code>'technology_data': {
         # lists containing price to purchase the next level level
@@ -13923,9 +14047,8 @@ sql.query</code></pre>
     price = game_state['technology_data'][tech_type][level-1]
 else:
     price = game_state['technology_data'][tech_type][level]</code></pre>
-<p><strong>c.</strong> Get <code>AggressiveStrategy</code> to pass the following tests:</p>
-<blockquote><p><strong>TESTS ARE CURRENTLY BEING CREATED. WILL BE POSTED BY TONIGHT (1/27).</strong></p>
-</blockquote>
+<p><strong>d.</strong> Print out your <code>AggressivePlayer</code> game log and put it in the <code>notes</code> folder. I need to write tests for the AggressiveStrategy and it'll be much quicker if I have a starting point that's either correct or close to being correct.</p>
+<p><strong>Note:</strong> On Friday's assignment, I will include tests for <code>AggressivePlayer</code>. Once your game passes these tests, you'll be able to build your custom strategy. On Monday, we'll have our custom strategies play against each other.</p>
 
 </div>
 </div>
@@ -13951,7 +14074,8 @@ else:
 <h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
 
 <pre><code>Link to weighted graph tests: _____
-Link to Aggressive strategy tests: _____
+Link to random decision tree tests: _____
+Link to AggressivePlayer game log notes: _____
 
 Repl.it link to Haskell code: _____
 Link to C++/Shell/SQL screenshots (Overleaf or Google Doc): _____
