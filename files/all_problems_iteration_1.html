@@ -13939,6 +13939,18 @@ Training on 50% of the data and testing on the other 50% of the data:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Skim the following section of <a href="http://learnyouahaskell.com/recursion">http://learnyouahaskell.com/recursion</a>.</p>
+<blockquote><p>Maps and filters</p>
+</blockquote>
+<p>Create a <strong>Haskell</strong> file <code>AddOne.hs</code> and write a function <code>addOne</code> that takes a list and adds <code>1</code> to each value in the list.</p>
+<p>To check your function, print <code>addOne [1, 2, 3]</code>. You should get a result of <code>[2, 3, 4]</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-84-1">Problem 84-1<a class="anchor-link" href="#Problem-84-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
 <p><strong>a.</strong> Implement <code>calc_shortest_path(start_node, end_node)</code> in your weighted graph.</p>
 <ul>
@@ -14055,7 +14067,57 @@ else:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-84-2">Problem 84-2<a class="anchor-link" href="#Problem-84-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
-<p><strong>PROBLEM IS CURRENTLY BEING CREATED. WILL BE POSTED BY TONIGHT (1/27).</strong></p>
+<h3 id="PART-1">PART 1<a class="anchor-link" href="#PART-1">&#182;</a></h3><p><em>Location</em>: <code>assignment-problems</code></p>
+<p>Skim the following section of <a href="http://learnyouahaskell.com/recursion">http://learnyouahaskell.com/recursion</a>.</p>
+<blockquote><p>A few more recursive functions</p>
+</blockquote>
+<p>Pay attention to the following example. <code>take n myList</code> returns the first <code>n</code> entries of <code>myList</code>.</p>
+
+<pre><code>take' :: (Num i, Ord i) =&gt; i -&gt; [a] -&gt; [a]  
+take' n _  
+    | n &lt;= 0   = []  
+take' _ []     = []  
+take' n (x:xs) = x : take' (n-1) xs</code></pre>
+<p>Create a <strong>Haskell</strong> file <code>Tail.hs</code> and write a function <code>tail</code> that takes a list and returns the last <code>n</code> values of the list.</p>
+<p>The format will be similar to that shown in the <code>take'</code> example above.</p>
+<p>To check your function, print <code>tail 3 [8, 3, -1, 2, -5, 7]</code>. You should get a result of <code>[2, -5, 7]</code>.</p>
+<h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
+<ul>
+<li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+</li>
+<li><p>For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+</li>
+</ul>
+<p><strong>C++</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/inheritance-introduction/problem">https://www.hackerrank.com/challenges/inheritance-introduction/problem</a></p>
+</blockquote>
+<ul>
+<li>Guess what? After this problem, we're done with the useful C++ problems on HackerRank. Next time, we'll start some C++ coding in Repl.it. We'll start by re-implementing a bunch of problems that we did when we were first getting used to Python.</li>
+</ul>
+<p><strong>Shell</strong></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-tr-1/problem">https://www.hackerrank.com/challenges/text-processing-tr-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-tr-1/problem">https://www.hackerrank.com/challenges/text-processing-tr-1/problem</a></p>
+</blockquote>
+<ul>
+<li><p>Helpful templates:</p>
+
+<pre><code>$ echo "Hello" | tr "e" "E"
+HEllo
+$ echo "Hello how are you" | tr " " '-'
+Hello-how-are-you
+$ echo "Hello how are you 1234" | tr -d [0-9]
+Hello how are you
+$ echo "Hello how are you" | tr -d [a-e]
+Hllo how r you</code></pre>
+</li>
+<li><p>More info on <code>tr</code> here: <a href="https://www.thegeekstuff.com/2012/12/linux-tr-command/">https://www.thegeekstuff.com/2012/12/linux-tr-command/</a></p>
+</li>
+<li><p>These problems are all very quick. If you find yourself spending more than a couple minutes on these, be sure to ask for help.</p>
+</li>
+</ul>
+<p><strong>SQL</strong></p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/The_JOIN_operation">https://sqlzoo.net/wiki/The_JOIN_operation</a> (queries 7, 8, 9)</p>
+</blockquote>
 
 </div>
 </div>
