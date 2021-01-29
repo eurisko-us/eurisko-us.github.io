@@ -13951,6 +13951,14 @@ Training on 50% of the data and testing on the other 50% of the data:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><a href="https://www.learncpp.com/">https://www.learncpp.com/</a> -- start with ch9</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-84-1">Problem 84-1<a class="anchor-link" href="#Problem-84-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
 <p><strong>a.</strong> Implement <code>calc_shortest_path(start_node, end_node)</code> in your weighted graph.</p>
 <ul>
@@ -14078,9 +14086,21 @@ take' n _
     | n &lt;= 0   = []  
 take' _ []     = []  
 take' n (x:xs) = x : take' (n-1) xs</code></pre>
-<p>Create a <strong>Haskell</strong> file <code>Tail.hs</code> and write a function <code>tail</code> that takes a list and returns the last <code>n</code> values of the list.</p>
-<p>The format will be similar to that shown in the <code>take'</code> example above.</p>
-<p>To check your function, print <code>tail 3 [8, 3, -1, 2, -5, 7]</code>. You should get a result of <code>[2, -5, 7]</code>.</p>
+<p>Create a <strong>Haskell</strong> file <code>Tail.hs</code> and write a function <code>tail'</code> that takes a list and returns the last <code>n</code> values of the list.</p>
+<p><strong>Here's the easiest way to do this...</strong></p>
+<ul>
+<li><p>Write a helper function <code>reverseList</code> that reverses a list. This will be a recursive function, which you can define using the following template:</p>
+
+<pre><code>reverseList :: [a] -&gt; [a] 
+reverseList [] = (your code here -- base case)
+reverseList (x:xs) = (your code here -- recursive formula)</code></pre>
+<p>Here, <code>x</code> is the first element of the input list and <code>xs</code> is the rest of the elements. For the recursive formula, just call <code>reverseList</code> on the rest of the elements and put the first element of the list at the end. You'll need to use the <code>++</code> operation for list concatenation.</p>
+</li>
+<li><p>Once you've written <code>reverseList</code> and tested to make sure it works as intended, you can implement <code>tail'</code> by reversing the input list, calling <code>take'</code> on the reversed list, and reversing the result.</p>
+</li>
+</ul>
+<p>To check your function, print <code>tail' 4 [8, 3, -1, 2, -5, 7]</code>. You should get a result of <code>[-1, 2, -5, 7]</code>.</p>
+<p><strong>If you get stuck anywhere in this problem, don't spend a bunch of time staring at it. Be sure to post on Slack. These Haskell problems can be tricky if you're not taking the right approach from the beginning, but after a bit of guidance, it can become much simpler.</strong></p>
 <h3 id="PART-2">PART 2<a class="anchor-link" href="#PART-2">&#182;</a></h3><p>Complete these C++/Shell/SQL coding challenges and submit screenshots.</p>
 <ul>
 <li><p>For C++/Shell, each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
