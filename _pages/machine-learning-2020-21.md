@@ -69,9 +69,9 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - shortest path in weighted graph, space empires
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-1">Primary: Shortest Path in Weighted Graph, Random Decision Tree tests, a bit of Space Empires</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-84-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-84-1">Primary: Shortest Path in Weighted Graph, Random Decision Tree tests, a bit of Space Empires</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-84-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-84-3">Commit / Review</a></li>
         </ul></font>
     </li>
     <li><b>Monday, January 25</b>
