@@ -13426,7 +13426,94 @@ e.g. [2, 1, 4, 5, 3, 0]</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-52-2">Problem 52-2<a class="anchor-link" href="#Problem-52-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
-<p><strong>[IN PROGRESS]</strong></p>
+<p><em>Location: <code>assignment-problems</code></em></p>
+<p><strong>a.</strong> Skim the following section of <a href="http://learnyouahaskell.com/higher-order-functions">http://learnyouahaskell.com/higher-order-functions</a>.</p>
+<blockquote><p>Maps and filters</p>
+</blockquote>
+<p>Pay attention to the following examples:</p>
+
+<pre><code>&gt;&gt;&gt; map (+3) [1,5,3,1,6]  
+[4,8,6,4,9] 
+&gt;&gt;&gt; filter (&gt;3) [1,5,3,2,1,6,4,3,2,1]  
+[5,6,4]</code></pre>
+<p>Create a <strong>Haskell</strong> file <code>SquareSingleDigitNumbers.hs</code> and write a function <code>squareSingleDigitNumbers</code> that takes a list returns the squares of the values that are less than 10.</p>
+<p>To check your function, print <code>squareSingleDigitNumbers [2, 7, 15, 11, 5]</code>. You should get a result of <code>[4, 49, 25]</code>.</p>
+<p><em>This is a one-liner. If you get stuck for more than 10 minutes, ask for help on Slack.</em></p>
+<p><strong>b.</strong> Write a C++ program to calculate the height of a ball that falls from a tower.</p>
+<ul>
+<li>Create a file <code>constants.h</code> to hold your gravity constant:</li>
+</ul>
+
+<pre><code>#ifndef CONSTANTS_H
+#define CONSTANTS_H
+
+namespace myConstants
+{
+    const double gravity(9.8); // in meters/second squared
+}
+#endif</code></pre>
+<ul>
+<li>Create a file <code>simulateFall.cpp</code></li>
+</ul>
+
+<pre><code>#include &lt;iostream&gt;
+#include "constants.h"
+
+double calculateDistanceFallen(int seconds)
+{
+    // approximate distance fallen in the next second
+    double distanceFallen = myConstants::gravity * seconds * seconds / 2;
+
+    return distanceFallen;
+}
+
+void printStatus(int time, double height)
+{
+    std::cout &lt;&lt; "At " &lt;&lt; time
+    &lt;&lt; " seconds, the ball is at height "
+    &lt;&lt; height &lt;&lt; " meters\n";
+}
+
+int main()
+{
+    using namespace std;
+    cout &lt;&lt; "Enter the initial height of the tower in meters: ";
+    double initialHeight;
+    cin &gt;&gt; initialHeight;
+
+    // your code here
+    // use calculateDistanceFallen to find the height now
+
+    // use calculateDistanceFallen and printStatus
+    // to generate the desired output
+    // if the height now goes negative, then the status
+    // should say that the height is 0 and the program
+    // should stop (since the ball stops falling at height 0)
+
+    return 0;
+}</code></pre>
+<p>Your program should work like this</p>
+
+<pre><code>&gt;&gt;&gt; g++ simulateFall.cpp -o simulateFall
+&gt;&gt;&gt; ./simulateFall
+Enter the initial height of the tower in meters: 100
+At 0 seconds, the ball is at height 100 meters
+At 1 seconds, the ball is at height 95.1 meters
+At 2 seconds, the ball is at height 80.4 meters
+At 3 seconds, the ball is at height 55.9 meters
+At 4 seconds, the ball is at height 21.6 meters
+At 5 seconds, the ball is at height 0 meters</code></pre>
+<p><strong>c.</strong> Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Here's a reference to the <code>sort</code> command: <a href="https://www.thegeekstuff.com/2013/04/sort-files/">https://www.thegeekstuff.com/2013/04/sort-files/</a></p>
+<p>These problems are super quick, so we'll do several.</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-sort-1/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-1/tutorial</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-sort-2/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-2/tutorial</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-sort-3/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-3/tutorial</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-sort-4/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-4/tutorial</a><br></p>
+</blockquote>
+<p><strong>d.</strong> Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/The_JOIN_operation">https://sqlzoo.net/wiki/The_JOIN_operation</a> (queries 10, 11)</p>
+</blockquote>
 
 </div>
 </div>
@@ -13435,7 +13522,32 @@ e.g. [2, 1, 4, 5, 3, 0]</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-52-3">Problem 52-3<a class="anchor-link" href="#Problem-52-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
-<p><strong>[IN PROGRESS]</strong></p>
+<p>Now, everyone should have a handful of issues on their repositories. So we'll go back to making 1 issue and resolving 1 issue.</p>
+<ul>
+<li><p>Make <strong>1 GitHub issues</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Link to Overleaf doc containing your model: _____
+
+Link to file in machine-learning/analysis where you fit 
+your regressors with dummy variables and interaction terms: ____
+
+Link to graph/tests/test_graph.py: _____
+
+Repl.it link to Haskell code: _____
+Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+Commit link for graph repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
