@@ -14151,21 +14151,21 @@ or
 </li>
 <li><p><code>RandomStrategyLevel1</code> - sends all of its units directly towards the enemy home colony.</p>
 </li>
-<li><p><code>BerzerkerStrategyLevel1</code> - sends all of its units directly towards the enemy home colony.</p>
+<li><p><code>BerserkerStrategyLevel1</code> - sends all of its units directly towards the enemy home colony.</p>
 </li>
 </ul>
 <p>Write some tests for these strategies:</p>
 <ul>
-<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>DumbStrategyLevel1</code>, the <code>BerzerkerStrategyLevel1</code> wins, and in the final game state each player still has 3 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
+<li><p>If a <code>BerserkerStrategyLevel1</code> plays against a <code>DumbStrategyLevel1</code>, the <code>BerserkerStrategyLevel1</code> wins, and in the final game state each player still has 3 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
 </li>
-<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>BerzerkerStrategyLevel1</code>, there is a winner, and in the final game state one player has 0 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
+<li><p>If a <code>BerserkerStrategyLevel1</code> plays against a <code>BerserkerStrategyLevel1</code>, there is a winner, and in the final game state one player has 0 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
 </li>
-<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>RandomStrategyLevel1</code>, the <code>BerzerkerStrategyLevel1</code> should win the majority of the time. (To test this, run 100 games and compute how many times <code>BerzerkerStrategyLevel1</code> wins.) <strong>Announce on Slack once you have this test working.</strong></p>
+<li><p>If a <code>BerserkerStrategyLevel1</code> plays against a <code>RandomStrategyLevel1</code>, the <code>BerserkerStrategyLevel1</code> should win the majority of the time. (To test this, run 100 games and compute how many times <code>BerserkerStrategyLevel1</code> wins.) <strong>Announce on Slack once you have this test working.</strong></p>
 </li>
 </ul>
 <p><strong>(iii)</strong> Write a custom strategy called <code>YournameStrategyLevel1</code>.</p>
 <ul>
-<li>Write up a rationale for your strategy in an overleaf doc. Explain why you take the actions you do. Explain why it will defeat <code>DumbStrategyLevel1</code>and <code>RandomStrategyLevel1</code>. Explain why you think it might beat <code>BerzerkerStrategyLevel1</code>.</li>
+<li>Write up a rationale for your strategy in an overleaf doc. Explain why you take the actions you do. Explain why it will defeat <code>DumbStrategyLevel1</code>and <code>RandomStrategyLevel1</code>. Explain why you think it might beat <code>BerserkerStrategyLevel1</code>.</li>
 </ul>
 <p><strong>(iv)</strong> Make sure your custom strategy passes the following tests.</p>
 <ul>
@@ -14173,7 +14173,7 @@ or
 </li>
 <li><p>Make sure it defeats <code>RandomStrategyLevel1</code> the majority of the time. <strong>Announce on Slack once you have this test working.</strong></p>
 </li>
-<li><p>Try to have your strategy defeat <code>BerzerkerStrategyLevel1</code> the majority of the time, too. (To test this, run 100 games and compute how many times <code>BerzerkerStrategyLevel1</code> wins.) <strong>Announce on Slack if you get this test working.</strong></p>
+<li><p>Try to have your strategy defeat <code>BerserkerStrategyLevel1</code> the majority of the time, too. (To test this, run 100 games and compute how many times <code>BerserkerStrategyLevel1</code> wins.) <strong>Announce on Slack if you get this test working.</strong></p>
 </li>
 </ul>
 
@@ -14238,7 +14238,7 @@ class RandomStrategyLevel1:
             if unit['player_index'] == opponent_index:
                 return combat_index
 
-class BerzerkerStrategyLevel1:
+class BerserkerStrategyLevel1:
     # Sends all of its units directly towards the enemy home colony
 
     def __init__(self, player_index):
