@@ -13951,7 +13951,350 @@ Training on 50% of the data and testing on the other 50% of the data:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Create your custom strategy. Here is an example strategy that (I think) is really simple and doesn't do anything too dumb. Make sure that your custom strategy defeats it.</p>
+
+<pre><code>class ExampleStrategy:
+    # buys as many scouts as possible and sends them directly
+    # towards the opponent homeworld
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def will_colonize_planet(self, coordinates, hidden_game_state):
+        return True
+
+    def decide_ship_movement(self, unit_index, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        opponent_index = 1 - self.player_index
+        opponent = hidden_game_state['players'][opponent_index]
+
+        unit = myself['units'][unit_index]
+        x_unit, y_unit = unit['coords']
+        x_opp, y_opp = opponent['home_coords']
+
+        translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
+        best_translation = (0,0)
+        smallest_distance_to_opponent = 999999999999
+        for translation in translations:
+            delta_x, delta_y = translation
+            x = x_unit + delta_x
+            y = x_unit + delta_y
+            dist = abs(x - x_opp) + abs(y - y_opp)
+            if dist &lt; smallest_distance_to_opponent:
+                best_translation = translation
+                smallest_distance_to_opponent = dist
+
+        return best_translation
+
+    def decide_purchases(self, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        cp = myself['cp']
+
+        homeworld_coords = [unit['coords'] for unit in myself['units'] if unit['type'] == 'Homeworld'][0]
+        shipsize_tech_level = myself['technology']['shipsize']
+        hullsize_capacity_per_shipyard = 0.5 + 0.5 * shipsize_tech_level
+        shipyards_at_homeworld = [unit for unit in myself['units'] if unit['type'] == 'Shipyard' and unit['coords'] == homeworld_coords]
+        hullsize_capacity = hullsize_capacity_per_shipyard * len(shipyards_at_homeworld)
+
+        scout_data = hidden_game_state['unit_data']['Scout']
+        scout_cost = scout_data['cp_cost']
+        scout_hullsize = scout_data['hullsize']
+
+        purchases = {'units': [], 'technology': []}
+        while cp &gt; scout_cost and hullsize_capacity &gt; scout_hullsize:
+            pair = ('Scout', homeworld_coords)
+            purchases['units'].append(pair)
+
+        return purchases
+
+    def decide_removal(self, hidden_game_state):
+        # remove unit that's furthest from enemy
+
+        myself = hidden_game_state['players'][self.player_index]
+        opponent_index = 1 - player_index
+        opponent = hidden_game_state['players'][opponent_index]
+        x_opp, y_opp = opponent['home_coords']
+
+        furthest_unit_index = 0
+        furthest_distance_to_opponent = 999999999999
+        for unit_index, unit in enumerate(myself['units']):
+            x_unit, y_unit = unit['coords']
+            dist = abs(x_unit - x_opp) + abs(y_unit - y_opp)
+            if dist &gt; furthest_distance_to_opponent:
+                furthest_unit_index = unit_index
+                furthest_distance_to_opponent = dist
+
+        return furthest_unit_index
+
+    def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
+        # attack opponent's first ship in combat order
+
+        combat_order = combat_state[coords]
+        player_indices = [unit['player_index'] for unit in combat_order]
+
+        opponent_index = 1 - self.player_index
+        for combat_index, unit in enumerate(combat_order):
+            if unit['player_index'] == opponent_index:
+                return combat_index
+
+    def decide_which_units_to_screen(self, hidden_game_state_for_combat, combat_state, coords):
+
+        combat_order = combat_state[coords]
+        opponent_index = 1 - self.player_index
+        player_indices = [unit['player_index'] for unit in combat_order]
+
+        num_own_ships = len([n for n in player_indices if n == self.player_index])
+        num_opponent_ships = len([n for n in player_indices if n == opponent_index])
+        max_num_to_screen = max(0, num_own_ships - num_opponent_ships)
+
+        indices_of_own_ships = [i for i,unit in enumerate(combat_order) if unit['player_index'] == self.player_index]
+
+        return indices_of_own_ships[-max_num_to_screen:]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><a href="https://www.learncpp.com/">https://www.learncpp.com/</a> -- start with ch9</p>
+<p><strong>a.</strong> Assert that BOTH your <strong>gini decision tree</strong> and <strong>random decision tree</strong> pass the following test:</p>
+<ul>
+<li><p>Create a dataset consisting of 100 points
+$$
+\Big[ (x,y,\textrm{label}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad x&gt;0, y &gt; 0 \\
+\textrm{negative}, \quad \textrm{otherwise}
+\end{cases}
+$$</p>
+</li>
+<li><p>Predict the label of this dataset. Train on 100% of the data and test on 100% of the data.</p>
+</li>
+<li><p>You should get an accuracy of 100%.</p>
+</li>
+<li><p>You should have <strong>exactly</strong> 2 splits</p>
+</li>
+<li><p>Your tree should look <strong>exactly</strong> like one of these:</p>
+</li>
+</ul>
+
+<pre><code>           split y=0
+         /          \
+     y &lt; 0         y &gt; 0
+    pure neg      split x=0
+                    /   \
+                x &lt; 0   x &gt; 0
+              pure neg  pure pos
+.
+or
+.
+           split x=0
+         /          \
+     x &lt; 0         x &gt; 0
+    pure neg      split y=0
+                    /   \
+                y &lt; 0   y &gt; 0
+              pure neg  pure pos</code></pre>
+<p><strong>b.</strong> Assert that your <strong>gini decision tree</strong> passes Tests 1,2,3,4 from problem 84-1</p>
+<p><strong>c.</strong> Assert that your <strong>random forest with 10 trees</strong> passes Tests 1,2,3,4 from problem 84-1</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-85-1">Problem 85-1<a class="anchor-link" href="#Problem-85-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
+<p><strong>a.</strong> Make the following updates to your game:</p>
+<ul>
+<li><p>put <code>"grid_size"</code> as an attribute in the <code>game_state</code>. We've got our grid size set as $5$ for now (i.e. a $5 \times 5$ grid)</p>
+</li>
+<li><p>Player loses game when their home colony is destroyed</p>
+</li>
+<li><p>Ships cannot move diagonally</p>
+</li>
+<li><p>For most of the strategy functions, the input will need to be a partially-hidden game state. There are two types of hidden game states in particular:</p>
+<ul>
+<li><p><code>hidden_game_state_for_combat</code> - has all the information except for planet locations and the opponent's CP</p>
+</li>
+<li><p><code>hidden_game_state</code> - has all the information except for planet locations, the opponent's CP, and the type / hits_left / technology of the opponent's units. (The opponent's units are still in array form, and you can see their locations, but that's it -- you don't know anything else about them.)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>b.</strong></p>
+<p><strong>Some background...</strong></p>
+<p>We need to get some sort of game competition going in the upcoming week so that you guys have something to work on with Prof. Wierman form Caltech. Jason and I talked a bit and came to the conclusion that we need to something working as soon as possible, even if it doesn't use all the stuff we've implemented so far. Plus, the main thing that will be of interest to Prof. Wierman is the types of algorithms you guys are using in your strategies (he won't care if the game doesn't have all the features we want -- it just needs to be rich enough to permit some different strategies).</p>
+<p>So, let's focus on a very limited type of game and gradually expand it after we get it working. The first type of game we'll consider will be subject to the following constraints.</p>
+<p><strong>(i)</strong> Implement optional arguments in your game that "swtich off" some of the parts when they are set to <code>False</code>:</p>
+<ul>
+<li><p>There are only 2 planets: one for each home colony. That's it. Switch off the part that creates additional planets.</p>
+</li>
+<li><p>Players start with 3 scouts and their home colony and that's it. No colonyships. No shipyards. Just switch off the line where you give the player the colonyships / shipyards.</p>
+</li>
+<li><p>Movement phase consists of just 1 round. Switch off the lines in your game for the other 2 rounds.</p>
+</li>
+<li><p>There will be no economic phase. Just switch off that line of your game.</p>
+</li>
+<li><p>Players are not allowed to screen ships. Switch off the line where the game asks the player what ships they want to screen.</p>
+</li>
+</ul>
+<p>So, the game will consist of each player starting with 3 scouts, moving them around the board, having combat whenever they meet, and trying to reach and destroy the opponent's home colony.</p>
+<p><em>Note that nothing we've done is a wasted effort. We're just going to put the other features (technology, other ship types, planets, ship screening, etc) on pause until we get our games working under the simplest constraints. Then, we'll bring all that other stuff back in.</em></p>
+<p><strong>(ii)</strong> I've included code for two strategies at the bottom of this problem. The strategies are named with <code>Level1</code> at the end because this is like the "level 1" version of our game. We'll make a level 2 version in the next week, and then a level 3 version, and so on, until we've re-introduced all the features we've been working on.</p>
+<ul>
+<li><p><code>DumbStrategyLevel1</code> - sends all of its units to the right</p>
+</li>
+<li><p><code>RandomStrategyLevel1</code> - sends all of its units directly towards the enemy home colony.</p>
+</li>
+<li><p><code>BerzerkerStrategyLevel1</code> - sends all of its units directly towards the enemy home colony.</p>
+</li>
+</ul>
+<p>Write some tests for these strategies:</p>
+<ul>
+<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>DumbStrategyLevel1</code>, the <code>BerzerkerStrategyLevel1</code> wins, and in the final game state each player still has 3 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
+</li>
+<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>BerzerkerStrategyLevel1</code>, there is a winner, and in the final game state one player has 0 scouts. <strong>Announce on Slack once you have this test working.</strong></p>
+</li>
+<li><p>If a <code>BerzerkerStrategyLevel1</code> plays against a <code>RandomStrategyLevel1</code>, the <code>BerzerkerStrategyLevel1</code> should win the majority of the time. (To test this, run 100 games and compute how many times <code>BerzerkerStrategyLevel1</code> wins.) <strong>Announce on Slack once you have this test working.</strong></p>
+</li>
+</ul>
+<p><strong>(iii)</strong> Write a custom strategy called <code>YournameStrategyLevel1</code>.</p>
+<ul>
+<li>Write up a rationale for your strategy in an overleaf doc. Explain why you take the actions you do. Explain why it will defeat <code>DumbStrategyLevel1</code>and <code>RandomStrategyLevel1</code>. Explain why you think it might beat <code>BerzerkerStrategyLevel1</code>.</li>
+</ul>
+<p><strong>(iv)</strong> Make sure your custom strategy passes the following tests.</p>
+<ul>
+<li><p>Make sure it defeats the <code>DumbStrategyLevel1</code> all the time. <strong>Announce on Slack once you have this test working.</strong></p>
+</li>
+<li><p>Make sure it defeats <code>RandomStrategyLevel1</code> the majority of the time. <strong>Announce on Slack once you have this test working.</strong></p>
+</li>
+<li><p>Try to have your strategy defeat <code>BerzerkerStrategyLevel1</code> the majority of the time, too. (To test this, run 100 games and compute how many times <code>BerzerkerStrategyLevel1</code> wins.) <strong>Announce on Slack if you get this test working.</strong></p>
+</li>
+</ul>
+
+<pre><code>class DumbStrategyLevel1:
+    # Sends all of its units to the right
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def decide_ship_movement(self, unit_index, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        unit = myself['units'][unit_index]
+        x_unit, y_unit = unit['coords']
+
+        grid_size = game_state['grid_size']
+        unit_is_at_edge = (x_unit == grid_size-1)
+        if unit_is_at_edge:
+            return (0,0)
+        else:
+            return (1,0)
+
+    def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
+        # attack opponent's first ship in combat order
+
+        combat_order = combat_state[coords]
+        player_indices = [unit['player_index'] for unit in combat_order]
+
+        opponent_index = 1 - self.player_index
+        for combat_index, unit in enumerate(combat_order):
+            if unit['player_index'] == opponent_index:
+                return combat_index
+
+class RandomStrategyLevel1:
+    # Sends all of its units to the right
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def decide_ship_movement(self, unit_index, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        unit = myself['units'][unit_index]
+        x_unit, y_unit = unit['coords']
+
+        translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
+        grid_size = game_state['grid_size']
+        while True:
+            translation = random.choice(translations)
+            delta_x, delta_y = translation
+            x_new = x_unit + delta_x
+            y_new = y_unit + delta_y
+            if 0 &lt;= x_new and 0 &lt;= y_new and x_new &lt;= grid_size-1 and y_new &lt;= grid_size-1:
+                return translation
+
+    def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
+        # attack opponent's first ship in combat order
+
+        combat_order = combat_state[coords]
+        player_indices = [unit['player_index'] for unit in combat_order]
+
+        opponent_index = 1 - self.player_index
+        for combat_index, unit in enumerate(combat_order):
+            if unit['player_index'] == opponent_index:
+                return combat_index
+
+class BerzerkerStrategyLevel1:
+    # Sends all of its units directly towards the enemy home colony
+
+    def __init__(self, player_index):
+        self.player_index = player_index
+
+    def decide_ship_movement(self, unit_index, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        opponent_index = 1 - self.player_index
+        opponent = hidden_game_state['players'][opponent_index]
+
+        unit = myself['units'][unit_index]
+        x_unit, y_unit = unit['coords']
+        x_opp, y_opp = opponent['home_coords']
+
+        translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
+        best_translation = (0,0)
+        smallest_distance_to_opponent = 999999999999
+        for translation in translations:
+            delta_x, delta_y = translation
+            x = x_unit + delta_x
+            y = x_unit + delta_y
+            dist = abs(x - x_opp) + abs(y - y_opp)
+            if dist &lt; smallest_distance_to_opponent:
+                best_translation = translation
+                smallest_distance_to_opponent = dist
+
+        return best_translation
+
+    def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
+        # attack opponent's first ship in combat order
+
+        combat_order = combat_state[coords]
+        player_indices = [unit['player_index'] for unit in combat_order]
+
+        opponent_index = 1 - self.player_index
+        for combat_index, unit in enumerate(combat_order):
+            if unit['player_index'] == opponent_index:
+                return combat_index</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-85-2">Problem 85-2<a class="anchor-link" href="#Problem-85-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<p><strong>[IN PROGRESS]</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-85-3">Problem 85-3<a class="anchor-link" href="#Problem-85-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p><strong>[IN PROGRESS]</strong></p>
 
 </div>
 </div>
