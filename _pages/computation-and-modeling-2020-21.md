@@ -65,8 +65,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="51">
-    <li><b>Friday, January 22</b>
+<font size="3em"><ol reversed start="52">
+    <li><b>Friday, January 29</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - predator-prey, shortest distance in an undirected graphi
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-52-1">Primary: Interaction/Dummy Variables for Sandwich Dataset, Breadth-First and Depth-First Traversals in Undirected Graph</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-52-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-52-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <li><b>Wednesday, January 27</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - SIR model, dummy variables, Haskell problem
         <br>Assignment Problems:
         <font size="2em"><ul>
