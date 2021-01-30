@@ -64,8 +64,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="84">
-    <li><b>Friday, January 22</b>
+<font size="3em"><ol reversed start="85">
+    <li><b>Friday, January 29</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (C&M is first half) - random forest, space empires
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-85-1">Primary: Space Empires - Simplification + Strategy Creation / Testing</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-85-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-85-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <li><b>Wednesday, January 27</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - shortest path in weighted graph, space empires
         <br>Assignment Problems:
         <font size="2em"><ul>
