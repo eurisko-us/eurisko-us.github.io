@@ -67,7 +67,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="52">
     <li><b>Friday, January 29</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - predator-prey, shortest distance in an undirected graphi
+        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (C&M is first half) - predator-prey, shortest distance in an undirected graphi
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-52-1">Primary: Interaction/Dummy Variables for Sandwich Dataset, Breadth-First and Depth-First Traversals in Undirected Graph</a></li>
