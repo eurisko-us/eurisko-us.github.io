@@ -55,7 +55,7 @@ author_profile: false
 
 <br><br>Before you submit your assignment, make sure that your code runs, follows the <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">coding commandments</a>, the <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX commandments</a>, and satisfies ALL the requirements outlined in the assignment!
 
-<br><br>You are welcome (and encouraged) to send me their assignments on Slack to get feedback before you submit. I'm usually able to identify any obvious issues just by taking a quick glance, and it's easiest to fix those issues right away before submitting (as opposed to waiting until "later" to resubmit the assignment after it's already been graded).
+<br><br>You are welcome (and encouraged) to send me your assignment on Slack to get feedback before you submit. I'm usually able to identify any obvious issues just by taking a quick glance, and it's easiest to fix those issues right away before submitting (as opposed to waiting until "later" to resubmit the assignment after it's already been graded).
 
 
 <!--
