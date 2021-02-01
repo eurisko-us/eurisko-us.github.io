@@ -65,7 +65,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="52">
+<font size="3em"><ol reversed start="53">
+    <li><b>Monday, February 1</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (C&M is first half) - quiz 2-1 review
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-53-1">Primary: Inferring Missing Observation Values in Predict Method, Quiz Corrections</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-53-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-53-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, January 29</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (C&M is first half) - predator-prey, shortest distance in an undirected graphi
         <br>Assignment Problems:
