@@ -14099,7 +14099,7 @@ or
 <h1 id="Problem-85-1">Problem 85-1<a class="anchor-link" href="#Problem-85-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
 <p><strong>a.</strong> Make the following updates to your game:</p>
 <ul>
-<li><p>put <code>"grid_size"</code> as an attribute in the <code>game_state</code>. We've got our grid size set as $5$ for now (i.e. a $5 \times 5$ grid)</p>
+<li><p>put <code>"board_size"</code> as an attribute in the <code>game_state</code>. We've got our grid size set as $(5,5)$ for now (i.e. a $5 \times 5$ grid)</p>
 </li>
 <li><p>Player loses game when their home colony is destroyed</p>
 </li>
@@ -14176,8 +14176,8 @@ or
         unit = myself['units'][unit_index]
         x_unit, y_unit = unit['coords']
 
-        grid_size = game_state['grid_size']
-        unit_is_at_edge = (x_unit == grid_size-1)
+        board_size_x, board_size_y = game_state['board_size']
+        unit_is_at_edge = (x_unit == board_size_x-1)
         if unit_is_at_edge:
             return (0,0)
         else:
@@ -14206,13 +14206,13 @@ class RandomStrategyLevel1:
         x_unit, y_unit = unit['coords']
 
         translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
-        grid_size = game_state['grid_size']
+        board_size_x, board_size_y = hidden_game_state['board_size']
         while True:
             translation = random.choice(translations)
             delta_x, delta_y = translation
             x_new = x_unit + delta_x
             y_new = y_unit + delta_y
-            if 0 &lt;= x_new and 0 &lt;= y_new and x_new &lt;= grid_size-1 and y_new &lt;= grid_size-1:
+            if 0 &lt;= x_new and 0 &lt;= y_new and x_new &lt;= board_size_x-1 and y_new &lt;= board_size_y-1:
                 return translation
 
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
