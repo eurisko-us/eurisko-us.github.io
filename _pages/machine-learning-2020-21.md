@@ -64,9 +64,18 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="85">
+<font size="3em"><ol reversed start="86">
     <li><b>Friday, January 29</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (C&M is first half) - random forest, space empires
+        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (ML is second half) - space empires level 1
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-86-1">Primary: More Decision Tree / Random Forest Tests, Space Empires Level 1 Matchup</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-86-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-86-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <li><b>Friday, January 29</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (ML is second half) - random forest, space empires
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-85-1">Primary: Space Empires - Simplification + Strategy Creation / Testing</a></li>
@@ -75,7 +84,7 @@ author_profile: false
         </ul></font>
     </li>
     <li><b>Wednesday, January 27</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - shortest path in weighted graph, space empires
+        <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (ML is second half) - shortest path in weighted graph, space empires
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-84-1">Primary: Shortest Path in Weighted Graph, Random Decision Tree tests, a bit of Space Empires</a></li>
