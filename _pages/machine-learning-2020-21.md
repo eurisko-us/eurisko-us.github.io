@@ -66,7 +66,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="86">
     <li><b>Friday, January 29</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (ML is second half) - space empires level 1
+        <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (ML is second half) - space empires level 1
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-86-1">Primary: More Decision Tree / Random Forest Tests, Space Empires Level 1 Matchup</a></li>
