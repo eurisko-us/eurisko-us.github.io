@@ -13293,6 +13293,98 @@ MORE TESTS
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-53-1">Problem 53-1<a class="anchor-link" href="#Problem-53-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 60 minutes estimate</em></p>
+<p>In your <code>LinearRegressor</code> and <code>LogisticRegressor</code>, in your <code>predict</code> method, update your observation as follows:</p>
+<ul>
+<li><p>If there are any non-interaction terms (i.e. doesn't contain a '*' symbol) as dataframe columns, that do not appear in your observation, then set their observation values to $0.$</p>
+</li>
+<li><p>If there are any interaction terms that appear as dataframe columns, but do not appear in your observation, then generate them.</p>
+</li>
+</ul>
+<p>Then, you should be able to run the following tests from Problem 52-1</p>
+
+<pre><code># test 8 slices of beef + mayo
+&gt;&gt;&gt; observation = {'beef': 8, 'mayo': 1}
+&gt;&gt;&gt; linear_regressor.predict(observation)
+11.38
+&gt;&gt;&gt; logistic_regressor.predict(observation)
+9.72
+
+Note: under the hood, the observation should be transformed like this:
+
+initial input:
+    {'beef': 8, 'mayo': 1}
+
+fill in 0's for any missing non-interaction variables:
+    {'beef': 8, 'pb': 0, 'mayo': 1, 'jelly': 0}
+
+fill in missing interaction terms that appear in the dataset:
+    {'beef': 8, 'pb': 0, 'mayo': 1, 'jelly': 0,
+    'beef * pb': 0, 'beef * mayo': 8, 'beef * jelly': 0,
+    'pb * mayo': 0, 'pb * jelly': 0,
+    'mayo * jelly': 0}
+
+# test 4 tbsp of pb + 8 slices of beef + mayo
+&gt;&gt;&gt; observation = {'beef': 8, 'pb': 4, 'mayo': 1}
+&gt;&gt;&gt; linear_regressor.predict(observation)
+3.62
+&gt;&gt;&gt; logistic_regressor.predict(observation)
+0.77
+
+# test 8 slices of beef + mayo + jelly
+&gt;&gt;&gt; observation = {'beef': 8, 'mayo': 1, 'jelly': 1}
+&gt;&gt;&gt; linear_regressor.predict(observation)
+2.79
+&gt;&gt;&gt; logistic_regressor.predict(observation)
+0.79</code></pre>
+<p><strong>b.</strong> Submit quiz corrections for any problems you missed. We went over the quiz in the first part of the class recording: <a href="https://vimeo.com/507190028">https://vimeo.com/507190028</a></p>
+<p>(Note: if you did not miss any problems, then you don't have to submit anything)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-53-2">Problem 53-2<a class="anchor-link" href="#Problem-53-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<p><strong>[IN PROGRESS]</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-53-3">Problem 53-3<a class="anchor-link" href="#Problem-53-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to machine-learning/tests/test_dataframe.py: _____
+Overleaf link to quiz corrections: _____
+
+Repl.it link to Haskell code: _____
+Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-52-1">Problem 52-1<a class="anchor-link" href="#Problem-52-1">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 60 minutes estimate</em></p>
 <p><strong>a.</strong> Consider the sandwich prediction task again.</p>
 
