@@ -65,7 +65,7 @@ author_profile: false
 
 <br><br>
 <font size="3em"><ol reversed start="86">
-    <li><b>Friday, January 29</b>
+    <li><b>Monday, February 1</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (ML is second half) - space empires level 1
         <br>Assignment Problems:
         <font size="2em"><ul>
