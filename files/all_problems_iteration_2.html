@@ -13347,7 +13347,69 @@ fill in missing interaction terms that appear in the dataset:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-53-2">Problem 53-2<a class="anchor-link" href="#Problem-53-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
-<p><strong>[IN PROGRESS]</strong></p>
+<p><em>Location: <code>assignment-problems</code></em></p>
+<p><strong>a.</strong> Skim the following section of <a href="http://learnyouahaskell.com/higher-order-functions">http://learnyouahaskell.com/higher-order-functions</a>.</p>
+<blockquote><p>Function composition</p>
+</blockquote>
+<p>Pay attention to the following example:</p>
+
+<pre><code>&gt;&gt;&gt; fn x = ceiling (negate (tan (cos (max 50 x))))  
+&gt;&gt;&gt; fn = ceiling . negate . tan . cos . max 50</code></pre>
+<p>Previously, you wrote a function <code>tail'</code> in <code>Tail.hs</code> that finds the last <code>n</code> elements of a list by reversing the list, finding the head <code>n</code> elements of the reversed list, and then reversing the result.</p>
+<p>Rewrite the function <code>tail'</code> using composition notation, so that it's cleaner. Run <code>Tail.hs</code> again to make sure it still gives the same output as before.</p>
+<p><strong>b.</strong> Write a function <code>isPrime</code> that determines whether a nonnegative integer <code>x</code> is prime. You can use the same approach that you did with one of our beginning Python problems: loop through numbers between <code>2</code> and <code>x-1</code> and see if you can find any factors.</p>
+<p>Note that neither <code>0</code> nor <code>1</code> are prime.</p>
+<p>Here is a template for your file <code>isPrime.cpp</code>:</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+
+bool isPrime(int x)
+{
+    // your code here
+}
+
+int main()
+{
+    assert(!isPrime(0));
+    assert(!isPrime(1));
+    assert(isPrime(2));
+    assert(isPrime(3));
+    assert(!isPrime(4));
+    assert(isPrime(5));
+    assert(isPrime(7));
+    assert(!isPrime(9));
+    assert(isPrime(11));
+    assert(isPrime(13));
+    assert(!isPrime(15));
+    assert(!isPrime(16));
+    assert(isPrime(17));
+    assert(isPrime(19));
+    assert(isPrime(97));
+    assert(!isPrime(99));
+    assert(!isPrime(99));
+    assert(isPrime(13417));
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<p>Your program should work like this</p>
+
+<pre><code>&gt;&gt;&gt; g++ isPrime.cpp -o isPrime
+&gt;&gt;&gt; ./isPrime
+Success!</code></pre>
+<p><strong>c.</strong> Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Here's a reference to the <code>sort</code> command: <a href="https://www.thegeekstuff.com/2013/04/sort-files/">https://www.thegeekstuff.com/2013/04/sort-files/</a></p>
+<p>Note that the "tab" character must be specified as <code>$'\t'</code>.</p>
+<p>These problems are super quick, so we'll do several.</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-sort-5/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-5/tutorial</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-sort-6/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-6/tutorial</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-sort-7/tutorial">https://www.hackerrank.com/challenges/text-processing-sort-7/tutorial</a><br></p>
+</blockquote>
+<p><strong>d.</strong> Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/The_JOIN_operation">https://sqlzoo.net/wiki/The_JOIN_operation</a> (queries 12, 13)</p>
+</blockquote>
 
 </div>
 </div>
