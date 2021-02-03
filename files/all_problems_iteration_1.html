@@ -14053,7 +14053,11 @@ Training on 50% of the data and testing on the other 50% of the data:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Game, level 2</p>
+<h1 id="Problem-87-1">Problem 87-1<a class="anchor-link" href="#Problem-87-1">&#182;</a></h1><p>go over quiz</p>
+<p>re-run sex prediction problem; people should get roughly the same results</p>
+<p>in combat, hidden state should only be revealed for units in combat</p>
+<p>game level 2 (or debug game level 1, if people got different results)</p>
+<p>Game, level 2</p>
 <ul>
 <li><p>10-sided die</p>
 </li>
@@ -14223,10 +14227,17 @@ Flanker vs Berserker:
 <p><strong>a.</strong> Skim the following section of <a href="http://learnyouahaskell.com/higher-order-functions">http://learnyouahaskell.com/higher-order-functions</a>.</p>
 <blockquote><p>Function composition</p>
 </blockquote>
-<p>Pay attention to the following example:</p>
+<p>Consider the function 
+$$
+f(x,y) = \max \left( x, -\tan(\cos(y)) \right)
+$$</p>
+<p>This function can be implemented as</p>
 
-<pre><code>&gt;&gt;&gt; fn x = ceiling (negate (tan (cos (max 50 x))))  
-&gt;&gt;&gt; fn = ceiling . negate . tan . cos . max 50</code></pre>
+<pre><code>&gt;&gt;&gt; f x y = negate (max (x tan (cos y)))</code></pre>
+<p>or, we can implement it using function composition notation as follows:</p>
+
+<pre><code>&gt;&gt;&gt; f x = negate . max x . tan . cos</code></pre>
+<p>Note that although <code>max</code> is a function of two variables, <code>max x</code> is a function of one variable (since one of the inputs is already supplied). So, we can chain it together with other single-variable functions.</p>
 <p>Previously, you wrote a function <code>tail'</code> in <code>Tail.hs</code> that finds the last <code>n</code> elements of a list by reversing the list, finding the head <code>n</code> elements of the reversed list, and then reversing the result.</p>
 <p>Rewrite the function <code>tail'</code> using composition notation, so that it's cleaner. Run <code>Tail.hs</code> again to make sure it still gives the same output as before.</p>
 <p><strong>b.</strong> Write a function <code>isPrime</code> that determines whether a nonnegative integer <code>x</code> is prime. You can use the same approach that you did with one of our beginning Python problems: loop through numbers between <code>2</code> and <code>x-1</code> and see if you can find any factors.</p>

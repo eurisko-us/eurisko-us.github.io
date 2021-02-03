@@ -13133,27 +13133,10 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Interaction terms -- simple fit by hand. Your resulting model should match up with the given predictions.</p>
-<p>Interaction variables -- on sandwich dataset, create a column with an interaction variable. Then plug it into your model. Are the resulting predictions more reasonable than if you just used a linear model?</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>c.</strong> Write a function <code>random_optimizer(n, plot=True)</code> that generates <code>n</code> random <code>locations</code> arrays for the 8 queens, and returns the <code>locations</code> array that resulted in the lowest cost.</p>
 <p>If <code>plot=True</code>, then your function should also make a graph that plots the lowest cost at each iteration (there are <code>n</code> iterations).</p>
 <p><strong>d.</strong> Post a plot for <code>n=1000</code> iterations on #plots. Note that you'll have to join this channel on Slack by hovering over "channels", clicking the "+" that appears on the right, and browsing for "#plots".</p>
 <hr>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Distance in graph</p>
 
 </div>
 </div>
@@ -13169,19 +13152,12 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Skim the following section of <a href="http://learnyouahaskell.com/recursion">http://learnyouahaskell.com/recursion</a>.</p>
-<blockquote><p>Maps and filters</p>
-</blockquote>
-<p>Create a <strong>Haskell</strong> file <code>AddOne.hs</code> and write a function <code>addOne</code> that takes a list and adds <code>1</code> to each value in the list.</p>
-<p>To check your function, print <code>addOne [1, 2, 3]</code>. You should get a result of <code>[2, 3, 4]</code>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Graph distance</p>
+<h1 id="Problem-54-1">Problem 54-1<a class="anchor-link" href="#Problem-54-1">&#182;</a></h1><p>Graph distance &amp; shortest path -- create a method <code>set_distance_and_previous()</code> that does BFS and sets those properties</p>
+<p>call this method to start whenever you run</p>
+<p><code>calc_distance(i,j)</code></p>
+<p>or</p>
+<p><code>calc_shortest_path(i,j)</code>.</p>
+<p>generate the shortest path by starting at the terminal node and repeatedly going to the previous node until you get to the initial node. (Remember to reverse the path at the end.)</p>
 
 <pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(1,3),(3,4),(1,4),(4,5)]
 &gt;&gt;&gt; graph = Graph(edges)
@@ -13286,6 +13262,26 @@ MORE TESTS
 1
 &gt;&gt;&gt; graph.calc_distance(3,3)
 0</code></pre>
+<p>In <code>graph/tests/test_graph.py</code>, assert that your method passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(1,3),(3,4),(1,4),(4,5)]
+&gt;&gt;&gt; graph = Graph(edges)
+
+at this point, the graph looks like this:
+0 -- 1 -- 2
+     | \
+     3--4 -- 5
+
+&gt;&gt;&gt; graph.calc_shortest_path(0,4)
+[0, 1, 4]
+&gt;&gt;&gt; graph.calc_shortest_path(5,2)
+[5, 4, 1, 2]
+&gt;&gt;&gt; graph.calc_shortest_path(0,5)
+[0, 1, 4, 5]
+&gt;&gt;&gt; graph.calc_shortest_path(4,1)
+[4, 1]
+&gt;&gt;&gt; graph.calc_shortest_path(3,3)
+[3]</code></pre>
 
 </div>
 </div>
@@ -13351,10 +13347,17 @@ fill in missing interaction terms that appear in the dataset:
 <p><strong>a.</strong> Skim the following section of <a href="http://learnyouahaskell.com/higher-order-functions">http://learnyouahaskell.com/higher-order-functions</a>.</p>
 <blockquote><p>Function composition</p>
 </blockquote>
-<p>Pay attention to the following example:</p>
+<p>Consider the function 
+$$
+f(x,y) = \max \left( x, -\tan(\cos(y)) \right)
+$$</p>
+<p>This function can be implemented as</p>
 
-<pre><code>&gt;&gt;&gt; fn x = ceiling (negate (tan (cos (max 50 x))))  
-&gt;&gt;&gt; fn = ceiling . negate . tan . cos . max 50</code></pre>
+<pre><code>&gt;&gt;&gt; f x y = negate (max (x tan (cos y)))</code></pre>
+<p>or, we can implement it using function composition notation as follows:</p>
+
+<pre><code>&gt;&gt;&gt; f x = negate . max x . tan . cos</code></pre>
+<p>Note that although <code>max</code> is a function of two variables, <code>max x</code> is a function of one variable (since one of the inputs is already supplied). So, we can chain it together with other single-variable functions.</p>
 <p>Previously, you wrote a function <code>tail'</code> in <code>Tail.hs</code> that finds the last <code>n</code> elements of a list by reversing the list, finding the head <code>n</code> elements of the reversed list, and then reversing the result.</p>
 <p>Rewrite the function <code>tail'</code> using composition notation, so that it's cleaner. Run <code>Tail.hs</code> again to make sure it still gives the same output as before.</p>
 <p><strong>b.</strong> Write a function <code>isPrime</code> that determines whether a nonnegative integer <code>x</code> is prime. You can use the same approach that you did with one of our beginning Python problems: loop through numbers between <code>2</code> and <code>x-1</code> and see if you can find any factors.</p>
