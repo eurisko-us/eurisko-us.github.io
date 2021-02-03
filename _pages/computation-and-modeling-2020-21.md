@@ -65,7 +65,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="53">
+<font size="3em"><ol reversed start="54">
+    <li><b>Wednesday, February 3</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/508143215">Class Recording</a> (C&M is first half) - distance & shortest path in graph
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-54-1">Primary: Distance & Shortest Path in a Graph</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-54-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-54-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, February 1</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (C&M is first half) - quiz 2-1 review
         <br>Assignment Problems:
