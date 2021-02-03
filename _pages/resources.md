@@ -8,7 +8,7 @@ author_profile: false
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  
-<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submitting-assignments">Submitting Assignments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#code-reviews">Code Reviews</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#github-commandments">GitHub Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#debugging">Debugging</a> • <a class="body" href="https://eurisko-us.github.io/resources/#replit-github-integration-troubleshooting">Repl.it-Github Integration Troubleshooting</a></b></center></font>
+<font size="3em"><center><b><a class="body" href="https://eurisko-us.github.io/resources/#class-meetings">Class Meetings</a> • <!--<a class="body" href="https://eurisko-us.github.io/resources/#attendance">Attendance</a> • --><a class="body" href="https://eurisko-us.github.io/resources/#submitting-assignments">Submitting Assignments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#grade-breakdown">Grade Breakdown</a> • <a class="body" href="https://eurisko-us.github.io/resources/#code-reviews">Code Reviews</a> • <a class="body" href="https://eurisko-us.github.io/resources/#collaboration-policy">Collaboration Policy</a> • <a class="body" href="https://eurisko-us.github.io/resources/#study-tips">Study Tips</a> • <a class="body" href="https://eurisko-us.github.io/resources/#github-commandments">GitHub Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#latex-commandments">LaTeX Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#coding-commandments">Coding Commandments</a> • <a class="body" href="https://eurisko-us.github.io/resources/#debugging">Debugging</a> • <a class="body" href="https://eurisko-us.github.io/resources/#replit-github-integration-troubleshooting">Repl.it-Github Integration Troubleshooting</a></b> • <a class="body" href="https://eurisko-us.github.io/resources/#preparing-for-eurisko">Preparing for Eurisko</a></b></center></font>
 </div>
 
 ## [<center>Class Meetings</center>](#class-meetings)
@@ -488,4 +488,14 @@ author_profile: false
 </details>
   
 </font>
+</div>
+
+## [<center>Preparing for Eurisko</center>](#preparing)
+
+<div style="width:100%; max-width:800px; margin:auto"> 
+
+<br>First, learn the absolute basics of Python: <a class="body" href="https://www.codecademy.com/learn/learn-python">codecademy.com/learn/learn-python</a>
+
+<br>Once you're done with that, then move on to Hackerrank challenges: <a class="body" href="https://www.hackerrank.com/domains/python">hackerrank.com/domains/python</a>
+
 </div>
