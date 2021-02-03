@@ -64,7 +64,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="86">
+<font size="3em"><ol reversed start="87">
+    <li><b>Wednesday, February 3</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/508143215">Class Recording</a> (ML is second half) - space empires level 1, quiz 2-1 review
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-87-1">Primary: Space Empires Level 1 Final Fixes/Results, Re-run Sex Prediction, Quiz Corrections</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-87-2">Supplementary: Haskell, C++, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-87-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, February 1</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (ML is second half) - space empires level 1
         <br>Assignment Problems:
