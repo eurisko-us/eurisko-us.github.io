@@ -14053,19 +14053,68 @@ Training on 50% of the data and testing on the other 50% of the data:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-87-1">Problem 87-1<a class="anchor-link" href="#Problem-87-1">&#182;</a></h1><p>go over quiz</p>
-<p>re-run sex prediction problem; people should get roughly the same results</p>
-<p>in combat, hidden state should only be revealed for units in combat</p>
-<p>game level 2 (or debug game level 1, if people got different results)</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>game level 2 (or debug game level 1, if people got different results)</p>
 <p>Game, level 2</p>
 <ul>
-<li><p>10-sided die</p>
-</li>
 <li><p>economic phase</p>
 </li>
 <li><p>2 ship types: scout + something else</p>
 </li>
 </ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-87-1">Problem 87-1<a class="anchor-link" href="#Problem-87-1">&#182;</a></h1><p><strong>This is the results spreadsheet that you'll paste your results into:</strong> <a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+<p><strong>a.</strong></p>
+<ul>
+<li><p>It's possible that unit 0 might be a colony (not a scout), which would be problematic for the current implementation of the <code>Flanker</code> strategy. Fix the implementation so that the flanking unit is chosen as the first scout, not just the unit at index <code>0</code> (since there is no guarantee this is a scout). Check your game logs to make sure that the scout is actually doing the flanking, as intended.</p>
+</li>
+<li><p>Re-specify <code>hidden_game_state_for_combat</code>. Currently, it shows all of the opponent's units, but it should really only show those unit involved in the particular combat that's taking place.</p>
+<ul>
+<li><code>hidden_game_state_for_combat</code> - like <code>hidden_game_state</code>, but reveal the type / hits_left / technology of the opponent's ships that are in the particular combat.</li>
+</ul>
+</li>
+<li><p>Run 1000 random simulations for each of the following matchups. Remember to have both strategies get an equal number of games as the player who goes first. Paste your results into the spreadsheet.</p>
+<ul>
+<li>Berserker vs Dumb</li>
+<li>Berserker vs Random</li>
+<li>Flanker vs Random</li>
+<li>Flanker vs Berserker</li>
+</ul>
+</li>
+<li><p>Note that there should be no ties. (If you're getting a tie, post on Slack so we can clear up what's going wrong.)</p>
+</li>
+<li><p>Make sure you're using a 10-sided die.</p>
+</li>
+</ul>
+<p><strong>b.</strong> Re-run the sex prediction problem (Problem 77-1) and paste your results in the spreadsheet. Now that our decision trees and random forests are passing tests, we should get very similar accuracy results.</p>
+<p><strong>c.</strong> Submit quiz corrections -- say what you got wrong, why you got it wrong, what the correct answer is, and why it's correct.</p>
+<ul>
+<li>Quiz review: <a href="https://vimeo.com/508143215">https://vimeo.com/508143215</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-87-2">Problem 87-2<a class="anchor-link" href="#Problem-87-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
+<p><em>Location: <code>assignment-problems</code></em></p>
+<p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-87-3">Problem 87-3<a class="anchor-link" href="#Problem-87-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<p><strong>IN PROGRESS</strong></p>
 
 </div>
 </div>
