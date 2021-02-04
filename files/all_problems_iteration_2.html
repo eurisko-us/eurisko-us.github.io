@@ -13218,7 +13218,111 @@ at this point, the graph looks like this:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-54-2">Problem 54-2<a class="anchor-link" href="#Problem-54-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
 <p><em>Location: <code>assignment-problems</code></em></p>
-<p><strong>IN PROGRESS</strong></p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Let $a_i$ be the $i$th Fibonacci number and let $S_n$ be the sum of the first $n$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
+$$
+\sum\limits_{i=0}^n S_{a_i} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
+$$<p>For example, if we wanted to compute the result for <code>n=6</code>, then we'd need to</p>
+<ul>
+<li><p>compute the first $6$ Fibonacci numbers:
+$$
+a_0=0, a_1=1, a_2=1, a_3=2, a_4=3, a_5=5, a_6=8
+$$</p>
+</li>
+<li><p>compute the first $8$ Fibonacci sums:
+$$
+\begin{align*}
+S_0 &amp;= 0 \\
+S_1 &amp;= 0 + 1 = 1 \\
+S_2 &amp;= 0 + 1 + 1 = 2 \\
+S_3 &amp;= 0 + 1 + 1 + 2 = 4 \\
+S_4 &amp;= 0 + 1 + 1 + 2 + 3 = 7 \\
+S_5 &amp;= 0 + 1 + 1 + 2 + 3 + 5 = 12 \\
+S_6 &amp;= 0 + 1 + 1 + 2 + 3 + 5 + 8 = 20 \\
+S_7 &amp;= 0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 = 33 \\
+S_8 &amp;= 0 + 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21 = 54 \\
+\end{align*}
+$$</p>
+</li>
+</ul>
+<p>Add up the desired sums:</p>
+$$
+\begin{align*}
+\sum\limits_{i=0}^6 S_{a_i} &amp;= S_{a_0} + S_{a_1} + S_{a_2} + S_{a_3} + S_{a_4} + S_{a_5} + S_{a_6} \\
+&amp;= S_{0} + S_{1} + S_{1} + S_{2} + S_{3} + S_{5} + S_{8} \\
+&amp;= 0 + 1 + 1 + 2 + 4 + 12 + 54 \\
+&amp;= 74
+\end{align*}
+$$<p><strong>Implementation instructions:</strong></p>
+<p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
+<ul>
+<li><p>Create an array containing the Fibonacci numbers, starting with the $0$th Fibonacci number and going up to (and including) the $n$th number.</p>
+</li>
+<li><p>Create an array containing the partial sums, up to the highest partial sum that will be needed. (You'll need to fill in partial sums up to the $a_n$th index)</p>
+</li>
+<li><p>Compute the sum of the appropriate partial sums.</p>
+</li>
+</ul>
+<p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
+<p><strong>Code template:</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+int metaFibonacciSum(int n)
+{
+    // your code here
+}
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(metaFibonacciSum(6) == 74);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<p><strong>Debugging note:</strong> A failed assert will obliterate any messages that would otherwise be printed out on the same line. So if you want a message to print even in the event of a failed assert, you have to put <code>\n</code> at the end of it so that the assert gets moved to the next line of output.</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will print\n";
+    assert(2+2==5);
+}</code></pre>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will NOT print";
+    assert(2+2==5);
+}</code></pre>
+<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Repeat the C++ problem again, but in Haskell.</p>
+
+<pre><code>-- first, define a recursive function "fib"
+-- to compute the nth Fibonacci number
+
+-- once you've defined "fib", proceed to the
+-- steps below
+partialSumEntries n = -- your code here
+partialSum n = -- your code here
+metaSumEntries n = -- your code here
+metaSum n = -- your code here
+
+main = print (metaSum 6) -- should come out to 74</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Helpful resource: <a href="https://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html">https://www.theunixschool.com/2012/07/10-examples-of-paste-command-usage-in.html</a></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/paste-1/problem">https://www.hackerrank.com/challenges/paste-1/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/paste-2/problem">https://www.hackerrank.com/challenges/paste-2/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/paste-3/problem">https://www.hackerrank.com/challenges/paste-3/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/paste-4/problem">https://www.hackerrank.com/challenges/paste-4/problem</a><br></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 1, 2, 3, 4)</p>
+</blockquote>
 
 </div>
 </div>
@@ -13227,7 +13331,27 @@ at this point, the graph looks like this:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-54-3">Problem 54-3<a class="anchor-link" href="#Problem-54-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
-<p><strong>IN PROGRESS</strong></p>
+<ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to graph/tests/test_graph.py: ___
+
+Repl.it link to C++ code: _____
+Repl.it link to Haskell code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
