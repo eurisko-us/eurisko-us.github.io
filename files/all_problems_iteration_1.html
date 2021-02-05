@@ -13971,6 +13971,80 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Fix this problem to use vectors</p>
+<p><strong>Implementation instructions:</strong></p>
+<p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
+<p>Helper functions:</p>
+<ul>
+<li><p>Create a recursive function <code>kthFibonacciNumber(int k)</code> that computes the <code>k</code>th Fibonacci number.</p>
+</li>
+<li><p>Create a function <code>kthPartialSum(int k)</code> that computes the sum of the first <code>k</code> Fibonacci numbers.</p>
+</li>
+</ul>
+<p>Then, in the primary function <code>metaFibonacciSum(int n)</code>:</p>
+<ul>
+<li><p>Create an array containing the Fibonacci numbers $a_0, a_1, ..., a_n.$</p>
+</li>
+<li><p>Create an array containing the partial sums $S_{a_0}, S_{a_1}, ..., S_{a_n}.$</p>
+</li>
+<li><p>Compute the sum of the partial sums array.</p>
+</li>
+</ul>
+<p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
+<p><strong>Code template:</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+int kthFibonacciNumber(int k)
+{
+    // your code here
+}
+
+int kthPartialSum(int k)
+{
+    // your code here
+}
+
+int metaFibonacciSum(int n)
+{
+    // your code here
+}
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(metaFibonacciSum(6) == 74);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<p><strong>Debugging note:</strong> A failed assert will obliterate any messages that would otherwise be printed out on the same line. So if you want a message to print even in the event of a failed assert, you have to put <code>\n</code> at the end of it so that the assert gets moved to the next line of output.</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will print\n";
+    assert(2+2==5);
+}</code></pre>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will NOT print";
+    assert(2+2==5);
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
 
 </div>
@@ -14075,7 +14149,7 @@ sql.query</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-87-2">Problem 87-2<a class="anchor-link" href="#Problem-87-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
 <p><em>Location: <code>assignment-problems</code></em></p>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Let $a_k$ be the $k$th Fibonacci number and let $S_k$ be the sum of the first $k$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
+<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Let $a_k$ be the $k$th Fibonacci number and let $S_k$ be the sum of the first $k$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
 $$
 \sum\limits_{i=k}^n S_{a_k} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
 $$<p>For example, if we wanted to compute the result for <code>n=6</code>, then we'd need to</p>
@@ -14109,73 +14183,7 @@ $$
 &amp;= 0 + 1 + 1 + 2 + 4 + 12 + 54 \\
 &amp;= 74
 \end{align*}
-$$<p><strong>Implementation instructions:</strong></p>
-<p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
-<p>Helper functions:</p>
-<ul>
-<li><p>Create a recursive function <code>kthFibonacciNumber(int k)</code> that computes the <code>k</code>th Fibonacci number.</p>
-</li>
-<li><p>Create a function <code>kthPartialSum(int k)</code> that computes the sum of the first <code>k</code> Fibonacci numbers.</p>
-</li>
-</ul>
-<p>Then, in the primary function <code>metaFibonacciSum(int n)</code>:</p>
-<ul>
-<li><p>Create an array containing the Fibonacci numbers $a_0, a_1, ..., a_n.$</p>
-</li>
-<li><p>Create an array containing the partial sums $S_{a_0}, S_{a_1}, ..., S_{a_n}.$</p>
-</li>
-<li><p>Compute the sum of the partial sums array.</p>
-</li>
-</ul>
-<p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
-<p><strong>Code template:</strong></p>
-
-<pre><code># include &lt;iostream&gt;
-# include &lt;cassert&gt;
-
-int kthFibonacciNumber(int k)
-{
-    // your code here
-}
-
-int kthPartialSum(int k)
-{
-    // your code here
-}
-
-int metaFibonacciSum(int n)
-{
-    // your code here
-}
-
-int main()
-{
-    std::cout &lt;&lt; "Testing...\n";
-
-    assert(metaFibonacciSum(6) == 74);
-
-    std::cout &lt;&lt; "Success!";
-
-    return 0;
-}</code></pre>
-<p><strong>Debugging note:</strong> A failed assert will obliterate any messages that would otherwise be printed out on the same line. So if you want a message to print even in the event of a failed assert, you have to put <code>\n</code> at the end of it so that the assert gets moved to the next line of output.</p>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;cassert&gt;
-int main()
-{
-    std::cout &lt;&lt; "This line will print\n";
-    assert(2+2==5);
-}</code></pre>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;cassert&gt;
-int main()
-{
-    std::cout &lt;&lt; "This line will NOT print";
-    assert(2+2==5);
-}</code></pre>
-<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Repeat the C++ problem again, but in Haskell.</p>
+$$<p>Here's a template:</p>
 
 <pre><code>-- first, define a recursive function "fib"
 -- to compute the nth Fibonacci number
@@ -14221,7 +14229,6 @@ https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8
 
 Quiz corrections: ____
 
-Repl.it link to C++ code: _____
 Repl.it link to Haskell code: _____
 Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
 
