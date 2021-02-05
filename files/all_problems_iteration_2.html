@@ -13218,9 +13218,9 @@ at this point, the graph looks like this:
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-54-2">Problem 54-2<a class="anchor-link" href="#Problem-54-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
 <p><em>Location: <code>assignment-problems</code></em></p>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Let $a_i$ be the $i$th Fibonacci number and let $S_n$ be the sum of the first $n$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Let $a_k$ be the $k$th Fibonacci number and let $S_k$ be the sum of the first $k$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
 $$
-\sum\limits_{i=0}^n S_{a_i} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
+\sum\limits_{i=k}^n S_{a_k} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
 $$<p>For example, if we wanted to compute the result for <code>n=6</code>, then we'd need to</p>
 <ul>
 <li><p>compute the first $6$ Fibonacci numbers:
@@ -13247,19 +13247,27 @@ $$</p>
 <p>Add up the desired sums:</p>
 $$
 \begin{align*}
-\sum\limits_{i=0}^6 S_{a_i} &amp;= S_{a_0} + S_{a_1} + S_{a_2} + S_{a_3} + S_{a_4} + S_{a_5} + S_{a_6} \\
+\sum\limits_{k=0}^6 S_{a_k} &amp;= S_{a_0} + S_{a_1} + S_{a_2} + S_{a_3} + S_{a_4} + S_{a_5} + S_{a_6} \\
 &amp;= S_{0} + S_{1} + S_{1} + S_{2} + S_{3} + S_{5} + S_{8} \\
 &amp;= 0 + 1 + 1 + 2 + 4 + 12 + 54 \\
 &amp;= 74
 \end{align*}
 $$<p><strong>Implementation instructions:</strong></p>
 <p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
+<p>Helper functions:</p>
 <ul>
-<li><p>Create an array containing the Fibonacci numbers, starting with the $0$th Fibonacci number and going up to (and including) the $n$th number.</p>
+<li><p>Create a recursive function <code>kthFibonacciNumber(int k)</code> that computes the <code>k</code>th Fibonacci number.</p>
 </li>
-<li><p>Create an array containing the partial sums, up to the highest partial sum that will be needed. (You'll need to fill in partial sums up to the $a_n$th index)</p>
+<li><p>Create a function <code>kthPartialSum(int k)</code> that computes the sum of the first <code>k</code> Fibonacci numbers.</p>
 </li>
-<li><p>Compute the sum of the appropriate partial sums.</p>
+</ul>
+<p>Then, in the primary function <code>metaFibonacciSum(int n)</code>:</p>
+<ul>
+<li><p>Create an array containing the Fibonacci numbers $a_0, a_1, ..., a_n.$</p>
+</li>
+<li><p>Create an array containing the partial sums $S_{a_0}, S_{a_1}, ..., S_{a_n}.$</p>
+</li>
+<li><p>Compute the sum of the partial sums array.</p>
 </li>
 </ul>
 <p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
@@ -13267,6 +13275,16 @@ $$<p><strong>Implementation instructions:</strong></p>
 
 <pre><code># include &lt;iostream&gt;
 # include &lt;cassert&gt;
+
+int kthFibonacciNumber(int k)
+{
+    // your code here
+}
+
+int kthPartialSum(int k)
+{
+    // your code here
+}
 
 int metaFibonacciSum(int n)
 {
@@ -13307,8 +13325,8 @@ int main()
 
 -- once you've defined "fib", proceed to the
 -- steps below
-partialSumEntries n = -- your code here
-partialSum n = -- your code here
+partialSumEntries k = -- your code here
+partialSum k = -- your code here
 metaSumEntries n = -- your code here
 metaSum n = -- your code here
 
