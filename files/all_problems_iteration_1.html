@@ -14045,6 +14045,42 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Random-Forest">Random Forest<a class="anchor-link" href="#Random-Forest">&#182;</a></h3><p><strong>a.</strong> Make the following adjustment to your random forest:</p>
+<ul>
+<li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
+<ul>
+<li><p>In our case, we have about 70 records, and in each test-train split, we're using 80% as training data, so that's about 56 records. Now, if we set <code>training_percentage = 0.3</code>, then we randomly choose $0.3 \times 56 \approx 17$ records from the training data to actually fit the decision tree.</p>
+</li>
+<li><p>When randomly selecting the records, use random selection <em>with replacement</em>. In other words, it's okay to select duplicate data records.</p>
+</li>
+</ul>
+</li>
+<li><p>When you initialize the random forest, pass a <code>training_percentage</code> parameter that, in turn, gets passed to the random decision trees.</p>
+</li>
+<li><p>The reason why choosing <code>training_percentage &lt; 1</code> can be useful is that it speeds up the time to train the random forest, and also, it allows different models to get different "perspectives" on the data, thereby creating a more diverse "hive mind" (and higher diversity generally leads to higher performance when it comes to ensemble models, i.e. models consisting of many smaller sub-models)</p>
+</li>
+</ul>
+<p><strong>b.</strong> Re-run problem 77-1 using the following models, with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
+<ul>
+<li><p>A single random decision tree</p>
+</li>
+<li><p>Random forest with 10 trees</p>
+</li>
+<li><p>Random forest with 100 trees</p>
+</li>
+<li><p>Random forest with 1,000 trees</p>
+</li>
+<li><p>Random forest with 10,000 trees</p>
+</li>
+</ul>
+<p>Put your results in the spreadsheet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
 
 </div>
@@ -14063,48 +14099,95 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-88-1">Problem 88-1<a class="anchor-link" href="#Problem-88-1">&#182;</a></h1><ul>
-<li>random forest -- speedup</li>
-</ul>
-<p><strong>a.</strong> Make the following adjustment to your random forest:</p>
+<h1 id="Problem-88-1">Problem 88-1<a class="anchor-link" href="#Problem-88-1">&#182;</a></h1><p><strong>This is the results spreadsheet that you'll paste your results into:</strong> <a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+<h3 id="Gini-Tree">Gini Tree<a class="anchor-link" href="#Gini-Tree">&#182;</a></h3><p>On the sex prediction dataset, train a Gini decision tree on the first half of the data and test on the second half of the data.</p>
+<p>(If there's an odd number of data points, then round so that the first half of the data will have one more record than the second half)</p>
+<p>Paste your prediction accuracy into the spreadsheet, along with the indices of any misclassified data points (zero-indexed: the index of the first data point in the dataset would be index 0).</p>
+<h3 id="Space-Empires-Level-1">Space Empires Level 1<a class="anchor-link" href="#Space-Empires-Level-1">&#182;</a></h3><p>Note the following from the rulebook:</p>
+<blockquote><p>(7.6) There is no limit to the number of Ship
+Yards that may occupy the same system</p>
+<p>(8.2.2) Building Ship Yards: Ship Yards may only be built at planets that produced income (not new colonies) in the Economic Phase. Ship Yards may be purchased and placed at multiple planets, but no more than one per planet. Additional Ship Yards may be purchased at those planets in future Economic Phases. Ship Yards are produced by the Colony itself and therefore do not require Ship Yards to build them.</p>
+<p>So, only a colony can buy a shipyard, and only once per economic phase. Shipyards cannot build other shipyards. If a colony with existing shipyards builds a shipyard, the building of the new shipyard does <em>not</em> it affect how much hullsize the other shipyards can build on that turn. That is to say, building a shipyard at a colony uses up CP but not hullsize building capacity.</p>
+</blockquote>
+<p><strong>Problem:</strong> Using your level 1 game, simulate 20 games of Flanker vs Berserker with random seeds 1 through 20.</p>
 <ul>
-<li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
+<li><p>Define the random seed at the beginning of the game. Make sure your die rolls match up with those shown in the demonstration below.</p>
+</li>
+<li><p>Let Flanker go first on games 1-10, and let Berserker go first on games 11-20.</p>
+</li>
+<li><p>For each of the 20 games, store the game log in <code>space-empires/logs/21-02-05-flanker-vs-berserker.txt</code>. In the game log, on each turn, you should log any ship movements, any battle locations, the combat order, the dice rolls on each attack during combat, and whether or not each attack resulted in a hit.</p>
+</li>
+<li><p>In the spreadsheet, paste the game numbers on which the Flanker won. For example, if Flanker won on games 2, 3, 5, 8, 9, 13, 15, 19, then you'd paste <code>2, 3, 5, 8, 9, 13, 15, 19</code> into the spreadsheet.</p>
+</li>
+<li><p>Check the game numbers you pasted in against those of your classmates. Any discrepancy corresponds to a game on which you and your classmate had different outcomes. So, for any discrepancies, inspect your game logs against your classmate's, and figure out where your game logs started to differ.</p>
+</li>
+</ul>
+
+<pre><code>import random
+import math
+
+for game_num in range(1,6):
+    random.seed(game_num)
+    first_few_die_rolls = [math.ceil(9*random.random()) for _ in range(7)]
+    print('first few die rolls of game {}'.format(game_num))
+    print('\t',first_few_die_rolls,'\n')
+
+---
+
+first few die rolls of game 1
+     [2, 8, 7, 3, 5, 5, 6] 
+
+first few die rolls of game 2
+     [9, 9, 1, 1, 8, 7, 7] 
+
+first few die rolls of game 3
+     [3, 5, 4, 6, 6, 1, 1] 
+
+first few die rolls of game 4
+     [3, 1, 4, 2, 1, 4, 9] 
+
+first few die rolls of game 5
+     [6, 7, 8, 9, 7, 9, 1]</code></pre>
+<h3 id="Space-Empires-Level-2">Space Empires Level 2<a class="anchor-link" href="#Space-Empires-Level-2">&#182;</a></h3><p>Implement toggles that you can use to set level 2 of the game:</p>
 <ul>
-<li><p>In our case, we have about 70 records, and in each test-train split, we're using 80% as training data, so that's about 56 records. Now, if we set <code>training_percentage = 0.3</code>, then we randomly choose $0.3 \times 56 \approx 17$ records from the training data to actually fit the decision tree.</p>
+<li><p>Change initial CP to 30</p>
 </li>
-<li><p>When randomly selecting the records, use random selection <em>with replacement</em>. In other words, it's okay to select duplicate data records.</p>
+<li><p>Allow players to buy technology (but as for ships -- they can still only buy scouts)</p>
 </li>
-</ul>
-</li>
-<li><p>When you initialize the random forest, pass a <code>training_percentage</code> parameter that, in turn, gets passed to the random decision trees.</p>
+<li><p>Have 1 economic phase and that's it.</p>
 </li>
 </ul>
-<p><strong>b.</strong> Repeat problem 77-1 using the following models, with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
+<p>In the level 2 game, we will have matchups between several strategies.</p>
 <ul>
-<li><p>A single random decision tree</p>
+<li><p><code>NumbersBerserkerLevel2</code> - spends all its CP buying more scouts. This Berserker thinks that the best way to win is to bring in a bunch of unskilled reinforcements. Sends all the scouts directly towards the enemy home base.</p>
 </li>
-<li><p>Random forest with 10 trees</p>
+<li><p><code>MovementBerserkerLevel2</code> - buys movement technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
 </li>
-<li><p>Random forest with 100 trees</p>
+<li><p><code>AttackBerserkerLevel2</code> - buys attack technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
 </li>
-<li><p>Random forest with 1,000 trees</p>
+<li><p><code>DefenseBerserkerLevel2</code> - buys attack technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
 </li>
-<li><p>Random forest with 10,000 trees</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>pairwise debug anything weird on game level 1</p>
-</li>
-<li><p>game level 2</p>
-<ul>
-<li><p>1 economic phase and that's it. What do you purchase? available: scouts, some other ship type, some basic tech</p>
-</li>
-<li><p>simulate 1000 games with all possibilities</p>
+<li><p><code>FlankerLevel2</code> - buys movement technology then buys another scout. Then uses that fast scout to perform the flanking maneuver.</p>
 </li>
 </ul>
-</li>
-</ul>
+<p>Perform 1000 simulations for each matchup, just like you did with level 1. Remember to randomize the die rolls and switch who goes first at game 500. Put your results in the spreadsheet.</p>
+<p><strong>When doing the 1000 simulations, set <code>random.seed(game_num)</code> like you are now doing with the level 1 game.</strong> This way, we'll be able to backtrack any discrepancies to the individual game number.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-88-2">Problem 88-2<a class="anchor-link" href="#Problem-88-2">&#182;</a></h1><p>in progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-88-3">Problem 88-3<a class="anchor-link" href="#Problem-88-3">&#182;</a></h1><p>in progress</p>
 
 </div>
 </div>
