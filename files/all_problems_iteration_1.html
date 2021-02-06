@@ -13978,9 +13978,10 @@ sql.query</code></pre>
 <ul>
 <li><p>Create a recursive function <code>kthFibonacciNumber(int k)</code> that computes the <code>k</code>th Fibonacci number.</p>
 </li>
-<li><p>Create a function <code>kthPartialSum(int k)</code> that computes the sum of the first <code>k</code> Fibonacci numbers.</p>
+<li><p>Create a function <code>kthPartialSum(int k)</code> that creates an</p>
 </li>
 </ul>
+<p>computes the sum of the first <code>k</code> Fibonacci numbers.</p>
 <p>Then, in the primary function <code>metaFibonacciSum(int n)</code>:</p>
 <ul>
 <li><p>Create an array containing the Fibonacci numbers $a_0, a_1, ..., a_n.$</p>
@@ -14179,7 +14180,55 @@ first few die rolls of game 5
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-88-2">Problem 88-2<a class="anchor-link" href="#Problem-88-2">&#182;</a></h1><p>in progress</p>
+<h1 id="Problem-88-2">Problem 88-2<a class="anchor-link" href="#Problem-88-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Implement the <code>metaFibonacciSum</code> function in C++:</p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+int metaFibonacciSum(int n)
+{
+    // return the result immediately if n&lt;2
+
+    // otherwise, construct a an array called "terms"
+    // that contains the Fibonacci terms at indices
+    // 0, 1, ..., n
+
+    // construct an array called "extendedTerms" that
+    // contains the Fibonacci terms at indices
+    // 0, 1, ..., a_n (where a_n is the nth Fibonacci term)
+
+    // when you fill up this array, many of the terms can
+    // simply copied from the existing "terms" array. But
+    // if you need additional terms, you'll have to compute
+    // them the usual way (by adding the previous 2 terms)
+
+    // then, create an array called "partialSums" that
+    // contains the partial sums S_0, S_1, ..., S_{a_n}
+
+    // finally, add up the desired partial sums,
+    // S_{a_0} + S_{a_1} + ... + S_{a_n},
+    // and return this result
+
+}
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(metaFibonacciSum(6)==74);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Helpful resource: <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/awk-1/problem">https://www.hackerrank.com/challenges/awk-1/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/awk-2/problem">https://www.hackerrank.com/challenges/awk-2/problem</a><br></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 5, 6, 7, 8)</p>
+</blockquote>
 
 </div>
 </div>
@@ -14187,7 +14236,28 @@ first few die rolls of game 5
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-88-3">Problem 88-3<a class="anchor-link" href="#Problem-88-3">&#182;</a></h1><p>in progress</p>
+<h1 id="Problem-88-3">Problem 88-3<a class="anchor-link" href="#Problem-88-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to space-empires/logs: ___
+Repl.it link to space empires game lvl 1 simulation runner: ___
+Repl.it link to space empires game lvl 2 simulation runner: ___
+
+Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
