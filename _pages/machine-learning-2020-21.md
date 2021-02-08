@@ -64,8 +64,18 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="88">
-    <li><b>Friday, February 5</b>
+<font size="3em"><ol reversed start="89">
+    <li><b>Monday, February 8</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-1">Primary: Gini Tree / Game Level 1 Debugging, Random Forest Speedup</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-2">Supplementary: Haskell, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-4">Study for Thursday Quiz</a></li>
+        </ul></font>
+    </li>
+   <li><b>Friday, February 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508979696">Class Recording</a> (ML is second half) - space empires level 1, quiz 2-1 review
         <br>Assignment Problems:
         <font size="2em"><ul>
