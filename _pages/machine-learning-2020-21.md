@@ -72,7 +72,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-1">Primary: Gini Tree / Game Level 1 Debugging, Random Forest Speedup</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-2">Supplementary: Haskell, Bash, SQL</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-3">Commit / Review</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-4">Study for Thursday Quiz</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-89-4">Preparation for Thursday Quiz</a></li>
         </ul></font>
     </li>
    <li><b>Friday, February 5</b>
