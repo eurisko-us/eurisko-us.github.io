@@ -65,8 +65,18 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="55">
-    <li><b>Friday, February 3</b>
+<font size="3em"><ol reversed start="56">
+    <li><b>Monday, February 8</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-56-1">Polynomial Regression, Directed Graph</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-56-2">Supplementary: Haskell, Bash, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-56-3">Commit / Review</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-56-4">Preparation for Thursday Quiz</a></li>
+        </ul></font>
+    </li>
+    <li><b>Friday, February 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508979696">Class Recording</a> (C&M is first half) - magic square via intelligent search
         <br>Assignment Problems:
         <font size="2em"><ul>
