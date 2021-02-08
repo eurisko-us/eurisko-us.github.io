@@ -13141,6 +13141,227 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>e.</strong> We're going to write a <code>query</code> method that allows us to run SQL queries on our DataFrame. First, we'll start off with a basic query system that emulates the above:</p>
+
+<pre><code>&gt;&gt;&gt; df.query('select firstname, age').to_array()
+[['Kevin', 5],
+['Charles', 17],
+['Anna', 13],
+['Sylvia', 9]]
+
+&gt;&gt;&gt; df.query('select * where age &gt; 10').to_array()
+[['Charles', 'Trapp', 17],
+['Anna', 'Smith', 13]]
+
+&gt;&gt;&gt; df.order_by('select * order by firstname asc').to_array()
+[['Anna', 13],
+['Charles', 17],
+['Kevin', 5],
+['Sylvia', 9]]
+
+&gt;&gt;&gt; df.order_by('select * order by firstname desc').to_array()
+[['Sylvia', 9],
+['Kevin', 5],
+['Charles', 17],
+['Anna', 13]]
+
+&gt;&gt;&gt; df.query('select firstname, age where age &gt; 10 order by firstname')
+[['Anna', 13],
+['Charles', 17]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Logistic-Regression-(15-min)">Logistic Regression (15 min)<a class="anchor-link" href="#Logistic-Regression-(15-min)">&#182;</a></h3><p>Suppose that you have a dataset of points $(x,y)$ where $x$ is the number of hours that a player has practiced a video game and $y$ is their probability of winning against another randomly selected player.</p>
+
+<pre><code>data = [(10, 0.05), (100, 0.35), (1000, 0.95)]</code></pre>
+<p>Fit a logistic regression $y=\dfrac{1}{1+e^{\beta_0 + \beta_1 x}}$ to the data. Then, answer the following questions:</p>
+<p><strong>a.</strong> For a player who has practiced 500 hours, what is the probability of winning against an average player.</p>
+<p><strong>b.</strong> How many hours does an average player practice?</p>
+<ul>
+<li><em>Hint:</em> an average player will have 0.5 probability of winning against a randomly selected player, so you just need to solve the equation <code>0.5 = 1/(1 + e^(beta_0 + beta_1 * x) )</code> for <code>x</code>.</li>
+</ul>
+<h3 id="Dataframe">Dataframe<a class="anchor-link" href="#Dataframe">&#182;</a></h3><p><strong>d.</strong> Make sure you have the following SQL-like methods <code>select</code>, <code>where</code>, and <code>order_by</code> implemented in your <code>DataFrame</code> class. You should already have implemented these from Problem 29. We're going to be using these extensively, so make sure these are working.</p>
+<p><em>Note:</em> You'll need to rename <code>select_columns</code> to just <code>select</code>, and <code>select_columns_where</code> to just <code>where</code>.</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame(
+    [['Kevin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Sylvia', 'Mendez' 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.select(['firstname','age']).to_array()
+[['Kevin', 5],
+['Charles', 17],
+['Anna', 13],
+['Sylvia', 9]]
+
+&gt;&gt;&gt; df.where(lambda row: row['age'] &gt; 10).to_array()
+[['Charles', 'Trapp', 17],
+['Anna', 'Smith', 13]]
+
+&gt;&gt;&gt; df.order_by('firstname')
+[['Anna', 13],
+['Charles', 17],
+['Kevin', 5],
+['Sylvia', 9]]
+
+&gt;&gt;&gt; df.order_by('firstname', ascending=False)
+[['Sylvia', 9],
+['Kevin', 5],
+['Charles', 17],
+['Anna', 13]]
+
+&gt;&gt;&gt; df.select(['firstname','age']).where(lambda row: row['age'] &gt; 10).order_by('firstname')
+[['Anna', 13],
+['Charles', 17]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-56-1">Problem 56-1<a class="anchor-link" href="#Problem-56-1">&#182;</a></h1><h3 id="Polynomial-Regression">Polynomial Regression<a class="anchor-link" href="#Polynomial-Regression">&#182;</a></h3><p><strong>a.</strong> The following dataset takes the form $$y = a + bx + cx^2 + dx^3$$ for some constants $a,b,c,d.$ Use linear regression to determine the best-fit values of $a,b,c,d.$ Put your code in the <code>analysis</code> folder and post the values you found on #results once you've got them.</p>
+
+<pre><code>[(0.0, 4.0),
+ (0.2, 8.9),
+ (0.4, 17.2),
+ (0.6, 28.3),
+ (0.8, 41.6),
+ (1.0, 56.5),
+ (1.2, 72.4),
+ (1.4, 88.7),
+ (1.6, 104.8),
+ (1.8, 120.1),
+ (2.0, 134.0),
+ (2.2, 145.9),
+ (2.4, 155.2),
+ (2.6, 161.3),
+ (2.8, 163.6),
+ (3.0, 161.5),
+ (3.2, 154.4),
+ (3.4, 141.7),
+ (3.6, 122.8),
+ (3.8, 97.1),
+ (4.0, 64.0),
+ (4.2, 22.9),
+ (4.4, -26.8),
+ (4.6, -85.7),
+ (4.8, -154.4)]</code></pre>
+<p><em>Tip:</em> To do this, you will need to create a dataset with 3 independent variables ($x, x^2, x^3$) and 1 dependent variable $y.$</p>
+<p>To clarify -- the original dataframe looks like this:</p>
+
+<pre><code>&gt;&gt;&gt; df.to_array()
+  'x', 'y'
+[[0.0, 4.0],
+ [0.2, 8.9],
+ [0.4, 17.2],
+ ...
+]</code></pre>
+<p>You'll need to transform this dataframe into the following:</p>
+
+<pre><code>&gt;&gt;&gt; df.to_array()
+  'x',  'x^2',  'x^3', 'y'
+[[0.0, 0.0**2, 0.0**3, 4.0],
+ [0.2, 0.2**2, 0.2**3, 8.9],
+ [0.4, 0.4**2, 0.4**3, 17.2],
+ ...
+]</code></pre>
+<p>And then you'll fit <code>y</code> as a function of <code>x</code>, <code>x^2</code>, and <code>x^3</code>.</p>
+<p><strong>Note:</strong> This is a 10-minute problem. If it's taking you longer than that, please post on Slack to get help.</p>
+<h3 id="Directed-Graph">Directed Graph<a class="anchor-link" href="#Directed-Graph">&#182;</a></h3><p><strong>b.</strong> In <code>graph/src/directed_graph.py</code>, create a class <code>DirectedGraph</code> that implements a directed graph.</p>
+<p>In a directed graph, nodes have parents and children instead of just "neighbors". For example, a <code>Tree</code> is a special case of an <code>DirectedGraph</code>.</p>
+<p>To compute distances and shortest paths in a directed graph, you will use the same approach that you did in the plain old <code>Graph</code>, but instead of considering a node's neighbors each time, you will consider its children.</p>
+
+<pre><code>&gt;&gt;&gt; edges = [(0,1),(1,2),(3,1),(4,3),(1,4),(4,5),(3,6)]
+Note: the edges are in the form (parent,child)
+
+&gt;&gt;&gt; directed_graph = DirectedGraph(edges)
+
+at this point, the directed graph looks like this:
+0--&gt;1--&gt;2
+    ^ \
+    |  v
+6&lt;--3&lt;--4--&gt;5
+
+&gt;&gt;&gt; [[child.index for child in node.children] for node in directed_graph.nodes]
+[[1], [2,4], [], [1,6], [3,5], [], []]
+
+&gt;&gt;&gt; [[parent.index for parent in node.parents] for node in directed_graph.nodes]
+[[], [0,3], [1], [4], [1], [4], [3]]
+
+&gt;&gt;&gt; [node.index for node in directed_graph.nodes_breadth_first(4)]
+should give a breadth-first ordering, e.g. [4, 3, 5, 6, 1, 2]
+
+&gt;&gt;&gt; [node.index for node in directed_graph.nodes_depth_first(4)]
+returns a depth-first ordering, e.g. [4, 3, 6, 1, 2, 5]
+
+&gt;&gt;&gt; directed_graph.calc_distance(0,3)
+3
+&gt;&gt;&gt; directed_graph.calc_distance(3,5)
+3
+&gt;&gt;&gt; directed_graph.calc_distance(0,5)
+3
+&gt;&gt;&gt; directed_graph.calc_distance(4,1)
+2
+&gt;&gt;&gt; directed_graph.calc_distance(2,4)
+False
+
+&gt;&gt;&gt; directed_graph.calc_shortest_path(0,3)
+[0, 1, 4, 3]
+&gt;&gt;&gt; directed_graph.calc_shortest_path(3,5)
+[3, 1, 4, 5]
+&gt;&gt;&gt; directed_graph.calc_shortest_path(0,5)
+[0, 1, 4, 5]
+&gt;&gt;&gt; directed_graph.calc_shortest_path(4,1)
+[4, 3, 1]
+&gt;&gt;&gt; directed_graph.calc_shortest_path(2,4)
+False</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-56-2">Problem 56-2<a class="anchor-link" href="#Problem-56-2">&#182;</a></h1><p>In progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-56-3">Problem 56-3<a class="anchor-link" href="#Problem-56-3">&#182;</a></h1><p>In progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-56-4">Problem 56-4<a class="anchor-link" href="#Problem-56-4">&#182;</a></h1><p>There will be a 45-minute quiz that you can take any time on Thursday. (We don't have school Friday.)</p>
+<p>The quiz will cover C++ and Haskell.</p>
+<ul>
+<li><p>For C++, you will need to be comfortable working with arrays.</p>
+</li>
+<li><p>For Haskell, you'll need to be comfortable working with list comprehensions and compositions of functions.</p>
+</li>
+</ul>
+<p>You will need to write C++ and Haskell functions to calculate some values. It will be somewhat similar to the meta-Fibonacci sum problem, except the computation will be different (and simpler).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-55-1">Problem 55-1<a class="anchor-link" href="#Problem-55-1">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/magic_square.py</code></p>
 <p>In this problem, you will solve for all arrangements of digits $1,2,\ldots, 9$ in a $3 \times 3$ "magic square" where all the rows, columns, and diagonals add up to $15$ and no digits are repeated.</p>
 <p><strong>a.</strong></p>
@@ -13280,15 +13501,15 @@ True   (because there is one row that's filled in and it sums to 15)</code></pre
 
 <pre><code>arr = (initialize it with Nones)
 for num1 in range(1,10):
-    put num1 in the array
+    clear out the array and put num1 in it
     if not is_valid(arr):
         continue
     for num2 in range(1,10): # modify this range so that it doesn't include num1
-        put num2 in the array
+        clear out the array and put num1, num2 in it
         if not is_valid(arr):
             continue
         for num3 in range(1,10): # modify this range so that it doesn't include num1 nor num2
-            put num2 in the array
+            clear out the array and put num1, num2, num3 in it
             if not is_valid(arr):
                 continue
             ... and so on</code></pre>

@@ -14046,7 +14046,24 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Random-Forest">Random Forest<a class="anchor-link" href="#Random-Forest">&#182;</a></h3><p><strong>a.</strong> Make the following adjustment to your random forest:</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
+<p>8 queens -- random restart hill climbing</p>
+<p>game level 3 implementation</p>
+<p>randomized hill climbing applied to game level 3 (too many possibilities to simulate them all)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-1">Problem 89-1<a class="anchor-link" href="#Problem-89-1">&#182;</a></h1><p>On this problem, we'll do some debugging based on the results from our spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<h3 id="Debugging">Debugging<a class="anchor-link" href="#Debugging">&#182;</a></h3><p><strong>a.</strong> Compare your results to your classmates' results for <em>Indices of misclassified data points (zero-indexed: the index of the first data point in the dataset would be index 0)</em>. If you and a classmate have different results, do some pair debugging to figure out what caused the difference and how you guys need to reconcile it.</p>
+<p><strong>b.</strong> Compare your results to your classmates' results for <em>Flanker vs Berserker | Simulate 10 games with random seeds 1-10; list game numbers on which Flanker wins</em>. If you and a classmate have different results, do some pair debugging to figure out what caused the difference and how you guys need to reconcile it.</p>
+<p><strong>c.</strong> <strong>In order to write part (c), I need to see everyone's results for the level 2 strategies in the spreadsheet. So get those results in ASAP.</strong></p>
+<h3 id="Random-Forest">Random Forest<a class="anchor-link" href="#Random-Forest">&#182;</a></h3><p><strong>d.</strong> Make the following adjustment to your random forest:</p>
 <ul>
 <li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
 <ul>
@@ -14061,20 +14078,20 @@ int main()
 <li><p>The reason why choosing <code>training_percentage &lt; 1</code> can be useful is that it speeds up the time to train the random forest, and also, it allows different models to get different "perspectives" on the data, thereby creating a more diverse "hive mind" (and higher diversity generally leads to higher performance when it comes to ensemble models, i.e. models consisting of many smaller sub-models)</p>
 </li>
 </ul>
-<p><strong>b.</strong> Re-run problem 77-1 using the following models, with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
+<p><strong>e.</strong> On the sex prediction dataset, train the following models on the first half of the data and test on the second half of the data.</p>
 <ul>
-<li><p>A single random decision tree</p>
+<li><p>A single random decision tree with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 10 trees</p>
+<li><p>Random forest with 10 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 100 trees</p>
+<li><p>Random forest with 100 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 1,000 trees</p>
+<li><p>Random forest with 1,000 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 10,000 trees</p>
+<li><p>Random forest with 10,000 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
 </ul>
-<p>Put your results in the spreadsheet.</p>
+<p>Paste the accuracy into the spreadsheet.</p>
 
 </div>
 </div>
@@ -14082,7 +14099,7 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
+<h1 id="Problem-89-2">Problem 89-2<a class="anchor-link" href="#Problem-89-2">&#182;</a></h1><p>In progress</p>
 
 </div>
 </div>
@@ -14090,9 +14107,23 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-89-1">Problem 89-1<a class="anchor-link" href="#Problem-89-1">&#182;</a></h1><p><strong>b.</strong> 8 queens -- random restart hill climbing</p>
-<p>game level 3 implementation</p>
-<p>randomized hill climbing applied to game level 3 (too many possibilities to simulate them all)</p>
+<h1 id="Problem-89-3">Problem 89-3<a class="anchor-link" href="#Problem-89-3">&#182;</a></h1><p>In progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-4">Problem 89-4<a class="anchor-link" href="#Problem-89-4">&#182;</a></h1><p>There will be a 45-minute quiz that you can take any time on Thursday. (We don't have school Friday.)</p>
+<p>The quiz will cover C++ and Haskell.</p>
+<ul>
+<li><p>For C++, you will need to be comfortable working with arrays.</p>
+</li>
+<li><p>For Haskell, you'll need to be comfortable working with list comprehensions and compositions of functions.</p>
+</li>
+</ul>
+<p>You will need to write C++ and Haskell functions to calculate some values. It will be somewhat similar to the meta-Fibonacci sum problem, except the computation will be different (and simpler).</p>
 
 </div>
 </div>
