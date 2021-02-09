@@ -13330,7 +13330,54 @@ False</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-2">Problem 56-2<a class="anchor-link" href="#Problem-56-2">&#182;</a></h1><p>In progress</p>
+<h1 id="Problem-56-2">Problem 56-2<a class="anchor-link" href="#Problem-56-2">&#182;</a></h1><h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>First, observe the following Haskell code which computes the sum of all the squares under 1000:</p>
+
+<pre><code>&gt;&gt;&gt; sum (takeWhile (&lt;1000) (map (^2) [1..])) 
+10416</code></pre>
+<p>(If you don't see why this works, then run each part of the expression: first <code>map (^2) [1..]</code>, and then <code>takeWhile (&lt;1000) (map (^2) [1..])</code>, and then the full expression <code>sum (takeWhile (&lt;1000) (map (^2) [1..]))</code>.)</p>
+<p>Now, recall the Collatz conjecture (if you don't remember it, ctrl+F "collatz conjecture" to jump to the problem where we covered it).</p>
+<p>The following Haskell code can be used to recursively generate the sequence or "chain" of Collatz numbers, starting with an initial number <code>n</code>.</p>
+
+<pre><code>chain :: (Integral a) =&gt; a -&gt; [a]  
+chain 1 = [1]  
+chain n  
+    | even n =  n:chain (n `div` 2)  
+    | odd n  =  n:chain (n*3 + 1)</code></pre>
+<p>Here are the chains for several initial numbers:</p>
+
+<pre><code>&gt;&gt;&gt; chain 10  
+[10,5,16,8,4,2,1]  
+&gt;&gt;&gt; chain 1  
+[1]  
+&gt;&gt;&gt; chain 30  
+[30,15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1]</code></pre>
+<p><strong>Your problem:</strong> Write a Haskell function <code>firstNumberWithChainLengthGreaterThan n</code> that finds the first number whose chain length is at least <code>n</code>.</p>
+<p><strong>Check:</strong> <code>firstNumberWithChainLengthAtLeast 15</code> should return <code>7</code>.</p>
+<p>To see why this check works, observe the first few chains shown below:</p>
+
+<pre><code>1: [1] (length 1)
+2: [2,1] (length 2)
+3: [3,10,5,16,8,4,2,1] (length 8)
+4: [4,2,1] (length 3)
+5: [5,16,8,4,2,1] (length 6)
+6: [6,3,10,5,16,8,4,2,1] (length 9)
+7: [7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1] (length 17)</code></pre>
+<p>7 is the first number whose chain is at least 15 numbers long.</p>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Helpful resources:</p>
+<ul>
+<li><p><a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a></p>
+</li>
+<li><p><a href="https://www.thegeekstuff.com/2010/02/awk-conditional-statements/">https://www.thegeekstuff.com/2010/02/awk-conditional-statements/</a></p>
+</li>
+</ul>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/awk-3/problem">https://www.hackerrank.com/challenges/awk-3/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/awk-4/problem">https://www.hackerrank.com/challenges/awk-4/problem</a><br></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 9, 10, 11, 12)</p>
+</blockquote>
 
 </div>
 </div>
@@ -13338,7 +13385,28 @@ False</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-56-3">Problem 56-3<a class="anchor-link" href="#Problem-56-3">&#182;</a></h1><p>In progress</p>
+<h1 id="Problem-56-3">Problem 56-3<a class="anchor-link" href="#Problem-56-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to polynomial regression code: ___
+Repl.it link to directed graph tests: ___
+
+Repl.it link to Haskell code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for assignment-problems repo: _____
+Commit link for graph repo: _____
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
