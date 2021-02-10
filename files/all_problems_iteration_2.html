@@ -13227,6 +13227,88 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-57-1">Problem 57-1<a class="anchor-link" href="#Problem-57-1">&#182;</a></h1><h3 id="Hodgkin-Huxley-Neuron-Simulation">Hodgkin-Huxley Neuron Simulation<a class="anchor-link" href="#Hodgkin-Huxley-Neuron-Simulation">&#182;</a></h3><p><strong>Location:</strong> <code>simulation/analysis/hodgkin_huxley_neuron.py</code></p>
+<p>The Nobel Prize in Physiology or Medicine 1963 was awarded jointly to Sir John Carew Eccles, Alan Lloyd Hodgkin and Andrew Fielding Huxley for their 1952 model of "spikes" (called "action potentials") in the voltage of neurons, using differential equations.</p>
+<p>Watch <a href="https://www.youtube.com/watch?v=cUGuWh2UeMk">this video to learn about neurons</a>, and <a href="https://www.youtube.com/watch?v=W2hHt_PXe5o">this video to learn about action potentials</a>.</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/">Here is a link to the Hodgkin-Huxley paper.</a> I've outlined the key points of the model below.</p>
+<p><br><strong>Idea 0: Start with physics fundamentals</strong></p>
+<p>From physics, we know that current is proportional to voltage by a constant $C$ called the capacitance:</p>
+$$I(t) = C \dfrac{\textrm dV}{\textrm dt}$$<p>So, the voltage of a neuron can be modeled as</p>
+$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{I(t)}{C}.$$<p>For neurons, we have $C \approx 1.0 \, .$</p>
+<p><br><strong>Idea 1: Decompose the current into 4 main subcurrents (stimulus &amp; ion channels)</strong></p>
+<p>The current $I(t)$ consists of</p>
+<ul>
+<li><p>a stimulus $s(t)$ to the neuron (from an electrode or other neurons),</p>
+</li>
+<li><p>current flux across sodium and potassium ion channels ($I_{\text{Na}}(t)$ and $I_{\text K}(t)$), and</p>
+</li>
+<li><p>current leakage, treated as a channel $I_{\text L}(t).$</p>
+</li>
+</ul>
+<p>So, we have</p>
+$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right].$$<p><br><strong>Idea 2: Model the ion channel currents</strong></p>
+<p>The current across an ion channel is proportional to the voltange difference, relative to the equilibrium voltage of that channel:</p>
+$$\begin{align*}
+I_{\text{Na}}(t) &amp;= g_{\text{Na}}(t) \left( V(t) - V_\text{Na} \right), \quad&amp; I_{\text{K}}(t) &amp;= g_{\text{K}}(t) \left( V(t) - V_\text{K} \right), \quad&amp; I_{\text{L}}(t) &amp;= g_{\text{L}}(t) \left( V(t) - V_\text{L} \right), \\
+V_\text{Na} &amp;\approx 115, \quad&amp; V_\text{K} &amp;\approx -12, \quad&amp; V_\text{L} &amp;\approx 10.6
+\end{align*}$$<p>The constants of proportionality are conductances, which were modeled experimentally:</p>
+$$\begin{align}
+g_{\text{Na}}(t) &amp;= \overline{g}_{\text{Na}} m(t)^3 h(t), \quad&amp; g_{\text{K}}(t) &amp;= \overline{g}_{\text{K}} n(t)^4, \quad&amp; g_{\text L}(t) &amp;= \overline{g}_\text{L}, \\
+\overline{g}_{\text{Na}} &amp;\approx 120, \quad&amp; \overline{g}_{\text{K}} &amp;\approx 36, \quad&amp; \overline{g}_{\text{L}} &amp;\approx 0.3,
+\end{align}$$<p>where</p>
+$$\begin{align*}
+\dfrac{\text dn}{\text dt} &amp;= \alpha_n(t)(1-n(t)) - \beta_n(t)n(t) \\
+\dfrac{\text dm}{\text dt} &amp;= \alpha_m(t)(1-m(t)) - \beta_m(t)m(t) \\
+\dfrac{\text dh}{\text dt} &amp;= \alpha_h(t)(1-h(t)) - \beta_h(t)h(t).
+\end{align*}$$<p>and</p>
+$$\begin{align*}
+\alpha_n(t) &amp;= \dfrac{0.01(10-V(t))}{\exp \left[ 0.1 (10-V(t)) \right] - 1}, \quad&amp; \alpha_m(t) &amp;= \dfrac{0.1(25-V(t))}{\exp \left[ 0.1 (25-V(t)) \right] - 1}, \quad&amp; \alpha_h(t) &amp;= 0.07 \exp \left[ -\dfrac{V(t)}{20} \right],  \\
+\beta_n(t) &amp;= 0.125 \exp \left[ -\dfrac{V(t)}{80} \right], \quad&amp; \beta_m(t) &amp;= 4 \exp \left[ - \dfrac{V(t)}{18} \right], \quad&amp; \beta_h(t) &amp;= \dfrac{1}{\exp \left[ 0.1( 30-V(t)) \right] + 1}.
+\end{align*}$$<hr>
+<p><br><strong>YOUR PROBLEM STARTS HERE..</strong></p>
+<p>Implement the Hodgkin-Huxley neuron model using Euler estimation. You can represent the state of the neuron at time $t$ using</p>
+$$
+\Big( t, (V, n, m, h) \Big),
+$$<p>and you can approximate the initial values by setting $V(0)=0$ and setting $n,$ $m,$ and $h$ equal to their asymptotic values for $V(0)=0\mathbin{:}$</p>
+$$\begin{align*}
+n(0) &amp;= n_\infty(0) = \dfrac{\alpha_n(0)}{\alpha_n(0) + \beta_n(0)} \\
+m(0) &amp;= m_\infty(0) = \dfrac{\alpha_m(0)}{\alpha_m(0) + \beta_m(0)} \\
+h(0) &amp;= h_\infty(0) = \dfrac{\alpha_h(0)}{\alpha_h(0) + \beta_h(0)}
+\end{align*}$$<p>(When we take $V(0)=0,$ we are letting $V$ represent the voltage <em>offset</em> from the usual resting potential.)</p>
+<p>Simulate the system for $t \in [0, 80 \, \text{ms}]$ with step size $\Delta t = 0.01$ and stimulus</p>
+$$
+s(t) = \begin{cases}
+150, &amp; t \in [10,11] \cup [20,21] \cup [30,40] \cup [50,51] \cup [53,54] \\
+ &amp; \phantom{t \in [} \cup [56,57] \cup [59,60] \cup [62,63] \cup [65,66] \\
+ 0 &amp; \text{otherwise}.
+\end{cases}
+$$<p>You should get the following result:</p>
+<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley.png' border='0'/></center><h3 id="Blog-Post-Preferences">Blog Post Preferences<a class="anchor-link" href="#Blog-Post-Preferences">&#182;</a></h3><p>We're going to write some blog posts about things we've done. Check out the posts that the 11th graders wrote last semester: <a href="http://www.eurisko.us/blog/">http://www.eurisko.us/blog/</a></p>
+<p>Take a look at <a href="https://docs.google.com/spreadsheets/d/1btgxDPq7BHNlVt0hArJaNoNod6f1p5NlMVXDcg3S15E/edit?usp=sharing">this spreadsheet</a> and rank your top 3 posts in order of preference (with 1 being the most preferable). We'll try to match up everyone with a topic they're most interested in.</p>
+<p>We're doing this because we need to build up some luck surface area. It's great that we're doing so much cool stuff, but part of the process of opening doors is telling people what you're doing. Writing posts is a way to do that. And, like your Github repositories, blog posts will also help contribute to developing your portfolio so that you have evidence of what you're doing.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-57-2">Problem 57-2<a class="anchor-link" href="#Problem-57-2">&#182;</a></h1><p>In progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-57-3">Problem 57-3<a class="anchor-link" href="#Problem-57-3">&#182;</a></h1><p>In progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-56-1">Problem 56-1<a class="anchor-link" href="#Problem-56-1">&#182;</a></h1><h3 id="Polynomial-Regression">Polynomial Regression<a class="anchor-link" href="#Polynomial-Regression">&#182;</a></h3><p><strong>a.</strong> The following dataset takes the form $$y = a + bx + cx^2 + dx^3$$ for some constants $a,b,c,d.$ Use linear regression to determine the best-fit values of $a,b,c,d.$ Put your code in the <code>analysis</code> folder and post the values you found on #results once you've got them.</p>
 
 <pre><code>[(0.0, 4.0),
@@ -13352,7 +13434,7 @@ chain n
 &gt;&gt;&gt; chain 30  
 [30,15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1]</code></pre>
 <p><strong>Your problem:</strong> Write a Haskell function <code>firstNumberWithChainLengthGreaterThan n</code> that finds the first number whose chain length is at least <code>n</code>.</p>
-<p><strong>Check:</strong> <code>firstNumberWithChainLengthAtLeast 15</code> should return <code>7</code>.</p>
+<p><strong>Check:</strong> <code>firstNumberWithChainLengthGreaterThan 15</code> should return <code>7</code>.</p>
 <p>To see why this check works, observe the first few chains shown below:</p>
 
 <pre><code>1: [1] (length 1)
