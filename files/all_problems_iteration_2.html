@@ -13249,11 +13249,11 @@ $$\dfrac{\textrm dV}{\textrm dt} = \dfrac{I}{C}.$$<p>For neurons, we have $C \ap
 $$\dfrac{\textrm dV}{\textrm dt} = \dfrac{1}{C} \left[ s - I_{\text{Na}} - I_{\text K} - I_{\text L} \right].$$<p><br><strong>Idea 2: Model the ion channel currents</strong></p>
 <p>The current across an ion channel is proportional to the voltange difference, relative to the equilibrium voltage of that channel:</p>
 $$\begin{align*}
-I_{\text{Na}}(V) &amp;= g_{\text{Na}}(V) \left( V - V_\text{Na} \right), \quad&amp; I_{\text{K}}(V) &amp;= g_{\text{K}}(V) \left( V - V_\text{K} \right), \quad&amp; I_{\text{L}}(V) &amp;= g_{\text{L}}(t) \left( V - V_\text{L} \right), \\
+I_{\text{Na}} (V,m,h) &amp;= g_{\text{Na}}(m, h) \left( V - V_\text{Na} \right), \quad&amp; I_{\text{K}} (V,n) &amp;= g_{\text{K}}(n) \left( V - V_\text{K} \right), \quad&amp; I_{\text{L}}(V) &amp;= g_{\text{L}} \cdot \left( V - V_\text{L} \right), \\
 V_\text{Na} &amp;\approx 115, \quad&amp; V_\text{K} &amp;\approx -12, \quad&amp; V_\text{L} &amp;\approx 10.6
 \end{align*}$$<p>The constants of proportionality are conductances, which were modeled experimentally:</p>
 $$\begin{align}
-g_{\text{Na}}(V) &amp;= \overline{g}_{\text{Na}} m(V)^3 h(V), \quad&amp; g_{\text{K}}(V) &amp;= \overline{g}_{\text{K}} n(V)^4, \quad&amp; g_{\text L}(V) &amp;= \overline{g}_\text{L}, \\
+g_{\text{Na}}(m, h) &amp;= \overline{g}_{\text{Na}} m^3 h, \quad&amp; g_{\text{K}}(n) &amp;= \overline{g}_{\text{K}} n^4, \quad&amp; g_{\text L} &amp;= \overline{g}_\text{L}, \\
 \overline{g}_{\text{Na}} &amp;\approx 120, \quad&amp; \overline{g}_{\text{K}} &amp;\approx 36, \quad&amp; \overline{g}_{\text{L}} &amp;\approx 0.3,
 \end{align}$$<p>where</p>
 $$\begin{align*}
