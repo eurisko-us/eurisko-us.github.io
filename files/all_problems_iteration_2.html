@@ -13233,48 +13233,49 @@ div#notebook {
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1392413/">Here is a link to the Hodgkin-Huxley paper.</a> I've outlined the key points of the model below.</p>
 <p><br><strong>Idea 0: Start with physics fundamentals</strong></p>
 <p>From physics, we know that current is proportional to voltage by a constant $C$ called the capacitance:</p>
-$$I(t) = C \dfrac{\textrm dV}{\textrm dt}$$<p>So, the voltage of a neuron can be modeled as</p>
-$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{I(t)}{C}.$$<p>For neurons, we have $C \approx 1.0 \, .$</p>
+$$I = C \dfrac{\textrm dV}{\textrm dt}$$<p>So, the voltage of a neuron can be modeled as</p>
+$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{I}{C}.$$<p>For neurons, we have $C \approx 1.0 \, .$</p>
 <p><br><strong>Idea 1: Decompose the current into 4 main subcurrents (stimulus &amp; ion channels)</strong></p>
-<p>The current $I(t)$ consists of</p>
+<p>The current $I$ consists of</p>
 <ul>
-<li><p>a stimulus $s(t)$ to the neuron (from an electrode or other neurons),</p>
+<li><p>a stimulus $s$ to the neuron (from an electrode or other neurons),</p>
 </li>
-<li><p>current flux across sodium and potassium ion channels ($I_{\text{Na}}(t)$ and $I_{\text K}(t)$), and</p>
+<li><p>current flux across sodium and potassium ion channels ($I_{\text{Na}}$ and $I_{\text K}$), and</p>
 </li>
-<li><p>current leakage, treated as a channel $I_{\text L}(t).$</p>
+<li><p>current leakage, treated as a channel $I_{\text L}.$</p>
 </li>
 </ul>
 <p>So, we have</p>
-$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{1}{C} \left[ s(t) - I_{\text{Na}}(t) - I_{\text K}(t) - I_{\text L}(t) \right].$$<p><br><strong>Idea 2: Model the ion channel currents</strong></p>
+$$\dfrac{\textrm dV}{\textrm dt} = \dfrac{1}{C} \left[ s - I_{\text{Na}} - I_{\text K} - I_{\text L} \right].$$<p><br><strong>Idea 2: Model the ion channel currents</strong></p>
 <p>The current across an ion channel is proportional to the voltange difference, relative to the equilibrium voltage of that channel:</p>
 $$\begin{align*}
-I_{\text{Na}}(t) &amp;= g_{\text{Na}}(t) \left( V(t) - V_\text{Na} \right), \quad&amp; I_{\text{K}}(t) &amp;= g_{\text{K}}(t) \left( V(t) - V_\text{K} \right), \quad&amp; I_{\text{L}}(t) &amp;= g_{\text{L}}(t) \left( V(t) - V_\text{L} \right), \\
+I_{\text{Na}}(V) &amp;= g_{\text{Na}}(V) \left( V - V_\text{Na} \right), \quad&amp; I_{\text{K}}(V) &amp;= g_{\text{K}}(V) \left( V - V_\text{K} \right), \quad&amp; I_{\text{L}}(V) &amp;= g_{\text{L}}(t) \left( V - V_\text{L} \right), \\
 V_\text{Na} &amp;\approx 115, \quad&amp; V_\text{K} &amp;\approx -12, \quad&amp; V_\text{L} &amp;\approx 10.6
 \end{align*}$$<p>The constants of proportionality are conductances, which were modeled experimentally:</p>
 $$\begin{align}
-g_{\text{Na}}(t) &amp;= \overline{g}_{\text{Na}} m(t)^3 h(t), \quad&amp; g_{\text{K}}(t) &amp;= \overline{g}_{\text{K}} n(t)^4, \quad&amp; g_{\text L}(t) &amp;= \overline{g}_\text{L}, \\
+g_{\text{Na}}(V) &amp;= \overline{g}_{\text{Na}} m(V)^3 h(V), \quad&amp; g_{\text{K}}(V) &amp;= \overline{g}_{\text{K}} n(V)^4, \quad&amp; g_{\text L}(V) &amp;= \overline{g}_\text{L}, \\
 \overline{g}_{\text{Na}} &amp;\approx 120, \quad&amp; \overline{g}_{\text{K}} &amp;\approx 36, \quad&amp; \overline{g}_{\text{L}} &amp;\approx 0.3,
 \end{align}$$<p>where</p>
 $$\begin{align*}
-\dfrac{\text dn}{\text dt} &amp;= \alpha_n(t)(1-n(t)) - \beta_n(t)n(t) \\
-\dfrac{\text dm}{\text dt} &amp;= \alpha_m(t)(1-m(t)) - \beta_m(t)m(t) \\
-\dfrac{\text dh}{\text dt} &amp;= \alpha_h(t)(1-h(t)) - \beta_h(t)h(t).
+\dfrac{\text dn}{\text dt} &amp;= \alpha_n(V) (1-n) - \beta_n(V) n \\
+\dfrac{\text dm}{\text dt} &amp;= \alpha_m(V)(1-m) - \beta_m(V) m \\
+\dfrac{\text dh}{\text dt} &amp;= \alpha_h(V) (1-h) - \beta_h(V) h.
 \end{align*}$$<p>and</p>
 $$\begin{align*}
-\alpha_n(t) &amp;= \dfrac{0.01(10-V(t))}{\exp \left[ 0.1 (10-V(t)) \right] - 1}, \quad&amp; \alpha_m(t) &amp;= \dfrac{0.1(25-V(t))}{\exp \left[ 0.1 (25-V(t)) \right] - 1}, \quad&amp; \alpha_h(t) &amp;= 0.07 \exp \left[ -\dfrac{V(t)}{20} \right],  \\
-\beta_n(t) &amp;= 0.125 \exp \left[ -\dfrac{V(t)}{80} \right], \quad&amp; \beta_m(t) &amp;= 4 \exp \left[ - \dfrac{V(t)}{18} \right], \quad&amp; \beta_h(t) &amp;= \dfrac{1}{\exp \left[ 0.1( 30-V(t)) \right] + 1}.
+\alpha_n(V) &amp;= \dfrac{0.01(10-V)}{\exp \left[ 0.1 (10-V) \right] - 1}, \quad&amp; \alpha_m(V) &amp;= \dfrac{0.1(25-V)}{\exp \left[ 0.1 (25-V) \right] - 1}, \quad&amp; \alpha_h(V) &amp;= 0.07 \exp \left[ -\dfrac{V}{20} \right],  \\
+\beta_n(V) &amp;= 0.125 \exp \left[ -\dfrac{V}{80} \right], \quad&amp; \beta_m(V) &amp;= 4 \exp \left[ - \dfrac{V}{18} \right], \quad&amp; \beta_h(V) &amp;= \dfrac{1}{\exp \left[ 0.1( 30-V) \right] + 1}.
 \end{align*}$$<hr>
-<p><br><strong>YOUR PROBLEM STARTS HERE..</strong></p>
+<p><br><strong>YOUR PROBLEM STARTS HERE...</strong></p>
+<p><em>Note: a template is provided at the bottom of the problem</em></p>
 <p>Implement the Hodgkin-Huxley neuron model using Euler estimation. You can represent the state of the neuron at time $t$ using</p>
 $$
 \Big( t, (V, n, m, h) \Big),
-$$<p>and you can approximate the initial values by setting $V(0)=0$ and setting $n,$ $m,$ and $h$ equal to their asymptotic values for $V(0)=0\mathbin{:}$</p>
+$$<p>and you can approximate the initial values by setting $V_0=0$ and setting $n,$ $m,$ and $h$ equal to their asymptotic values for $V_0=0\mathbin{:}$</p>
 $$\begin{align*}
-n(0) &amp;= n_\infty(0) = \dfrac{\alpha_n(0)}{\alpha_n(0) + \beta_n(0)} \\
-m(0) &amp;= m_\infty(0) = \dfrac{\alpha_m(0)}{\alpha_m(0) + \beta_m(0)} \\
-h(0) &amp;= h_\infty(0) = \dfrac{\alpha_h(0)}{\alpha_h(0) + \beta_h(0)}
-\end{align*}$$<p>(When we take $V(0)=0,$ we are letting $V$ represent the voltage <em>offset</em> from the usual resting potential.)</p>
+n_0 &amp;= \dfrac{\alpha_n(V_0)}{\alpha_n(V_0) + \beta_n(V_0)} \\
+m_0 &amp;= \dfrac{\alpha_m(V_0)}{\alpha_m(V_0) + \beta_m(V_0)} \\
+h_0 &amp;= \dfrac{\alpha_h(V_0)}{\alpha_h(V_0) + \beta_h(V_0)}
+\end{align*}$$<p>(When we take $V_0=0,$ we are letting $V$ represent the voltage <em>offset</em> from the usual resting potential.)</p>
 <p>Simulate the system for $t \in [0, 80 \, \text{ms}]$ with step size $\Delta t = 0.01$ and stimulus</p>
 $$
 s(t) = \begin{cases}
@@ -13283,7 +13284,58 @@ s(t) = \begin{cases}
  0 &amp; \text{otherwise}.
 \end{cases}
 $$<p>You should get the following result:</p>
-<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley.png' border='0'/></center><h3 id="Blog-Post-Preferences">Blog Post Preferences<a class="anchor-link" href="#Blog-Post-Preferences">&#182;</a></h3><p>We're going to write some blog posts about things we've done. Check out the posts that the 11th graders wrote last semester: <a href="http://www.eurisko.us/blog/">http://www.eurisko.us/blog/</a></p>
+<center><img height=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/hodgkinHuxley.png' border='0'/></center>
+<pre><code>###############################
+### constants
+
+V_0 = ...
+n_0 = ...
+m_0 = ...
+h_0 = ...
+
+C = 1.0
+V_Na = 115
+...
+
+###############################
+### main variables: V, n, m, h
+
+def dV_dt(t,x):
+    ...
+
+def dn_dt(t,x):
+    V = x['V']
+    n = x['n']
+    return alpha_n(t,x) * (1-n) - beta_n(t,x) * n
+
+def dm_dt(t,x):
+    ...
+
+def dh_dt(t,x):
+    ...
+
+###############################
+### intermediate variables: alphas, betas, stimulus (s), currents (I's), ...
+
+def alpha_n(t,x):
+    ...
+
+def beta_n(t,x):
+    ...
+
+...
+
+################################
+### input into EulerEstimator
+
+derivatives = {
+    'V': dV_dt(t,x),
+    'n': dn_dt(t,x),
+    'm': dm_dt(t,x),
+    'h': dh_dt(t,x),
+    initial_point = ...
+}</code></pre>
+<h3 id="Blog-Post-Preferences">Blog Post Preferences<a class="anchor-link" href="#Blog-Post-Preferences">&#182;</a></h3><p>We're going to write some blog posts about things we've done. Check out the posts that the 11th graders wrote last semester: <a href="http://www.eurisko.us/blog/">http://www.eurisko.us/blog/</a></p>
 <p>Take a look at <a href="https://docs.google.com/spreadsheets/d/1btgxDPq7BHNlVt0hArJaNoNod6f1p5NlMVXDcg3S15E/edit?usp=sharing">this spreadsheet</a> and rank your top 3 posts in order of preference (with 1 being the most preferable). We'll try to match up everyone with a topic they're most interested in.</p>
 <p>We're doing this because we need to build up some luck surface area. It's great that we're doing so much cool stuff, but part of the process of opening doors is telling people what you're doing. Writing posts is a way to do that. And, like your Github repositories, blog posts will also help contribute to developing your portfolio so that you have evidence of what you're doing.</p>
 
