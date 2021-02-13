@@ -13119,14 +13119,23 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>sed</p>
+
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Resources:</p>
+<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem</a><br></p>
+</blockquote>
+
 </div>
 </div>
 </div>
@@ -13344,7 +13353,75 @@ derivatives = {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-57-2">Problem 57-2<a class="anchor-link" href="#Problem-57-2">&#182;</a></h1><p>In progress</p>
+<h1 id="Problem-57-2">Problem 57-2<a class="anchor-link" href="#Problem-57-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>At the beginning of the year, we wrote a Python function called <code>simple_sort</code> that sorts a list by repeatedly finding the smallest element and appending it to a new list.</p>
+<p>Now, you will sort a list in C++ using a similar technique. However, because working with arrays in C++ is a bit trickier, we will modify the implementation so that it only involves the use of a single array. The way we do this is by swapping:</p>
+<ul>
+<li>Find the smallest element in the array</li>
+<li>Swap it with the first element of the array</li>
+<li>Find the next-smallest element in the array</li>
+<li>Swap it with the second element of the array</li>
+<li>...</li>
+</ul>
+<p>For example:</p>
+
+<pre><code>array: [30, 50, 20, 10, 40]
+indices to consider: 0, 1, 2, 3, 4
+elements to consider: 30, 50, 20, 10, 40
+smallest element: 10
+swap with first element: [10, 50, 20, 30, 40]
+
+---
+
+array: [10, 50, 20, 30, 40]
+indices to consider: 1, 2, 3, 4
+elements to consider: 50, 20, 30, 40
+smallest element: 20
+swap with second element: [10, 20, 50, 30, 40]
+
+---
+
+array: [10, 20, 50, 30, 40]
+indices to consider: 2, 3, 4
+elements to consider: 50, 30, 40
+smallest element: 30
+swap with second element: [10, 20, 30, 50, 40]
+
+...
+
+final array: [10, 20, 30, 40, 50]</code></pre>
+<p>Write your code in the template below.</p>
+
+<pre><code># include &lt;iostream&gt;
+int main()
+{
+    int array[5]{ 30, 50, 20, 10, 40 };
+
+    // your code here
+
+    std::cout &lt;&lt; 'Testing...\n';
+
+    assert(array[0]==10);
+    assert(array[1]==20);
+    assert(array[2]==30);
+    assert(array[3]==40);
+    assert(array[4]==50);
+
+    std::cout &lt;&lt; 'Succeeded';
+
+    return 0;
+}</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-2/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-3/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-3/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 13, 14, 15)</p>
+</blockquote>
 
 </div>
 </div>
@@ -13352,7 +13429,25 @@ derivatives = {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-57-3">Problem 57-3<a class="anchor-link" href="#Problem-57-3">&#182;</a></h1><p>In progress</p>
+<h1 id="Problem-57-3">Problem 57-3<a class="anchor-link" href="#Problem-57-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to Hodgkin-Huxley neuron simulation (make sure it generates the graph): ____
+Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for simulation repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
