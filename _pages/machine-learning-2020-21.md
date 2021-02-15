@@ -71,7 +71,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="91">
     <li><b>Tuesday, February 16</b>
-        <br>Off day, but there is a (shorter) assignment due on Wednesday.
+        <br>Off day, but there is a (shorter) assignment due Tuesday night.
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-1">Primary: Custom Strategies</a></li>
