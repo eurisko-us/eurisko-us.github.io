@@ -15,6 +15,11 @@ author_profile: false
 
 <center>
 <table style="width:80%">
+    <tr>
+    <td width="33%"><center>Quiz 2-2</center></td>
+    <td width="33%"><center>Thursday, February 11</center></td>
+    <td width="33%"><center></center></td>
+  </tr>
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
     <td width="33%"><center>Friday, January 29</center></td>
@@ -69,7 +74,7 @@ author_profile: false
         <br>Off day, but there is a (shorter) assignment due on Wednesday.
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-1">Primary: Steepest Descent Optimizer for 8 Queens</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-1">Primary: Custom Strategies</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-2">Supplementary: Intro to Hash Tables</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-3">Commit / Review</a></li>
         </ul></font>
