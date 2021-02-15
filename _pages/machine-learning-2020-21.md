@@ -64,7 +64,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="90">
+<font size="3em"><ol reversed start="91">
+    <li><b>Tuesday, February 16</b>
+        <br>Off day, but there is a (shorter) assignment due on Wednesday.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-1">Primary: Steepest Descent Optimizer for 8 Queens</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-2">Supplementary: Intro to Hash Tables</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-91-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, February 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/510804889">Class Recording</a> (ML is second half) - Pair Coding Scheduling
         <br>Note: Since we have Friday and Monday off, and there is an asynchronous quiz tomorrow (Thursday), this assignment will be due Monday night. There will be another assignment due Wednesday, which will be released this weekend.
