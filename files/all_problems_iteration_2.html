@@ -13236,35 +13236,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/8_queens_steepest_descent_optimizer.py</code></p>
-<p>Create a <code>steepest_descent_optimizer(n)</code> optimizer for the 8 queens problem (refresher: Problem 46-1), which starts with the best of 100 random locations arrays, and on each iteration, repeatedly compares all possible next location arrays that result from moving one queen by one space, and chooses the one that results in the minimum cost. The algorithm will run for <code>n</code> iterations.</p>
-<p>Some clarifications:</p>
-<ul>
-<li><p>By "starts with the best of 100 random locations arrays", I mean that you should start by generating 100 random locations arrays and selecting the lowest-cost array to be your initial locations array.</p>
-</li>
-<li><p>There are $8$ queens, and each queen can move in one of $8$ directions (up, down, left, right, or in a diagonal direction) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
-</li>
-<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 8 = 64,$ though probably a little bit less. This means that on each iteration, you'll have to check about $64$ possible next location arrays and choose the one that minimies the cost function.</p>
-</li>
-<li><p>If multiple configurations minimize the cost, randomly select one of them. If every next configuration increases the cost, then terminate the algorithm and return the current locations.</p>
-</li>
-</ul>
-<p><strong>Important:</strong> Be sure to post on Slack if you get confused on any part of this problem.</p>
-<p>Your function should again return the following dictionary:</p>
-
-<pre><code>{
-    'locations': array that resulted in the lowest cost,
-    'cost': the actual value of that lowest cost
-}</code></pre>
-<p>Print out the cost of your <code>steepest_descent_optimizer</code> for <code>n=10,50,100,500,1000</code>. Once you have those printouts, post it on Slack in the #results channel.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-58-2">Problem 58-2<a class="anchor-link" href="#Problem-58-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
 <p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
 <p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
 
@@ -13327,12 +13299,38 @@ for i, char in enumerate(alphabet):
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-58-3">Problem 58-3<a class="anchor-link" href="#Problem-58-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/8_queens_steepest_descent_optimizer.py</code></p>
+<p>Create a <code>steepest_descent_optimizer(n)</code> optimizer for the 8 queens problem (refresher: Problem 46-1), which starts with the best of 100 random locations arrays, and on each iteration, repeatedly compares all possible next location arrays that result from moving one queen by one space, and chooses the one that results in the minimum cost. The algorithm will run for <code>n</code> iterations.</p>
+<p>Some clarifications:</p>
+<ul>
+<li><p>By "starts with the best of 100 random locations arrays", I mean that you should start by generating 100 random locations arrays and selecting the lowest-cost array to be your initial locations array.</p>
+</li>
+<li><p>There are $8$ queens, and each queen can move in one of $8$ directions (up, down, left, right, or in a diagonal direction) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
+</li>
+<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 8 = 64,$ though probably a little bit less. This means that on each iteration, you'll have to check about $64$ possible next location arrays and choose the one that minimizes the cost function.</p>
+</li>
+<li><p>If multiple configurations minimize the cost, randomly select one of them. If every next configuration increases the cost, then terminate the algorithm and return the current locations.</p>
+</li>
+</ul>
+<p><strong>Important:</strong> Be sure to post on Slack if you get confused on any part of this problem.</p>
+<p>Your function should again return the following dictionary:</p>
+
+<pre><code>{
+    'locations': array that resulted in the lowest cost,
+    'cost': the actual value of that lowest cost
+}</code></pre>
+<p>Print out the cost of your <code>steepest_descent_optimizer</code> for <code>n=10,50,100,500,1000</code>. Once you have those printouts, post it on Slack in the #results channel.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-2">Problem 58-2<a class="anchor-link" href="#Problem-58-2">&#182;</a></h1><h3 id="Commit">Commit<a class="anchor-link" href="#Commit">&#182;</a></h3><ul>
 <li><p>Commit your code to Github.</p>
 </li>
-<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
-</li>
-<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+<li><p>We'll skip reviews on this assignment, to save you a bit of time.</p>
 </li>
 </ul>
 <h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
@@ -13341,10 +13339,7 @@ for i, char in enumerate(alphabet):
 Repl.it link to hash table: _____
 
 Commit link for machine-learning repo: _____
-Commit link for assignment-problems repo: _____
-
-Created issue: _____
-Resolved issue: _____</code></pre>
+Commit link for assignment-problems repo: _____</code></pre>
 
 </div>
 </div>
