@@ -14057,6 +14057,105 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91-1">Problem 91-1<a class="anchor-link" href="#Problem-91-1">&#182;</a></h1><p><strong>a.</strong> Re-run your decision tree on the sex prediction problem. Make 5 train-test splits of 80% train and 20% test, like we originally did. Now that your Gini trees match up from the previous assignment, they should match up here. Also, make sure to propagate any changes in your Gini tree to your random tree. Our random forest results should be pretty close as well.</p>
+<p><strong>b.</strong> Create a custom strategy for the level 2 game. Test it against NumbersBerserkerLevel2 and FlankerLevel2. On Wednesday's assignment, we'll have our strategies battle against each other.</p>
+<p>Put your results in the usual spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91-2">Problem 91-2<a class="anchor-link" href="#Problem-91-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
+<p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
+
+<pre><code>list_of_tuples = [('a', [0,1]), ('b', 'abcd'), ('c', 3.14)]</code></pre>
+<p>To add a new key-value pair to the dictionary, we'd just append the corresponding tuple to <code>list_of_tuples</code>, and to look up the value for some key, we'd just loop through <code>list_of_tuples</code> until we got to the tuple with the key we wanted (and return the value).</p>
+<p>But searching through a long array is very slow. So, to be more efficient, we use several <code>list_of_tuple</code>s (which we'll call "buckets"), and we use a <code>hash_function</code> to tell us which bucket to put the new key-value pair in.</p>
+<p>Complete the code below to implement a special case of an elementary hash table. We'll expand on this example soon, but let's start with something simple.</p>
+
+<pre><code>array = [[], [], [], [], []] # has 5 empty "buckets"
+
+def hash_function(string):
+    # return the sum of character indices in the string 
+    # (where "a" has index 0, "b" has index 1, ..., "z" has index 25)
+    # modulo 5
+
+    # for now, let's just assume the string consists of lowercase
+    # letters with no other characters or spaces
+
+def insert(array, key, value):
+    # apply the hash function to the key to get the bucket index.
+    # then append the (key, value) pair to the bucket.
+
+def find(array, key):
+    # apply the hash function to the key to get the bucket index.
+    # then loop through the bucket until you get to the tuple with the desired key,
+    # and return the corresponding value.</code></pre>
+<p>Here's an example of how the hash table will work:</p>
+
+<pre><code>&gt;&gt;&gt; print(array)
+array = [[], [], [], [], []]
+
+&gt;&gt;&gt; insert(array, 'a', [0,1])
+&gt;&gt;&gt; insert(array, 'b', 'abcd')
+&gt;&gt;&gt; insert(array, 'c', 3.14)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1])], [('b','abcd')], [('c',3.14)], [], []]
+
+&gt;&gt;&gt; insert(array, 'd', 0)
+&gt;&gt;&gt; insert(array, 'e', 0)
+&gt;&gt;&gt; insert(array, 'f', 0)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1]), ('f',0)], [('b','abcd')], [('c',3.14)], [('d',0)], [('e',0)]]</code></pre>
+<p>Test your code as follows:</p>
+
+<pre><code>alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    value = [i, i**2, i**3]
+    insert(array, key, value)
+
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    output_value = find(array, key)
+    desired_value = [i, i**2, i**3]
+    assert output_value == desired_value</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91-3">Problem 91-3<a class="anchor-link" href="#Problem-91-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to hash table: _____
+
+Commit link for space-empires repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>This weekend, your only primary problem is to resolve discrepancies in your Gini decision tree &amp; games (both level 1 and level 2).</p>
 <blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
 </blockquote>

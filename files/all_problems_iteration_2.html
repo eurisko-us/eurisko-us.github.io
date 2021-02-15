@@ -13236,9 +13236,115 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p>Implementing a python dictionary: <a href="https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented">https://stackoverflow.com/questions/327311/how-are-pythons-built-in-dictionaries-implemented</a></p>
-<p>A hash table is an unordered collection of key-value pairs, where each key is unique.</p>
-<p>Hashing is the process of using an algorithm to map data of any size to a fixed length. This is called a hash value. Hash values are computed with hash functions.</p>
+<h1 id="Problem-58-1">Problem 58-1<a class="anchor-link" href="#Problem-58-1">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/analysis/8_queens_steepest_descent_optimizer.py</code></p>
+<p>Create a <code>steepest_descent_optimizer(n)</code> optimizer for the 8 queens problem (refresher: Problem 46-1), which starts with the best of 100 random locations arrays, and on each iteration, repeatedly compares all possible next location arrays that result from moving one queen by one space, and chooses the one that results in the minimum cost. The algorithm will run for <code>n</code> iterations.</p>
+<p>Some clarifications:</p>
+<ul>
+<li><p>By "starts with the best of 100 random locations arrays", I mean that you should start by generating 100 random locations arrays and selecting the lowest-cost array to be your initial locations array.</p>
+</li>
+<li><p>There are $8$ queens, and each queen can move in one of $8$ directions (up, down, left, right, or in a diagonal direction) unless one of those directions is blocked by another queen or invalid due to being off the board.</p>
+</li>
+<li><p>So, the number of possible "next location arrays" resulting from moving one queen by one space will be around $8 \times 8 = 64,$ though probably a little bit less. This means that on each iteration, you'll have to check about $64$ possible next location arrays and choose the one that minimies the cost function.</p>
+</li>
+<li><p>If multiple configurations minimize the cost, randomly select one of them. If every next configuration increases the cost, then terminate the algorithm and return the current locations.</p>
+</li>
+</ul>
+<p><strong>Important:</strong> Be sure to post on Slack if you get confused on any part of this problem.</p>
+<p>Your function should again return the following dictionary:</p>
+
+<pre><code>{
+    'locations': array that resulted in the lowest cost,
+    'cost': the actual value of that lowest cost
+}</code></pre>
+<p>Print out the cost of your <code>steepest_descent_optimizer</code> for <code>n=10,50,100,500,1000</code>. Once you have those printouts, post it on Slack in the #results channel.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-2">Problem 58-2<a class="anchor-link" href="#Problem-58-2">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
+<p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
+
+<pre><code>list_of_tuples = [('a', [0,1]), ('b', 'abcd'), ('c', 3.14)]</code></pre>
+<p>To add a new key-value pair to the dictionary, we'd just append the corresponding tuple to <code>list_of_tuples</code>, and to look up the value for some key, we'd just loop through <code>list_of_tuples</code> until we got to the tuple with the key we wanted (and return the value).</p>
+<p>But searching through a long array is very slow. So, to be more efficient, we use several <code>list_of_tuple</code>s (which we'll call "buckets"), and we use a <code>hash_function</code> to tell us which bucket to put the new key-value pair in.</p>
+<p>Complete the code below to implement a special case of an elementary hash table. We'll expand on this example soon, but let's start with something simple.</p>
+
+<pre><code>array = [[], [], [], [], []] # has 5 empty "buckets"
+
+def hash_function(string):
+    # return the sum of character indices in the string 
+    # (where "a" has index 0, "b" has index 1, ..., "z" has index 25)
+    # modulo 5
+
+    # for now, let's just assume the string consists of lowercase
+    # letters with no other characters or spaces
+
+def insert(array, key, value):
+    # apply the hash function to the key to get the bucket index.
+    # then append the (key, value) pair to the bucket.
+
+def find(array, key):
+    # apply the hash function to the key to get the bucket index.
+    # then loop through the bucket until you get to the tuple with the desired key,
+    # and return the corresponding value.</code></pre>
+<p>Here's an example of how the hash table will work:</p>
+
+<pre><code>&gt;&gt;&gt; print(array)
+array = [[], [], [], [], []]
+
+&gt;&gt;&gt; insert(array, 'a', [0,1])
+&gt;&gt;&gt; insert(array, 'b', 'abcd')
+&gt;&gt;&gt; insert(array, 'c', 3.14)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1])], [('b','abcd')], [('c',3.14)], [], []]
+
+&gt;&gt;&gt; insert(array, 'd', 0)
+&gt;&gt;&gt; insert(array, 'e', 0)
+&gt;&gt;&gt; insert(array, 'f', 0)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1]), ('f',0)], [('b','abcd')], [('c',3.14)], [('d',0)], [('e',0)]]</code></pre>
+<p>Test your code as follows:</p>
+
+<pre><code>alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    value = [i, i**2, i**3]
+    insert(array, key, value)
+
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    output_value = find(array, key)
+    desired_value = [i, i**2, i**3]
+    assert output_value == desired_value</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-58-3">Problem 58-3<a class="anchor-link" href="#Problem-58-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to steepest descent optimizer: _____
+Repl.it link to hash table: _____
+
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
