@@ -14057,7 +14057,62 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<h1 id="Problem-95-1">Problem 95-1<a class="anchor-link" href="#Problem-95-1">&#182;</a></h1><p>neural net with hidden layer and rectified linear units (ReLUs)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-94-1">Problem 94-1<a class="anchor-link" href="#Problem-94-1">&#182;</a></h1><p>generalize neural net to any number of inputs &amp; any number of outputs</p>
+<p>then fit the sandwich dataset with linear and logistic neural nets</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><p>logistic regression model with neural net</p>
+<p>In neural networks, neurons are often given "activation functions".</p>
+<p>Equip nodes with activation functions</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+
+&gt;&gt;&gt; def linear_activation(x):
+        return x
+&gt;&gt;&gt; def sigmoidal_activation(x):
+        return 1/(1+math.exp(-x))
+
+&gt;&gt;&gt; activations = [linear_activation, linear_activation, sigmoidal_activation]
+
+&gt;&gt;&gt; nn = NeuralNetwork(weights, activations)
+
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [0.2689]},
+    {'input': [1,1], 'output': [0.0474]},
+    {'input': [1,2], 'output': [0.0067]},
+    {'input': [1,3], 'output': [0.0009]}
+    ]
+&gt;&gt;&gt; for _ in range(1000):
+        for data_point in data_points:
+            nn.update_weights(data_point)
+
+&gt;&gt;&gt; nn.weights
+should be really close to
+    {(0,2): 1, (1,2): 2}
+
+because the data points all lie on the sigmoid
+    output = 1/(1 + e^(input[0] * 1 + input[1] * 2) )</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-2">Problem 93-2<a class="anchor-link" href="#Problem-93-2">&#182;</a></h1><h3 id="Hash-Tables">Hash Tables<a class="anchor-link" href="#Hash-Tables">&#182;</a></h3><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
 <p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
 <p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
 
@@ -14113,6 +14168,201 @@ for i, char in enumerate(alphabet):
     output_value = find(array, key)
     desired_value = [i, i**2, i**3]
     assert output_value == desired_value</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 5, 6, 7, 8)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-1">Problem 92-1<a class="anchor-link" href="#Problem-92-1">&#182;</a></h1><p><strong>a.</strong> Once your strategy is finalized, Slack it to me and I'll upload it here.</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-2">https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-2</a></p>
+</blockquote>
+<p><strong>If your strategy is getting crushed by NumbersBerserker, keep in mind that it's okay to copy NumbersBerserker and then tweak it a little bit with your own spin.</strong> Your strategy should have some original component, but it does not need to be 100% original (or even mostly original).</p>
+<p>Then, once everyone's strategies are submitted, download the strategies from the above folder and run all pairwise battles for 500 games.</p>
+<ul>
+<li><p>Put your data in the spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+</li>
+<li><p>Remember to switch the order of the players halfway through the simulation so that each player goes first an equal number of times.</p>
+</li>
+<li><p><strong>Seed the games: game 1 has seed 1, game 2 has seed 2, and so on.</strong> This way, we should all get exactly the same results.</p>
+</li>
+</ul>
+<p>Assuming our games match up so that we can actually agree about who won, there will be prizes:</p>
+<ul>
+<li>1st place: 50% extra credit on the assignment</li>
+<li>2nd place: 30% extra credit on the assignment</li>
+<li>3rd place: 10% extra credit on the assignment</li>
+</ul>
+<p><strong>b.</strong> Time for an introduction to neural nets! In this problem, we'll create a really simple neural network that is essentially a "neural net"-style implementation of linear regression. We'll start off with something simple and familiar, but we'll implement much more advanced models in the near future.</p>
+<p>Create a <code>NeuralNetwork</code> class that inherits from weighted graph. Pass in dictionary of weights to determine connectivity and initial weights.</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+
+This is a graphical representation of the model:
+
+               nodes[2]                   ("output layer")
+            ^            ^
+           /              \
+  weights[(0,2)]    weights[(1,2)]
+        ^                    ^
+       /                      \
+nodes[0]                      nodes[1]     ("input layer")</code></pre>
+<p>To make a prediction, our simple neural net computes a weighted sum of the input values. (Again, this will become more involved in the future, but let's not worry about that just yet.)</p>
+
+<pre><code>&gt;&gt;&gt; nn.predict([1,3])
+1.4
+
+    behind the scenes:
+
+    assign nodes[0] a value of 1 and nodes[1] a value of 3,
+    and then return the following:
+
+    weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+    = -0.1 * 1 + 0.5 * 3
+    = 1.4</code></pre>
+<p>If we know the output that's supposed to be associated with a given input, we can compute the error in the prediction.</p>
+<p>We'll use the squared error, so that we can frame the problem of fitting the neural network as "choosing weights which minimize the squared error".</p>
+<p>To find the weights which minimize the squared error, we can perform gradient descent. As we'll see in the future, calculating the gradient of the weights can get a little tricky (it requires a technique called "backpropagation"). But for now, you can just hard-code the process for this particular network.</p>
+
+<pre><code>&gt;&gt;&gt; data_point = {'input': [1,3], 'output': [7]}
+&gt;&gt;&gt; nn.calc_squared_error(data_point)
+31.36     [ because (7-1.4)^2 = 5.6^2 = 31.36 ]
+
+&gt;&gt;&gt; nn.calc_gradient(data_point)
+{(0,2): -11.2, (1,2): -33.6}
+
+    behind the scenes:
+
+    squared_error = (y_actual - y_predicted)^2
+
+    d(squared_error)/d(weights)
+        = 2 (y_actual - y_predicted) d(y_actual - y_predicted)/d(weights)
+        = 2 (y_actual - y_predicted) d(0 - y_predicted)/d(weights)  
+        = -2 (y_actual - y_predicted) d(y_predicted)/d(weights)            
+
+    remember that
+        y_predicted = weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+
+    so
+        d(y_predicted)/d(weights[(0,2)]) = nodes[0].value
+        d(y_predicted)/d(weights[(1,2)]) = nodes[1].value
+
+    Therefore
+
+        d(squared_error)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) nodes[0].value
+            = -2 (7 - 1.4) (1)
+            = -11.2
+
+        d(squared_error)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) nodes[1].value
+            = -2 (7 - 1.4) (3)
+            = -33.6</code></pre>
+<p>Once we've got the gradient, we can update the weights using gradient descent.</p>
+
+<pre><code>&gt;&gt;&gt; nn.update_weights(data_point, learning_rate=0.01)
+
+    new_weights = old_weights - learning_rate * gradient
+                = {(0,2): -0.1, (1,2): 0.5}
+                   - 0.01 * {(0,2): -11.2, (1,2): -33.6}
+                = {(0,2): -0.1, (1,2): 0.5}
+                   + {(0,2): 0.112, (1,2): 0.336}
+                = {(0,2): 0.012, (1,2): 0.836}</code></pre>
+<p>If we repeatedly loop through a dataset and update the weights for each data point, then we should get a model whose error is minimized.</p>
+<p>Caveat: the minimum will be a local minimum, which is not guaranteed to be a global minimum.</p>
+<p>Here is a test case with some data points that are on the line $y=1+2x.$ Our network is set up to fit any line of the form $y = \beta_0 \cdot 1 + \beta_1 \cdot x,$ where $\beta_0 = $ <code>weights[(0,2)]</code> and $\beta_1=$ <code>weights[(1,2)]</code>.</p>
+<p>Note that this line can be written as</p>
+
+<pre><code>output = 1 * input[0] + 2 * input[1]</code></pre>
+<p>In this particular case, the weights should converge to the true values (<code>1</code> and <code>2</code>).</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [1]},
+    {'input': [1,1], 'output': [3]},
+    {'input': [1,2], 'output': [5]},
+    {'input': [1,3], 'output': [7]}
+    ]
+&gt;&gt;&gt; for _ in range(1000):
+        for data_point in data_points:
+            nn.update_weights(data_point)
+
+&gt;&gt;&gt; nn.weights
+should be really close to
+    {(0,2): 1, (1,2): 2}
+
+because the data points all lie on the line
+    output = input[0] * 1 + input[1] * 2</code></pre>
+<p><strong>Once you've got your final weights, post them on #results.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-2">Problem 92-2<a class="anchor-link" href="#Problem-92-2">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>Originally I was going to put the hash table problem here, but I figured we should discuss it in class first. Also, we should do quiz corrections. So it will be on the next assignment instead.</p>
+<p>For this assignment, please correct any errors on your quiz (if you got a score under 100%). You'll just need to submit your repl.it links again, with the corrected code.</p>
+<p>Remember that we went through the quiz during class, so if you have any questions or need any help, look at the recording first.</p>
+<p><strong>Note:</strong> Since this quiz corrections problem is much lighter than the usual problem that would go in its place, there will be a couple more Shell and SQL problems than usual.</p>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 1, 2, 3, 4, 5, 6)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-3">Problem 92-3<a class="anchor-link" href="#Problem-92-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to Polynomial regressor: ____
+Repl.it links to quiz corrections (if applicable): _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>

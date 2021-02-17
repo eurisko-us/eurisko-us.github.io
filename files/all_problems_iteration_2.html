@@ -13127,21 +13127,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Resources:</p>
-<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
-<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
-</blockquote>
-<p>Problems:</p>
-<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem</a><br></p>
-<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem</a><br></p>
-</blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>socket connections -- build calculator</p>
 
 </div>
@@ -13184,16 +13169,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Logistic-Regression-(15-min)">Logistic Regression (15 min)<a class="anchor-link" href="#Logistic-Regression-(15-min)">&#182;</a></h3><p>Suppose that you have a dataset of points $(x,y)$ where $x$ is the number of hours that a player has practiced a video game and $y$ is their probability of winning against another randomly selected player.</p>
-
-<pre><code>data = [(10, 0.05), (100, 0.35), (1000, 0.95)]</code></pre>
-<p>Fit a logistic regression $y=\dfrac{1}{1+e^{\beta_0 + \beta_1 x}}$ to the data. Then, answer the following questions:</p>
-<p><strong>a.</strong> For a player who has practiced 500 hours, what is the probability of winning against an average player.</p>
-<p><strong>b.</strong> How many hours does an average player practice?</p>
-<ul>
-<li><em>Hint:</em> an average player will have 0.5 probability of winning against a randomly selected player, so you just need to solve the equation <code>0.5 = 1/(1 + e^(beta_0 + beta_1 * x) )</code> for <code>x</code>.</li>
-</ul>
-<h3 id="Dataframe">Dataframe<a class="anchor-link" href="#Dataframe">&#182;</a></h3><p><strong>d.</strong> Make sure you have the following SQL-like methods <code>select</code>, <code>where</code>, and <code>order_by</code> implemented in your <code>DataFrame</code> class. You should already have implemented these from Problem 29. We're going to be using these extensively, so make sure these are working.</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Dataframe">Dataframe<a class="anchor-link" href="#Dataframe">&#182;</a></h3><p><strong>d.</strong> Make sure you have the following SQL-like methods <code>select</code>, <code>where</code>, and <code>order_by</code> implemented in your <code>DataFrame</code> class. You should already have implemented these from Problem 29. We're going to be using these extensively, so make sure these are working.</p>
 <p><em>Note:</em> You'll need to rename <code>select_columns</code> to just <code>select</code>, and <code>select_columns_where</code> to just <code>where</code>.</p>
 
 <pre><code>&gt;&gt;&gt; df = DataFrame(
@@ -13236,7 +13212,68 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3><p>Suppose that you have a dataset of points $(x,y)$ where $x$ is the number of hours that a player has practiced a video game and $y$ is their probability of winning against another randomly selected player.</p>
+
+<pre><code>data = [(10, 0.05), (100, 0.35), (1000, 0.95)]</code></pre>
+<p>Fit a logistic regression $y=\dfrac{1}{1+e^{\beta_0 + \beta_1 x}}$ to the data. Then, answer the following questions:</p>
+<p><strong>a.</strong> For a player who has practiced 500 hours, what is the probability of winning against an average player?</p>
+<p><strong>b.</strong> How many hours does an average player practice?</p>
+<ul>
+<li><em>Hint:</em> an average player will have 0.5 probability of winning against a randomly selected player, so you just need to solve the equation <code>0.5 = 1/(1 + e^(beta_0 + beta_1 * x) )</code> for <code>x</code>.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-60-1">Problem 60-1<a class="anchor-link" href="#Problem-60-1">&#182;</a></h1><p>Create a class <code>WeightedGraph</code> where each edge has an edge weight. Include two methods <code>calc_shortest_path</code> and <code>calc_distance</code> that accomplish the same goals as in your <code>Graph</code> class. But since this is a weighted graph, the actual algorithms for accomplishing those goals are a bit different.</p>
+<ul>
+<li><p>Initialize the <code>WeightedGraph</code> with a <code>weights</code> dictionary instead of an <code>edges</code> list. The <code>edges</code> list just had a list of edges, whereas the <code>weights</code> dictionary will have its keys as edges and its values as the weights of those edges.</p>
+</li>
+<li><p>Implement the method <code>calc_distance</code> using Dijkstra's algorithm (<a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm">https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm#Algorithm</a>). This algorithm works by assigning all other nodes an initial d-value and then iteratively updating those d-values until they actually represent the distances to those nodes.</p>
+<ul>
+<li><p>Initial d-values: initial node is assigned $0,$ all other nodes are assigned $\infty$ (use a large number like $9999999999$). Set current node to be the initial node.</p>
+</li>
+<li><p>For each unvisited neighbor of the current node, compute (current node's d-value) + (edge weight). If this sum is greater than the neighbor's d-value, then replace neighbor's d-value with the sum.</p>
+</li>
+<li><p>Update the current node to be the unvisited node that has the smallest d-value, and keep repeating the procedure until the terminal node has been visited. (Once the terminal node has been visited, its d-value is guaranteed to be correct.) <strong>Important: a node is not considered considered visited until it has been set as a current node. Even if you updated the node's d-value at some point, the node is not visited until it is the current node.</strong></p>
+</li>
+</ul>
+</li>
+<li><p>Test your code on the following example:</p>
+</li>
+</ul>
+<center><img width=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/weightedGraph.png' border='0'/></center>
+<pre><code>&gt;&gt;&gt; weights = {
+    (0,1): 3,
+    (1,7): 4,
+    (7,2): 2,
+    (2,5): 1,
+    (5,6): 8,
+    (0,3): 2,
+    (3,2): 6,
+    (3,4): 1,
+    (4,8): 8,
+    (8,0): 4
+}
+&gt;&gt;&gt; vertex_values = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i']
+&gt;&gt;&gt; weighted_graph = WeightedGraph(weights, vertex_values)
+
+&gt;&gt;&gt; weighted_graph.calc_distance(8,4)
+7
+
+&gt;&gt;&gt; [weighted_graph.calc_distance(8,n) for n in range(9)]
+[4, 7, 12, 6, 7, 13, 21, 11, 0]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-60-2">Problem 60-2<a class="anchor-link" href="#Problem-60-2">&#182;</a></h1><h3 id="Hash-Tables">Hash Tables<a class="anchor-link" href="#Hash-Tables">&#182;</a></h3><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
 <p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
 <p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
 
@@ -13292,6 +13329,115 @@ for i, char in enumerate(alphabet):
     output_value = find(array, key)
     desired_value = [i, i**2, i**3]
     assert output_value == desired_value</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-5/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 7, 8, 9, 10)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p>Let's generalize what we did in Problem 56-1.</p>
+<p>Create a <code>PolynomialRegressor</code> that passes the following tests. (In your tests, you can round to 4 decimal places.)</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [(0,1), (1,2), (2,5), (3,10), (4,20), (5,30)],
+    columns = ['x', 'y']
+)
+
+&gt;&gt;&gt; constant_regressor = PolynomialRegressor(degree=0)
+&gt;&gt;&gt; constant_regressor.fit(df)
+&gt;&gt;&gt; constant_regressor.coefficients
+[11.3333]
+&gt;&gt;&gt; constant_regressor.predict({'x': 2})
+11.3333
+
+&gt;&gt;&gt; linear_regressor = PolynomialRegressor(degree=1)
+&gt;&gt;&gt; linear_regressor.fit(df)
+&gt;&gt;&gt; linear_regressor.coefficients
+[-3.2381, 5.8286]
+&gt;&gt;&gt; linear_regressor.predict({'x': 2})
+8.4190
+
+&gt;&gt;&gt; quadratic_regressor = PolynomialRegressor(degree=2)
+&gt;&gt;&gt; quadratic_regressor.fit(df)
+&gt;&gt;&gt; quadratic_regressor.coefficients
+[1.1071, -0.6893, 1.3036]
+&gt;&gt;&gt; quadratic_regressor.predict({'x': 2})
+4.9429
+
+&gt;&gt;&gt; cubic_regressor = PolynomialRegressor(degree=3)
+&gt;&gt;&gt; cubic_regressor.ingest_data(data)
+&gt;&gt;&gt; cubic_regressor.solve_coefficients()
+&gt;&gt;&gt; cubic_regressor.coefficients
+[1.1349, -0.8161, 1.3730, -0.0093]
+&gt;&gt;&gt; cubic_regressor.predict({'x': 2})
+4.9206
+
+&gt;&gt;&gt; quintic_regressor = PolynomialRegressor(degree=5)
+&gt;&gt;&gt; quintic_regressor.ingest_data(data)
+&gt;&gt;&gt; quintic_regressor.solve_coefficients()
+&gt;&gt;&gt; quintic_regressor.coefficients
+[1.0000, -2.9500, 6.9583, -3.9583, 1.0417, -0.0917]
+quintic_regressor.predict({'x': 2})
+5.0000</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-2">Problem 59-2<a class="anchor-link" href="#Problem-59-2">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>Originally I was going to put the hash table problem here, but I figured we should discuss it in class first. Also, we should do quiz corrections. So it will be on the next assignment instead.</p>
+<p>For this assignment, please correct any errors on your quiz (if you got a score under 100%). You'll just need to submit your repl.it links again, with the corrected code.</p>
+<p>Remember that we went through the quiz during class, so if you have any questions or need any help, look at the recording first.</p>
+<p><strong>Note:</strong> Since this quiz corrections problem is much lighter than the usual problem that would go in its place, there will be a couple more Shell and SQL problems than usual.</p>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 1, 2, 3, 4, 5, 6)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-59-3">Problem 59-3<a class="anchor-link" href="#Problem-59-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to Polynomial regressor: ____
+Repl.it links to quiz corrections (if applicable): _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
