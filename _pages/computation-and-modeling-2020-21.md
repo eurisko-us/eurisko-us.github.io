@@ -65,7 +65,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="58">
+<font size="3em"><ol reversed start="59">
+    <li><b>Wednesday, February 17</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (C&M is first half) - polynomial regression, review quiz 2-2
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-59-1">Primary: PolynomialRegressor</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-59-2">Supplementary: Quiz Corrections, Shell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-59-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Tuesday, February 16</b>
         <br>Off day, but there is a (shorter) assignment due Tuesday night.
         <br>Assignment Problems:
