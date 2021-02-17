@@ -69,7 +69,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="91">
+<font size="3em"><ol reversed start="92">
+    <li><b>Wednesday, February 17</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (ML is second half) - review quiz 2-2, intro to neural networks
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-92-1">Primary: NeuralNetwork, Game Level 2 Matchups</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-92-2">Supplementary: Quiz Corrections, Shell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-92-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Tuesday, February 16</b>
         <br>Off day, but there is a (shorter) assignment due Tuesday night.
         <br>Assignment Problems:
