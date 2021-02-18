@@ -1,16 +1,16 @@
 class DavidStrategyLevel2:
 
-    def __init__(self, player_num):
-        self.player_num = player_num
+    def __init__(self, player_index):
+        self.player_index = player_index
         self.name = 'berserk'
         self.first_location=False
 
     def decide_ship_movement(self, ship_index, game_state):
-        ship_coords = game_state['players'][self.player_num]['units'][ship_index]['coords']
+        ship_coords = game_state['players'][self.player_index]['units'][ship_index]['coords']
         if game_state['turn']<2:
-          target=(game_state['players'][self.player_num]['home_coords'][0]+2,game_state['players'][self.player_num]['home_coords'][1])
+          target=(game_state['players'][self.player_index]['home_coords'][0]+2,game_state['players'][self.player_index]['home_coords'][1])
         else:
-          target=game_state['players'][self.player_num-1]['home_coords']
+          target=game_state['players'][self.player_index-1]['home_coords']
         route = self.fastest_route(ship_coords, target)
         if ship_index<5:
           if len(route) > 0:
@@ -30,11 +30,11 @@ class DavidStrategyLevel2:
         
     def decide_which_unit_to_attack(self, hidden_game_state_for_combat, combat_state, coords, attacker_index):
         combat_order = combat_state[coords]
-        player_indices = [unit['player_num'] for unit in combat_order]
+        player_indices = [unit['player_index'] for unit in combat_order]
 
-        opponent_index = 1 - self.player_num
+        opponent_index = 1 - self.player_index
         for combat_index, unit in enumerate(combat_order):
-            if unit['player_num'] == opponent_index:
+            if unit['player_index'] == opponent_index:
                 return combat_index
 
     def directional_input(self, current, goal):
@@ -65,8 +65,8 @@ class DavidStrategyLevel2:
         return_dict={
            'units': [],
            'technology': []}
-        current_cp = game_state['players'][self.player_num]['cp']
+        current_cp = game_state['players'][self.player_index]['cp']
         while current_cp>=game_state['unit_data']['Scout']['cp_cost']:
           current_cp-=game_state['unit_data']['Scout']['cp_cost']
-          return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_num]['home_coords']})
+          return_dict['units'].append({'type': 'Scout', 'coords': game_state['players'][self.player_index]['home_coords']})
         return return_dict
