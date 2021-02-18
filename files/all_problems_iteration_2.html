@@ -13346,6 +13346,7 @@ for i, char in enumerate(alphabet):
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p>Let's generalize what we did in Problem 56-1.</p>
 <p>Create a <code>PolynomialRegressor</code> that passes the following tests. (In your tests, you can round to 4 decimal places.)</p>
+<p><strong>Note:</strong> You can assume that the polynomial regression just has one variable that's generating all the polynomial terms.</p>
 
 <pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
     [(0,1), (1,2), (2,5), (3,10), (4,20), (5,30)],
@@ -13374,7 +13375,7 @@ for i, char in enumerate(alphabet):
 4.9429
 
 &gt;&gt;&gt; cubic_regressor = PolynomialRegressor(degree=3)
-&gt;&gt;&gt; cubic_regressor.ingest_data(df, dependent_variable='y')
+&gt;&gt;&gt; cubic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; cubic_regressor.solve_coefficients()
 &gt;&gt;&gt; cubic_regressor.coefficients
 [1.1349, -0.8161, 1.3730, -0.0093]
@@ -13382,7 +13383,7 @@ for i, char in enumerate(alphabet):
 4.9206
 
 &gt;&gt;&gt; quintic_regressor = PolynomialRegressor(degree=5)
-&gt;&gt;&gt; quintic_regressor.ingest_data(df, dependent_variable='y')
+&gt;&gt;&gt; quintic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; quintic_regressor.solve_coefficients()
 &gt;&gt;&gt; quintic_regressor.coefficients
 [1.0000, -2.9500, 6.9583, -3.9583, 1.0417, -0.0917]

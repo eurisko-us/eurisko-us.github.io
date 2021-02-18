@@ -14209,6 +14209,17 @@ for i, char in enumerate(alphabet):
 <li>3rd place: 10% extra credit on the assignment</li>
 </ul>
 <p><strong>b.</strong> Time for an introduction to neural nets! In this problem, we'll create a really simple neural network that is essentially a "neural net"-style implementation of linear regression. We'll start off with something simple and familiar, but we'll implement much more advanced models in the near future.</p>
+<p><strong>Note:</strong> It seems like we need to merge our <code>graph</code> library into our <code>machine-learning</code> library. So, let's do that. The <code>src</code> your <code>machine-learning</code> library should now look like this:</p>
+
+<pre><code>src/
+- models/
+  - linear_regressor.py
+  - neural_network.py
+  - ...
+- graphs/
+  - weighted_graph.py
+  - ...</code></pre>
+<p>(If you have a better idea for the structure of our library, feel free to do it your way and bring it up for discussion during the next class)</p>
 <p>Create a <code>NeuralNetwork</code> class that inherits from weighted graph. Pass in dictionary of weights to determine connectivity and initial weights.</p>
 
 <pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
@@ -14355,7 +14366,7 @@ because the data points all lie on the line
 </ul>
 <h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
 
-<pre><code>Repl.it link to Polynomial regressor: ____
+<pre><code>Repl.it link to neural network: ____
 Repl.it links to quiz corrections (if applicable): _____
 Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
 
