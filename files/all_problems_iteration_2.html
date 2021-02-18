@@ -13353,28 +13353,28 @@ for i, char in enumerate(alphabet):
 )
 
 &gt;&gt;&gt; constant_regressor = PolynomialRegressor(degree=0)
-&gt;&gt;&gt; constant_regressor.fit(df)
+&gt;&gt;&gt; constant_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; constant_regressor.coefficients
 [11.3333]
 &gt;&gt;&gt; constant_regressor.predict({'x': 2})
 11.3333
 
 &gt;&gt;&gt; linear_regressor = PolynomialRegressor(degree=1)
-&gt;&gt;&gt; linear_regressor.fit(df)
+&gt;&gt;&gt; linear_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; linear_regressor.coefficients
 [-3.2381, 5.8286]
 &gt;&gt;&gt; linear_regressor.predict({'x': 2})
 8.4190
 
 &gt;&gt;&gt; quadratic_regressor = PolynomialRegressor(degree=2)
-&gt;&gt;&gt; quadratic_regressor.fit(df)
+&gt;&gt;&gt; quadratic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; quadratic_regressor.coefficients
 [1.1071, -0.6893, 1.3036]
 &gt;&gt;&gt; quadratic_regressor.predict({'x': 2})
 4.9429
 
 &gt;&gt;&gt; cubic_regressor = PolynomialRegressor(degree=3)
-&gt;&gt;&gt; cubic_regressor.ingest_data(data)
+&gt;&gt;&gt; cubic_regressor.ingest_data(df, dependent_variable='y')
 &gt;&gt;&gt; cubic_regressor.solve_coefficients()
 &gt;&gt;&gt; cubic_regressor.coefficients
 [1.1349, -0.8161, 1.3730, -0.0093]
@@ -13382,7 +13382,7 @@ for i, char in enumerate(alphabet):
 4.9206
 
 &gt;&gt;&gt; quintic_regressor = PolynomialRegressor(degree=5)
-&gt;&gt;&gt; quintic_regressor.ingest_data(data)
+&gt;&gt;&gt; quintic_regressor.ingest_data(df, dependent_variable='y')
 &gt;&gt;&gt; quintic_regressor.solve_coefficients()
 &gt;&gt;&gt; quintic_regressor.coefficients
 [1.0000, -2.9500, 6.9583, -3.9583, 1.0417, -0.0917]
