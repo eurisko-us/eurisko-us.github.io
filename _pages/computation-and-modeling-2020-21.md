@@ -65,7 +65,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="59">
+<font size="3em"><ol reversed start="60">
+    <li><b>Friday, February 19</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (C&M is first half) - Dijkstra's Algorithm, Intro to Hash Tables
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-1">Primary: Game Level 2 Reconciliations, Game Level 3 Implementation, Logistic Regressor Neural Net via Activation Functions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-2">Supplementary: Intro to Hash Tables, Shell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, February 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (C&M is first half) - polynomial regression, review quiz 2-2
         <br>Assignment Problems:
