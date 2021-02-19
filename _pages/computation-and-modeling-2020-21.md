@@ -15,10 +15,20 @@ author_profile: false
 
 <center>
 <table style="width:80%">
+   <tr>
+    <td width="33%"><center>Quiz 2-3</center></td>
+    <td width="33%"><center>Friday, February 26</center></td>
+    <td width="33%"><center></center></td>
+  </tr>
+   <tr>
+    <td width="33%"><center>Quiz 2-2</center></td>
+    <td width="33%"><center>Thursday, February 11</center>reviewed in class, 2/17</td>
+    <td width="33%"><center></center></td>
+  </tr>
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
     <td width="33%"><center>Friday, January 29</center></td>
-    <td width="33%"><center></center></td>
+    <td width="33%"><center></center>reviewed in class, 2/1</td>
   </tr>
   <tr>
     <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_2.html#Final-1" target="_blank">Final 1</a></center></td>
@@ -94,7 +104,7 @@ author_profile: false
     </li>
     <li><b>Wednesday, February 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/510804889">Class Recording</a> (C&M is first half) - Intro to Hodgkin-Huxley model, blog post preference rankings
-        <br>Note: Since we have Friday and Monday off, and there is an asynchronous quiz tomorrow (Thursday), this assignment will be due Monday night. There will be another assignment due Wednesday, which will be released this weekend.
+        <br><b>Note:</b> Since we have Friday and Monday off, and there is an asynchronous quiz tomorrow (Thursday), this assignment will be due Monday night. There will be another assignment due Wednesday, which will be released this weekend.
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-57-1">Hodgkin-Huxley Model, Blog Post Preference Rankings</a></li>
