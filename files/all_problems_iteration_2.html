@@ -13228,7 +13228,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-60-1">Problem 60-1<a class="anchor-link" href="#Problem-60-1">&#182;</a></h1><p>Create a class <code>WeightedGraph</code> where each edge has an edge weight. Include two methods <code>calc_shortest_path</code> and <code>calc_distance</code> that accomplish the same goals as in your <code>Graph</code> class. But since this is a weighted graph, the actual algorithms for accomplishing those goals are a bit different.</p>
+<h1 id="Problem-60-1">Problem 60-1<a class="anchor-link" href="#Problem-60-1">&#182;</a></h1><p><strong>Location:</strong> <code>graph/src/weighted_graph.py</code> and <code>graph/tests/test_weighted_graph.py</code></p>
+<p>Create a class <code>WeightedGraph</code> where each edge has an edge weight. Include two methods <code>calc_shortest_path</code> and <code>calc_distance</code> that accomplish the same goals as in your <code>Graph</code> class. But since this is a weighted graph, the actual algorithms for accomplishing those goals are a bit different.</p>
 <ul>
 <li><p>Initialize the <code>WeightedGraph</code> with a <code>weights</code> dictionary instead of an <code>edges</code> list. The <code>edges</code> list just had a list of edges, whereas the <code>weights</code> dictionary will have its keys as edges and its values as the weights of those edges.</p>
 </li>
@@ -13344,6 +13345,32 @@ for i, char in enumerate(alphabet):
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-60-3">Problem 60-3<a class="anchor-link" href="#Problem-60-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to weighted graph: ____
+Repl.it link to hash table: ____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for assignment-problems repo: _____
+Commit link for graph repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-59-1">Problem 59-1<a class="anchor-link" href="#Problem-59-1">&#182;</a></h1><p>Let's generalize what we did in Problem 56-1.</p>
 <p>Create a <code>PolynomialRegressor</code> that passes the following tests. (In your tests, you can round to 4 decimal places.)</p>
 <p><strong>Note:</strong> You can assume that the polynomial regression just has one variable that's generating all the polynomial terms.</p>
@@ -13356,21 +13383,21 @@ for i, char in enumerate(alphabet):
 &gt;&gt;&gt; constant_regressor = PolynomialRegressor(degree=0)
 &gt;&gt;&gt; constant_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; constant_regressor.coefficients
-[11.3333]
+{'constant': 11.3333}
 &gt;&gt;&gt; constant_regressor.predict({'x': 2})
 11.3333
 
 &gt;&gt;&gt; linear_regressor = PolynomialRegressor(degree=1)
 &gt;&gt;&gt; linear_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; linear_regressor.coefficients
-[-3.2381, 5.8286]
+{'constant': -3.2381, 'x': 5.8286}
 &gt;&gt;&gt; linear_regressor.predict({'x': 2})
 8.4190
 
 &gt;&gt;&gt; quadratic_regressor = PolynomialRegressor(degree=2)
 &gt;&gt;&gt; quadratic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; quadratic_regressor.coefficients
-[1.1071, -0.6893, 1.3036]
+{'constant': 1.1071, 'x': -0.6893, 'x^2': 1.3036}
 &gt;&gt;&gt; quadratic_regressor.predict({'x': 2})
 4.9429
 
@@ -13378,7 +13405,7 @@ for i, char in enumerate(alphabet):
 &gt;&gt;&gt; cubic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; cubic_regressor.solve_coefficients()
 &gt;&gt;&gt; cubic_regressor.coefficients
-[1.1349, -0.8161, 1.3730, -0.0093]
+{'constant': 1.1349, 'x': -0.8161, 'x^2': 1.3730, 'x^3': -0.0093}
 &gt;&gt;&gt; cubic_regressor.predict({'x': 2})
 4.9206
 
@@ -13386,7 +13413,7 @@ for i, char in enumerate(alphabet):
 &gt;&gt;&gt; quintic_regressor.fit(df, dependent_variable='y')
 &gt;&gt;&gt; quintic_regressor.solve_coefficients()
 &gt;&gt;&gt; quintic_regressor.coefficients
-[1.0000, -2.9500, 6.9583, -3.9583, 1.0417, -0.0917]
+{'constant': 1.0000, 'x': -2.9500, 'x^2': 6.9583, 'x^3': -3.9583, 'x^4': 1.0417, 'x^5': -0.0917}
 quintic_regressor.predict({'x': 2})
 5.0000</code></pre>
 

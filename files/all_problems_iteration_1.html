@@ -14067,6 +14067,15 @@ int main()
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-94-1">Problem 94-1<a class="anchor-link" href="#Problem-94-1">&#182;</a></h1><p>generalize neural net to any number of inputs &amp; any number of outputs</p>
 <p>then fit the sandwich dataset with linear and logistic neural nets</p>
+<p>extend hash table</p>
+<p>Game level 4</p>
+<ul>
+<li>Colonization, with 2 planets in middle of board but on opposite sides</li>
+</ul>
+<p>Game level 5</p>
+<ul>
+<li>other ship types, miners</li>
+</ul>
 
 </div>
 </div>
@@ -14074,9 +14083,24 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><p>logistic regression model with neural net</p>
-<p>In neural networks, neurons are often given "activation functions".</p>
-<p>Equip nodes with activation functions</p>
+<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile higlighted discrepancies</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Implement game level 3</p>
+<ul>
+<li><p>Regular (repeated) economic phases -- once every turn</p>
+</li>
+<li><p>Change the starting CP back to 0 (now that we have repeated economic phases, we no longer need the extra CP boost at the beginning).</p>
+</li>
+<li><p>3 movement rounds on each turn</p>
+</li>
+<li><p>7x7 board - starting positions are now (3,0) and (3,6)</p>
+</li>
+</ul>
+<h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p>In neural networks, neurons are often given "activation functions", where</p>
+
+<pre><code>node.value = node.activation_function(weighted sum of inputs to node)</code></pre>
+<p>In this problem, you'll extend your neural net to include activation functions. Then, you'll equip the neurons with activations so as to implement a logistic regressor.</p>
 
 <pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
 
@@ -14085,9 +14109,9 @@ int main()
 &gt;&gt;&gt; def sigmoidal_activation(x):
         return 1/(1+math.exp(-x))
 
-&gt;&gt;&gt; activations = [linear_activation, linear_activation, sigmoidal_activation]
+&gt;&gt;&gt; activation_functions = [linear_activation, linear_activation, sigmoidal_activation]
 
-&gt;&gt;&gt; nn = NeuralNetwork(weights, activations)
+&gt;&gt;&gt; nn = NeuralNetwork(weights, activation_functions)
 
 &gt;&gt;&gt; data_points = [
     {'input': [1,0], 'output': [0.2689]},
@@ -14105,6 +14129,7 @@ should be really close to
 
 because the data points all lie on the sigmoid
     output = 1/(1 + e^(input[0] * 1 + input[1] * 2) )</code></pre>
+<p><strong>Note:</strong> If no <code>activation_functions</code> variable is passed in, then assume all activation functions are linear.</p>
 
 </div>
 </div>
@@ -14169,17 +14194,39 @@ for i, char in enumerate(alphabet):
     desired_value = [i, i**2, i**3]
     assert output_value == desired_value</code></pre>
 <h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
-<p>Resources:</p>
-<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
-<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
-</blockquote>
-<p>Problems:</p>
-<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem</a></p>
-<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem</a></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-5/problem</a></p>
 </blockquote>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
-<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 5, 6, 7, 8)</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 7, 8, 9, 10)</p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-3">Problem 93-3<a class="anchor-link" href="#Problem-93-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to neural network: ____
+Repl.it link to hash table: ____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for assignment-problems repo: _____
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
@@ -14264,7 +14311,7 @@ nodes[0]                      nodes[1]     ("input layer")</code></pre>
 
     d(squared_error)/d(weights)
         = 2 (y_actual - y_predicted) d(y_actual - y_predicted)/d(weights)
-        = 2 (y_actual - y_predicted) d(0 - y_predicted)/d(weights)  
+        = 2 (y_actual - y_predicted) [ 0 - d(y_predicted)/d(weights) ]
         = -2 (y_actual - y_predicted) d(y_predicted)/d(weights)            
 
     remember that
