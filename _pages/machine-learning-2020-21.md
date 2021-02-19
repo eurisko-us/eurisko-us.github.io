@@ -69,7 +69,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="92">
+<font size="3em"><ol reversed start="93">
+    <li><b>Friday, February 19</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (ML is second half) - intro to hash tables, game levels 2/3
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-93-1">Primary: Game Level 2 Reconciliations, Game Level 3 Implementation, Logistic Regressor Neural Net via Activation Functions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-93-2">Supplementary: Intro to Hash Tables, Shell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-93-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, February 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (ML is second half) - review quiz 2-2, intro to neural networks
         <br>Assignment Problems:
