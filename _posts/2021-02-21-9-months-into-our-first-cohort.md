@@ -19,3 +19,9 @@ Lastly, before we dive into the meat of the post, here is a bit of important bac
 <li>The students are all mathematically advanced and have learned through linear algebra and multivariable calculus. Most are in Math Academy, which means that by 11th grade, they've learned differential equations, discrete math, and abstract algebra as well.</li>
 <li>Most of the students had very little programming experience prior to Eurisko. Something as simple as checking if a string was a palindrome was not trivial to them. They didn't know how to write classes and helper functions, how to work with dictionaries, or even how to systematically debug their code.</li>
 </ul>
+
+<h2>What We've Done</h2>
+
+Here is a list of the main topics we've covered. 
+
+<b>Algorithms / data structures.</b> The students have implemented standard sorting algorithms (selection sort, bubble sort, heapsort, mergesort, quicksort) and have used recursion in many different contexts. They've implemented trees, undirected graphs, directed graphs, and weighted graphs, along with methods for computing depth-first / breadth-first traversals and distance / shortest path between two nodes (i.e. Dijkstra's algorithm). They've also implemented a simple version of backtracking to solve a <a class="body" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-1" target="_blank">magic square</a> and a mini sudoku puzzle. (Elijah wrote about the magic square problem <a class="body" href="https://eurisko-us.github.io/solving-magic-squares-using-backtracking/" target="_blank">here</a>.)
