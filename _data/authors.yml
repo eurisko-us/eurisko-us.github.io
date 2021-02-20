@@ -14,7 +14,7 @@ Jason Roberts:
   
 Colby Roberts:
   name        : "Colby Roberts"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science. (<a class='body' target='_blank' href='https://github.com/C0BBL3'>Link to Colby's GitHub</a>)"
   avatar      : "headshots/colby-roberts.png"
   role        : "student"
   class       : "Machine Learning"
@@ -22,7 +22,7 @@ Colby Roberts:
   
 George Meza:
   name        : "George Meza"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. (<a class='body' target='_blank' href='https://github.com/geomeza'>Link to George's GitHub</a>)"
   avatar      : "headshots/george-meza.png"
   role        : "student"
   class       : "Machine Learning"
@@ -30,7 +30,7 @@ George Meza:
   
 Riley Paddock:
   name        : "Riley Paddock"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science. (<a class='body' target='_blank' href='https://github.com/RileyPaddock'>Link to Riley's GitHub</a>)"
   avatar      : "headshots/riley-paddock.png"
   role        : "student"
   class       : "Machine Learning"
@@ -38,7 +38,7 @@ Riley Paddock:
   
 David Gieselman:
   name        : "David Gieselman"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college. (<a class='body' target='_blank' href='https://github.com/DrM00G'>Link to David's GitHub</a>)"
   avatar      : "headshots/david-gieselman.png"
   role        : "student"
   class       : "Machine Learning"
@@ -46,7 +46,7 @@ David Gieselman:
 
 Elijah Tarr:
   name        : "Elijah Tarr"
-  bio         : " is a junior at Tamalpais High School who also participates in Math Academy and Eurisko. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains a <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> and <a class='body' target='_blank' href='https://github.com/eoriont'>GitHub account</a> for displaying his projects. In college, he wants to study mathematics and computer science."
+  bio         : " is a junior at Tamalpais High School who also participates in Math Academy and Eurisko. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains a <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> for displaying his projects. In college, he wants to study mathematics and computer science. (<a class='body' target='_blank' href='https://github.com/eoriont'>Link to Elijah's GitHub</a>)"
   avatar      : "headshots/elijah-tarr.png"
   role        : "student"
   class       : "Machine Learning"
