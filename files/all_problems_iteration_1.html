@@ -14083,21 +14083,8 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile higlighted discrepancies</p>
-<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
-</blockquote>
-<p>Implement game level 3</p>
-<ul>
-<li><p>Regular (repeated) economic phases -- once every turn</p>
-</li>
-<li><p>Change the starting CP back to 0 (now that we have repeated economic phases, we no longer need the extra CP boost at the beginning).</p>
-</li>
-<li><p>3 movement rounds on each turn</p>
-</li>
-<li><p>7x7 board - starting positions are now (3,0) and (3,6)</p>
-</li>
-</ul>
-<h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p>In neural networks, neurons are often given "activation functions", where</p>
+<h1 id="Problem-94-1">Problem 94-1<a class="anchor-link" href="#Problem-94-1">&#182;</a></h1><h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p><strong>Note: we need to discuss how to update the gradient calculation now that we're using a sigmoidal activation function</strong></p>
+<p>In neural networks, neurons are often given "activation functions", where</p>
 
 <pre><code>node.value = node.activation_function(weighted sum of inputs to node)</code></pre>
 <p>In this problem, you'll extend your neural net to include activation functions. Then, you'll equip the neurons with activations so as to implement a logistic regressor.</p>
@@ -14130,6 +14117,28 @@ should be really close to
 because the data points all lie on the sigmoid
     output = 1/(1 + e^(input[0] * 1 + input[1] * 2) )</code></pre>
 <p><strong>Note:</strong> If no <code>activation_functions</code> variable is passed in, then assume all activation functions are linear.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile higlighted discrepancies</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Implement game level 3</p>
+<ul>
+<li><p>Regular (repeated) economic phases -- once every turn</p>
+</li>
+<li><p>Change the starting CP back to 0 (now that we have repeated economic phases, we no longer need the extra CP boost at the beginning).</p>
+</li>
+<li><p>3 movement rounds on each turn</p>
+</li>
+<li><p>7x7 board - starting positions are now (3,0) and (3,6)</p>
+</li>
+</ul>
+<p>Since we had to postpone the neural net problem, you can use the extra time to begin implementing your custom player for the level 3 game (we'll have the level 3 battles soon).</p>
 
 </div>
 </div>
