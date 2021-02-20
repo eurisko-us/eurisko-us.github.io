@@ -42,6 +42,9 @@ Here is a list of the main topics we've covered.
 
 <b>Writing.</b> The students each wrote a blog post last semester (the posts are linked in the categories above). I've started submitting them on HackerNews, and Elijah's post made it to the front page last weekend (<a class="body" href="https://news.ycombinator.com/item?id=26126652" target="_blank">link</a>). Everyone else's posts will be submitted in the coming weekends.
 
+<h2>Space Empires</h2>
+
+<b>IN PROGRESS</b>
 
 
 
