@@ -74,17 +74,15 @@ Level 2 was also where we started competing with custom strategies. It turned ou
 
 The camper strategy exploited the fact that, when two units of the same tactics level are involved in combat, the defending ship gets to attack first. By waiting for the opponent to travel to the camper's home colony, the camper was able to attack the opponent first. Additionally, because shipyards at a player's home colony can engage in combat, the camper not only attacked first, but also had twice as many ships in the initial combat. These advantages gave the camper a much higher probability of winning the initial combat and destroying the opponent's scouts, which in turn gave the camper a much higher probability of winning the second combat once it sent its scouts to the opponent's home base.
 
-<b>Level 3.</b> We're currently implementing level 3. Level 3 extends level 2 by introducing
+<b>Level 3.</b> We're currently implementing level 3. Level 3 extends level 2 by introducing repeated economic phases. This means that the players get CP income on every turn, and have the opportunity to buy technology and/or more scouts on each turn. The optimal strategy is likely similar to the camper strategy from level 2, but it's not entirely obvious what the best thing to do is while camping, and when the camper should pull the trigger and rush the opponent.
 
+<ul>
+  <li>If the opponent is going to attack the camper quickly, then it's in the camper's best interest to ignore technology and just buy as many scouts as possible. That way, it can outnumber the opponent.</li>
+  <li>If the opponent is going to wait a while before attacking the camper, then it's in the camper's best interest to first buy technology and then buy scouts only after all technology has been upgraded to the maximum. The reasoning for this strategy depends on a couple nuances: 1) because of maintenance costs, a player cannot maintain infinitely many scouts, and 2) a ship inherits the technology from the player at the time of building. This way, the resulting army of scouts will be both maximally large and equipped with maximum technology.</li>
+   <li>If the opponent is going to wait for the camper to attack first, then the camper may be able to exploit the opponent's way of detecting that the camper has attacked. For example, if the opponent attacks right after the camper does, then the camper can just send a single scout over to the opponent (as a sacrifice) and keep the rest of its scouts camped at the home base for the defender-attacks-first advantage. On the other hand, if the opponent refuses to attack until all of the camper's scouts are destroyed, then the camper can repeatedly build an army of scouts and send all but one of them to attack the opponent.</li>
+</ul>
 
-<b>IN PROGRESS</b>
-
-<!--
-Level 3: repeated economic phases. The optimal strategy is likely still to wait for opponent to attack and then rush at them, but it’s an open question about what the best thing to do is while you’re waiting, and when you should rush the opponent.
-If you’re only waiting a short time, it’s best to ignore technology and just buy as many scouts as possible. But if you’re waiting a while it’s better to have bought technology first so that the scouts you build have that technology.
-If you know your opponent is waiting for all your scouts to die before rushing, then you can exploit that by repeatedly building an army of scouts and sending all but one of them to your opponent. Then you will be guaranteed to win against your opponent. So you can’t just wait until the opponent has no scouts. There needs to be a better "trigger" for rushing.
-So we’re now at the stage where it’s an interesting problem to design the best agent.
--->
+We're now at a stage where the optimal strategy is no longer obvious.
 
 <h2>Where We're Headed</h2>
 
