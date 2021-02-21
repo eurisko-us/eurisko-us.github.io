@@ -1,5 +1,5 @@
 ---
-title: "9 Months In: What We're Doing, Why We're Doing It, and Where We're Headed"
+title: "The Ultimate High School Computer Science Course: What We're Doing, Why We're Doing It, and Where We're Headed"
 author: "Justin Skycak"
 reviewers:
   - "Jason Roberts"
