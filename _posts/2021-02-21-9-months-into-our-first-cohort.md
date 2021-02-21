@@ -115,7 +115,7 @@ The working title for next year's class (12th grade) is "Intelligent Systems." I
 
 <h2>How Well is it Working?</h2>
 
-As I mentioned earlier, the kids are making progress faster than either Jason or I could have possibly expected. But they're also having more fun than either Jason or I could have possibly expected, too. Class often runs over time due to interesting discussions surrounding Space Empires, and I have to regularly tell kids to leave class to go to their other classes. The kids are on Slack all the time. I've heard them mention that "it's the only class that matters." It's their hardest class, by far -- even compared to their Math Academy classes (where they're studying upper-division college math), which is in turn far more advanced than their AP classes. But they're having a blast.
+Again, the kids are making progress faster than either Jason or I could have possibly expected. But they're also having more fun than either Jason or I could have possibly expected, too. Class often runs over time due to interesting discussions surrounding Space Empires, and I have to regularly tell kids to leave class to go to their other classes. The kids are on Slack all the time, and I've heard them mention that "it's the only class that matters." It's their hardest class, by far -- even compared to their Math Academy classes (where they're studying upper-division college math), which is in turn far more advanced than their AP classes. But they're having a blast.
 
 
 
