@@ -46,7 +46,7 @@ Here is a list of the main topics we've covered.
 
 <h2>Space Empires</h2>
 
-The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's given the students extensive practice planning, writing, and debugging code that's spread over multiple folders and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how it works:
+The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's provided the students with extensive practice planning, writing, and debugging code that's spread over multiple folders and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how the game works:
 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
@@ -60,28 +60,11 @@ There are many other details. We won't mention them all here, but here are a few
 <ul>
 <li>Players can send colonyships to colonize other planets. Then, players can collect CPs and build ships at those colonies.</li>
 <li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
+<li>During combat, if two ships have the same attack class, then the defending ship attacks first. (The defending ship is the ship that was the first to occupy the grid square).</li>
 <li>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</li>
 </ul>
 
 <b>IN PROGRESS</b>
-
-<!--
-In order to build a ship, not only must you have enough CPs and shipyards, but you must also have the necessary shipsize technology.
-The combat order is constructed according to ships' tactics level: ships with tactics 0 are destroyed immediately, and ships with higher tactics fire first. If two ships have the same tactics, then the defending ship fires first (the defending ship is the ship that was the first to occupy the grid space).
-Previously, I said that the maintenance cost is equal to the hullsize. This is usually true, but there are some special types of ships (Decoy, Colonyship, Base) that don't have a maintenance cost.
-Ships have the following attributes:
-cp_cost - the number of CPs required to build the ship
-hullsize - the number of shipyards needed to build the ship (assuming shipyard technology level 1)
-shipsize_needed - the level of shipsize technology required to build the
-tactics - determines the combat order; ships with tactics 0 are destroyed immediately
-attack and defense - as usual
-maintenance - the number of CPs that must be paid during each Economic phase to retain the ship
-Here are the specifics regarding technology:
-attack, defense - determines the amount that gets added to a ship's attack or defense during battle
-shipsize - determines what kinds of ships can be built (provided you have enough CP and shipyards)
-movement - determines how many spaces each ship can move during each movement phase
-shipyard - determines how much "hull size" each shipyard can build
--->
 
 <!--
 The game is really complicated (see here and here for just the very basic introductory summaries I gave to the 10th graders; see here for the complete rulebook), and we’ve had to peel back to sync up. It’s also overwhelming to design strategies, so we’re going one level at a time.
