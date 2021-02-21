@@ -55,7 +55,7 @@ Here are our plans for the rest of the semester:
 
 <li><i>Data Structures and Algorithms</i> - the students will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), genetic algorithms.</li>
 
-<li><i>Programming Languages</i> - the students will build their own string and vector classes in C++ and work through more advanced C++ (the second half of <a class="body" href="https://www.learncpp.com/" target="_blank">learncpp.com</a>). They will also take the algorithms and models they had previously written in Python, and rewrite them in C++ with the goal of speeding them up.</li>
+<li><i>Programming Languages</i> - the students will build their own string and vector classes in C++ and continue learning more advanced C++ and Haskell. They will also take the algorithms and models they had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, they'll write their own SQL parser in their DataFrame class.</li>
 
 <li><i>Space Empires</i> - the students will continue building up the game level by level and will continue building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that they have built. Once the Space Empires games are fully implemented, the students will put them on a server and have the agents communicate with the game using socket connections.</li>
 
