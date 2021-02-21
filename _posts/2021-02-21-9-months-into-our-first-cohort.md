@@ -46,6 +46,11 @@ Here is a list of the main topics we've covered.
 
 The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's given the students extensive practice planning, writing, and debugging code that's spread over multiple folders and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how it works:
 
+<ul>
+<li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
+<li>Players have a currency called Construction Points (CPs). Players receive CPs from their home colony on each turn, and they can use these CPs to buy more ships or "technology" for future ships. Technology supplements ships' stats, like allowing them to move more spaces at once or increasing their attack or defense during combat. Players also have to pay maintenance costs on their ships each round (if they don't pay the maintenance cost for a ship, they lose the ship).</li>
+</ul>
+
 <b>IN PROGRESS</b>
 
 
