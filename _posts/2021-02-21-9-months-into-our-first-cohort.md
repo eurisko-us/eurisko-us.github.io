@@ -56,7 +56,7 @@ The Space Empires game is incredibly complicated, which is in part why we chose 
 <li>At the end of a round of combat, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.</li>
 </ul>
 
-There are many other details. We won't mention them all here, but here are a few examples to get the point across:
+There are many other details. I won't mention them all here, but here are a few examples to get the point across:
 <ul>
 <li>Players can send colonyships to colonize other planets. Then, players can collect CPs and build ships at those colonies.</li>
 <li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
