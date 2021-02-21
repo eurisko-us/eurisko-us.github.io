@@ -34,7 +34,7 @@ We want to teach students the art and craft of software development, while simul
 
 We chose Python as our primary programming language since it's one of the most productive multi-purpose languages, it's a great learning language, and these days it's the lingua franca of machine learning. But we also wanted to expose the students to multiple programming languages, so we picked C++ and Haskell as two other languages that would stretch the students in other ways. C++ forces them to think in terms of how the machine actually works, whereas Haskell represents a much more abstract idealized conception of computation. C++ and Haskell are also the kinds of languages that the students might run into early in an undergraduate computer science program, and if they're not prepared, they could easily find themselves frustrated and struggling. So we're taking preventative measures.
 
-We're also having the students learn SQL, since it is another type of language (a declarative language) that also happens to be incredibly useful. In addition to learning SQL, the students will also build their own SQL parser, which will give them further insight into how programming languages are structured and what goes on behind the scenes when you run a program.
+We're also having the students learn SQL, since it's an example of a different category of language: declarative, as opposed to imperative (Python, C++) or functional (Haskell). It also happens to be incredibly useful. In addition to learning SQL, the students will also build their own SQL parser, which will give them further insight into how programming languages are structured and what goes on behind the scenes when you run a program.
 
 <h2>What We've Done</h2>
 
