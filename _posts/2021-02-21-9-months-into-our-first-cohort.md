@@ -1,6 +1,8 @@
 ---
 title: "9 Months Into our First Cohort: What We've Done and Where We're Headed"
 author: "Justin Skycak"
+reviewers:
+  - "Jason Roberts"
 tags:
   - Eurisko Program
 ---
