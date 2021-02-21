@@ -22,6 +22,10 @@ Lastly, before we dive in, here is a bit of important background information:
 <li>Most of the students had very little programming experience prior to Eurisko. Something as simple as checking if a string was a palindrome was not trivial to them. They didn't know how to write classes and helper functions, how to work with dictionaries, or even how to systematically debug their code. They've come a long way in a short time!</li>
 </ul>
 
+<h2>What's The Goal?</h2>
+
+IN PROGRESS
+
 <h2>What We've Done</h2>
 
 Here is a list of the main topics we've covered. 
@@ -46,7 +50,7 @@ Here is a list of the main topics we've covered.
 
 <h2>Space Empires</h2>
 
-The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's provided the students with extensive practice planning, writing, and debugging code that's spread over multiple folders and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how the game works:
+The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's provided the students with extensive practice planning, writing, and debugging code that's spread over multiple directories and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how the game works:
 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
@@ -109,6 +113,9 @@ The working title for next year's class (12th grade) is "Intelligent Systems." I
 <li>continue improving our intelligent agents in the game of Space Empires, and create an app for playing Space Empires (so that us lowly humans can compete against some AI agents on our phones).</li>
 </ul>
 
+<h2>How Well is it Working?</h2>
+
+As I mentioned earlier, the kids are making progress faster than either Jason or I could have possibly expected. But they're also having more fun than either Jason or I could have possibly expected, too. Class often runs over time due to interesting discussions surrounding Space Empires, and I have to regularly tell kids to leave class to go to their other classes. The kids are on Slack all the time. I've heard them mention that "it's the only class that matters." It's their hardest class, by far -- even compared to their Math Academy classes (where they're studying upper-division college math), which is in turn far more advanced than their AP classes. But they're having a blast.
 
 
 
