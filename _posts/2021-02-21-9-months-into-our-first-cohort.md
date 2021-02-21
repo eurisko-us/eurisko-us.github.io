@@ -46,6 +46,17 @@ Here is a list of the main topics we've covered.
 
 <b>IN PROGRESS</b>
 
+<!--
+The game is really complicated (see here and here for just the very basic introductory summaries I gave to the 10th graders; see here for the complete rulebook), and we’ve had to peel back to sync up. It’s also overwhelming to design strategies, so we’re going one level at a time.
+Built the games, we’ve had to peel back a bit to get our games to match up. Now we’re bringing back the features one “level” at a time.
+Level 1 was asdf. Berserker is the best.
+Level 2 was asdf. Best is a “holdback berserker” that waits for opponent to attack, and then once opponent’s scouts are destroyed, rushes at the enemy.
+Level 3: repeated economic phases. The optimal strategy is likely still to wait for opponent to attack and then rush at them, but it’s an open question about what the best thing to do is while you’re waiting, and when you should rush the opponent.
+If you’re only waiting a short time, it’s best to ignore technology and just buy as many scouts as possible. But if you’re waiting a while it’s better to have bought technology first so that the scouts you build have that technology.
+If you know your opponent is waiting for all your scouts to die before rushing, then you can exploit that by repeatedly building an army of scouts and sending all but one of them to your opponent. Then you will be guaranteed to win against your opponent. So you can’t just wait until the opponent has no scouts. There needs to be a better "trigger" for rushing.
+So we’re now at the stage where it’s an interesting problem to design the best agent.
+-->
+
 <h2>Where We're Headed</h2>
 
 Here are our plans for the rest of the semester:
