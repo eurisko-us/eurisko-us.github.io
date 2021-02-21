@@ -24,7 +24,21 @@ Lastly, before we dive in, here is a bit of important background information:
 
 <h2>What's The Goal?</h2>
 
-IN PROGRESS
+We want to teach the students the art and craft of software development, while simultaneously giving equal weighting to discipline of formal computer science and leveraging the mathematics that the students have been learning through Math Academy. We also want the course to be very fun.
+
+<ul>
+  <li><i>The art and craft of software development.</i> We want the students to be good enough to do an internship at a tech company and be productive (as opposed to burdensome). This means they need to know how to write and debug code given high-level requirements, and they also need to know how to use source control (GitHub).</li>
+  <li><i>Leveraging mathematics.</i> We're interested in teaching the students a lof of machine learning because frankly, it's super cool, and it builds on their strengths. We want to pull the powerful and interesting tools of mathematics into practical use-cases in the context of modeling and prediction (as opposed to just CRUD apps).</li>
+   <li><i>Formal computer science.</i> In addition to becoming competent software developers, we wanted to teach the students undergraduate-level computer science (data structures / algorithms, programming languages, etc) so that no matter how competitive or rigorous the undergraduate curriculum they encounter, they'll be overprepared and find it easygoing (as opposed to frustrating/intimidating).</li>
+</ul>
+
+We chose Python as our primary programming language since it's one of the most productive multi-purpose languages and it's a great learning language. But we also
+
+<b>IN PROGRESS</b>
+
+<!--
+we wanted to expose them to multiple programming languages. Chose Python since it's one of the most productive multi-purpose languages and it's a great learning languages. But we also wanted to pick 2 other languages that would stretch them in other ways: C++ is going to force you to think in terms of how the machine actually works, whereas Haskell represents a much more abstract idealized conception of computation (which you could argue is almost the polar opposite of C++). And then SQL is another type of language, a declarative language (that also happens to be incredibly useful). C++ and Haskell are the kinds of languages that you could image a student might run into early in undergraduate CS, and if they're not prepared, they could easily find themself frustrated and struggling. We're taking preventative measures there.
+-->
 
 <h2>What We've Done</h2>
 
