@@ -48,7 +48,13 @@ The Space Empires game is incredibly complicated, which is in part why we chose 
 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
-<li>Players have a currency called Construction Points (CPs). Players receive CPs from their home colony on each turn, and they can use these CPs to buy more ships or "technology" for future ships. Technology supplements ships' stats, like allowing them to move more spaces at once or increasing their attack or defense during combat. Players also have to pay maintenance costs on their ships each round (if they don't pay the maintenance cost for a ship, they lose the ship).</li>
+<li>Players have a currency called Construction Points (CPs). Players receive CP income from their home colony on each turn, and they can use these CPs to buy more ships or "technology" for future ships. Technology supplements ships' stats, like allowing them to move more spaces at once or increasing their attack or defense during combat. Players also have to pay maintenance costs on their ships each round (if they don't pay the maintenance cost for a ship, they lose the ship).</li>
+</ul>
+
+There are many other details. We won't mention them all here, but here are a few examples to get the point across:
+<ul>
+<li>Players can build colonies at other planets and collect CPs and build ships at those colonies.</li>
+<li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
 </ul>
 
 <b>IN PROGRESS</b>
