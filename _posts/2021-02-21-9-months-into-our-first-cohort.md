@@ -49,11 +49,12 @@ The Space Empires game is incredibly complicated, which is in part why we chose 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
 <li>Players have a currency called Construction Points (CPs). Players receive CP income from their home colony on each turn, and they can use these CPs to buy more ships or "technology" for future ships. Technology supplements ships' stats, like allowing them to move more spaces at once or increasing their attack or defense during combat. Players also have to pay maintenance costs on their ships each round (if they don't pay the maintenance cost for a ship, they lose the ship).</li>
+<li>During combat, 
 </ul>
 
 There are many other details. We won't mention them all here, but here are a few examples to get the point across:
 <ul>
-<li>Players can build colonies at other planets and collect CPs and build ships at those colonies.</li>
+<li>Players can send colonyships to colonize other planets. Then, players can collect CPs and build ships at those colonies.</li>
 <li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
 </ul>
 
@@ -61,14 +62,6 @@ There are many other details. We won't mention them all here, but here are a few
 
 
 <!--
-There are 2 players on a  7×7  grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scouts and 3 Colonyships. The players also have 0 Construction Points (CPs) to begin with.
-Scouts and Colonyships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack class, attack strength, defense strength, attack technology level, defense technology level, health level. Regardless of the number needed to hit, a roll of 1 will always score a hit.
-On each turn, there 3 phases: economic, movement, and combat.
-Economic phase
-During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship.
-A player can also build ships with any CPs it has remaining, but the ships must be built at a planet with one or more Shipyards, and the sum of the hull sizes of the ships built at a planet cannot exceed the number of Shipyards at that planet.
-Movement
-The movement phase consists of 3 rounds of movement. During each round of movement, each player can move each ship by one square in any direction. If a Colonyship lands on a planet, then it can "colonize" the planet by turning into a Colony.
 Combat phase
 During the combat phase, a combat occurs at each square containing ships from both players. Each combat proceeds in rounds until only one player's ships remain at that spot.
 Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).
