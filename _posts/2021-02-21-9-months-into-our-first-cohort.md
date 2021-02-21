@@ -44,7 +44,44 @@ Here is a list of the main topics we've covered.
 
 <h2>Space Empires</h2>
 
+The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's given the students extensive practice planning, writing, and debugging code that's spread over multiple folders and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how it works:
+
 <b>IN PROGRESS</b>
+
+
+<!--
+There are 2 players on a  7×7  grid. Each player starts on their home Planet with 1 Colony and 4 Shipyards on that Planet, as well as a fleet of 3 Scouts and 3 Colonyships. The players also have 0 Construction Points (CPs) to begin with.
+Scouts and Colonyships each have several attributes: CP cost (i.e. the number of CPs needed to build the ship), hull size, attack class, attack strength, defense strength, attack technology level, defense technology level, health level. Regardless of the number needed to hit, a roll of 1 will always score a hit.
+On each turn, there 3 phases: economic, movement, and combat.
+Economic phase
+During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship.
+A player can also build ships with any CPs it has remaining, but the ships must be built at a planet with one or more Shipyards, and the sum of the hull sizes of the ships built at a planet cannot exceed the number of Shipyards at that planet.
+Movement
+The movement phase consists of 3 rounds of movement. During each round of movement, each player can move each ship by one square in any direction. If a Colonyship lands on a planet, then it can "colonize" the planet by turning into a Colony.
+Combat phase
+During the combat phase, a combat occurs at each square containing ships from both players. Each combat proceeds in rounds until only one player's ships remain at that spot.
+Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).
+Then, a "combat order" is constructed, in which ships are sorted by their attack class. The first ship in the combat order can attack any other ship. A 10-sided die is rolled, and if the attacker's (attack strength + attack technology) minus the defender's (defense strength + defense technology) is less than or equal to the die roll, then a hit is scored. Once a ship sustains a number of hits equal to its hull size, it is destroyed.
+The above procedure is repeated for each ship in the combat order. Then, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.
+-->
+
+<!--
+In order to build a ship, not only must you have enough CPs and shipyards, but you must also have the necessary shipsize technology.
+The combat order is constructed according to ships' tactics level: ships with tactics 0 are destroyed immediately, and ships with higher tactics fire first. If two ships have the same tactics, then the defending ship fires first (the defending ship is the ship that was the first to occupy the grid space).
+Previously, I said that the maintenance cost is equal to the hullsize. This is usually true, but there are some special types of ships (Decoy, Colonyship, Base) that don't have a maintenance cost.
+Ships have the following attributes:
+cp_cost - the number of CPs required to build the ship
+hullsize - the number of shipyards needed to build the ship (assuming shipyard technology level 1)
+shipsize_needed - the level of shipsize technology required to build the
+tactics - determines the combat order; ships with tactics 0 are destroyed immediately
+attack and defense - as usual
+maintenance - the number of CPs that must be paid during each Economic phase to retain the ship
+Here are the specifics regarding technology:
+attack, defense - determines the amount that gets added to a ship's attack or defense during battle
+shipsize - determines what kinds of ships can be built (provided you have enough CP and shipyards)
+movement - determines how many spaces each ship can move during each movement phase
+shipyard - determines how much "hull size" each shipyard can build
+-->
 
 <!--
 The game is really complicated (see here and here for just the very basic introductory summaries I gave to the 10th graders; see here for the complete rulebook), and we’ve had to peel back to sync up. It’s also overwhelming to design strategies, so we’re going one level at a time.
