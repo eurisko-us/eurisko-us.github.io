@@ -5,8 +5,6 @@ tags:
   - Eurisko Program
 ---
 
-<b>IN PROGRESS</b>
-
 Last June, <a class="body" href="https://eurisko-us.github.io/jason-roberts" target="_blank">Jason</a> asked me to work with his son Colby (who had just finished up his sophomore year of high school) and teach him some computer science. As I've come to expect with Jason, that initial idea grew quickly: he pulled in some of Colby's buddies who had the necessary mathematical background, we put together a summer computer science group that met Mon / Wed / Fri with ~10 hours of problem sets each week, the kids made progress faster than either of us could have possibly expected, and now <a class="body" href="http://www.theappacademy.us/index.html" target="_blank">App Academy</a> is funding an official high school class in which a second cohort has joined the ranks.
 
 It's been 9 months since our initial summer crew (<a class="body" href="https://eurisko-us.github.io/colby-roberts" target="_blank">Colby</a>, <a class="body" href="https://eurisko-us.github.io/riley-paddock" target="_blank">Riley</a>, <a class="body" href="https://eurisko-us.github.io/george-meza" target="_blank">George</a>, <a class="body" href="https://eurisko-us.github.io/david-gieselman" target="_blank">David</a>, and <a class="body" href="https://eurisko-us.github.io/elijah-tarr" target="_blank">Elijah</a>) first started meeting, and those 9 months, the students have gone from initially not knowing how to write helper functions, to building a machine learning library (among numerous other things) from scratch. This post is meant to summarize what we've done so far and what our plans are for the future.
