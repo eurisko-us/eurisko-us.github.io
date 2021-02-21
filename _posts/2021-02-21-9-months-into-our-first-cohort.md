@@ -49,25 +49,19 @@ The Space Empires game is incredibly complicated, which is in part why we chose 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>
 <li>Players have a currency called Construction Points (CPs). Players receive CP income from their home colony on each turn, and they can use these CPs to buy more ships or "technology" for future ships. Technology supplements ships' stats, like allowing them to move more spaces at once or increasing their attack or defense during combat. Players also have to pay maintenance costs on their ships each round (if they don't pay the maintenance cost for a ship, they lose the ship).</li>
-<li>During combat, 
+<li>After both players move their ships, combat occurs at any grid square that contains ships from both players. Combat proceeds in rounds until only one player's ships remain at that spot.</li>
+<li>During each round of combat, a "combat order" is constructed, in which ships are sorted by their attack class. The first ship in the combat order can attack any other ship. A 10-sided die is rolled, and if the attacker's (attack strength + attack technology) minus the defender's (defense strength + defense technology) is less than or equal to the die roll, then a hit is scored. Once a ship sustains a number of hits equal to its hull size, it is destroyed. This procedure is repeated for each ship in the combat order.</li>
+<li>At the end of a round of combat, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.</li>
 </ul>
 
 There are many other details. We won't mention them all here, but here are a few examples to get the point across:
 <ul>
 <li>Players can send colonyships to colonize other planets. Then, players can collect CPs and build ships at those colonies.</li>
 <li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
+<li>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</li>
 </ul>
 
 <b>IN PROGRESS</b>
-
-
-<!--
-Combat phase
-During the combat phase, a combat occurs at each square containing ships from both players. Each combat proceeds in rounds until only one player's ships remain at that spot.
-Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).
-Then, a "combat order" is constructed, in which ships are sorted by their attack class. The first ship in the combat order can attack any other ship. A 10-sided die is rolled, and if the attacker's (attack strength + attack technology) minus the defender's (defense strength + defense technology) is less than or equal to the die roll, then a hit is scored. Once a ship sustains a number of hits equal to its hull size, it is destroyed.
-The above procedure is repeated for each ship in the combat order. Then, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.
--->
 
 <!--
 In order to build a ship, not only must you have enough CPs and shipyards, but you must also have the necessary shipsize technology.
