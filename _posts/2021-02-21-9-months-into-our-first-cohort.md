@@ -38,7 +38,7 @@ We're also having the students learn SQL, since it is another type of language (
 
 <h2>What We've Done</h2>
 
-Here is a list of the main topics we've covered. 
+Here is a list of the main topics we've covered. We pulled the basics from MIT's <a class="body" href="https://mitpress.mit.edu/books/introduction-computation-and-programming-using-python-second-edition" target="_blank">Introduction to Computation and Programming Using Python</a>, and then added on a bunch of more advanced topics.
 
 <b>Algorithms and Data Structures.</b> The students have implemented linked lists, stacks, queues, sorting algorithms (selection sort, bubble sort, heapsort, mergesort, quicksort) and have used recursion in many different contexts. They've also implemented trees, undirected graphs, directed graphs, and weighted graphs, along with methods for computing depth-first / breadth-first traversals and distance / shortest path between two nodes (i.e. Dijkstra's algorithm). They've also implemented a simple version of backtracking to solve a <a class="body" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-44-1" target="_blank">magic square</a> and a mini sudoku puzzle. (Elijah wrote about the magic square problem <a class="body" href="https://eurisko-us.github.io/solving-magic-squares-using-backtracking/" target="_blank">here</a>.)
 
