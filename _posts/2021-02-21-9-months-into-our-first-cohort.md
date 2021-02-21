@@ -17,7 +17,7 @@ Lastly, before we dive in, here is a bit of important background information:
 
 <ul>
 <li>These students are currently high school juniors (16-17 years old).</li>
-<li>Whenever I say "implemented" or "built", I mean from scratch. The students aren't allowed to use external libraries. They have to build everything themselves. We've been working primarily in Python (though recently, we've also introduced C++ and Haskell).</li>
+<li>Whenever I say "implemented" or "built", I mean from scratch. The students aren't allowed to use external libraries. They have to build everything themselves. We've been working primarily in Python (though recently, we've also introduced C++ and Haskell). The students collaborate a lot, but every student writes every problem up on their own.</li>
 <li>The students are all mathematically advanced and have learned through linear algebra and multivariable calculus. Most are in <a class="body" href="https://www.mathacademy.us/" target="_blank">Math Academy</a>, which means that by 11th grade, they've learned much of differential equations, discrete math, and abstract algebra as well.</li>
 <li>Most of the students had very little programming experience prior to Eurisko. Something as simple as checking if a string was a palindrome was not trivial to them. They didn't know how to write classes and helper functions, how to work with dictionaries, or even how to systematically debug their code. They've come a long way in a short time!</li>
 </ul>
@@ -63,6 +63,8 @@ There are many other details. I won't mention them all here, but here are a few 
 <li>During combat, if two ships have the same attack class, then the defending ship attacks first. (The defending ship is the ship that was the first to occupy the grid square).</li>
 <li>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</li>
 </ul>
+
+In our initial approach to implementing the game, we tried to implement the main rules of the game along with a subset of the more interesting details. Along the way, we created a couple simple strategy players to test that our games gave the same results, and it seemed like things were going fine. But once the students built more complex custom strategies and tried to have the custom strategies battle against each other, we ran into tons of edge-cases and details that we hadn't otherwise considered, and everyone's game implementation was giving different results. After several weeks of attempting to reconcile the discrepancies in our games, we decided to peel back to a much simpler version of the game, reconcile any discrepancies on that simple version, and gradually work our way back up to the full implementation, continuing to reconcile discrepancies at each "level" along the way.
 
 <b>IN PROGRESS</b>
 
