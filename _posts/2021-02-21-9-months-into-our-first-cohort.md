@@ -60,19 +60,26 @@ There are many other details. I won't mention them all here, but here are a few 
 <ul>
 <li>Players can send colonyships to colonize other planets. Then, players can collect CPs and build ships at those colonies.</li>
 <li>The number of ships that a player can build on any given turn is limited by the player's number of shipyards at each colony.</li>
-<li>During combat, if two ships have the same attack class, then the defending ship attacks first. (The defending ship is the ship that was the first to occupy the grid square).</li>
+<li>During combat, if two ships have the same tactics level, then the defending ship attacks first. (The defending ship is the ship that was the first to occupy the grid square).</li>
 <li>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</li>
 </ul>
 
 In our initial approach to implementing the game, we tried to implement the main rules of the game along with a subset of the more interesting details. Along the way, we created a couple simple strategy players to test that our games gave the same results, and it seemed like things were going fine. But once the students built more complex custom strategies and tried to have the custom strategies battle against each other, we ran into tons of edge-cases and details that we hadn't otherwise considered, and everyone's game implementation was giving different results. After several weeks of attempting to reconcile the discrepancies in our games, we decided to peel back to a much simpler version of the game, reconcile any discrepancies on that simple version, and gradually work our way back up to the full implementation, continuing to reconcile discrepancies at each "level" along the way.
 
+<b>Level 1.</b> We started off with the simplest game imaginable: each player has 3 scout units and that's it. There was no economic phase, no CP, no technology. Level 1 consisted of each player moving their 3 units and engaging in combat, and that's it. We created several strategy players, matched them up against each other, and engaged in pair coding sessions until all of the discrepancies in the outcomes were resolved.
+
+<b>Level 2.</b> We extended level 1 by introducing a single economic phase at the very beginning of the game, having players start with 3 shipyards in addition to 3 scouts (these are the normal starting conditions of the game), and allowing players to buy technology and/or more scouts during the single economic phase. This way, players would get some CP income from their home colony and have to make a choice between spending it all on a couple basic scouts, or buying just one scout with upgraded technology. Again, we created several basic strategy players and resolved any discrepancies in the outcomes of matchups.
+
+Level 2 was also where we started competing with custom strategies. It turned out that the best strategy was to buy as many scouts as possible, wait for the opponent to attack, and then send all of one's scouts on a direct path to attack the opponent's home base once the opponent's scouts had all been destroyed. We'll call this the "camper" strategy because its units "camp" at the home colony and wait for the opponent to attack first.
+
+The camper strategy exploited the fact that, when two units of the same tactics level are involved in combat, the defending ship gets to attack first. By waiting for the opponent to travel to the camper's home colony, the camper was able to attack the opponent first. Additionally, because shipyards at a player's home colony can engage in combat, the camper not only attacked first, but also had twice as many ships in the initial combat. These advantages gave the camper a much higher probability of winning the initial combat and destroying the opponent's scouts, which in turn gave the camper a much higher probability of winning the second combat once it sent its scouts to the opponent's home base.
+
+<b>Level 3.</b> We're currently implementing level 3. Level 3 extends level 2 by introducing
+
+
 <b>IN PROGRESS</b>
 
 <!--
-The game is really complicated (see here and here for just the very basic introductory summaries I gave to the 10th graders; see here for the complete rulebook), and we’ve had to peel back to sync up. It’s also overwhelming to design strategies, so we’re going one level at a time.
-Built the games, we’ve had to peel back a bit to get our games to match up. Now we’re bringing back the features one “level” at a time.
-Level 1 was asdf. Berserker is the best.
-Level 2 was asdf. Best is a “holdback berserker” that waits for opponent to attack, and then once opponent’s scouts are destroyed, rushes at the enemy.
 Level 3: repeated economic phases. The optimal strategy is likely still to wait for opponent to attack and then rush at them, but it’s an open question about what the best thing to do is while you’re waiting, and when you should rush the opponent.
 If you’re only waiting a short time, it’s best to ignore technology and just buy as many scouts as possible. But if you’re waiting a while it’s better to have bought technology first so that the scouts you build have that technology.
 If you know your opponent is waiting for all your scouts to die before rushing, then you can exploit that by repeatedly building an army of scouts and sending all but one of them to your opponent. Then you will be guaranteed to win against your opponent. So you can’t just wait until the opponent has no scouts. There needs to be a better "trigger" for rushing.
@@ -84,24 +91,24 @@ So we’re now at the stage where it’s an interesting problem to design the be
 Here are our plans for the rest of the semester:
 
 <ul>
-<li><i>Machine Learning</i> - the students will continue implementing progressively more complex neural networks, more types of ensemble methods (including gradient boosting), and they will use their models for prediction tasks on larger real-world datasets.</li>
+<li><i>Machine Learning</i> - we will continue implementing progressively more complex neural networks, more types of ensemble methods (including gradient boosting), and we will use their models for prediction tasks on larger real-world datasets.</li>
 
-<li><i>Data Structures and Algorithms</i> - the students will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), genetic algorithms.</li>
+<li><i>Data Structures and Algorithms</i> - we will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), and genetic algorithms.</li>
 
-<li><i>Programming Languages</i> - the students will build their own string and vector classes in C++ and continue learning more advanced C++ and Haskell. They will also take the algorithms and models they had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, they'll write their own SQL parser in their DataFrame class.</li>
+<li><i>Programming Languages</i> - we will build their own string and vector classes in C++ and continue learning more advanced C++ and Haskell. We'll also take the algorithms and models we had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, we'll write our own SQL parser in their DataFrame class.</li>
 
-<li><i>Space Empires</i> - the students will continue building up the game level by level and will continue building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that they have built. Once the Space Empires games are fully implemented, the students will put them on a server and have the agents communicate with the game using socket connections.</li>
+<li><i>Space Empires</i> - we will continue building up the game level by level and will continue building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that they have built. Once the Space Empires games are fully implemented, the we will put them on a server and have the agents communicate with the game using socket connections.</li>
 
-<li><i>Writing</i> - the students will write another round of blog posts.</li>
+<li><i>Writing</i> - we will write another round of blog posts.</li>
 </ul>
 
-The working title for next year's class (12th grade) is "Intelligent Systems." In that class, the students will aim to
+The working title for next year's class (12th grade) is "Intelligent Systems." In that class, we will
 
 <ul>
-<li>continue broadening their knowledge of machine learning (i.e. unsupervised learning and reinforcement learning),</li>
-<li>continue re-implementing their models and algorithms in C++ to speed them up,</li>
+<li>continue broadening our knowledge of machine learning (i.e. unsupervised learning and reinforcement learning),</li>
+<li>continue re-implementing our models and algorithms in C++ to speed them up,</li>
 <li>implement several small-scale games (such as tic-tac-toe, snake, and checkers) and train intelligent agents to play them,</li>
-<li>continue improving their intelligent agents in the game of Space Empires, and create an app for playing Space Empires.</li>
+<li>continue improving our intelligent agents in the game of Space Empires, and create an app for playing Space Empires.</li>
 </ul>
 
 
