@@ -22,8 +22,8 @@ author_profile: false
   </tr>
    <tr>
     <td width="33%"><center>Quiz 2-2</center></td>
-    <td width="33%"><center>Thursday, February 11</center>reviewed in class, 2/17</td>
-    <td width="33%"><center></center></td>
+    <td width="33%"><center>Thursday, February 11</center></td>
+    <td width="33%"><center>reviewed in class, 2/17</center></td>
   </tr>
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="93">
+<font size="3em"><ol reversed start="94">
+    <li><b>Friday, February 19</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> (ML is second half) - Game Level 2 Reconciliations, Logistic Regressor Neural Net via Activation Functions
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-94-1">Primary: Game Level 2 Reconciliations, Game Level 3 Strategy, Logistic Regressor Neural Net via Activation Functions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-94-2">Supplementary: HashTable, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-94-3">QUIZ FRIDAY / Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, February 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (ML is second half) - intro to hash tables, game levels 2/3
         <br>Assignment Problems:
