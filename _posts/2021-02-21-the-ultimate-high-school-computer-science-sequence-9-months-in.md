@@ -1,5 +1,5 @@
 ---
-title: "The Ultimate High School Computer Science Course: 9 Months In"
+title: "The Ultimate High School Computer Science Sequence: 9 Months In"
 author: "Justin Skycak"
 reviewers:
   - "Jason Roberts"
