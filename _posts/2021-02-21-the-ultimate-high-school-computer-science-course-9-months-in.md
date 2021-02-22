@@ -1,5 +1,5 @@
 ---
-title: "The Ultimate High School Computer Science Course: What We're Doing, Why We're Doing It, and Where We're Headed"
+title: "The Ultimate High School Computer Science Course: 9 Months In"
 author: "Justin Skycak"
 reviewers:
   - "Jason Roberts"
