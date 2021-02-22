@@ -30,7 +30,7 @@ We want to teach students the art and craft of software development, while simul
 
 <ul>
   <li><i>The art and craft of software development.</i> We want the students to be good enough to do an internship at a tech company and be productive (as opposed to burdensome). This means they need to know how to write and debug code given high-level requirements, test their code effectively, and use source control like GitHub.</li>
-  <li><i>Leveraging mathematics.</i> We're interested in teaching the students a lof of machine learning because frankly, it's super cool, and it builds on their strengths. We want to pull the powerful and interesting tools of mathematics into practical use-cases in the context of modeling and prediction (as opposed to just CRUD apps).</li>
+  <li><i>Leveraging mathematics.</i> We're interested in teaching the students a lof of machine learning because frankly, it's super cool, and it builds on their strengths. We want to pull the powerful and interesting tools of mathematics into practical use-cases in the context of modeling and prediction (as opposed to just building CRUD apps).</li>
    <li><i>Formal computer science.</i> In addition to becoming competent software developers, we wanted to teach the students undergraduate-level computer science (data structures / algorithms, programming languages, etc) so that no matter how competitive or rigorous the undergraduate curriculum they encounter, they'll be overprepared and find it easygoing (as opposed to overwhelming/intimidating).</li>
 </ul>
 
