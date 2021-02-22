@@ -1,5 +1,5 @@
 ---
-title: "The Ultimate High School Computer Science Sequence: 9 Months In (DRAFT)"
+title: "The Ultimate High School Computer Science Sequence: 9 Months In"
 author: "Justin Skycak"
 reviewers:
   - "Jason Roberts"
@@ -7,11 +7,9 @@ tags:
   - Eurisko Program
 ---
 
-<font color="red"><b>Note that this post is still in draft stage and will be updated in the future. It will be finalized soon.</b></font><br>
-
 Last June, <a class="body" href="https://eurisko-us.github.io/jason-roberts" target="_blank">Jason Roberts</a>, the founder of <a class="body" href="https://www.mathacademy.us/" target="_blank">Math Academy</a> and one of the original developers at Uber's real-time technology, most widely known for coining the term <a class="body" href="https://www.codusoperandi.com/posts/increasing-your-luck-surface-area" target="_blank">"luck surface area"</a>, asked me teach his son Colby some computer science. Colby was just finishing up his sophomore year in <a class="body" href="http://www.theappacademy.us/index.html" target="_blank">App Academy</a>, but Jason felt that the curriculum was not geared towards students who had a strong aptitude in the subject, and that Colby could and should be learning a lot more.
 
-As I've come to expect with Jason, that initial idea grew quickly: he pulled in some of Colby's buddies who had the necessary mathematical background, and we put together a summer computer science group that met Mon / Wed / Fri with ~10 hours of problem sets each week. Long story short, the kids made progress faster than either of us could have possibly expected, and now App Academy is funding an official high school class in which a second cohort has joined the ranks.
+As I've come to expect with Jason, that initial idea grew quickly: he pulled in some of Colby's buddies who had the necessary mathematical background, and we put together a summer computer science group that met Mon / Wed / Fri with ~10 hours of problem sets each week. Long story short (which I'll elaborate on in a later post), the kids made progress faster than either of us could have possibly expected, and now App Academy is funding an official high school class in which a second cohort has joined the ranks.
 
 It's been 9 months since our initial summer crew (<a class="body" href="https://eurisko-us.github.io/colby-roberts" target="_blank">Colby</a>, <a class="body" href="https://eurisko-us.github.io/riley-paddock" target="_blank">Riley</a>, <a class="body" href="https://eurisko-us.github.io/george-meza" target="_blank">George</a>, <a class="body" href="https://eurisko-us.github.io/david-gieselman" target="_blank">David</a>, and <a class="body" href="https://eurisko-us.github.io/elijah-tarr" target="_blank">Elijah</a>) first started meeting, and in those 9 months, the students have gone from initially not knowing how to write helper functions, to building a machine learning library (and numerous other things) from scratch. This post is meant to summarize what we've done so far and what our plans are for the future.
 
