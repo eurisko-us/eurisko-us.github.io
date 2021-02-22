@@ -22,8 +22,8 @@ author_profile: false
   </tr>
    <tr>
     <td width="33%"><center>Quiz 2-2</center></td>
-    <td width="33%"><center>Thursday, February 11</center>reviewed in class, 2/17</td>
-    <td width="33%"><center></center></td>
+    <td width="33%"><center>Thursday, February 11</center></td>
+    <td width="33%"><center></center>reviewed in class, 2/17</td>
   </tr>
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
@@ -75,12 +75,21 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="60">
+<font size="3em"><ol reversed start="61">
+    <li><b>Monday, February 22</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> (C&M is first half) - Shortest Path in Weighted Graph Using Dijkstra's Algorithm
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-1">Primary: Shortest Path in Weighted Graph using Dijkstra's Algorithm, Logistic Regression</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-2">Supplementary: Intro to Hash Tables, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-3">QUIZ FRIDAY / Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, February 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (C&M is first half) - Dijkstra's Algorithm, Intro to Hash Tables
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-1">Primary: Game Level 2 Reconciliations, Game Level 3 Implementation, Logistic Regressor Neural Net via Activation Functions</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-1">Primary: Dijkstra's Algorithm</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-2">Supplementary: Intro to Hash Tables, Shell, SQL</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-60-3">Commit / Review</a></li>
         </ul></font>
