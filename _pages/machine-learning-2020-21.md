@@ -76,7 +76,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="94">
     <li><b>Friday, February 19</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> (ML is second half) - Game Level 2 Reconciliations, Logistic Regressor Neural Net via Activation Functions
+        <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (ML is second half) - Game Level 2 Reconciliations, Logistic Regressor Neural Net via Activation Functions
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-94-1">Primary: Game Level 2 Reconciliations, Game Level 3 Strategy, Logistic Regressor Neural Net via Activation Functions</a></li>
