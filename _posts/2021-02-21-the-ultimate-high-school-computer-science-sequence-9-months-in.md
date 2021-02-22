@@ -56,7 +56,7 @@ Here is a list of the main topics we've covered. We pulled the basics from MIT's
 
 <b>Object-Oriented Programming.</b> In addition to implementing numerous classes in the context of algorithms / data structures and machine learning, the students have been implementing the Space Empires board game along with intelligent agents that battle against each other. Space Empires is incredibly rich and complex and will be discussed extensively later in this post.
 
-<b>Programming Languages.</b> The students have recently started learning C++, Haskell, Shell, and SQL. So far, the exercises they've completed have been simple HackerRank-style problems, but we're gradually scaling that up as time goes on.
+<b>Programming Languages.</b> The students have recently started learning C++, Haskell, Shell, and SQL. So far, the exercises they've completed have been simple HackerRank-style problems, but we're gradually scaling that up over time.
 
 <b>Writing.</b> The students each wrote a blog post last semester (the posts are linked in the categories above). I've started submitting them on Hacker News, and Elijah's post made it to the front page last weekend (<a class="body" href="https://news.ycombinator.com/item?id=26126652" target="_blank">link</a>). Everyone else's posts will be submitted in the coming weekends.
 
