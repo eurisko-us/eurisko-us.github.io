@@ -7,7 +7,7 @@ tags:
   - Eurisko Program
 ---
 
-<font color="red"><b>Note that this post is still in draft stage and may be updated. It will be finalized soon.</b></font><br>
+<font color="red"><b>Note that this post is still in draft stage and will be updated in the future. It will be finalized soon.</b></font><br>
 
 Last June, <a class="body" href="https://eurisko-us.github.io/jason-roberts" target="_blank">Jason Roberts</a>, the founder of <a class="body" href="https://www.mathacademy.us/" target="_blank">Math Academy</a> and one of the original developers at Uber's real-time technology, most widely known for coining the term <a class="body" href="https://www.codusoperandi.com/posts/increasing-your-luck-surface-area" target="_blank">"luck surface area"</a>, asked me teach his son Colby some computer science. Colby was just finishing up his sophomore year in <a class="body" href="http://www.theappacademy.us/index.html" target="_blank">App Academy</a>, but Jason felt that the curriculum was not geared towards students who had a strong aptitude in the subject, and that he could and should be learning a lot more.
 
