@@ -77,7 +77,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="61">
     <li><b>Monday, February 22</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> (C&M is first half) - Shortest Path in Weighted Graph Using Dijkstra's Algorithm
+        <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (C&M is first half) - Shortest Path in Weighted Graph Using Dijkstra's Algorithm
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-1">Primary: Shortest Path in Weighted Graph using Dijkstra's Algorithm, Logistic Regression</a></li>
