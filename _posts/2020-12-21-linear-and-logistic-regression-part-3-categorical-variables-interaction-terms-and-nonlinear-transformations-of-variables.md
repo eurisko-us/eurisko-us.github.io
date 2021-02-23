@@ -286,7 +286,7 @@ When either beef or peanut butter is $0,$ the interaction term will be $0$ and w
 
 <h2>Fitting Non-Linear Data with a Linear Regression</h2>
 
-An exciting property of linear regressions is that many non-linear models (such as polynomials) can be fit using linear regression. The trick is to use linear regression to solve for the coefficient of a \emph{function} of $x$ like seen here:
+An exciting property of linear regressions is that many non-linear models (such as polynomials) can be fit using linear regression. The trick is to use linear regression to solve for the coefficient of a <i>function</i> of $x$ like seen here:
 
 <center>
 $\begin{align*}
@@ -299,7 +299,7 @@ These $f_n(x)$ can be any function of x such as $x^2,x^3,...x^n$ which is how we
 
 <center>
 $\begin{align*}
-y = \beta_1\sin(x) + \beta_2\ln(x) + \beta_3\sqrt{x}
+y = \beta_1\sin(x) + \beta_2\ln(x) + \beta_3\sqrt{x}.
   \end{align*}$
 </center>
 <br>
