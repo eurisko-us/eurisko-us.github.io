@@ -14270,8 +14270,38 @@ d(y_predicted)/d(weights[(1,2)]
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-94-2">Problem 94-2<a class="anchor-link" href="#Problem-94-2">&#182;</a></h1><h3 id="HashTable">HashTable<a class="anchor-link" href="#HashTable">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>HashTable -- pass in hash function and force it to modulo the number of buckets</p>
+<h1 id="Problem-94-2">Problem 94-2<a class="anchor-link" href="#Problem-94-2">&#182;</a></h1><h3 id="HashTable">HashTable<a class="anchor-link" href="#HashTable">&#182;</a></h3><p>Write a class <code>HashTable</code> that generalizes the hash table you previously wrote. This class should store an array of buckets, and the hash function should add up the alphabet indices of the input string and mod the result by the number of buckets.</p>
+
+<pre><code>&gt;&gt;&gt; ht = HashTable(num_buckets = 3)
+&gt;&gt;&gt; ht.buckets
+[[], [], []]
+&gt;&gt;&gt; ht.hash_function('cabbage')
+2    (because 2+0+1+1+0+6+4 mod 3 = 14 mod 3 = 2)
+
+&gt;&gt;&gt; ht.insert('cabbage', 5)
+&gt;&gt;&gt; ht.buckets
+[[], [], [('cabbage',5)]]
+
+&gt;&gt;&gt; ht.insert('cab', 20)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5)]]
+
+&gt;&gt;&gt; ht.insert('c', 17)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5), ('c',17)]]
+
+&gt;&gt;&gt; ht.insert('ac', 21)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5), ('c',17), ('ac', 21)]]
+
+&gt;&gt;&gt; ht.find('cabbage')
+5
+&gt;&gt;&gt; ht.find('cab')
+20
+&gt;&gt;&gt; ht.find('c')
+17
+&gt;&gt;&gt; ht.find('ac')
+21</code></pre>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>This is a really quick problem, mostly just getting you to learn the ropes of the process we'll be using for doing SQL problems going forward (now that we're done with SQL Zoo).</p>
 <p>On <a href="https://sqltest.net/">https://sqltest.net/</a>, create table with the following script:</p>
 
