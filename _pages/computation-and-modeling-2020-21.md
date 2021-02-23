@@ -251,14 +251,14 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/497723262">Class Recording</a> (C&M is first half) - 42-2, roulette probability, Euler estimator plotting, code review
         <br>Student submissions (probability section of Assignment 42) -
         <font size="3em">
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-42">Nathan A</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-42">Maia</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-42">Justin</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-42">Cayden</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-42">Anton</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-42">Nathan R</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-42">William</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-42">Charlie</a>
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-42.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-42.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-42.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-42.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-42.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-42.pdf">Nathan R</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-42.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-42.pdf">Charlie</a>
         </font>
         <br>Assignment Problems:
         <font size="2em"><ul>
