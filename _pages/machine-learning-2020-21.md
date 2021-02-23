@@ -545,6 +545,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-47-1">Bayesian Inference with Joint Distributions</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-47-2">CustomStrategyPlayer - Movement Methods</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-47.pdf">Riley</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-47.pdf">Colby</a>,
+        Elijah,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-47.pdf">George</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-47.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, September 25</b>
