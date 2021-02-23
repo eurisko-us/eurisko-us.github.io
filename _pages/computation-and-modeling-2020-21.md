@@ -495,6 +495,7 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-19-1">Newton-Rhapson Method for a General Function via Central Difference Approximation</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-19-2">Introduction to Expected Value and Variance</a></li>
+        </ul></font>
         <br>Student submissions for LaTeX portion - 
         <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-19.pdf">Anton</a>,
@@ -505,7 +506,6 @@ author_profile: false
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-19.pdf">Nathan A</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-19.pdf">William</a>,
         </font>
-        </ul></font>
     </li>
     <br>
     <li><b>Friday, October 9</b>
