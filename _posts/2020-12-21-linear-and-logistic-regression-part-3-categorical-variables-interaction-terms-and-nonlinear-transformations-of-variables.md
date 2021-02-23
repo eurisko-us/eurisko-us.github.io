@@ -290,12 +290,12 @@ An exciting property of linear regressions is that many non-linear models (such 
 
 <center>
 $\begin{align*}
-y =\beta_0 + \beta_1f_1(x_1) + \beta_2f_2(x_2)+...+\beta_nf_n(x_n) + \beta_kf_k(x_k)
+y =\beta_0 + \beta_1f_1(x_1) + \beta_2f_2(x_2)+ \ldots +\beta_nf_n(x_n) + \beta_kf_k(x_k)
 \end{align*}$
 </center>
 <br>
 
-These $f_n(x)$ can be any function of x such as $x^2,x^3,...x^n$ which is how we fit polynomials. We can even fit more complex functions like 
+These $f_n(x)$ can be any function of x such as $x^2,x^3, \ldots, x^n$ which is how we fit polynomials. We can even fit more complex functions like 
 
 <center>
 $\begin{align*}
