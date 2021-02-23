@@ -28,7 +28,7 @@ author_profile: false
   <tr>
     <td width="33%"><center>Quiz 2-1</center></td>
     <td width="33%"><center>Friday, January 29</center></td>
-    <td width="33%"><center></center>reviewed in class, 2/1</td>
+    <td width="33%"><center>reviewed in class, 2/1</center></td>
   </tr>
   <tr>
     <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Final-1" target="_blank">Final 1</a></center></td>
