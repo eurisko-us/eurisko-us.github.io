@@ -526,6 +526,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-2">Intro to Bayesian Inference with Non-Uniform Prior</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-49-3">Catch Up on EulerEstimator / Predator-Prey</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        Riley (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-49-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-49-2.pdf">2</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-49.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-49.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-49.pdf">George</a>,
+        David (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-49-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-49-2.pdf">2</a>)
+        </font>
     </li>
     <br>
     <li><b>Wednesday, September 30</b>
@@ -549,7 +557,7 @@ author_profile: false
         <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-47.pdf">Riley</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-47.pdf">Colby</a>,
-        Elijah,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-47.pdf">Elijah</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-47.pdf">George</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-47.pdf">David</a>
         </font>
