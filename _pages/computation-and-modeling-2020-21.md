@@ -75,13 +75,22 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="61">
+<font size="3em"><ol reversed start="62">
+    <li><b>Wednesday, February 24</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (C&M is first half) - Intro to Overfitting, Bisection Search
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-62-1">Primary: Intro to Overfitting, Bisection Search</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-62-2">Supplementary: C++, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-62-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, February 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (C&M is first half) - Shortest Path in Weighted Graph Using Dijkstra's Algorithm
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-1">Primary: Shortest Path in Weighted Graph using Dijkstra's Algorithm, Logistic Regression</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-2">Supplementary: Intro to Hash Tables, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-2">Supplementary: HashTable, SQL</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-61-3">QUIZ FRIDAY / Commit / Review</a></li>
         </ul></font>
     </li>
