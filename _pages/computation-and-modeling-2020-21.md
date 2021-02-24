@@ -487,6 +487,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-20-1">Expectation and Variance of an Exponential Distribution</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-20-2">LinkedList: Delete, Insert</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-20.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-20.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-20.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-20.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-20.pdf">Maia</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-20.pdf">Nathan A</a>,-->
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-20.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-20.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Monday, October 12</b>
