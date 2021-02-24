@@ -14072,9 +14072,9 @@ int main()
 <ul>
 <li>Colonization, with 2 planets in middle of board but on opposite sides</li>
 </ul>
-<p>Game level 5</p>
+<p>Future:</p>
 <ul>
-<li>other ship types, miners</li>
+<li>other ship types, miners, scuttling, screening</li>
 </ul>
 
 </div>
@@ -14083,7 +14083,96 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-95-1">Problem 95-1<a class="anchor-link" href="#Problem-95-1">&#182;</a></h1><p>Some math exercises with neural nets -- computing a particular gradient given some architecture and a given input</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Game level 3 matchups</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-1">Problem 95-1<a class="anchor-link" href="#Problem-95-1">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
+<ul>
+<li><p>$n_k$ - the $k$th neuron</p>
+</li>
+<li><p>$a_k$ - the activity of the $k$th neuron</p>
+</li>
+<li><p>$i_k$ - the input to the $k$th neuron.</p>
+</li>
+<li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
+</li>
+<li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
+</li>
+<li><p>$i_k$ is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
+</li>
+<li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
+</li>
+<li><p>$w_{k \ell} \to w_{k \ell} - \alpha \dfrac{\textrm dE}{\textrm dw_{k\ell}}$ is the gradient descent update, where $\alpha$ is the learning rate</p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>For a simple network
+$$
+\begin{matrix} &amp; &amp; n_2 \\ &amp; \nearrow &amp; &amp; \nwarrow \\ n_0 &amp; &amp; &amp; &amp; n_1,\end{matrix}
+$$
+we have:</p>
+$$\begin{align*}
+y_\textrm{predicted} &amp;= a_2 \\
+&amp;= f_2(i_2) \\
+&amp;= f_2(w_{02} a_0 + w_{12} a_1) \\
+&amp;= f_2(w_{02} f_0(i_0) + w_{12} f_1(i_1) ) \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{02}} &amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (y_\textrm{predicted} - y_\textrm{actual})^2 \right] \\
+&amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (a_2 - y_\textrm{actual})^2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d}{\textrm dw_{02}} \left[ a_2 - y_\textrm{actual} \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ a_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ f_2(i_2) \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ i_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_0 \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{12}} &amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_1
+\end{align*}$$<p><strong>THE ACTUAL PROBLEM STATEMENT</strong></p>
+<p>Compute $\dfrac{\textrm dE}{\textrm dw_{23}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix} n_3 \\ \uparrow \\ n_2 \\ \uparrow \\ n_1 \\ \uparrow \\ n_0 \end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 6 \\ f_1'(i_1) = 7 \\ f_2'(i_2) = 8 \\ f_9'(i_9) = 9 \end{matrix} \qquad \begin{matrix} w_{01} = 10 \\ w_{12} = 11 \\ w_{23} = 12 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{23}} = 288, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 20736, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 1064448.
+$$</p>
+<p><strong>Note:</strong> On the next couple assignments, we'll do the same exercise with progressively more advanced networks. This problem is relatively simple so that you have a chance to get used to working with the notation.</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Finish creating your game level 3 strategy. (See problem 93-1 for a description of game level 3, which you should have implemented by now.) Then, implement the following strategy and run it against your level 3 strategy:</p>
+<ul>
+<li><code>NumbersBerserkerLevel3</code> - always buys as many scouts as possible, and each time it buys a scout, immediately sends it on a direct route to attack the opponent.</li>
+</ul>
+<p>Post on #machine-learning with your strategy's stats against these strategies:</p>
+
+<pre><code>MyStrategy vs NumbersBerserker
+- MyStrategy win rate: __%
+- MyStrategy loss rate: __%
+- draw rate: __%</code></pre>
+<p>On the next assignment, we'll have the official matchups.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-2">Problem 95-2<a class="anchor-link" href="#Problem-95-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-3">Problem 95-3<a class="anchor-link" href="#Problem-95-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
 
 </div>
 </div>

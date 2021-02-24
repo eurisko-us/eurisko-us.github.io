@@ -13212,15 +13212,40 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>For this problem, make a file <code>machine-learning/analysis/rocket_takeoff_regression.py</code> and put your code there.</strong></p>
-<p>Recall the following dataset, which represents the distance between a rocket and Earth's surface, as the rocket takes off. The data points are given in the form <code>(time, distance)</code>.</p>
+<h1 id="Problem-62-1">Problem 62-1<a class="anchor-link" href="#Problem-62-1">&#182;</a></h1><p>Put your answers to the following problems in an Overleaf document.</p>
+<h3 id="Introduction-to-Overfitting">Introduction to Overfitting<a class="anchor-link" href="#Introduction-to-Overfitting">&#182;</a></h3><p><strong>Location:</strong> <code>machine-learning/analysis/rocket_takeoff_regression.py</code></p>
+<p>Consider the following dataset, which represents the distance between a rocket and Earth's surface, as the rocket takes off. The data points are given in the form <code>(time, distance)</code>.</p>
 
 <pre><code>data = [(1, 3.1), (2, 10.17), (3, 20.93), (4, 38.71), (5, 60.91), (6, 98.87), (7, 113.92), (8, 146.95), (9, 190.09), (10, 232.65)]</code></pre>
-<p>a) Using your <code>PolynomialRegression</code> class, fit a quadratic to the data:</p>
-$$y = \beta_0 + \beta_1 t + \beta_2 t^2$$<p>According to the quadratic, what is the predicted position of the rocket after 200 seconds? <strong>Make <code>rocket_takeoff_regression.py</code> print out your answer.</strong></p>
-<p>b) Your friend claims that a cubic model will better fit the data. So, using your <code>PolynomialRegression</code> class, fit a cubic to the data:</p>
-$$y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3$$<p>According to the cubic, what is the predicted position of the rocket after 200 seconds? <strong>Make <code>rocket_takeoff_regression.py</code> print out your answer.</strong></p>
-<p>c) Which model is better, the quadratic or the cubic? Justify your answer. <strong>Write your answer as a comment in <code>rocket_takeoff_regression.py</code></strong></p>
+<p><strong>a.</strong> Using your <code>PolynomialRegression</code> class, fit a quadratic to the data:</p>
+$$y = \beta_0 + \beta_1 t + \beta_2 t^2$$<p>According to the quadratic, what is the predicted position of the rocket after 5 seconds? 10 seconds? 200 seconds?</p>
+<p><strong>b.</strong> Your friend claims that a cubic model will better fit the data. So, using your <code>PolynomialRegression</code> class, fit a cubic to the data:</p>
+$$y = \beta_0 + \beta_1 x + \beta_2 x^2 + \beta_3 x^3$$<p>According to the cubic, what is the predicted position of the rocket after 5 seconds? 10 seconds? 200 seconds?</p>
+<p><strong>c.</strong> Plot the quadratic model along with the cubic model in the same graph. You can do this entirely in latex, or you can do it in Python and then download the graph and insert it into your document as an image. Either way is fine. <em>Be sure to include the data points in your graph, and make the quadratic and cubic different colors.</em></p>
+<p><strong>d.</strong> Which model is better, the quadratic or the cubic? Justify your answer.</p>
+<h3 id="Bisection-Search">Bisection Search<a class="anchor-link" href="#Bisection-Search">&#182;</a></h3><p><strong>Location:</strong> <code>assignment-problems/bisection_search.py</code></p>
+<p><strong>a.</strong> Write a function <code>bisection_search(entry, sorted_list)</code> that finds an index of <code>entry</code> in the <code>sorted_list</code>. You should do this by repeatedly checking the midpoint of the list and then repeating the same procedure on the upper half or the lower half as appropriate.</p>
+<p>Assert that your function passes the following test:</p>
+
+<pre><code>&gt;&gt;&gt; bisection_search(14, [2, 3, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16])
+9</code></pre>
+<p><strong>b.</strong> Suppose you have a sorted list of 16 elements. What is the greatest number of iterations of bisection search that would be needed to find the index of any particular element in the list? Justify your answer.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-62-2">Problem 62-2<a class="anchor-link" href="#Problem-62-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-62-3">Problem 62-3<a class="anchor-link" href="#Problem-62-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
 
 </div>
 </div>
