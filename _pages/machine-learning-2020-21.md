@@ -74,8 +74,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="94">
-    <li><b>Friday, February 19</b>
+<font size="3em"><ol reversed start="95">
+    <li><b>Wednesday, February 24</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (ML is second half) - Using Math Notation with Neural Nets
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-95-1">Primary: Neural Net, Game Level 3 Strategy + Test Against NumbersBerserker</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-95-2">Supplementary: C++, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-95-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <li><b>Monday, February 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (ML is second half) - Game Level 2 Reconciliations, Logistic Regressor Neural Net via Activation Functions
         <br>Assignment Problems:
         <font size="2em"><ul>
