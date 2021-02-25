@@ -14164,7 +14164,74 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-95-2">Problem 95-2<a class="anchor-link" href="#Problem-95-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-95-2">Problem 95-2<a class="anchor-link" href="#Problem-95-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Write a function <code>calcSum(m,n)</code> that computes the sum of the matrix product of an ascending $m \times n$ and a descending $n \times m$ array, where the array entries are taken from $\{ 1, 2, ..., mn \}.$ For example, if $m=2$ and $n=3,$ then</p>
+$$\begin{align*}
+\textrm{ascending} &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \\[3pt]
+\textrm{descending} &amp;= \begin{bmatrix} 6 &amp; 5 \\ 4 &amp; 3 \\ 2 &amp; 1 \end{bmatrix} \\[3pt]
+(\textrm{ascending})(\textrm{descending}) &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \begin{bmatrix} 6 &amp; 5 \\ 4 &amp; 3 \\ 2 &amp; 1 \end{bmatrix} \\[3pt]
+&amp;= \begin{bmatrix} 20 &amp; 14 \\ 56 &amp; 41 \end{bmatrix} \\[3pt]
+\textrm{sum} \Big( (\textrm{ascending})(\textrm{descending}) \Big) &amp;= 131
+\end{align*}$$
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+
+// define calcSum
+
+int main() {
+    // write an assert for the test case m=2, n=3
+}</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create the following tables:</p>
+
+<pre><code>CREATE TABLE age ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+lastname VARCHAR(30), 
+age VARCHAR(30)
+); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('1', 'Walton', '12'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('2', 'Sanchez', '13'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('3', 'Ng', '14'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('4', 'Smith', '15'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('5', 'Shenko', '16'); 
+
+CREATE TABLE name ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+lastname VARCHAR(30)
+); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('1', 'Franklin', 'Walton'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('2', 'Sylvia', 'Sanchez'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('3', 'Harry', 'Ng'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('4', 'Ishmael', 'Smith'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('5', 'Kinga', 'Shenko');</code></pre>
+<p>Then, write a query to get the full names of the people, in alphabetical order of last name. The output should look like this:</p>
+
+<pre><code>fullname
+Harry Ng
+Sylvia Sanchez
+Kinga Shenko
+Ishmael Smith
+Franklin Walton</code></pre>
+<p><strong>Tip:</strong> You'll need to use string concatenation and a join.</p>
 
 </div>
 </div>
@@ -14172,7 +14239,23 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-95-3">Problem 95-3<a class="anchor-link" href="#Problem-95-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-95-3">Problem 95-3<a class="anchor-link" href="#Problem-95-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Overleaf: _____
+Repl.it link to C++ file: _____
+sqltest.net link: _____
+
+assignment-problems commit: _____
+space-empires commit: _____
+
+Created issue: _____</code></pre>
 
 </div>
 </div>
