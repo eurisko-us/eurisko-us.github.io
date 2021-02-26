@@ -14091,19 +14091,63 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-1">Problem 96-1<a class="anchor-link" href="#Problem-96-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Once your strategy is finalized, Slack it to me and I'll upload it here.</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3">https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3</a></p>
+</blockquote>
+<p>Then, once everyone's strategies are submitted, I'll make an announcement, and you can download the strategies from the above folder and run all pairwise battles for <strong>200 games.</strong></p>
+<ul>
+<li><p>Go through <code>max_turns=100</code> before declaring a draw. I think this should run quick enough, since we decreased from 500 games to 200 games, but if any 200-game matchups are taking longer than 1 minute to run, then post about it and we'll make an adjustment.</p>
+</li>
+<li><p>Put your data in the spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+</li>
+<li><p>Remember to switch the order of the players halfway through the simulation so that each player goes first an equal number of times.</p>
+</li>
+<li><p><strong>Seed the games: game 1 has seed 1, game 2 has seed 2, and so on.</strong> This way, we should all get exactly the same results.</p>
+</li>
+</ul>
+<p>As usual, there will be <strong>prizes:</strong></p>
+<ul>
+<li>1st place: 50 pts extra credit in the assignments category</li>
+<li>2nd place: 30 pts extra credit in the assignments category</li>
+<li>3rd place: 10 pts extra credit in the assignments category</li>
+</ul>
+<h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-2">Problem 96-2<a class="anchor-link" href="#Problem-96-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-3">Problem 96-3<a class="anchor-link" href="#Problem-96-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-95-1">Problem 95-1<a class="anchor-link" href="#Problem-95-1">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
 <ul>
 <li><p>$n_k$ - the $k$th neuron</p>
 </li>
 <li><p>$a_k$ - the activity of the $k$th neuron</p>
 </li>
-<li><p>$i_k$ - the input to the $k$th neuron.</p>
+<li><p>$i_k$ - the input to the $k$th neuron. This is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
 </li>
 <li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
 </li>
 <li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
-</li>
-<li><p>$i_k$ is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
 </li>
 <li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
 </li>
@@ -14209,7 +14253,7 @@ firstname VARCHAR(30),
 lastname VARCHAR(30)
 ); 
 
-INSERT INTO `name` (`id`, `firstname`, `lastname`)
+INSERT INTO `name` (`id`, `age`, `lastname`)
 VALUES ('1', 'Franklin', 'Walton'); 
 
 INSERT INTO `name` (`id`, `firstname`, `lastname`)
@@ -14225,8 +14269,7 @@ INSERT INTO `name` (`id`, `firstname`, `lastname`)
 VALUES ('5', 'Kinga', 'Shenko');</code></pre>
 <p>Then, write a query to get the full names of the people, along with their ages, in alphabetical order of last name. The output should look like this:</p>
 
-<pre><code>fullname
-Harry Ng is 14.
+<pre><code>Harry Ng is 14.
 Sylvia Sanchez is 13.
 Kinga Shenko is 16.
 Ishmael Smith is 15.

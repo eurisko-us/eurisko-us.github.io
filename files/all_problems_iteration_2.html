@@ -13222,6 +13222,103 @@ merge xs [] = ____</code></pre>
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">random</span>
+<span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.05</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mf">0.5</span><span class="o">-</span><span class="n">random</span><span class="p">()),</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[(-4, 11.0),
+ (-2, 5.0),
+ (0, 3.0),
+ (2, 5.0),
+ (4, 11.1),
+ (6, 21.1),
+ (8, 35.1),
+ (10, 52.8),
+ (12, 74.8),
+ (14, 101.2)]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-63-1">Problem 63-1<a class="anchor-link" href="#Problem-63-1">&#182;</a></h1><h3 id="Training-and-Testing-Sets">Training and Testing Sets<a class="anchor-link" href="#Training-and-Testing-Sets">&#182;</a></h3><p><strong>Watch this video FIRST:</strong> <a href="https://youtu.be/EuBBz3bI-aA?t=29">https://youtu.be/EuBBz3bI-aA?t=29</a></p>
+<p><strong>a.</strong> Consider the following dataset:</p>
+
+<pre><code>[(-4, 11.0),
+ (-2, 5.0),
+ (0, 3.0),
+ (2, 5.0),
+ (4, 11.1),
+ (6, 21.1),
+ (8, 35.1),
+ (10, 52.8),
+ (12, 74.8),
+ (14, 101.2)]</code></pre>
+<p>Split the dataset into two subsets:</p>
+<ul>
+<li>a <em>training</em> dataset consisting of 50% of the data points (take data points at even-numbered indices so that they're spread out)</li>
+<li>a <em>testing</em> dataset consisting of 50% of the data points (take data points at odd-numbered indices so that they're spread out)</li>
+</ul>
+<p><strong>b.</strong> Fit 5 models to the <strong>training</strong> data: a linear regressor, a quadratic regressor, a cubic regressor, a quartic regressor, and a quintic regressor.</p>
+<p><strong>c.</strong> Compute the <a href="https://en.wikipedia.org/wiki/Residual_sum_of_squares">residual sum of squares (RSS)</a> for each model</p>
+<blockquote><p><strong>(i)</strong> on the training data, and</p>
+<p><strong>(ii)</strong> on the testing data.</p>
+</blockquote>
+<p>Put your results in a table in an Overleaf doc: 5 rows (one for each model), 2 columns (training RSS, testing RSS). <strong>Once you have created the table, post a screenshot in #results.</strong></p>
+<p>The Eurisko assignment template has an example of how to create a table.</p>
+<blockquote><p><a href="https://www.overleaf.com/read/wjmgkxpccvpj">https://www.overleaf.com/read/wjmgkxpccvpj</a></p>
+</blockquote>
+<p><strong>d.</strong> Plot the models you mentioned in c(i) and c(ii) on the same plot, along with the data. Include this in your writeup.</p>
+<p><strong>e.</strong> Of the models in c(i) and c(ii), which model is most accurate on the training data? Which model is most accurate on the testing data? In both cases, explain why.</p>
+<p><strong>f.</strong> Based on your findings, which model is the best model for the data? Justify your choice.</p>
+<h3 id="Writing">Writing<a class="anchor-link" href="#Writing">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-63-2">Problem 63-2<a class="anchor-link" href="#Problem-63-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-63-3">Problem 63-3<a class="anchor-link" href="#Problem-63-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
