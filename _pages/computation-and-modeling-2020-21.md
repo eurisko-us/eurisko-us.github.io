@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="62">
+<font size="3em"><ol reversed start="63">
+    <li><b>Friday, February 26</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> (C&M is first half) - Test/Train Datasets, SQL
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-63-1">Primary: Test/Train Datasets, Writing</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-63-2">Supplementary: Haskell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-63-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, February 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (C&M is first half) - Intro to Overfitting, Bisection Search
         <br>Assignment Problems:
