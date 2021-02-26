@@ -13971,7 +13971,74 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Fix this problem to use vectors</p>
+<p><strong>Implementation instructions:</strong></p>
+<p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
+<p>Helper functions:</p>
+<ul>
+<li><p>Create a recursive function <code>kthFibonacciNumber(int k)</code> that computes the <code>k</code>th Fibonacci number.</p>
+</li>
+<li><p>Create a function <code>kthPartialSum(int k)</code> that creates an</p>
+</li>
+</ul>
+<p>computes the sum of the first <code>k</code> Fibonacci numbers.</p>
+<p>Then, in the primary function <code>metaFibonacciSum(int n)</code>:</p>
+<ul>
+<li><p>Create an array containing the Fibonacci numbers $a_0, a_1, ..., a_n.$</p>
+</li>
+<li><p>Create an array containing the partial sums $S_{a_0}, S_{a_1}, ..., S_{a_n}.$</p>
+</li>
+<li><p>Compute the sum of the partial sums array.</p>
+</li>
+</ul>
+<p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
+<p><strong>Code template:</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+int kthFibonacciNumber(int k)
+{
+    // your code here
+}
+
+int kthPartialSum(int k)
+{
+    // your code here
+}
+
+int metaFibonacciSum(int n)
+{
+    // your code here
+}
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(metaFibonacciSum(6) == 74);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<p><strong>Debugging note:</strong> A failed assert will obliterate any messages that would otherwise be printed out on the same line. So if you want a message to print even in the event of a failed assert, you have to put <code>\n</code> at the end of it so that the assert gets moved to the next line of output.</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will print\n";
+    assert(2+2==5);
+}</code></pre>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+int main()
+{
+    std::cout &lt;&lt; "This line will NOT print";
+    assert(2+2==5);
+}</code></pre>
 
 </div>
 </div>
@@ -13979,7 +14046,8 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-89-1">Problem 89-1<a class="anchor-link" href="#Problem-89-1">&#182;</a></h1><p><strong>b.</strong> 8 queens -- random restart hill climbing</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>strategy problem writeup; prepare for meeting with Prof. Wierman</p>
+<p>8 queens -- random restart hill climbing</p>
 <p>game level 3 implementation</p>
 <p>randomized hill climbing applied to game level 3 (too many possibilities to simulate them all)</p>
 
@@ -13989,10 +14057,1005 @@ sql.query</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-88-1">Problem 88-1<a class="anchor-link" href="#Problem-88-1">&#182;</a></h1><ul>
-<li>random forest -- speedup</li>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>neural net with hidden layer and rectified linear units (ReLUs)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>generalize neural net to any number of inputs &amp; any number of outputs</p>
+<p>then fit the sandwich dataset with linear and logistic neural nets</p>
+<p>extend hash table</p>
+<p>Game level 4</p>
+<ul>
+<li>Colonization, with 2 planets in middle of board but on opposite sides</li>
 </ul>
-<p><strong>a.</strong> Make the following adjustment to your random forest:</p>
+<p>Future:</p>
+<ul>
+<li>other ship types, miners, scuttling, screening</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Game level 3 matchups</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-1">Problem 96-1<a class="anchor-link" href="#Problem-96-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Once your strategy is finalized, Slack it to me and I'll upload it here.</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3">https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3</a></p>
+</blockquote>
+<p>Then, once everyone's strategies are submitted, I'll make an announcement, and you can download the strategies from the above folder and run all pairwise battles for <strong>100 games.</strong></p>
+<ul>
+<li><p>Go through <code>max_turns=100</code> before declaring a draw. I think this should run quick enough, since we decreased from 500 games to 100 games, but if any 100-game matchups are taking longer than a couple minutes to run, then post about it and we'll figure something out.</p>
+</li>
+<li><p>Put your data in the spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+</li>
+<li><p>Remember to switch the order of the players halfway through the simulation so that each player goes first an equal number of times.</p>
+</li>
+<li><p><strong>Seed the games: game 1 has seed 1, game 2 has seed 2, and so on.</strong> This way, we should all get exactly the same results.</p>
+</li>
+</ul>
+<p>As usual, there will be <strong>prizes:</strong></p>
+<ul>
+<li>1st place: 50 pts extra credit in the assignments category</li>
+<li>2nd place: 30 pts extra credit in the assignments category</li>
+<li>3rd place: 10 pts extra credit in the assignments category</li>
+</ul>
+<h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-2">Problem 96-2<a class="anchor-link" href="#Problem-96-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-96-3">Problem 96-3<a class="anchor-link" href="#Problem-96-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-1">Problem 95-1<a class="anchor-link" href="#Problem-95-1">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
+<ul>
+<li><p>$n_k$ - the $k$th neuron</p>
+</li>
+<li><p>$a_k$ - the activity of the $k$th neuron</p>
+</li>
+<li><p>$i_k$ - the input to the $k$th neuron. This is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
+</li>
+<li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
+</li>
+<li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
+</li>
+<li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
+</li>
+<li><p>$w_{k \ell} \to w_{k \ell} - \alpha \dfrac{\textrm dE}{\textrm dw_{k\ell}}$ is the gradient descent update, where $\alpha$ is the learning rate</p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>For a simple network
+$$
+\begin{matrix} &amp; &amp; n_2 \\ &amp; \nearrow &amp; &amp; \nwarrow \\ n_0 &amp; &amp; &amp; &amp; n_1,\end{matrix}
+$$
+we have:</p>
+$$\begin{align*}
+y_\textrm{predicted} &amp;= a_2 \\
+&amp;= f_2(i_2) \\
+&amp;= f_2(w_{02} a_0 + w_{12} a_1) \\
+&amp;= f_2(w_{02} f_0(i_0) + w_{12} f_1(i_1) ) \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{02}} &amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (y_\textrm{predicted} - y_\textrm{actual})^2 \right] \\
+&amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (a_2 - y_\textrm{actual})^2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d}{\textrm dw_{02}} \left[ a_2 - y_\textrm{actual} \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ a_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ f_2(i_2) \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ i_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_0 \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{12}} &amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_1
+\end{align*}$$<p><strong>THE ACTUAL PROBLEM STATEMENT</strong></p>
+<p>Compute $\dfrac{\textrm dE}{\textrm dw_{23}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix} n_3 \\ \uparrow \\ n_2 \\ \uparrow \\ n_1 \\ \uparrow \\ n_0 \end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 6 \\ f_1'(i_1) = 7 \\ f_2'(i_2) = 8 \\ f_3'(i_3) = 9 \end{matrix} \qquad \begin{matrix} w_{01} = 10 \\ w_{12} = 11 \\ w_{23} = 12 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{23}} = 288, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 20736, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 1064448.
+$$</p>
+<p><strong>Note:</strong> On the next couple assignments, we'll do the same exercise with progressively more advanced networks. This problem is relatively simple so that you have a chance to get used to working with the notation.</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Finish creating your game level 3 strategy. (See problem 93-1 for a description of game level 3, which you should have implemented by now.) Then, implement the following strategy and run it against your level 3 strategy:</p>
+<ul>
+<li><code>NumbersBerserkerLevel3</code> - always buys as many scouts as possible, and each time it buys a scout, immediately sends it on a direct route to attack the opponent.</li>
+</ul>
+<p>Post on #machine-learning with your strategy's stats against these strategies:</p>
+
+<pre><code>MyStrategy vs NumbersBerserker
+- MyStrategy win rate: __%
+- MyStrategy loss rate: __%
+- draw rate: __%</code></pre>
+<p>On the next assignment, we'll have the official matchups.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-2">Problem 95-2<a class="anchor-link" href="#Problem-95-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Write a function <code>calcSum(m,n)</code> that computes the sum of the matrix product of an ascending $m \times n$ and a descending $n \times m$ array, where the array entries are taken from $\{ 1, 2, ..., mn \}.$ For example, if $m=2$ and $n=3,$ then</p>
+$$\begin{align*}
+\textrm{ascending} &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \\[3pt]
+\textrm{descending} &amp;= \begin{bmatrix} 6 &amp; 5 \\ 4 &amp; 3 \\ 2 &amp; 1 \end{bmatrix} \\[3pt]
+(\textrm{ascending})(\textrm{descending}) &amp;= \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \end{bmatrix} \begin{bmatrix} 6 &amp; 5 \\ 4 &amp; 3 \\ 2 &amp; 1 \end{bmatrix} \\[3pt]
+&amp;= \begin{bmatrix} 20 &amp; 14 \\ 56 &amp; 41 \end{bmatrix} \\[3pt]
+\textrm{sum} \Big( (\textrm{ascending})(\textrm{descending}) \Big) &amp;= 131
+\end{align*}$$
+<pre><code>#include &lt;iostream&gt;
+#include &lt;cassert&gt;
+
+// define calcSum
+
+int main() {
+    // write an assert for the test case m=2, n=3
+}</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create the following tables:</p>
+
+<pre><code>CREATE TABLE age ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+lastname VARCHAR(30), 
+age VARCHAR(30)
+); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('1', 'Walton', '12'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('2', 'Sanchez', '13'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('3', 'Ng', '14'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('4', 'Smith', '15'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('5', 'Shenko', '16'); 
+
+CREATE TABLE name ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+lastname VARCHAR(30)
+); 
+
+INSERT INTO `name` (`id`, `age`, `lastname`)
+VALUES ('1', 'Franklin', 'Walton'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('2', 'Sylvia', 'Sanchez'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('3', 'Harry', 'Ng'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('4', 'Ishmael', 'Smith'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('5', 'Kinga', 'Shenko');</code></pre>
+<p>Then, write a query to get the full names of the people, along with their ages, in alphabetical order of last name. The output should look like this:</p>
+
+<pre><code>Harry Ng is 14.
+Sylvia Sanchez is 13.
+Kinga Shenko is 16.
+Ishmael Smith is 15.
+Franklin Walton is 12.</code></pre>
+<p><strong>Tip:</strong> You'll need to use string concatenation and a join.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-95-3">Problem 95-3<a class="anchor-link" href="#Problem-95-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Overleaf: _____
+Repl.it link to C++ file: _____
+sqltest.net link: _____
+
+assignment-problems commit: _____
+space-empires commit: _____
+
+Created issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-94-1">Problem 94-1<a class="anchor-link" href="#Problem-94-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile remaining discrepancies in game level 2 so we can crown the winners:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Then, write your first custom strategy for the level 3 game. We'll start matchups on Wednesday. We'll go through several rounds of matchups on this level since the game is starting to become more rich.</p>
+<p>(We'll have the same extra credit prizes for 1st / 2nd / 3rd place)</p>
+<p><strong>Note:</strong> In <code>decide_which_unit_to_attack</code>, be sure to use <code>'player'</code> and <code>'unit'</code> instead of <code>'player_index'</code> and <code>'unit_index'</code>.</p>
+
+<pre><code># combat_state is a dictionary in the form coordinates : combat_order 
+        # {
+        #    (1,2): [{'player': 1, 'unit': 0},
+        #            {'player': 0, 'unit': 1},
+        #            {'player': 1, 'unit': 1},
+        #            {'player': 1, 'unit': 2}],
+        #    (2,2): [{'player': 2, 'unit': 0},
+        #            {'player': 3, 'unit': 1},
+        #            {'player': 2, 'unit': 1},
+        #            {'player': 2, 'unit': 2}]
+        # }</code></pre>
+<h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p><strong>Make sure you get this problem done completely. Neural nets have a very steep learning curve and they're going to be sticking with us until the end of the semester.</strong></p>
+<p><strong>a.</strong> Given $\sigma(x) = \dfrac{1}{1+e^{-x}},$ prove that $\sigma'(x) = \sigma(x) (1-\sigma(x)).$ Write this proof in an Overleaf doc.</p>
+<p><strong>b.</strong> In neural networks, neurons are often given "activation functions", where</p>
+
+<pre><code>node.activity = node.activation_function(weighted sum of inputs to node)</code></pre>
+<p>In this problem, you'll extend your neural net to include activation functions. Then, you'll equip the neurons with activations so as to implement a logistic regressor.</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+
+&gt;&gt;&gt; def linear_function(x):
+        return x
+&gt;&gt;&gt; def linear_derivative(x):
+        return 1
+&gt;&gt;&gt; def sigmoidal_function(x):
+        return 1/(1+math.exp(-x))
+&gt;&gt;&gt; def sigmoidal_derivative(x):
+        s = sigmoidal_function(x)
+        return s * (1 - s)
+
+&gt;&gt;&gt; activation_types = ['linear', 'linear', 'sigmoidal']
+&gt;&gt;&gt; activation_functions = {
+    'linear': {
+        'function': linear_function,
+        'derivative': linear_derivative
+    },
+    'sigmoidal': {
+        'function': sigmoidal_function,
+        'derivative': sigmoidal_derivative
+    }
+}
+
+&gt;&gt;&gt; nn = NeuralNetwork(weights, activation_types, activation_functions)
+
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [0.1]},
+    {'input': [1,1], 'output': [0.2]},
+    {'input': [1,2], 'output': [0.4]},
+    {'input': [1,3], 'output': [0.7]}
+    ]
+&gt;&gt;&gt; for i in range(1,10001):
+        err = 0
+        for data_point in data_points:
+            nn.update_weights(data_point)
+            err += nn.calc_squared_error(data_point)
+        if i &lt; 5 or i % 1000 == 0:
+            print('iteration {}'.format(i))
+            print('    gradient: {}'.format(nn.calc_gradient(data_point))
+            print('    updated weights: {}'.format(nn.weights))
+            print('    error: {}'.format(err))
+            print()
+
+iteration 1
+    gradient: {(0, 2): 0.03184692266577955, (1, 2): 0.09554076799733865}
+    updated weights: {(0, 2): -0.10537885784041535, (1, 2): 0.4945789883636697}
+    error: 0.40480006957774683
+
+iteration 2
+    gradient: {(0, 2): 0.031126202300065627, (1, 2): 0.09337860690019688}
+    updated weights: {(0, 2): -0.11072951375555531, (1, 2): 0.48919868238711295}
+    error: 0.3989945995186133
+
+iteration 3
+    gradient: {(0, 2): 0.030367826123201307, (1, 2): 0.09110347836960392}
+    updated weights: {(0, 2): -0.11605116651884796, (1, 2): 0.4838609744178689}
+    error: 0.3932640005281893
+
+iteration 4
+    gradient: {(0, 2): 0.029572207383720784, (1, 2): 0.08871662215116236}
+    updated weights: {(0, 2): -0.12134303561025003, (1, 2): 0.4785677220228999}
+    error: 0.3876106111541695
+
+iteration 1000
+    gradient: {(0, 2): -0.04248103992359947, (1, 2): -0.12744311977079842}
+    updated weights: {(0, 2): -1.441870816044744, (1, 2): 0.6320712307086241}
+    error: 0.03103391055967604
+
+iteration 2000
+    gradient: {(0, 2): -0.026576913835657988, (1, 2): -0.07973074150697396}
+    updated weights: {(0, 2): -1.8462575194764488, (1, 2): 0.8112377281576201}
+    error: 0.010469324799663702
+
+iteration 3000
+    gradient: {(0, 2): -0.019389915442213898, (1, 2): -0.058169746326641694}
+    updated weights: {(0, 2): -2.0580006793189596, (1, 2): 0.903267622168482}
+    error: 0.004993174823452696
+
+iteration 4000
+    gradient: {(0, 2): -0.01536481706566838, (1, 2): -0.04609445119700514}
+    updated weights: {(0, 2): -2.187017035077964, (1, 2): 0.9588032475551099}
+    error: 0.002982405174006053
+
+iteration 5000
+    gradient: {(0, 2): -0.012858896793162088, (1, 2): -0.038576690379486266}
+    updated weights: {(0, 2): -2.2717393677429842, (1, 2): 0.995065996436664}
+    error: 0.00211991513136444
+
+iteration 6000
+    gradient: {(0, 2): -0.011201146193726709, (1, 2): -0.033603438581180124}
+    updated weights: {(0, 2): -2.3298248394321606, (1, 2): 1.0198377357361068}
+    error: 0.0017156674543843792
+
+iteration 7000
+    gradient: {(0, 2): -0.010062009597155228, (1, 2): -0.030186028791465685}
+    updated weights: {(0, 2): -2.370740520022862, (1, 2): 1.037244660012689}
+    error: 0.0015153961429219282
+
+iteration 8000
+    gradient: {(0, 2): -0.009259319779522148, (1, 2): -0.027777959338566444}
+    updated weights: {(0, 2): -2.400083365137227, (1, 2): 1.0497070597284772}
+    error: 0.0014124679719747604
+
+iteration 9000
+    gradient: {(0, 2): -0.008683873946383038, (1, 2): -0.026051621839149115}
+    updated weights: {(0, 2): -2.4213875864199608, (1, 2): 1.058744505427183}
+    error: 0.0013582149901490035
+
+iteration 10000
+    gradient: {(0, 2): -0.00826631063707707, (1, 2): -0.024798931911231212}
+    updated weights: {(0, 2): -2.4369901278483534, (1, 2): 1.065357551487286}
+    error: 0.001329102258719855
+
+&gt;&gt;&gt; nn.weights
+should be close to
+    {(0,2): -2.44, (1,2): 1.07}
+
+because the data points all lie approximately on the sigmoid
+    output = 1/(1 + e^(-(input[0] * -2.44 + input[1] * 1.07)) )</code></pre>
+<p><strong>Super Important:</strong> You'll have to update your gradient descent to account for the activation functions. This will require using the chain rule. In our case, we'll have</p>
+
+<pre><code>squared_error = (y_predicted - y_actual)^2
+
+d(squared_error)/d(weights)
+    = 2 (y_predicted - y_actual) d(y_predicted - y_actual)/d(weights)
+    = 2 (y_predicted - y_actual) [ d(y_predicted)/d(weights) - 0]
+    = 2 (y_predicted - y_actual) d(y_predicted)/d(weights)            
+
+y_predicted
+    = nodes[2].activity
+    = nodes[2].activation_function(nodes[2].input)
+    = nodes[2].activation_function(
+        weights[(0,2)] * nodes[0].activity
+        + weights[(1,2)] * nodes[1].activity
+    )
+    = nodes[2].activation_function(
+        weights[(0,2)] * nodes[0].activation_function(nodes[0].input) 
+        + weights[(1,2)] * nodes[1].activation_function(nodes[1].input)
+    )
+
+d(y_predicted)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+       * d(nodes[2].input)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+      * d(weights[(0,2)] * nodes[0].activity + weights[(1,2)] * nodes[1].activity)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+       * nodes[0].activity
+
+by the same reasoning as above:
+
+d(y_predicted)/d(weights[(1,2)]
+    = nodes[2].activation_derivative(nodes[2].input)
+       * nodes[1].activity</code></pre>
+<p><strong>Note:</strong> If no <code>activation_functions</code> variable is passed in, then assume all activation functions are linear.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-94-2">Problem 94-2<a class="anchor-link" href="#Problem-94-2">&#182;</a></h1><h3 id="HashTable">HashTable<a class="anchor-link" href="#HashTable">&#182;</a></h3><p>Write a class <code>HashTable</code> that generalizes the hash table you previously wrote. This class should store an array of buckets, and the hash function should add up the alphabet indices of the input string and mod the result by the number of buckets.</p>
+
+<pre><code>&gt;&gt;&gt; ht = HashTable(num_buckets = 3)
+&gt;&gt;&gt; ht.buckets
+[[], [], []]
+&gt;&gt;&gt; ht.hash_function('cabbage')
+2    (because 2+0+1+1+0+6+4 mod 3 = 14 mod 3 = 2)
+
+&gt;&gt;&gt; ht.insert('cabbage', 5)
+&gt;&gt;&gt; ht.buckets
+[[], [], [('cabbage',5)]]
+
+&gt;&gt;&gt; ht.insert('cab', 20)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5)]]
+
+&gt;&gt;&gt; ht.insert('c', 17)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5), ('c',17)]]
+
+&gt;&gt;&gt; ht.insert('ac', 21)
+&gt;&gt;&gt; ht.buckets
+[[('cab', 20)], [], [('cabbage',5), ('c',17), ('ac', 21)]]
+
+&gt;&gt;&gt; ht.find('cabbage')
+5
+&gt;&gt;&gt; ht.find('cab')
+20
+&gt;&gt;&gt; ht.find('c')
+17
+&gt;&gt;&gt; ht.find('ac')
+21</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>This is a really quick problem, mostly just getting you to learn the ropes of the process we'll be using for doing SQL problems going forward (now that we're done with SQL Zoo).</p>
+<p>On <a href="https://sqltest.net/">https://sqltest.net/</a>, create table with the following script:</p>
+
+<pre><code>CREATE TABLE people ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+name VARCHAR(30) NOT NULL, 
+age VARCHAR(50)
+); 
+
+INSERT INTO `people` (`id`, `name`, `age`)
+VALUES ('1', 'Franklin', '12'); 
+
+INSERT INTO `people` (`id`, `name`, `age`)
+VALUES ('2', 'Sylvia', '13'); 
+
+INSERT INTO `people` (`id`, `name`, `age`)
+VALUES ('3', 'Harry', '14'); 
+
+INSERT INTO `people` (`id`, `name`, `age`)
+VALUES ('4', 'Ishmael', '15'); 
+
+INSERT INTO `people` (`id`, `name`, `age`)
+VALUES ('5', 'Kinga', '16');</code></pre>
+<p>Then select all teenage people whose names do not start with a vowel, and order by oldest first.</p>
+<p>In order to run the query, you need to click the "Select Database" dropdown in the very top-right corner (so top-right that it might partially run off your screen) and select MySQL 5.6.</p>
+<p>This is what your result should be:</p>
+
+<pre><code>id  name    age
+5   Kinga   16
+3   Harry   14
+2   Sylvia  13</code></pre>
+<p>Copy the link where it says "Link for sharing your example:". This is what you'll submit for your assignment.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-94-3">Problem 94-3<a class="anchor-link" href="#Problem-94-3">&#182;</a></h1><p><strong>There will be a quiz on Friday over things that we've done with C++, Haskell, SQL, and Neural Nets.</strong></p>
+<h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to custom level 3 strategy: ____
+Overleaf link to proof of derivative of sigmoid: ____
+Repl.it link to neural network: ____
+Repl.it link to hash table: ____
+SQLtest.net link: ____
+
+Commit link for space-empires repo: _____
+Commit link for assignment-problems repo: _____
+Commit link for machine-learning repo: _____
+
+Created issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-1">Problem 93-1<a class="anchor-link" href="#Problem-93-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile higlighted discrepancies</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Implement game level 3</p>
+<ul>
+<li><p>Regular (repeated) economic phases -- once every turn</p>
+</li>
+<li><p>Change the starting CP back to 0 (now that we have repeated economic phases, we no longer need the extra CP boost at the beginning).</p>
+</li>
+<li><p>3 movement rounds on each turn</p>
+</li>
+<li><p>7x7 board - starting positions are now (3,0) and (3,6)</p>
+</li>
+</ul>
+<p>Since we had to postpone the neural net problem, you can use the extra time to begin implementing your custom player for the level 3 game (we'll have the level 3 battles soon).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-2">Problem 93-2<a class="anchor-link" href="#Problem-93-2">&#182;</a></h1><h3 id="Hash-Tables">Hash Tables<a class="anchor-link" href="#Hash-Tables">&#182;</a></h3><p><strong>Location:</strong> <code>assignment-problems/hash_table.py</code></p>
+<p>Under the hood, Python dictionaries are <strong>hash tables</strong>.</p>
+<p>The most elementary (and inefficient) version of a hash table would be a list of tuples. For example, if we wanted to implement the dictionary <code>{'a': [0,1], 'b': 'abcd', 'c': 3.14}</code>, then we'd have the following:</p>
+
+<pre><code>list_of_tuples = [('a', [0,1]), ('b', 'abcd'), ('c', 3.14)]</code></pre>
+<p>To add a new key-value pair to the dictionary, we'd just append the corresponding tuple to <code>list_of_tuples</code>, and to look up the value for some key, we'd just loop through <code>list_of_tuples</code> until we got to the tuple with the key we wanted (and return the value).</p>
+<p>But searching through a long array is very slow. So, to be more efficient, we use several <code>list_of_tuple</code>s (which we'll call "buckets"), and we use a <code>hash_function</code> to tell us which bucket to put the new key-value pair in.</p>
+<p>Complete the code below to implement a special case of an elementary hash table. We'll expand on this example soon, but let's start with something simple.</p>
+
+<pre><code>array = [[], [], [], [], []] # has 5 empty "buckets"
+
+def hash_function(string):
+    # return the sum of character indices in the string 
+    # (where "a" has index 0, "b" has index 1, ..., "z" has index 25)
+    # modulo 5
+
+    # for now, let's just assume the string consists of lowercase
+    # letters with no other characters or spaces
+
+def insert(array, key, value):
+    # apply the hash function to the key to get the bucket index.
+    # then append the (key, value) pair to the bucket.
+
+def find(array, key):
+    # apply the hash function to the key to get the bucket index.
+    # then loop through the bucket until you get to the tuple with the desired key,
+    # and return the corresponding value.</code></pre>
+<p>Here's an example of how the hash table will work:</p>
+
+<pre><code>&gt;&gt;&gt; print(array)
+array = [[], [], [], [], []]
+
+&gt;&gt;&gt; insert(array, 'a', [0,1])
+&gt;&gt;&gt; insert(array, 'b', 'abcd')
+&gt;&gt;&gt; insert(array, 'c', 3.14)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1])], [('b','abcd')], [('c',3.14)], [], []]
+
+&gt;&gt;&gt; insert(array, 'd', 0)
+&gt;&gt;&gt; insert(array, 'e', 0)
+&gt;&gt;&gt; insert(array, 'f', 0)
+&gt;&gt;&gt; print(array)
+[[('a',[0,1]), ('f',0)], [('b','abcd')], [('c',3.14)], [('d',0)], [('e',0)]]</code></pre>
+<p>Test your code as follows:</p>
+
+<pre><code>alphabet = 'abcdefghijklmnopqrstuvwxyz'
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    value = [i, i**2, i**3]
+    insert(array, key, value)
+
+for i, char in enumerate(alphabet):
+    key = 'someletters'+char
+    output_value = find(array, key)
+    desired_value = [i, i**2, i**3]
+    assert output_value == desired_value</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-3/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 7, 8, 9, 10)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-93-3">Problem 93-3<a class="anchor-link" href="#Problem-93-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to neural network: ____
+Repl.it link to hash table: ____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for assignment-problems repo: _____
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-1">Problem 92-1<a class="anchor-link" href="#Problem-92-1">&#182;</a></h1><p><strong>a.</strong> Once your strategy is finalized, Slack it to me and I'll upload it here.</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-2">https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-2</a></p>
+</blockquote>
+<p><strong>If your strategy is getting crushed by NumbersBerserker, keep in mind that it's okay to copy NumbersBerserker and then tweak it a little bit with your own spin.</strong> Your strategy should have some original component, but it does not need to be 100% original (or even mostly original).</p>
+<p>Then, once everyone's strategies are submitted, download the strategies from the above folder and run all pairwise battles for 500 games.</p>
+<ul>
+<li><p>Put your data in the spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+</li>
+<li><p>Remember to switch the order of the players halfway through the simulation so that each player goes first an equal number of times.</p>
+</li>
+<li><p><strong>Seed the games: game 1 has seed 1, game 2 has seed 2, and so on.</strong> This way, we should all get exactly the same results.</p>
+</li>
+</ul>
+<p>Assuming our games match up so that we can actually agree about who won, there will be prizes:</p>
+<ul>
+<li>1st place: 50% extra credit on the assignment</li>
+<li>2nd place: 30% extra credit on the assignment</li>
+<li>3rd place: 10% extra credit on the assignment</li>
+</ul>
+<p><strong>b.</strong> Time for an introduction to neural nets! In this problem, we'll create a really simple neural network that is essentially a "neural net"-style implementation of linear regression. We'll start off with something simple and familiar, but we'll implement much more advanced models in the near future.</p>
+<p><strong>Note:</strong> It seems like we need to merge our <code>graph</code> library into our <code>machine-learning</code> library. So, let's do that. The <code>src</code> your <code>machine-learning</code> library should now look like this:</p>
+
+<pre><code>src/
+- models/
+  - linear_regressor.py
+  - neural_network.py
+  - ...
+- graphs/
+  - weighted_graph.py
+  - ...</code></pre>
+<p>(If you have a better idea for the structure of our library, feel free to do it your way and bring it up for discussion during the next class)</p>
+<p>Create a <code>NeuralNetwork</code> class that inherits from weighted graph. Pass in dictionary of weights to determine connectivity and initial weights.</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+
+This is a graphical representation of the model:
+
+               nodes[2]                   ("output layer")
+            ^            ^
+           /              \
+  weights[(0,2)]    weights[(1,2)]
+        ^                    ^
+       /                      \
+nodes[0]                      nodes[1]     ("input layer")</code></pre>
+<p>To make a prediction, our simple neural net computes a weighted sum of the input values. (Again, this will become more involved in the future, but let's not worry about that just yet.)</p>
+
+<pre><code>&gt;&gt;&gt; nn.predict([1,3])
+1.4
+
+    behind the scenes:
+
+    assign nodes[0] a value of 1 and nodes[1] a value of 3,
+    and then return the following:
+
+    weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+    = -0.1 * 1 + 0.5 * 3
+    = 1.4</code></pre>
+<p>If we know the output that's supposed to be associated with a given input, we can compute the error in the prediction.</p>
+<p>We'll use the squared error, so that we can frame the problem of fitting the neural network as "choosing weights which minimize the squared error".</p>
+<p>To find the weights which minimize the squared error, we can perform gradient descent. As we'll see in the future, calculating the gradient of the weights can get a little tricky (it requires a technique called "backpropagation"). But for now, you can just hard-code the process for this particular network.</p>
+
+<pre><code>&gt;&gt;&gt; data_point = {'input': [1,3], 'output': [7]}
+&gt;&gt;&gt; nn.calc_squared_error(data_point)
+31.36     [ because (7-1.4)^2 = 5.6^2 = 31.36 ]
+
+&gt;&gt;&gt; nn.calc_gradient(data_point)
+{(0,2): -11.2, (1,2): -33.6}
+
+    behind the scenes:
+
+    squared_error = (y_actual - y_predicted)^2
+
+    d(squared_error)/d(weights)
+        = 2 (y_actual - y_predicted) d(y_actual - y_predicted)/d(weights)
+        = 2 (y_actual - y_predicted) [ 0 - d(y_predicted)/d(weights) ]
+        = -2 (y_actual - y_predicted) d(y_predicted)/d(weights)            
+
+    remember that
+        y_predicted = weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+
+    so
+        d(y_predicted)/d(weights[(0,2)]) = nodes[0].value
+        d(y_predicted)/d(weights[(1,2)]) = nodes[1].value
+
+    Therefore
+
+        d(squared_error)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) nodes[0].value
+            = -2 (7 - 1.4) (1)
+            = -11.2
+
+        d(squared_error)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) nodes[1].value
+            = -2 (7 - 1.4) (3)
+            = -33.6</code></pre>
+<p>Once we've got the gradient, we can update the weights using gradient descent.</p>
+
+<pre><code>&gt;&gt;&gt; nn.update_weights(data_point, learning_rate=0.01)
+
+    new_weights = old_weights - learning_rate * gradient
+                = {(0,2): -0.1, (1,2): 0.5}
+                   - 0.01 * {(0,2): -11.2, (1,2): -33.6}
+                = {(0,2): -0.1, (1,2): 0.5}
+                   + {(0,2): 0.112, (1,2): 0.336}
+                = {(0,2): 0.012, (1,2): 0.836}</code></pre>
+<p>If we repeatedly loop through a dataset and update the weights for each data point, then we should get a model whose error is minimized.</p>
+<p>Caveat: the minimum will be a local minimum, which is not guaranteed to be a global minimum.</p>
+<p>Here is a test case with some data points that are on the line $y=1+2x.$ Our network is set up to fit any line of the form $y = \beta_0 \cdot 1 + \beta_1 \cdot x,$ where $\beta_0 = $ <code>weights[(0,2)]</code> and $\beta_1=$ <code>weights[(1,2)]</code>.</p>
+<p>Note that this line can be written as</p>
+
+<pre><code>output = 1 * input[0] + 2 * input[1]</code></pre>
+<p>In this particular case, the weights should converge to the true values (<code>1</code> and <code>2</code>).</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [1]},
+    {'input': [1,1], 'output': [3]},
+    {'input': [1,2], 'output': [5]},
+    {'input': [1,3], 'output': [7]}
+    ]
+&gt;&gt;&gt; for _ in range(1000):
+        for data_point in data_points:
+            nn.update_weights(data_point)
+
+&gt;&gt;&gt; nn.weights
+should be really close to
+    {(0,2): 1, (1,2): 2}
+
+because the data points all lie on the line
+    output = input[0] * 1 + input[1] * 2</code></pre>
+<p><strong>Once you've got your final weights, post them on #results.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-2">Problem 92-2<a class="anchor-link" href="#Problem-92-2">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>Originally I was going to put the hash table problem here, but I figured we should discuss it in class first. Also, we should do quiz corrections. So it will be on the next assignment instead.</p>
+<p>For this assignment, please correct any errors on your quiz (if you got a score under 100%). You'll just need to submit your repl.it links again, with the corrected code.</p>
+<p>Remember that we went through the quiz during class, so if you have any questions or need any help, look at the recording first.</p>
+<p><strong>Note:</strong> Since this quiz corrections problem is much lighter than the usual problem that would go in its place, there will be a couple more Shell and SQL problems than usual.</p>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.robelle.com/smugbook/regexpr.html">http://www.robelle.com/smugbook/regexpr.html</a></p>
+<p><a href="https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html">https://www.gnu.org/software/sed/manual/html_node/Regular-Expressions.html</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-4/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-5/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-sed-command-2/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/Using_Null">https://sqlzoo.net/wiki/Using_Null</a> (queries 1, 2, 3, 4, 5, 6)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92-3">Problem 92-3<a class="anchor-link" href="#Problem-92-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to neural network: ____
+Repl.it links to quiz corrections (if applicable): _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for machine-learning repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91-1">Problem 91-1<a class="anchor-link" href="#Problem-91-1">&#182;</a></h1><p><strong>a.</strong> Re-run your decision tree on the sex prediction problem. Make 5 train-test splits of 80% train and 20% test, like we originally did. Now that your Gini trees match up from the previous assignment, they should match up here. Also, make sure to propagate any changes in your Gini tree to your random tree. Our random forest results should be pretty close as well.</p>
+<p><strong>b.</strong> Create a custom strategy for the level 2 game. Test it against NumbersBerserkerLevel2 and FlankerLevel2. On Wednesday's assignment, we'll have our strategies battle against each other.</p>
+<p>Put your results in the usual spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91-2">Problem 91-2<a class="anchor-link" href="#Problem-91-2">&#182;</a></h1><h3 id="Commit">Commit<a class="anchor-link" href="#Commit">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>We'll skip reviews on this assignment, to save you a bit of time.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to hash table: _____
+
+Commit link for space-empires repo: _____
+Commit link for assignment-problems repo: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-90-1">Problem 90-1<a class="anchor-link" href="#Problem-90-1">&#182;</a></h1><p>This weekend, your only primary problem is to resolve discrepancies in your Gini decision tree &amp; games (both level 1 and level 2).</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Please be sure to get the game discrepancies resolved, so that we can have our custom level 2 strategies battle next week. Then, I'll let Jason know we're ready to speak with Prof. Wierman about designing optimal strategies for our level 2 game.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-90-2">Problem 90-2<a class="anchor-link" href="#Problem-90-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>At the beginning of the year, we wrote a Python function called <code>simple_sort</code> that sorts a list by repeatedly finding the smallest element and appending it to a new list.</p>
+<p>Now, you will sort a list in C++ using a similar technique. However, because working with arrays in C++ is a bit trickier, we will modify the implementation so that it only involves the use of a single array. The way we do this is by swapping:</p>
+<ul>
+<li>Find the smallest element in the array</li>
+<li>Swap it with the first element of the array</li>
+<li>Find the next-smallest element in the array</li>
+<li>Swap it with the second element of the array</li>
+<li>...</li>
+</ul>
+<p>For example:</p>
+
+<pre><code>array: [30, 50, 20, 10, 40]
+indices to consider: 0, 1, 2, 3, 4
+elements to consider: 30, 50, 20, 10, 40
+smallest element: 10
+swap with first element: [10, 50, 20, 30, 40]
+
+---
+
+array: [10, 50, 20, 30, 40]
+indices to consider: 1, 2, 3, 4
+elements to consider: 50, 20, 30, 40
+smallest element: 20
+swap with second element: [10, 20, 50, 30, 40]
+
+---
+
+array: [10, 20, 50, 30, 40]
+indices to consider: 2, 3, 4
+elements to consider: 50, 30, 40
+smallest element: 30
+swap with second element: [10, 20, 30, 50, 40]
+
+...
+
+final array: [10, 20, 30, 40, 50]</code></pre>
+<p>Write your code in the template below.</p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+int main()
+{
+    int array[5]{ 30, 50, 20, 10, 40 };
+
+    // your code here
+
+    std::cout &lt;&lt; 'Testing...\n';
+
+    assert(array[0]==10);
+    assert(array[1]==20);
+    assert(array[2]==30);
+    assert(array[3]==40);
+    assert(array[4]==50);
+
+    std::cout &lt;&lt; 'Succeeded';
+
+    return 0;
+}</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Resources:</p>
+<blockquote><p><a href="http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/">http://www.thegeekstuff.com/2009/03/15-practical-unix-grep-command-examples/</a></p>
+</blockquote>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-1/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-1/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-2/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-2/problem</a></p>
+<p><a href="https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-3/problem">https://www.hackerrank.com/challenges/text-processing-in-linux-the-grep-command-3/problem</a></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 13, 14, 15)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-90-3">Problem 90-3<a class="anchor-link" href="#Problem-90-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-1">Problem 89-1<a class="anchor-link" href="#Problem-89-1">&#182;</a></h1><p>On this problem, we'll do some debugging based on the results from our spreadsheet:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<h3 id="Debugging">Debugging<a class="anchor-link" href="#Debugging">&#182;</a></h3><p><strong>a.</strong> Compare your results to your classmates' results for <em>Indices of misclassified data points (zero-indexed: the index of the first data point in the dataset would be index 0)</em>. If you and a classmate have different results, do some pair debugging to figure out what caused the difference and how you guys need to reconcile it.</p>
+<p><strong>b.</strong> Compare your results to your classmates' results for <em>Flanker vs Berserker | Simulate 10 games with random seeds 1-10; list game numbers on which Flanker wins</em>. If you and a classmate have different results, do some pair debugging to figure out what caused the difference and how you guys need to reconcile it.</p>
+<p><strong>c.</strong> Modify your level 2 game so that each player starts with 4 shipyards in addition to 3 scouts. (If a player doesn't start out with shipyards, then the <code>NumberBerserker</code> strategy can't actually do what it's intended to do.)</p>
+<p>Then, re-run the game level 2 matchups and put your results in the sheet (put them on the sheet for the current assignment, #89).</p>
+<h3 id="Random-Forest">Random Forest<a class="anchor-link" href="#Random-Forest">&#182;</a></h3><p><strong>d.</strong> Make the following adjustment to your random forest:</p>
 <ul>
 <li><p>In your random decision tree, create a <code>training_percentage</code> parameter that governs the percent of the training data that you actually use to fit the model.</p>
 <ul>
@@ -14004,33 +15067,285 @@ sql.query</code></pre>
 </li>
 <li><p>When you initialize the random forest, pass a <code>training_percentage</code> parameter that, in turn, gets passed to the random decision trees.</p>
 </li>
+<li><p>The reason why choosing <code>training_percentage &lt; 1</code> can be useful is that it speeds up the time to train the random forest, and also, it allows different models to get different "perspectives" on the data, thereby creating a more diverse "hive mind" (and higher diversity generally leads to higher performance when it comes to ensemble models, i.e. models consisting of many smaller sub-models)</p>
+</li>
 </ul>
-<p><strong>b.</strong> Repeat problem 77-1 using the following models, with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
+<p><strong>e.</strong> On the sex prediction dataset, train the following models on the first half of the data and test on the second half of the data.</p>
 <ul>
-<li><p>A single random decision tree</p>
+<li><p>A single random decision tree with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 10 trees</p>
+<li><p>Random forest with 10 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 100 trees</p>
+<li><p>Random forest with 100 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 1,000 trees</p>
+<li><p>Random forest with 1,000 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
-<li><p>Random forest with 10,000 trees</p>
+<li><p>Random forest with 10,000 trees with <code>max_depth = 4</code> and <code>training_percentage = 0.3</code>.</p>
 </li>
 </ul>
-<hr>
+<p>Paste the accuracy into the spreadsheet.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-2">Problem 89-2<a class="anchor-link" href="#Problem-89-2">&#182;</a></h1><h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>First, observe the following Haskell code which computes the sum of all the squares under 1000:</p>
+
+<pre><code>&gt;&gt;&gt; sum (takeWhile (&lt;1000) (map (^2) [1..])) 
+10416</code></pre>
+<p>(If you don't see why this works, then run each part of the expression: first <code>map (^2) [1..]</code>, and then <code>takeWhile (&lt;1000) (map (^2) [1..])</code>, and then the full expression <code>sum (takeWhile (&lt;1000) (map (^2) [1..]))</code>.)</p>
+<p>Now, recall the Collatz conjecture (if you don't remember it, ctrl+F "collatz conjecture" to jump to the problem where we covered it).</p>
+<p>The following Haskell code can be used to recursively generate the sequence or "chain" of Collatz numbers, starting with an initial number <code>n</code>.</p>
+
+<pre><code>chain :: (Integral a) =&gt; a -&gt; [a]  
+chain 1 = [1]  
+chain n  
+    | even n =  n:chain (n `div` 2)  
+    | odd n  =  n:chain (n*3 + 1)</code></pre>
+<p>Here are the chains for several initial numbers:</p>
+
+<pre><code>&gt;&gt;&gt; chain 10  
+[10,5,16,8,4,2,1]  
+&gt;&gt;&gt; chain 1  
+[1]  
+&gt;&gt;&gt; chain 30  
+[30,15,46,23,70,35,106,53,160,80,40,20,10,5,16,8,4,2,1]</code></pre>
+<p><strong>Your problem:</strong> Write a Haskell function <code>firstNumberWithChainLengthGreaterThan n</code> that finds the first number whose chain length is at least <code>n</code>.</p>
+<p><strong>Check:</strong> <code>firstNumberWithChainLengthAtLeast 15</code> should return <code>7</code>.</p>
+<p>To see why this check works, observe the first few chains shown below:</p>
+
+<pre><code>1: [1] (length 1)
+2: [2,1] (length 2)
+3: [3,10,5,16,8,4,2,1] (length 8)
+4: [4,2,1] (length 3)
+5: [5,16,8,4,2,1] (length 6)
+6: [6,3,10,5,16,8,4,2,1] (length 9)
+7: [7,22,11,34,17,52,26,13,40,20,10,5,16,8,4,2,1] (length 17)</code></pre>
+<p>7 is the first number whose chain is at least 15 numbers long.</p>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Helpful resources:</p>
 <ul>
-<li><p>pairwise debug anything weird on game level 1</p>
+<li><p><a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a></p>
 </li>
-<li><p>game level 2</p>
+<li><p><a href="https://www.thegeekstuff.com/2010/02/awk-conditional-statements/">https://www.thegeekstuff.com/2010/02/awk-conditional-statements/</a></p>
+</li>
+</ul>
+<p>Problems:</p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/awk-3/problem">https://www.hackerrank.com/challenges/awk-3/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/awk-4/problem">https://www.hackerrank.com/challenges/awk-4/problem</a><br></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 9, 10, 11, 12)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-3">Problem 89-3<a class="anchor-link" href="#Problem-89-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to Haskell code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+Commit link for machine-learning repo: _____
+Commit link for assignment-problems repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-89-4">Problem 89-4<a class="anchor-link" href="#Problem-89-4">&#182;</a></h1><p>There will be a 45-minute quiz that you can take any time on Thursday. (We don't have school Friday.)</p>
+<p>The quiz will cover C++ and Haskell.</p>
 <ul>
-<li><p>1 economic phase and that's it. What do you purchase? available: scouts, some other ship type, some basic tech</p>
+<li><p>For C++, you will need to be comfortable working with arrays.</p>
 </li>
-<li><p>simulate 1000 games with all possibilities</p>
-</li>
-</ul>
+<li><p>For Haskell, you'll need to be comfortable working with list comprehensions and compositions of functions.</p>
 </li>
 </ul>
+<p>You will need to write C++ and Haskell functions to calculate some values. It will be somewhat similar to the meta-Fibonacci sum problem, except the computation will be different (and simpler).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-88-1">Problem 88-1<a class="anchor-link" href="#Problem-88-1">&#182;</a></h1><p><strong>This is the results spreadsheet that you'll paste your results into:</strong> <a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+<h3 id="Gini-Tree">Gini Tree<a class="anchor-link" href="#Gini-Tree">&#182;</a></h3><p>On the sex prediction dataset, train a Gini decision tree on the first half of the data and test on the second half of the data.</p>
+<p>(If there's an odd number of data points, then round so that the first half of the data will have one more record than the second half)</p>
+<p>Paste your prediction accuracy into the spreadsheet, along with the indices of any misclassified data points (zero-indexed: the index of the first data point in the dataset would be index 0).</p>
+<h3 id="Space-Empires-Level-1">Space Empires Level 1<a class="anchor-link" href="#Space-Empires-Level-1">&#182;</a></h3><p>Note the following from the rulebook:</p>
+<blockquote><p>(7.6) There is no limit to the number of Ship
+Yards that may occupy the same system</p>
+<p>(8.2.2) Building Ship Yards: Ship Yards may only be built at planets that produced income (not new colonies) in the Economic Phase. Ship Yards may be purchased and placed at multiple planets, but no more than one per planet. Additional Ship Yards may be purchased at those planets in future Economic Phases. Ship Yards are produced by the Colony itself and therefore do not require Ship Yards to build them.</p>
+<p>So, only a colony can buy a shipyard, and only once per economic phase. Shipyards cannot build other shipyards. If a colony with existing shipyards builds a shipyard, the building of the new shipyard does <em>not</em> it affect how much hullsize the other shipyards can build on that turn. That is to say, building a shipyard at a colony uses up CP but not hullsize building capacity.</p>
+</blockquote>
+<p><strong>Problem:</strong> Using your level 1 game, simulate 20 games of Flanker vs Berserker with random seeds 1 through 20.</p>
+<ul>
+<li><p>Define the random seed at the beginning of the game. Make sure your die rolls match up with those shown in the demonstration below.</p>
+</li>
+<li><p>Let Flanker go first on games 1-10, and let Berserker go first on games 11-20.</p>
+</li>
+<li><p>For each of the 20 games, store the game log in <code>space-empires/logs/21-02-05-flanker-vs-berserker.txt</code>. In the game log, on each turn, you should log any ship movements, any battle locations, the combat order, the dice rolls on each attack during combat, and whether or not each attack resulted in a hit.</p>
+</li>
+<li><p>In the spreadsheet, paste the game numbers on which the Flanker won. For example, if Flanker won on games 2, 3, 5, 8, 9, 13, 15, 19, then you'd paste <code>2, 3, 5, 8, 9, 13, 15, 19</code> into the spreadsheet.</p>
+</li>
+<li><p>Check the game numbers you pasted in against those of your classmates. Any discrepancy corresponds to a game on which you and your classmate had different outcomes. So, for any discrepancies, inspect your game logs against your classmate's, and figure out where your game logs started to differ.</p>
+</li>
+</ul>
+
+<pre><code>import random
+import math
+
+for game_num in range(1,6):
+    random.seed(game_num)
+    first_few_die_rolls = [math.ceil(10*random.random()) for _ in range(7)]
+    print('first few die rolls of game {}'.format(game_num))
+    print('\t',first_few_die_rolls,'\n')
+
+---
+
+first few die rolls of game 1
+     [2, 9, 8, 3, 5, 5, 7] 
+
+first few die rolls of game 2
+     [10, 10, 1, 1, 9, 8, 7] 
+
+first few die rolls of game 3
+     [3, 6, 4, 7, 7, 1, 1] 
+
+first few die rolls of game 4
+     [3, 2, 4, 2, 1, 5, 10] 
+
+first few die rolls of game 5
+     [7, 8, 8, 10, 8, 10, 1]</code></pre>
+<h3 id="Space-Empires-Level-2">Space Empires Level 2<a class="anchor-link" href="#Space-Empires-Level-2">&#182;</a></h3><p>Implement toggles that you can use to set level 2 of the game:</p>
+<ul>
+<li><p>Change initial CP to 10. So really, the players start with 10 CP, and then get 20 CP income, for a total of 30 CP that they're able to spend on ships / technology / maintenance.</p>
+</li>
+<li><p>Allow players to buy technology (but as for ships -- they can still only buy scouts)</p>
+</li>
+<li><p>Have 1 economic phase and that's it.</p>
+</li>
+</ul>
+<p>In the level 2 game, we will have matchups between several strategies.</p>
+<ul>
+<li><p><code>NumbersBerserkerLevel2</code> - spends all its CP buying more scouts. This Berserker thinks that the best way to win is to bring in a bunch of unskilled reinforcements. Sends all the scouts directly towards the enemy home base.</p>
+</li>
+<li><p><code>MovementBerserkerLevel2</code> - buys movement technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
+</li>
+<li><p><code>AttackBerserkerLevel2</code> - buys attack technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
+</li>
+<li><p><code>DefenseBerserkerLevel2</code> - buys attack technology first and then buys another scout. Then sends all the scouts directly towards the enemy home base.</p>
+</li>
+<li><p><code>FlankerLevel2</code> - buys movement technology then buys another scout. Then uses that fast scout to perform the flanking maneuver.</p>
+</li>
+</ul>
+<p>Perform 1000 simulations for each matchup, just like you did with level 1. Remember to randomize the die rolls and switch who goes first at game 500. Put your results in the spreadsheet.</p>
+<p><strong>When doing the 1000 simulations, set <code>random.seed(game_num)</code> like you are now doing with the level 1 game.</strong> This way, we'll be able to backtrack any discrepancies to the individual game number.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-88-2">Problem 88-2<a class="anchor-link" href="#Problem-88-2">&#182;</a></h1><h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Implement the <code>metaFibonacciSum</code> function in C++:</p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+int metaFibonacciSum(int n)
+{
+    // return the result immediately if n&lt;2
+
+    // otherwise, construct a an array called "terms"
+    // that contains the Fibonacci terms at indices
+    // 0, 1, ..., n
+
+    // construct an array called "extendedTerms" that
+    // contains the Fibonacci terms at indices
+    // 0, 1, ..., a_n (where a_n is the nth Fibonacci term)
+
+    // when you fill up this array, many of the terms can
+    // simply copied from the existing "terms" array. But
+    // if you need additional terms, you'll have to compute
+    // them the usual way (by adding the previous 2 terms)
+
+    // then, create an array called "partialSums" that
+    // contains the partial sums S_0, S_1, ..., S_{a_n}
+
+    // finally, add up the desired partial sums,
+    // S_{a_0} + S_{a_1} + ... + S_{a_n},
+    // and return this result
+
+}
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(metaFibonacciSum(6)==74);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
+<p>Helpful resource: <a href="https://www.geeksforgeeks.org/awk-command-unixlinux-examples/">https://www.geeksforgeeks.org/awk-command-unixlinux-examples/</a></p>
+<blockquote><p><a href="https://www.hackerrank.com/challenges/awk-1/problem">https://www.hackerrank.com/challenges/awk-1/problem</a><br></p>
+<p><a href="https://www.hackerrank.com/challenges/awk-2/problem">https://www.hackerrank.com/challenges/awk-2/problem</a><br></p>
+</blockquote>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>Complete these SQL coding challenges and submit screenshots. For SQL, each screenshot should include the problem number, the successful smiley face, and your query.</p>
+<blockquote><p><a href="https://sqlzoo.net/wiki/More_JOIN_operations">https://sqlzoo.net/wiki/More_JOIN_operations</a> (queries 5, 6, 7, 8)</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-88-3">Problem 88-3<a class="anchor-link" href="#Problem-88-3">&#182;</a></h1><p><em>Review; 10% of assignment grade; 15 minutes estimate</em></p>
+<ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories.</p>
+</li>
+</ul>
+<h3 id="SUBMISSION-TEMPLATE">SUBMISSION TEMPLATE<a class="anchor-link" href="#SUBMISSION-TEMPLATE">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to space-empires/logs: ___
+Repl.it link to space empires game lvl 1 simulation runner: ___
+Repl.it link to space empires game lvl 2 simulation runner: ___
+
+Repl.it link to C++ code: _____
+Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
+
+Commit link for space-empires repo: _____
+
+Created issue: _____
+Resolved issue: _____</code></pre>
 
 </div>
 </div>
@@ -14075,9 +15390,9 @@ sql.query</code></pre>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-87-2">Problem 87-2<a class="anchor-link" href="#Problem-87-2">&#182;</a></h1><p><em>Supplemental problems; 30% of assignment grade; 60 minutes estimate</em></p>
 <p><em>Location: <code>assignment-problems</code></em></p>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Let $a_i$ be the $i$th Fibonacci number and let $S_n$ be the sum of the first $n$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
+<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Let $a_k$ be the $k$th Fibonacci number and let $S_k$ be the sum of the first $k$ Fibonacci numbers. Write a function <code>metaFibonacciSum</code> that takes an input $n$ and computes the sum</p>
 $$
-\sum\limits_{i=0}^n S_{a_i} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
+\sum\limits_{i=k}^n S_{a_k} = S_{a_0} + S_{a_1} + ... + S_{a_n}.
 $$<p>For example, if we wanted to compute the result for <code>n=6</code>, then we'd need to</p>
 <ul>
 <li><p>compute the first $6$ Fibonacci numbers:
@@ -14104,70 +15419,22 @@ $$</p>
 <p>Add up the desired sums:</p>
 $$
 \begin{align*}
-\sum\limits_{i=0}^6 S_{a_i} &amp;= S_{a_0} + S_{a_1} + S_{a_2} + S_{a_3} + S_{a_4} + S_{a_5} + S_{a_6} \\
+\sum\limits_{k=0}^6 S_{a_k} &amp;= S_{a_0} + S_{a_1} + S_{a_2} + S_{a_3} + S_{a_4} + S_{a_5} + S_{a_6} \\
 &amp;= S_{0} + S_{1} + S_{1} + S_{2} + S_{3} + S_{5} + S_{8} \\
 &amp;= 0 + 1 + 1 + 2 + 4 + 12 + 54 \\
 &amp;= 74
 \end{align*}
-$$<p><strong>Implementation instructions:</strong></p>
-<p>Even if you know a more mathematically elegant way to implement this function, please do it according to the following specifications. The goal is to give you some practice working with arrays.</p>
-<ul>
-<li><p>Create an array containing the Fibonacci numbers, starting with the $0$th Fibonacci number and going up to (and including) the $n$th number.</p>
-</li>
-<li><p>Create an array containing the partial sums, up to the highest partial sum that will be needed. (You'll need to fill in partial sums up to the $a_n$th index)</p>
-</li>
-<li><p>Compute the sum of the appropriate partial sums.</p>
-</li>
-</ul>
-<p><strong>Helpful resource:</strong> <a href="https://www.learncpp.com/cpp-tutorial/arrays-and-loops/">https://www.learncpp.com/cpp-tutorial/arrays-and-loops/</a></p>
-<p><strong>Code template:</strong></p>
-
-<pre><code># include &lt;iostream&gt;
-# include &lt;cassert&gt;
-
-int metaFibonacciSum(int n)
-{
-    // your code here
-}
-
-int main()
-{
-    std::cout &lt;&lt; "Testing...\n";
-
-    assert(metaFibonacciSum(6) == 74);
-
-    std::cout &lt;&lt; "Success!";
-
-    return 0;
-}</code></pre>
-<p><strong>Debugging note:</strong> A failed assert will obliterate any messages that would otherwise be printed out on the same line. So if you want a message to print even in the event of a failed assert, you have to put <code>\n</code> at the end of it so that the assert gets moved to the next line of output.</p>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;cassert&gt;
-int main()
-{
-    std::cout &lt;&lt; "This line will print\n";
-    assert(2+2==5);
-}</code></pre>
-
-<pre><code>#include &lt;iostream&gt;
-#include &lt;cassert&gt;
-int main()
-{
-    std::cout &lt;&lt; "This line will NOT print";
-    assert(2+2==5);
-}</code></pre>
-<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Repeat the C++ problem again, but in Haskell.</p>
+$$<p>Here's a template:</p>
 
 <pre><code>-- first, define a recursive function "fib"
 -- to compute the nth Fibonacci number
 
 -- once you've defined "fib", proceed to the
 -- steps below
-partialSumEntries n = -- your code here
-partialSum n = -- your code here
-metaSumEntries n = -- your code here
-metaSum n = -- your code here
+firstKEntriesOfSequence k = -- your code here; should return the list [a_0, a_1, ..., a_k]
+kthPartialSum k = -- your code here; returns a single number
+termsToAddInMetaSum n = -- your code here; should return the list [S_{a_0}, S_{a_1}, ..., S_{a_k}]
+metaSum n = -- your code here; returns a single number
 
 main = print (metaSum 6) -- should come out to 74</code></pre>
 <h3 id="Shell">Shell<a class="anchor-link" href="#Shell">&#182;</a></h3><p>Complete these Shell coding challenges and submit screenshots. Each screenshot should include your username, the problem title, and the "Status: Accepted" indicator.</p>
@@ -14203,7 +15470,6 @@ https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8
 
 Quiz corrections: ____
 
-Repl.it link to C++ code: _____
 Repl.it link to Haskell code: _____
 Link to Shell/SQL screenshots (Overleaf or Google Doc): _____
 
@@ -19620,6 +20886,45 @@ $$\begin{align*}
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">0</span>
+
+<span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
