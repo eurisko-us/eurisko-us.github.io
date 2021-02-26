@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="95">
+<font size="3em"><ol reversed start="96">
+    <li><b>Friday, February 26</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (ML is second half) - Weight Gradients, Crown Game Level 2 Winners
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-96-1">Primary: Weight Gradients, Game Level 3 Matchups</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-96-2">Supplementary: Haskell, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-96-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, February 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (ML is second half) - Using Math Notation with Neural Nets
         <br>Assignment Problems:
