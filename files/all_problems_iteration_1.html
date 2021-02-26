@@ -14094,9 +14094,9 @@ int main()
 <h1 id="Problem-96-1">Problem 96-1<a class="anchor-link" href="#Problem-96-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Once your strategy is finalized, Slack it to me and I'll upload it here.</p>
 <blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3">https://github.com/eurisko-us/eurisko-us.github.io/tree/master/files/strategies/cohort-1/level-3</a></p>
 </blockquote>
-<p>Then, once everyone's strategies are submitted, I'll make an announcement, and you can download the strategies from the above folder and run all pairwise battles for <strong>200 games.</strong></p>
+<p>Then, once everyone's strategies are submitted, I'll make an announcement, and you can download the strategies from the above folder and run all pairwise battles for <strong>100 games.</strong></p>
 <ul>
-<li><p>Go through <code>max_turns=100</code> before declaring a draw. I think this should run quick enough, since we decreased from 500 games to 200 games, but if any 200-game matchups are taking longer than 1 minute to run, then post about it and we'll make an adjustment.</p>
+<li><p>Go through <code>max_turns=100</code> before declaring a draw. I think this should run quick enough, since we decreased from 500 games to 100 games, but if any 100-game matchups are taking longer than a couple minutes to run, then post about it and we'll figure something out.</p>
 </li>
 <li><p>Put your data in the spreadsheet:</p>
 <blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
@@ -14113,7 +14113,25 @@ int main()
 <li>2nd place: 30 pts extra credit in the assignments category</li>
 <li>3rd place: 10 pts extra credit in the assignments category</li>
 </ul>
-<h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p>Compute $\dfrac{\textrm dE}{\textrm dw_{34}},$ $\dfrac{\textrm dE}{\textrm dw_{24}},$ $\dfrac{\textrm dE}{\textrm dw_{13}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix}
+&amp; &amp; n_4 \\ 
+&amp; \nearrow &amp; &amp; \nwarrow \\ 
+n_2 &amp; &amp; &amp; &amp; n_3 \\
+&amp; \nwarrow &amp; &amp; \nearrow  \\
+&amp; &amp; n_1 \\ 
+&amp; &amp; \uparrow \\ 
+&amp; &amp; n_0 \\ 
+\end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \\ a_4 = 6 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 7 \\ f_1'(i_1) = 8 \\ f_2'(i_2) = 9 \\ f_3'(i_3) = 10 \\ f_4'(i_4) = 11 \end{matrix} \qquad \begin{matrix} w_{01} = 12 \\ w_{12} = 13 \\ w_{13} = 14 \\ w_{24} = 15 \\ w_{34} = 16 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{34}} = 550, \qquad \dfrac{\textrm dE}{\textrm d w_{24}} = 440, \qquad \dfrac{\textrm dE}{\textrm d w_{13}} = 52800, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 44550, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 878900.
+$$</p>
 
 </div>
 </div>
