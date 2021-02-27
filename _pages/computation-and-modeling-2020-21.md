@@ -477,6 +477,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-23-1">Merge Sort</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-23-2">Expectation/Variance of General Exponential/Uniform Distributions</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-23.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-23.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-23.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-23.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-23.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-23.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-23.pdf">William</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-23.pdf">Nathan R</a>,-->
+        </font>
     </li>
     <br>
     <li><b>Wednesday, October 21</b>
@@ -496,6 +507,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-21-2">Expectation and Variance of a Uniform Distribution</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-21-3">Determinant via RREF Operations</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-21.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-21.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-21.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-21.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-21.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-21.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-21.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-21.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Wednesday, October 14</b>
