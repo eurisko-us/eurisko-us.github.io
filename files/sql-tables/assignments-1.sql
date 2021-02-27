@@ -23,12 +23,6 @@ VALUES
     ('Harry', 'Ng'),
     ('Ishmael', 'Smith'),
     ('Kinga', 'Shenko'); 
- 
-CREATE TABLE assignment ( 
-    number TINYINT,
-    lastname VARCHAR(30), 
-    score VARCHAR(30)
-); 
 
 CREATE TABLE assignment ( 
     number TINYINT,
