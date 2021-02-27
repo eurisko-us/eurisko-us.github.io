@@ -514,6 +514,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-52-1">Using the Variance-Expectation Identity</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-52-2">Hodgkin-Huxley Neuron Model</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-52.pdf">Riley</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-52.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-52.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-52.pdf">George</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-52.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, October 9</b>
@@ -534,6 +542,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-50-2">SIR Model</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-50-3">Standardized Game State</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        Riley (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-50-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-50-2.pdf">2</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-50.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-50.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-50.pdf">George</a>,
+        David (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-50-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-50-2.pdf">2</a>)
+        </font>
     </li>
     <br>
     <li><b>Friday, October 2</b>
