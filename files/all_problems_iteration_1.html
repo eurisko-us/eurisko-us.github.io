@@ -14139,7 +14139,29 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-96-2">Problem 96-2<a class="anchor-link" href="#Problem-96-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-96-2">Problem 96-2<a class="anchor-link" href="#Problem-96-2">&#182;</a></h1><h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Write a recursive function <code>merge</code> that merges two sorted lists. To do this, you can check the first elements of each list, and make the lesser one the next element, then merge the lists that remain.</p>
+
+<pre><code>merge (x:xs) (y:ys) = if x &lt; y
+                        then _______
+                        else _______
+merge [] xs = ____
+merge xs [] = ____
+
+main = print(merge [1,2,5,8] [3,4,6,7,10])
+-- should return [1,2,3,4,5,6,7,8,9,10]</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create a sql table by copying the following script:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql</a></p>
+</blockquote>
+<p>Then, compute the average assignment score of each student. List the results from highest to lowest, along with the full names of the students.</p>
+<p>This is what your output should look like:</p>
+
+<pre><code>fullname    avgScore
+Ishmael Smith   90.0000
+Sylvia Sanchez  86.6667
+Kinga Shenko    85.0000
+Franklin Walton 80.0000
+Harry Ng    78.3333</code></pre>
+<p><strong>Hint:</strong> You'll have to use a join and a group by.</p>
 
 </div>
 </div>
@@ -14147,7 +14169,24 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-96-3">Problem 96-3<a class="anchor-link" href="#Problem-96-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-96-3">Problem 96-3<a class="anchor-link" href="#Problem-96-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>neural nets overleaf: _____
+put your game results in the spreadsheet (but you don't have to paste the link)
+Repl.it link to haskell file: _____
+sqltest.net link: _____
+
+commits: _____
+(space-empires, assignment-problems)
+
+Created issue: _____</code></pre>
 
 </div>
 </div>

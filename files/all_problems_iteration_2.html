@@ -13212,62 +13212,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3>
-<pre><code>merge (x:xs) (y:ys) = if x &lt; y
-                        then _______
-                        else _______
-merge [] xs = ____
-merge xs [] = ____</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">random</span>
-<span class="p">[(</span><span class="n">x</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="mi">3</span><span class="o">+</span><span class="mf">0.5</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mf">0.05</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="mf">0.5</span><span class="o">-</span><span class="n">random</span><span class="p">()),</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="o">*</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">8</span><span class="p">)]]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[&nbsp;]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[(-4, 11.0),
- (-2, 5.0),
- (0, 3.0),
- (2, 5.0),
- (4, 11.1),
- (6, 21.1),
- (8, 35.1),
- (10, 52.8),
- (12, 74.8),
- (14, 101.2)]</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-63-1">Problem 63-1<a class="anchor-link" href="#Problem-63-1">&#182;</a></h1><h3 id="Training-and-Testing-Sets">Training and Testing Sets<a class="anchor-link" href="#Training-and-Testing-Sets">&#182;</a></h3><p><strong>Watch this video FIRST:</strong> <a href="https://youtu.be/EuBBz3bI-aA?t=29">https://youtu.be/EuBBz3bI-aA?t=29</a></p>
 <p><strong>a.</strong> Consider the following dataset:</p>
 
@@ -13325,7 +13269,29 @@ merge xs [] = ____</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-63-2">Problem 63-2<a class="anchor-link" href="#Problem-63-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-63-2">Problem 63-2<a class="anchor-link" href="#Problem-63-2">&#182;</a></h1><h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p>Write a recursive function <code>merge</code> that merges two sorted lists. To do this, you can check the first elements of each list, and make the lesser one the next element, then merge the lists that remain.</p>
+
+<pre><code>merge (x:xs) (y:ys) = if x &lt; y
+                        then _______
+                        else _______
+merge [] xs = ____
+merge xs [] = ____
+
+main = print(merge [1,2,5,8] [3,4,6,7,10])
+-- should return [1,2,3,4,5,6,7,8,9,10]</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create a sql table by copying the following script:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql</a></p>
+</blockquote>
+<p>Then, compute the average assignment score of each student. List the results from highest to lowest, along with the full names of the students.</p>
+<p>This is what your output should look like:</p>
+
+<pre><code>fullname    avgScore
+Ishmael Smith   90.0000
+Sylvia Sanchez  86.6667
+Kinga Shenko    85.0000
+Franklin Walton 80.0000
+Harry Ng    78.3333</code></pre>
+<p><strong>Hint:</strong> You'll have to use a join and a group by.</p>
 
 </div>
 </div>
@@ -13333,7 +13299,24 @@ merge xs [] = ____</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-63-3">Problem 63-3<a class="anchor-link" href="#Problem-63-3">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<h1 id="Problem-63-3">Problem 63-3<a class="anchor-link" href="#Problem-63-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Train/test overleaf: _____
+No link needed for your blog post (I have the link already)
+Repl.it link to haskell file: _____
+sqltest.net link: _____
+
+commits: _____
+(machine-learning, assignment-problems)
+
+Created issue: _____</code></pre>
 
 </div>
 </div>
