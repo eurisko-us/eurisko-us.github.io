@@ -505,6 +505,13 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-53-2">MovementEngine</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-53-3">Bio / Headshot</a></li>
         </ul></font>
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-53.pdf">Riley</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-53.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-53.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-53.pdf">George</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-53.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Monday, October 12</b>
