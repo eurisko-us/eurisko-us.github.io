@@ -468,6 +468,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-24-1">EulerEstimator</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-24-2">Introduction to Likelihood</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-24.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-24.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-24.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-24.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-24.pdf">Maia</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-24.pdf">Nathan A</a>,-->
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-24.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-24.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Friday, October 23</b>
