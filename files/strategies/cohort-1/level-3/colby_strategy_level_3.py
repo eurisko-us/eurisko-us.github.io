@@ -40,7 +40,7 @@ class BasicStrategy:  # no movement or actual strategy, just funcitons like deci
         elif ship_movement_level == 5:
             return [2,3,3]
           
-class ColbyStrategyLevel3(BasicStrategy):
+class ColbyStrategyLevel3(BasicStrategy): #use this one justin
     def __init__(self, player_index):  # wutever else we need):
         self.player_index = player_index
         self.__name__ = 'ColbyStrategyLevel3'
