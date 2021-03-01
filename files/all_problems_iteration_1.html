@@ -14083,7 +14083,110 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Game level 3 matchups</p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Intro to linear programming</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-97-1">Problem 97-1<a class="anchor-link" href="#Problem-97-1">&#182;</a></h1><p><em>This problem is the beginning of some more involved machine learning tasks. To ease the transition, this will be the only problem on this assignment.</em></p>
+<p><strong>This problem is just as important as space empires and neural nets, and the modeling techniques covered will 100% be on future quizzes and the final. Be sure to do this problem well. If you've run into any issues with your space empires simulations, DO THIS PROBLEM FIRST before you go back to space empires.</strong></p>
+<p>Make an account on Kaggle.com so that we can walk through a Titanic prediction task.</p>
+<ul>
+<li><p>Go to <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a>, scroll down to the bottom, and click "download all". You'll get a zip file called <code>titanic.zip</code>.</p>
+</li>
+<li><p>Upload <code>titanic.zip</code> into <code>machine-learning/datasets/titanic/</code>. Then, run <code>unzip machine-learning/datasets/titanic/titanic.zip</code> in the command line to unzip the file.</p>
+</li>
+<li><p>This gives us 3 files: <code>train.csv</code>, <code>test.csv</code>, and <code>gender_submission.csv</code>. The file <code>train.csv</code> contains data about a bunch of passengers along with whether or not they survived. Our goal is to use <code>train.csv</code> to build a model that will predict the outcome of passengers in <code>test.csv</code> (for which the survival data is not given).</p>
+<ul>
+<li><p><strong>IMPORTANT:</strong> To prevent confusion, rename <code>train.csv</code> to <code>dataset_of_knowns.csv</code>, rename <code>test.csv</code> to <code>unknowns_to_predict.csv</code>, and rename <code>gender_submission.csv</code> to <code>predictions_from_gender_model.csv</code>.</p>
+</li>
+<li><p>The file <code>predictions_from_gender_model.csv</code> is an example of predictions from a really, really basic model: if the passenger is female, predict that they survived; if the passenger is male, predicte that they did not survive.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>To build a model, we will proceed with the following steps:</p>
+<ul>
+<li><p><em>Feature Selection</em> - deciding which variables we want in our model. This is usually a subset of the original number of features.</p>
+</li>
+<li><p><em>Model Selection</em> - ranking our models from best to worst, based on cross-validation performance. (We'll train each model on half the data, use it to predict the other half of the data, and see how accurate it is.)</p>
+</li>
+<li><p><em>Submission</em> - taking our best model, training it on the full <code>dataset_of_knowns.csv</code>, running it on <code>unknowns_to_predict.csv</code>, generating a <code>predictions.csv</code> file, and uploading it to Kaggle.com for scoring.</p>
+</li>
+</ul>
+<p><strong>For this problem, you will need to write what you did for each of these steps in an Overleaf doc (kind of like you would in a lab journal). So, open up one now and let's continue.</strong></p>
+<h3 id="Feature-Engineering">Feature Engineering<a class="anchor-link" href="#Feature-Engineering">&#182;</a></h3><p>In your Overleaf doc, create a section called "Feature Selection". <strong>Make a bulleted list of all the features along with your justification for using or not using the feature in your model.</strong></p>
+<p><strong>Important:</strong> There is a data dictionary at <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a> that describes what each feature means.</p>
+<p>It will be helpful to look at the actual values of the variables as well. For example, here are the first 5 records in the dataset:</p>
+
+<pre><code>PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+1,0,3,"Braund, Mr. Owen Harris",male,22,1,0,A/5 21171,7.25,,S
+2,1,1,"Cumings, Mrs. John Bradley (Florence Briggs Thayer)",female,38,1,0,PC 17599,71.2833,C85,C
+3,1,3,"Heikkinen, Miss. Laina",female,26,0,0,STON/O2. 3101282,7.925,,S
+4,1,1,"Futrelle, Mrs. Jacques Heath (Lily May Peel)",female,35,1,0,113803,53.1,C123,S
+5,0,3,"Allen, Mr. William Henry",male,35,0,0,373450,8.05,,S</code></pre>
+<p>For every feature that you decide to keep, give a possible theory for how the feature may help predict whether a passenger survived.</p>
+<ul>
+<li><em>For example, you should keep the <code>Age</code> feature because it's likely that younger passengers were given priority when boarding lifeboats.</em></li>
+</ul>
+<p>For every feature that you decide to remove, explain why it 1) is irrelevant to the prediction task, or 2) would take too long to transform into a worthwhile feature.</p>
+<ul>
+<li><em>For example, you can remove the <code>ticket</code> feature because it's formatted so weirdly (e.g. <code>A/5 21171</code>). It's possible that there may be some information here, but it would take a while to figure out how to turn this into a worthwhile feature that we could actually plug into our model. (There's multiple parts to the ticket number and it's a combination of letters and numbers, so it's not straightforward how to use it.)</em></li>
+</ul>
+<h3 id="Model-Selection">Model Selection<a class="anchor-link" href="#Model-Selection">&#182;</a></h3><p>Split <code>dataset_of_knowns.csv</code> in half, selecting every other row for training and leaving the leftover rows for testing.</p>
+<p>Fit several models to the training dataset:</p>
+<ul>
+<li><p><em>Linear regressor</em> - if output is greater than or equal to 0.5, predict category 1 (survived); if output is less than 0.5, predict category 0 (didn't survive). You may wish to include interaction terms that you think would be important, since linear regressors do not capture interactions by default.</p>
+</li>
+<li><p><em>Logistic regressor</em> - same notes as above (for the linear regressor)</p>
+</li>
+<li><p><em>Gini decision tree</em> - conveniently, decision trees predict categorical variables by default ("survived" has 2 categories, 0 and 1), and they also capture interactions by default (so don't include any interaction terms when you feed the data into the Gini tree). We'll try out 2 different models, one with <code>max_depth=5</code> and another with <code>max_depth=10</code>.</p>
+</li>
+<li><p><em>Random forest</em> - same notes as above (for the Gini decision tree). We'll try out 2 different models, one with <code>max_depth=3</code> and <code>num_trees=1000</code>, and another with <code>max_depth=5</code> and <code>num_trees=1000</code>.</p>
+</li>
+<li><p><em>Naive Bayes</em> - note that you'll need to take any features that are quantitative and re-label their values by categories. By default, you can just use 3 categories: "low", "mid", "high", where the lowest third of the data is re-labeled with the category "low", the highest third of the data is re-labeled with the category "high", and the middle third of the data is re-labeled with the category "mid".</p>
+<ul>
+<li>For example, suppose you had a variable that had values <code>[1,4,3,3,2,5,7,6,4]</code>. Sorted, these values are <code>[1,2,3,3,4,4,5,6,7]</code>. So we'd relabel <code>1,2,3</code> as <code>"low"</code>, <code>5,6,7</code> as <code>"high"</code>, and <code>4</code> as <code>"mid"</code>. So, the values <code>[1,4,3,3,2,5,7,6,4]</code> would get transformed into <code>["low","mid","low","low","low","high","high","high","mid"]</code></li>
+</ul>
+</li>
+<li><p><em>k-Nearest Neighbors</em> - for any variables that are quantitative, transform them as
+$$
+x \to \dfrac{x - \min(x)}{\max(x) - \min(x)}
+$$
+so that they fit into the interval <code>[0,1].</code> For any variables that are categorical, leave them be. Use a "Mahnattan" distance metric (the sum of absolute differences). Note that if a variable is categorical, then their distance between 2 values should be counted as $0$ if they are the same and $1$ if they are different. We'll try 2 different models, <code>k=5</code> and <code>k=10</code>.</p>
+<ul>
+<li><p>The reason for the Manhattan distance metric instead of the Euclidean distance metric is so that differences between categorical variables do not drastically overpower differences between quantitative variables.</p>
+</li>
+<li><p>For example, suppose you had two data points <code>(0.2, 0.7, "dog", "red")</code> and <code>(0.5, 0.1, "cat", "red")</code>. Then the distance would be as follows:</p>
+
+<pre><code>distance
+= |0.2-0.5| + |0.7-0.1| + int("dog"!="cat") + int("red"!="red")
+= 0.3 + 0.6 + 1 + 0
+= 1.9</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p>Then, use these models to predict survival for the training dataset and the testing dataset separately. Make a table in your Overleaf doc that contains the resulting accuracy rates.</p>
+<ul>
+<li>For example, suppose there are 100 rows in the training dataset and 100 rows in the testing dataset (to be clear, the actual number of rows in your dataset will probably be different). You train your Gini decision tree with <code>max_depth=10</code> on the training dataset, and then use it to predict on the testing dataset. You get 98 correct predictions on the training dataset and 70 correct predictions on the testing dataset (which, by the way, is an indication that you're overfitting -- your <code>max_depth</code> is probably too high). Then your table looks like this:</li>
+</ul>
+
+<pre><code>Model         | Training Accuracy | Testing Accuracy
+----------------------------------------------------------
+Gini depth 10 | 98%               | 70%</code></pre>
+<p><strong>To be clear, your table should have 9 rows, one for each model: linear, logistic, Gini depth 5, Gini depth 10, random forest depth 5, random forest depth 10, naive Bayes, 5-nearest-neighbors, 10-nearest-neighbors.</strong></p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Take your best model (i.e. the one with the highest testing accuracy) and evaluate its predictions on <code>unknowns_to_predict.csv</code>.</p>
+<p>Save your results as <code>predictions.csv</code>, and make sure they follow the <strong>exact same format</strong> as <code>predictions_from_gender_model.csv</code>.</p>
+<ul>
+<li>By "the exact same format", I mean THE EXACT SAME FORMAT. Make sure the header is exactly the same. Make sure that you're writing the <code>0</code>'s and <code>1</code>s as integers, not strings. Make sure that you include the <code>PassengerId</code> column. Make sure that the values in the <code>PassengerId</code> column match up exactly with those in <code>predictions_from_gender_model.csv</code>. <strong>The only thing that should be different is the values in the <code>Survived</code> column.</strong></li>
+</ul>
+<p>Click on the "Submit Predictions" button on the right side of the screen and submit your file <code>predictions.csv</code>. You should get a screen that looks like the image below, but has your <code>predictions.csv</code> instead of <code>gender-submissions.csv</code>. You should also get a higher score than <code>0.76555</code> (which is the baseline accuracy of the gender model).</p>
+<center><img width=500 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kaggle-submission.png' border='0'/></center><p><strong>Take a screenshot of this screen and include it in your Overleaf writeup.</strong></p>
+<h3 id="What-to-Turn-In">What to Turn In<a class="anchor-link" href="#What-to-Turn-In">&#182;</a></h3><p>Just the Overleaf writeup and a commit link to your <code>machine-learning</code> repo. That's it.</p>
 
 </div>
 </div>
@@ -14148,7 +14251,7 @@ merge [] xs = ____
 merge xs [] = ____
 
 main = print(merge [1,2,5,8] [3,4,6,7,10])
--- should return [1,2,3,4,5,6,7,8,9,10]</code></pre>
+-- should return [1,2,3,4,5,6,7,8,10]</code></pre>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create a sql table by copying the following script:</p>
 <blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql</a></p>
 </blockquote>

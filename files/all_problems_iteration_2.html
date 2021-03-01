@@ -13212,6 +13212,180 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>Given dataset, find the best regression model that you can. (This time, higher degree polynomials should be more obviously worse)</p>
+<p>Try fitting the following models: linear, quadratic, cubic, quartic, quintic, 10th degree</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-64-1">Problem 64-1<a class="anchor-link" href="#Problem-64-1">&#182;</a></h1><p><em>This problem is the beginning of some more involved software development with the Space Empires game. To ease the transition, this will be the only problem on this assignment.</em></p>
+<p>Time to start building the Space Empires game! We'll start with level 0.0, which will be one of the simplest games possible, and then work upwards from there.</p>
+<p><strong>For this problem, create a new GitHub repository called <code>space-empires</code>.</strong></p>
+<p>In the level 0.0 game, there are 2 players, each with 1 scout ship and 1 home colony, and the first player to send their scout to the opponent's home colony wins.</p>
+<p>To implement this, you'll need to create 2 classes: a <code>Game</code> class, and a <code>Player</code> class.</p>
+<p>The <code>Game</code> class will maintain a game state which holds all the information about the state of the game. Here is a partially completed template that you can use:</p>
+
+<pre><code>class Game:
+    def __init__(self, players, board_size=[7,7]):
+        self.players = players
+        board_x, board_y = board_size
+        mid_x = (board_x + 1) // 2
+        mid_y = (board_y + 1) // 2
+
+        self.game_state = {
+            'turn': 1,
+            'board_size': board_size,
+            'players': {
+                1: {
+                    'scout_coords': (mid_x, 1),
+                    'home_colony_coords': (mid_x, 1)
+                },
+                2: {
+                    'scout_coords': (mid_x, board_y),
+                    'home_colony_coords': (mid_x, board_y)
+                }
+            },
+            'winner': None
+        }
+
+    def set_player_numbers():
+        for i,player in enumerate(self.players):
+            player.set_player_number(i+1)
+
+    def check_if_coords_are_in_bounds(self, coords):
+        x, y = coords
+        board_x, board_y = self.game_state['board_size']
+        if 1 &lt;= x and x &lt;= board_x:
+            if 1 &lt;= y and y &lt;= board_y:
+                return True
+        return False
+
+    def check_if_translation_is_in_bounds(self, translation):
+        max_x, max_y = self.game_state['board_size']
+        myself = self.game_state['players'][self.player_number]
+        x, y = myself['scout_coords']
+        dx, dy = translation
+        new_coords = (x+dx,y+dy)
+        return self.is_in_bounds(new_coords)
+
+    def get_in_bounds_translations(self, coords):
+        translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
+        in_bounds_translations = []
+        for translation in translations:
+            if self.check_if_translation_is_in_bounds(translation):
+                in_bounds_translation.append(translation)
+
+    def complete_turn():
+        # your code here
+
+    def run_to_completion():
+        # your code here
+
+    # you can add more methods if you want</code></pre>
+<p>In <code>__init__</code>, the <code>players</code> argument is a list of player instances. On each turn, the game needs to</p>
+<ol>
+<li>loop through the list of players,</li>
+<li>get all possible moves (i.e. translations) for the player's scout ship,</li>
+<li>ask each player what move (i.e. translation) they want to make, and then </li>
+<li>update the game state with that move.</li>
+</ol>
+<p>At the end of each turn, if one player has its scout in the same location as the opponent's home colony, then the player wins. (Or, if both players do, then it's a tie.)</p>
+<p>A player is a class that takes the game state and list of possible translations as input and returns a translation that represents a move:</p>
+<ul>
+<li><code>(0,0)</code> - stay put</li>
+<li><code>(1,0)</code> - move right</li>
+<li><code>(-1,0)</code> - move left</li>
+<li><code>(0,1)</code> - move up</li>
+<li><code>(0,-1)</code> - move down</li>
+</ul>
+<p><strong>a.</strong> Make a <code>CustomPlayer</code> class that should defeat the <code>RandomPlayer</code> shown below. (Tip: just choose the translation that moves your scout closest to the enemy's home colony.)</p>
+
+<pre><code>from random import random
+import math
+
+class RandomPlayer():
+    def __init__():
+        self.player_number = None
+
+    def set_player_number(player_number):
+        self.player_number = player_number
+
+    def choose_translation(self, game_state, choices):
+        # `choices` is a list of possible translations,
+        # e.g. [(0,0), (-1,0), (0,1)] if the player's
+        # scout is in the bottom-right corner of the board
+
+        random_idx = math.floor(len(choices) * random())
+        return choices[random_idx]</code></pre>
+<p><strong>b.</strong> Complete the <code>Game</code> class and run your <code>CustomPlayer</code> against the <code>RandomPlayer</code> as follows:</p>
+
+<pre><code>&gt;&gt;&gt; players = [RandomPlayer(), CustomPlayer()]
+&gt;&gt;&gt; game = Game(players)
+&gt;&gt;&gt; game.state
+{
+    'turn': 1,
+    'board_size': [7,7],
+    'players': {
+        1: {
+            'scout_coords': (4, 1),
+            'home_colony_coords': (4, 1)
+        },
+        2: {
+            'scout_coords': (4, 7),
+            'home_colony_coords': (4, 7)
+        }
+    },
+    'winner': None
+}
+
+&gt;&gt;&gt; game.complete_turn()
+&gt;&gt;&gt; game.state
+{
+    'turn': 2,
+    'board_size': [7,7],
+    'players': {
+        1: {
+            'scout_coords': (will vary),
+            'home_colony_coords': (4, 1)
+        },
+        2: {
+            'scout_coords': (4, 6),
+            'home_colony_coords': (4, 7)
+        }
+    },
+    'winner': None
+}
+
+&gt;&gt;&gt; game.run_to_completion()
+&gt;&gt;&gt; game.state
+{
+    'turn': 7,
+    'board_size': [7,7],
+    'players': {
+        1: {
+            'scout_coords': (will vary),
+            'home_colony_coords': (4, 1)
+        },
+        2: {
+            'scout_coords': (4, 1),
+            'home_colony_coords': (4, 7)
+        }
+    },
+    'winner': 2
+}</code></pre>
+<p><strong>c.</strong> Write the above test using assert statements in <code>tests/test_game_level_0_0.py</code></p>
+<p><strong>Post "finished game level 0.0" on the #checkpoints channel once you finish this problem.</strong></p>
+<h3 id="What-to-Turn-In">What to Turn In<a class="anchor-link" href="#What-to-Turn-In">&#182;</a></h3><p>Just the a repl.it link to <code>tests/test_game_level_0_0.py</code> and a commit link to your new <code>space-empires</code> repo. That's it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-63-1">Problem 63-1<a class="anchor-link" href="#Problem-63-1">&#182;</a></h1><h3 id="Training-and-Testing-Sets">Training and Testing Sets<a class="anchor-link" href="#Training-and-Testing-Sets">&#182;</a></h3><p><strong>Watch this video FIRST:</strong> <a href="https://youtu.be/EuBBz3bI-aA?t=29">https://youtu.be/EuBBz3bI-aA?t=29</a></p>
 <p><strong>a.</strong> Consider the following dataset:</p>
 
@@ -13278,7 +13452,7 @@ merge [] xs = ____
 merge xs [] = ____
 
 main = print(merge [1,2,5,8] [3,4,6,7,10])
--- should return [1,2,3,4,5,6,7,8,9,10]</code></pre>
+-- should return [1,2,3,4,5,6,7,8,10]</code></pre>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create a sql table by copying the following script:</p>
 <blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-1.sql</a></p>
 </blockquote>
