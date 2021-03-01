@@ -75,7 +75,14 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="63">
+<font size="3em"><ol reversed start="64">
+    <li><b>Monday, March 1</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-64-1">Primary: Titanic Survival Prediction</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, February 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/517289955">Class Recording</a> (C&M is first half) - Test/Train Datasets, SQL
         <br>Assignment Problems:
