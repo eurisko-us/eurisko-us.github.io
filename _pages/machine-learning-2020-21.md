@@ -74,7 +74,14 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="96">
+<font size="3em"><ol reversed start="97">
+    <li><b>Monday, March 1</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-97-1">Primary: Titanic Survival Prediction</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, February 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/517289955">Class Recording</a> (ML is second half) - Weight Gradients, Crown Game Level 2 Winners
         <br>Assignment Problems:
