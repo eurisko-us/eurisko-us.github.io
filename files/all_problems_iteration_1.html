@@ -14179,13 +14179,13 @@ so that they fit into the interval <code>[0,1].</code> For any variables that ar
 ----------------------------------------------------------
 Gini depth 10 | 98%               | 70%</code></pre>
 <p><strong>To be clear, your table should have 9 rows, one for each model: linear, logistic, Gini depth 5, Gini depth 10, random forest depth 5, random forest depth 10, naive Bayes, 5-nearest-neighbors, 10-nearest-neighbors.</strong></p>
-<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Take your best model (i.e. the one with the highest testing accuracy) and evaluate its predictions on <code>unknowns_to_predict.csv</code>.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Take your best model (i.e. the one with the highest testing accuracy), <strong>re-train it on the entire <code>dataset_of_knowns.csv</code></strong>, and evaluate its predictions on <code>unknowns_to_predict.csv</code>.</p>
 <p>Save your results as <code>predictions.csv</code>, and make sure they follow the <strong>exact same format</strong> as <code>predictions_from_gender_model.csv</code>.</p>
 <ul>
 <li>By "the exact same format", I mean THE EXACT SAME FORMAT. Make sure the header is exactly the same. Make sure that you're writing the <code>0</code>'s and <code>1</code>s as integers, not strings. Make sure that you include the <code>PassengerId</code> column. Make sure that the values in the <code>PassengerId</code> column match up exactly with those in <code>predictions_from_gender_model.csv</code>. <strong>The only thing that should be different is the values in the <code>Survived</code> column.</strong></li>
 </ul>
 <p>Click on the "Submit Predictions" button on the right side of the screen and submit your file <code>predictions.csv</code>. You should get a screen that looks like the image below, but has your <code>predictions.csv</code> instead of <code>gender-submissions.csv</code>. You should also get a higher score than <code>0.76555</code> (which is the baseline accuracy of the gender model).</p>
-<center><img width=500 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kaggle-submission.png' border='0'/></center><p><strong>Take a screenshot of this screen and include it in your Overleaf writeup.</strong></p>
+<center><img width=500 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kaggle-submission.png' border='0'/></center><p><strong>Take a screenshot of this screen, post it on #machine-learning, and include it in your Overleaf writeup.</strong></p>
 <h3 id="What-to-Turn-In">What to Turn In<a class="anchor-link" href="#What-to-Turn-In">&#182;</a></h3><p>Just the Overleaf writeup and a commit link to your <code>machine-learning</code> repo. That's it.</p>
 
 </div>
