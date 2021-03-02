@@ -436,6 +436,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-28-3">Revisions: Introduction to Bayesian Inference</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-28-4">Sololearn C++ Modules 1 and 2</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-28.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-28.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-28.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-28.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-28.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-28.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-28.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-28.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Wednesday, November 4</b>
@@ -447,6 +458,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-27-3">Introduction to Bayesian Inference</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-27-4">Submit a Link to your GitHub</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-27.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-27.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-27.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-27.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-27.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-27.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-27.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-27.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Friday, October 30</b>
@@ -457,6 +479,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-26-2">Determinant via Cofactor Method, + Comparison to Determinant via RREF Method</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-26-3">Application of Uniform & Exponential Distributions</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-26.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-26.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-26.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-26.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-26.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-26.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-26.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-26.pdf">Nathan R</a>,
+        </font>
     </li>
     <br>
     <li><b>Wednesday, October 28</b>
