@@ -492,6 +492,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-55-2">Hodgkin Huxley Neuron Class</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-55-3">EconomicEngine</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-55.pdf">Riley</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-55.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-55.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-55.pdf">George</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-55.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, October 16</b>
@@ -520,6 +528,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-53-2">MovementEngine</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-53-3">Bio / Headshot</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
         <font size="3em">
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-53.pdf">Riley</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-53.pdf">Colby</a>,
