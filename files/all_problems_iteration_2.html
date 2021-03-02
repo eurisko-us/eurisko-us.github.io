@@ -13231,6 +13231,8 @@ div#notebook {
 <pre><code>class Game:
     def __init__(self, players, board_size=[7,7]):
         self.players = players
+        self.set_player_numbers()
+
         board_x, board_y = board_size
         mid_x = (board_x + 1) // 2
         mid_y = (board_y + 1) // 2
@@ -13251,8 +13253,8 @@ div#notebook {
             'winner': None
         }
 
-    def set_player_numbers():
-        for i,player in enumerate(self.players):
+    def set_player_numbers(self):
+        for i, player in enumerate(self.players):
             player.set_player_number(i+1)
 
     def check_if_coords_are_in_bounds(self, coords):
@@ -13263,10 +13265,9 @@ div#notebook {
                 return True
         return False
 
-    def check_if_translation_is_in_bounds(self, translation):
+    def check_if_translation_is_in_bounds(self, coords, translation):
         max_x, max_y = self.game_state['board_size']
-        myself = self.game_state['players'][self.player_number]
-        x, y = myself['scout_coords']
+        x, y = coords
         dx, dy = translation
         new_coords = (x+dx,y+dy)
         return self.is_in_bounds(new_coords)
@@ -13275,16 +13276,21 @@ div#notebook {
         translations = [(0,0), (0,1), (0,-1), (1,0), (-1,0)]
         in_bounds_translations = []
         for translation in translations:
-            if self.check_if_translation_is_in_bounds(translation):
+            if self.check_if_translation_is_in_bounds(coords, translation):
                 in_bounds_translation.append(translation)
 
     def complete_turn():
-        # your code here
+        # YOUR CODE HERE
+        # for each player, figure out what translations
+        # are in bounds for their scout, and get the player's
+        # choice of where they want to move their scout.
+        # Then, update the game state accordingly.
 
     def run_to_completion():
-        # your code here
+        # YOUR CODE HERE
+        # complete turns until there is a winner
 
-    # you can add more methods if you want</code></pre>
+    # you can add more helper methods if you want</code></pre>
 <p>In <code>__init__</code>, the <code>players</code> argument is a list of player instances. On each turn, the game needs to</p>
 <ol>
 <li>loop through the list of players,</li>
@@ -13307,11 +13313,11 @@ div#notebook {
 import math
 
 class RandomPlayer():
-    def __init__():
+    def __init__(self):
         self.player_number = None
 
-    def set_player_number(player_number):
-        self.player_number = player_number
+    def set_player_number(self, n):
+        self.player_number = n
 
     def choose_translation(self, game_state, choices):
         # `choices` is a list of possible translations,
@@ -13320,6 +13326,42 @@ class RandomPlayer():
 
         random_idx = math.floor(len(choices) * random())
         return choices[random_idx]</code></pre>
+<p>Here is a partially completed template for your custom player.</p>
+
+<pre><code>from random import random
+import math
+
+class CustomPlayer():
+    def __init__(self):
+        self.player_number = None
+
+    def set_player_number(self, n):
+        self.player_number = n
+
+    def get_opponent_player_number(self):
+        if self.player_number == None:
+            return None
+        elif self.player_number == 1:
+            return 2
+        elif self.player_number == 2:
+            return 1
+
+    def choose_translation(self, game_state, choices):
+        # `choices` is a list of possible translations,
+        # e.g. [(0,0), (-1,0), (0,1)] if the player's
+        # scout is in the bottom-right corner of the board
+        myself = game_state['players'][self.player_number]
+        opponent_player_number = self.get_opponent_player_number()
+        opponent = game_state['players'][opponent_player_number]
+
+        my_scout_coords = myself['scout_coords']
+        opponent_home_colony_coords = opponent['home_colony_coords']
+
+        # FOR YOU TO DO:
+        # you need to use `my_scout_coords` and
+        # `opponent_home_colony_coords` to return the
+        # translation that will bring you closest to
+        # the opponent</code></pre>
 <p><strong>b.</strong> Complete the <code>Game</code> class and run your <code>CustomPlayer</code> against the <code>RandomPlayer</code> as follows:</p>
 
 <pre><code>&gt;&gt;&gt; players = [RandomPlayer(), CustomPlayer()]
