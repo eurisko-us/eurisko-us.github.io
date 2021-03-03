@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="64">
+<font size="3em"><ol reversed start="65">
+    <li><b>Wednesday, March 3</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/519186985">Class Recording</a> (C&M is first half) - quiz 2-3 review
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-65-1">Primary: Finish Game Level 3 0.0, Writing, Signal Separation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-65-2">Supplementary: Quiz Corrections, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-65-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, March 1</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
