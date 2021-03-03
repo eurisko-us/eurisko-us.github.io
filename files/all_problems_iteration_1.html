@@ -14083,7 +14083,38 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Intro to linear programming</p>
+<h1 id="Problem-98-1">Problem 98-1<a class="anchor-link" href="#Problem-98-1">&#182;</a></h1><p>George -- "Use the combat state to find the unit index then go into the hidden game state to get that units into????
+3:38
+Just have it all in combat state man"</p>
+<p>"Also just pass in a normal hidden game state so you can use your cp and their other ship locations"</p>
+<p>^ let's refactor to do this</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-98-2">Problem 98-2<a class="anchor-link" href="#Problem-98-2">&#182;</a></h1><h3 id="Linear-Programming">Linear Programming<a class="anchor-link" href="#Linear-Programming">&#182;</a></h3><p>Walk through this:</p>
+<p><a href="http://www.phpsimplex.com/en/simplex_method_example.htm">http://www.phpsimplex.com/en/simplex_method_example.htm</a></p>
+<p>do a similar example by hand</p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>a.</strong> In C++, you can think of strings as arrays of numbers that represent characters.</p>
+
+<pre><code>char myString[]{ "hello world" };
+int length = sizeof(myString) / sizeof(myString[0]);
+std::cout &lt;&lt; "the length of this string is " &lt;&lt; length &lt;&lt; "\n";
+for(int i=0; i&lt;length; i++) {
+    std::cout &lt;&lt; myString[i];
+}
+
+--- output --- 
+the length of this string is 12
+hello world</code></pre>
+<p>Note that the length of the string is always one more than the number of characters (including spaces) in the string. This is because, under the hood, C++ needs to add a "null terminator" to the end of the string so that it knows where the string stops.</p>
+<p>So the array contains all the numeric codes of the letters in the string, plus a null terminator at the end (which you don't see when the string is printed out).</p>
+<p><strong>Question.</strong> Suppose you create an array that contains all the lowercase letters of the English alphabet in alphabetical order. What would the length of this array be? (If your answer is 26, please re-read the paragraphs above.)</p>
+<p><strong>b.</strong> pointers</p>
+<p><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/">https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/</a></p>
 
 </div>
 </div>
@@ -14147,10 +14178,7 @@ int main()
 </li>
 <li><p><em>Random forest</em> - same notes as above (for the Gini decision tree). We'll try out 2 different models, one with <code>max_depth=3</code> and <code>num_trees=1000</code>, and another with <code>max_depth=5</code> and <code>num_trees=1000</code>.</p>
 </li>
-<li><p><em>Naive Bayes</em> - note that you'll need to take any features that are quantitative and re-label their values by categories. By default, you can just use 3 categories: "low", "mid", "high", where the lowest third of the data is re-labeled with the category "low", the highest third of the data is re-labeled with the category "high", and the middle third of the data is re-labeled with the category "mid".</p>
-<ul>
-<li>For example, suppose you had a variable that had values <code>[1,4,3,3,2,5,7,6,4]</code>. Sorted, these values are <code>[1,2,3,3,4,4,5,6,7]</code>. So we'd relabel <code>1,2,3</code> as <code>"low"</code>, <code>5,6,7</code> as <code>"high"</code>, and <code>4</code> as <code>"mid"</code>. So, the values <code>[1,4,3,3,2,5,7,6,4]</code> would get transformed into <code>["low","mid","low","low","low","high","high","high","mid"]</code></li>
-</ul>
+<li><p><em>Naive Bayes</em> - note that you'll need to take any features that are quantitative and re-label their values by categories. By default, you can just use 2 categories: "low" and "high", where a value is labeled as "low" if it's less than or equal to the mean and "high" if it's above the mean.</p>
 </li>
 <li><p><em>k-Nearest Neighbors</em> - for any variables that are quantitative, transform them as
 $$
@@ -14184,7 +14212,7 @@ Gini depth 10 | 98%               | 70%</code></pre>
 <ul>
 <li>By "the exact same format", I mean THE EXACT SAME FORMAT. Make sure the header is exactly the same. Make sure that you're writing the <code>0</code>'s and <code>1</code>s as integers, not strings. Make sure that you include the <code>PassengerId</code> column. Make sure that the values in the <code>PassengerId</code> column match up exactly with those in <code>predictions_from_gender_model.csv</code>. <strong>The only thing that should be different is the values in the <code>Survived</code> column.</strong></li>
 </ul>
-<p>Click on the "Submit Predictions" button on the right side of the screen and submit your file <code>predictions.csv</code>. You should get a screen that looks like the image below, but has your <code>predictions.csv</code> instead of <code>gender-submissions.csv</code>. You should also get a higher score than <code>0.76555</code> (which is the baseline accuracy of the gender model).</p>
+<p>Click on the "Submit Predictions" button on the right side of the screen and submit your file <code>predictions.csv</code>. You should get a screen that looks like the image below, but has your <code>predictions.csv</code> instead of <code>gender-submissions.csv</code>. You should hopefully get a higher score than <code>0.76555</code> (which is the baseline accuracy of the "all women survive" model).</p>
 <center><img width=500 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kaggle-submission.png' border='0'/></center><p><strong>Take a screenshot of this screen, post it on #machine-learning, and include it in your Overleaf writeup.</strong></p>
 <h3 id="THERE-WILL-BE-EXTRA-CREDIT-PRIZES-FOR-1ST,-2ND,-AND-3RD-PLACE!-(50-points,-30-points,-10-points)">THERE WILL BE EXTRA CREDIT PRIZES FOR 1ST, 2ND, AND 3RD PLACE! (50 points, 30 points, 10 points)<a class="anchor-link" href="#THERE-WILL-BE-EXTRA-CREDIT-PRIZES-FOR-1ST,-2ND,-AND-3RD-PLACE!-(50-points,-30-points,-10-points)">&#182;</a></h3><h3 id="What-to-Turn-In">What to Turn In<a class="anchor-link" href="#What-to-Turn-In">&#182;</a></h3><p>Just the Overleaf writeup and a commit link to your <code>machine-learning</code> repo. That's it.</p>
 
