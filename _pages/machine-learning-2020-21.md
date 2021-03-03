@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="97">
+<font size="3em"><ol reversed start="98">
+    <li><b>Wednesday, March 3</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/519186985">Class Recording</a> (ML is second half) - quiz 2-3 review
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-98-1">Primary: Game Level 3 Matchups, Titanic Prediction Writeup</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-98-2">Supplementary: Quiz Corrections, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-98-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, March 1</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
