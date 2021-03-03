@@ -13221,6 +13221,111 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-1">Problem 65-1<a class="anchor-link" href="#Problem-65-1">&#182;</a></h1><h3 id="Signal-Separation">Signal Separation<a class="anchor-link" href="#Signal-Separation">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/analysis/signal_separation.py</code></p>
+<p>The following dataset is generated from a linear combination of signals:</p>
+$$y = a \sin(x) + b \cos(x) + c \sin(2x) + d \cos(2x)$$<p>for some constants $a,b,c,d.$</p>
+<p>Use linear regression to determine the best-fit values of $a,b,c,d.$</p>
+
+<pre><code>[(0.0, 7.0),
+ (0.2, 5.6),
+ (0.4, 3.56),
+ (0.6, 1.23),
+ (0.8, -1.03),
+ (1.0, -2.89),
+ (1.2, -4.06),
+ (1.4, -4.39),
+ (1.6, -3.88),
+ (1.8, -2.64),
+ (2.0, -0.92),
+ (2.2, 0.95),
+ (2.4, 2.63),
+ (2.6, 3.79),
+ (2.8, 4.22),
+ (3.0, 3.8),
+ (3.2, 2.56),
+ (3.4, 0.68),
+ (3.6, -1.58),
+ (3.8, -3.84),
+ (4.0, -5.76),
+ (4.2, -7.01),
+ (4.4, -7.38),
+ (4.6, -6.76),
+ (4.8, -5.22)]</code></pre>
+<p>Plot the above data points, and plot the curve of the resulting model $y = a \sin(x) + b \cos(x) + c \sin(2x) + d \cos(2x)$ on the same plot as the data points. This way, you can see how well it.</p>
+<p>Paste the equation of the model into an Overleaf doc, along with the graph.</p>
+<h3 id="Writing">Writing<a class="anchor-link" href="#Writing">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-2">Problem 65-2<a class="anchor-link" href="#Problem-65-2">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>Submit corrections for any problem you got wrong. Try to do these corrections without looking at the recording of what we went over in class.</p>
+<p>You don't have to explain what you got wrong or why. Just send in the correct results.</p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>Put the answers to these questions in your overleaf doc.</strong></p>
+<p>In C++, you can think of strings as arrays of numbers that represent characters.</p>
+
+<pre><code>char myString[]{ "hello world" };
+int length = sizeof(myString) / sizeof(myString[0]);
+for(int i=0; i&lt;length; i++) {
+    std::cout &lt;&lt; myString[i];
+}
+std::cout &lt;&lt; "\n";
+std::cout &lt;&lt; "the length of this string is " &lt;&lt; length;
+
+--- output --- 
+hello world
+the length of this string is 12</code></pre>
+<p>Note that the length of the string is always one more than the number of characters (including spaces) in the string. This is because, under the hood, C++ needs to add a "null terminator" to the end of the string so that it knows where the string stops.</p>
+<p>So the array contains all the numeric codes of the letters in the string, plus a null terminator at the end (which you don't see when the string is printed out).</p>
+<p><strong>Question.</strong> Suppose you create an array that contains all the lowercase letters of the English alphabet in alphabetical order. What would the length of this array be? (If your answer is 26, please re-read the paragraphs above.)</p>
+<p><strong>b.</strong> Read about pointers here: <a href="https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/">https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/</a></p>
+<p>Then, answer the following questions:</p>
+<ol>
+<li><p>Suppose you use <code>int x{ 5 }</code> to set the variable <code>x</code> to have the value of <code>5.</code> What is the difference between <code>x</code> and <code>&amp;x</code>?</p>
+</li>
+<li><p>Suppose you want to make a pointer <code>p</code> that points to the memory address of <code>x</code> (from question 1). How do you initialize <code>p</code>?</p>
+</li>
+<li><p>Suppose you have</p>
+
+<pre><code>int v{ 5 };
+int* ptr{ &amp;v };</code></pre>
+<p>Without using the symbol <code>v</code>, what notation can you use to get the value of <code>v</code>? (Hint: get the value stored at the memory address of <code>v</code>)</p>
+</li>
+<li><p>Suppose you initialize a pointer as an <code>int</code>. Can you use it to point to the memory address of a variable that is a <code>char</code>?</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-65-3">Problem 65-3<a class="anchor-link" href="#Problem-65-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Overleaf (signal separation model/plot, C++ answers): _____
+No link needed for your blog post (I have the link already)
+
+commit: _____
+(machine-learning)
+
+Created issue: _____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-64-1">Problem 64-1<a class="anchor-link" href="#Problem-64-1">&#182;</a></h1><p><em>This problem is the beginning of some more involved software development with the Space Empires game. To ease the transition, this will be the only problem on this assignment.</em></p>
 <p>Time to start building the Space Empires game! We'll start with level 0.0, which will be one of the simplest games possible, and then work upwards from there.</p>
 <p><strong>For this problem, create a new GitHub repository called <code>space-empires</code>.</strong></p>
@@ -13828,7 +13933,7 @@ Created issue: _____</code></pre>
 <ul>
 <li><p>Initial d-values: initial node is assigned $0,$ all other nodes are assigned $\infty$ (use a large number like $9999999999$). Set current node to be the initial node.</p>
 </li>
-<li><p>For each unvisited neighbor of the current node, compute (current node's d-value) + (edge weight). If this sum is greater than the neighbor's d-value, then replace neighbor's d-value with the sum.</p>
+<li><p>For each unvisited neighbor of the current node, compute (current node's d-value) + (edge weight). If this sum is less than the neighbor's d-value, then replace neighbor's d-value with the sum.</p>
 </li>
 <li><p>Update the current node to be the unvisited node that has the smallest d-value, and keep repeating the procedure until the terminal node has been visited. (Once the terminal node has been visited, its d-value is guaranteed to be correct.) <strong>Important: a node is not considered considered visited until it has been set as a current node. Even if you updated the node's d-value at some point, the node is not visited until it is the current node.</strong></p>
 </li>

@@ -14083,7 +14083,19 @@ int main()
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-98-1">Problem 98-1<a class="anchor-link" href="#Problem-98-1">&#182;</a></h1><p>George -- "Use the combat state to find the unit index then go into the hidden game state to get that units into????
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Linear-Programming">Linear Programming<a class="anchor-link" href="#Linear-Programming">&#182;</a></h3><p>Walk through this:</p>
+<p><a href="http://www.phpsimplex.com/en/simplex_method_example.htm">http://www.phpsimplex.com/en/simplex_method_example.htm</a></p>
+<p>do a similar example by hand</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>naive bayes -- generalize to non-boolean</p>
+<hr>
+<p>George -- "Use the combat state to find the unit index then go into the hidden game state to get that units into????
 3:38
 Just have it all in combat state man"</p>
 <p>"Also just pass in a normal hidden game state so you can use your cp and their other ship locations"</p>
@@ -14095,26 +14107,89 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-98-2">Problem 98-2<a class="anchor-link" href="#Problem-98-2">&#182;</a></h1><h3 id="Linear-Programming">Linear Programming<a class="anchor-link" href="#Linear-Programming">&#182;</a></h3><p>Walk through this:</p>
-<p><a href="http://www.phpsimplex.com/en/simplex_method_example.htm">http://www.phpsimplex.com/en/simplex_method_example.htm</a></p>
-<p>do a similar example by hand</p>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>a.</strong> In C++, you can think of strings as arrays of numbers that represent characters.</p>
+<h1 id="Problem-98-1">Problem 98-1<a class="anchor-link" href="#Problem-98-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>a.</strong> If you haven't already, fix any issues in your level 3 strategy and send it to me. During class, I heard that Colby, George, and Elijah may have things to fix:</p>
+<ul>
+<li><p>Colby -- can't use tactics in level 3</p>
+</li>
+<li><p>George -- only colonies have "turn created"</p>
+</li>
+<li><p>Elijah -- can't get "type" from the combat dictionary. Instead, you need to get the player number and unit number from the combat dictionary, and then look up "type" in <code>hidden_game_state_for_combat</code>.</p>
+<ul>
+<li>George mentioned that this is pretty convoluted, and that we should have all this info in combat state, and just pass in the normal hidden game state. I agree! We'll refactor this before moving on to level 4. But to avoid any confusion, let's hold off on refactoring until we finish these level 3 matchups.</li>
+</ul>
+</li>
+</ul>
+<p><strong>b.</strong> Once everyone has finalized their strategies, simulate the matchups.</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<h3 id="Titanic-Prediction">Titanic Prediction<a class="anchor-link" href="#Titanic-Prediction">&#182;</a></h3><p>It sounds like a lot of our models were breaking on the Titanic dataset, which caused the previous assignment to require waaaaaay more debugging time than I had budgeted for. My apologies; I didn't intend for it to become a day-long problem.</p>
+<p>You can have another 2 days to finish up your writeup. Let's focus on just getting the writeup done, even if the numbers aren't looking right. <strong>If some model breaks, and you're not able to fix it after a couple minutes, just move on to the rest of the models, even if the numbers look wrong.</strong></p>
+<p>Over the next several weeks, we'll step through the same modeling process more carefully, one step at a time, one model at a time, fixing any errors that arise along the way. <strong>Your task right now is just to run your existing models on the dataset and write up what you get, even if the numbers don't look right.</strong> In order to plan out the step-by-step approach, I need to know where we stand right now (i.e. what results you're currently getting for the models).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-98-2">Problem 98-2<a class="anchor-link" href="#Problem-98-2">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>Submit corrections for any problem you got wrong. Try to do these corrections without looking at the recording of what we went over in class.</p>
+<p>You don't have to explain what you got wrong or why. Just send in the correct results.</p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>Put the answers to these questions in an overleaf doc.</strong></p>
+<p>In C++, you can think of strings as arrays of numbers that represent characters.</p>
 
 <pre><code>char myString[]{ "hello world" };
 int length = sizeof(myString) / sizeof(myString[0]);
-std::cout &lt;&lt; "the length of this string is " &lt;&lt; length &lt;&lt; "\n";
 for(int i=0; i&lt;length; i++) {
     std::cout &lt;&lt; myString[i];
 }
+std::cout &lt;&lt; "\n";
+std::cout &lt;&lt; "the length of this string is " &lt;&lt; length;
 
 --- output --- 
-the length of this string is 12
-hello world</code></pre>
+hello world
+the length of this string is 12</code></pre>
 <p>Note that the length of the string is always one more than the number of characters (including spaces) in the string. This is because, under the hood, C++ needs to add a "null terminator" to the end of the string so that it knows where the string stops.</p>
 <p>So the array contains all the numeric codes of the letters in the string, plus a null terminator at the end (which you don't see when the string is printed out).</p>
 <p><strong>Question.</strong> Suppose you create an array that contains all the lowercase letters of the English alphabet in alphabetical order. What would the length of this array be? (If your answer is 26, please re-read the paragraphs above.)</p>
-<p><strong>b.</strong> pointers</p>
-<p><a href="https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/">https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/</a></p>
+<p><strong>b.</strong> Read about pointers here: <a href="https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/">https://www.learncpp.com/cpp-tutorial/introduction-to-pointers/</a></p>
+<p>Then, answer the following questions:</p>
+<ol>
+<li><p>Suppose you use <code>int x{ 5 }</code> to set the variable <code>x</code> to have the value of <code>5.</code> What is the difference between <code>x</code> and <code>&amp;x</code>?</p>
+</li>
+<li><p>Suppose you want to make a pointer <code>p</code> that points to the memory address of <code>x</code> (from question 1). How do you initialize <code>p</code>?</p>
+</li>
+<li><p>Suppose you have</p>
+
+<pre><code>int v{ 5 };
+int* ptr{ &amp;v };</code></pre>
+<p>Without using the symbol <code>v</code>, what notation can you use to get the value of <code>v</code>? (Hint: get the value stored at the memory address of <code>v</code>)</p>
+</li>
+<li><p>Suppose you initialize a pointer as an <code>int</code>. Can you use it to point to the memory address of a variable that is a <code>char</code>?</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-98-3">Problem 98-3<a class="anchor-link" href="#Problem-98-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Modeling writeup: _____
+Overleaf (C++ answers): _____
+
+commit: _____
+(machine-learning)
+
+Created issue: _____</code></pre>
 
 </div>
 </div>
