@@ -14118,17 +14118,43 @@ Just have it all in combat state man"</p>
 <p>Once you've resolved discrepancies with a classmate, check the corresponding box in the spreadsheet.</p>
 <blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
 </blockquote>
-<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>(Another weight gradient computation problem)</p>
-
+<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p><strong>Note:</strong> We've been using the symbol $\textrm d$ for our derivative, i.e. $\dfrac{\textrm dE}{\textrm dw_{ij}}.$ However, it would be more clear to write this as a partial derivative, since the error $E$ depends on all of our weights (not just one weight). So we will use the convention $\dfrac{\partial E}{\partial w_{ij}}$ going forward.</p>
+<p><strong>Your task:</strong>  Compute $\dfrac{\partial E}{\partial w_{35}},$ $\dfrac{\partial E}{\partial w_{45}},$ $\dfrac{\partial E}{\partial w_{13}},$ $\dfrac{\partial E}{\partial w_{23}},$ $\dfrac{\partial E}{\partial w_{14}},$ $\dfrac{\partial E}{\partial w_{24}},$ $\dfrac{\partial E}{\partial w_{01}},$ and $\dfrac{\partial E}{\partial w_{02}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix}
+&amp; n_5 \\ 
+&amp; \nearrow \hspace{1.25cm} \nwarrow \\ 
+n_3 &amp; &amp; n_4 \\
+\uparrow &amp; \nwarrow \hspace{1cm} \nearrow &amp; \uparrow \\[-10pt]
+| &amp; \diagdown \diagup &amp; | \\[-10pt]
+| &amp; \diagup \diagdown &amp; | \\[-10pt]
+| &amp; \diagup \hspace{1cm} \diagdown &amp; | \\
+n_1 &amp; &amp; n_2\\ 
+&amp; \nwarrow \hspace{1.25cm} \nearrow \\ 
+&amp; n_0 \\ 
+\end{matrix}
+$$<p><strong>Show ALL your work! (If some work is the same as what you've already wrote down for a previous gradient computation, you can just put dot-dot-dot. But if you get stuck, then go back and write down all intermediate steps.)</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \\ a_4 = 6 \\ a_5 = 7 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 8 \\ f_1'(i_1) = 9 \\ f_2'(i_2) = 10 \\ f_3'(i_3) = 11 \\ f_4'(i_4) = 12 \\ f_5'(i_5)=13 \end{matrix} \qquad \begin{matrix} w_{01} = 14 \\ w_{02} = 15 \\ w_{13} = 16 \\ w_{14} = 17 \\ w_{23} = 18 \\ w_{34} = 19 \\ w_{35} = 20 \\ w_{45} = 21 \end{matrix}
+$$<p>You should get the following:</p>
+$$\begin{align*}
+\dfrac{\partial E}{\partial  w_{35}} &amp;= 780 \\[5pt]
+\dfrac{\partial E}{\partial  w_{45}} &amp;= 936 \\[5pt]
+\dfrac{\partial E}{\partial  w_{13}} &amp;= 102960 \\[5pt]
+\dfrac{\partial E}{\partial  w_{23}} &amp;= 137280 \\[5pt]
+\dfrac{\partial E}{\partial  w_{14}} &amp;= 117936 \\[5pt]
+\dfrac{\partial E}{\partial  w_{24}} &amp;= 157248 \\[5pt]
+\dfrac{\partial E}{\partial  w_{01}} &amp;= 2191362 \\[5pt]
+\dfrac{\partial E}{\partial  w_{02}} &amp;= 24348480
+\end{align*}$$
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-99-2">Problem 99-2<a class="anchor-link" href="#Problem-99-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>Download csv and read it into dataframe</p>
+<h1 id="Problem-99-2">Problem 99-2<a class="anchor-link" href="#Problem-99-2">&#182;</a></h1><p><em>Note: I was going to have us load the Titanic survival data, but I think we need to talk about the parsing algorithm during class beforehand. So, this will need to wait until next week. Instead, we'll do some C++ and SQL.</em></p>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
 <h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
 <p>Read and answer questions</p>

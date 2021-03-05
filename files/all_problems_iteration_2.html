@@ -13212,6 +13212,148 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Titanic-Survival-Modeling---Loading-the-Data">Titanic Survival Modeling - Loading the Data<a class="anchor-link" href="#Titanic-Survival-Modeling---Loading-the-Data">&#182;</a></h3><p><strong>a.</strong> Make an account on Kaggle.com so that we can walk through a Titanic prediction task.</p>
+<ul>
+<li><p>Go to <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a>, scroll down to the bottom, and click "download all". You'll get a zip file called <code>titanic.zip</code>.</p>
+</li>
+<li><p>Upload <code>titanic.zip</code> into <code>machine-learning/datasets/titanic/</code>. Then, run <code>unzip machine-learning/datasets/titanic/titanic.zip</code> in the command line to unzip the file.</p>
+</li>
+<li><p>This gives us 3 files: <code>train.csv</code>, <code>test.csv</code>, and <code>gender_submission.csv</code>. The file <code>train.csv</code> contains data about a bunch of passengers along with whether or not they survived. Our goal is to use <code>train.csv</code> to build a model that will predict the outcome of passengers in <code>test.csv</code> (for which the survival data is not given).</p>
+<ul>
+<li><strong>IMPORTANT:</strong> To prevent confusion, rename <code>train.csv</code> to <code>dataset_of_knowns.csv</code>, rename <code>test.csv</code> to <code>unknowns_to_predict.csv</code>, and rename <code>gender_submission.csv</code> to <code>predictions_from_gender_model.csv</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>b.</strong> Read <code>dataset_of_knowns.csv</code> into a <code>DataFrame</code>. My suggestion is to update your method <code>read_csv</code> as follows:</p>
+
+<pre><code>@classmethod
+def from_csv(cls, path_to_csv, data_types, columns=None):
+    with open(path_to_csv, "r") as file:
+        lines = file.read().split('\n')
+        if columns == None:
+            columns = lines[0].split(',')
+            lines = lines[1:]
+
+        arr = []
+        for line in lines:
+            str_entries = parse_line(line)
+            entries = []
+
+            for i, str_entry in enumerate(str_entries):
+                col_name = columns[i]
+                data_type = data_types[col_name]
+                entry = data_type(str_entry)
+                entries.append(entry)
+
+            arr.append(entries)
+
+    return cls.from_array(arr, columns)</code></pre>
+<p>The function <code>split_line</code> should split the line over commas. However, there are 2 "gotchas" to be aware of:</p>
+
+<pre><code>&gt;&gt;&gt; data_types = {
+    "PassengerId": int,
+    "Survived": int,
+    "Pclass": int,
+    "Name": str,
+    "Sex": str,
+    "Age": int,
+    "SibSp": int,
+    "Parch": int,
+    "Ticket": str,
+    "Fare": float,
+    "Cabin": str,
+    "Embarked": str
+}
+&gt;&gt;&gt; df = DataFrame.from_csv("dataset_of_knowns.csv", data_types)
+&gt;&gt;&gt; df.columns
+["PassengerId", "Survived", "Pclass", "Name", "Sex", "Age", "SibSp", "Parch", "Ticket", "Fare", "Cabin", "Embarked"]
+
+&gt;&gt;&gt; df.to_array()[:5]
+[[1, 0, 3, "Braund, Mr. Owen Harris", "male", 22, 1, 0, "A/5 21171", 7.25, None, "S"],
+[2, 1, 1, "Cumings, Mrs. John Bradley (Florence Briggs Thayer)", "female", 38, 1, 0, "PC 17599", 71.2833, "C85", "C"],
+[3, 1, 3, "Heikkinen, Miss. Laina", "female", 26, 0, 0, "STON/O2. 3101282", 7.925, None, "S"]
+[4, 1, 1, "Futrelle, Mrs. Jacques Heath (Lily May Peel)", "female", 35, 1, 0, "113803", 53.1, "C123", "S"]
+[5, 0, 3, "Allen, Mr. William Henry", "male", 35, 0, 0, "373450", 8.05, None, "S"]]</code></pre>
+<p>also check id 148 and 102</p>
+<p>Original:</p>
+
+<pre><code>PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+1,0,3,"Braund, Mr. Owen Harris",male,22,1,0,A/5 21171,7.25,,S
+2,1,1,"Cumings, Mrs. John Bradley (Florence Briggs Thayer)",female,38,1,0,PC 17599,71.2833,C85,C
+3,1,3,"Heikkinen, Miss. Laina",female,26,0,0,STON/O2. 3101282,7.925,,S
+4,1,1,"Futrelle, Mrs. Jacques Heath (Lily May Peel)",female,35,1,0,113803,53.1,C123,S
+5,0,3,"Allen, Mr. William Henry",male,35,0,0,373450,8.05,,S</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Titanic-Survival-Modeling---Line-Parser">Titanic Survival Modeling - Line Parser<a class="anchor-link" href="#Titanic-Survival-Modeling---Line-Parser">&#182;</a></h3><p><em>Location:</em> <code>assignment-problems/split_line.py</code></p>
+<p>Write a function <code>parse_line</code> that parses a comma-delimited line into its respective entries. For now, return all the entries as strings.</p>
+<p>There are a couple "gotchas" to be aware of:</p>
+<ul>
+<li><p>If two commas appear in sequence, it means that the entry between them is empty. So, the line <code>"7.25,,S"</code> would be read as three entries, <code>['7.25', '', 'S']</code>.</p>
+</li>
+<li><p>If a comma appears within quotes, then the comma is part of that entry. For example:</p>
+<ul>
+<li><p>the line <code>"'Braund', 'Mr. Owen Harris', male"</code> would be three entries: <code>['Braund', '"Mr. Owen Harris"', 'male']</code></p>
+</li>
+<li><p>the line <code>"'Braund, Mr. Owen Harris', male"</code> would be two entries: <code>["'Braund, Mr. Owen Harris'", "male"]</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is a template for the recommended implementation:</p>
+
+<pre><code>def parse_line(line):
+    entries = []   # will be our final output
+
+    entry_str = ""   # stores the string of the current entry
+                     # that we're building up
+
+    inside_quotes = False   # true if we're inside quotes
+
+    quote_symbol = None   # stores the type of quotes we're inside,
+                          # i.e. single quotes "'" or
+                          # double quotes '"'
+
+    for char in line:
+        # if we're at a comma that's not inside quotes,
+        # store the current entry string. In other words,
+        # append entry_str to our list of entries and reset
+        # the value of entry_str
+
+        # otherwise, if we're not at a comma or we're at a
+        # comma that's inside quotes, then keep building up
+        # the entry string (i.e. append char to entry_str)
+
+        # if the char is a single or double quote, and is equal
+        # to the quote symbol or there is no quote symbol,
+        # then flip the truth value of inside_quotes and
+        # change the quote symbol to the current character
+
+    # append the current entry string to entries and return entries</code></pre>
+<p>Here are some tests:</p>
+
+<pre><code>&gt;&gt;&gt; line_1 = "1,0,3,'Braund, Mr. Owen Harris',male,22,1,0,A/5 21171,7.25,,S"
+&gt;&gt;&gt; parse_line(line_1)
+['1', '0', '3', '"Braund, Mr. Owen Harris"', 'male', '22', '1', '0', 'A/5 21171', '7.25', '', 'S']
+
+&gt;&gt;&gt; line_2 = '102,0,3,"Petroff, Mr. Pastcho (""Pentcho"")",male,,0,0,349215,7.8958,,S'
+&gt;&gt;&gt; parse_line(line_2)
+['102', '0', '3', '"Petroff, Mr. Pastcho (""Pentcho"")"', 'male', '', '0', '0', '349215', '7.8958', '', 'S']
+
+&gt;&gt;&gt; line_3 = '187,1,3,"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)",female,,1,0,370365,15.5,,Q'
+['187', '1', '3', '"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)"', 'female', '', '1', '0', '370365', '15.5', '', 'Q']</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Given dataset, find the best regression model that you can. (This time, higher degree polynomials should be more obviously worse)</p>
 <p>Try fitting the following models: linear, quadratic, cubic, quartic, quintic, 10th degree</p>
 
@@ -13329,8 +13471,7 @@ something's wrong</code></pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-66-2">Problem 66-2<a class="anchor-link" href="#Problem-66-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>Download csv and read it into dataframe</p>
+<h1 id="Problem-66-2">Problem 66-2<a class="anchor-link" href="#Problem-66-2">&#182;</a></h1><p><em>Note: I was going to have us load the Titanic survival data, but I think we need to talk about the parsing algorithm during class beforehand. So, this will need to wait until next week. Instead, we'll do some C++ and SQL.</em></p>
 <h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
 <h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
 <p>Read and answer questions</p>
