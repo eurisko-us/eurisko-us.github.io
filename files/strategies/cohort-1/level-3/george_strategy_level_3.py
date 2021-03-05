@@ -50,7 +50,7 @@ class GeorgeStrategyLevel3:
         opponent_index = 1 - self.player_index
         opponent = hidden_game_state['players'][opponent_index]
         unit = myself['units'][unit_index]
-        turn_created = unit['turn_created']
+        #turn_created = unit['turn_created']
         x_unit, y_unit = unit['coords']
         x_opp, y_opp = opponent['home_coords']
         # print(unit['type'], unit['coords'], home_coords, self.flank_count, len(scouts))
