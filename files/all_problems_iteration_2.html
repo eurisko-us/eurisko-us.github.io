@@ -13221,6 +13221,128 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-1">Problem 66-1<a class="anchor-link" href="#Problem-66-1">&#182;</a></h1><h3 id="Game-Level-0.1">Game Level 0.1<a class="anchor-link" href="#Game-Level-0.1">&#182;</a></h3><p>Implement a "combat phase" that runs after every movement phase. During the combat phase, if 2 scouts occupy the same grid square, then randomly remove one of them by setting its coords to <code>None</code>.</p>
+<p><strong>Important:</strong> If two units occupy the same coordinates during any part of the movement phase, then neither unit can move away from that grid square until combat has taken place and one of the units has been destroyed. So, if you move into an enemy scout's coordinates, then the enemy scout cannot move anywhere, even if it's their turn to move.</p>
+<p>Implement the following tests in <code>tests/test_game_level_0_1.py</code></p>
+<p><strong>Test A</strong></p>
+
+<pre><code>&gt;&gt;&gt; players = [CustomPlayer(), CustomPlayer()]
+&gt;&gt;&gt; game = Game(players)
+&gt;&gt;&gt; game.state['players']
+{
+    1: {
+        'scout_coords': (4, 1),
+        'home_colony_coords': (4, 1)
+    },
+    2: {
+        'scout_coords': (4, 7),
+        'home_colony_coords': (4, 7)
+    }
+}
+
+&gt;&gt;&gt; game.complete_movement_phase()
+&gt;&gt;&gt; game.state['players']
+{
+    1: {
+        'scout_coords': (4, 5),
+        'home_colony_coords': (4, 1)
+    },
+    2: {
+        'scout_coords': (4, 6),
+        'home_colony_coords': (4, 7)
+    }
+}
+
+&gt;&gt;&gt; game.complete_combat_phase()
+Nothing changes since no units occupy the same location
+
+&gt;&gt;&gt; game.complete_movement_phase()
+&gt;&gt;&gt; game.state['players']
+{
+    1: {
+        'scout_coords': (4, 6),
+        'home_colony_coords': (4, 1)
+    },
+    2: {
+        'scout_coords': (4, 6),
+        'home_colony_coords': (4, 7)
+    }
+}
+
+Note that player 2's scout cannot move anywhere since
+player 1's scout has moved into its coordinates
+
+&gt;&gt;&gt; game.complete_combat_phase()
+One of the scouts is randomly selected to be destroyed.
+
+&gt;&gt;&gt; game.state['players']
+There are two possible outcomes:
+
+Possibility 1:
+{
+    1: {
+        'scout_coords': None,
+        'home_colony_coords': (4, 1)
+    },
+    2: {
+        'scout_coords': (4, 6),
+        'home_colony_coords': (4, 7)
+    }
+}
+
+Possibility 2:
+{
+    1: {
+        'scout_coords': (4, 6),
+        'home_colony_coords': (4, 1)
+    },
+    2: {
+        'scout_coords': None,
+        'home_colony_coords': (4, 7)
+    }
+}</code></pre>
+<p><strong>Test B</strong></p>
+
+<pre><code>&gt;&gt;&gt; num_wins = {1: 0, 2: 0}
+&gt;&gt;&gt; for _ in range(200):
+        players = [CustomPlayer(), CustomPlayer()]
+        game = Game(players)
+        game.run_to_completion()
+        winner = game.state['winner']
+        num_wins[winner] += 1
+
+&gt;&gt;&gt; num_wins
+Should be close (but probably not exactly equal) 
+to {1: 100, 2: 100}
+
+You shouldn't get a deviation more than +/- 20,
+meaning that
+
+Something like {1: 80, 2: 120} would be fine
+
+But something like {1: 40, 2: 160} would mean 
+something's wrong</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-2">Problem 66-2<a class="anchor-link" href="#Problem-66-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<p>Download csv and read it into dataframe</p>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<p>Read and answer questions</p>
+<p><a href="https://www.learncpp.com/cpp-tutorial/null-pointers/">https://www.learncpp.com/cpp-tutorial/null-pointers/</a></p>
+<p><a href="https://www.learncpp.com/cpp-tutorial/pointers-and-arrays/">https://www.learncpp.com/cpp-tutorial/pointers-and-arrays/</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-65-1">Problem 65-1<a class="anchor-link" href="#Problem-65-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Make sure your game level 0.0 is working (Problem 64-1). We're going to keep building on this. If you're running behind on anything, make sure to prioritize this problem. It's more important than the other problems, especially since in the near future we'll be doing mini-tournaments with our custom strategies (and in order to participate in a tournament, your game needs to work).</p>
 <p>(Another something to look forward to -- when we get to tournaments, there will be extra credit prizes.)</p>
 <h3 id="Signal-Separation">Signal Separation<a class="anchor-link" href="#Signal-Separation">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/analysis/signal_separation.py</code></p>
