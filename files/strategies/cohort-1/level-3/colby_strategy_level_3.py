@@ -114,7 +114,83 @@ class ColbyStrategyLevel3(BasicStrategy): #use this one justin
         translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
         def get_distance_to(friendly_unit_coords, enemy_unit_coords):
             return math.sqrt((friendly_unit_coords[0] - enemy_unit_coords[0]) ** 2 + (friendly_unit_coords[1] - enemy_unit_coords[1]) ** 2)
+        def check_translationclass ColbyDelayedBerserkerStrategyLevel3(BasicStrategy): #use this one justin
+    def __init__(self, player_index):  # wutever else we need):
+        self.player_index = player_index
+        self.__name__ = 'ColbyStrategyLevel3'
+        self.combat_has_happend = [False, -6858547829874170]
+        self.WE_SIEGIN_BOI = False
+        self.DIE_DIE_DIE = False
+
+    def decide_purchases(self, hidden_game_state):
+        if hidden_game_state['turn'] < 15:
+            self.technology = hidden_game_state['players'][self.player_index]['technology']
+            purchases = [self.get_technological_purchases('defense', hidden_game_state), self.get_technological_purchases('attack', hidden_game_state)]
+            return max(purchases, key=lambda purchase: len(purchase['technology']))
+        else:
+            purchases = {'units': [], 'technology': []}
+            total_cost = 0
+            ship = self.choose_ship(purchases, total_cost, hidden_game_state)
+            ship_cost = self.ship_cost(ship, hidden_game_state)
+            creds = hidden_game_state['players'][self.player_index]['cp']
+            while hidden_game_state['players'][self.player_index]['cp'] >= total_cost + self.ship_cost(ship, hidden_game_state):
+                purchases['units'].append({'type': ship, 'coords': hidden_game_state['players'][self.player_index]['home_coords']})
+                total_cost += self.ship_cost(ship, hidden_game_state)
+                ship = self.choose_ship(purchases, total_cost, hidden_game_state)
+            return purchases
+
+    def get_technological_purchases(self, stat_to_upgrade, hidden_game_state):
+        purchases = {'units': [], 'technology': []}
+        while hidden_game_state['players'][self.player_index]['technology'][stat_to_upgrade] + len(purchases['technology']) < 3 and hidden_game_state['technology_data'][stat_to_upgrade][self.technology[stat_to_upgrade] + len(purchases['technology'])] <= hidden_game_state['players'][self.player_index]['cp']:
+            purchases['technology'].append(stat_to_upgrade)
+            #print("purchase", purchases)
+            #print("hidden_game_state['technology_data'][stat_to_upgrade]", hidden_game_state['technology_data'][stat_to_upgrade])
+            #print("self.technology[stat_to_upgrade] + len(purchases['technology'])", self.technology[stat_to_upgrade] + len(purchases['technology']))
+        return purchases
+
+    def choose_ship(self, purchases, total_cost, hidden_game_state):
+        return 'Scout'
+        #possible_ships = ['Scout', 'Destroyer', 'Cruiser', 'Battlecruiser', 'Battleship', 'Dreadnaught']
+        #return max([ship for ship in possible_ships if self.ship_cost(ship, hidden_game_state) < hidden_game_state['players'][self.player_index]['cp']] - total_cost, key = lambda ship: (ship.fighting_class, -ship.player.player_index, -ship.ID), reverse=True)
+
+    def decide_ship_movement(self, unit_index, hidden_game_state):
+        myself = hidden_game_state['players'][self.player_index]
+        enemy = hidden_game_state['players'][1 - self.player_index]
+        friendly_unit = myself['units'][unit_index]
+        def get_distance_to(friendly_unit_coords, enemy_unit_coords):
+            return math.sqrt((friendly_unit_coords[0] - enemy_unit_coords[0]) ** 2 + (friendly_unit_coords[1] - enemy_unit_coords[1]) ** 2)
+        closest_ship_to_current_unit = min([unit for unit in hidden_game_state['players'][1 - self.player_index]['units']], key = lambda unit: get_distance_to(friendly_unit['coords'], unit['coords']))
+        if hidden_game_state['turn'] < 19:
+            return (0,0)
+        else:
+            if myself['units'][unit_index]['coords'] != closest_ship_to_current_unit['coords']:
+                return self.get_translation(hidden_game_state, friendly_unit, enemy['home_coords'])
+            else:
+                return (0,0)
+        return (0,0)
+
+    def get_translation(self, hidden_game_state, unit, target_unit_coords):
+        '''
+        best_translation = (0,0)
+        smallest_distance_to_opponent = 999999999999
+        for translation in translations:
+            x = unit['coords'][0] + translation[0]
+            y = unit['coords'][1] + translation[1]
+            dist = abs(unit['coords'][0] + translation[0] - x_opp) + abs(unit['coords'][1] + translation[1] - y_opp)
+            if dist < smallest_distance_to_opponent:
+                best_translation = (translation, (x, y), dist)
+                smallest_distance_to_opponent = dist
+        #print("new dist", best_translation[2])        #de
+        #print('old coords', unit['coords'])           #bu
+        #print("new coords", best_translation[1])      #gg
+        #print("enemy coords (", x_opp, y_opp, ')')    #in
+        #print("best_translation", best_translation[0])#gu'''
+        translations = [(0,0), (1,0), (-1,0), (0,1), (0,-1)]
+        def get_distance_to(friendly_unit_coords, enemy_unit_coords):
+            return math.sqrt((friendly_unit_coords[0] - enemy_unit_coords[0]) ** 2 + (friendly_unit_coords[1] - enemy_unit_coords[1]) ** 2)
         def check_translation(unit, translation):
+            return (unit['coords'][0] + translation[0], unit['coords'][1] + translation[1])
+        return min([(translation, get_distance_to(check_translation(unit, translation), target_unit_coords)) for translation in translations], key = lambda distance: distance[1])[0] #heheh 1 liner gang also the two codes do the same thing(unit, translation):
             return (unit['coords'][0] + translation[0], unit['coords'][1] + translation[1])
         return min([(translation, get_distance_to(check_translation(unit, translation), target_unit_coords)) for translation in translations], key = lambda distance: distance[1])[0] #heheh 1 liner gang also the two codes do the same thing
 
