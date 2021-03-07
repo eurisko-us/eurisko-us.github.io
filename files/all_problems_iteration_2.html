@@ -13485,11 +13485,89 @@ something's wrong</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-66-2">Problem 66-2<a class="anchor-link" href="#Problem-66-2">&#182;</a></h1><p><em>Note: I was going to have us load the Titanic survival data, but I think we need to talk about the parsing algorithm during class beforehand. So, this will need to wait until next week. Instead, we'll do some C++ and SQL.</em></p>
-<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>Read and answer questions</p>
-<p><a href="https://www.learncpp.com/cpp-tutorial/null-pointers/">https://www.learncpp.com/cpp-tutorial/null-pointers/</a></p>
-<p><a href="https://www.learncpp.com/cpp-tutorial/pointers-and-arrays/">https://www.learncpp.com/cpp-tutorial/pointers-and-arrays/</a></p>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p>On sqltest.net, create a sql table by copying the following script:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-2.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/assignments-2.sql</a></p>
+</blockquote>
+<p>Then, compute the average assignment score of each student, along with the number of assignments they've completed. List the results from highest average score to lowest average score, and include the full names of the students.</p>
+<p>This is what your output should look like:</p>
+
+<pre><code>name            avgScore  numCompleted
+Sylvia Sanchez  95.0000       2
+Ishmael Smith   91.2500       4
+Franklin Walton 90.0000       1
+Kinga Shenko    83.3333       3
+Harry Ng        72.5000       4</code></pre>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Observe that the following code can be used to increase the entries in an array by some amount, via a helper function:</p>
+
+<pre><code># include &lt;iostream&gt;
+
+void incrementArray(int arr[], int length, int amt)
+{
+    for (int i = 0; i &lt; length; i++)
+        arr[i] += amt;
+}
+
+int main()
+{
+
+    int array[] = {10, 20, 30, 40};
+    int length = sizeof(array) / sizeof(array[0]);
+    int amt = 3;
+
+    incrementArray(array, length, amt);
+
+    for (int i = 0; i &lt; 4; i++)
+        std::cout &lt;&lt; array[i] &lt;&lt; " ";
+
+    return 0;
+}
+
+--- output ---
+11 12 13 14</code></pre>
+<p>Write a function <code>dotProduct</code> that computes the dot product of two input arrays. (You'll need to include the length as the input, too.)</p>
+
+<pre><code># include &lt;iostream&gt;
+
+// define dotProduct here
+
+int main()
+{
+
+    int array1[] = {1, 2, 3, 4};
+    int array2[] = {5, 6, 7, 8};
+    int length = sizeof(array1) / sizeof(array1[0]);
+    int ans = dotProduct(array, length, amt);
+
+    std::cout &lt;&lt; "Testing...\n";
+    assert(ans == 70);
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-66-3">Problem 66-3<a class="anchor-link" href="#Problem-66-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Make <strong>1 GitHub issue</strong> on your assigned classmate's repository (but NOT <code>assignment-problems</code>). See <a href="https://eurisko-us.github.io/resources/#code-reviews" target="_blank">eurisko.us/resources/#code-reviews</a> to determine your assigned classmate.</p>
+</li>
+</ul>
+<p>(You don't have to resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>space empires repl.it link: _____
+C++ repl.it link: _____
+sqltest.net link: _____
+
+commits: _____
+(assignment-problems, space-empires)
+
+Created issue: _____</code></pre>
 
 </div>
 </div>
