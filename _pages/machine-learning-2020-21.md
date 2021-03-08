@@ -74,8 +74,17 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="99">
-    <li><b>Wednesday, March 5</b>
+<font size="3em"><ol reversed start="100">
+    <li><b>Monday, March 8</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/521081075">Class Recording</a> (ML is second half) - level 3 debugging discussion
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-100-1">Primary: Resolve Game Level 3 Discrepancies, Neural Net Weight Gradient Computation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-100-2">Supplementary: Titanic Dataset Parser, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-100-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
+    <li><b>Friday, March 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/520073721">Class Recording</a> (ML is second half) - review pointers, level 3 matchups results
         <br>Assignment Problems:
         <font size="2em"><ul>
