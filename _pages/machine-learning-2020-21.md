@@ -18,7 +18,7 @@ author_profile: false
    <tr>
     <td width="33%"><center>Quiz 2-3</center></td>
     <td width="33%"><center>Friday, February 26</center></td>
-    <td width="33%"><center></center></td>
+    <td width="33%"><center>reviewed in class, 3/3</center></td>
   </tr>
    <tr>
     <td width="33%"><center>Quiz 2-2</center></td>
