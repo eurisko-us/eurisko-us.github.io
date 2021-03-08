@@ -14113,6 +14113,124 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-100-1">Problem 100-1<a class="anchor-link" href="#Problem-100-1">&#182;</a></h1><p><strong>Announcement:</strong> There will be a quiz on Friday. Topics will include SQL, C++, and neural net gradient computations.</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>Note:</strong> I put some information on the wiki here:</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1">https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1</a>)</p>
+</blockquote>
+<p>If you see any mistakes or any information that you think should be added, post about it on Slack. If your classmates agree, then you can go ahead and edit the wiki entry with your updates.</p>
+<p><strong>a.</strong> If your strategy assumes that unit arrays are ordered in any particular way, refactor your strategy so that it doesn't. Then, send it to me again so that I can upload it into the submissions folder.</p>
+<p>For example, David's strategy intends to take some action with half of its scouts by checking if <code>ship_index % 2 == 1</code>. But there is no guarantee that this will be true for any scouts.</p>
+<ul>
+<li><p>For example, the unit array in one person's game might be</p>
+
+<pre><code>[Scout, Shipyard, Scout, Shipyard, Scout, Shipyard, Scout, Colony]</code></pre>
+<p>which would result in no scouts taking the desired action.</p>
+</li>
+<li><p>On the other hand, the unit array in another person's game might be</p>
+
+<pre><code>[Shipyard, Scout, Shipyard, Scout, Shipyard, Scout, Colony, Scout]</code></pre>
+<p>which would result in all scouts taking the desired action.</p>
+</li>
+</ul>
+<p>As our games work right now, we can't assume that the index tells us anything about what type of ship it is. Rather, to check what type of ship it is, we need to look at <code>game_state['players'][self.player_index]['units'][ship_index]</code> to check if it's actually a scout.</p>
+<p>If you wanted to send half of your scouts, to the enemy, this is how you could do it:</p>
+
+<pre><code>units = game_state['players'][self.player_index]['units']
+scout_indices = [i for i, unit in enumerate(units) if unit['type'] == 'Scout']
+half_scout_indices = [item for item in scout_indices if item % 2 == 1]
+
+if ship_index in half_scout_indices:
+    unit = units[ship_index]
+    translation_towards_enemy = get_translation_towards_enemy(unit)
+    return translation_towards_enemy
+else:
+    return (0,0)</code></pre>
+<p><strong>b.</strong> Make sure you have two different game modes:</p>
+<ul>
+<li><p><code>"debug mode"</code> - stop the game whenever a player makes an invalid decision, such as moving out of bounds or trying to buy something that they can't afford.</p>
+</li>
+<li><p><code>"competition mode"</code> - if a player makes an invalid decision, ignore it and move on.</p>
+</li>
+</ul>
+<p>When we run the matchups, we should use <code>"competition mode"</code>. This way, as long as everyone's games are effectively the same, we won't have any discrepancies to debug. (Even if the strategies make invalid decisions, those decisions will be ignored by everyone's games, which means the games will give the same results.) We need to avoid debugging strategies if we can, for the sake of being efficient with our time.</p>
+<p>When there are discrepancies to debug, we should use <code>"debug mode"</code> so that we can identify whether the source of the discrepancy is a) a difference in the games determine whether an input is invalid, or b) a difference in what the games do with valid inputs.</p>
+<p><strong>c.</strong> Continue debugging level 3. If you're not able to get the debugging done due to it taking a long time, then come to the next class with some ideas for how to speed up the process.</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p><strong>[IN PROGRESS]</strong></p>
+<p>multiple input nodes, multiple output nodes, multiple hidden layers, just ask for a couple (not all) of the gradients</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-100-2">Problem 100-2<a class="anchor-link" href="#Problem-100-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling---Line-Parser">Titanic Survival Modeling - Line Parser<a class="anchor-link" href="#Titanic-Survival-Modeling---Line-Parser">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/kaggle/titanic/parse_line.py</code></p>
+<p>Write a function <code>parse_line</code> that parses a comma-delimited line into its respective entries. For now, return all the entries as strings.</p>
+<p>There are a couple "gotchas" to be aware of:</p>
+<ul>
+<li><p>If two commas appear in sequence, it means that the entry between them is empty. So, the line <code>"7.25,,S"</code> would be read as three entries, <code>['7.25', '', 'S']</code>.</p>
+</li>
+<li><p>If a comma appears within quotes, then the comma is part of that entry. For example:</p>
+<ul>
+<li><p>the line <code>"'Braund', 'Mr. Owen Harris', male"</code> would be three entries: <code>['Braund', '"Mr. Owen Harris"', 'male']</code></p>
+</li>
+<li><p>the line <code>"'Braund, Mr. Owen Harris', male"</code> would be two entries: <code>["'Braund, Mr. Owen Harris'", "male"]</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here is a template for the recommended implementation:</p>
+
+<pre><code>def parse_line(line):
+    entries = []   # will be our final output
+
+    entry_str = ""   # stores the string of the current entry
+                     # that we're building up
+
+    inside_quotes = False   # true if we're inside quotes
+
+    quote_symbol = None   # stores the type of quotes we're inside,
+                          # i.e. single quotes "'" or
+                          # double quotes '"'
+
+    for char in line:
+        # if we're at a comma that's not inside quotes,
+        # store the current entry string. In other words,
+        # append entry_str to our list of entries and reset
+        # the value of entry_str
+
+        # otherwise, if we're not at a comma or we're at a
+        # comma that's inside quotes, then keep building up
+        # the entry string (i.e. append char to entry_str)
+
+        # if the char is a single or double quote, and is equal
+        # to the quote symbol or there is no quote symbol,
+        # then flip the truth value of inside_quotes and
+        # change the quote symbol to the current character
+
+    # append the current entry string to entries and return entries</code></pre>
+<p>Here are some tests:</p>
+
+<pre><code>&gt;&gt;&gt; line_1 = "1,0,3,'Braund, Mr. Owen Harris',male,22,1,0,A/5 21171,7.25,,S"
+&gt;&gt;&gt; parse_line(line_1)
+['1', '0', '3', '"Braund, Mr. Owen Harris"', 'male', '22', '1', '0', 'A/5 21171', '7.25', '', 'S']
+
+&gt;&gt;&gt; line_2 = '102,0,3,"Petroff, Mr. Pastcho (""Pentcho"")",male,,0,0,349215,7.8958,,S'
+&gt;&gt;&gt; parse_line(line_2)
+['102', '0', '3', '"Petroff, Mr. Pastcho (""Pentcho"")"', 'male', '', '0', '0', '349215', '7.8958', '', 'S']
+
+&gt;&gt;&gt; line_3 = '187,1,3,"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)",female,,1,0,370365,15.5,,Q'
+['187', '1', '3', '"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)"', 'female', '', '1', '0', '370365', '15.5', '', 'Q']</code></pre>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-99-1">Problem 99-1<a class="anchor-link" href="#Problem-99-1">&#182;</a></h1><p><strong>If you haven't already, turn in your Titanic prediction writeup on Canvas. It's important.</strong></p>
 <h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Meet with each classmate over the weekend to resolve level 3 discrepancies.</p>
 <p>Once you've resolved discrepancies with a classmate, check the corresponding box in the spreadsheet.</p>
