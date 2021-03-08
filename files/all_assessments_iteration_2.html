@@ -13112,6 +13112,267 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-3">Quiz 2-3<a class="anchor-link" href="#Quiz-2-3">&#182;</a></h1><p><strong>Date:</strong> 2/26</p>
+<p><strong>Time:</strong> 60 min</p>
+<p><strong>Topics:</strong> C++, Haskell, SQL, Dijkstra's Algorithm</p>
+<p><strong>Allowed / prohibited resources:</strong> This quiz is open-book. You can refer to examples/solutions from previous assignments. But you cannot copy code from the internet nor discuss with classmates. (If you do either of these two things, it will probably show in your code, and you'll get a 0 -- so don't chance it.)</p>
+<p><strong>Submission:</strong> On this quiz, you'll need to write functions in C++ and Haskell. Write these functions in repl.it, turn in your repl.it links, and <strong>also copy/paste your actual repl.it code into the submission box as evidence that your code hasn't been modified since submitting the quiz.</strong></p>
+<h3 id="Problem-1-(C++;-25%-of-grade)">Problem 1 (C++; 25% of grade)<a class="anchor-link" href="#Problem-1-(C++;-25%-of-grade)">&#182;</a></h3><p>Write a C++ function <code>calcIndex(n)</code> to find the index of the first Fibonacci number that is greater than an input number $n.$</p>
+<p>Recall that the Fibonacci numbers are</p>
+$$a_0=0, \, a_1=1, \, a_2=1, \, a_3=2, \, a_4=3, \, a_5=5, \, a_6=8, \, a_7 = 13, \ldots$$<p>(every number is the sum of the previous two).</p>
+<p>For example, if $n=8,$ then we'd have <code>calcIndex(8)=7</code> because $a_7=13$ is the first Fibonacci number that is greater than $n=8.$</p>
+<p><strong>Make your code efficient. DON'T re-compute all the preceding values of the Fibonacci sequence each time you need to get the next values.</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+// write your function calcIndex here
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(calcIndex(8)==7);
+    assert(calcIndex(100000)==26);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<h3 id="Problem-2-(Haskell;-25%-of-grade)">Problem 2 (Haskell; 25% of grade)<a class="anchor-link" href="#Problem-2-(Haskell;-25%-of-grade)">&#182;</a></h3><p>Write a Haskell function <code>calcGPA</code> that takes a list of letter grades (A, B, C, D, F) and returns the GPA. The conversion is <code>A=4</code>, <code>B=3</code>, <code>C=2</code>, <code>D=1</code>, <code>F=0</code>.</p>
+<p>Test your function with the following test-case:</p>
+
+<pre><code>&gt;&gt;&gt; calcGPA(["A", "B", "B", "C", "C", "C", "D", "F"])
+2.125
+
+Here, the underlying computation is (4+3+3+2+2+2+1+0)/8</code></pre>
+<h3 id="Problem-3-(SQL;-25%-of-grade)">Problem 3 (SQL; 25% of grade)<a class="anchor-link" href="#Problem-3-(SQL;-25%-of-grade)">&#182;</a></h3><p>On sqltest.net, given the following tables, write a query that gives (first name, last name, age, grade) for all students who got a grade of C or better. Sort the results by grade (highest grade first).</p>
+
+<pre><code>CREATE TABLE age ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+lastname VARCHAR(30), 
+age VARCHAR(30)
+); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('1', 'Walton', '12'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('2', 'Sanchez', '13'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('3', 'Ng', '14'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('4', 'Smith', '15'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('5', 'Shenko', '16'); 
+
+CREATE TABLE name ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+lastname VARCHAR(30)
+); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('1', 'Franklin', 'Walton'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('2', 'Sylvia', 'Sanchez'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('3', 'Harry', 'Ng'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('4', 'Ishmael', 'Smith'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('5', 'Kinga', 'Shenko'); 
+
+CREATE TABLE grade ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+grade VARCHAR(30)
+); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('1', 'Franklin', 'A'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('2', 'Sylvia', 'C'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('3', 'Harry', 'D'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('4', 'Ishmael', 'F'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('5', 'Kinga', 'B');</code></pre>
+<h3 id="Problem-4-(Neural-Net;-25%-of-grade)">Problem 4 (Neural Net; 25% of grade)<a class="anchor-link" href="#Problem-4-(Neural-Net;-25%-of-grade)">&#182;</a></h3><p>Use Dijkstra's algorithm to compute the d-values for the nodes in the following graph relative to the initial node $0.$ Work out this problem by hand.</p>
+<center><img width=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/weightedGraph-2.png' border='0'/></center>
+<pre><code>d-value of node 0: ___
+d-value of node 1: ___
+d-value of node 2: ___
+d-value of node 3: ___
+d-value of node 4: ___
+d-value of node 5: ___
+d-value of node 6: ___
+d-value of node 7: ___
+d-value of node 8: ___</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-2">Quiz 2-2<a class="anchor-link" href="#Quiz-2-2">&#182;</a></h1><p><strong>Date:</strong> 2/11</p>
+<p><strong>Time:</strong> 45 min</p>
+<p><strong>Topics:</strong> C++, Haskell</p>
+<p><strong>Allowed / prohibited resources:</strong> This quiz is open-book. You can refer to examples/solutions from previous assignments. But you cannot copy code from the internet nor discuss with classmates. (If you do either of these two things, it will probably show in your code, and you'll get a 0 -- so don't chance it.)</p>
+<p><strong>Submission:</strong> On this quiz, you'll need to write functions in C++ and Haskell. Write these functions in repl.it, turn in your repl.it links, and <strong>also copy/paste your actual repl.it code into the submission box as evidence that your code hasn't been modified since submitting the quiz.</strong></p>
+<h3 id="Problem-1-(Haskell;-33%-of-grade)">Problem 1 (Haskell; 33% of grade)<a class="anchor-link" href="#Problem-1-(Haskell;-33%-of-grade)">&#182;</a></h3><p>Write a function <code>sumFactors</code> that finds the sum of all the factors of the input number (which you can assume is a positive integer).</p>
+<ul>
+<li>In Haskell, the modulo operator is
+<pre><code>a `mod` b</code></pre>
+</li>
+</ul>
+<p>Here is a code template:</p>
+
+<pre><code>-- your function(s) here
+main = print(sumFactors 10) -- should come out to 1+2+5+10 = 18</code></pre>
+<h3 id="Problem-2-(C++;-66%-of-grade)">Problem 2 (C++; 66% of grade)<a class="anchor-link" href="#Problem-2-(C++;-66%-of-grade)">&#182;</a></h3><p>Consider the recursive sequence
+$$
+a_{n} = a_{n-1} + 2a_{n-2}, \quad a_0=0, a_1=1.
+$$</p>
+<p>The first few terms are</p>
+
+<pre><code>[a0,a1,a2,a3,a4,a5,a6,a7,a8]
+[0, 1, 1, 3, 5, 11,21,43,85]</code></pre>
+<p><strong>Important: A code template is provided at the bottom of the problem.</strong></p>
+<p><strong>a.</strong> Write a <strong>C++</strong> function <code>seqSum</code> to find the sum of the first $N$ terms <em>without repeating any computations</em>.</p>
+<ul>
+<li><p>You'll need to use an array</p>
+</li>
+<li><p>Examples below:</p>
+</li>
+</ul>
+
+<pre><code>seqSum(0) = a_0 = 0
+
+seqSum(3) = a_0 + a_1 + a_2 + a_3
+          =  0  +  1  +  1  +  3
+          =  5
+
+seqSum(8) = a_0 + a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8
+          =  0  +  1  +  1  +  3  +  5  + 11  + 21  + 43  + 85
+          =  170</code></pre>
+<p><strong>b.</strong> Write a <strong>C++</strong> function <code>extendedSeqSum</code> that finds the sum of the first $N$ terms, and then finds the sum of THAT many terms <em>without repeating any computations</em>.</p>
+<ul>
+<li><p>You can copy your code from <code>seqSum</code> and then add more onto it.</p>
+</li>
+<li><p>Examples below:</p>
+</li>
+</ul>
+
+<pre><code>extendedSeqSum(2) = 1
+a_2 = 1, so compute the sum through a_1
+
+     a_0 + a_1
+    = 0  +  1
+    = 1
+
+extendedSeqSum(4) = 21
+a_4 = 5, so compute the sum through a_5
+
+     a_0 + a_1 + a_2 + a_3 + a_4 + a_5
+    = 0  +  1  +  1  +  3  +  5  +  11
+    = 21</code></pre>
+<p><strong>C++ Template</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+// write your functions seqSum and extendedSeqSum here
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(seqSum(0)==0);
+    assert(seqSum(3)==5);
+    assert(seqSum(8)==170);
+
+    assert(extendedSeqSum(2)==1);
+    assert(extendedSeqSum(4)==21);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-1">Quiz 2-1<a class="anchor-link" href="#Quiz-2-1">&#182;</a></h1><p><strong>Date:</strong> 1/29</p>
+<p><strong>Time:</strong> 45 min</p>
+<p><strong>Topics:</strong> Breadth-first search, depth-first search, linear regression, logistic regression, interaction terms.</p>
+<p>List the nodes of a graph in breadth-first and depth-first orders</p>
+<ul>
+<li><p>Fill in code tempates for breadth-first search and depth-first search</p>
+</li>
+<li><p>Answer conceptual questions about similarities and differences between linear and logistic regression and interaction terms</p>
+</li>
+</ul>
+<h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h3><p>Consider the following tree graph. Assume that all edges are directed downwards (so 6 is the root node).</p>
+<p><img width=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/tree.png' border='0'/><br></p>
+<p><strong>a.</strong> Give a depth-first ordering of nodes, starting with the root node.</p>
+<p><strong>b.</strong> Give a breadth-first ordering of nodes, starting with the root node.</p>
+<p><strong>c.</strong> Consider the following ordering: $6,2,4,3,5,8,7,9,1.$ Is this a breadth-first ordering, a depth-first ordering, or neither?</p>
+<p><strong>d.</strong> Consider the following ordering: $6, 8, 2, 7, 4, 9, 1, 3, 5.$ Is this a breadth-first ordering, a depth-first ordering, or neither?</p>
+<h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h3><p>Fill in the following code for methods of a <code>Tree</code> class that return arrays of nodes in breadth-first and depth-first order, respectively. Note that you will not need to use any attributes of <code>Tree</code>. <strong>Copy and paste the template below and fill in the blanks.</strong></p>
+
+<pre><code>def breadth_first_tranversal(self, starting_node):
+... visited_nodes = []
+... _____ = _____ # initialize the important data structure
+... while _____:
+... ... current_node = _____
+... ... for child_node in current_node.children:
+... ... ... __________ # update the important data structure
+... ... __________ # update the important data structure again
+... ... visited_nodes.append(_____)
+... return _____
+.
+def depth_first_tranversal(self, starting_node):
+... visited_nodes = []
+... _____ = _____ # initialize the important data structure
+... while _____:
+... ... current_node = _____
+... ... for child_node in current_node.children:
+... ... ... __________ # update the important data 
+structure
+... ... __________ # update the important data structure again
+... ... visited_nodes.append(_____)
+... return _____</code></pre>
+<h3 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h3><p><strong>a.</strong></p>
+<p><strong>(i)</strong> How can you tell when you need to use logistic regression instead of linear regression?</p>
+<p><strong>(ii)</strong> Describe a situation <em>different from the sandwich situation</em> where you'd want to use logistic regression instead of linear regression.</p>
+<p><strong>b.</strong></p>
+<p><strong>(i)</strong> What are interaction terms in the context of regression, and why are they sometimes needed?</p>
+<p><strong>(ii)</strong> Give a situation <em>different from the sandwich situation</em> where you'd want to use interaction terms.</p>
+<h3 id="Question-4-(Bonus)">Question 4 (Bonus)<a class="anchor-link" href="#Question-4-(Bonus)">&#182;</a></h3><p>Identify the 2 major shortcomings of the SIR model, construct a system for an extended SIR model that overcomes both of those shortcomings, and justify why your model overcomes those shortcomings.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Final-1">Final 1<a class="anchor-link" href="#Final-1">&#182;</a></h1><p><strong>Date:</strong> 12/17</p>
 <p><strong>Time:</strong> 120 min</p>
 <p><strong>SUPER IMPORTANT: There are 65 short questions on this final. Most of these questions should take no more than 30 seconds to a minute if you know what you're doing. To ensure that you maximize the number of questions you're able to answer, SKIP ANY QUESTIONS THAT AREN'T IMMEDIATELY CLEAR TO YOU and come back to them only after you've gone through all the questions in the test.</strong></p>

@@ -13112,6 +13112,280 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-3">Quiz 2-3<a class="anchor-link" href="#Quiz-2-3">&#182;</a></h1><p><strong>Date:</strong> 2/26</p>
+<p><strong>Time:</strong> 60 min</p>
+<p><strong>Topics:</strong> C++, Haskell, SQL, Neural Nets</p>
+<p><strong>Allowed / prohibited resources:</strong> This quiz is open-book. You can refer to examples/solutions from previous assignments. But you cannot copy code from the internet nor discuss with classmates. (If you do either of these two things, it will probably show in your code, and you'll get a 0 -- so don't chance it.)</p>
+<p><strong>Submission:</strong> On this quiz, you'll need to write functions in C++ and Haskell. Write these functions in repl.it, turn in your repl.it links, and <strong>also copy/paste your actual repl.it code into the submission box as evidence that your code hasn't been modified since submitting the quiz.</strong></p>
+<h3 id="Problem-1-(C++;-25%-of-grade)">Problem 1 (C++; 25% of grade)<a class="anchor-link" href="#Problem-1-(C++;-25%-of-grade)">&#182;</a></h3><p>Write a C++ function <code>calcIndex(n)</code> to find the index of the first Fibonacci number that is greater than an input number $n.$</p>
+<p>Recall that the Fibonacci numbers are</p>
+$$a_0=0, \, a_1=1, \, a_2=1, \, a_3=2, \, a_4=3, \, a_5=5, \, a_6=8, \, a_7 = 13, \ldots$$<p>(every number is the sum of the previous two).</p>
+<p>For example, if $n=8,$ then we'd have <code>calcIndex(8)=7</code> because $a_7=13$ is the first Fibonacci number that is greater than $n=8.$</p>
+<p><strong>Make your code efficient. DON'T re-compute all the preceding values of the Fibonacci sequence each time you need to get the next values.</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+// write your function calcIndex here
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(calcIndex(8)==7);
+    assert(calcIndex(100000)==26);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<h3 id="Problem-2-(Haskell;-25%-of-grade)">Problem 2 (Haskell; 25% of grade)<a class="anchor-link" href="#Problem-2-(Haskell;-25%-of-grade)">&#182;</a></h3><p>Write a Haskell function <code>calcGPA</code> that takes a list of letter grades (A, B, C, D, F) and returns the GPA. The conversion is <code>A=4</code>, <code>B=3</code>, <code>C=2</code>, <code>D=1</code>, <code>F=0</code>.</p>
+<p>Test your function with the following test-case:</p>
+
+<pre><code>&gt;&gt;&gt; calcGPA(["A", "B", "B", "C", "C", "C", "D", "F"])
+2.125
+
+Here, the underlying computation is (4+3+3+2+2+2+1+0)/8</code></pre>
+<h3 id="Problem-3-(SQL;-25%-of-grade)">Problem 3 (SQL; 25% of grade)<a class="anchor-link" href="#Problem-3-(SQL;-25%-of-grade)">&#182;</a></h3><p>On sqltest.net, given the following tables, write a query that gives (first name, last name, age, grade) for all students who got a grade of C or better. Sort the results by grade (highest grade first).</p>
+
+<pre><code>CREATE TABLE age ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+lastname VARCHAR(30), 
+age VARCHAR(30)
+); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('1', 'Walton', '12'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('2', 'Sanchez', '13'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('3', 'Ng', '14'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('4', 'Smith', '15'); 
+
+INSERT INTO `age` (`id`, `lastname`, `age`)
+VALUES ('5', 'Shenko', '16'); 
+
+CREATE TABLE name ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+lastname VARCHAR(30)
+); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('1', 'Franklin', 'Walton'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('2', 'Sylvia', 'Sanchez'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('3', 'Harry', 'Ng'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('4', 'Ishmael', 'Smith'); 
+
+INSERT INTO `name` (`id`, `firstname`, `lastname`)
+VALUES ('5', 'Kinga', 'Shenko'); 
+
+CREATE TABLE grade ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+firstname VARCHAR(30), 
+grade VARCHAR(30)
+); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('1', 'Franklin', 'A'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('2', 'Sylvia', 'C'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('3', 'Harry', 'D'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('4', 'Ishmael', 'F'); 
+
+INSERT INTO `grade` (`id`, `firstname`, `grade`)
+VALUES ('5', 'Kinga', 'B');</code></pre>
+<h3 id="Problem-4-(Neural-Net;-25%-of-grade)">Problem 4 (Neural Net; 25% of grade)<a class="anchor-link" href="#Problem-4-(Neural-Net;-25%-of-grade)">&#182;</a></h3><p>Suppose that you're given a neural network whose neurons are connected in the following way:</p>
+$$
+\begin{matrix}
+&amp; &amp; n_3 \\ 
+&amp; \nearrow &amp; &amp; \nwarrow \\ 
+n_1 &amp; &amp; &amp; &amp; n_2 \\
+&amp; \nwarrow &amp; &amp; \nearrow  \\
+&amp; &amp; n_0 \\ 
+\end{matrix}
+$$<p>Assume the following activation functions:</p>
+$$\begin{align*}
+f_0(x)&amp;=x+1 \\
+f_1(x) &amp;= x+2 \\
+f_2(x) &amp;= x \\
+f_3(x) &amp;= 2x
+\end{align*}$$<p>Assume the following weights:</p>
+$$\begin{align*}
+w_{01} &amp;= 1 \\
+w_{02} &amp;= 2 \\
+w_{13} &amp;= 3 \\
+w_{23} &amp;= 4
+\end{align*}$$<p><strong>Your task:</strong> Compute $a_3$ (the activity of $n_3$) if the input given to $n_0$ is $i_0=2.$</p>
+<p><strong>Note:</strong> You don't have to show all your work, but if you want the possibility of partial credit in case you get it wrong, show a couple steps along the way.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-2">Quiz 2-2<a class="anchor-link" href="#Quiz-2-2">&#182;</a></h1><p><strong>Date:</strong> 2/11</p>
+<p><strong>Time:</strong> 45 min</p>
+<p><strong>Topics:</strong> C++, Haskell</p>
+<p><strong>Allowed / prohibited resources:</strong> This quiz is open-book. You can refer to examples/solutions from previous assignments. But you cannot copy code from the internet nor discuss with classmates. (If you do either of these two things, it will probably show in your code, and you'll get a 0 -- so don't chance it.)</p>
+<p><strong>Submission:</strong> On this quiz, you'll need to write functions in C++ and Haskell. Write these functions in repl.it, turn in your repl.it links, and <strong>also copy/paste your actual repl.it code into the submission box as evidence that your code hasn't been modified since submitting the quiz.</strong></p>
+<h3 id="Problem-1-(Haskell;-33%-of-grade)">Problem 1 (Haskell; 33% of grade)<a class="anchor-link" href="#Problem-1-(Haskell;-33%-of-grade)">&#182;</a></h3><p>Write a function <code>sumFactors</code> that finds the sum of all the factors of the input number (which you can assume is a positive integer).</p>
+<ul>
+<li>In Haskell, the modulo operator is
+<pre><code>a `mod` b</code></pre>
+</li>
+</ul>
+<p>Here is a code template:</p>
+
+<pre><code>-- your function(s) here
+main = print(sumFactors 10) -- should come out to 1+2+5+10 = 18</code></pre>
+<h3 id="Problem-2-(C++;-66%-of-grade)">Problem 2 (C++; 66% of grade)<a class="anchor-link" href="#Problem-2-(C++;-66%-of-grade)">&#182;</a></h3><p>Consider the recursive sequence
+$$
+a_{n} = a_{n-1} + 2a_{n-2}, \quad a_0=0, a_1=1.
+$$</p>
+<p>The first few terms are</p>
+
+<pre><code>[a0,a1,a2,a3,a4,a5,a6,a7,a8]
+[0, 1, 1, 3, 5, 11,21,43,85]</code></pre>
+<p><strong>Important: A code template is provided at the bottom of the problem.</strong></p>
+<p><strong>a.</strong> Write a <strong>C++</strong> function <code>seqSum</code> to find the sum of the first $N$ terms <em>without repeating any computations</em>.</p>
+<ul>
+<li><p>You'll need to use an array</p>
+</li>
+<li><p>Examples below:</p>
+</li>
+</ul>
+
+<pre><code>seqSum(0) = a_0 = 0
+
+seqSum(3) = a_0 + a_1 + a_2 + a_3
+          =  0  +  1  +  1  +  3
+          =  5
+
+seqSum(8) = a_0 + a_1 + a_2 + a_3 + a_4 + a_5 + a_6 + a_7 + a_8
+          =  0  +  1  +  1  +  3  +  5  + 11  + 21  + 43  + 85
+          =  170</code></pre>
+<p><strong>b.</strong> Write a <strong>C++</strong> function <code>extendedSeqSum</code> that finds the sum of the first $N$ terms, and then finds the sum of THAT many terms <em>without repeating any computations</em>.</p>
+<ul>
+<li><p>You can copy your code from <code>seqSum</code> and then add more onto it.</p>
+</li>
+<li><p>Examples below:</p>
+</li>
+</ul>
+
+<pre><code>extendedSeqSum(2) = 1
+a_2 = 1, so compute the sum through a_1
+
+     a_0 + a_1
+    = 0  +  1
+    = 1
+
+extendedSeqSum(4) = 21
+a_4 = 5, so compute the sum through a_5
+
+     a_0 + a_1 + a_2 + a_3 + a_4 + a_5
+    = 0  +  1  +  1  +  3  +  5  +  11
+    = 21</code></pre>
+<p><strong>C++ Template</strong></p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+// write your functions seqSum and extendedSeqSum here
+
+int main()
+{
+    std::cout &lt;&lt; "Testing...\n";
+
+    assert(seqSum(0)==0);
+    assert(seqSum(3)==5);
+    assert(seqSum(8)==170);
+
+    assert(extendedSeqSum(2)==1);
+    assert(extendedSeqSum(4)==21);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-1">Quiz 2-1<a class="anchor-link" href="#Quiz-2-1">&#182;</a></h1><p><strong>Date:</strong> 1/29</p>
+<p><strong>Time:</strong> 45 min</p>
+<p><strong>Topics:</strong> Linear regression, logistic regression, k nearest neighbors, naive bayes, and Gini decision trees, overfitting, underfitting, training datasets, testing datasets, train-test splits.</p>
+<h3 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h3><p>Fill in the blanks. Fill in blanks [A1] and [A2] with some parameter of the model, blanks [B1] and [B2] with "high" or "low", and blanks [C1] and [C2] with "overfit" or "underfit". Then, justify your answer.</p>
+<blockquote><p>a. In a <strong>polynomial regression</strong> model, if you set [A1] too [B1], then the model would [C1] because $\_\_\_\_\_.$<br><br>
+b. In a <strong>k nearest neighbors</strong> model, if you set [A2] too [B2], then the model would [C2] because $\_\_\_\_\_.$</p>
+</blockquote>
+<h3 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h3><p>Suppose you fit a Gini decision tree on the dataset
+$$
+D = \Big[ (x,y,\textrm{class}) \, \Big| \, x,y \in \mathbb{Z}, \,\, xy \neq 0, \,\, x,y \in [-5,5] \Big]
+$$
+where
+$$
+\textrm{class} = \begin{cases}
+\textrm{small}, \quad x,y \in [-2,2] \\
+\textrm{big}, \quad \textrm{otherwise}.
+\end{cases}
+$$
+How many splits would there be? Justify your answer. (Tip: sketch out the dataset and the splits)</p>
+<h3 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h3><p>Suppose you have a dataset consisting of 100 records. Which of the following pairs of training/testing datasets would lead to overfitting?</p>
+<blockquote><p>I. train on records 1-60, test on records 61-100<br>
+II. train on records 1-50, test on records 41-100<br>
+III. train on records 1-40, test on records 61-100<br>
+IV. train on records 1-20, test on records 41-100<br>
+V. train on records 1-80, test on records 81-100<br></p>
+</blockquote>
+<h3 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h3><p>For each of the following modeling scenarios, you're given a dependent variable that you want to predict, and you need to say what data you'd want to collect and what model you'd want to use.</p>
+<ul>
+<li><p>Give 3 different independent variables for which you'd want to collect data.</p>
+</li>
+<li><p>Say what model you'd use (linear, polynomial, logistic, k nearest neighbors, naive Bayes, decision tree). Justify why you chose the model you did.</p>
+</li>
+</ul>
+<p><strong>a.</strong> Predicting a sports team's probability of winning or losing a game. (You can choose the sport.)</p>
+<p><strong>b.</strong> Predicting the number of views on a YouTube video during the first week.</p>
+<p><strong>c.</strong> Predicting whether a patient at the hospital will live or die.</p>
+<h3 id="Question-5-(Bonus)">Question 5 (Bonus)<a class="anchor-link" href="#Question-5-(Bonus)">&#182;</a></h3><p>Suppose you fit a decision tree on the dataset
+$$
+D = \Big[ (x,y,z,\textrm{class}) \, \Big| \, x,y,z \in \mathbb{Z}, \,\, xyz \neq 0, \,\, x,y,z \in [-5,5] \Big]
+$$
+where
+$$
+\textrm{class} = \begin{cases}
+\textrm{small}, \quad x,y,z \in [-2,2] \\
+\textrm{big}, \quad \textrm{otherwise}.
+\end{cases}
+$$
+How many splits would there be? Justify your answer.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Final-1">Final 1<a class="anchor-link" href="#Final-1">&#182;</a></h1><p><strong>Date:</strong> 12/17</p>
 <p><strong>Time:</strong> 120 min</p>
 <p><strong>SUPER IMPORTANT: There are 64 short questions on this final. Most of these questions should take no more than 30 seconds to a minute if you know what you're doing. To ensure that you maximize the number of questions you're able to answer, SKIP ANY QUESTIONS THAT AREN'T IMMEDIATELY CLEAR TO YOU and come back to them only after you've gone through all the questions in the test.</strong></p>
