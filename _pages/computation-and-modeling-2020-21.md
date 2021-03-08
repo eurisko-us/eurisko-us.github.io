@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="66">
+<font size="3em"><ol reversed start="67">
+    <li><b>Monday, March 8</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/521081075">Class Recording</a> (C&M is first half) - parser
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-67-1">Primary: Game Level 0.1 with Random Seeds, Writing</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-67-2">Supplementary: Titanic Dataset Parser, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-67-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, March 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/520073721">Class Recording</a> (C&M is first half) - intro to Kaggle, review pointers
         <br>Assignment Problems:
