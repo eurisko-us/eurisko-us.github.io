@@ -14160,9 +14160,23 @@ else:
 <p><strong>c.</strong> Continue debugging level 3. If you're not able to get the debugging done due to it taking a long time, then come to the next class with some ideas for how to speed up the process.</p>
 <blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
 </blockquote>
-<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p><strong>[IN PROGRESS]</strong></p>
-<p>multiple input nodes, multiple output nodes, multiple hidden layers, just ask for a couple (not all) of the gradients</p>
-
+<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p><strong>Note:</strong> Next time we do neural networks, we'll switch back to implementing them in code.</p>
+<center><img width=200 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/neural-net-3-hidden-layers.png' border='0'/></center><p>Compute $\dfrac{\partial E}{\partial w_{47}},$ $\dfrac{\partial E}{\partial w_{14}},$ and $\dfrac{\partial E}{\partial w_{01}}.$</p>
+<p>To check your answer, assume that</p>
+<ul>
+<li><p>$y_\textrm{actual}=1,$</p>
+</li>
+<li><p>$a_k=k+11$ and $f'_k(i_k) = k+1$ for all $k,$</p>
+</li>
+<li><p>$w_{ab} = a+b$ for all $a,b.$</p>
+</li>
+</ul>
+<p>You should get the following:</p>
+$$\begin{align*}
+\dfrac{\partial E}{\partial w_{47}} &amp;= 897600 \\[5pt]
+\dfrac{\partial E}{\partial w_{14}} &amp;= 156024000 \\[5pt]
+\dfrac{\partial E}{\partial w_{01}} &amp;= 3777797760 \\[5pt]
+\end{align*}$$
 </div>
 </div>
 </div>
