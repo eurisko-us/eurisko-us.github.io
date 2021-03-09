@@ -14226,7 +14226,71 @@ else:
 
 &gt;&gt;&gt; line_3 = '187,1,3,"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)",female,,1,0,370365,15.5,,Q'
 ['187', '1', '3', '"O\'Brien, Mrs. Thomas (Johanna ""Hannah"" Godfrey)"', 'female', '', '1', '0', '370365', '15.5', '', 'Q']</code></pre>
-<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<h3 id="C++">C++<a class="anchor-link" href="#C++">&#182;</a></h3><p>Read the following:</p>
+<blockquote><p><a href="https://www.learncpp.com/cpp-tutorial/dynamic-memory-allocation-with-new-and-delete/">https://www.learncpp.com/cpp-tutorial/dynamic-memory-allocation-with-new-and-delete/</a></p>
+</blockquote>
+<p>Then, answer the following questions in an overleaf doc:</p>
+<ol>
+<li><p>What are the differences between static memory allocation, automatic memory allocation, and dynamic memory allocation?</p>
+</li>
+<li><p>The following statement is false. Correct it.</p>
+<blockquote><p>To dynamically allocate an integer and assign the address to a pointer so we can access it later, we use the syntax <code>int *ptr{ new int };</code>. This tells our program to download some new memory from the internet and store a pointer to the new memory.</p>
+</blockquote>
+</li>
+<li><p>The following statement is false. Correct it.</p>
+<blockquote><p>The syntax <code>destroy ptr;</code> destroys the dynamically allocated memory that was accessible through <code>ptr</code>. Because it was destroyed, this memory address can no longer be used by the computer in the future.</p>
+</blockquote>
+</li>
+<li><p>What does a <code>bad_alloc</code> exception mean?</p>
+</li>
+<li><p>What is a null pointer? What makes it different from a normal pointer? What can we use it for, that we can't use a normal pointer for?</p>
+</li>
+<li><p>What is a memory leak, and why are memory leaks bad?</p>
+</li>
+<li><p>Does the following bit of code cause a memory leak? If so, why?</p>
+
+<pre><code>int value = 5;
+int *ptr{ new int{} };
+ptr = &value;</code></pre>
+</li>
+<li><p>Does the following bit of code cause a memory leak? If so, why?</p>
+
+<pre><code>int value{ 5 };
+int *ptr{ new int{} };
+delete ptr;
+ptr = &value;</code></pre>
+</li>
+<li><p>Does the following bit of code cause a memory leak? If so, why?</p>
+
+<pre><code>int *ptr{ new int{} };
+ptr = new int{};</code></pre>
+</li>
+<li><p>Does the following bit of code cause a memory leak? If so, why?</p>
+
+<pre><code>int *ptr{ new int{} };
+delete ptr;
+ptr = new int{};</code></pre>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-100-3">Problem 100-3<a class="anchor-link" href="#Problem-100-3">&#182;</a></h1><h3 id="Commit">Commit<a class="anchor-link" href="#Commit">&#182;</a></h3><ul>
+<li>Commit your code to Github.</li>
+</ul>
+<p>(You don't have to make or resolve any issues on this assignment)</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Neural net overleaf: _____
+repl.it link to parser: _____
+C++ overleaf link: _____
+
+commits: _____
+(machine-learning, space-empires)</code></pre>
 
 </div>
 </div>
