@@ -14113,6 +14113,97 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-101-1">Problem 101-1<a class="anchor-link" href="#Problem-101-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Per our discussion in class, we'll refactor our level 3 games before returning to resolving discrepancies.</p>
+<p>I've updated the wiki</p>
+<blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)" target="_blank">https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)</a></p>
+</blockquote>
+<p>with the following changes</p>
+<ul>
+<li><p>Eliminate <code>hidden_game_state_for_combat</code> per George's suggestion -- put all that information in <code>combat_state</code> instead.</p>
+</li>
+<li><p>In the game state:</p>
+<ul>
+<li><p>instead of using an array of players, make it a dictionary where the key is the player number.</p>
+</li>
+<li><p>store <code>turn_created</code> for all units, as this might make debugging easier</p>
+</li>
+<li><p>instead of storing each player's units as an array, store them as a dictionary where the keys are unique numeric identifiers that start at 0 and incremement each time any player gets a unit. Even if a unit is destroyed, no other unit gets its identifier. Also, these numeric identifiers should be unique across the whole game -- for example, if player 1 has a ship with id 5, then player 2 does not have a ship with id 5.</p>
+</li>
+</ul>
+</li>
+<li><p>In <code>decide_purchases</code>, for any ship you want to buy, you should pass along the id of the colony where you want to build it (instead of just passing the location). This way, it's less convoluted.</p>
+</li>
+</ul>
+<p><strong>If you have any more refactoring ideas or disagree with any of the above refactorings, post on #machine-learning and we can discuss</strong></p>
+<p><strong>Also,</strong> in the wiki, there's now a section called "Gotchas" where you can write down any subtle rules that you've encountered, that you think others may not have implemented. For example:</p>
+<blockquote><p>During combat, you can't attack a colony until all ships have been destroyed</p>
+</blockquote>
+<h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p>In Problem 94-1, you needed to create a logistic regressor neural network. Previously, this was a bit difficult because we hadn't had enough practice computing weight gradients. But now, we've had much more practice, so I think it should be within reach.</p>
+<p>Make sure this logistic regressor neural net is working. If you managed to get it working on assignment 94, then you can just submit the code that you already wrote. Otherwise, if you didn't manage to get it working before, then your task is to get it working now.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-101-2">Problem 101-2<a class="anchor-link" href="#Problem-101-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling---Loading-the-Data">Titanic Survival Modeling - Loading the Data<a class="anchor-link" href="#Titanic-Survival-Modeling---Loading-the-Data">&#182;</a></h3><p><em>Location:</em> <code>machine-learning/kaggle/titanic/data_loading.py</code></p>
+<p><strong>a.</strong> Make an account on Kaggle.com so that we can walk through a Titanic prediction task.</p>
+<ul>
+<li><p>Go to <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a>, scroll down to the bottom, and click "download all". You'll get a zip file called <code>titanic.zip</code>.</p>
+</li>
+<li><p>Upload <code>titanic.zip</code> into <code>machine-learning/kaggle/titanic/data</code>. Then, run <code>unzip machine-learning/kaggle/data/titanic.zip</code> in the command line to unzip the file.</p>
+</li>
+<li><p>This gives us 3 files: <code>train.csv</code>, <code>test.csv</code>, and <code>gender_submission.csv</code>. The file <code>train.csv</code> contains data about a bunch of passengers along with whether or not they survived. Our goal is to use <code>train.csv</code> to build a model that will predict the outcome of passengers in <code>test.csv</code> (for which the survival data is not given).</p>
+<ul>
+<li><strong>IMPORTANT:</strong> To prevent confusion, rename <code>train.csv</code> to <code>dataset_of_knowns.csv</code>, rename <code>test.csv</code> to <code>unknowns_to_predict.csv</code>, and rename <code>gender_submission.csv</code> to <code>predictions_from_gender_model.csv</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>b.</strong> In your <code>DataFrame</code>, update your method <code>read_csv</code> so that it accepts the following (optional) arguments:</p>
+<ul>
+<li><p>a line parser</p>
+</li>
+<li><p>a dictionary of data types</p>
+</li>
+</ul>
+
+<pre><code>&gt;&gt;&gt; import parse_line from somefile
+&gt;&gt;&gt; data_types = {
+    "PassengerId": int,
+    "Survived": int,
+    "Pclass": int,
+    "Name": str,
+    "Sex": str,
+    "Age": int,
+    "SibSp": int,
+    "Parch": int,
+    "Ticket": str,
+    "Fare": float,
+    "Cabin": str,
+    "Embarked": str
+}
+&gt;&gt;&gt; df = DataFrame.from_csv("data/dataset_of_knowns.csv", data_types=data_types, parser=parse_line)
+&gt;&gt;&gt; df.columns
+["PassengerId", "Survived", "Pclass", "Name", "Sex", "Age", "SibSp", "Parch", "Ticket", "Fare", "Cabin", "Embarked"]
+
+&gt;&gt;&gt; df.to_array()[:5]
+[[1, 0, 3, "Braund, Mr. Owen Harris", "male", 22, 1, 0, "A/5 21171", 7.25, "", "S"],
+[2, 1, 1, "Cumings, Mrs. John Bradley (Florence Briggs Thayer)", "female", 38, 1, 0, "PC 17599", 71.2833, "C85", "C"],
+[3, 1, 3, "Heikkinen, Miss. Laina", "female", 26, 0, 0, "STON/O2. 3101282", 7.925, "", "S"]
+[4, 1, 1, "Futrelle, Mrs. Jacques Heath (Lily May Peel)", "female", 35, 1, 0, "113803", 53.1, "C123", "S"]
+[5, 0, 3, "Allen, Mr. William Henry", "male", 35, 0, 0, "373450", 8.05, "", "S"]]</code></pre>
+<h3 id="SQL">SQL<a class="anchor-link" href="#SQL">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<p>some query</p>
+<h3 id="Haskell">Haskell<a class="anchor-link" href="#Haskell">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<p>use <code>merge</code> to implement <code>mergeSort</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-100-1">Problem 100-1<a class="anchor-link" href="#Problem-100-1">&#182;</a></h1><p><strong>Announcement:</strong> There will be a quiz on Friday. Topics will include SQL, C++, and neural net gradient computations.</p>
 <h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>Note:</strong> I put some information on the wiki here:</p>
 <blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)" target="_blank">https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)</a></p>
