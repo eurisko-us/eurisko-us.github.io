@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="67">
+<font size="3em"><ol reversed start="68">
+    <li><b>Wednesday, March 10</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (C&M is first half) - parser
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-68-1">Primary: Game Level 0.2</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-68-2">Supplementary: Titanic Dataset Loading, SQL, Haskell</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-68-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, March 8</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/521081075">Class Recording</a> (C&M is first half) - parser
         <br>Assignment Problems:
