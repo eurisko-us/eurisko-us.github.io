@@ -422,6 +422,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-1">Review - Probability (Pishro-Nik)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-65-2">SQL Zoo Module 1, 11-15</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-65.pdf">Riley</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-65.pdf">Colby</a>,-->
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-65.pdf">Elijah</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-63.pdf">George</a>,-->
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-65.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, November 13</b>
