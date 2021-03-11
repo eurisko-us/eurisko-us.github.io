@@ -13228,9 +13228,9 @@ div#notebook {
         },
         2: {
             'scout_coords': {
-                1: (mid_x, 1),
-                2: (mid_x, 1),
-                3: (mid_x, 1),
+                1: (mid_x, 7),
+                2: (mid_x, 7),
+                3: (mid_x, 7),
             },
             'home_colony_coords': (mid_x, board_y)
         }
@@ -13247,7 +13247,7 @@ div#notebook {
         game = Game(players)
         game.run_to_completion()
         winner = game.state['winner']
-        scouts_remaining[winner] += len(game.state[winner]['scout_coords'])
+        scouts_remaining[winner] += len(game.state['players'][winner]['scout_coords'])
 
         num_wins[winner] += 1
 &gt;&gt;&gt; avg_scouts_remaining = {k:v/200 for k,v in scouts_remaining.items()}
