@@ -412,6 +412,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-66-2">Review - Probability (Pishro-Nik)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-66-3">Sololearn C++ Module 8; SQL Zoo Module 2, 1-5</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-66.pdf">Riley</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-66.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-66.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-66.pdf">George</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-66.pdf">David</a>
+        </font>
     </li>
     <br>
     <li><b>Monday, November 16</b>
@@ -427,7 +435,7 @@ author_profile: false
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-65.pdf">Riley</a>,
         <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-65.pdf">Colby</a>,-->
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-65.pdf">Elijah</a>,
-        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-63.pdf">George</a>,-->
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-65.pdf">George</a>,-->
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-65.pdf">David</a>
         </font>
     </li>
