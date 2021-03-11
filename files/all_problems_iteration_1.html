@@ -14117,7 +14117,7 @@ Just have it all in combat state man"</p>
 <p>I've updated the wiki</p>
 <blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)" target="_blank">https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)</a></p>
 </blockquote>
-<p>with the following changes</p>
+<p>with the following changes:</p>
 <ul>
 <li><p>Eliminate <code>hidden_game_state_for_combat</code> per George's suggestion -- put all that information in <code>combat_state</code> instead.</p>
 </li>
@@ -14127,11 +14127,11 @@ Just have it all in combat state man"</p>
 </li>
 <li><p>store <code>turn_created</code> for all units, as this might make debugging easier</p>
 </li>
-<li><p>instead of storing each player's units as an array, store them as a dictionary where the keys are unique numeric identifiers that start at 0 and incremement each time any player gets a unit. Even if a unit is destroyed, no other unit gets its identifier. Also, these numeric identifiers should be unique across the whole game -- for example, if player 1 has a ship with id 5, then player 2 does not have a ship with id 5.</p>
+<li><p>Store an <code>id</code> for each ship. In the game, the units are identified in the form type-id, like scout-2, where the number is only unique to a particular type of ship, i.e. there can be a scout-2 and a destroyer-2. So we should probably take care of that now. And that allows us to keep our units in the form of an array, which is what we had before.</p>
 </li>
 </ul>
 </li>
-<li><p>In <code>decide_purchases</code>, for any ship you want to buy, you should pass along the id of the colony where you want to build it (instead of just passing the location). This way, it's less convoluted.</p>
+<li><p>Due to the change in the game state, there are some resulting changes in the format of outputs in the strategy template</p>
 </li>
 </ul>
 <p><strong>If you have any more refactoring ideas or disagree with any of the above refactorings, post on #machine-learning and we can discuss</strong></p>
