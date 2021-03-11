@@ -477,6 +477,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-4">Sololearn C++ Module 5, SQL Module 2</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-60-5">Blog Post + Catch-Up</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        Riley (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-60-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-60-2.pdf">2</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-60-3.pdf">3</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-60.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-60.pdf">Elijah</a>,
+        <!--<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-60.pdf">George</a>,-->
+        David (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-60-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-60-2.pdf">2</a>)
+        </font>
     </li>
     <br>
     <li><b>Friday, October 30</b>
