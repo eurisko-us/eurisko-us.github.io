@@ -465,6 +465,14 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-4">Probability Review Problems</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-61-5">Sololearn SQL Module 3</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        Riley (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-61-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/riley-paddock-61-2.pdf">2</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/colby-roberts-61.pdf">Colby</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/elijah-tarr-61.pdf">Elijah</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/george-meza-61.pdf">George</a>,
+        <!--David (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-60-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/david-gieselman-60-2.pdf">2</a>)-->
+        </font>
     </li>
     <br>
     <li><b>Wednesday, November 4</b>
