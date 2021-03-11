@@ -111,7 +111,7 @@ Here are our plans for the rest of the semester:
 
 <li><i>Data Structures and Algorithms</i> - we will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), and genetic algorithms.</li>
 
-<li><i>Programming Languages</i> - we will build our own string and vector classes in C++ and continue learning more advanced C++ and Haskell. We'll also take the algorithms and models we had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, we'll write our own SQL parser in their DataFrame class.</li>
+<li><i>Programming Languages</i> - we will build our own string and vector classes in C++ and continue learning more advanced C++ and Haskell. We'll also take the algorithms and models we had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, we'll write our own SQL parser within the DataFrame class.</li>
 
 <li><i>Space Empires</i> - we will continue building up the game level by level and will continue building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that they have built. Once the Space Empires games are fully implemented, the we will put them on a server and have the agents communicate with the game using socket connections.</li>
 
