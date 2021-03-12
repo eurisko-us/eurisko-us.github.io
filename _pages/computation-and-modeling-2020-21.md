@@ -77,7 +77,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="69">
     <li><b>Friday, March 12</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (C&M is first half)
+        <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (C&M is first half)
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-69-1">Primary: Logging Game Events</a></li>
