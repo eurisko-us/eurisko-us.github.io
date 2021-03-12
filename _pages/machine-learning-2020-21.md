@@ -76,7 +76,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="102">
     <li><b>Friday, March 12</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (ML is second half) - potential internships, upcoming meeting with Prof. Wierman, slinky development and the log of truth
+        <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (ML is second half) - potential internships, upcoming meeting with Prof. Wierman, slinky development and the log of truth
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-102-1">Primary: Intro to Slinky Development and the Log of Truth</a></li>
