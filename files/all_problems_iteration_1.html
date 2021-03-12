@@ -14124,6 +14124,31 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-102-1">Problem 102-1<a class="anchor-link" href="#Problem-102-1">&#182;</a></h1><p><strong>Note:</strong> We have a meeting with Prof. Wierman on Monday from 11:30am-12:30pm. Put this on your calendar and set some kind of alarm so you don't forget. I'll paste the meeting link in Slack when it's time. Also, please prepare to turn on your video for this meeting (it's a more formal setting).</p>
+<h3 id="Slinky-Development">Slinky Development<a class="anchor-link" href="#Slinky-Development">&#182;</a></h3><p>The Space Empires game is posing a bit of a challenge in that we need a "log of truth" to match up against when we're reconciling games. It's inefficient when we all try to reconcile at the same time, because that's an $n \times n$ problem. It's also not feasible for me to create the log of truth due to the magnitude of the additional time committment that would be needed to code up the game</p>
+<p>So what we can do instead is repeatedly have 2 people create logs for some strategy matchup, reconcile their logs to form the log of truth, and then have the rest of the class reconcile against that log of truth. Then, 2 new people will create the next log of truth, resulting in a slinky-like effect. (So we'll refer to this as "slinky development".)</p>
+<p>I'll start off the first round. Check out <code>cohort-1/102-pre-level-3-game</code> of the slinky-development repo:</p>
+<blockquote><p><a href="https://github.com/eurisko-us/slinky-development">https://github.com/eurisko-us/slinky-development</a></p>
+</blockquote>
+<p>The rules for the game are in <code>rules.txt</code> and the logs show the simulation results for several random seeds.</p>
+<p><strong>Your task</strong> is to replicate these logs with your game, <em>exactly</em> the way they appear in the repo, using the <em>exact</em> strategies in <code>strategies.py</code>. Note that a tab is written as <code>\t</code>. (But be sure to post on Slack if you think there are any errors.)</p>
+<p>Then, copy your logs into <a href="https://www.diffchecker.com/">https://www.diffchecker.com/</a> to verify that your logs match up perfectly with the logs in the repo. You'll save/submit the link to your diffs (example: <a href="https://www.diffchecker.com/57HDK3vO">https://www.diffchecker.com/57HDK3vO</a>) along with a link to the code that you used to generate your logs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-102-2">Problem 102-2<a class="anchor-link" href="#Problem-102-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<p>titanic survival modeling - feature engineering</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-101-1">Problem 101-1<a class="anchor-link" href="#Problem-101-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Per our discussion in class, we'll refactor our level 3 games before returning to resolving discrepancies.</p>
 <p>I've updated the wiki</p>
 <blockquote><p><a href="https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)" target="_blank">https://github.com/eurisko-us/eurisko-us.github.io/wiki/Space-Empires-Rules-(Cohort-1,-Level-3)</a></p>

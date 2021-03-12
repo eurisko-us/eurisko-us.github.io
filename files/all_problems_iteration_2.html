@@ -13212,6 +13212,59 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>During combat, instead of choosing scouts randomly to be destroyed, construct a combat order in which the ships who occupied the grid space first come first in the order.</p>
+<p>Then, loop through the combat order, letting each ship attack an enemy. The first ship in the combat order attacks first, the second ship attacks second, and so on. Each ship should always attack the enemy ship that appears first in the combat order.</p>
+<p>Ensure that your tests from Problem 68-1 still pass.</p>
+<p>Next time, we'll write some more bulletproof tests that will ensure that every step of the game is happening correctly. (We'll do this by creating a <code>Logger</code> to log the results of the game every step of the way.) After that, we'll start giving more choice to the strategies themselves (e.g. allowing a strategy to choose which ship it wants to attack during combat).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-69-1">Problem 69-1<a class="anchor-link" href="#Problem-69-1">&#182;</a></h1><p>In your game, write the game events to a log file. You can do this using a <code>Logger</code> class:</p>
+
+<pre><code>class Logger:
+    def __init__(self, filename='log.txt'):
+        self.filename = filename
+
+    def clear_log(self):
+        with open(self.filename, 'w') as file:
+            file.writelines([''])
+
+    def write(self, string=None):
+        with open(self.filename, 'a') as file:
+            file.writelines([string])</code></pre>
+<p>To see how the logger class works, make a folder <code>space-empires/logs</code> and try the following:</p>
+
+<pre><code>&gt;&gt;&gt; logger = Logger('/home/runner/space-empires/logs/silly-log.txt')
+&gt;&gt;&gt; logger.write('stuff')</code></pre>
+<p>Then look at <code>silly-log.txt</code> to see its contents.</p>
+<hr>
+<p><strong>THE IMPORTANT PART</strong></p>
+<p>The format of your game log should look like this template exactly (though the ships that get destroyed in combat will be a bit different since we haven't yet standardized the random selection of ships to destroy).</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/slinky-development/main/cohort-2/69-game-level-0-3/sample-log.txt">https://raw.githubusercontent.com/eurisko-us/slinky-development/main/cohort-2/69-game-level-0-3/sample-log.txt</a></p>
+</blockquote>
+<p>Once you've got your log, post the file on #checkpoints.</p>
+<hr>
+<p><strong>Note:</strong> To write a new line, you can use <code>\n</code>. To write a tab, you can use <code>\t</code>. Also, remember that if you want to start the log over, you need to run <code>logger.clear_log()</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-69-2">Problem 69-2<a class="anchor-link" href="#Problem-69-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
+<p>titanic survival modeling - feature engineering &amp; exploratory analysis</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-68-1">Problem 68-1<a class="anchor-link" href="#Problem-68-1">&#182;</a></h1><h3 id="Game-Level-0.2">Game Level 0.2<a class="anchor-link" href="#Game-Level-0.2">&#182;</a></h3><p>Each player should now be given 3 scouts. Here is what your initial game state will look like:</p>
 
 <pre><code>{
