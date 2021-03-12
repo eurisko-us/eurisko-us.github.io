@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="101">
+<font size="3em"><ol reversed start="102">
+    <li><b>Friday, March 12</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (ML is second half) - potential internships, upcoming meeting with Prof. Wierman, slinky development and the log of truth
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-102-1">Primary: Intro to Slinky Development and the Log of Truth</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-102-2">Supplementary: Titanic Dataset - Exploratory Analysis</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-102-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, March 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (ML is second half) - weight gradient calculations, game level 3 debugging discussion
         <br>Assignment Problems:
