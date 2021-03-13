@@ -13256,8 +13256,111 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-69-2">Problem 69-2<a class="anchor-link" href="#Problem-69-2">&#182;</a></h1><p><strong>IN PROGRESS</strong></p>
-<p>titanic survival modeling - feature engineering &amp; exploratory analysis</p>
+<h1 id="Problem-69-2">Problem 69-2<a class="anchor-link" href="#Problem-69-2">&#182;</a></h1><h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p>The first step towards building our models is deciding which independent variables to in our model (i.e. which variables might be useful for predicting <code>survival</code>?). There is a data dictionary at <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a> that describes what each variable means. Here are the first couple rows, for reference:</p>
+
+<pre><code>PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked
+1,0,3,"Braund, Mr. Owen Harris",male,22,1,0,A/5 21171,7.25,,S
+2,1,1,"Cumings, Mrs. John Bradley (Florence Briggs Thayer)",female,38,1,0,PC 17599,71.2833,C85,C
+3,1,3,"Heikkinen, Miss. Laina",female,26,0,0,STON/O2. 3101282,7.925,,S
+4,1,1,"Futrelle, Mrs. Jacques Heath (Lily May Peel)",female,35,1,0,113803,53.1,C123,S
+5,0,3,"Allen, Mr. William Henry",male,35,0,0,373450,8.05,,S</code></pre>
+<p>Some variables will not be useful in our model:</p>
+<ul>
+<li><code>PassengerId</code> is just the row number of the dataset. It has nothing to do with the actual properties of passengers. We can discard it.</li>
+</ul>
+<p>Other variables may not be useful as-is, but they may be useful after some additional processing:</p>
+<ul>
+<li><p><code>Name</code> has too many categories to be useful in its entirety. However, the surname alone may be useful, given that passengers in the same family likely stuck together and took similar paths leading to survival or death.</p>
+</li>
+<li><p><code>Ticket</code> appears to be formatted as a ticket type and ticket number. If we split those up into two variables (ticket type and ticket number), then we may be able to find some use in those.</p>
+</li>
+<li><p><code>Cabin</code> appears to be formatted as a cabin type and cabin number. If we split those up into two variables, then we may be able to find some use in those.</p>
+</li>
+</ul>
+<p>Other variables seem like they may be useful with minimal processing: <code>Pclass</code>, <code>Sex</code>, <code>Age</code>, <code>SibSp</code>, <code>Parch</code>, <code>Fare</code>, <code>Embarked</code>.</p>
+<hr>
+<p><strong>Your task</strong> is to split <code>Name</code>, <code>Ticket</code>, and <code>Cabin</code> into the sub-variables mentioned above (<code>Surname</code>, <code>TicketType</code>, <code>TicketNumber</code>, <code>CabinType</code>, <code>CabinNumber</code>). Next time, we'll analyze all the variables to determine how much they tell us about survival, but for now, let's just worry about creating those sub-variables that we want to investigate.</p>
+<ul>
+<li>(Note that we also want to investigate <code>Pclass</code>, <code>Sex</code>, <code>Age</code>, <code>SibSp</code>, <code>Parch</code>, <code>Fare</code>, and <code>Embarked</code>, but these variables won't need to be split like <code>Name</code>, <code>Ticket</code>, and <code>Cabin</code> do, so we don't need to worry about them right now)</li>
+</ul>
+<hr>
+<p><strong>Note:</strong> In the following problems, your dataframe method <code>apply</code> will be useful (see problem 28-2) and so will Python's <code>split</code> method (<a href="https://www.geeksforgeeks.org/python-string-split/">https://www.geeksforgeeks.org/python-string-split/</a>)</p>
+<p><strong>a.</strong> Get the <code>Surname</code> from <code>Name</code>. In the way the names are formatted, it appears that the surname always consists of the characters preceding the first comma.</p>
+<ul>
+<li>While we're at it, let's get rid of that awkward quote at the beginning of the surname. You can do this by just ignoring the first character.</li>
+</ul>
+<p><strong>b.</strong> Split <code>Cabin</code> into <code>CabinType</code> and <code>CabinNumber</code>, e.g. the cabin <code>B51</code> has type <code>B</code> and number <code>51</code>.</p>
+<ul>
+<li><p>If you look at the dataset, you'll see that <code>Cabin</code> sometimes has multiple cabin numbers, e.g. <code>B51 B53 B55</code>. The cabin types appear to all be the same, while the cabin number is incremented by a small amount for each cabin. So, we can get a decent approximation by just considering the first entry (in the case of <code>B51 B53 B55</code>, we'll just consider <code>B51</code>).</p>
+</li>
+<li><p>Keep <code>CabinType</code> as a string but set <code>CabinNumber</code> to be an integer. (You may wish to write a method in your <code>DataFrame</code> that converts a column to a desired type.)</p>
+</li>
+</ul>
+<p><strong>c.</strong> Split <code>Ticket</code> into <code>TicketType</code> and <code>TicketNumber</code>, e.g. the ticket <code>SOTON/O.Q. 3101312</code> has type <code>SOTON</code> and number <code>3101312</code>.</p>
+<ul>
+<li><p>Watch out! Some tickets don't have a type, so it would be <code>None</code>. For example, the ticket <code>19877</code> would have type <code>None</code> and number <code>19877</code>.</p>
+</li>
+<li><p>Keep <code>TicketType</code> as a string but set <code>TicketNumber</code> to be an integer.</p>
+</li>
+</ul>
+<p>Here's an example of what the output should look like. First, read in the data as usual:</p>
+
+<pre><code>&gt;&gt;&gt; import parse_line from somefile
+&gt;&gt;&gt; data_types = {
+    "PassengerId": int,
+    "Survived": int,
+    "Pclass": int,
+    "Name": str,
+    "Sex": str,
+    "Age": float,
+    "SibSp": int,
+    "Parch": int,
+    "Ticket": str,
+    "Fare": float,
+    "Cabin": str,
+    "Embarked": str
+}
+&gt;&gt;&gt; df = DataFrame.from_csv("data/dataset_of_knowns.csv", data_types=data_types, parser=parse_line)
+&gt;&gt;&gt; df.columns
+["PassengerId", "Survived", "Pclass", "Name", "Sex", "Age", "SibSp", "Parch", "Ticket", "Fare", "Cabin", "Embarked"]
+
+&gt;&gt;&gt; df.to_array()[:5]
+[[1, 0, 3, '"Braund, Mr. Owen Harris"', "male", 22.0, 1, 0, "A/5 21171", 7.25, None, "S"],
+[2, 1, 1, '"Cumings, Mrs. John Bradley (Florence Briggs Thayer)"', "female", 38.0, 1, 0, "PC 17599", 71.2833, "C85", "C"],
+[3, 1, 3, '"Heikkinen, Miss. Laina"', "female", 26.0, 0, 0, "STON/O2. 3101282", 7.925, None, "S"]
+[4, 1, 1, '"Futrelle, Mrs. Jacques Heath (Lily May Peel)"', "female", 35.0, 1, 0, "113803", 53.1, "C123", "S"]
+[5, 0, 3, '"Allen, Mr. William Henry"', "male", 35.0, 0, 0, "373450", 8.05, None, "S"]]</code></pre>
+<p>Then, process your <code>df</code>. You <strong>don't</strong> have to write generalized code for this part. This can be a one-off thing.</p>
+<p>After processing, your dataframe should look like this:</p>
+
+<pre><code>&gt;&gt;&gt; df.columns
+["PassengerId", "Survived", "Pclass", "Surname", "Sex", "Age", "SibSp", "Parch", "TicketType", "TicketNumber", "Fare", "CabinType", "CabinNumber", "Embarked"]
+
+&gt;&gt;&gt; df.to_array()[:5]
+[[1, 0, 3, "Braund", "male", 22.0, 1, 0, "A/5", 21171, 7.25, None, None, "S"],
+[2, 1, 1, "Cumings", "female", 38.0, 1, 0, "PC", 17599, 71.2833, "C", 85, "C"],
+[3, 1, 3, "Heikkinen", "female", 26.0, 0, 0, "STON/O2.", 3101282, 7.925, None, None, "S"]
+[4, 1, 1, "Futrelle", "female", 35.0, 1, 0, "113803", 53.1, "C", 123, "S"]
+[5, 0, 3, "Allen", "male", 35.0, 0, 0, None, 373450, 8.05, None, None, "S"]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-69-3">Problem 69-3<a class="anchor-link" href="#Problem-69-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories. (If you don't have any issues to resolve, just write a note in your submission that that's the case.)</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>Repl.it link to space-empires log: ____
+Repl.it link to titanic dataset processing: ____
+Resolved issue: _____
+Commit links (space-empires, machine-learning): ____</code></pre>
 
 </div>
 </div>
