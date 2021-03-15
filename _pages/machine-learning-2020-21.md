@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="102">
+<font size="3em"><ol reversed start="103">
+    <li><b>Monday, March 15</b>
+        <br>No class, but there is an assignment
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-103-1">Primary: Finish up Slinky Development with Updated Logs; Prep for Unit Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-103-2">Supplementary: SQL Primitives (Group By / Aggregate), SQL Query</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-103-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, March 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (ML is second half) - potential internships, upcoming meeting with Prof. Wierman, slinky development and the log of truth
         <br>Assignment Problems:
