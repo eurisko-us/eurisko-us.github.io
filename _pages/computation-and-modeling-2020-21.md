@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="69">
+<font size="3em"><ol reversed start="70">
+    <li><b>Monday, March 15</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-70-1">Primary: Finish First Draft of Blog Post</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-70-2">Supplementary: SQL Primitives (Group By / Aggregate), SQL Query</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-70-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, March 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (C&M is first half)
         <br>Assignment Problems:
