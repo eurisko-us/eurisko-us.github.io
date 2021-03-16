@@ -14198,7 +14198,7 @@ or die roll &lt;= (attack strength) + (attack technology) - (defense strength) -
 <li><em>Note:</em> You may have previously written these methods under slightly different names. You may need to rename <code>select_columns</code> to just <code>select</code>, and <code>select_columns_where</code> to just <code>where</code>.</li>
 </ul>
 
-<pre><code>&gt;&gt;&gt; df = DataFrame(
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
     [['Kevin', 'Fray', 5],
     ['Charles', 'Trapp', 17],
     ['Anna', 'Smith', 13],
@@ -14252,7 +14252,7 @@ ERROR
 <hr>
 <p><strong>Your task on this problem</strong> is to implement another primitive we will need: <code>group_by</code>. Make sure your implementation passes the test below.</p>
 
-<pre><code>&gt;&gt;&gt; df = DataFrame(
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
     [
         ['Kevin Fray', 52, 100],
         ['Charles Trapp', 52, 75],
@@ -14271,7 +14271,7 @@ ERROR
 &gt;&gt;&gt; df.group_by('name').to_array()
 [
     ['Kevin Fray', [52, 53], [100, 80]],
-    ['Carles Trapp', [52, 53], [75, 95]],
+    ['Charles Trapp', [52, 53], [75, 95]],
     ['Anna Smith', [52, 53, 54], [50, 70, 90]],
     ['Sylvia Mendez', [52, 53, 54], [100, 90, 80]],
 ]</code></pre>
@@ -14280,7 +14280,7 @@ ERROR
 <pre><code>&gt;&gt;&gt; df.group_by('name').aggregate('score', 'count').to_array()
 [
     ['Kevin Fray', [52, 53], 2],
-    ['Carles Trapp', [52, 53], 2],
+    ['Charles Trapp', [52, 53], 2],
     ['Anna Smith', [52, 53, 54], 3],
     ['Sylvia Mendez', [52, 53, 54], 3],
 ]
@@ -14288,7 +14288,7 @@ ERROR
 &gt;&gt;&gt; df.group_by('name').aggregate('score', 'max').to_array()
 [
     ['Kevin Fray', [52, 53], 100],
-    ['Carles Trapp', [52, 53], 95],
+    ['Charles Trapp', [52, 53], 95],
     ['Anna Smith', [52, 53, 54], 90],
     ['Sylvia Mendez', [52, 53, 54], 100],
 ]
@@ -14296,7 +14296,7 @@ ERROR
 &gt;&gt;&gt; df.group_by('name').aggregate('score', 'min').to_array()
 [
     ['Kevin Fray', [52, 53], 80],
-    ['Carles Trapp', [52, 53], 75],
+    ['Charles Trapp', [52, 53], 75],
     ['Anna Smith', [52, 53, 54], 50],
     ['Sylvia Mendez', [52, 53, 54], 80],
 ]
@@ -14304,7 +14304,7 @@ ERROR
 &gt;&gt;&gt; df.group_by('name').aggregate('score', 'sum').to_array()
 [
     ['Kevin Fray', [52, 53], 180],
-    ['Carles Trapp', [52, 53], 180],
+    ['Charles Trapp', [52, 53], 170],
     ['Anna Smith', [52, 53, 54], 210],
     ['Sylvia Mendez', [52, 53, 54], 270],
 ]
@@ -14312,7 +14312,7 @@ ERROR
 &gt;&gt;&gt; df.group_by('name').aggregate('score', 'avg').to_array()
 [
     ['Kevin Fray', [52, 53], 90],
-    ['Carles Trapp', [52, 53], 90],
+    ['Charles Trapp', [52, 53], 85],
     ['Anna Smith', [52, 53, 54], 70],
     ['Sylvia Mendez', [52, 53, 54], 90],
 ]</code></pre>
