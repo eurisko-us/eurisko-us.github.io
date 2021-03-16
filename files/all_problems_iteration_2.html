@@ -13323,7 +13323,7 @@ ERROR
 ]</code></pre>
 <p><strong>Also,</strong> implement a method called <code>aggregate(colname, how)</code> that aggregates <code>colname</code> according to the way that is specified in <code>how</code> (count, max, min, sum, avg). Make sure your implementation passes the tests below.</p>
 
-<pre><code>&gt;&gt;&gt; df.group_by('lastname').aggregate('score', 'count').to_array()
+<pre><code>&gt;&gt;&gt; df.group_by('name').aggregate('score', 'count').to_array()
 [
     ['Kevin Fray', [52, 53], 2],
     ['Carles Trapp', [52, 53], 2],
@@ -13331,7 +13331,7 @@ ERROR
     ['Sylvia Mendez', [52, 53, 54], 3],
 ]
 
-&gt;&gt;&gt; df.group_by('lastname').aggregate('score', 'max').to_array()
+&gt;&gt;&gt; df.group_by('name').aggregate('score', 'max').to_array()
 [
     ['Kevin Fray', [52, 53], 100],
     ['Carles Trapp', [52, 53], 95],
@@ -13339,7 +13339,7 @@ ERROR
     ['Sylvia Mendez', [52, 53, 54], 100],
 ]
 
-&gt;&gt;&gt; df.group_by('lastname').aggregate('score', 'min').to_array()
+&gt;&gt;&gt; df.group_by('name').aggregate('score', 'min').to_array()
 [
     ['Kevin Fray', [52, 53], 80],
     ['Carles Trapp', [52, 53], 75],
@@ -13347,7 +13347,7 @@ ERROR
     ['Sylvia Mendez', [52, 53, 54], 80],
 ]
 
-&gt;&gt;&gt; df.group_by('lastname').aggregate('score', 'sum').to_array()
+&gt;&gt;&gt; df.group_by('name').aggregate('score', 'sum').to_array()
 [
     ['Kevin Fray', [52, 53], 180],
     ['Carles Trapp', [52, 53], 180],
@@ -13355,7 +13355,7 @@ ERROR
     ['Sylvia Mendez', [52, 53, 54], 270],
 ]
 
-&gt;&gt;&gt; df.group_by('lastname').aggregate('score', 'avg').to_array()
+&gt;&gt;&gt; df.group_by('name').aggregate('score', 'avg').to_array()
 [
     ['Kevin Fray', [52, 53], 90],
     ['Carles Trapp', [52, 53], 90],
