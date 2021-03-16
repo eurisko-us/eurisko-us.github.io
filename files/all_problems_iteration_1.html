@@ -14193,7 +14193,7 @@ or die roll &lt;= (attack strength) + (attack technology) - (defense strength) -
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-103-2">Problem 103-2<a class="anchor-link" href="#Problem-103-2">&#182;</a></h1><h3 id="SQL-Primitives:-Group-By-&amp;-Aggregate">SQL Primitives: Group By &amp; Aggregate<a class="anchor-link" href="#SQL-Primitives:-Group-By-&amp;-Aggregate">&#182;</a></h3><p>The next thing we need to do in our titanic prediction modeling is to determine which features are useful for predicting survival. However, this will involve some extensive data processing, and it will be much easier to do this if we first build some SQL primitives.</p>
-<p>You should already have methods <code>select</code>, <code>where</code>, and <code>order_by</code> implemented in your <code>DataFrame</code> class. Check to make sure you have these methods and that they pass the following tests.</p>
+<p>You should already have methods <code>select</code>, <code>where</code>, and <code>order_by</code> implemented in your <code>DataFrame</code> class. <strong>Check to make sure you have these methods and that they pass the following tests.</strong></p>
 <ul>
 <li><em>Note:</em> You may have previously written these methods under slightly different names. You may need to rename <code>select_columns</code> to just <code>select</code>, and <code>select_columns_where</code> to just <code>where</code>.</li>
 </ul>
@@ -14217,16 +14217,16 @@ or die roll &lt;= (attack strength) + (attack technology) - (defense strength) -
 ['Anna', 'Smith', 13]]
 
 &gt;&gt;&gt; df.order_by('firstname').to_array()
-[['Anna', 13],
-['Charles', 17],
-['Kevin', 5],
-['Sylvia', 9]]
+[['Anna', 'Smith', 13],
+['Charles', 'Trapp', 17],
+['Kevin', 'Fray', 5],
+['Sylvia', 'Mendez', 9]]
 
 &gt;&gt;&gt; df.order_by('firstname', ascending=False).to_array()
-[['Sylvia', 9],
-['Kevin', 5],
-['Charles', 17],
-['Anna', 13]]
+[['Sylvia', 'Mendez', 9],
+['Kevin', 'Fray', 5],
+['Charles', 'Trapp', 17],
+['Anna', 'Smith', 13]]
 
 &gt;&gt;&gt; df.select(['firstname','age']).where(lambda row: row['age'] &gt; 10).order_by('age').to_array()
 [['Anna', 13],
