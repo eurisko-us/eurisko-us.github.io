@@ -77,7 +77,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="71">
     <li><b>Wednesday, March 17</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
+        <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-71-1">Primary: Space Empires Log Matchup with Random Seed</a></li>
