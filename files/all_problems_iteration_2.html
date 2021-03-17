@@ -13228,18 +13228,18 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-71-1">Problem 71-1<a class="anchor-link" href="#Problem-71-1">&#182;</a></h1><p>During combat, instead of choosing scouts randomly to be destroyed, construct a combat order in which the ships who occupied the grid space first come first in the order. (So, in our case, player 2's ships will come first.)</p>
+<h1 id="Problem-71-1">Problem 71-1<a class="anchor-link" href="#Problem-71-1">&#182;</a></h1><p>During combat, instead of choosing scouts randomly to be destroyed, construct a combat order in which the ships who occupied the grid space first come first in the order. (So, in our case, player 1's ships will come first.)</p>
 
 <pre><code>    Combat Locations:
 
         (4, 4)
 
-            Player 2 Scout 1
-            Player 2 Scout 2
-            Player 2 Scout 3
             Player 1 Scout 1
             Player 1 Scout 2
-            Player 1 Scout 3</code></pre>
+            Player 1 Scout 3
+            Player 2 Scout 1
+            Player 2 Scout 2
+            Player 2 Scout 3</code></pre>
 <p>Then, loop through each ship in the combat order. Each ship will attack the first ENEMY ship that appears in the combat order.</p>
 <p>For each attack, generate a random number <code>round(random.random())</code>. If $0,$ then the attack misses and the defender lives. If $1,$ then the attack hits and the defender is destroyed.</p>
 <p><strong>Important:</strong> After a ship is destroyed, it cannot attack or be attacked.</p>
@@ -13247,40 +13247,40 @@ div#notebook {
 
 <pre><code>    Combat at (4, 4)
 
-        Attacker: Player 2 Scout 1
-        Defender: Player 1 Scout 1
-        Hit!
-        Player 1 Scout 1 was destroyed
-
-        Attacker: Player 2 Scout 2
-        Defender: Player 1 Scout 2
-        Hit!
-        Player 1 Scout 2 was destroyed
-
-        Attacker: Player 2 Scout 3
-        Defender: Player 1 Scout 3
-        (Miss)
-
-        Attacker: Player 1 Scout 3
+        Attacker: Player 1 Scout 1
         Defender: Player 2 Scout 1
         Hit!
         Player 2 Scout 1 was destroyed
 
-        Attacker: Player 2 Scout 2
-        Defender: Player 1 Scout 3
+        Attacker: Player 1 Scout 2
+        Defender: Player 2 Scout 2
+        Hit!
+        Player 2 Scout 2 was destroyed
+
+        Attacker: Player 1 Scout 3
+        Defender: Player 2 Scout 3
         (Miss)
 
         Attacker: Player 2 Scout 3
-        Defender: Player 1 Scout 3
+        Defender: Player 1 Scout 1
         Hit!
-        Player 1 Scout 3 was destroyed
+        Player 1 Scout 1 was destroyed
+
+        Attacker: Player 1 Scout 2
+        Defender: Player 2 Scout 3
+        (Miss)
+
+        Attacker: Player 1 Scout 3
+        Defender: Player 2 Scout 3
+        Hit!
+        Player 2 Scout 3 was destroyed
 
     Survivors:
 
         (4, 4)
 
-            Player 2 Scout 2
-            Player 2 Scout 3</code></pre>
+            Player 1 Scout 2
+            Player 1 Scout 3</code></pre>
 <p>To implement this, one option is to delete a destroyed ship from the combat order. But this can get pretty dicey because then you have to be careful about how you're looping through the combat order (deleting from the combat order will mess with the array indices).</p>
 <p>A better option is to replace the destroyed ship with <code>None</code> in the combat order. (But if you think you have a better idea, feel free to try it.)</p>
 <p><strong>What you need to turn in</strong></p>
