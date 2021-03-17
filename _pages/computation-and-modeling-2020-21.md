@@ -75,7 +75,16 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="70">
+<font size="3em"><ol reversed start="71">
+    <li><b>Wednesday, March 17</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-71-1">Primary: Space Empires Log Matchup with Random Seed</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-71-2">Supplementary: SQL Query String in DataFrame, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_2.html#Problem-71-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, March 15</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
