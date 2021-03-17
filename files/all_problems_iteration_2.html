@@ -13228,6 +13228,91 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-1">Problem 71-1<a class="anchor-link" href="#Problem-71-1">&#182;</a></h1><p>During combat, instead of choosing scouts randomly to be destroyed, construct a combat order in which the ships who occupied the grid space first come first in the order. (So, in our case, player 2's ships will come first.)</p>
+
+<pre><code>    Combat Locations:
+
+        (4, 4)
+
+            Player 2 Scout 1
+            Player 2 Scout 2
+            Player 2 Scout 3
+            Player 1 Scout 1
+            Player 1 Scout 2
+            Player 1 Scout 3</code></pre>
+<p>Then, loop through each ship in the combat order. Each ship will attack the first ENEMY ship that appears in the combat order.</p>
+<p>For each attack, generate a random number <code>round(random.random())</code>. If $0,$ then the attack misses and the defender lives. If $1,$ then the attack hits and the defender is destroyed.</p>
+<p><strong>Important:</strong> After a ship is destroyed, it cannot attack or be attacked.</p>
+<p>Using <code>random.seed(1)</code>, this is what we should get for the combat order above.</p>
+
+<pre><code>    Combat at (4, 4)
+
+        Attacker: Player 2 Scout 1
+        Defender: Player 1 Scout 1
+        Hit!
+        Player 1 Scout 1 was destroyed
+
+        Attacker: Player 2 Scout 2
+        Defender: Player 1 Scout 2
+        Hit!
+        Player 1 Scout 2 was destroyed
+
+        Attacker: Player 2 Scout 3
+        Defender: Player 1 Scout 3
+        (Miss)
+
+        Attacker: Player 1 Scout 3
+        Defender: Player 2 Scout 1
+        Hit!
+        Player 2 Scout 1 was destroyed
+
+        Attacker: Player 2 Scout 2
+        Defender: Player 1 Scout 3
+        (Miss)
+
+        Attacker: Player 2 Scout 3
+        Defender: Player 1 Scout 3
+        Hit!
+        Player 1 Scout 3 was destroyed
+
+    Survivors:
+
+        (4, 4)
+
+            Player 2 Scout 2
+            Player 2 Scout 3</code></pre>
+<p>To implement this, one option is to delete a destroyed ship from the combat order. But this can get pretty dicey because then you have to be careful about how you're looping through the combat order (deleting from the combat order will mess with the array indices).</p>
+<p>A better option is to replace the destroyed ship with <code>None</code> in the combat order. (But if you think you have a better idea, feel free to try it.)</p>
+<p><strong>What you need to turn in</strong></p>
+<p>Here is the log that you should get for <code>random.seed(1)</code>:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/space-empires-cohort-2/main/slinky_development/level_0b/log_1.txt">https://raw.githubusercontent.com/eurisko-us/space-empires-cohort-2/main/slinky_development/level_0b/log_1.txt</a></p>
+</blockquote>
+<p>Your task is to replicate these logs with your game.</p>
+<p>Then, copy your log into <a href="https://www.diffchecker.com/">https://www.diffchecker.com/</a> to verify that it matches up with the provided log. Save and submit the link to your diff (example: <a href="https://www.diffchecker.com/57HDK3vO">https://www.diffchecker.com/57HDK3vO</a>).</p>
+<p><strong>Note:</strong> I'm pretty sure the provided log is fully correct. But if you have a discrepancy and think the provided log might have an issue, please post on Slack right away (so that you don't waste time going down a rabbit hole).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-2">Problem 71-2<a class="anchor-link" href="#Problem-71-2">&#182;</a></h1><p>in progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-71-3">Problem 71-3<a class="anchor-link" href="#Problem-71-3">&#182;</a></h1><p>in progress</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-70-1">Problem 70-1<a class="anchor-link" href="#Problem-70-1">&#182;</a></h1><p>Finish your first draft of the blog post.</p>
 <blockquote><p><a href="https://www.overleaf.com/7388613585pcncqqwmjyfx">https://www.overleaf.com/7388613585pcncqqwmjyfx</a></p>
 </blockquote>
