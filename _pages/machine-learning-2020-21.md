@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="103">
+<font size="3em"><ol reversed start="104">
+    <li><b>Wednesday, March 17</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (ML is second half) - sql query, space empires unit test planning
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-104-1">Primary: First Round of Unit Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-104-2">Supplementary: SQL Query String in DataFrame, C++</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-104-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Monday, March 15</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
