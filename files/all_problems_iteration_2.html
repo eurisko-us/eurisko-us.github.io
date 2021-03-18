@@ -13249,22 +13249,25 @@ div#notebook {
 
         Attacker: Player 1 Scout 1
         Defender: Player 2 Scout 1
+        (Miss)
+
+        Attacker: Player 1 Scout 2
+        Defender: Player 2 Scout 1
         Hit!
         Player 2 Scout 1 was destroyed
 
-        Attacker: Player 1 Scout 2
+        Attacker: Player 1 Scout 3
         Defender: Player 2 Scout 2
         Hit!
         Player 2 Scout 2 was destroyed
 
-        Attacker: Player 1 Scout 3
-        Defender: Player 2 Scout 3
-        (Miss)
-
         Attacker: Player 2 Scout 3
         Defender: Player 1 Scout 1
-        Hit!
-        Player 1 Scout 1 was destroyed
+        (Miss)
+
+        Attacker: Player 1 Scout 1
+        Defender: Player 2 Scout 3
+        (Miss)
 
         Attacker: Player 1 Scout 2
         Defender: Player 2 Scout 3
@@ -13279,6 +13282,7 @@ div#notebook {
 
         (4, 4)
 
+            Player 1 Scout 1
             Player 1 Scout 2
             Player 1 Scout 3</code></pre>
 <p>To implement this, one option is to delete a destroyed ship from the combat order. But this can get pretty dicey because then you have to be careful about how you're looping through the combat order (deleting from the combat order will mess with the array indices).</p>
