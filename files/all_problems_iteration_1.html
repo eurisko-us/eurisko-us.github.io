@@ -14196,7 +14196,74 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-104-2">Problem 104-2<a class="anchor-link" href="#Problem-104-2">&#182;</a></h1><p>in progress</p>
+<h1 id="Problem-104-2">Problem 104-2<a class="anchor-link" href="#Problem-104-2">&#182;</a></h1><h3 id="SQL-Parser">SQL Parser<a class="anchor-link" href="#SQL-Parser">&#182;</a></h3><p>We're going to write a method in our DataFrame called <code>query</code>, that will take a string with SQL-like syntax as input and execute the corresponding operations on our dataframe.</p>
+<p>Let's start off simple, with the select statement only.</p>
+<p>Write a function <code>query</code> that takes a select query of the form</p>
+
+<pre><code>df.query("SELECT colname1, colname2, colname3")</code></pre>
+<p>and returns a dataframe with the appropriate select statement applied:</p>
+
+<pre><code>df.select([selectColname1, selectColname2, selectColname3])</code></pre>
+<p>Here is a concrete example that you should write a test for:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Kevin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Sylvia', 'Mendez', 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.query('SELECT firstname, age').to_array()
+[['Kevin', 5],
+['Charles', 17],
+['Anna', 13],
+['Sylvia', 9]]</code></pre>
+<p>Make sure your function is general (it should not be tailored to a specific number of columns).</p>
+<h3 id="Titanic-Survival-Exploration">Titanic Survival Exploration<a class="anchor-link" href="#Titanic-Survival-Exploration">&#182;</a></h3><p>Now that we are able to use our <code>group_by</code> and <code>aggregate</code> methods in our dataframes, let's return to the Titanic dataset.</p>
+<p>We now have the following columns in our dataframe, and our current task is to figure out how each of these columns are related to survival (if at all).</p>
+
+<pre><code>[
+    "Pclass",
+    "Surname",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "TicketType",
+    "TicketNumber",
+    "Fare",
+    "CabinType",
+    "CabinNumber",
+    "Embarked"
+]</code></pre>
+<p>Let's start with the columns that consist of few categories and are therefore relatively easy to analyze.</p>
+<p><strong>Put your answers to the following questions in an overleaf doc. Include a table for each answer, and be sure to explain what the data tells you about how that variable is related to survival (if anything), as well as why you think that relationship happens.</strong></p>
+<p>Note that there is not always a single correct answer regarding why the relationship happens, but you should try to come up with a plausible explanation.</p>
+<p><strong>To look up what a variable actually represents, check the data dictionary here: <a href="https://www.kaggle.com/c/titanic/data">https://www.kaggle.com/c/titanic/data</a></strong></p>
+<p><strong>a.</strong> Group your dataframe by <code>Pclass</code> and find the survival rate (i.e. the mean of the <code>survival</code> variable) and the count of records for each <code>Pclass</code>.</p>
+<p>You should get the following result. What does this result tell you about how <code>Pclass</code> is related to <code>survival</code>? Why do you think this is?</p>
+
+<pre><code>Pclass  meanSurvival  count                 
+1       0.629630      216
+2       0.472826      184
+3       0.242363      491</code></pre>
+<p><strong>b.</strong> Group your dataframe by <code>Sex</code> and find the survival rate and count of records for each sex.</p>
+<p>You should get the following result. What does this result tell you about how <code>Sex</code> is related to <code>survival</code>? Why do you think this is?</p>
+
+<pre><code>Sex     meanSurvival count                    
+female  0.742038     314
+male    0.188908     577</code></pre>
+<p><strong>c.</strong> Continuing the same analysis method as in parts (a) and (b): what is the table for <code>SibSp</code>, what does it tell you about how <code>SibSp</code> is related to <code>survival</code>, and why do you think this is?</p>
+<p><strong>d.</strong> Continuing the same analysis method: what is the table for <code>Parch</code>, what does it tell you about how <code>Parch</code> is related to <code>survival</code>, and why do you think this is?</p>
+<p><strong>e.</strong> Continuing the same analysis method: what is the table for <code>CabinType</code>, what does it tell you about how <code>CabinType</code> is related to <code>survival</code>, and why do you think this is?</p>
+<p><strong>f.</strong> Continuing the same analysis method: what is the table for <code>Embarked</code>, what does it tell you about how <code>Embarked</code> is related to <code>survival</code>, and why do you think this is?</p>
+<p>In case you're interested, here is what we'll be doing in future assignments:</p>
+<ul>
+<li>exploring some of the continuous variables (e.g. <code>Age</code> and <code>Fare</code>)</li>
+<li>fitting models to the data</li>
+<li>featurizing "messier" data like <code>Surname</code>, <code>TicketType</code>, etc and seeing if it improves our models</li>
+</ul>
 
 </div>
 </div>
@@ -14204,7 +14271,19 @@ Just have it all in combat state man"</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-104-3">Problem 104-3<a class="anchor-link" href="#Problem-104-3">&#182;</a></h1><p>in progress</p>
+<h1 id="Problem-104-3">Problem 104-3<a class="anchor-link" href="#Problem-104-3">&#182;</a></h1><h3 id="Commit-+-Review">Commit + Review<a class="anchor-link" href="#Commit-+-Review">&#182;</a></h3><ul>
+<li><p>Commit your code to Github.</p>
+</li>
+<li><p>Resolve <strong>1 GitHub issue</strong> on one of your own repositories. (If you don't have any issues to resolve, just write a note in your submission that that's the case.)</p>
+</li>
+</ul>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>link to diff: ____
+link to DataFrame.query test: ____
+overleaf writeup for titanic survival exploration: _____
+link to resolved issue: ____
+Commit links (space-empires, machine-learning): ____</code></pre>
 
 </div>
 </div>
