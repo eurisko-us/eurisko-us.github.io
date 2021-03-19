@@ -81,9 +81,9 @@ author_profile: false
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-1">Primary: Space Empires Log Matchup with Random Seed</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-2">Supplementary: Quiz Corrections, C++, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-2">Supplementary: Quiz Corrections, C++</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-3">Commit / Review</a></li>
-        </ul
+            </ul>
     <li><b>Wednesday, March 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
         <br>Assignment Problems:
