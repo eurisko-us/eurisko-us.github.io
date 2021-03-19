@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="104">
+<font size="3em"><ol reversed start="105">
+    <li><b>Friday, March 19</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (ML is second half) - quiz 2-4 review, neural net gradient calculations, unit tests discussion
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-105-1">Primary: First Round of Unit Tests</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-105-2">Supplementary: Corrections, C++, SQL</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-105-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Wednesday, March 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (ML is second half) - sql query, space empires unit test planning
         <br>Assignment Problems:
