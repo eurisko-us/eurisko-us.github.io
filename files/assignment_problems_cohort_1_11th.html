@@ -13119,6 +13119,130 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-106-1">Problem 106-1<a class="anchor-link" href="#Problem-106-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>I had a chat with Jason this morning about our approach to space empires. We've been building the games separately so that each person gets a maximum learning experience, but now we're at a point where this method of development is becoming so time consuming that it keeps us from making progress down other avenues (neural nets, sql parser, etc). Not to mention, we have a deadline that we need to have level 3 working in 3 weeks for our next meeting with Prof. Wierman.</p>
+<p>So, he's ok with the idea of everyone in the class working on the same game implementation. We'll discuss that more during the next class, but for now, hit the brakes on space empires and focus on getting the problems on this current assignment done.</p>
+<h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p>Now that you've had plenty of practice computing weight gradients, let's go back to implementations.</p>
+<p>Consider the following dataset, whose points follow the function $y=A \sin (Bx)$ for some constants $A,B.$</p>
+
+<pre><code>[(0, 0.0),
+ (1, 1.44),
+ (2, 2.52),
+ (3, 2.99),
+ (4, 2.73),
+ (5, 1.8),
+ (6, 0.42),
+ (7, -1.05),
+ (8, -2.27),
+ (9, -2.93),
+ (10, -2.88),
+ (11, -2.12),
+ (12, -0.84),
+ (13, 0.65),
+ (14, 1.97),
+ (15, 2.81),
+ (16, 2.97),
+ (17, 2.4),
+ (18, 1.24),
+ (19, -0.23)]</code></pre>
+<p>Consider the following neural network:</p>
+$$
+\begin{matrix}
+&amp; &amp; n_2 \\ 
+&amp; &amp; \uparrow \\
+&amp; &amp; n_1 \\ 
+&amp; &amp; \uparrow \\ 
+&amp; &amp; n_0 \\ 
+\end{matrix}
+$$<p>Let the activation functions be as follows: $f_0(x) = x,$ $f_1(x) = \sin(x),$ $f_2(x) = x.$</p>
+<p>Then $a_2 = w_{12} \sin( w_{01} i_0 ),$ so we can use this network to fit our function $y=A \sin (Bx).$</p>
+<p>Use this neural network to fit the dataset, starting with $w_{01} = w_{12} = 1$ and using a learning rate of $0.001.$ Loop through the dataset $1000$ times, applying a gradient descent update at each point (i.e. $20$ gradient descent updates per loop). So, there will be $20\,000$ gradient descent updates in total.</p>
+<p><strong>Your final weights</strong> should be $w_{01} = 0.42, w_{12} = 2.83$ rounded to $2$ decimal places.</p>
+<p>Here is a log to help you debug. The numbers are rounded to 4 decimal places.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-106-2">Problem 106-2<a class="anchor-link" href="#Problem-106-2">&#182;</a></h1><h3 id="Titanic">Titanic<a class="anchor-link" href="#Titanic">&#182;</a></h3><p>In the Titanic dataset, let's get a sense of how the continuous variables (<code>Age</code> and <code>Fare</code>) relate to <code>Survived</code>.</p>
+<p><strong>a.</strong> For <code>Age</code>, filter the records down to age categories (0-10, 10-20, 20-30, ..., 70-80) and compute the survival rate (i.e. mean survival) in each category. Exclude any <code>None</code>s from the analysis.</p>
+<ul>
+<li><p>Put a table in an overleaf document. Round the survival rate to $2$ decimal places (otherwise it's difficult to read.)</p>
+</li>
+<li><p>In the table, include the counts in parentheses. So each table entry should look like <code>survivalRate (count)</code>. So if the survival rate were <code>0.13</code> and the count were <code>27</code> people, then you'd put <code>0.13 (17)</code>.</p>
+</li>
+<li><p>What does the table tell you about the relationship between age and survival?</p>
+</li>
+<li><p>Give a plausible explanation for why this is.</p>
+</li>
+</ul>
+<p><strong>b.</strong> For <code>Fare</code>, filter the records down to fare categories (0-5, 5-10, 10-20, 20-50, 50-100, 100-200, 200+) and compute the survival rate (i.e. mean survival) in each category. Exclude any <code>None</code>s from the analysis.</p>
+<ul>
+<li>Put a table in the overleaf document and answer the same questions that you did for part (a).</li>
+</ul>
+<h3 id="SQL-Parser">SQL Parser<a class="anchor-link" href="#SQL-Parser">&#182;</a></h3><p>Update your <code>query</code> method to support <code>ORDER BY</code>. The query</p>
+
+<pre><code>df.query("SELECT selectColname1, selectColname2, selectColname3 ORDER BY orderColname1 order1, orderColname2 order2, orderColname3 order3")</code></pre>
+<p>should be parsed and read into the following primitive operations:</p>
+
+<pre><code>df.select([selectColname1, selectColname2, selectColname3])
+  .order_by(orderColname3, order3)
+  .order_by(orderColname2, order2)
+  .order_by(orderColname1, order1)</code></pre>
+<p>Assert that your method passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Kevin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Sylvia', 'Mendez', 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.query("SELECT lastname, firstname, age ORDER BY age DESC").to_array()
+[['Trapp', 'Charles', 17],
+['Smith', 'Anna', 13],
+['Mendez', 'Sylvia', 9],
+['Fray', 'Kevin', 5]]
+
+&gt;&gt;&gt; df.query("SELECT firstname ORDER BY lastname ASC").to_array()
+[['Kevin'],
+['Sylvia'],
+['Anna'],
+['Charles']]</code></pre>
+<p>Assert that your method passes these tests as well:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Kevin', 'Fray', 5],
+    ['Melvin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Carl', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Hannah', 'Smith', 13],
+    ['Sylvia', 'Mendez', 9],
+    ['Cynthia', 'Mendez', 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.query("SELECT lastname, firstname, age ORDER BY age ASC, firstname DESC").to_array()
+[['Fray', 'Melvin', 5],
+['Fray', 'Kevin', 5],
+['Mendez', 'Sylvia', 9],
+['Mendez', 'Cynthia', 9],
+['Smith', 'Hannah', 13],
+['Smith', 'Anna', 13],
+['Trapp', 'Charles', 17],
+['Trapp', 'Carl', 17]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-105-1">Problem 105-1<a class="anchor-link" href="#Problem-105-1">&#182;</a></h1><p><strong>This will be a "consolidation problem." Your task is to make sure that you have Problem 104-1 completed by the end of the weekend, with the exception that you don't have to run your classmates' unit tests. You just have to get movement test 1 working and write your own unit test as assigned in Problem 104-1.</strong></p>
 <p>Remember that to initialize your game, you may need to loop through your game state to initialize some <code>Player</code> and <code>Unit</code> objects accordingly. If you get stuck or confused, please post on Slack.</p>
 <p>Remember that to push your unit tests up to Github, you'll need to clone the repo, make your changes, and commit and push your changes. Here is how to do this:</p>

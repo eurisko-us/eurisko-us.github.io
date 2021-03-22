@@ -13119,6 +13119,1539 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Now that you've had plenty of practice computing weight gradients, let's go back to implementations.</p>
+<p>Consider the following dataset, whose points follow the function $y=A \sin (Bx)$ for some constants $A,B.$</p>
+
+<pre><code>[(0, 0.0),
+ (1, 1.44),
+ (2, 2.52),
+ (3, 2.99),
+ (4, 2.73),
+ (5, 1.8),
+ (6, 0.42),
+ (7, -1.05),
+ (8, -2.27),
+ (9, -2.93),
+ (10, -2.88),
+ (11, -2.12),
+ (12, -0.84),
+ (13, 0.65),
+ (14, 1.97),
+ (15, 2.81),
+ (16, 2.97),
+ (17, 2.4),
+ (18, 1.24),
+ (19, -0.23)]</code></pre>
+<p>Consider the following neural network:</p>
+$$
+\begin{matrix}
+&amp; &amp; n_2 \\ 
+&amp; &amp; \uparrow \\
+&amp; &amp; n_1 \\ 
+&amp; &amp; \uparrow \\ 
+&amp; &amp; n_0 \\ 
+\end{matrix}
+$$<p>Let the activation functions be as follows: $f_0(x) = x,$ $f_1(x) = \sin(x),$ $f_2(x) = x.$</p>
+<p>Then $a_2 = w_{12} \sin( w_{01} i_0 ),$ so we can use this network to fit our function $y=A \sin (Bx).$</p>
+<p>Use this neural network to fit the dataset, starting with $w_{01} = w_{12} = 1$ and using a learning rate of $0.001.$ Loop through the dataset $1000$ times, applying a gradient descent update at each point (i.e. $20$ gradient descent updates per loop). So, there will be $20\,000$ gradient descent updates in total.</p>
+<p><strong>Your final weights</strong> should be $w_{01} = 0.42, w_{12} = 2.83$ rounded to $2$ decimal places.</p>
+<p>Here is a log to help you debug. The numbers are rounded to 4 decimal places.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Note:</strong> Next time we do neural networks, we'll switch back to implementing them in code.</p>
+<center><img width=200 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/neural-net-3-hidden-layers.png' border='0'/></center><p>Compute $\dfrac{\partial E}{\partial w_{47}},$ $\dfrac{\partial E}{\partial w_{14}},$ and $\dfrac{\partial E}{\partial w_{01}}.$</p>
+<p>To check your answer, assume that</p>
+<ul>
+<li><p>$y_\textrm{actual}=1,$</p>
+</li>
+<li><p>$a_k=k+11$ and $f'_k(i_k) = k+1$ for all $k,$</p>
+</li>
+<li><p>$w_{ab} = a+b$ for all $a,b.$</p>
+</li>
+</ul>
+<p>You should get the following:</p>
+$$\begin{align*}
+\dfrac{\partial E}{\partial w_{47}} &amp;= 897,600 \\[5pt]
+\dfrac{\partial E}{\partial w_{14}} &amp;= 156,024,000 \\[5pt]
+\dfrac{\partial E}{\partial w_{01}} &amp;= 6,925,962,560 \\[5pt]
+\end{align*}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Note:</strong> We've been using the symbol $\textrm d$ for our derivative, i.e. $\dfrac{\textrm dE}{\textrm dw_{ij}}.$ However, it would be more clear to write this as a partial derivative, since the error $E$ depends on all of our weights (not just one weight). So we will use the convention $\dfrac{\partial E}{\partial w_{ij}}$ going forward.</p>
+<p><strong>Your task:</strong>  Compute $\dfrac{\partial E}{\partial w_{35}},$ $\dfrac{\partial E}{\partial w_{45}},$ $\dfrac{\partial E}{\partial w_{13}},$ $\dfrac{\partial E}{\partial w_{23}},$ $\dfrac{\partial E}{\partial w_{14}},$ $\dfrac{\partial E}{\partial w_{24}},$ $\dfrac{\partial E}{\partial w_{01}},$ and $\dfrac{\partial E}{\partial w_{02}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix}
+&amp; n_5 \\ 
+&amp; \nearrow \hspace{1.25cm} \nwarrow \\ 
+n_3 &amp; &amp; n_4 \\
+\uparrow &amp; \nwarrow \hspace{1cm} \nearrow &amp; \uparrow \\[-10pt]
+| &amp; \diagdown \diagup &amp; | \\[-10pt]
+| &amp; \diagup \diagdown &amp; | \\[-10pt]
+| &amp; \diagup \hspace{1cm} \diagdown &amp; | \\
+n_1 &amp; &amp; n_2\\ 
+&amp; \nwarrow \hspace{1.25cm} \nearrow \\ 
+&amp; n_0 \\ 
+\end{matrix}
+$$<p><strong>Show ALL your work! (If some work is the same as what you've already wrote down for a previous gradient computation, you can just put dot-dot-dot. But if you get stuck, then go back and write down all intermediate steps.)</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \\ a_4 = 6 \\ a_5 = 7 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 8 \\ f_1'(i_1) = 9 \\ f_2'(i_2) = 10 \\ f_3'(i_3) = 11 \\ f_4'(i_4) = 12 \\ f_5'(i_5)=13 \end{matrix} \qquad \begin{matrix} w_{01} = 14 \\ w_{02} = 15 \\ w_{13} = 16 \\ w_{14} = 17 \\ w_{23} = 18 \\ w_{24} = 19 \\ w_{34} = 20 \\ w_{35} = 21 \\ w_{45} = 22 \end{matrix}
+$$<p>You should get the following:</p>
+$$\begin{align*}
+\dfrac{\partial E}{\partial  w_{35}} &amp;= 780 \\[5pt]
+\dfrac{\partial E}{\partial  w_{45}} &amp;= 936 \\[5pt]
+\dfrac{\partial E}{\partial  w_{13}} &amp;= 108108 \\[5pt]
+\dfrac{\partial E}{\partial  w_{23}} &amp;= 144144 \\[5pt]
+\dfrac{\partial E}{\partial  w_{14}} &amp;= 123552 \\[5pt]
+\dfrac{\partial E}{\partial  w_{24}} &amp;= 164736 \\[5pt]
+\dfrac{\partial E}{\partial  w_{01}} &amp;= 22980672 \\[5pt]
+\dfrac{\partial E}{\partial  w_{02}} &amp;= 28622880
+\end{align*}$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Compute $\dfrac{\textrm dE}{\textrm dw_{34}},$ $\dfrac{\textrm dE}{\textrm dw_{24}},$ $\dfrac{\textrm dE}{\textrm dw_{13}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix}
+&amp; &amp; n_4 \\ 
+&amp; \nearrow &amp; &amp; \nwarrow \\ 
+n_2 &amp; &amp; &amp; &amp; n_3 \\
+&amp; \nwarrow &amp; &amp; \nearrow  \\
+&amp; &amp; n_1 \\ 
+&amp; &amp; \uparrow \\ 
+&amp; &amp; n_0 \\ 
+\end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \\ a_4 = 6 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 7 \\ f_1'(i_1) = 8 \\ f_2'(i_2) = 9 \\ f_3'(i_3) = 10 \\ f_4'(i_4) = 11 \end{matrix} \qquad \begin{matrix} w_{01} = 12 \\ w_{12} = 13 \\ w_{13} = 14 \\ w_{24} = 15 \\ w_{34} = 16 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{34}} = 550, \qquad \dfrac{\textrm dE}{\textrm d w_{24}} = 440, \qquad \dfrac{\textrm dE}{\textrm d w_{13}} = 52800, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 44550, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 7031200.
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
+<ul>
+<li><p>$n_k$ - the $k$th neuron</p>
+</li>
+<li><p>$a_k$ - the activity of the $k$th neuron</p>
+</li>
+<li><p>$i_k$ - the input to the $k$th neuron. This is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
+</li>
+<li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
+</li>
+<li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
+</li>
+<li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
+</li>
+<li><p>$w_{k \ell} \to w_{k \ell} - \alpha \dfrac{\textrm dE}{\textrm dw_{k\ell}}$ is the gradient descent update, where $\alpha$ is the learning rate</p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>For a simple network
+$$
+\begin{matrix} &amp; &amp; n_2 \\ &amp; \nearrow &amp; &amp; \nwarrow \\ n_0 &amp; &amp; &amp; &amp; n_1,\end{matrix}
+$$
+we have:</p>
+$$\begin{align*}
+y_\textrm{predicted} &amp;= a_2 \\
+&amp;= f_2(i_2) \\
+&amp;= f_2(w_{02} a_0 + w_{12} a_1) \\
+&amp;= f_2(w_{02} f_0(i_0) + w_{12} f_1(i_1) ) \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{02}} &amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (y_\textrm{predicted} - y_\textrm{actual})^2 \right] \\
+&amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (a_2 - y_\textrm{actual})^2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d}{\textrm dw_{02}} \left[ a_2 - y_\textrm{actual} \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ a_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ f_2(i_2) \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ i_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_0 \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{12}} &amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_1
+\end{align*}$$<p><strong>THE ACTUAL PROBLEM STATEMENT</strong></p>
+<p>Compute $\dfrac{\textrm dE}{\textrm dw_{23}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix} n_3 \\ \uparrow \\ n_2 \\ \uparrow \\ n_1 \\ \uparrow \\ n_0 \end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 6 \\ f_1'(i_1) = 7 \\ f_2'(i_2) = 8 \\ f_3'(i_3) = 9 \end{matrix} \qquad \begin{matrix} w_{01} = 10 \\ w_{12} = 11 \\ w_{23} = 12 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{23}} = 288, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 20736, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 1064448.
+$$</p>
+<p><strong>Note:</strong> On the next couple assignments, we'll do the same exercise with progressively more advanced networks. This problem is relatively simple so that you have a chance to get used to working with the notation.</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Finish creating your game level 3 strategy. (See problem 93-1 for a description of game level 3, which you should have implemented by now.) Then, implement the following strategy and run it against your level 3 strategy:</p>
+<ul>
+<li><code>NumbersBerserkerLevel3</code> - always buys as many scouts as possible, and each time it buys a scout, immediately sends it on a direct route to attack the opponent.</li>
+</ul>
+<p>Post on #machine-learning with your strategy's stats against these strategies:</p>
+
+<pre><code>MyStrategy vs NumbersBerserker
+- MyStrategy win rate: __%
+- MyStrategy loss rate: __%
+- draw rate: __%</code></pre>
+<p>On the next assignment, we'll have the official matchups.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile remaining discrepancies in game level 2 so we can crown the winners:</p>
+<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
+</blockquote>
+<p>Then, write your first custom strategy for the level 3 game. We'll start matchups on Wednesday. We'll go through several rounds of matchups on this level since the game is starting to become more rich.</p>
+<p>(We'll have the same extra credit prizes for 1st / 2nd / 3rd place)</p>
+<p><strong>Note:</strong> In <code>decide_which_unit_to_attack</code>, be sure to use <code>'player'</code> and <code>'unit'</code> instead of <code>'player_index'</code> and <code>'unit_index'</code>.</p>
+
+<pre><code># combat_state is a dictionary in the form coordinates : combat_order 
+        # {
+        #    (1,2): [{'player': 1, 'unit': 0},
+        #            {'player': 0, 'unit': 1},
+        #            {'player': 1, 'unit': 1},
+        #            {'player': 1, 'unit': 2}],
+        #    (2,2): [{'player': 2, 'unit': 0},
+        #            {'player': 3, 'unit': 1},
+        #            {'player': 2, 'unit': 1},
+        #            {'player': 2, 'unit': 2}]
+        # }</code></pre>
+<h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p><strong>Make sure you get this problem done completely. Neural nets have a very steep learning curve and they're going to be sticking with us until the end of the semester.</strong></p>
+<p><strong>a.</strong> Given $\sigma(x) = \dfrac{1}{1+e^{-x}},$ prove that $\sigma'(x) = \sigma(x) (1-\sigma(x)).$ Write this proof in an Overleaf doc.</p>
+<p><strong>b.</strong> In neural networks, neurons are often given "activation functions", where</p>
+
+<pre><code>node.activity = node.activation_function(weighted sum of inputs to node)</code></pre>
+<p>In this problem, you'll extend your neural net to include activation functions. Then, you'll equip the neurons with activations so as to implement a logistic regressor.</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+
+&gt;&gt;&gt; def linear_function(x):
+        return x
+&gt;&gt;&gt; def linear_derivative(x):
+        return 1
+&gt;&gt;&gt; def sigmoidal_function(x):
+        return 1/(1+math.exp(-x))
+&gt;&gt;&gt; def sigmoidal_derivative(x):
+        s = sigmoidal_function(x)
+        return s * (1 - s)
+
+&gt;&gt;&gt; activation_types = ['linear', 'linear', 'sigmoidal']
+&gt;&gt;&gt; activation_functions = {
+    'linear': {
+        'function': linear_function,
+        'derivative': linear_derivative
+    },
+    'sigmoidal': {
+        'function': sigmoidal_function,
+        'derivative': sigmoidal_derivative
+    }
+}
+
+&gt;&gt;&gt; nn = NeuralNetwork(weights, activation_types, activation_functions)
+
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [0.1]},
+    {'input': [1,1], 'output': [0.2]},
+    {'input': [1,2], 'output': [0.4]},
+    {'input': [1,3], 'output': [0.7]}
+    ]
+&gt;&gt;&gt; for i in range(1,10001):
+        err = 0
+        for data_point in data_points:
+            nn.update_weights(data_point)
+            err += nn.calc_squared_error(data_point)
+        if i &lt; 5 or i % 1000 == 0:
+            print('iteration {}'.format(i))
+            print('    gradient: {}'.format(nn.calc_gradient(data_point))
+            print('    updated weights: {}'.format(nn.weights))
+            print('    error: {}'.format(err))
+            print()
+
+iteration 1
+    gradient: {(0, 2): 0.03184692266577955, (1, 2): 0.09554076799733865}
+    updated weights: {(0, 2): -0.10537885784041535, (1, 2): 0.4945789883636697}
+    error: 0.40480006957774683
+
+iteration 2
+    gradient: {(0, 2): 0.031126202300065627, (1, 2): 0.09337860690019688}
+    updated weights: {(0, 2): -0.11072951375555531, (1, 2): 0.48919868238711295}
+    error: 0.3989945995186133
+
+iteration 3
+    gradient: {(0, 2): 0.030367826123201307, (1, 2): 0.09110347836960392}
+    updated weights: {(0, 2): -0.11605116651884796, (1, 2): 0.4838609744178689}
+    error: 0.3932640005281893
+
+iteration 4
+    gradient: {(0, 2): 0.029572207383720784, (1, 2): 0.08871662215116236}
+    updated weights: {(0, 2): -0.12134303561025003, (1, 2): 0.4785677220228999}
+    error: 0.3876106111541695
+
+iteration 1000
+    gradient: {(0, 2): -0.04248103992359947, (1, 2): -0.12744311977079842}
+    updated weights: {(0, 2): -1.441870816044744, (1, 2): 0.6320712307086241}
+    error: 0.03103391055967604
+
+iteration 2000
+    gradient: {(0, 2): -0.026576913835657988, (1, 2): -0.07973074150697396}
+    updated weights: {(0, 2): -1.8462575194764488, (1, 2): 0.8112377281576201}
+    error: 0.010469324799663702
+
+iteration 3000
+    gradient: {(0, 2): -0.019389915442213898, (1, 2): -0.058169746326641694}
+    updated weights: {(0, 2): -2.0580006793189596, (1, 2): 0.903267622168482}
+    error: 0.004993174823452696
+
+iteration 4000
+    gradient: {(0, 2): -0.01536481706566838, (1, 2): -0.04609445119700514}
+    updated weights: {(0, 2): -2.187017035077964, (1, 2): 0.9588032475551099}
+    error: 0.002982405174006053
+
+iteration 5000
+    gradient: {(0, 2): -0.012858896793162088, (1, 2): -0.038576690379486266}
+    updated weights: {(0, 2): -2.2717393677429842, (1, 2): 0.995065996436664}
+    error: 0.00211991513136444
+
+iteration 6000
+    gradient: {(0, 2): -0.011201146193726709, (1, 2): -0.033603438581180124}
+    updated weights: {(0, 2): -2.3298248394321606, (1, 2): 1.0198377357361068}
+    error: 0.0017156674543843792
+
+iteration 7000
+    gradient: {(0, 2): -0.010062009597155228, (1, 2): -0.030186028791465685}
+    updated weights: {(0, 2): -2.370740520022862, (1, 2): 1.037244660012689}
+    error: 0.0015153961429219282
+
+iteration 8000
+    gradient: {(0, 2): -0.009259319779522148, (1, 2): -0.027777959338566444}
+    updated weights: {(0, 2): -2.400083365137227, (1, 2): 1.0497070597284772}
+    error: 0.0014124679719747604
+
+iteration 9000
+    gradient: {(0, 2): -0.008683873946383038, (1, 2): -0.026051621839149115}
+    updated weights: {(0, 2): -2.4213875864199608, (1, 2): 1.058744505427183}
+    error: 0.0013582149901490035
+
+iteration 10000
+    gradient: {(0, 2): -0.00826631063707707, (1, 2): -0.024798931911231212}
+    updated weights: {(0, 2): -2.4369901278483534, (1, 2): 1.065357551487286}
+    error: 0.001329102258719855
+
+&gt;&gt;&gt; nn.weights
+should be close to
+    {(0,2): -2.44, (1,2): 1.07}
+
+because the data points all lie approximately on the sigmoid
+    output = 1/(1 + e^(-(input[0] * -2.44 + input[1] * 1.07)) )</code></pre>
+<p><strong>Super Important:</strong> You'll have to update your gradient descent to account for the activation functions. This will require using the chain rule. In our case, we'll have</p>
+
+<pre><code>squared_error = (y_predicted - y_actual)^2
+
+d(squared_error)/d(weights)
+    = 2 (y_predicted - y_actual) d(y_predicted - y_actual)/d(weights)
+    = 2 (y_predicted - y_actual) [ d(y_predicted)/d(weights) - 0]
+    = 2 (y_predicted - y_actual) d(y_predicted)/d(weights)            
+
+y_predicted
+    = nodes[2].activity
+    = nodes[2].activation_function(nodes[2].input)
+    = nodes[2].activation_function(
+        weights[(0,2)] * nodes[0].activity
+        + weights[(1,2)] * nodes[1].activity
+    )
+    = nodes[2].activation_function(
+        weights[(0,2)] * nodes[0].activation_function(nodes[0].input) 
+        + weights[(1,2)] * nodes[1].activation_function(nodes[1].input)
+    )
+
+d(y_predicted)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+       * d(nodes[2].input)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+      * d(weights[(0,2)] * nodes[0].activity + weights[(1,2)] * nodes[1].activity)/d(weights[(0,2)])
+    = nodes[2].activation_derivative(nodes[2].input)
+       * nodes[0].activity
+
+by the same reasoning as above:
+
+d(y_predicted)/d(weights[(1,2)]
+    = nodes[2].activation_derivative(nodes[2].input)
+       * nodes[1].activity</code></pre>
+<p><strong>Note:</strong> If no <code>activation_functions</code> variable is passed in, then assume all activation functions are linear.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Time for an introduction to neural nets! In this problem, we'll create a really simple neural network that is essentially a "neural net"-style implementation of linear regression. We'll start off with something simple and familiar, but we'll implement much more advanced models in the near future.</p>
+<p><strong>Note:</strong> It seems like we need to merge our <code>graph</code> library into our <code>machine-learning</code> library. So, let's do that. The <code>src</code> your <code>machine-learning</code> library should now look like this:</p>
+
+<pre><code>src/
+- models/
+  - linear_regressor.py
+  - neural_network.py
+  - ...
+- graphs/
+  - weighted_graph.py
+  - ...</code></pre>
+<p>(If you have a better idea for the structure of our library, feel free to do it your way and bring it up for discussion during the next class)</p>
+<p>Create a <code>NeuralNetwork</code> class that inherits from weighted graph. Pass in dictionary of weights to determine connectivity and initial weights.</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+
+This is a graphical representation of the model:
+
+               nodes[2]                   ("output layer")
+            ^            ^
+           /              \
+  weights[(0,2)]    weights[(1,2)]
+        ^                    ^
+       /                      \
+nodes[0]                      nodes[1]     ("input layer")</code></pre>
+<p>To make a prediction, our simple neural net computes a weighted sum of the input values. (Again, this will become more involved in the future, but let's not worry about that just yet.)</p>
+
+<pre><code>&gt;&gt;&gt; nn.predict([1,3])
+1.4
+
+    behind the scenes:
+
+    assign nodes[0] a value of 1 and nodes[1] a value of 3,
+    and then return the following:
+
+    weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+    = -0.1 * 1 + 0.5 * 3
+    = 1.4</code></pre>
+<p>If we know the output that's supposed to be associated with a given input, we can compute the error in the prediction.</p>
+<p>We'll use the squared error, so that we can frame the problem of fitting the neural network as "choosing weights which minimize the squared error".</p>
+<p>To find the weights which minimize the squared error, we can perform gradient descent. As we'll see in the future, calculating the gradient of the weights can get a little tricky (it requires a technique called "backpropagation"). But for now, you can just hard-code the process for this particular network.</p>
+
+<pre><code>&gt;&gt;&gt; data_point = {'input': [1,3], 'output': [7]}
+&gt;&gt;&gt; nn.calc_squared_error(data_point)
+31.36     [ because (7-1.4)^2 = 5.6^2 = 31.36 ]
+
+&gt;&gt;&gt; nn.calc_gradient(data_point)
+{(0,2): -11.2, (1,2): -33.6}
+
+    behind the scenes:
+
+    squared_error = (y_actual - y_predicted)^2
+
+    d(squared_error)/d(weights)
+        = 2 (y_actual - y_predicted) d(y_actual - y_predicted)/d(weights)
+        = 2 (y_actual - y_predicted) [ 0 - d(y_predicted)/d(weights) ]
+        = -2 (y_actual - y_predicted) d(y_predicted)/d(weights)            
+
+    remember that
+        y_predicted = weights[(0,2)] * nodes[0].value + weights[(1,2)] * nodes[1].value
+
+    so
+        d(y_predicted)/d(weights[(0,2)]) = nodes[0].value
+        d(y_predicted)/d(weights[(1,2)]) = nodes[1].value
+
+    Therefore
+
+        d(squared_error)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(0,2)])
+            = -2 (y_actual - y_predicted) nodes[0].value
+            = -2 (7 - 1.4) (1)
+            = -11.2
+
+        d(squared_error)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) d(y_predicted)/d(weights[(1,2)])
+            = -2 (y_actual - y_predicted) nodes[1].value
+            = -2 (7 - 1.4) (3)
+            = -33.6</code></pre>
+<p>Once we've got the gradient, we can update the weights using gradient descent.</p>
+
+<pre><code>&gt;&gt;&gt; nn.update_weights(data_point, learning_rate=0.01)
+
+    new_weights = old_weights - learning_rate * gradient
+                = {(0,2): -0.1, (1,2): 0.5}
+                   - 0.01 * {(0,2): -11.2, (1,2): -33.6}
+                = {(0,2): -0.1, (1,2): 0.5}
+                   + {(0,2): 0.112, (1,2): 0.336}
+                = {(0,2): 0.012, (1,2): 0.836}</code></pre>
+<p>If we repeatedly loop through a dataset and update the weights for each data point, then we should get a model whose error is minimized.</p>
+<p>Caveat: the minimum will be a local minimum, which is not guaranteed to be a global minimum.</p>
+<p>Here is a test case with some data points that are on the line $y=1+2x.$ Our network is set up to fit any line of the form $y = \beta_0 \cdot 1 + \beta_1 \cdot x,$ where $\beta_0 = $ <code>weights[(0,2)]</code> and $\beta_1=$ <code>weights[(1,2)]</code>.</p>
+<p>Note that this line can be written as</p>
+
+<pre><code>output = 1 * input[0] + 2 * input[1]</code></pre>
+<p>In this particular case, the weights should converge to the true values (<code>1</code> and <code>2</code>).</p>
+
+<pre><code>&gt;&gt;&gt; weights = {(0,2): -0.1, (1,2): 0.5}
+&gt;&gt;&gt; nn = NeuralNetwork(weights)
+&gt;&gt;&gt; data_points = [
+    {'input': [1,0], 'output': [1]},
+    {'input': [1,1], 'output': [3]},
+    {'input': [1,2], 'output': [5]},
+    {'input': [1,3], 'output': [7]}
+    ]
+&gt;&gt;&gt; for _ in range(1000):
+        for data_point in data_points:
+            nn.update_weights(data_point)
+
+&gt;&gt;&gt; nn.weights
+should be really close to
+    {(0,2): 1, (1,2): 2}
+
+because the data points all lie on the line
+    output = input[0] * 1 + input[1] * 2</code></pre>
+<p><strong>Once you've got your final weights, post them on #results.</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><em>Primary problems; 60% of assignment grade; 90 minutes estimate</em></p>
+<p><strong>a.</strong> Assert that your decision trees pass some tests. (They likely will, so this problem will likely only take 10 minutes or so, I just to make sure we're all clear before we go back to improving our random forest, modeling real-world datasets, and moving on to neural nets.)</p>
+<p><strong>(i)</strong> Assert that BOTH your <strong>gini decision tree</strong> and <strong>random decision tree</strong> pass the following test.</p>
+<ul>
+<li><p>Create a dataset consisting of 100 points
+$$
+\Big[ (x,y,\textrm{label}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad x&gt;0, y &gt; 0 \\
+\textrm{negative}, \quad \textrm{otherwise}
+\end{cases}
+$$</p>
+</li>
+<li><p>Predict the label of this dataset. Train on 100% of the data and test on 100% of the data.</p>
+</li>
+<li><p>You should get an accuracy of 100%.</p>
+</li>
+<li><p>You should have <strong>exactly</strong> 2 splits</p>
+</li>
+</ul>
+<p><strong>Note:</strong> Your tree should look <strong>exactly</strong> like one of these:</p>
+
+<pre><code>           split y=0
+         /          \
+     y &lt; 0         y &gt; 0
+    pure neg      split x=0
+                    /   \
+                x &lt; 0   x &gt; 0
+              pure neg  pure pos
+.
+or
+.
+           split x=0
+         /          \
+     x &lt; 0         x &gt; 0
+    pure neg      split y=0
+                    /   \
+                y &lt; 0   y &gt; 0
+              pure neg  pure pos</code></pre>
+<p><strong>(ii)</strong> Assert that your <strong>gini decision tree</strong> passes Tests 1,2,3,4 from problem 84-1.</p>
+<p><strong>(iii)</strong>  Assert that your <strong>random forest with 10 trees</strong> passes Tests 1,2,3,4 from problem 84-1.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>b.</strong> Assert that your random decision tree passes the following tests.</p>
+<p><em>Test 1</em></p>
+<ul>
+<li><p>Create a dataset consisting of 100 points
+$$
+\Big[ (x,y,\textrm{label}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad xy &gt; 0 \\
+\textrm{negative}, \quad xy &lt; 0
+\end{cases}
+$$</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 100%.</p>
+</li>
+</ul>
+<p><em>Test 2</em></p>
+<ul>
+<li><p>Create a dataset consisting of 150 points
+$$
+\begin{align*}
+&amp;\Big[ (x,y,\textrm{A}) \mid x,y \in \mathbb{Z}, \,\, -5 \leq x,y \leq 5, \,\, xy \neq 0 \Big] \\
+&amp;+ \Big[ (x,y,\textrm{B}) \mid x,y \in \mathbb{Z}, \,\, 1 \leq x,y \leq 5 \Big] \\
+&amp;+ \Big[ (x,y,\textrm{B}) \mid x,y \in \mathbb{Z}, \,\, 1 \leq x,y \leq 5 \Big]. 
+\end{align*}
+$$
+This dataset consists of $100$ data points labeled "A" distributed evenly throughout the plane and $50$ data points labeled "B" in quadrant I. Each integer pair in quadrant I will have $1$ data point labeled "A" and $2$ data points labeled "B".</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 83.3% (25/150 misclassified)</p>
+</li>
+</ul>
+<p><em>Test 3</em></p>
+<ul>
+<li><p>Create a dataset consisting of 1000 points
+$$
+\Big[ (x,y,z,\textrm{label}) \mid x,y,z \in \mathbb{Z}, \,\, -5 \leq x,y,z \leq 5, \,\, xyz \neq 0 \big],
+$$
+where
+$$
+\textrm{label} = \begin{cases}
+\textrm{positive}, \quad xyz &gt; 0 \\
+\textrm{negative}, \quad xyz &lt; 0
+\end{cases}
+$$</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 100%.</p>
+</li>
+<li><p><strong>Note:</strong> These are a lot of data points, but the tree won't need to do many splits, so the code should run quickly. If the code takes a long time to run, it means you've got an issue, and you should post on Slack if you can't figure out why it's taking so long.</p>
+</li>
+</ul>
+<p><em>Test 4</em></p>
+<ul>
+<li><p>Create a dataset consisting of 1250 points
+$$
+\begin{align*}
+&amp;\Big[ (x,y,z,\textrm{A}) \mid x,y,z \in \mathbb{Z}, \,\, -5 \leq x,y,z \leq 5, \,\, xyz \neq 0 \Big] \\
+&amp;+ \Big[ (x,y,z,\textrm{B}) \mid x,y,z \in \mathbb{Z}, \,\, 1 \leq x,y,z \leq 5 \Big] \\
+&amp;+ \Big[ (x,y,z,\textrm{B}) \mid x,y,z \in \mathbb{Z}, \,\, 1 \leq x,y,z \leq 5 \Big]. 
+\end{align*}
+$$
+This dataset consists of $1000$ data points labeled "A" distributed evenly throughout the eight octants and $250$ data points labeled "B" in octant I. Each integer pair in octant I will have $1$ data point labeled "A" and $2$ data points labeled "B".</p>
+</li>
+<li><p>Train a random decision tree to predict the label of this dataset. Train on 100% of the data and test on 100% of the data. You should get an accuracy of 90% (125/1250 misclassified)</p>
+</li>
+<li><p><strong>Note:</strong> These are a lot of data points, but the tree won't need to do many splits, so the code should run quickly. If the code takes a long time to run, it means you've got an issue, and you should post on Slack if you can't figure out why it's taking so long.</p>
+</li>
+</ul>
+<p><strong>c.</strong> Update your game to use <code>0</code> at the head of the prices list for the technologies that start at level 1.</p>
+
+<pre><code>'technology_data': {
+        # lists containing price to purchase the next level level
+        'shipsize': [0, 10, 15, 20, 25, 30],
+        'attack': [20, 30, 40],
+        'defense': [20, 30, 40],
+        'movement': [0, 20, 30, 40, 40, 40],
+        'shipyard': [0, 20, 30]
+    }</code></pre>
+<p>This way, you can do this:</p>
+
+<pre><code>price = game_state['technology_data'][tech_type][level]</code></pre>
+<p>instead of this:</p>
+
+<pre><code>if tech_type in ['shipsize', 'movement', 'shipyard']:
+    price = game_state['technology_data'][tech_type][level-1]
+else:
+    price = game_state['technology_data'][tech_type][level]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><em>Primary problems; 45% of assignment grade; 75 minutes estimate</em></p>
+<p><strong>a.</strong> <strong>You'll need to do part 1 of the supplemental problem before you do this problem.</strong></p>
+<p><strong>(i)</strong> Download the <code>freshman_lbs.csv</code> dataset from <a href="https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html">https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html</a>, read it into a <code>DataFrame</code>, and create 5 test-train splits:</p>
+<ol>
+<li>Testing data = first 20% of the records, training data = remaining 80%</li>
+<li>Testing data = second 20% of the records, training data = remaining 80%</li>
+<li>Testing data = third 20% of the records, training data = remaining 80%</li>
+<li>Testing data = fourth 20% of the records, training data = remaining 80%</li>
+<li>Testing data = fifth 20% of the records, training data = remaining 80%</li>
+</ol>
+<p>Note that you'll need to convert the appropriate entries to numbers (instead of strings) in the dataset. There are 2 options for doing this:</p>
+<ul>
+<li><p><strong>Option 1:</strong> don't worry about fixing the format within the <code>read_csv</code> method. Just do something like
+<code>df = df.apply('weight', lambda x: int(x))</code>
+afterwards, before you pass the dataframe into your model.</p>
+</li>
+<li><p><strong>Option 2:</strong> when you read in the csv, after you do the</p>
+
+<pre><code>lines = file.read().split('\n')
+entries = [line.split(',') for line in lines]</code></pre>
+<p>thing, you can loop through the entries, and if <code>entry[0]+entry[-1] == '""'</code>, then you can set <code>entry = entry[1:-1]</code> to remove the quotes. Otherwise, if <code>entry[0]+entry[-1] != '""'</code>, then you can try to do <code>entry = float(entry[1:-1])</code>.</p>
+</li>
+</ul>
+<p><strong>(ii)</strong> For each test-train split, fit each of the following models on the training data and use it to predict the sexes on the testing data. (You are predicting sex as a function of weight and BMI, and you can just use columns corresponding to September data.)</p>
+<ul>
+<li><p>Decision tree using Gini split criterion</p>
+</li>
+<li><p>A single random decision tree</p>
+</li>
+<li><p>Random forest with 10 trees</p>
+</li>
+<li><p>Random forest with 100 trees</p>
+</li>
+<li><p>Random forest with 1000 trees</p>
+</li>
+</ul>
+<p><strong>(iii)</strong> For each model, compute the accuracy (count the total number of <em>correct</em> classifications and divide by the total number of classifications). Put these results in a table in an Overleaf document.</p>
+<p>Note that the total number of classifications should be equal to the total number of records in the dataset (you did 5 train-test splits, and each train-test split involved testing on 20% of the data).</p>
+<p><strong>(iv)</strong> Below the table, analyze the results. Did you expect these results, or did they surprise you? Why do you think you got the results you did?</p>
+<p><strong>b.</strong> For each of your classmates, copy over their <code>DumbStrategy</code> and <code>CombatStrategy</code> and run your DumbPlayer/CombatPlayer tests using <strong>your classmate's</strong> strategy. Fill out the following information <em>for each classmate:</em></p>
+<ul>
+<li><p>Name of classmate</p>
+</li>
+<li><p>When you copied over their <code>DumbStrategy</code> and ran your DumbPlayer tests, did they pass? If not, then what's the issue? Is it a problem with your game, or with their strategy class?</p>
+</li>
+<li><p>When you copied over their <code>CombatStrategy</code> and ran your CombatPlayer tests, did they pass? If not, then what's the issue? Is it a problem with your game, or with their strategy class?</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> <code>machine-learning/src/decision_tree.py</code></p>
+<p><strong>Grade Weighting:</strong> 40%</p>
+<p>Update your <code>DecisionTree</code> to have the option to build the tree via random splits. By "random splits", I mean that the tree should randomly choose from the possible splits, and it should keep splitting until each leaf node is pure.</p>
+
+<pre><code>&gt;&gt;&gt; dt = DecisionTree(split_metric = 'gini')
+&gt;&gt;&gt; dt.fit(df)
+Fits the decision tree using the Gini metric
+
+&gt;&gt;&gt; dt = DecisionTree(split_metric = 'random')
+&gt;&gt;&gt; dt.fit(df)
+Fits the decision tree by randomly choosing splits</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated Time:</strong> 15 minutes</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/analysis/scatter_plot.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 5</p>
+<p>Make a scatter plot of the following dataset consisting of the points <code>(x, y, class)</code>. When the class is <code>A</code>, color the dot red. When it is <code>B</code>, color the dot blue. Post your plot on slack once you've got it.</p>
+
+<pre><code>data = [[2,13,'B'],[2,13,'B'],[2,13,'B'],[2,13,'B'],[2,13,'B'],[2,13,'B'],
+    [3,13,'B'],[3,13,'B'],[3,13,'B'],[3,13,'B'],[3,13,'B'],[3,13,'B'],
+    [2,12,'B'],[2,12,'B'],
+    [3,12,'A'],[3,12,'A'],
+    [3,11,'A'],[3,11,'A'],
+    [3,11.5,'A'],[3,11.5,'A'],
+    [4,11,'A'],[4,11,'A'],
+    [4,11.5,'A'],[4,11.5,'A'],
+    [2,10.5,'A'],[2,10.5,'A'],
+    [3,10.5,'B'],
+    [4,10.5,'A']]</code></pre>
+<p>In the plot, make the dot size proportional to the number of points at that location.</p>
+<p>For example, to plot a data set</p>
+
+<pre><code>[
+ (1,1),
+ (2,4), (2,4),
+ (3,9), (3,9), (3,9), (3,9),
+ (4,16), (4,16), (4,16), (4,16), (4,16), (4,16), (4,16), (4,16), (4,16)
+ ]</code></pre>
+<p>you would use the following code:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">160</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[&nbsp;]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;matplotlib.collections.PathCollection at 0x7fb4c5d9e668&gt;</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated Time:</strong> 10-60 minutes (depending on whether you've got bugs)</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
+<code>machine-learning/tests/test_decision_tree.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 10</p>
+<p>Refactor your <code>DecisionTree</code> so that the dataframe is passed in the <code>fit</code> method (not when the decision tree is initialized). Also, create a method to <code>classify</code> points.</p>
+<p>Then, make sure decision tree passes the following tests, using the <code>data</code> from problem 71-1.</p>
+<p><strong>Note: Based on visually inspecting a plot of the data, I think these tests are correct, but if you get something different (that looks reasonable), post on Slack so I can check.</strong></p>
+
+<pre><code>df = DataFrame.from_array(data, columns = ['x', 'y', 'class'])
+
+&gt;&gt;&gt; dt = DecisionTree()
+&gt;&gt;&gt; dt.fit(df)
+
+The tree should look like this:
+
+                           (13A, 15B)
+                            /      \   
+                  (y &lt; 12.5)       (y &gt;= 12.5)
+                  (13A, 3B)        (12B)
+                  /         \
+          (x &lt; 2.5)          (x &gt;= 2.5)
+          (2A, 2B)                (11A, 1B)
+         /     \                  /        \
+(y &lt; 11.25)   (y &gt;= 11.25)  (y &lt; 10.75)     (y &gt;= 10.75)
+(2A)          (2B)          (1A, 1B)        (10A)
+                            /      \
+                   (x &lt; 3.5)        (x &gt;= 3.5)
+                        (1B)        (1A)
+
+&gt;&gt;&gt; dt.root.best_split
+('y', 12.5)
+&gt;&gt;&gt; dt.root.low.best_split
+('x', 2.5)
+&gt;&gt;&gt; dt.root.low.low.best_split
+('y', 11.25)
+&gt;&gt;&gt; dt.root.low.high.best_split
+('y', 10.75)
+&gt;&gt;&gt; dt.root.low.high.low.best_split
+('x', 3.5)
+
+&gt;&gt;&gt; dt.classify({'x': 2, 'y': 11.5})
+'B'
+&gt;&gt;&gt; dt.classify({'x': 2.5, 'y': 13})
+'B'
+&gt;&gt;&gt; dt.classify({'x': 4, 'y': 12})
+'A'
+&gt;&gt;&gt; dt.classify({'x': 3.25, 'y': 10.5})
+'B'
+&gt;&gt;&gt; dt.classify({'x': 3.75, 'y': 10.5})
+'A'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated Time:</strong> 45 minutes</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
+<code>machine-learning/tests/test_decision_tree.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 15</p>
+<p>If you haven't already, create a <code>split()</code> method in your <code>DecisionTree</code> (not the same as the <code>split()</code> method in your <code>Node</code>!) that splits the tree at the node with highest impurity.</p>
+<p>Then, create a <code>fit()</code> method in your <code>DecisionTree</code> that keeps on <code>split()</code>-ing until all terminal nodes are completely pure.</p>
+<p>Assert that the following tests pass:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[1, 11, 'A'],
+    [1, 12, 'A'],
+    [2, 11, 'A'],
+    [1, 13, 'B'],
+    [2, 13, 'B'],
+    [3, 13, 'B'],
+    [3, 11, 'B']],
+    columns = ['x', 'y', 'class']
+)
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+# currently, the decision tree looks like this:
+
+                      (3A, 4B)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                      (3A, 4B)
+                      /      \   
+            (y &lt; 12.5)       (y &gt;= 12.5)
+            (3A, 1B)         (3B)
+
+&gt;&gt;&gt; dt.split()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]
+
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+# currently, the decision tree looks like this:
+
+                      (3A, 4B)
+
+&gt;&gt;&gt; dt.fit()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/leave_one_out_cross_validator.py</code><br>
+<code>machine-learning/tests/test_leave_one_out_cross_validator.py</code></p>
+</blockquote>
+<p>Write a class <code>LeaveOneOutCrossValidator</code> that computes <code>percent_accuracy</code> (also known as "leave-one-out cross validation") for any input classifier. For a refresher, see problem 58-1.</p>
+<p>Assert that <code>LeaveOneOutCrossValidator</code> passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+
+&gt;&gt;&gt; cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
+    [ Note: under the hood, the LeaveOneOutCrossValidator should
+      create a leave_one_out_df and do
+      knn.fit(leave_one_out_df, prediction_column='Cookie Type') ]
+
+&gt;&gt;&gt; cv.accuracy()
+0.7894736842105263 (Updated!)
+
+Note: the following is included to help you debug.
+Row 0 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 1 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 2 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 3 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 4 -- True Class is Sugar; Predicted Class was Sugar
+Row 5 -- True Class is Sugar; Predicted Class was Sugar
+Row 6 -- True Class is Sugar; Predicted Class was Sugar
+Row 7 -- True Class is Sugar; Predicted Class was Shortbread
+Row 8 -- True Class is Sugar; Predicted Class was Shortbread
+Row 9 -- True Class is Sugar; Predicted Class was Sugar
+Row 10 -- True Class is Fortune; Predicted Class was Fortune (Updated!)
+Row 11 -- True Class is Fortune; Predicted Class was Fortune
+Row 12 -- True Class is Fortune; Predicted Class was Fortune
+Row 13 -- True Class is Fortune; Predicted Class was Shortbread
+Row 14 -- True Class is Fortune; Predicted Class was Fortune (Updated!)
+Row 15 -- True Class is Shortbread; Predicted Class was Sugar
+Row 16 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 17 -- True Class is Shortbread; Predicted Class was Shortbread
+Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
+
+&gt;&gt;&gt; accuracies = []
+&gt;&gt;&gt; for k in range(1, len(data)-1):
+&gt;&gt;&gt;    knn = KNearestNeighborsClassifier(k)
+&gt;&gt;&gt;    cv = LeaveOneOutCrossValidator(knn, df, prediction_column='Cookie Type')
+&gt;&gt;&gt;    accuracies.append(cv.accuracy())
+
+&gt;&gt;&gt; accuracies
+ [0.5789473684210527,
+ 0.5789473684210527, #(Updated!)
+ 0.5789473684210527,
+ 0.5789473684210527,
+ 0.7894736842105263, #(Updated!)
+ 0.6842105263157895,
+ 0.5789473684210527,
+ 0.5789473684210527, #(Updated!)
+ 0.6842105263157895, #(Updated!)
+ 0.5263157894736842,
+ 0.47368421052631576, #(Updated!)
+ 0.42105263157894735,
+ 0.42105263157894735, #(Updated!)
+ 0.3684210526315789, #(Updated!)
+ 0.3684210526315789, #(Updated!)
+ 0.3684210526315789, #(Updated!)
+ 0.42105263157894735]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> extra credit (you can get 200% on this assignment)</p>
+<p><strong>Location:</strong> <code>assignment-problems/sudoku_solver.py</code></p>
+<p>Use "intelligent search" to solve the following mini sudoku puzzle. Fill in the grid so that every row, every column, and every 3x2 box contains the digits 1 through 6.</p>
+<p>For a refresher on "intelligent search", see problem 44-1.</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/small-sudoku.png' border='0'/></center><p>Format your output so that when your code prints out the result, it prints out the result in the shape of a sudoku puzzle:</p>
+
+<pre><code>-----------------
+| . . 4 | . . . |
+| . . . | 2 3 . |
+-----------------
+| 3 . . | . 6 . |
+| . 6 . | . . 2 |
+-----------------
+| . 2 1 | . . . |
+| . . . | 5 . . |
+-----------------</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated Time:</strong> 2-3 hours</p>
+<p><strong>Location:</strong></p>
+<blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
+<code>machine-learning/tests/test_decision_tree.py</code></p>
+</blockquote>
+<p><strong>Points:</strong> 15</p>
+<p>In this problem, you will create the first iteration of a class <code>DecisionTree</code> that builds a decision tree by repeatedly looping through all possible splits and choosing the split with the highest "goodness of split".</p>
+<p>We will use the following simple dataset:</p>
+
+<pre><code>['x', 'y', 'class']
+[1, 11, 'A']
+[1, 12, 'A']
+[2, 11, 'A']
+[1, 13, 'B']
+[2, 13, 'B']
+[3, 12, 'B']
+[3, 13, 'B']</code></pre>
+<p>For this dataset, "all possible splits" mean all midpoints between distinct entries in sorted data columns.</p>
+<ul>
+<li><p>The sorted distinct entries of <code>x</code> are 1, 2, 3.</p>
+</li>
+<li><p>The sorted distinct entries of <code>y</code> are 11, 12, 13.</p>
+</li>
+</ul>
+<p>So, "all possible splits" are <code>x=1.5, x=2.5, y=11.5, y=12.5.</code></p>
+<p><strong>Assert that the following tests pass. Note that you will need to create a <code>Node</code> class for the nodes in your decision tree.</strong></p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [[1, 11, 'A'],
+    [1, 12, 'A'],
+    [2, 11, 'A'],
+    [1, 13, 'B'],
+    [2, 13, 'B'],
+    [3, 13, 'B'],
+    [3, 11, 'B']],
+    columns = ['x', 'y', 'class']
+)
+&gt;&gt;&gt; dt = DecisionTree(df)
+
+&gt;&gt;&gt; dt.root.row_indices
+[0, 1, 2, 3, 4, 5, 6] # these are the indices of data points in the root node
+
+&gt;&gt;&gt; dt.root.class_counts
+{
+    'A': 3,
+    'B': 4
+}
+
+&gt;&gt;&gt; dt.root.impurity
+0.490 # rounded to 3 decimal places
+
+&gt;&gt;&gt; dt.root.possible_splits.to_array()
+# dt.possible_splits is a dataframe with columns
+# ['feature', 'value', 'goodness of split']
+# Note: below is rounded to 3 decimal places
+
+[['x', 1.5,  0.085],
+ ['x', 2.5,  0.147],
+ ['y', 11.5, 0.085],
+ ['y', 12.5, 0.276]]
+
+&gt;&gt;&gt; dt.root.best_split
+('y', 12.5)
+
+&gt;&gt;&gt; dt.root.split()
+# now, the decision tree looks like this:
+
+                      (3A, 4B)
+                      /      \   
+            (y &lt; 12.5)       (y &gt;= 12.5)
+            (3A, 1B)         (3B)
+
+# "low" refers to the "&lt;" child node
+# "high" refers to the "&gt;=" child node
+&gt;&gt;&gt; dt.root.low.row_indices
+[0, 1, 2, 6]
+&gt;&gt;&gt; dt.root.high.row_indices
+[3, 4, 5]
+
+&gt;&gt;&gt; dt.root.low.impurity
+0.375
+&gt;&gt;&gt; dt.root.high.impurity
+0
+
+&gt;&gt;&gt; dt.root.low.possible_splits.to_array()
+
+[['x', 1.5,  0.125],
+ ['x', 2.5,  0.375],
+ ['y', 11.5, 0.042]]
+
+&gt;&gt;&gt; dt.root.low.best_split
+('x', 2.5)
+
+&gt;&gt;&gt; dt.root.low.split()
+# now, the decision tree looks like this:
+
+                    (3A, 4B)
+                    /      \   
+           (y &lt; 12.5)       (y &gt;= 12.5)
+           (3A, 1B)         (3B)
+         /         \
+(x &lt; 2.5)          (x &gt;= 2.5)
+(3A)               (1B)
+
+&gt;&gt;&gt; dt.root.low.low.row_indices
+[0, 1, 2]
+&gt;&gt;&gt; dt.root.low.high.row_indices
+[6]
+
+&gt;&gt;&gt; dt.root.low.low.impurity
+0
+&gt;&gt;&gt; dt.root.low.high.impurity
+0</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 45 min</p>
+<p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
+<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code></p>
+</blockquote>
+<p><strong>Grading:</strong> 15 points</p>
+<p>Update your <code>KNearestNeighborsClassifier</code> so that</p>
+<ul>
+<li><code>k</code> is defined upon initialization,</li>
+<li>the model is fit by calling <code>fit</code>, and passing in the data &amp; dependent variable, and</li>
+<li>when we classify an observation, all we need to pass in is the observation.</li>
+</ul>
+<p>Update the tests, too, and make sure they still pass.</p>
+
+<pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+&gt;&gt;&gt; knn.fit(df, dependent_variable='Cookie Type') # dependent_variable is the new name for prediction_column
+&gt;&gt;&gt; df = the observation that's in test_k_nearest_neighbors_classifier.py
+&gt;&gt;&gt; knn.classify(observation) # we no longer pass in k</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
+<p><strong>Location:</strong> <code>assignment-problems/quicksort.py</code></p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Previously, you wrote a variant of quicksort that involved splitting the list into two parts (one part $\leq$ the pivot, and another part $&gt;$ the pivot), and then recursively calling quicksort on those parts.</p>
+<p>However, this algorithm can be made more efficient by keeping everything in the same list (rather than creating two new lists). You can do this by <em>swapping</em> elements rather than breaking them out into new lists.</p>
+<p><strong>Your task is to write a quicksort algorithm that uses only one list, and uses swaps to re-order elements within that list, per the quicksort algorithm. <a href="https://www.youtube.com/watch?v=cnzIChso3cc" target="_blank">Here is an example of how to do that.</a></strong></p>
+<p>Make sure your algorithm passes the same test as the quicksort without swaps (that you did on the previous assignment).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Create a class <code>NaiveBayesClassifier</code> withing <code>machine-learning/src/naive_bayes_classifier.py</code> that passes the following tests. These tests should be written in <code>tests/test_naive_bayes_classifier.py</code> using assert statements.</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [
+        [False, False, False],
+        [True, True, True],
+        [True, True, True],
+        [False, False, False],
+        [False, True, False],
+        [True, True, True],
+        [True, False, False],
+        [False, True, False],
+        [True, False, True],
+        [False, True, False]
+    ]
+    columns = ['errors', 'links', 'scam']
+)
+&gt;&gt;&gt; naive_bayes = NaiveBayesClassifier(df, dependent_variable='scam')
+
+&gt;&gt;&gt; naive_bayes.probability('scam', True)
+0.4
+&gt;&gt;&gt; naive_bayes.probability('scam', False)
+0.6
+
+&gt;&gt;&gt; naive_bayes.conditional_probability(('errors',True), given=('scam',True))
+1.0
+&gt;&gt;&gt; naive_bayes.conditional_probability(('links',False), given=('scam',True))
+0.25
+
+&gt;&gt;&gt; naive_bayes.conditional_probability(('errors',True), given=('scam',False))
+0.16666666666666666
+&gt;&gt;&gt; naive_bayes.conditional_probability(('links',False), given=('scam',False))
+0.5
+
+&gt;&gt;&gt; observed_features = {
+    'errors': True,
+    'links': False
+}
+&gt;&gt;&gt; naive_bayes.likelihood(('scam',True), observed_features)
+0.1
+&gt;&gt;&gt; naive_bayes.likelihood(('scam',False), observed_features)
+0.05
+
+&gt;&gt;&gt; naive_bayes.classify('scam', observed_features)
+True
+
+Note: in the event of a tie, choose the dependent variable that occurred most frequently in the dataset.</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p><strong>Location:</strong> <code>assignment-problems/quicksort_without_swaps.py</code></p>
+<p>Implement a function <code>quicksort</code> that implements the variant of quicksort described here: <a href="https://www.youtube.com/watch?v=XE4VP_8Y0BU">https://www.youtube.com/watch?v=XE4VP_8Y0BU</a></p>
+<ul>
+<li>Note: this variant of <code>quicksort</code> is very similar to <code>mergesort</code>.</li>
+</ul>
+<p>Use your function to sort the list <code>[5,8,-1,9,10,3.14,2,0,7,6]</code> (write a test with an assert statement). Choose the pivot as the rightmost entry.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Construct a decision tree model for the following data. Include the Gini impurity and goodness of split at each node. <strong>You should choose the splits so as to maximize the goodness of split each time.</strong> Also, draw a picture of the decision boundary on the graph.</p>
+<center><img height=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/intro-decision-trees-1.png' border='0'/></center>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p>Construct a decision tree model for the following data, using the splits shown.</p>
+<center><img height=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/intro-decision-trees-0.jpg' border='0'/></center><p>Remember that the formula for Gini impurity for a group with class distribution $\vec p$ is</p>
+$$
+G(\vec p) = \sum_i p_i (1-p_i)
+$$<p>and that the "goodness-of-split" is quantified as</p>
+$$
+\text{goodness} = G(\vec p_\text{pre-split}) - \sum_\text{post-split groups} \dfrac{N_\text{group}}{N_\text{pre-split}} G(\vec p_\text{group}).
+$$<p>See the updated <a href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisko Assignment Template</a> for an example of constructing a decision tree in latex for a graph with given splits.</p>
+<ul>
+<li><p>Be sure to include the class counts, impurity, and goodness of split at each node</p>
+</li>
+<li><p>Be sure to label each edge with the corresponding decision criterion.</p>
+</li>
+</ul>
+<p><a href="https://w3.cs.jmu.edu/spragunr/CS444/activities/trees_bagging/decision_trees.pdf">This resource may also be helpful for reference.</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p>Recall the following cookie dataset (that has been augmented with some additional examples):</p>
+
+<pre><code>['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+[['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+['Sugar'       ,     0.02     ,       0.08     ,      0.45     ,     0.45      ],
+['Sugar'       ,     0.10     ,       0.15     ,      0.35     ,     0.40      ],
+['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
+['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
+['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
+['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
+['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]]</code></pre>
+<p>When fitting our k-nearest neighbors models, we have been using this dataset to predict the type of a cookie based on its ingredient portions. We've also seen that issues can arise when $k$ is too small or too large.</p>
+<p><strong>So, what is a good value of $k?$</strong></p>
+<p><strong>a.</strong> To explore this question, plot the function
+$$
+y= \text{percent_correct}(k), \qquad k=1,2,3, \ldots, 16,
+$$
+where $\text{percent_correct}(k)$ is the percentage of points in the dataset that the $k$-nearest neighbors model would classify correctly.</p>
+
+<pre><code>for each data point:
+    1. fit a kNN model to all the data EXCEPT that data point
+    2. use the kNN model to classify the data point
+    3. determine whether the kNN classification matches up
+       with the actual class of the data point
+
+percent_correct = num_correct_classifications / tot_num_data_points</code></pre>
+<p>You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/knn-intro-cross-validation.png' border='0'/></center><p><strong>b.</strong> Based on what you know about what happens when $k$ is too small or too large, does the shape of your plot makes sense?</p>
+<p><strong>c.</strong> What would be an appropriate value (or range of values) of $k$ for this modeling task? Justify your answer by referring to your plot.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 12 points</p>
+<p><strong>Naive Bayes classification</strong> is a way to classify a new observation consisting of multiple features, if we have data about how other observations were classified. It involves choosing the class that maximizes the posterior distribution of the classes, given the observation.</p>
+$$\begin{align*}
+\text{class} &amp;= \underset{\text{class}}{\arg\max} \, P(\text{class} \, | \, \text{observed features}) \\
+&amp;= \underset{\text{class}}{\arg\max} \, \dfrac{P(\text{observed features} \, | \, \text{class}) P(\text{class})}{P(\text{observed features})} \\
+&amp;= \underset{\text{class}}{\arg\max} \,  P(\text{observed features} \, | \, \text{class}) P(\text{class})\\
+&amp;= \underset{\text{class}}{\arg\max} \,  \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{class}) P(\text{class})\\
+&amp;= \underset{\text{class}}{\arg\max} \,  P(\text{class}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{class}) \\
+\end{align*}$$<p>The key assumption (used in the final line) is that all the features are independent:</p>
+$$\begin{align*}
+P(\text{observed features} \, | \, \text{class}) = \prod\limits_{\text{observed} \\ \text{features}} P(\text{feature} \, | \, \text{class})
+\end{align*}$$<hr>
+<p>Suppose that you want to find a way to classify whether an email is a phishing scam or not, based on whether it has errors and whether it contains links.</p>
+<p>After checking 10 emails in your inbox, you came up with the following data set:</p>
+<ol>
+<li>No errors, no links; NOT scam</li>
+<li>Contains errors, contains links; SCAM</li>
+<li>Contains errors, contains links; SCAM</li>
+<li>No errors, no links; NOT scam</li>
+<li>No errors, contains links; NOT scam</li>
+<li>Contains errors, contains links; SCAM</li>
+<li>Contains errors, no links; NOT scam</li>
+<li>No errors, contains links; NOT scam</li>
+<li>Contains errors, no links; SCAM</li>
+<li>No errors, contains links; NOT scam</li>
+</ol>
+<p>Now, you look at 4 new emails. For each of the new emails, compute</p>
+$$
+P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam})
+$$<p>and decide whether it is a scam.</p>
+<p><strong>a.</strong> No errors, no links. You should get</p>
+$$
+P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = 0 \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{4}.
+$$<p><strong>b.</strong> Contains errors, contains links. You should get</p>
+$$
+P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = \dfrac{3}{10} \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{20}.
+$$<p><strong>c.</strong> Contains errors, no links. You should get</p>
+$$
+P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = \dfrac{1}{10} \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{20}.
+$$<p><strong>d.</strong> No errors, contains links. You should get</p>
+$$
+P(\text{scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{scam}) = 0 \\[10pt] \text{and} \\[10pt] P(\text{not scam}) \prod\limits_{\text{observed}\\ \text{features}} P(\text{feature} \, | \, \text{not scam}) = \dfrac{1}{4}.
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
+<p><strong>Grading:</strong> 10 points</p>
+<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<p>The dataset below displays the ratio of ingredients for various cookie recipes.</p>
+
+<pre><code>['ID', 'Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+
+[[ 1 , 'Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+[ 2  , 'Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+[ 3  , 'Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+[ 4  , 'Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+[ 5  , 'Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+[ 6  , 'Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+[ 7  , 'Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+[ 8  , 'Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+[ 9  , 'Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+[ 10 , 'Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+[ 11 , 'Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+[ 12 , 'Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+[ 13 , 'Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]]</code></pre>
+<p>Suppose you're given a cookie recipe and you want to determine whether it is a shortbread cookie, a sugar cookie, or a fortune cookie. The cookie recipe consists of 0.10 portion eggs, 0.15 portion butter, 0.30 portion sugar, and 0.45 portion flour. We will infer the classification of this cookie using the "$k$ nearest neighbors" approach.</p>
+<p><strong>Part 1: How to do $k$ nearest neighbors.</strong></p>
+<p><strong>a.</strong> This cookie can be represented as the point $P(0.10, 0.15, 0.30, 0.45).$ Compute the Euclidean distance between $P$ and each of the points corresponding to cookies in the dataset.</p>
+<ul>
+<li><strong>NOTE: YOU DON'T HAVE TO SHOW YOUR CALCULATIONS. Just write a Python script to do the calculations for you and print out the results, and in your writeup you can just include the final results.</strong></li>
+</ul>
+<p><strong>b.</strong> Consider the 5 points that are closest to $P.$ (These are the 5 "nearest neighbors".) What cookie IDs are they, and what types of cookies are represented by these points?</p>
+<p><strong>c.</strong> What cookie classification showed up most often in the 5 nearest neighbors? What inference can you make about the recipe corresponding to the point $P$?</p>
+<p><strong>Part 2: The danger of using too large a $k$</strong></p>
+<p><strong>a.</strong> What happens if we try to perform the $k$ nearest neighbors approach with $k=13$ (i.e. the full dataset) to infer the cookie classification of point $P?$ What issue occurs, and why does it occur?</p>
+<p><strong>b.</strong> For each classification of cookie, find the average distance between $P$ and the points corresponding to the cookies in that classification. Explain how this resolves the issue you identified in part (a).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-73-1">Problem 73-1<a class="anchor-link" href="#Problem-73-1">&#182;</a></h1><p>In the Titanic dataset, let's get a sense of how the continuous variables (<code>Age</code> and <code>Fare</code>) relate to <code>Survived</code>.</p>
+<p><strong>a.</strong> For <code>Age</code>, filter the records down to age categories (0-10, 10-20, 20-30, ..., 70-80) and compute the survival rate (i.e. mean survival) in each category. Exclude any <code>None</code>s from the analysis.</p>
+<ul>
+<li><p>Put a table in an overleaf document. Round the survival rate to $2$ decimal places (otherwise it's difficult to read.)</p>
+</li>
+<li><p>In the table, include the counts in parentheses. So each table entry should look like <code>survivalRate (count)</code>. So if the survival rate were <code>0.13</code> and the count were <code>27</code> people, then you'd put <code>0.13 (17)</code>.</p>
+</li>
+<li><p>What does the table tell you about the relationship between age and survival?</p>
+</li>
+<li><p>Give a plausible explanation for why this is.</p>
+</li>
+</ul>
+<p><strong>b.</strong> For <code>Fare</code>, filter the records down to fare categories (0-5, 5-10, 10-20, 20-50, 50-100, 100-200, 200+) and compute the survival rate (i.e. mean survival) in each category. Exclude any <code>None</code>s from the analysis.</p>
+<ul>
+<li>Put a table in the overleaf document and answer the same questions that you did for part (a).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-73-2">Problem 73-2<a class="anchor-link" href="#Problem-73-2">&#182;</a></h1><h3 id="SQL-Parser">SQL Parser<a class="anchor-link" href="#SQL-Parser">&#182;</a></h3><p>Update your <code>query</code> method to support <code>ORDER BY</code>. The query</p>
+
+<pre><code>df.query("SELECT selectColname1, selectColname2, selectColname3 ORDER BY orderColname1 order1, orderColname2 order2, orderColname3 order3")</code></pre>
+<p>should be parsed and read into the following primitive operations:</p>
+
+<pre><code>df.select([selectColname1, selectColname2, selectColname3])
+  .order_by(orderColname3, order3)
+  .order_by(orderColname2, order2)
+  .order_by(orderColname1, order1)</code></pre>
+<p>Assert that your method passes the following tests:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Kevin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Sylvia', 'Mendez', 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.query("SELECT lastname, firstname, age ORDER BY age DESC").to_array()
+[['Trapp', 'Charles', 17],
+['Smith', 'Anna', 13],
+['Mendez', 'Sylvia', 9],
+['Fray', 'Kevin', 5]]
+
+&gt;&gt;&gt; df.query("SELECT firstname ORDER BY lastname ASC").to_array()
+[['Kevin'],
+['Sylvia'],
+['Anna'],
+['Charles']]</code></pre>
+<p>Assert that your method passes these tests as well:</p>
+
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Kevin', 'Fray', 5],
+    ['Melvin', 'Fray', 5],
+    ['Charles', 'Trapp', 17],
+    ['Carl', 'Trapp', 17],
+    ['Anna', 'Smith', 13],
+    ['Hannah', 'Smith', 13],
+    ['Sylvia', 'Mendez', 9],
+    ['Cynthia', 'Mendez', 9]],
+    columns = ['firstname', 'lastname', 'age']
+)
+
+&gt;&gt;&gt; df.query("SELECT lastname, firstname, age ORDER BY age ASC, firstname DESC").to_array()
+[['Fray', 'Melvin', 5],
+['Fray', 'Kevin', 5],
+['Mendez', 'Sylvia', 9],
+['Mendez', 'Cynthia', 9],
+['Smith', 'Hannah', 13],
+['Smith', 'Anna', 13],
+['Trapp', 'Charles', 17],
+['Trapp', 'Carl', 17]]</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-72-1">Problem 72-1<a class="anchor-link" href="#Problem-72-1">&#182;</a></h1><p><strong>This will be a "consolidation problem." Your task is to make sure that you have Problem 71-1 completed by the end of the weekend.</strong></p>
 
 </div>
@@ -13170,6 +14703,7 @@ Commit links (space-empires, assignment-problems): ____</code></pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-71-1">Problem 71-1<a class="anchor-link" href="#Problem-71-1">&#182;</a></h1><p>During combat, instead of choosing scouts randomly to be destroyed, construct a combat order in which the ships who occupied the grid space first come first in the order. (So, in our case, player 1's ships will come first.)</p>
+<p><strong>Tip:</strong> To do this, you could assign a number to each ship, that represents whether it's the 1st, 2nd, 3rd, etc. ship in the spot it moved to. And you could update that number every time a ship moves.</p>
 
 <pre><code>    Combat Locations:
 
