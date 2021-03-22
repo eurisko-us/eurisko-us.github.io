@@ -74,7 +74,16 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="105">
+<font size="3em"><ol reversed start="106">
+    <li><b>Monday, March 22</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/527501059">Class Recording</a> (ML is second half)
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-106-1">Primary: Simplest Neural Net with a Hidden Layer</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-106-2">Supplementary: Titanic Exploratory Analysis, SQL Parser (Order By)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-106-3">Commit / Review</a></li>
+        </ul></font>
+    </li>
     <li><b>Friday, March 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (ML is second half) - quiz 2-4 review, neural net gradient calculations, unit tests discussion
         <br>Assignment Problems:
