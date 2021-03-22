@@ -75,7 +75,15 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="72">
+<font size="3em"><ol reversed start="73">
+    <li><b>Monday, March 22</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/527501059">Class Recording</a> (C&M is first half)
+        <br>Assignment Problems:
+        <font size="2em"><ul>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-1">Primary: Titanic Exploratory Analysis</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-2">Supplementary: SQL Parser (Order By)</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-3">Commit / Review</a></li>
+            </ul>
     <li><b>Friday, March 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (C&M is first half) - titanic exploratory analysis, quiz 2-4 review
         <br>Assignment Problems:
