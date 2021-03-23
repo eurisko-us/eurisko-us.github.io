@@ -84,6 +84,8 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-2">Supplementary: SQL Parser (Order By)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-3">Commit / Review</a></li>
         </ul></font>
+    </li>
+    <br>
     <li><b>Friday, March 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (C&M is first half) - titanic exploratory analysis, quiz 2-4 review
         <br>Assignment Problems:
@@ -92,6 +94,8 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-2">Supplementary: Quiz Corrections, C++</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-3">Commit / Review</a></li>
         </ul></font>
+    </li>
+    <br>
     <li><b>Wednesday, March 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
         <br>Assignment Problems:
@@ -101,6 +105,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-71-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 15</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
@@ -110,6 +115,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-70-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, March 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (C&M is first half)
         <br>Assignment Problems:
@@ -119,6 +125,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-69-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
    <li><b>Wednesday, March 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (C&M is first half) - parser
         <br>Assignment Problems:
@@ -128,6 +135,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-68-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 8</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/521081075">Class Recording</a> (C&M is first half) - parser
         <br>Assignment Problems:
@@ -137,6 +145,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-67-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, March 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/520073721">Class Recording</a> (C&M is first half) - intro to Kaggle, review pointers
         <br>Assignment Problems:
@@ -146,6 +155,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-66-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, March 3</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/519186985">Class Recording</a> (C&M is first half) - quiz 2-3 review
         <br>Assignment Problems:
@@ -155,6 +165,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-65-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 1</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
@@ -162,6 +173,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-64-1">Primary: Space Empires Game Level 0.0</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, February 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/517289955">Class Recording</a> (C&M is first half) - Test/Train Datasets, SQL
         <br>Assignment Problems:
@@ -171,6 +183,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-63-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (C&M is first half) - Intro to Overfitting, Bisection Search
         <br>Assignment Problems:
@@ -180,6 +193,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-62-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (C&M is first half) - Shortest Path in Weighted Graph Using Dijkstra's Algorithm
         <br>Assignment Problems:
@@ -189,6 +203,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-61-3">QUIZ FRIDAY / Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, February 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (C&M is first half) - Dijkstra's Algorithm, Intro to Hash Tables
         <br>Assignment Problems:
@@ -198,6 +213,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-60-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (C&M is first half) - polynomial regression, review quiz 2-2
         <br>Assignment Problems:
@@ -207,6 +223,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-59-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Tuesday, February 16</b>
         <br>Off day, but there is a (shorter) assignment due Tuesday night.
         <br>Assignment Problems:
@@ -215,6 +232,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-58-2">Commit</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/510804889">Class Recording</a> (C&M is first half) - Intro to Hodgkin-Huxley model, blog post preference rankings
         <br><b>Note:</b> Since we have Friday and Monday off, and there is an asynchronous quiz tomorrow (Thursday), this assignment will be due Monday night. There will be another assignment due Wednesday, which will be released this weekend.
@@ -225,6 +243,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-57-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 8</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
@@ -235,6 +254,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/all_problems_iteration_1.html#Problem-56-4">Preparation for Thursday Quiz</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, February 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508979696">Class Recording</a> (C&M is first half) - magic square via intelligent search
         <br>Assignment Problems:
@@ -244,6 +264,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-55-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 3</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508143215">Class Recording</a> (C&M is first half) - distance & shortest path in graph
         <br>Assignment Problems:
@@ -253,6 +274,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-54-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 1</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (C&M is first half) - quiz 2-1 review
         <br>Assignment Problems:
@@ -262,6 +284,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-53-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, January 29</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (C&M is first half) - predator-prey, shortest distance in an undirected graph
         <br>Assignment Problems:
@@ -271,6 +294,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-52-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, January 27</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (C&M is first half) - SIR model, dummy variables, Haskell problem
         <br>Assignment Problems:
@@ -280,6 +304,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-51-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, January 25</b>
         <br>No class, but there is an assignment.
         <br>Assignment Problems:
