@@ -84,7 +84,7 @@ There are many other details. I won't mention them all here, but here are a few 
 <li>Each round of combat starts with "ship screening", in which a player with more ships is given the opportunity to remove its ships from the combat round (but the number of ships that are left in combat must be at least the number of ships that the opponent has in that square).</li>
 </ul>
 
-In our initial approach to implementing the game, we tried to implement the main rules of the game along with a subset of the more interesting details. Along the way, we created a couple simple strategy players to test that our games gave the same results, and it seemed like things were going fine. But once the students built more complex custom strategies and tried to have the custom strategies battle against each other, we ran into tons of edge-cases and details that we hadn't otherwise considered, and everyone's game implementations were giving different results. After several weeks of attempting to reconcile the discrepancies in our games, we decided to peel back to a much simpler version of the game, reconcile any discrepancies on that simple version, and gradually work our way back up to the full implementation, continuing to reconcile discrepancies at each "level" along the way.
+In our initial approach to implementing the game, we tried to implement the main rules of the game along with a subset of the more interesting details. Along the way, we created a couple simple strategy players to test that our games gave the same results, and it seemed like things were going fine. But once the students built more complex custom strategies and tried to have the custom strategies battle against each other, we ran into tons of edge-cases and details that we hadn't otherwise considered, and everyone's game implementations were giving different results. (Each student has their own implementation of the game.) After several weeks of attempting to reconcile the discrepancies in our games, we decided to peel back to a much simpler version of the game, reconcile any discrepancies on that simple version, and gradually work our way back up to the full implementation, continuing to reconcile discrepancies at each "level" along the way.
 
 <b>Level 1.</b> We started off with the simplest game imaginable: each player has 3 scout units and that's it. There was no economic phase, no CP, no technology. Level 1 consisted of each player moving their 3 units and engaging in combat, and that's it. We created several strategy players, matched them up against each other, and engaged in pair coding sessions until all of the discrepancies in the outcomes were resolved.
 
@@ -115,7 +115,7 @@ Here are our plans for the rest of the semester:
 
 <li><i>Programming Languages</i> - we'll do a bit more Haskell, C++, and SQL before hitting the brakes (pursuing them further isn't going to be as valuable to the goals of the class as the space empires, machine learning, and algorithms problems). But we'll also write our own SQL parser within the DataFrame class, to gain further insight into how programming languages are structured and what goes on behind the scenes when you run a program.</li>
 
-<li><i>Space Empires</i> - we will continue building up the game level by level and building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that we have built. Once the Space Empires games are fully implemented, we will put them on a server and have the agents communicate with the game using socket connections.</li>
+<li><i>Space Empires</i> - we will continue building up the game level by level and building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that we have built. We may have to start collaborating on a shared implementation if resolving discrepancies across students' own implementation proves too time-consuming.</li>
 
 <li><i>Writing</i> - we will write another round of blog posts.</li>
 </ul>
@@ -125,6 +125,7 @@ The working title for next year's class (12th grade) is "Intelligent Systems." I
 <ul>
 <li>continue broadening our knowledge of machine learning (addressing unsupervised learning and reinforcement learning),</li>
 <li>implement several small-scale games (such as tic-tac-toe, snake, and checkers) and train intelligent agents to play them,</li>
+<li>put our fully-implemented Space Empires games on a server and have the agents communicate with the game using socket connections,</li>
 <li>continue improving our intelligent agents in the game of Space Empires, and create an app for playing Space Empires (so that us lowly humans can compete against some AI agents on our phones).</li>
 </ul>
 
