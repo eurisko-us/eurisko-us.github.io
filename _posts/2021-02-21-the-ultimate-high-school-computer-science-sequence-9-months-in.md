@@ -124,7 +124,6 @@ The working title for next year's class (12th grade) is "Intelligent Systems." I
 
 <ul>
 <li>continue broadening our knowledge of machine learning (addressing unsupervised learning and reinforcement learning),</li>
-<li>continue re-implementing our models and algorithms in C++ to speed them up,</li>
 <li>implement several small-scale games (such as tic-tac-toe, snake, and checkers) and train intelligent agents to play them,</li>
 <li>continue improving our intelligent agents in the game of Space Empires, and create an app for playing Space Empires (so that us lowly humans can compete against some AI agents on our phones).</li>
 </ul>
