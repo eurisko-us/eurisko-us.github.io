@@ -83,7 +83,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-1">Primary: Titanic Exploratory Analysis</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-2">Supplementary: SQL Parser (Order By)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-73-3">Commit / Review</a></li>
-            </ul>
+        </ul></font>
     <li><b>Friday, March 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (C&M is first half) - titanic exploratory analysis, quiz 2-4 review
         <br>Assignment Problems:
@@ -91,7 +91,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-1">Primary: Space Empires Log Matchup with Random Seed</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-2">Supplementary: Quiz Corrections, C++</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-72-3">Commit / Review</a></li>
-            </ul>
+        </ul></font>
     <li><b>Wednesday, March 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (C&M is first half) - pointers, space empires troubleshooting, sql query
         <br>Assignment Problems:
