@@ -38,7 +38,7 @@ We want to teach students the art and craft of software development, while simul
    <li><i>Formal computer science.</i> In addition to becoming competent software developers, we wanted to teach the students undergraduate-level computer science (data structures / algorithms, programming languages, etc) so that no matter how competitive or rigorous the undergraduate curriculum they encounter, they'll be overprepared and find it easygoing (as opposed to overwhelming/intimidating).</li>
 </ul>
 
-We chose Python as our primary programming language since it's one of the most productive multi-purpose languages, it's a great learning language, and these days it's the lingua franca of machine learning. But we also wanted to expose the students to multiple programming languages, so we picked C++ and Haskell as two other languages that would stretch the students in other ways. C++ forces them to think in terms of how the machine actually works, whereas Haskell represents a much more abstract idealized conception of computation. C++ and Haskell are also the kinds of languages that the students might run into early in an undergraduate computer science program, and if they're not prepared, they could easily find themselves frustrated and struggling. So we're taking preventative measures.
+We chose Python as our primary programming language since it's one of the most productive multi-purpose languages, it's a great learning language, and these days it's the lingua franca of machine learning. But we also wanted to expose the students to the basics of multiple programming languages, so we picked C++ and Haskell as two other languages that would stretch the students in other ways. C++ forces them to think in terms of how the machine actually works, whereas Haskell represents a much more abstract idealized conception of computation. C++ and Haskell are also the kinds of languages that the students might run into early in an undergraduate computer science program, and if they're not prepared, they could easily find themselves frustrated and struggling. So we're taking preventative measures.
 
 We're also having the students learn SQL, since it's an example of a different category of language: declarative, as opposed to imperative (Python, C++) or functional (Haskell). It also happens to be incredibly useful. In addition to learning SQL, the students will also build their own SQL parser, which will give them further insight into how programming languages are structured and what goes on behind the scenes when you run a program.
 
@@ -60,7 +60,7 @@ Here is a list of the main topics we've covered. We pulled the basics from MIT's
 
 <b>Object-Oriented Programming.</b> In addition to implementing numerous classes in the context of algorithms / data structures and machine learning, the students have been implementing the Space Empires board game along with intelligent agents that battle against each other. Space Empires is incredibly rich and complex and will be discussed extensively later in this post.
 
-<b>Programming Languages.</b> The students have recently started learning C++, Haskell, Shell, and SQL. So far, the exercises they've completed have been simple HackerRank-style problems, but we're gradually scaling that up over time.
+<b>Programming Languages.</b> The students have recently started learning C++, Haskell, Shell, and SQL. So far, the exercises they've completed have been simple HackerRank-style problems.
 
 <b>Writing.</b> The students each wrote a blog post last semester (the posts are linked in the categories above). I've started submitting them on Hacker News, and Elijah's post made it to the front page last weekend (<a class="body" href="https://news.ycombinator.com/item?id=26126652" target="_blank">link</a>). Everyone else's posts will be submitted in the coming weekends.
 
@@ -113,9 +113,9 @@ Here are our plans for the rest of the semester:
 
 <li><i>Data Structures and Algorithms</i> - we will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), and genetic algorithms.</li>
 
-<li><i>Programming Languages</i> - we will build our own string and vector classes in C++ and continue learning more advanced C++ and Haskell. We'll also take the algorithms and models we had previously written in Python, and rewrite them in C++ with the goal of speeding them up. Lastly, we'll write our own SQL parser within the DataFrame class.</li>
+<li><i>Programming Languages</i> - we'll do a bit more Haskell, C++, and SQL before hitting the brakes (pursuing them further isn't going to be as valuable to the goals of the class as the space empires, machine learning, and algorithms problems). But we'll also write our own SQL parser within the DataFrame class, to gain further insight into how programming languages are structured and what goes on behind the scenes when you run a program.</li>
 
-<li><i>Space Empires</i> - we will continue building up the game level by level and will continue building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that they have built. Once the Space Empires games are fully implemented, the we will put them on a server and have the agents communicate with the game using socket connections.</li>
+<li><i>Space Empires</i> - we will continue building up the game level by level and building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that we have built. Once the Space Empires games are fully implemented, we will put them on a server and have the agents communicate with the game using socket connections.</li>
 
 <li><i>Writing</i> - we will write another round of blog posts.</li>
 </ul>
