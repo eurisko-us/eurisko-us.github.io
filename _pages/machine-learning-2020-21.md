@@ -84,6 +84,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-106-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, March 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/526314806">Class Recording</a> (ML is second half) - quiz 2-4 review, neural net gradient calculations, unit tests discussion
         <br>Assignment Problems:
@@ -93,6 +94,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-105-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, March 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/525088335">Class Recording</a> (ML is second half) - sql query, space empires unit test planning
         <br>Assignment Problems:
@@ -102,6 +104,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-104-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 15</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
@@ -111,6 +114,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-103-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, March 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522942574">Class Recording</a> (ML is second half) - potential internships, upcoming meeting with Prof. Wierman, slinky development and the log of truth
         <br>Assignment Problems:
@@ -120,6 +124,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-102-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, March 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/522028834">Class Recording</a> (ML is second half) - weight gradient calculations, game level 3 debugging discussion
         <br>Assignment Problems:
@@ -129,6 +134,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-101-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 8</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/521081075">Class Recording</a> (ML is second half) - level 3 debugging discussion
         <br>Assignment Problems:
@@ -138,6 +144,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-100-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, March 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/520073721">Class Recording</a> (ML is second half) - review pointers, level 3 matchups results
         <br>Assignment Problems:
@@ -147,6 +154,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-99-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, March 3</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/519186985">Class Recording</a> (ML is second half) - quiz 2-3 review
         <br>Assignment Problems:
@@ -156,6 +164,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-98-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, March 1</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
@@ -163,6 +172,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-97-1">Primary: Titanic Survival Prediction</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, February 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/517289955">Class Recording</a> (ML is second half) - Weight Gradients, Crown Game Level 2 Winners
         <br>Assignment Problems:
@@ -172,6 +182,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-96-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/516372924">Class Recording</a> (ML is second half) - Using Math Notation with Neural Nets
         <br>Assignment Problems:
@@ -181,6 +192,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-95-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/515430341">Class Recording</a> (ML is second half) - Game Level 2 Reconciliations, Logistic Regressor Neural Net via Activation Functions
         <br>Assignment Problems:
@@ -190,6 +202,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-94-3">QUIZ FRIDAY / Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, February 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/514415403">Class Recording</a> (ML is second half) - intro to hash tables, game levels 2/3
         <br>Assignment Problems:
@@ -199,6 +212,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-93-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 17</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/513522127">Class Recording</a> (ML is second half) - review quiz 2-2, intro to neural networks
         <br>Assignment Problems:
@@ -208,6 +222,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-92-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Tuesday, February 16</b>
         <br>Off day, but there is a (shorter) assignment due Tuesday night.
         <br>Assignment Problems:
@@ -216,6 +231,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-91-2">Commit</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 10</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/510804889">Class Recording</a> (ML is second half) - Pair Coding Scheduling
         <br><b>Note:</b> Since we have Friday and Monday off, and there is an asynchronous quiz tomorrow (Thursday), this assignment will be due Monday night. There will be another assignment due Wednesday, which will be released this weekend.
@@ -226,6 +242,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-90-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 8</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
@@ -236,6 +253,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-89-4">Preparation for Thursday Quiz</a></li>
         </ul></font>
     </li>
+    <br>
    <li><b>Friday, February 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508979696">Class Recording</a> (ML is second half) - space empires level 1, quiz 2-1 review
         <br>Assignment Problems:
@@ -245,6 +263,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-88-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, February 3</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/508143215">Class Recording</a> (ML is second half) - space empires level 1, quiz 2-1 review
         <br>Assignment Problems:
@@ -254,6 +273,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-87-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, February 1</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/507190028">Class Recording</a> (ML is second half) - space empires level 1
         <br>Assignment Problems:
@@ -263,6 +283,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-86-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Friday, January 29</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/506340665">Class Recording</a> (ML is second half) - random forest, space empires
         <br>Assignment Problems:
@@ -272,6 +293,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-85-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Wednesday, January 27</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/505343339">Class Recording</a> (ML is second half) - shortest path in weighted graph, space empires
         <br>Assignment Problems:
@@ -281,6 +303,7 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-84-3">Commit / Review</a></li>
         </ul></font>
     </li>
+    <br>
     <li><b>Monday, January 25</b>
         <br>No class, but there is an assignment
         <br>Assignment Problems:
