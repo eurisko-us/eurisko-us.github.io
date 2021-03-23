@@ -14597,10 +14597,10 @@ $$
 <pre><code>df.query("SELECT selectColname1, selectColname2, selectColname3 ORDER BY orderColname1 order1, orderColname2 order2, orderColname3 order3")</code></pre>
 <p>should be parsed and read into the following primitive operations:</p>
 
-<pre><code>df.select([selectColname1, selectColname2, selectColname3])
-  .order_by(orderColname3, order3)
+<pre><code>df.order_by(orderColname3, order3)
   .order_by(orderColname2, order2)
-  .order_by(orderColname1, order1)</code></pre>
+  .order_by(orderColname1, order1)
+  .select([selectColname1, selectColname2, selectColname3])</code></pre>
 <p>Assert that your method passes the following tests:</p>
 
 <pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
