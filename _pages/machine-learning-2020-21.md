@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="106">
+<font size="3em"><ol reversed start="107">
+    <li><b>Wednesday, March 24</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/528568998">Class Recording</a> (ML is second half)
+        <br>Assignment Problem: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-107">Predicting Titanic Survival with Linear Regressor; Intro to Branches + Pull Requests</a>
+    </li>
+    <br>
     <li><b>Monday, March 22</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/527501059">Class Recording</a> (ML is second half)
         <br>Assignment Problems:
