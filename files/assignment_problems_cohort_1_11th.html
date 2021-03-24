@@ -13119,6 +13119,148 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Revisit 106 but with better logs. Also do some more advanced architectures that we had previously solved by hand. You don't have to make it general yet; you can hard-code the specific network connectivity.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-107">Problem 107<a class="anchor-link" href="#Problem-107">&#182;</a></h1><h3 id="Announcement">Announcement<a class="anchor-link" href="#Announcement">&#182;</a></h3><p>We're going to cut down on Eurisko assignment durations by a third. We've made a lot of progress, and most of you have AP tests coming up, so we're going to ease off the gas pedal a bit. We're going to hit the brakes on Haskell, C++, and code review, since you've had some basic exposure to those things and pursuing them further isn't going to be as valuable to the goals of the class as the space empires and machine learning stuff. Each assignment will consist of a single problem in one of the following areas:</p>
+<ul>
+<li>implementing something in space empires</li>
+<li>implementing part of a machine learning model</li>
+<li>implementing part of a data structure (e.g. Matrix, DataFrame)</li>
+<li>prepping/exploring some data for modeling</li>
+<li>carrying out a model and interpreting the results</li>
+<li>writeups (such as blog posts)</li>
+</ul>
+<h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p><strong>For this problem, you'll need to turn in both your analysis code and an Overleaf writeup. The code should print out all the checks that are provided to you in this problem.</strong></p>
+<p><strong>a.</strong> Continue processing your data as follows:</p>
+<ul>
+<li><p><code>Sex</code> - replace <code>"male"</code> with <code>0</code> and <code>"female"</code> with <code>1</code></p>
+</li>
+<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age</p>
+</li>
+<li><p><code>SibSp</code> - this was one of the variables that didn't have a clear positive or negative association with <code>Survival</code>. When <code>SibSp=0</code>, the survival was low; when <code>SibSp&gt;=1</code>, the survival started higher but then decreased as <code>SibSp</code> decreased.</p>
+<p>So, what we can do is create a dummy variable <code>SibSp=0</code> that equals <code>1</code> when <code>SibSp</code> is equal to <code>0</code> (and <code>0</code> otherwise). And we'll keep <code>SibSp</code> as well. This way, the variable <code>SibSp=0</code> can be given a negative coefficient that offsets the coefficient of <code>SibSp</code> in the case when <code>SibSp</code> equals <code>0</code>.</p>
+</li>
+<li><p><code>Parch</code> - we'll replace this with a dummy variable <code>Parch=0</code>, because the only significant difference in the data is whether or not <code>Parch</code> is equal to <code>0</code>. Among passengers who had <code>Parch</code> greater than <code>0</code>, it doesn't look like there's much variation in survival.</p>
+</li>
+<li><p><code>CabinType</code> - replace this with dummy variables of the form <code>CabinType=A</code>, <code>CabinType=B</code>, <code>CabinType=C</code>, <code>CabinType=D</code>, <code>CabinType=E</code>, <code>CabinType=F</code>, <code>CabinType=G</code>, <code>CabinType=None</code>, <code>CabinType=T</code>.</p>
+</li>
+<li><p><code>Embarked</code> - replace this with dummy variables of the form <code>Embarked=C</code>, <code>Embarked=None</code>, <code>Embarked=Q</code>, <code>Embarked=S</code>.</p>
+</li>
+</ul>
+<p>Now, your data should all be numeric, and we can put it into linear regressor.</p>
+<p><strong>Note:</strong> To get predictions out of the linear regressor, we'll interpret the linear regression's output in the following way.</p>
+<ul>
+<li><p>if the linear regressor predicts a value less than <code>0.5</code>, then it predicts the passenger did not survived (i.e. it predicts <code>survival=0</code>)</p>
+</li>
+<li><p>if the linear regressor predicts a value greater than or equal to <code>0.5</code>, then it predicts the passenger survived (i.e. it predicts <code>survival=1</code>)</p>
+</li>
+</ul>
+<p><strong>b.</strong> Create train and test datasets. Use first 500 records for training, and the rest for testing. Start out just training a model which uses <code>Sex</code> as the only feature. This will be our baseline.</p>
+
+<pre><code>train accuracy: 0.8
+test accuracy:  0.7698
+
+{'Sex': 0.7420}</code></pre>
+<p>Note that accuracy is just the number of correct classifications divided by the total number of classifications.</p>
+<p><strong>c.</strong> Now, introduce <code>Pclass</code>. Uh oh! Why didn't our test accuracy get any better? Write your explanation in an Overleaf doc.</p>
+
+<pre><code>train accuracy: 0.8
+test accuracy:  0.7698
+
+{'Sex': 0.6514, 'Pclass': 0.0419}</code></pre>
+<p><em>Hint:</em> Look at the <code>Sex</code> coefficient.</p>
+<p><strong>d.</strong> Bring in some more features: <code>Fare</code>, <code>Age</code>, <code>SibSp</code>, <code>SibSp=0</code>, <code>Parch=0</code>. The test accuracy still hasn't gotten any better. Why?</p>
+
+<pre><code>train accuracy: 0.796
+test accuracy:  0.7698
+
+{
+    'Sex': 0.5833,
+    'Pclass': -0.0123,
+    'Fare': 0.0012,
+    'Age': 0.0008,
+    'SibSp': -0.0152, 
+    'SibSp=0': 0.0478, 
+    'Parch=0': 0.0962
+}</code></pre>
+<p><strong>e.</strong> Bring in some more features: <code>Embarked=C</code>, <code>Embarked=None</code>, <code>Embarked=Q</code>, <code>Embarked=S</code>. Now the model actually got better. Why is the model more accurate now?</p>
+
+<pre><code>train accuracy: 0.806
+test accuracy:  0.7902813299232737
+
+{
+    'Sex': 0.4862,
+    'Pclass': -0.1684,
+    'Fare': 0.0002,
+    'Age': -0.0056,
+    'SibSp': -0.0719,
+    'SibSp=0': -0.0784, 
+    'Parch=0': -0.0269, 
+    'Embarked=C': 0.9179, 
+    'Embarked=None': 1.0522, 
+    'Embarked=Q': 0.9282, 
+    'Embarked=S': 0.8544
+}</code></pre>
+<p><strong>f.</strong> Bring in some more features: <code>CabinType=A</code>, <code>CabinType=B</code>, <code>CabinType=C</code>, <code>CabinType=D</code>, <code>CabinType=E</code>, <code>CabinType=F</code>, <code>CabinType=G</code>, <code>CabinType=None</code>. The model is continuing to get better.</p>
+
+<pre><code>train accuracy: 0.816
+test accuracy:  0.8005
+
+{
+    'Sex': 0.4840, 
+    'Pclass': -0.1313, 
+    'Fare': 0.0003, 
+    'Age': -0.0058, 
+    'SibSp': -0.0724, 
+    'SibSp=0': -0.0823, 
+    'Parch=0': -0.0187, 
+    'Embarked=C': 0.5446, 
+    'Embarked=None': 0.6773, 
+    'Embarked=Q': 0.5522, 
+    'Embarked=S': 0.4829, 
+    'CabinType=A': 0.3830, 
+    'CabinType=B': 0.3360, 
+    'CabinType=C': 0.2686, 
+    'CabinType=D': 0.4311, 
+    'CabinType=E': 0.4973, 
+    'CabinType=F': 0.4679, 
+    'CabinType=G': 0.0858, 
+    'CabinType=None': 0.2634
+}</code></pre>
+<p><strong>g.</strong> Now, introduce <code>CabinType=T</code>. You'll probably see the accuracy go down. I won't include a check because different people will get different results for this one. Why did the accuracy go down?</p>
+<p>This is subtle, so I'll give a hint. Look at the entries of $X^TX$ and compare to what the entries looked like before you introduced <code>CabinType=T</code>. The entries get extremely large/small.</p>
+<p>So, there are really two questions:</p>
+<ol>
+<li>Why are the extremely large/small entries of $(X^TX)^{-1}$ leading to lower classification accuracy?</li>
+<li>(Harder) Why are the entries of $(X^TX)^{-1}$ getting extremely large/small in the first place?</li>
+</ol>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
+<p>(this will be a really, really small problem, like 5mins, just to get a sense of how pull requests work)</p>
+<p>I need to over Eli's implementation to eurisko-us</p>
+<p>everyone makes a branch, puts a little comment, and creates a pull request</p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
+
+<pre><code>overleaf link to explanations: _____
+
+repl.it link to file that prints out
+the results of your model (it should
+match up with the checks in the
+assignment): _____
+
+commit link (machine-learning): ____</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-106-1">Problem 106-1<a class="anchor-link" href="#Problem-106-1">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>I had a chat with Jason this morning about our approach to space empires. We've been building the games separately so that each person gets a maximum learning experience, but now we're at a point where this method of development is becoming so time consuming that it keeps us from making progress down other avenues (neural nets, sql parser, etc). Not to mention, we have a deadline that we need to have level 3 working in 3 weeks for our next meeting with Prof. Wierman.</p>
 <p>So, he's ok with the idea of everyone in the class working on the same game implementation. We'll discuss that more during the next class, but for now, hit the brakes on space empires and focus on getting the problems on this current assignment done.</p>
 <h3 id="Neural-Networks">Neural Networks<a class="anchor-link" href="#Neural-Networks">&#182;</a></h3><p>Now that you've had plenty of practice computing weight gradients, let's go back to implementations.</p>
