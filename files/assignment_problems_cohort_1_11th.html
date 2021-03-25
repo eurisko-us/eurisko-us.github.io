@@ -13141,7 +13141,7 @@ div#notebook {
 <ul>
 <li><p><code>Sex</code> - replace <code>"male"</code> with <code>0</code> and <code>"female"</code> with <code>1</code></p>
 </li>
-<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age</p>
+<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age (which should be about 29.699)</p>
 </li>
 <li><p><code>SibSp</code> - this was one of the variables that didn't have a clear positive or negative association with <code>Survival</code>. When <code>SibSp=0</code>, the survival was low; when <code>SibSp&gt;=1</code>, the survival started higher but then decreased as <code>SibSp</code> decreased.</p>
 <p>So, what we can do is create a dummy variable <code>SibSp=0</code> that equals <code>1</code> when <code>SibSp</code> is equal to <code>0</code> (and <code>0</code> otherwise). And we'll keep <code>SibSp</code> as well. This way, the variable <code>SibSp=0</code> can be given a negative coefficient that offsets the coefficient of <code>SibSp</code> in the case when <code>SibSp</code> equals <code>0</code>.</p>
