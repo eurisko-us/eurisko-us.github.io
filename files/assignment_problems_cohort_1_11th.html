@@ -13119,7 +13119,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Revisit 106 but with better logs. Also do some more advanced architectures that we had previously solved by hand. You don't have to make it general yet; you can hard-code the specific network connectivity.</p>
+<h1 id="Problem-109">Problem 109<a class="anchor-link" href="#Problem-109">&#182;</a></h1><p>Generalized neural net</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-108">Problem 108<a class="anchor-link" href="#Problem-108">&#182;</a></h1><p>Unit tests in our shared game implementation</p>
 
 </div>
 </div>
@@ -13141,7 +13149,7 @@ div#notebook {
 <ul>
 <li><p><code>Sex</code> - replace <code>"male"</code> with <code>0</code> and <code>"female"</code> with <code>1</code></p>
 </li>
-<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age (which should be about 29.699)</p>
+<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age (which should be about <code>29.699</code>)</p>
 </li>
 <li><p><code>SibSp</code> - this was one of the variables that didn't have a clear positive or negative association with <code>Survival</code>. When <code>SibSp=0</code>, the survival was low; when <code>SibSp&gt;=1</code>, the survival started higher but then decreased as <code>SibSp</code> decreased.</p>
 <p>So, what we can do is create a dummy variable <code>SibSp=0</code> that equals <code>1</code> when <code>SibSp</code> is equal to <code>0</code> (and <code>0</code> otherwise). And we'll keep <code>SibSp</code> as well. This way, the variable <code>SibSp=0</code> can be given a negative coefficient that offsets the coefficient of <code>SibSp</code> in the case when <code>SibSp</code> equals <code>0</code>.</p>
@@ -13240,10 +13248,52 @@ test accuracy:  0.8005
 <li>Why are the extremely large/small entries of $(X^TX)^{-1}$ leading to lower classification accuracy?</li>
 <li>(Harder) Why are the entries of $(X^TX)^{-1}$ getting extremely large/small in the first place?</li>
 </ol>
-<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>IN PROGRESS</strong></p>
-<p>(this will be a really, really small problem, like 5mins, just to get a sense of how pull requests work)</p>
-<p>I need to over Eli's implementation to eurisko-us</p>
-<p>everyone makes a branch, puts a little comment, and creates a pull request</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Our shared game implementation is here:</p>
+<blockquote><p><a href="https://github.com/eurisko-us/space-empires-cohort-1">https://github.com/eurisko-us/space-empires-cohort-1</a></p>
+</blockquote>
+<p>Here is a high-level guide of the process for making changes to our shared repository:</p>
+<blockquote><p><a href="https://guides.github.com/introduction/flow/">https://guides.github.com/introduction/flow/</a></p>
+</blockquote>
+<p>To check out a new branch:</p>
+
+<pre><code>&gt;&gt;&gt; git checkout -b justin-comment
+Switched to a new branch 'justin-comment'</code></pre>
+<p>Add a comment to <code>yourname-comment.txt</code></p>
+
+<pre><code>&gt;&gt;&gt; git status
+On branch justin-comment
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    justin-comment.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p>Add your changes and commit to your branch</p>
+
+<pre><code>&gt;&gt;&gt; git add justin-comment.txt
+&gt;&gt;&gt; git commit -m "create Justin's comment"
+[justin-comment 542f30e] create Justin's comment
+ 1 file changed, 1 insertion(+)
+ create mode 100644 justin-comment.txt</code></pre>
+<p>Push to your branch</p>
+
+<pre><code>&gt;&gt;&gt; git push origin justin-comment
+Username for 'https://github.com': jpskycak
+Password for 'https://jpskycak@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'justin-comment' on GitHub by visiting:
+remote:      https://github.com/eurisko-us/space-empires-cohort-1/pull/new/justin-comment
+remote: 
+To https://github.com/eurisko-us/space-empires-cohort-1.git
+ * [new branch]      justin-comment -&gt; justin-comment</code></pre>
+<p>On GitHub, it will show that your branch is a commit ahead, and possibly even commits behind (if other people have made commits in the time since you first created your branch).</p>
+<center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/justin-comment.png' border='0'/></center><p>Click "Pull request", and create the pull request. Don't merge it yet, though. We'll do that during class.</p>
 <h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>For your submission, copy and paste your links into the following template:</p>
 
 <pre><code>overleaf link to explanations: _____
