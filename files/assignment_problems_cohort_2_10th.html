@@ -13250,96 +13250,7 @@ $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
-<ul>
-<li><p>$n_k$ - the $k$th neuron</p>
-</li>
-<li><p>$a_k$ - the activity of the $k$th neuron</p>
-</li>
-<li><p>$i_k$ - the input to the $k$th neuron. This is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
-</li>
-<li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
-</li>
-<li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
-</li>
-<li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
-</li>
-<li><p>$w_{k \ell} \to w_{k \ell} - \alpha \dfrac{\textrm dE}{\textrm dw_{k\ell}}$ is the gradient descent update, where $\alpha$ is the learning rate</p>
-</li>
-</ul>
-<p><strong>Example</strong></p>
-<p>For a simple network
-$$
-\begin{matrix} &amp; &amp; n_2 \\ &amp; \nearrow &amp; &amp; \nwarrow \\ n_0 &amp; &amp; &amp; &amp; n_1,\end{matrix}
-$$
-we have:</p>
-$$\begin{align*}
-y_\textrm{predicted} &amp;= a_2 \\
-&amp;= f_2(i_2) \\
-&amp;= f_2(w_{02} a_0 + w_{12} a_1) \\
-&amp;= f_2(w_{02} f_0(i_0) + w_{12} f_1(i_1) ) \\ \\
-
-\dfrac{\textrm dE}{\textrm dw_{02}} &amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (y_\textrm{predicted} - y_\textrm{actual})^2 \right] \\
-&amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (a_2 - y_\textrm{actual})^2 \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d}{\textrm dw_{02}} \left[ a_2 - y_\textrm{actual} \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ a_2 \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ f_2(i_2) \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ i_2 \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
-&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_0 \\ \\
-
-\dfrac{\textrm dE}{\textrm dw_{12}} &amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_1
-\end{align*}$$<p><strong>THE ACTUAL PROBLEM STATEMENT</strong></p>
-<p>Compute $\dfrac{\textrm dE}{\textrm dw_{23}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
-$$
-\begin{matrix} n_3 \\ \uparrow \\ n_2 \\ \uparrow \\ n_1 \\ \uparrow \\ n_0 \end{matrix}
-$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
-<p><strong>Check your answer</strong> by substituting the following values:</p>
-$$
-y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 6 \\ f_1'(i_1) = 7 \\ f_2'(i_2) = 8 \\ f_3'(i_3) = 9 \end{matrix} \qquad \begin{matrix} w_{01} = 10 \\ w_{12} = 11 \\ w_{23} = 12 \end{matrix}
-$$<p>You should get
-$$
-\dfrac{\textrm dE}{\textrm d w_{23}} = 288, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 20736, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 1064448.
-$$</p>
-<p><strong>Note:</strong> On the next couple assignments, we'll do the same exercise with progressively more advanced networks. This problem is relatively simple so that you have a chance to get used to working with the notation.</p>
-<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Finish creating your game level 3 strategy. (See problem 93-1 for a description of game level 3, which you should have implemented by now.) Then, implement the following strategy and run it against your level 3 strategy:</p>
-<ul>
-<li><code>NumbersBerserkerLevel3</code> - always buys as many scouts as possible, and each time it buys a scout, immediately sends it on a direct route to attack the opponent.</li>
-</ul>
-<p>Post on #machine-learning with your strategy's stats against these strategies:</p>
-
-<pre><code>MyStrategy vs NumbersBerserker
-- MyStrategy win rate: __%
-- MyStrategy loss rate: __%
-- draw rate: __%</code></pre>
-<p>On the next assignment, we'll have the official matchups.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Reconcile remaining discrepancies in game level 2 so we can crown the winners:</p>
-<blockquote><p><a href="https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1zUqn5OvF3_U3XJ_d25vtBiFkRB3RgSQSXNv6wga8aeI/edit?usp=sharing</a></p>
-</blockquote>
-<p>Then, write your first custom strategy for the level 3 game. We'll start matchups on Wednesday. We'll go through several rounds of matchups on this level since the game is starting to become more rich.</p>
-<p>(We'll have the same extra credit prizes for 1st / 2nd / 3rd place)</p>
-<p><strong>Note:</strong> In <code>decide_which_unit_to_attack</code>, be sure to use <code>'player'</code> and <code>'unit'</code> instead of <code>'player_index'</code> and <code>'unit_index'</code>.</p>
-
-<pre><code># combat_state is a dictionary in the form coordinates : combat_order 
-        # {
-        #    (1,2): [{'player': 1, 'unit': 0},
-        #            {'player': 0, 'unit': 1},
-        #            {'player': 1, 'unit': 1},
-        #            {'player': 1, 'unit': 2}],
-        #    (2,2): [{'player': 2, 'unit': 0},
-        #            {'player': 3, 'unit': 1},
-        #            {'player': 2, 'unit': 1},
-        #            {'player': 2, 'unit': 2}]
-        # }</code></pre>
-<h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p><strong>Make sure you get this problem done completely. Neural nets have a very steep learning curve and they're going to be sticking with us until the end of the semester.</strong></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Neural-Net-Based-Logistic-Regressor">Neural Net-Based Logistic Regressor<a class="anchor-link" href="#Neural-Net-Based-Logistic-Regressor">&#182;</a></h3><p><strong>Make sure you get this problem done completely. Neural nets have a very steep learning curve and they're going to be sticking with us until the end of the semester.</strong></p>
 <p><strong>a.</strong> Given $\sigma(x) = \dfrac{1}{1+e^{-x}},$ prove that $\sigma'(x) = \sigma(x) (1-\sigma(x)).$ Write this proof in an Overleaf doc.</p>
 <p><strong>b.</strong> In neural networks, neurons are often given "activation functions", where</p>
 
@@ -13751,25 +13662,6 @@ This dataset consists of $1000$ data points labeled "A" distributed evenly throu
 <li><p><strong>Note:</strong> These are a lot of data points, but the tree won't need to do many splits, so the code should run quickly. If the code takes a long time to run, it means you've got an issue, and you should post on Slack if you can't figure out why it's taking so long.</p>
 </li>
 </ul>
-<p><strong>c.</strong> Update your game to use <code>0</code> at the head of the prices list for the technologies that start at level 1.</p>
-
-<pre><code>'technology_data': {
-        # lists containing price to purchase the next level level
-        'shipsize': [0, 10, 15, 20, 25, 30],
-        'attack': [20, 30, 40],
-        'defense': [20, 30, 40],
-        'movement': [0, 20, 30, 40, 40, 40],
-        'shipyard': [0, 20, 30]
-    }</code></pre>
-<p>This way, you can do this:</p>
-
-<pre><code>price = game_state['technology_data'][tech_type][level]</code></pre>
-<p>instead of this:</p>
-
-<pre><code>if tech_type in ['shipsize', 'movement', 'shipyard']:
-    price = game_state['technology_data'][tech_type][level-1]
-else:
-    price = game_state['technology_data'][tech_type][level]</code></pre>
 
 </div>
 </div>
@@ -14290,32 +14182,6 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 45 min</p>
-<p><strong>Locations:</strong></p>
-<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
-<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code></p>
-</blockquote>
-<p><strong>Grading:</strong> 15 points</p>
-<p>Update your <code>KNearestNeighborsClassifier</code> so that</p>
-<ul>
-<li><code>k</code> is defined upon initialization,</li>
-<li>the model is fit by calling <code>fit</code>, and passing in the data &amp; dependent variable, and</li>
-<li>when we classify an observation, all we need to pass in is the observation.</li>
-</ul>
-<p>Update the tests, too, and make sure they still pass.</p>
-
-<pre><code>&gt;&gt;&gt; df = the cookie dataset that's in test_k_nearest_neighbors_classifier.py
-&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
-&gt;&gt;&gt; knn.fit(df, dependent_variable='Cookie Type') # dependent_variable is the new name for prediction_column
-&gt;&gt;&gt; df = the observation that's in test_k_nearest_neighbors_classifier.py
-&gt;&gt;&gt; knn.classify(observation) # we no longer pass in k</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated time:</strong> 60 min</p>
 <p><strong>Location:</strong> <code>assignment-problems/quicksort.py</code></p>
 <p><strong>Grading:</strong> 10 points</p>
@@ -14434,6 +14300,8 @@ $$<p>See the updated <a href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisk
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
+<p><strong>Part 2: The danger of using too large a $k$</strong></p>
+<p><strong>a.</strong> What happens if we try to perform the $k$ nearest neighbors approach with $k=13$ (i.e. the full dataset) to infer the cookie classification of point $P?$ What issue occurs, and why does it occur?</p>
 <p>Recall the following cookie dataset (that has been augmented with some additional examples):</p>
 
 <pre><code>['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
@@ -14474,6 +14342,77 @@ percent_correct = num_correct_classifications / tot_num_data_points</code></pre>
 <p>You should get the following result:</p>
 <center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/knn-intro-cross-validation.png' border='0'/></center><p><strong>b.</strong> Based on what you know about what happens when $k$ is too small or too large, does the shape of your plot makes sense?</p>
 <p><strong>c.</strong> What would be an appropriate value (or range of values) of $k$ for this modeling task? Justify your answer by referring to your plot.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
+<ul>
+<li><p>$n_k$ - the $k$th neuron</p>
+</li>
+<li><p>$a_k$ - the activity of the $k$th neuron</p>
+</li>
+<li><p>$i_k$ - the input to the $k$th neuron. This is the weighted sum of activities of the parents of $n_k.$ If $n_k$ has no parents, then $i_k$ comes from the data directly.</p>
+</li>
+<li><p>$f_k$ - the activation function of the $k$th neuron. Note that in general, we have $a_k = f_k(i_k)$</p>
+</li>
+<li><p>$w_{k \ell}$ - the weight of the connection $n_k \to n_\ell.$ In your code, this is <code>weights[(k,l)]</code>.</p>
+</li>
+<li><p>$E = (y_\textrm{predicted} - y_\textrm{actual})^2$ is the squared error that results from using the neural net to predict the value of the dependent variable, given values of the independent variables</p>
+</li>
+<li><p>$w_{k \ell} \to w_{k \ell} - \alpha \dfrac{\textrm dE}{\textrm dw_{k\ell}}$ is the gradient descent update, where $\alpha$ is the learning rate</p>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<p>For a simple network
+$$
+\begin{matrix} &amp; &amp; n_2 \\ &amp; \nearrow &amp; &amp; \nwarrow \\ n_0 &amp; &amp; &amp; &amp; n_1,\end{matrix}
+$$
+we have:</p>
+$$\begin{align*}
+y_\textrm{predicted} &amp;= a_2 \\
+&amp;= f_2(i_2) \\
+&amp;= f_2(w_{02} a_0 + w_{12} a_1) \\
+&amp;= f_2(w_{02} f_0(i_0) + w_{12} f_1(i_1) ) \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{02}} &amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (y_\textrm{predicted} - y_\textrm{actual})^2 \right] \\
+&amp;= \dfrac{\textrm d}{\textrm dw_{02}} \left[ (a_2 - y_\textrm{actual})^2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d}{\textrm dw_{02}} \left[ a_2 - y_\textrm{actual} \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ a_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) \dfrac{\textrm d }{\textrm dw_{02}} \left[ f_2(i_2) \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ i_2 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) \dfrac{\textrm d }{\textrm dw_{02}} \left[ w_{02} a_0 + w_{12} a_1 \right] \\
+&amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_0 \\ \\
+
+\dfrac{\textrm dE}{\textrm dw_{12}} &amp;= 2(a_2 - y_\textrm{actual}) f_2'(i_2) a_1
+\end{align*}$$<p><strong>THE ACTUAL PROBLEM STATEMENT</strong></p>
+<p>Compute $\dfrac{\textrm dE}{\textrm dw_{23}},$ $\dfrac{\textrm dE}{\textrm dw_{12}},$ and $\dfrac{\textrm dE}{\textrm dw_{01}}$ for the following network. (It's easiest to do it in that order.) Put your work in an Overleaf doc.</p>
+$$
+\begin{matrix} n_3 \\ \uparrow \\ n_2 \\ \uparrow \\ n_1 \\ \uparrow \\ n_0 \end{matrix}
+$$<p><strong>Show ALL your work!</strong> Also, make sure to use the simplest notation possible (for example, instead of writing $f_k(i_k),$ write $a_k$)</p>
+<p><strong>Check your answer</strong> by substituting the following values:</p>
+$$
+y_\textrm{actual}=1 \qquad \begin{matrix} a_0 = 2 \\ a_1 = 3 \\ a_2 = 4 \\ a_3 = 5 \end{matrix} \qquad \begin{matrix} f_0'(i_0) = 6 \\ f_1'(i_1) = 7 \\ f_2'(i_2) = 8 \\ f_3'(i_3) = 9 \end{matrix} \qquad \begin{matrix} w_{01} = 10 \\ w_{12} = 11 \\ w_{23} = 12 \end{matrix}
+$$<p>You should get
+$$
+\dfrac{\textrm dE}{\textrm d w_{23}} = 288, \qquad \dfrac{\textrm dE}{\textrm d w_{12}} = 20736, \qquad \dfrac{\textrm dE}{\textrm d w_{01}} = 1064448.
+$$</p>
+<p><strong>Note:</strong> On the next couple assignments, we'll do the same exercise with progressively more advanced networks. This problem is relatively simple so that you have a chance to get used to working with the notation.</p>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>Finish creating your game level 3 strategy. (See problem 93-1 for a description of game level 3, which you should have implemented by now.) Then, implement the following strategy and run it against your level 3 strategy:</p>
+<ul>
+<li><code>NumbersBerserkerLevel3</code> - always buys as many scouts as possible, and each time it buys a scout, immediately sends it on a direct route to attack the opponent.</li>
+</ul>
+<p>Post on #machine-learning with your strategy's stats against these strategies:</p>
+
+<pre><code>MyStrategy vs NumbersBerserker
+- MyStrategy win rate: __%
+- MyStrategy loss rate: __%
+- draw rate: __%</code></pre>
+<p>On the next assignment, we'll have the official matchups.</p>
 
 </div>
 </div>
@@ -14531,37 +14470,225 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Location:</strong> Overleaf</p>
-<p><strong>Grading:</strong> 10 points</p>
-<p><strong>Note:</strong> Points will be deducted for poor latex quality. If you're writing up your latex and anything looks off, make sure to post about it so you can fix it before you submit. <a href="https://eurisko-us.github.io/resources/#latex-commandments">FOLLOW THE LATEX COMMANDMENTS!</a></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Space empires</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Locations:</strong></p>
+<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
+<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br></p>
+</blockquote>
 <p>The dataset below displays the ratio of ingredients for various cookie recipes.</p>
 
-<pre><code>['ID', 'Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
-
-[[ 1 , 'Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
-[ 2  , 'Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
-[ 3  , 'Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
-[ 4  , 'Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
-[ 5  , 'Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
-[ 6  , 'Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
-[ 7  , 'Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
-[ 8  , 'Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
-[ 9  , 'Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
-[ 10 , 'Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
-[ 11 , 'Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
-[ 12 , 'Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
-[ 13 , 'Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]]</code></pre>
-<p>Suppose you're given a cookie recipe and you want to determine whether it is a shortbread cookie, a sugar cookie, or a fortune cookie. The cookie recipe consists of 0.10 portion eggs, 0.15 portion butter, 0.30 portion sugar, and 0.45 portion flour. We will infer the classification of this cookie using the "$k$ nearest neighbors" approach.</p>
-<p><strong>Part 1: How to do $k$ nearest neighbors.</strong></p>
-<p><strong>a.</strong> This cookie can be represented as the point $P(0.10, 0.15, 0.30, 0.45).$ Compute the Euclidean distance between $P$ and each of the points corresponding to cookies in the dataset.</p>
+<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+    [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+    ['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+    ['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+    ['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+    ['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+    ['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+    ['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+    ['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+    ['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+    ['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+    ['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+    ['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+    ['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]],
+    columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+    )</code></pre>
+<p>Suppose you're given a cookie recipe and you want to determine whether it is a shortbread cookie, a sugar cookie, or a fortune cookie. The cookie recipe consists of</p>
+<blockquote><p>0.10 portion eggs,<br>
+0.15 portion butter,<br>
+0.30 portion sugar, and<br>
+0.45 portion flour.</p>
+</blockquote>
+<p>We will infer the classification of this cookie using the <strong>$k$ nearest neighbors</strong> approach. Here is an illustration of the approach using $k=5.$</p>
 <ul>
-<li><strong>NOTE: YOU DON'T HAVE TO SHOW YOUR CALCULATIONS. Just write a Python script to do the calculations for you and print out the results, and in your writeup you can just include the final results.</strong></li>
+<li><p>We represent the cookie as the point $P(0.10, 0.15, 0.30, 0.45).$</p>
+</li>
+<li><p>We compute the Euclidean distance between $P$ and each of the points corresponding to cookies in the dataset. In this case, the distances are as follows:</p>
+
+<pre><code>['Distance', 'Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+[[0.047    , 'Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+[0.037    , 'Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+[0.062    , 'Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+[0.123    , 'Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+[0.158    , 'Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+[0.158    , 'Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+[0.088    , 'Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+[0.245    , 'Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+[0.212    , 'Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+[0.187    , 'Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+[0.396    , 'Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+[0.173    , 'Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+[0.228    , 'Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ]],</code></pre>
+</li>
+<li><p>We consider the 5 points that are closest to $P.$ (These are the 5 "nearest neighbors".)</p>
+
+<pre><code>['Shortbread', 0.037]
+['Shortbread', 0.047]
+['Shortbread', 0.062]
+['Sugar', 0.088]
+['Shortbread', 0.123]</code></pre>
+</li>
+<li><p>We predict the majority class, which in this case happens to be <code>Shortbread</code>. (If there is a tie, then we predict the class with the lower average distance.)</p>
+</li>
 </ul>
-<p><strong>b.</strong> Consider the 5 points that are closest to $P.$ (These are the 5 "nearest neighbors".) What cookie IDs are they, and what types of cookies are represented by these points?</p>
-<p><strong>c.</strong> What cookie classification showed up most often in the 5 nearest neighbors? What inference can you make about the recipe corresponding to the point $P$?</p>
-<p><strong>Part 2: The danger of using too large a $k$</strong></p>
-<p><strong>a.</strong> What happens if we try to perform the $k$ nearest neighbors approach with $k=13$ (i.e. the full dataset) to infer the cookie classification of point $P?$ What issue occurs, and why does it occur?</p>
-<p><strong>b.</strong> For each classification of cookie, find the average distance between $P$ and the points corresponding to the cookies in that classification. Explain how this resolves the issue you identified in part (a).</p>
+<hr>
+<p><strong>Your task</strong> is to create a class <code>KNearestNeighborsClassifier</code> that works as follows.</p>
+
+<pre><code>&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=5)
+&gt;&gt;&gt; knn.fit(df, dependent_variable = 'Cookie Type')
+&gt;&gt;&gt; observation = {
+    'Portion Eggs': 0.10,
+    'Portion Butter': 0.15,
+    'Portion Sugar': 0.30,
+    'Portion Flour': 0.45
+}
+
+&gt;&gt;&gt; knn.compute_distances(observation) 
+Returns a dataframe representation of the following array:
+
+[[0.047, 'Shortbread'],
+ [0.037, 'Shortbread'],
+ [0.062, 'Shortbread'],
+ [0.122, 'Shortbread'],
+ [0.158, 'Sugar'],
+ [0.158, 'Sugar'],
+ [0.088, 'Sugar'],
+ [0.245, 'Sugar'],
+ [0.212, 'Fortune'],
+ [0.187, 'Fortune'],
+ [0.396, 'Fortune'],
+ [0.173, 'Fortune'],
+ [0.228, 'Fortune']]
+
+Note: the above has been rounded to 3 decimal places for ease of viewing, but you should not round in your
+actual class.
+
+&gt;&gt;&gt; knn.nearest_neighbors(observation)
+Returns a dataframe representation of the following array:
+
+[[0.037, 'Shortbread'],
+ [0.047, 'Shortbread'],
+ [0.062, 'Shortbread'],
+ [0.088, 'Sugar'],
+ [0.122, 'Shortbread'],
+ [0.158, 'Sugar'],
+ [0.158, 'Sugar'],
+ [0.173, 'Fortune'],
+ [0.187, 'Fortune'],
+ [0.212, 'Fortune'],
+ [0.228, 'Fortune'],
+ [0.245, 'Sugar'],
+ [0.396, 'Fortune']]
+
+&gt;&gt;&gt; knn.classify(observation)
+'Shortbread' # because this is the majority class
+             # in the 5 nearest neighbors</code></pre>
+<p>Remember that in the case of a tie, you need to chose whichever class has a lower average distance (where only the first <code>k</code> entries are considered in the average).</p>
+<p>Here is a test to make sure you've implemented that properly:</p>
+
+<pre><code>df = DataFrame.from_array(
+    [['A', 0],
+     ['A', 1],
+     ['B', 2],
+     ['B', 3]],
+     columns = ['letter', 'number']
+)
+
+&gt;&gt;&gt; knn = KNearestNeighborsClassifier(k=4)
+&gt;&gt;&gt; knn.fit(df, dependent_variable = 'letter')
+&gt;&gt;&gt; observation = {
+    'number': 1.6
+}
+&gt;&gt;&gt; knn.classify(observation)
+'B'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-76">Problem 76<a class="anchor-link" href="#Problem-76">&#182;</a></h1><p>Binary logistic regressor</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-75">Problem 75<a class="anchor-link" href="#Problem-75">&#182;</a></h1><p>Going forward, we need to to start using models from an external machine learning library after you build the initial versions of the corresponding models. Most of the learning comes from building the first version, and debugging these subtle issues takes up too much time. Plus, it's good to know how to work with external libraries.</p>
+<p>So instead of "build everything from scratch and maintain it forever", our motto will be "build the first version from scratch and then switch to a popular library".</p>
+<h3 id="Important-Note">Important Note<a class="anchor-link" href="#Important-Note">&#182;</a></h3><p><strong>If you're behind on any machine learning problems, don't worry about catching up. Just start off with this problem. This problem doesn't depend on anything you've written previously.</strong></p>
+<h3 id="The-Problem">The Problem<a class="anchor-link" href="#The-Problem">&#182;</a></h3><p>Create a new repository called <code>kaggle</code>. Create a folder <code>titanic</code>, and put your dataset and analysis file in there. Remember that the dataset is here:</p>
+<blockquote><p><a href="https://www.kaggle.com/c/titanic/data?select=train.csv">https://www.kaggle.com/c/titanic/data?select=train.csv</a></p>
+</blockquote>
+<p>In this assignment, you will create an <code>analysis.py</code> file that carries out an analysis similar to that described in problem 107, using the libraries <code>numpy</code>, <code>pandas</code>, and <code>sklearn</code>. You should <strong>follow along with the relevant parts of the walkthrough in the class recording:</strong></p>
+<blockquote><p><a href="https://vimeo.com/529459397">https://vimeo.com/529459397</a></p>
+</blockquote>
+<p>Here are the relevant parts. (But read the rest of the assignment before starting.)</p>
+<ul>
+<li><p>[0:35-0:42] Set up the environment &amp; read in the dataframe</p>
+</li>
+<li><p>[0:42-0:50] Process <code>Sex</code> by changing <code>male</code> to <code>0</code> and <code>female</code> to <code>1</code></p>
+</li>
+<li><p>[0:56-1:02] Process <code>Age</code> by replacing all <code>NaN</code>s with the mean age</p>
+</li>
+<li><p>[1:02-1:09] Process <code>SibSp</code> and <code>Parch</code>. Keep <code>SibSp</code>, but also add the indicator variable (i.e. dummy variable) <code>SibSp&gt;0</code>. Add the indicator variable <code>Parch&gt;0</code> as well, and get rid of <code>Parch</code>.</p>
+</li>
+<li><p>[1:17-1:42] Split into train/test, fit the regressor, get the predictions, compute training/testing accuracy. (At this point, don't worry about checking your numbers match up with mine, since I wasn't showing exactly which columns were being used in the regressor.)</p>
+</li>
+<li><p>[1:42-1:46] State the columns to be used in the regressor. (Here, your numbers should match up with mine, since I show exactly which columns are being used in the regressor.)</p>
+</li>
+<li><p>[1:46-1:56] Process <code>Cabin</code> into <code>CabinType</code> and create the corresponding indicator variables. Also, create the corresponding indicator variables for <code>Embarked</code>. Make sure to delete <code>Cabin</code>, <code>CabinType</code>, and <code>Embarked</code> afterwards.</p>
+</li>
+<li><p>[2:00-2:02] Run the final model. Your numbers should match up with mine.</p>
+</li>
+</ul>
+<p><strong>You can just follow along with the walkthrough in the class recording and turn in the code you write as you followed along.</strong></p>
+<p><strong>Note that watching me type and speak at normal (slow) pace is a waste of time, so play the video on 2x speed.</strong> You can access the speed controls by clicking on the gear icon in the bottom-right of the video.</p>
+<p><strong>I think this is a 90-minute problem.</strong> The relevant parts of the recording take up 70 minutes, and if you play at 2x speed, it's only 35 minutes. If we budget an equal or double time for you to write the code as you follow along, then we're up to 90 minutes. <strong>But if you find yourself taking longer or getting stuck anywhere, please let me know.</strong></p>
+<p>Here is the documentation for <code>LinearRegressor()</code>:</p>
+<blockquote><p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html</a></p>
+</blockquote>
+<p><strong>At the end, your code should print out the following (where numbers are rounded to 4 decimal places):</strong></p>
+
+<pre><code>features: [
+    'Sex',
+    'Pclass',
+    'Fare',
+    'Age',
+    'SibSp', 'SibSp&gt;0',
+    'Parch&gt;0',
+    'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 
+    'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T']
+
+training accuracy: 0.81
+testing accuracy: 0.7749
+
+coefficients:
+{
+    'Constant': 0.696,
+    'Sex': 0.5283,
+    'Pclass': -0.0978,
+    'Fare': 0.0,
+    'Age': -0.0058,
+    'SibSp': -0.0585, 'SibSp&gt;0': 0.0422,
+    'Parch&gt;0': 0.0097,
+    'Embarked=C': -0.0547, 'Embarked=None': 0.052, 'Embarked=Q': 0.0709, 'Embarked=S': -0.0682,
+    'CabinType=A': 0.0447, 'CabinType=B': 0.0371, 'CabinType=C': -0.0124, 'CabinType=D': 0.1818, 'CabinType=E': 0.1088, 'CabinType=F': 0.2593, 'CabinType=G': -0.2797, 'CabinType=None': -0.0677, 'CabinType=T': -0.2717
+}</code></pre>
+<h3 id="Submission-Template:">Submission Template:<a class="anchor-link" href="#Submission-Template:">&#182;</a></h3><p>Just submit 2 things:</p>
+<ol>
+<li>the repl.it link to <code>kaggle/titanic/analysis.py</code></li>
+<li>the link to your github commit</li>
+</ol>
 
 </div>
 </div>
@@ -14579,11 +14706,12 @@ $$
 <li>writeups (such as blog posts)</li>
 </ul>
 <h3 id="Titanic-Survival-Modeling">Titanic Survival Modeling<a class="anchor-link" href="#Titanic-Survival-Modeling">&#182;</a></h3><p><strong>For this problem, you'll need to turn in both your analysis code and an Overleaf writeup. The code should print out all the checks that are provided to you in this problem.</strong></p>
+<p><strong>Note: after this problem was released, I realized I forgot to include a <code>Constant</code> column, as we should normally do for linear regression. However, the main things to be learned on this assignment don't really depend on the constant, so carry on without it.</strong></p>
 <p><strong>a.</strong> Continue processing your data as follows:</p>
 <ul>
 <li><p><code>Sex</code> - replace <code>"male"</code> with <code>0</code> and <code>"female"</code> with <code>1</code></p>
 </li>
-<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age (which should be about 29.699)</p>
+<li><p><code>Age</code> - replace any instances of <code>None</code> with the mean age (which should be about <code>29.699</code>)</p>
 </li>
 <li><p><code>SibSp</code> - this was one of the variables that didn't have a clear positive or negative association with <code>Survival</code>. When <code>SibSp=0</code>, the survival was low; when <code>SibSp&gt;=1</code>, the survival started higher but then decreased as <code>SibSp</code> decreased.</p>
 <p>So, what we can do is create a dummy variable <code>SibSp=0</code> that equals <code>1</code> when <code>SibSp</code> is equal to <code>0</code> (and <code>0</code> otherwise). And we'll keep <code>SibSp</code> as well. This way, the variable <code>SibSp=0</code> can be given a negative coefficient that offsets the coefficient of <code>SibSp</code> in the case when <code>SibSp</code> equals <code>0</code>.</p>
