@@ -14615,7 +14615,100 @@ Returns a dataframe representation of the following array:
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-76">Problem 76<a class="anchor-link" href="#Problem-76">&#182;</a></h1><p>Binary logistic regressor</p>
+<h1 id="Problem-76">Problem 76<a class="anchor-link" href="#Problem-76">&#182;</a></h1><h3 id="Refresher">Refresher<a class="anchor-link" href="#Refresher">&#182;</a></h3><p>Previously, we built a <code>LogisticRegressor</code> that worked by reducing the regression task down to the task of finding the least-squares solution to a linear system.</p>
+<p>More precisely, the task of fitting the logistic function</p>
+$$y=\dfrac{1}{1+e^{\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n}}$$<p>was reduced to the task of fitting the linear regression</p>
+$$\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n = \ln \left( \dfrac{1}{y} - 1 \right).$$<h3 id="Issue-with-LogisticRegressor">Issue with LogisticRegressor<a class="anchor-link" href="#Issue-with-LogisticRegressor">&#182;</a></h3><p>Although this is a slick way to solve the problem, it suffers from the fact that we have to do something "hacky" in order to fit any data points with $y=0$ or $y=1.$</p>
+<p>In such cases, we can't just run the model as usual, because the $\ln \left( \dfrac{1}{y}-1 \right)$ term blows up -- so our "hack" has been to</p>
+<ul>
+<li><p>change any instances of $y=0$ to a small decimal like $y=0.1$ or $y=0.001,$ and</p>
+</li>
+<li><p>change any instances of $y=1$ to $1$ minus the small decimal, like $y=0.9$ or $y=0.999,$</p>
+</li>
+</ul>
+<p>depending on the context of the problem.</p>
+<p>But this isn't a great way to deal with the issue, because the resulting logistic function can change significantly depending on what small decimal we use. The difference between small decimals may seem like such a minor difference, but when we plug these values in the $\ln \left( \dfrac{1}{y} - 1 \right)$ term, we get wildly different results, which leads to quite different fits.</p>
+<p><strong>PART A.</strong> To illustrate the quite different fits, fit 4 instances of your current <code>LinearRegressor</code> to the following dataset:</p>
+<ul>
+<li><p>one instance where you change all instances of <code>y=0</code> to <code>y=0.1</code> and all instances of <code>y=1</code> to <code>y=0.9</code></p>
+</li>
+<li><p>another instance where you change all instances of <code>y=0</code> to <code>y=0.01</code> and all instances of <code>y=1</code> to <code>y=0.99</code></p>
+</li>
+<li><p>another instance where you change all instances of <code>y=0</code> to <code>y=0.001</code> and all instances of <code>y=1</code> to <code>y=0.999</code></p>
+</li>
+<li><p>another instance where you change all instances of <code>y=0</code> to <code>y=0.0001</code> and all instances of <code>y=1</code> to <code>y=0.9999</code></p>
+</li>
+</ul>
+
+<pre><code>df = DataFrame(
+    [[1,0],
+    [2,0],
+    [3,0],
+    [2,1],
+    [3,1],
+    [4,1]],
+    columns = ['x', 'y'])</code></pre>
+<p><strong>Put these all on the same plot, along with the data, and put them in an Overleaf doc. Be sure to label each curve with <code>0.1</code>, <code>0.01</code>, <code>0.001</code>, or <code>0.0001</code> as appropriate.</strong></p>
+<p>If you need a refresher on plotting / labeling curves, see here:</p>
+<blockquote><p><a href="http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-10-1">http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-10-1</a></p>
+</blockquote>
+<p>If you need a refresher on including data in plots, see here:</p>
+<blockquote><p><a href="http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-33-1">http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-33-1</a></p>
+</blockquote>
+<p><strong>Explain:</strong> How does the plot change as the small decimal is varied?</p>
+<h3 id="Gradient-Descent-to-the-Rescue">Gradient Descent to the Rescue<a class="anchor-link" href="#Gradient-Descent-to-the-Rescue">&#182;</a></h3><p>Instead, we can use gradient descent to fit our logistic function. We want to choose the coefficients that minimize the sum of squared error (the RSS).</p>
+<p><strong>PART B.</strong> In your <code>LogisticRegressor</code> class, write the following methods:</p>
+<ul>
+<li><p><code>calc_rss()</code> - calculates the sum of squared error for the regressor</p>
+</li>
+<li><p><code>set_coefficients(coeffs)</code> - allows you to manually set the coefficients of your regressor by passing in a dictionary of coefficients</p>
+</li>
+<li><p><code>calc_gradient(delta)</code> - computes the partial derivatives of the RSS with respect to each coefficient</p>
+</li>
+<li><p><code>gradient_descent(alpha, delta, num_steps, debug_mode=False)</code> - carries out a given number of steps of gradient descent. If <code>debug_mode=True</code>, then print out every step of the way.</p>
+</li>
+</ul>
+<p>Note that we wrote a gradient descent optimizer that a while back:</p>
+<blockquote><p><a href="http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-34-2">http://www.eurisko.us/files/assignment_problems_cohort_2_10th.html#Problem-34-2</a></p>
+</blockquote>
+<p>You can use this as a refresher on how to code up gradient descent, and you might be able to copy/paste some code from here.</p>
+<ul>
+<li>Unfortunately, you can't just pass your logistic regressor into this gradient descent optimizer class -- we wrote optimizer to work on functions whose parameters were passed in as individual arguments, whereas our <code>LogisticRegressor</code> stores its coefficients in a dictionary.</li>
+</ul>
+<p>Note that we will use the central difference approximation</p>
+$$
+f'(x) \approx \dfrac{f(x+\delta) - f(x-\delta)}{2\delta}.
+$$<p>Here is a test case:</p>
+
+<pre><code>df = DataFrame(
+    [[1,0],
+    [2,0],
+    [3,0],
+    [2,1],
+    [3,1],
+    [4,1]],
+    columns = ['x', 'y'])
+
+reg = LogisticRegressor(df, dependent_variable='y')
+
+reg.set_coefficients({'constant': 0.5, 'x': 0.5})
+
+alpha = 0.01
+delta = 0.01
+num_steps = 20000
+reg.calc_gradient(alpha, delta, num_steps)
+
+reg.coefficients
+
+{'constant': 2.7911, 'x': -1.1165}</code></pre>
+<p>Here are logs for every step of the way:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/linear-regression-gradient-descent-log-1.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/linear-regression-gradient-descent-log-1.txt</a></p>
+</blockquote>
+<p><strong>Make a plot of the resulting logistic curve, along with the data, and put it in an Overleaf doc.Be sure to label your curve with <code>"gradient descent"</code>.</strong></p>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3>
+<pre><code>link to Overleaf doc (just contains 2 plots and the explanation of the first plot): ____
+repl.it link to code that generated the plots: _____
+commit link (machine-learning): ____</code></pre>
 
 </div>
 </div>

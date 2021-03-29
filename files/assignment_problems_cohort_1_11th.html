@@ -13135,7 +13135,72 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-109">Problem 109<a class="anchor-link" href="#Problem-109">&#182;</a></h1><p>Binary logistic regressor</p>
+<h1 id="Problem-109">Problem 109<a class="anchor-link" href="#Problem-109">&#182;</a></h1><p>Going forward, we need to to start using models from an external machine learning library after you build the initial versions of the corresponding models. Most of the learning comes from building the first version, and debugging these subtle issues takes up too much time. Plus, it's good to know how to work with external libraries.</p>
+<p>So instead of "build everything from scratch and maintain it forever", our motto will be "build the first version from scratch and then switch to a popular library".</p>
+<h3 id="Important-Note">Important Note<a class="anchor-link" href="#Important-Note">&#182;</a></h3><p><strong>If you're behind on any machine learning problems, don't worry about catching up. Just start off with this problem. This problem doesn't depend on anything you've written previously.</strong></p>
+<h3 id="The-Problem">The Problem<a class="anchor-link" href="#The-Problem">&#182;</a></h3><p>Create a new repository called <code>kaggle</code>. Create a folder <code>titanic</code>, and put your dataset and analysis file in there. Remember that the dataset is here:</p>
+<blockquote><p><a href="https://www.kaggle.com/c/titanic/data?select=train.csv">https://www.kaggle.com/c/titanic/data?select=train.csv</a></p>
+</blockquote>
+<p>In this assignment, you will create an <code>analysis.py</code> file that carries out an analysis similar to that described in problem 107, using the libraries <code>numpy</code>, <code>pandas</code>, and <code>sklearn</code>. You should <strong>follow along with the relevant parts of the walkthrough in the class recording:</strong></p>
+<blockquote><p><a href="https://vimeo.com/529459397">https://vimeo.com/529459397</a></p>
+</blockquote>
+<p>Here are the relevant parts. (But read the rest of the assignment before starting.)</p>
+<ul>
+<li><p>[0:35-0:42] Set up the environment &amp; read in the dataframe</p>
+</li>
+<li><p>[0:42-0:50] Process <code>Sex</code> by changing <code>male</code> to <code>0</code> and <code>female</code> to <code>1</code></p>
+</li>
+<li><p>[0:56-1:02] Process <code>Age</code> by replacing all <code>NaN</code>s with the mean age</p>
+</li>
+<li><p>[1:02-1:09] Process <code>SibSp</code> and <code>Parch</code>. Keep <code>SibSp</code>, but also add the indicator variable (i.e. dummy variable) <code>SibSp&gt;0</code>. Add the indicator variable <code>Parch&gt;0</code> as well, and get rid of <code>Parch</code>.</p>
+</li>
+<li><p>[1:17-1:42] Split into train/test, fit the regressor, get the predictions, compute training/testing accuracy. (At this point, don't worry about checking your numbers match up with mine, since I wasn't showing exactly which columns were being used in the regressor.)</p>
+</li>
+<li><p>[1:42-1:46] State the columns to be used in the regressor. (Here, your numbers should match up with mine, since I show exactly which columns are being used in the regressor.)</p>
+</li>
+<li><p>[1:46-1:56] Process <code>Cabin</code> into <code>CabinType</code> and create the corresponding indicator variables. Also, create the corresponding indicator variables for <code>Embarked</code>. Make sure to delete <code>Cabin</code>, <code>CabinType</code>, and <code>Embarked</code> afterwards.</p>
+</li>
+<li><p>[2:00-2:02] Run the final model. Your numbers should match up with mine.</p>
+</li>
+</ul>
+<p><strong>You can just follow along with the walkthrough in the class recording and turn in the code you write as you followed along.</strong></p>
+<p><strong>Note that watching me type and speak at normal (slow) pace is a waste of time, so play the video on 2x speed.</strong> You can access the speed controls by clicking on the gear icon in the bottom-right of the video.</p>
+<p><strong>I think this is a 90-minute problem.</strong> The relevant parts of the recording take up 70 minutes, and if you play at 2x speed, it's only 35 minutes. If we budget an equal or double time for you to write the code as you follow along, then we're up to 90 minutes. <strong>But if you find yourself taking longer or getting stuck anywhere, please let me know.</strong></p>
+<p>Here is the documentation for <code>LinearRegressor()</code>:</p>
+<blockquote><p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html</a></p>
+</blockquote>
+<p><strong>At the end, your code should print out the following (where numbers are rounded to 4 decimal places):</strong></p>
+
+<pre><code>features: [
+    'Sex',
+    'Pclass',
+    'Fare',
+    'Age',
+    'SibSp', 'SibSp&gt;0',
+    'Parch&gt;0',
+    'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 
+    'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T']
+
+training accuracy: 0.81
+testing accuracy: 0.7749
+
+coefficients:
+{
+    'Constant': 0.696,
+    'Sex': 0.5283,
+    'Pclass': -0.0978,
+    'Fare': 0.0,
+    'Age': -0.0058,
+    'SibSp': -0.0585, 'SibSp&gt;0': 0.0422,
+    'Parch&gt;0': 0.0097,
+    'Embarked=C': -0.0547, 'Embarked=None': 0.052, 'Embarked=Q': 0.0709, 'Embarked=S': -0.0682,
+    'CabinType=A': 0.0447, 'CabinType=B': 0.0371, 'CabinType=C': -0.0124, 'CabinType=D': 0.1818, 'CabinType=E': 0.1088, 'CabinType=F': 0.2593, 'CabinType=G': -0.2797, 'CabinType=None': -0.0677, 'CabinType=T': -0.2717
+}</code></pre>
+<h3 id="Submission-Template:">Submission Template:<a class="anchor-link" href="#Submission-Template:">&#182;</a></h3><p>Just submit 2 things:</p>
+<ol>
+<li>the repl.it link to <code>kaggle/titanic/analysis.py</code></li>
+<li>the link to your github commit</li>
+</ol>
 
 </div>
 </div>
