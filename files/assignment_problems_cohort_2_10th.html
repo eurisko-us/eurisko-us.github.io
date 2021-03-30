@@ -14628,7 +14628,7 @@ $$\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n = \ln \left( \dfrac{1}{y} - 1 \ri
 </ul>
 <p>depending on the context of the problem.</p>
 <p>But this isn't a great way to deal with the issue, because the resulting logistic function can change significantly depending on what small decimal we use. The difference between small decimals may seem like such a minor difference, but when we plug these values in the $\ln \left( \dfrac{1}{y} - 1 \right)$ term, we get wildly different results, which leads to quite different fits.</p>
-<p><strong>PART A.</strong> To illustrate the quite different fits, fit 4 instances of your current <code>LinearRegressor</code> to the following dataset:</p>
+<p><strong>PART A.</strong> To illustrate the quite different fits, fit 4 instances of your current <code>LogisticRegressor</code> to the following dataset:</p>
 <ul>
 <li><p>one instance where you change all instances of <code>y=0</code> to <code>y=0.1</code> and all instances of <code>y=1</code> to <code>y=0.9</code></p>
 </li>
@@ -14680,7 +14680,7 @@ $$
 f'(x) \approx \dfrac{f(x+\delta) - f(x-\delta)}{2\delta}.
 $$<p>Here is a test case:</p>
 
-<pre><code>df = DataFrame(
+<pre><code>df = DataFrame.from_array(
     [[1,0],
     [2,0],
     [3,0],
