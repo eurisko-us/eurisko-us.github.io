@@ -75,8 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="76">
-    <li><b>Friday, March 26</b>
+<font size="3em"><ol reversed start="77">
+    <li><b>Thursday, April 1</b>
+        <br>No class (but there is a SHORT assignment)
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-77">Predicting Titanic Survival with Logistic Regressor</a>
+    </li>
+    <li><b>Friday, March 31</b>
         <br>No class (but there is an assignment)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-76">Logistic Regression via Gradient Descent</a>
     </li>
