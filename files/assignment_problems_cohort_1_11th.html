@@ -13135,6 +13135,54 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-110">Problem 110<a class="anchor-link" href="#Problem-110">&#182;</a></h1><p>(This is a short ~30 minute assignment since we have Wednesday off.)</p>
+<p>Now that you've built a logistic regressor that uses gradient descent, you've "unlocked" the privilege to use sklearn's <code>LogisticRegressor</code>.</p>
+<p>Previously, you carried out a Titanic prediction problem using sklearn's linear regressor. For this problem, just tweak the code you wrote to use the logistic regressor instead.</p>
+<p>After you replace <code>LinearRegressor</code> with <code>LogisticRegressor</code> in your code, you'll have to</p>
+<ul>
+<li><p>tweak a parameter of the regressor to get it to run long enough to converge</p>
+</li>
+<li><p>update your code to support the format in which the logistic regressor returns information</p>
+</li>
+</ul>
+<p>I'm not going to tell you exactly how to fix those issues, because the point of this problem is to give you practice debugging and reading documentation.</p>
+<p><strong>Tip:</strong> To find the official documentation on sklearn's logistic regressor, do a google search with the query "sklearn logistic regression".</p>
+<p>You should get the output below. The predictions with the logistic regressor turn out to be a little bit better than those with the linear regressor.</p>
+
+<pre><code>features: [
+    'Sex',
+    'Pclass',
+    'Fare',
+    'Age',
+    'SibSp', 'SibSp&gt;0',
+    'Parch&gt;0',
+    'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 
+    'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T']
+
+training accuracy: 0.8260
+testing accuracy: 0.7903
+
+coefficients:
+{
+    'Constant': 1.894,
+    'Sex': 2.5874,
+    'Pclass': -0.6511,
+    'Fare': -0.0001,
+    'Age': -0.0398,
+    'SibSp': -0.545,
+    'SibSp&gt;0': 0.4958,
+    'Parch&gt;0': 0.0499,
+    'Embarked=C': -0.2078, 'Embarked=None': 0.0867, 'Embarked=Q': 0.479, 'Embarked=S': -0.3519,
+    'CabinType=A': -0.0498, 'CabinType=B': 0.0732, 'CabinType=C': -0.2125, 'CabinType=D': 0.7214, 'CabinType=E': 0.4258, 'CabinType=F': 0.6531, 'CabinType=G': -0.7694, 'CabinType=None': -0.5863, 'CabinType=T': -0.2496
+}</code></pre>
+<h3 id="Submission-Template">Submission Template<a class="anchor-link" href="#Submission-Template">&#182;</a></h3><p>Just submit the repl.it link to your code. When I run it, it should print out the information above.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-109">Problem 109<a class="anchor-link" href="#Problem-109">&#182;</a></h1><h3 id="Refresher">Refresher<a class="anchor-link" href="#Refresher">&#182;</a></h3><p>Previously, we built a <code>LogisticRegressor</code> that worked by reducing the regression task down to the task of finding the least-squares solution to a linear system.</p>
 <p>More precisely, the task of fitting the logistic function</p>
 $$y=\dfrac{1}{1+e^{\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n}}$$<p>was reduced to the task of fitting the linear regression</p>
