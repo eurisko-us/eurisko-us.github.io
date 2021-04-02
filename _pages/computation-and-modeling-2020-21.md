@@ -75,11 +75,17 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="77">
+<font size="3em"><ol reversed start="78">
+    <li><b>Friday, April 2</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/532384626">Class Recording</a> (C&M is first half)
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-78">Blog Post</a>
+    </li>
+    <br>
     <li><b>Thursday, April 1</b>
         <br>No class (but there is a SHORT assignment)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-77">Predicting Titanic Survival with Logistic Regressor</a>
     </li>
+    <br>
     <li><b>Friday, March 31</b>
         <br>No class (but there is an assignment)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-76">Logistic Regression via Gradient Descent</a>
