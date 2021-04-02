@@ -77,7 +77,7 @@ author_profile: false
 <font size="3em"><ol reversed start="111">
     <li><b>Friday, April 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/532384626">Class Recording</a> (ML is second half)
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-111">Level 3 Strategies; Prof. Wierman Videos</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-111">Level 3 Strategies, Prof. Wierman Videos</a>
     </li>
     <br>
     <li><b>Thursday, April 1</b>
