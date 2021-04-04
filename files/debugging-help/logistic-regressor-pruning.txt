@@ -207,3 +207,45 @@ candidate for removal: Parch>0 * CabinType=F (index 39)
 training: 0.852
 testing: 0.8107416879795396
 kept
+
+candidate for removal: Parch>0 * CabinType=E (index 40)
+training: 0.848
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Parch>0 * CabinType=D (index 41)
+training: 0.844
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Parch>0 * CabinType=C (index 42)
+training: 0.848
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Parch>0 * CabinType=B (index 43)
+training: 0.848
+testing: 0.8184143222506394
+removed
+new baseline testing accuracy: 0.8184143222506394
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43]
+
+candidate for removal: Parch>0 * CabinType=A (index 44)
+training: 0.846
+testing: 0.8184143222506394
+removed
+
+candidate for removal: Parch>0 * Embarked=S (index 45)
+training: 0.848
+testing: 0.8184143222506394
+removed
+
+candidate for removal: Parch>0 * Embarked=Q (index 46)
+training: 0.85
+testing: 0.8184143222506394
+removed
+
+candidate for removal: Parch>0 * Embarked=None (index 47)
+training: 0.846
+testing: 0.8184143222506394
+removed
