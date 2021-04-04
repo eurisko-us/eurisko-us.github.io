@@ -32,3 +32,81 @@ training: 0.85
 testing: 0.8132992327365729
 removed
 removed indices: [0, 3, 4]
+
+candidate for removal: Embarked=S * CabinType=D (index 5)
+training: 0.848
+testing: 0.8158567774936062
+removed
+new baseline testing accuracy: 0.8158567774936062
+removed indices: [0, 3, 4, 5]
+
+candidate for removal: Embarked=S * CabinType=C (index 6)
+training: 0.85
+testing: 0.8081841432225064
+kept
+
+candidate for removal: Embarked=S * CabinType=B (index 7)
+training: 0.85
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7]
+
+candidate for removal: Embarked=S * CabinType=A (index 8)
+training: 0.85
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Embarked=Q * CabinType=T (index 9)
+training: 0.846
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9]
+
+candidate for removal: Embarked=Q * CabinType=None (index 10)
+training: 0.85
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10]
+
+candidate for removal: Embarked=Q * CabinType=G (index 11)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=Q * CabinType=F (index 12)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=Q * CabinType=E (index 13)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13]
+
+candidate for removal: Embarked=Q * CabinType=D (index 14)
+training: 0.85
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14]
+
+candidate for removal: Embarked=Q * CabinType=C (index 15)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15]
+
+candidate for removal: Embarked=Q * CabinType=B (index 16)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=Q * CabinType=A (index 17)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=T (index 18)
+training: 0.848
+testing: 0.8132992327365729
+kept
