@@ -239,3 +239,140 @@ training: 0.848
 testing: 0.8158567774936062
 removed
 removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42]
+
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42]
+
+candidate for removal: Parch>0 * CabinType=B (index 43)
+training: 0.848
+testing: 0.8184143222506394
+removed
+new baseline testing accuracy: 0.8184143222506394
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43]
+
+candidate for removal: Parch>0 * CabinType=A (index 44)
+training: 0.846
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44]
+
+candidate for removal: Parch>0 * Embarked=S (index 45)
+training: 0.848
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45]
+
+candidate for removal: Parch>0 * Embarked=Q (index 46)
+training: 0.85
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46]
+
+candidate for removal: Parch>0 * Embarked=None (index 47)
+training: 0.846
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47]
+
+candidate for removal: Parch>0 * Embarked=C (index 48)
+training: 0.846
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48]
+
+candidate for removal: SibSp>0 * CabinType=T (index 49)
+training: 0.852
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+
+candidate for removal: SibSp>0 * CabinType=None (index 50)
+training: 0.842
+testing: 0.8158567774936062
+kept
+
+candidate for removal: SibSp>0 * CabinType=G (index 51)
+training: 0.85
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51]
+
+candidate for removal: SibSp>0 * CabinType=F (index 52)
+training: 0.85
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52]
+
+candidate for removal: SibSp>0 * CabinType=E (index 53)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: SibSp>0 * CabinType=D (index 54)
+training: 0.846
+testing: 0.8184143222506394
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54]
+
+candidate for removal: SibSp>0 * CabinType=C (index 55)
+training: 0.846
+testing: 0.8209718670076727
+removed
+new baseline testing accuracy: 0.8209718670076727
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55]
+
+candidate for removal: SibSp>0 * CabinType=B (index 56)
+training: 0.844
+testing: 0.8235294117647058
+removed
+new baseline testing accuracy: 0.8235294117647058
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55, 56]
+
+candidate for removal: SibSp>0 * CabinType=A (index 57)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp>0 * Embarked=S (index 58)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: SibSp>0 * Embarked=Q (index 59)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp>0 * Embarked=None (index 60)
+training: 0.844
+testing: 0.8107416879795396
+kept
+
+candidate for removal: SibSp>0 * Embarked=C (index 61)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: SibSp>0 * Parch>0 (index 62)
+training: 0.842
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * CabinType=T (index 63)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: SibSp * CabinType=None (index 64)
+training: 0.842
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * CabinType=G (index 65)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * CabinType=F (index 66)
+training: 0.844
+testing: 0.8184143222506394
+kept
