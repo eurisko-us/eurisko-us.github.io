@@ -33,6 +33,121 @@ testing: 0.8132992327365729
 removed
 removed indices: [0, 3, 4]
 
+candidate for removal: Sex * Age (index 144)
+training: 0.834
+testing: 0.8056265984654731
+kept
+
+candidate for removal: Sex * Fare (index 145)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Sex * Pclass (index 146)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: CabinType=T (index 147)
+training: 0.846
+testing: 0.8235294117647058
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55, 56, 75, 111, 119, 147]
+
+candidate for removal: CabinType=None (index 148)
+training: 0.844
+testing: 0.8209718670076727
+kept
+
+candidate for removal: CabinType=G (index 149)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: CabinType=F (index 150)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: CabinType=E (index 151)
+training: 0.842
+testing: 0.8158567774936062
+kept
+
+candidate for removal: CabinType=D (index 152)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: CabinType=C (index 153)
+training: 0.842
+testing: 0.8107416879795396
+kept
+
+candidate for removal: CabinType=B (index 154)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: CabinType=A (index 155)
+training: 0.842
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Embarked=S (index 156)
+training: 0.846
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Embarked=Q (index 157)
+training: 0.846
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Embarked=None (index 158)
+training: 0.848
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Embarked=C (index 159)
+training: 0.846
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Parch>0 (index 160)
+training: 0.846
+testing: 0.8107416879795396
+kept
+
+candidate for removal: SibSp>0 (index 161)
+training: 0.844
+testing: 0.8107416879795396
+kept
+
+candidate for removal: SibSp (index 162)
+training: 0.844
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Age (index 163)
+training: 0.842
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Fare (index 164)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Pclass (index 165)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Sex (index 166)
+training: 0.846
+testing: 0.8081841432225064
+kept
 candidate for removal: Embarked=S * CabinType=D (index 5)
 training: 0.848
 testing: 0.8158567774936062
