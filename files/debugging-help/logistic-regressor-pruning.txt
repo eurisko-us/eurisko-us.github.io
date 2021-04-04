@@ -482,3 +482,88 @@ candidate for removal: Age * Embarked=Q (index 87)
 training: 0.848
 testing: 0.8158567774936062
 kept
+
+candidate for removal: Age * Embarked=None (index 88)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * Embarked=C (index 89)
+training: 0.844
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Age * Parch>0 (index 90)
+training: 0.838
+testing: 0.80306905370844
+kept
+
+candidate for removal: Age * SibSp>0 (index 91)
+training: 0.842
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Age * SibSp (index 92)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Fare * CabinType=T (index 93)
+training: 0.844
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Fare * CabinType=None (index 94)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Fare * CabinType=G (index 95)
+training: 0.844
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Fare * CabinType=F (index 96)
+training: 0.842
+testing: 0.8081841432225064
+kept
+
+candidate for removal: Fare * CabinType=E (index 97)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Fare * CabinType=D (index 98)
+training: 0.848
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Fare * CabinType=C (index 99)
+training: 0.848
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Fare * CabinType=B (index 100)
+training: 0.844
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Fare * CabinType=A (index 101)
+training: 0.842
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Fare * Embarked=S (index 102)
+training: 0.848
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Fare * Embarked=Q (index 103)
+training: 0.846
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Fare * Embarked=None (index 104)
+training: 0.844
+testing: 0.8158567774936062
+kept
