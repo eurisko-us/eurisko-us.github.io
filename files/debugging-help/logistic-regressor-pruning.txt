@@ -110,3 +110,51 @@ candidate for removal: Embarked=None * CabinType=T (index 18)
 training: 0.848
 testing: 0.8132992327365729
 kept
+
+candidate for removal: Embarked=None * CabinType=None (index 19)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=G (index 20)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=F (index 21)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=E (index 22)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=D (index 23)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=C (index 24)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=None * CabinType=B (index 25)
+training: 0.85
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25]
+
+candidate for removal: Embarked=None * CabinType=A (index 26)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26]
+
+candidate for removal: Embarked=C * CabinType=T (index 27)
+training: 0.846
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27]
