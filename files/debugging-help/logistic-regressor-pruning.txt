@@ -376,3 +376,109 @@ candidate for removal: SibSp * CabinType=F (index 66)
 training: 0.844
 testing: 0.8184143222506394
 kept
+
+candidate for removal: SibSp * CabinType=E (index 67)
+training: 0.848
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * CabinType=D (index 68)
+training: 0.842
+testing: 0.8132992327365729
+kept
+
+candidate for removal: SibSp * CabinType=C (index 69)
+training: 0.844
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * CabinType=B (index 70)
+training: 0.848
+testing: 0.8184143222506394
+kept
+
+candidate for removal: SibSp * CabinType=A (index 71)
+training: 0.844
+testing: 0.8184143222506394
+kept
+
+candidate for removal: SibSp * Embarked=S (index 72)
+training: 0.846
+testing: 0.8184143222506394
+kept
+
+candidate for removal: SibSp * Embarked=Q (index 73)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * Embarked=None (index 74)
+training: 0.848
+testing: 0.8209718670076727
+kept
+
+candidate for removal: SibSp * Embarked=C (index 75)
+training: 0.848
+testing: 0.8235294117647058
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 52, 54, 55, 56, 75]
+
+candidate for removal: SibSp * Parch>0 (index 76)
+training: 0.846
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * CabinType=T (index 77)
+training: 0.844
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * CabinType=None (index 78)
+training: 0.844
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Age * CabinType=G (index 79)
+training: 0.848
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * CabinType=F (index 80)
+training: 0.842
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * CabinType=E (index 81)
+training: 0.846
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Age * CabinType=D (index 82)
+training: 0.844
+testing: 0.8209718670076727
+kept
+
+candidate for removal: Age * CabinType=C (index 83)
+training: 0.846
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Age * CabinType=B (index 84)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Age * CabinType=A (index 85)
+training: 0.846
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Age * Embarked=S (index 86)
+training: 0.844
+testing: 0.8184143222506394
+kept
+
+candidate for removal: Age * Embarked=Q (index 87)
+training: 0.848
+testing: 0.8158567774936062
+kept
