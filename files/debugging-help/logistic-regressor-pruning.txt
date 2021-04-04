@@ -158,3 +158,84 @@ training: 0.846
 testing: 0.8158567774936062
 removed
 removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27]
+
+candidate for removal: Embarked=C * CabinType=None (index 28)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=G (index 29)
+training: 0.85
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29]
+
+candidate for removal: Embarked=C * CabinType=F (index 30)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=E (index 31)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=D (index 32)
+training: 0.844
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32]
+
+candidate for removal: Embarked=C * CabinType=C (index 33)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=B (index 34)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34]
+
+candidate for removal: Embarked=C * CabinType=A (index 35)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Parch>0 * CabinType=T (index 36)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Parch>0 * CabinType=None (index 37)
+training: 0.848
+testing: 0.80306905370844
+kept
+
+candidate for removal: Parch>0 * CabinType=G (index 38)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Parch>0 * CabinType=F (index 39)
+training: 0.852
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Parch>0 * CabinType=E (index 40)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40]
+
+candidate for removal: Parch>0 * CabinType=D (index 41)
+training: 0.844
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41]
+
+candidate for removal: Parch>0 * CabinType=C (index 42)
+training: 0.848
+testing: 0.8158567774936062
+removed
+removed indices: [0, 3, 4, 5, 7, 9, 10, 13, 14, 15, 25, 26, 27, 29, 32, 34, 40, 41, 42]
