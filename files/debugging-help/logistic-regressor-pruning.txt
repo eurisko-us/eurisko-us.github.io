@@ -1,1 +1,94 @@
-asdf
+EVERYTHING:
+training: 0.848
+testing: 0.8107416879795396
+removed indices: []
+
+PRUNING:
+candidate for removal: Embarked=S * CabinType=T (index 0)
+training: 0.846
+testing: 0.8132992327365729
+removed
+new baseline testing accuracy: 0.8132992327365729
+removed indices: [0]
+
+candidate for removal: Embarked=S * CabinType=None (index 1)
+training: 0.854
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Embarked=S * CabinType=G (index 2)
+training: 0.854
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Embarked=S * CabinType=F (index 3)
+training: 0.848
+testing: 0.8132992327365729
+removed
+
+candidate for removal: Embarked=S * CabinType=E (index 4)
+training: 0.85
+testing: 0.8132992327365729
+removed
+
+candidate for removal: Embarked=S * CabinType=D (index 5)
+training: 0.848
+testing: 0.8158567774936062
+removed
+new baseline testing accuracy: 0.8158567774936062
+removed indices: [0, 3, 4, 5]
+
+candidate for removal: Embarked=S * CabinType=C (index 6)
+training: 0.85
+testing: 0.8081841432225064
+kept
+
+candidate for removal: Embarked=S * CabinType=B (index 7)
+training: 0.85
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=S * CabinType=A (index 8)
+training: 0.85
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Embarked=Q * CabinType=T (index 9)
+training: 0.846
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=Q * CabinType=None (index 10)
+training: 0.85
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=Q * CabinType=G (index 11)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=Q * CabinType=F (index 12)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=Q * CabinType=E (index 13)
+training: 0.848
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=Q * CabinType=D (index 14)
+training: 0.85
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=Q * CabinType=C (index 15)
+training: 0.848
+testing: 0.8158567774936062
+removed
+
+candidate for removal: Embarked=Q * CabinType=B (index 16)
+training: 0.848
+testing: 0.8132992327365729
+kept
