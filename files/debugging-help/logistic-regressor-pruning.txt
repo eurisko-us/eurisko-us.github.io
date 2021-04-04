@@ -175,3 +175,89 @@ training: 0.848
 testing: 0.8158567774936062
 removed
 new baseline testing accuracy: 0.8158567774936062
+
+candidate for removal: Embarked=C * CabinType=E (index 135)
+training: 0.844
+testing: 0.8158567774936062
+removed
+new baseline testing accuracy: 0.8158567774936062
+
+candidate for removal: Embarked=C * CabinType=D (index 134)
+training: 0.854
+testing: 0.8158567774936062
+removed
+new baseline testing accuracy: 0.8158567774936062
+
+candidate for removal: Embarked=C * CabinType=C (index 133)
+training: 0.85
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=B (index 132)
+training: 0.848
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Embarked=C * CabinType=A (index 131)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Parch>0 * CabinType=T (index 130)
+training: 0.852
+testing: 0.8158567774936062
+removed
+new baseline testing accuracy: 0.8158567774936062
+
+candidate for removal: Parch>0 * CabinType=None (index 129)
+training: 0.846
+testing: 0.80306905370844
+kept
+
+candidate for removal: Parch>0 * CabinType=G (index 128)
+training: 0.85
+testing: 0.8184143222506394
+removed
+new baseline testing accuracy: 0.8184143222506394
+
+candidate for removal: Parch>0 * CabinType=F (index 127)
+training: 0.846
+testing: 0.8107416879795396
+kept
+
+candidate for removal: Parch>0 * CabinType=E (index 126)
+training: 0.85
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Parch>0 * CabinType=D (index 125)
+training: 0.846
+testing: 0.8132992327365729
+kept
+
+candidate for removal: Parch>0 * CabinType=C (index 124)
+training: 0.846
+testing: 0.8184143222506394
+removed
+new baseline testing accuracy: 0.8184143222506394
+
+candidate for removal: Parch>0 * CabinType=B (index 123)
+training: 0.848
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Parch>0 * CabinType=A (index 122)
+training: 0.838
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Parch>0 * Embarked=S (index 121)
+training: 0.848
+testing: 0.8158567774936062
+kept
+
+candidate for removal: Parch>0 * Embarked=Q (index 120)
+training: 0.846
+testing: 0.8184143222506394
+removed
+new baseline testing accuracy: 0.8184143222506394
