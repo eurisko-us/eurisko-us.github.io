@@ -427,7 +427,7 @@ author_profile: false
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-42.pdf">Maia</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-42.pdf">Nathan A</a>,
         <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-42.pdf">William</a>,
-        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-42.pdf">Nathan R</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-42.pdf">Nathan R</a>
         </font>
     </li>
     <br>
@@ -484,6 +484,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-36-1">Bayesian Inference: Estimating the Size of an Enemy Fleet</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-36-2">Grid Search</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-36.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-36.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-36.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-36.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-36.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-36.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-36.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-36.pdf">Nathan R</a>
+        </font>
     </li>
     <br>
     <li><b>Monday, November 30</b>
@@ -493,6 +504,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-35-1">Bayesian Inference of an Unknown Upper Bound</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-35-2">Introduction to Joint Distributions</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-35.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-35.pdf">Charlie</a>,
+        Justin (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-35-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-35-2.pdf">2</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-35.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-35.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-35.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-35.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-35.pdf">Nathan R</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, November 20</b>
@@ -515,6 +537,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-33-2">Short Proofs Involving Expectation; Expectation-Variance Identity</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-33-3">Sololearn C++ Module 6</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-33.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-33.pdf">Charlie</a>,
+        Justin (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-33-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-33-2.pdf">2</a>),
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-33.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-33.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-33.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-33.pdf">William</a>,
+        Nathan R (<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-33-1.pdf">1</a>,<a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-33-2.pdf">2</a>)
+        </font>
     </li>
     <br>
     <li><b>Monday, November 16</b>
@@ -525,6 +558,17 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-32-2">Review - Probability & Statistics (Pishro-Nik)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-32-3">Sololearn SQL Module 4, C++ Module 5</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-32.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-32.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-32.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-32.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-32.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-32.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-32.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-32.pdf">Nathan R</a>
+        </font>
     </li>
     <br>
     <li><b>Friday, November 13</b>
@@ -534,16 +578,38 @@ author_profile: false
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-31-1">Review - Probability & Statistics (Pishro-Nik)</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-31-2">Sololearn SQL Module 3, C++ Module 4</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-31.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-31.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-31.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-31.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-31.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-31.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-31.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-31.pdf">Nathan R</a>
+        </font>
     </li>
     <br>
     <li><b>Wednesday, November 11</b>
-        <br>Veterans Day - no class, but there is an assignment
+        <br>No class, but there is an assignment
         <br>Assignment Problems:
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-30-1">Probability & Statistics Review</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-30-2">Doubly Linked List</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-30-3">Sololearn SQL Module 2, C++ Module 3</a></li>
         </ul></font>
+        <br>Student submissions for LaTeX portion - 
+        <font size="3em">
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/anton-perez-30.pdf">Anton</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/charlie-weinberger-30.pdf">Charlie</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/justin-hong-30.pdf">Justin</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/cayden-lau-30.pdf">Cayden</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/maia-dimas-30.pdf">Maia</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-allen-30.pdf">Nathan A</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/william-wallius-30.pdf">William</a>,
+        <a class="body" target="_blank" href="https://eurisko-us.github.io/files/student-submissions/nathan-reynoso-30.pdf">Nathan R</a>
+        </font>
     </li>
     <br>
     <li><b>Monday, November 9</b>
