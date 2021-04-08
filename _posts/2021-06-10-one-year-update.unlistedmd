@@ -1,6 +1,3 @@
-
-The kids are looking forward to meeting again on Monday! I just wanted to give a brief update on their progress.
-
 The class switched to using a single shared game implementation, and by Monday they will have tested out their custom strategies against a default player. They're also in the process of writing unit tests for this shared implementation.
 
 The game version is level 3, which is the simplest level that permits interesting strategies (this was the level described in the initial writeup I sent along prior to the first meeting). The optimal strategy depends on how aggressive the opponent's strategy is, i.e. how long the opponent will wait before attacking. So a good strategy will likely have to find an inexpensive way to predict the opponent's intentions.
