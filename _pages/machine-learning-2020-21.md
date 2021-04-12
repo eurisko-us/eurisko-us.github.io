@@ -76,7 +76,7 @@ author_profile: false
 <br><br>
 <font size="3em"><ol reversed start="112">
     <li><b>Monday, April 12</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/536037693">Class Recording</a>
+        <br><a class="body" target="_blank" href="https://vimeo.com/536037693">Class Recording</a> - review for Friday's quiz
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-112">Titanic Survival Prediction - Interaction Featurest</a>
     </li>
     <br>
