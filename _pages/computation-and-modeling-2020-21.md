@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="78">
+<font size="3em"><ol reversed start="79">
+    <li><b>Monday, April 12</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/536037693">Class Recording</a> (C&M is first half)
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-79">Titanic Survival Prediction - Interaction Featurest</a>
+    </li>
+    <br>
     <li><b>Friday, April 2</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/532384626">Class Recording</a> (C&M is first half)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-78">Blog Post</a>
