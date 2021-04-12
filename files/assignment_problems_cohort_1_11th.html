@@ -13135,6 +13135,50 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-112">Problem 112<a class="anchor-link" href="#Problem-112">&#182;</a></h1><h3 id="Titanic-Survival-Prediction---Interaction-Features">Titanic Survival Prediction - Interaction Features<a class="anchor-link" href="#Titanic-Survival-Prediction---Interaction-Features">&#182;</a></h3><p><em>Put your code for this problem in the file that you've been using to do the titanic survival prediction using pandas, numpy, and sklearn.</em></p>
+<p>Previously, we left off using a logistic regression with the following features:</p>
+
+<pre><code>['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp&gt;0', 'Parch&gt;0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T']</code></pre>
+<p>We got the following accuracy:</p>
+
+<pre><code>training accuracy: 0.8260
+testing accuracy: 0.7903</code></pre>
+<p>Now, let's introduce some interaction terms. You'll need to create another column for each <em>non-redundant</em> interaction between features. An interaction is redundant if the two features are derived from the same original feature.</p>
+<ul>
+<li><p><code>SibSp</code> and <code>SibSp&gt;0</code> are redundant</p>
+</li>
+<li><p>All the features that start with <code>Embarked=</code> are redundant with each other</p>
+</li>
+<li><p>All the features that start with <code>CabinType=</code> are redundant with each other</p>
+</li>
+</ul>
+<p>I can't give you a list of all these features because then you could just copy over that list and use it as a starting point. But I can tell you that there will be 167 features in total, not including <code>Survival</code> (which is not actually a feature since that's what we're trying to predict). There are 20 non-interaction features and 147 interaction features for a total of 167 features.</p>
+<p>There are many ways to accomplish this. My suggestion is to first just create a list of all the names of interaction terms between non-redundant features,</p>
+
+<pre><code>['Sex * Pclass', 'Sex * Fare', ...]</code></pre>
+<p>and then loop through that list to create the actual column in your dataframe for each interaction feature.</p>
+<p>If you fit your regressor using all 167 features with <code>max_iterations=10000</code>, you should get the following result (rounded to 3 decimal places)</p>
+
+<pre><code>training: 0.848
+testing: 0.811</code></pre>
+<p>Note that at this point, our model is probably overfitting a bit. In a future assignment, we'll fix that by introducing some basic "feature selection" methods.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Just submit the repl.it link to your file along with the Github commit to your <code>kaggle</code> repository. Your file should print out your training and testing accuracy, which should match up with the given result.</p>
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3><p>We'll have a quiz on Friday on the following topics:</p>
+<ul>
+<li><p>logistic regression (pseudoinverse &amp; gradient descent)</p>
+</li>
+<li><p>basic data processing / model fitting with pandas / numpy / sklearn</p>
+</li>
+</ul>
+<p>Note that in class today, we reviewed the logistic regression part, but the questions I ask on the quiz aren't going to be exactly the same as the ones we went over in the review. The quiz will check whether you've developed intuition from really understanding the answers to those questions, and the intuition should carry over to similar but slightly different questions.</p>
+<p>I may ask you to do some computations by hand, so make sure you're able to do that too (I'd suggest to work out the first iteration in problem 76 by hand and make sure that the gradient &amp; updated weights you get match up with what's in the log).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-111">Problem 111<a class="anchor-link" href="#Problem-111">&#182;</a></h1><p><strong>a.</strong> Get your level 3 strategy working against <code>NumbersBerserker</code>. <strong>Work on a separate branch and create a pull request when you're done. Also, post your win rate on Slack.</strong></p>
 <p>The strategies are in <code>space-empires-cohort-1/src/strategies/level_3</code></p>
 <blockquote><p><a href="https://github.com/eurisko-us/space-empires-cohort-1/tree/main/src/strategies">https://github.com/eurisko-us/space-empires-cohort-1/tree/main/src/strategies</a></p>
@@ -13144,7 +13188,7 @@ div#notebook {
 </ul>
 <p><strong>b.</strong> Watch the videos that Prof. Wierman assigned during the last meeting. Make sure you're watching them closely enough to talk about them afterwards.</p>
 <ul>
-<li>Katie Bowman's lecture about how she used ML in imaging the black hole: <a href="https://www.youtube.com/watch?v=UGL_OL3OrCE">https://www.youtube.com/watch?v=UGL_OL3OrCE</a></li>
+<li>Katie Bouman's lecture about how she used ML in imaging the black hole: <a href="https://www.youtube.com/watch?v=UGL_OL3OrCE">https://www.youtube.com/watch?v=UGL_OL3OrCE</a></li>
 <li>More general talk by another ML researcher at Caltech about various applications of ML: <a href="https://www.youtube.com/watch?v=DgDMyLkiQ6Y">https://www.youtube.com/watch?v=DgDMyLkiQ6Y</a></li>
 </ul>
 
@@ -13594,7 +13638,8 @@ $$<p>Let the activation functions be as follows: $f_0(x) = x,$ $f_1(x) = \sin(x)
 <p>Here is a log to help you debug. The numbers are rounded to 4 decimal places.</p>
 <blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/neural-net-106.txt</a></p>
 </blockquote>
-
+<p>Here's the weight updates worked out for the second data point:</p>
+<center><img width=400 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/neural-net-debug-1.jpg' border='0'/></center>
 </div>
 </div>
 </div>

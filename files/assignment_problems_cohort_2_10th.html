@@ -14478,7 +14478,7 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Locations:</strong></p>
+<h1 id="Problem-86">Problem 86<a class="anchor-link" href="#Problem-86">&#182;</a></h1><p><strong>Locations:</strong></p>
 <blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
 <code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br></p>
 </blockquote>
@@ -14608,6 +14608,108 @@ Returns a dataframe representation of the following array:
 }
 &gt;&gt;&gt; knn.classify(observation)
 'B'</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-85">Problem 85<a class="anchor-link" href="#Problem-85">&#182;</a></h1><p>Build tic tac toe playing agent that uses game tree, always moving in direction of highest win probability.</p>
+<p>should win the vast majority of the time versus random player</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-84">Problem 84<a class="anchor-link" href="#Problem-84">&#182;</a></h1><p>Build game tree for tic tac toe</p>
+<p><a href="http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm">http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-83">Problem 83<a class="anchor-link" href="#Problem-83">&#182;</a></h1><p>logistic regressor - normalizing variables</p>
+<p>upcoming quiz - for titanic modeling, review what we did and make sure you understand why we did it</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-82">Problem 82<a class="anchor-link" href="#Problem-82">&#182;</a></h1><p>Logistic regressor - pruning</p>
+<p><a href="https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py">https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py</a></p>
+<p>talk about checkpoints for when repl.it craps out</p>
+<p>log for debugging purposes:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-81">Problem 81<a class="anchor-link" href="#Problem-81">&#182;</a></h1><p>Logistic regressor - pre-pruning</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-pre-pruning.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-pre-pruning.txt</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-80">Problem 80<a class="anchor-link" href="#Problem-80">&#182;</a></h1><p>Game</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-79">Problem 79<a class="anchor-link" href="#Problem-79">&#182;</a></h1><h3 id="Titanic-Survival-Prediction---Interaction-Features">Titanic Survival Prediction - Interaction Features<a class="anchor-link" href="#Titanic-Survival-Prediction---Interaction-Features">&#182;</a></h3><p><em>Put your code for this problem in the file that you've been using to do the titanic survival prediction using pandas, numpy, and sklearn.</em></p>
+<p>Previously, we left off using a logistic regression with the following features:</p>
+
+<pre><code>['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp&gt;0', 'Parch&gt;0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T']</code></pre>
+<p>We got the following accuracy:</p>
+
+<pre><code>training accuracy: 0.8260
+testing accuracy: 0.7903</code></pre>
+<p>Now, let's introduce some interaction terms. You'll need to create another column for each <em>non-redundant</em> interaction between features. An interaction is redundant if the two features are derived from the same original feature.</p>
+<ul>
+<li><p><code>SibSp</code> and <code>SibSp&gt;0</code> are redundant</p>
+</li>
+<li><p>All the features that start with <code>Embarked=</code> are redundant with each other</p>
+</li>
+<li><p>All the features that start with <code>CabinType=</code> are redundant with each other</p>
+</li>
+</ul>
+<p>I can't give you a list of all these features because then you could just copy over that list and use it as a starting point. But I can tell you that there will be 167 features in total, not including <code>Survival</code> (which is not actually a feature since that's what we're trying to predict). There are 20 non-interaction features and 147 interaction features for a total of 167 features.</p>
+<p>There are many ways to accomplish this. My suggestion is to first just create a list of all the names of interaction terms between non-redundant features,</p>
+
+<pre><code>['Sex * Pclass', 'Sex * Fare', ...]</code></pre>
+<p>and then loop through that list to create the actual column in your dataframe for each interaction feature.</p>
+<p>If you fit your regressor using all 167 features with <code>max_iterations=10000</code>, you should get the following result (rounded to 3 decimal places)</p>
+
+<pre><code>training: 0.848
+testing: 0.811</code></pre>
+<p>Note that at this point, our model is probably overfitting a bit. In a future assignment, we'll fix that by introducing some basic "feature selection" methods.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Just submit the repl.it link to your file along with the Github commit to your <code>kaggle</code> repository. Your file should print out your training and testing accuracy, which should match up with the given result.</p>
+<h3 id="Quiz">Quiz<a class="anchor-link" href="#Quiz">&#182;</a></h3><p>We'll have a quiz on Friday on the following topics:</p>
+<ul>
+<li><p>logistic regression (pseudoinverse &amp; gradient descent)</p>
+</li>
+<li><p>basic data processing / model fitting with pandas / numpy / sklearn</p>
+</li>
+</ul>
+<p>Note that in class today, we reviewed the logistic regression part, but the questions I ask on the quiz aren't going to be exactly the same as the ones we went over in the review. The quiz will check whether you've developed intuition from really understanding the answers to those questions, and the intuition should carry over to similar but slightly different questions.</p>
+<p>I may ask you to do some computations by hand, so make sure you're able to do that too (I'd suggest to work out the first iteration in problem 76 by hand and make sure that the gradient &amp; updated weights you get match up with what's in the log).</p>
 
 </div>
 </div>
