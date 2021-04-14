@@ -77,7 +77,7 @@ author_profile: false
 
 <font size="3em"><ol reversed start="80">
     <li><b>Wednesday, April 13</b>
-        <br><a class="body" target="_blank" href="https://vimeo.com/">Class Recording</a> - forward selection
+        <br><a class="body" target="_blank" href="https://vimeo.com/536971339">Class Recording</a> - forward selection
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-80">Titanic Survival Prediction - Forward Selection</a>
     </li>
     <br>
