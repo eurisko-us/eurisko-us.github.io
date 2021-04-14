@@ -13135,6 +13135,73 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Video-Links">Video Links<a class="anchor-link" href="#Video-Links">&#182;</a></h1><p>Thomas Vidick <a href="https://www.youtube.com/watch?v=Cwz_tMjzavc">https://www.youtube.com/watch?v=Cwz_tMjzavc</a></p>
+<p>Xie Chen <a href="https://www.youtube.com/watch?v=jPepWxPRAyw">https://www.youtube.com/watch?v=jPepWxPRAyw</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-113">Problem 113<a class="anchor-link" href="#Problem-113">&#182;</a></h1><h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p><strong>If you haven't already, get your strategy working in our shared game implementation and create a pull request so we can merge in class on Friday.</strong></p>
+<p>This is important. If you're confused by any part in the code, DON'T use that as an excuse for not having this done. Post on Slack and we'll clear up any confusions in the code.</p>
+<p>Lastly, don't worry if the game doesn't work exactly as intended right now. We'll start with unit tests on Friday. I just want everyone's strategy to run on our shared game without giving errors.</p>
+<h3 id="Forward-Selection">Forward Selection<a class="anchor-link" href="#Forward-Selection">&#182;</a></h3><p>Previously, you built a logistic model with 167 features, and got the following results using <code>max_iter=10,000</code>:</p>
+
+<pre><code>training: 0.848
+testing: 0.811</code></pre>
+<p>It turned out that running that many iterations was taking a while (5 minutes) for some students, so let's use <code>max_iter=1,000</code> instead. The logistic regressor might not fully converge, which means the model will probably be slightly worse, but that's okay because right now just going through this modeling process for educational purposes.</p>
+<p>Using <code>max_iter=1,000</code>, I get the following results:</p>
+
+<pre><code>training: 0.846
+testing: 0.808</code></pre>
+<p>Yours should be pretty similar.</p>
+<p>Now, you'll notice that the training accuracy is quite a bit higher than the testing accuracy. This is because we now have a LOT of features in our dataset, and not all of them are useful, which means it's harder for the model to figure out what <em>is</em> useful. The model ends up fitting to some "noise" in the data (see <a href="https://en.wikipedia.org/wiki/Noisy_data">https://en.wikipedia.org/wiki/Noisy_data</a>) and that causes it to pick up on some random patterns that aren't actually meaningful. The model becomes paranoid!</p>
+<p>To fix this issue, we need to carry out <strong>feature selection</strong>, in which we attempt to select only the features that are actually useful to the model.</p>
+<p>One type of feature selection method is <strong>forward selection</strong>, in which we begin with an empty model and add in variables one by one. In each forward step, you add the one variable that gives the single best improvement to your model.</p>
+<hr>
+<p>Your task is to carry out forward selection on those 167 features.</p>
+<ul>
+<li><p>Initially, you'll assume a model with no features. You don't actually build this model, but you assume its accuracy is 0.</p>
+</li>
+<li><p>Each forward step, you'll need to create a new model for each possible feature you might add next.</p>
+</li>
+<li><p>The next feature should always be the feature that gives you the largest accuracy when included in your model.</p>
+<ul>
+<li>If there are any ties, you can just use the feature that you checked first. That way, you'll be able to compare to the log I provide at the bottom of the assignment.</li>
+</ul>
+</li>
+<li><p><strong>Stopping Criterion:</strong> If the feature that gives the largest accuracy doesn't actually improve the accuracy of the model, then stop.</p>
+</li>
+<li><p>In general, in the $n$th step of forward selection, you should be testing out models with $n$ features, $n-1$ of which are the same across all the models.</p>
+</li>
+</ul>
+<hr>
+<p><strong>Put this problem in a separate file. I'll give you the processed data set so that you can be sure you're using the right starting point (it should match up with yours, but just in case it doesn't you can still do this problem without having to go down the rabbit hole of debuggin your data processing).</strong></p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv</a></p>
+</blockquote>
+<p>Your task is to take the processed data set and carry out forward selection. You should end up with the features and accuracies shown below.</p>
+
+<pre><code>['Sex', 'Pclass * SibSp', 'Pclass * Fare', 'Pclass * CabinType=E', 'Fare * CabinType=D', 'SibSp * CabinType=B', 'SibSp&gt;0', 'Fare * CabinType=A']
+training: 0.818
+testing: 0.806</code></pre>
+<p><strong>Print out a log like that given in the file below.</strong> This log is given to help you debug.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-forward-selection.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-forward-selection.txt</a></p>
+</blockquote>
+<p><strong>IMPORTANT:</strong> While initially writing your code, change <code>max_iter</code> to a small number like <code>10</code> so that you're not waiting around for your log to generate each time. Once your code seems like it's working as intended, THEN update the iterations to <code>1000</code> and check that your results match up with those given in the log above.</p>
+<hr>
+<p>You'll notice that we were able to remove a TON of the features, and get nearly the same testing accuracy. The training accuracy also got closer to the testing accuracy. That's good.</p>
+<p>However, the testing accuracy didn't increase. It actually went down a bit. In a future assignment, we'll talk about another feature selection method that solves this issue.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Just the repl.it link to your file and the commit link for Qithub.</p>
+<p>Also, remember that there's a quiz on Friday (as outlined on the previous assignment).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-112">Problem 112<a class="anchor-link" href="#Problem-112">&#182;</a></h1><h3 id="Titanic-Survival-Prediction---Interaction-Features">Titanic Survival Prediction - Interaction Features<a class="anchor-link" href="#Titanic-Survival-Prediction---Interaction-Features">&#182;</a></h3><p><em>Put your code for this problem in the file that you've been using to do the titanic survival prediction using pandas, numpy, and sklearn.</em></p>
 <p>Previously, we left off using a logistic regression with the following features:</p>
 
