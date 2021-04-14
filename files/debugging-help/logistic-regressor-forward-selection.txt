@@ -852,3 +852,5 @@ candidate for addition: Embarked=S * CabinType=T (index 166)
 training: 0.814
 testing: 0.8005115089514067
 discarded
+
+FINAL BASELINE TESTING ACCURACY: 0.8005115089514067
