@@ -75,8 +75,13 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="80">
-    <li><b>Wednesday, April 13</b>
+<font size="3em"><ol reversed start="81">
+    <li><b>Friday, April 16</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/537925521">Class Recording</a> - k-nearest neighbors implementation
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-81">K-Nearest Neighbors Implementation</a>
+    </li>
+    <br>
+    <li><b>Wednesday, April 14</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/536971339">Class Recording</a> - forward selection
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-80">Titanic Survival Prediction - Forward Selection</a>
     </li>
