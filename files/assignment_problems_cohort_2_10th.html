@@ -14478,10 +14478,57 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-86">Problem 86<a class="anchor-link" href="#Problem-86">&#182;</a></h1><p><strong>Locations:</strong></p>
-<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
-<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br></p>
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Build tic tac toe playing agent that uses game tree, always moving in direction of highest win probability.</p>
+<p>should win the vast majority of the time versus random player</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Build game tree for tic tac toe</p>
+<p><a href="http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm">http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>logistic regressor - normalizing variables</p>
+<p>upcoming quiz - for titanic modeling, review what we did and make sure you understand why we did it</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Logistic regressor - pruning</p>
+<p><a href="https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py">https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py</a></p>
+<p>talk about checkpoints for when repl.it craps out</p>
+<p>log for debugging purposes:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt</a></p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Game</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-81">Problem 81<a class="anchor-link" href="#Problem-81">&#182;</a></h1><p><strong>Note:</strong> Initially, I was hoping to write a problem involving space empires development, but I need some more time to put one together (to ensure the problem doesn't take too long). So, here's a problem that involves implementing one of the simplest machine learning models, the "k-nearest neighbors" model.</p>
+<p><strong>Libraries:</strong> Feel free to use <code>pandas</code> and <code>numpy</code>. But NOT <code>sklearn</code>. You need to implement this model on your own, not just import it from <code>sklearn</code>. But you can use <code>pandas</code> dataframes and <code>numpy</code> arrays to help you.</p>
+<hr>
 <p>The dataset below displays the ratio of ingredients for various cookie recipes.</p>
 
 <pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
@@ -14510,7 +14557,11 @@ $$
 <ul>
 <li><p>We represent the cookie as the point $P(0.10, 0.15, 0.30, 0.45).$</p>
 </li>
-<li><p>We compute the Euclidean distance between $P$ and each of the points corresponding to cookies in the dataset. In this case, the distances are as follows:</p>
+<li><p>We compute the Euclidean distance
+$$
+d(a,b) = \sqrt{ (a_1-b_1)^2 + (a_2-b_2)^2 + \cdots + (a_n - b_n)^2}
+$$
+between $P$ and each of the points corresponding to cookies in the dataset. In this case, the distances are as follows:</p>
 
 <pre><code>['Distance', 'Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
 [[0.047    , 'Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
@@ -14538,6 +14589,8 @@ $$
 <li><p>We predict the majority class, which in this case happens to be <code>Shortbread</code>. (If there is a tie, then we predict the class with the lower average distance.)</p>
 </li>
 </ul>
+<hr>
+<p><strong>Watch this 2-minute video on kNN to really drive the idea home: <a href="https://www.youtube.com/watch?v=0p0o5cmgLdE">https://www.youtube.com/watch?v=0p0o5cmgLdE</a></strong></p>
 <hr>
 <p><strong>Your task</strong> is to create a class <code>KNearestNeighborsClassifier</code> that works as follows.</p>
 
@@ -14608,54 +14661,12 @@ Returns a dataframe representation of the following array:
 }
 &gt;&gt;&gt; knn.classify(observation)
 'B'</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-85">Problem 85<a class="anchor-link" href="#Problem-85">&#182;</a></h1><p>Build tic tac toe playing agent that uses game tree, always moving in direction of highest win probability.</p>
-<p>should win the vast majority of the time versus random player</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-84">Problem 84<a class="anchor-link" href="#Problem-84">&#182;</a></h1><p>Build game tree for tic tac toe</p>
-<p><a href="http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm">http://www2.lv.psu.edu/ojj/courses/ist-230/students/math/2002-1-db-mc-lc/game_trees.htm</a></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-83">Problem 83<a class="anchor-link" href="#Problem-83">&#182;</a></h1><p>logistic regressor - normalizing variables</p>
-<p>upcoming quiz - for titanic modeling, review what we did and make sure you understand why we did it</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-82">Problem 82<a class="anchor-link" href="#Problem-82">&#182;</a></h1><p>Logistic regressor - pruning</p>
-<p><a href="https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py">https://github.com/eurisko-us/problem-output-generation/blob/master/titanic/analysis.py</a></p>
-<p>talk about checkpoints for when repl.it craps out</p>
-<p>log for debugging purposes:</p>
-<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt</a></p>
+<hr>
+<p><strong>Submission:</strong> Links to your repl.it files:</p>
+<blockquote><p><code>machine-learning/src/k_nearest_neighbors_classifier.py</code><br>
+<code>machine-learning/tests/test_k_nearest_neighbors_classifier.py</code><br></p>
 </blockquote>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-81">Problem 81<a class="anchor-link" href="#Problem-81">&#182;</a></h1><p>Game</p>
+<p>Also, the commit link to your <code>machine-learning</code> repository.</p>
 
 </div>
 </div>
