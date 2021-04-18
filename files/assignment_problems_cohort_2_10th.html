@@ -14531,7 +14531,7 @@ $$
 <hr>
 <p>The dataset below displays the ratio of ingredients for various cookie recipes.</p>
 
-<pre><code>&gt;&gt;&gt; df = DataFrame.from_array(
+<pre><code>&gt;&gt;&gt; df = pd.DataFrame(
     [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
     ['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
     ['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
@@ -14646,7 +14646,7 @@ Returns a dataframe representation of the following array:
 <p>Remember that in the case of a tie, you need to chose whichever class has a lower average distance (where only the first <code>k</code> entries are considered in the average).</p>
 <p>Here is a test to make sure you've implemented that properly:</p>
 
-<pre><code>df = DataFrame.from_array(
+<pre><code>df = pd.DataFrame(
     [['A', 0],
      ['A', 1],
      ['B', 2],
