@@ -14039,29 +14039,6 @@ Row 18 -- True Class is Shortbread; Predicted Class was Shortbread
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> extra credit (you can get 200% on this assignment)</p>
-<p><strong>Location:</strong> <code>assignment-problems/sudoku_solver.py</code></p>
-<p>Use "intelligent search" to solve the following mini sudoku puzzle. Fill in the grid so that every row, every column, and every 3x2 box contains the digits 1 through 6.</p>
-<p>For a refresher on "intelligent search", see problem 44-1.</p>
-<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/small-sudoku.png' border='0'/></center><p>Format your output so that when your code prints out the result, it prints out the result in the shape of a sudoku puzzle:</p>
-
-<pre><code>-----------------
-| . . 4 | . . . |
-| . . . | 2 3 . |
------------------
-| 3 . . | . 6 . |
-| . 6 . | . . 2 |
------------------
-| . 2 1 | . . . |
-| . . . | 5 . . |
------------------</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Estimated Time:</strong> 2-3 hours</p>
 <p><strong>Location:</strong></p>
 <blockquote><p><code>machine-learning/src/decision_tree.py</code><br>
@@ -14519,6 +14496,33 @@ $$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Game</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-82">Problem 82<a class="anchor-link" href="#Problem-82">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/sudoku_solver.py</code></p>
+<p>This problem is basically the same as 55-1, except that instead of a magic square, it's a mini sudoku puzzle. The goal is to fill in the grid so that every row, every column, and every 3x2 box contains the digits 1 through 6.</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/small-sudoku.png' border='0'/></center><p>There are 26 open spots, which means there's going to be 26 for loops. That's a lot! It'll be faster if you create a script that writes all these for loops to a separate file, and then you can run that file.</p>
+<p><strong>Note:</strong> If you need a refresher on the method that we used to solve the magic square, check out Elijah's blog post:</p>
+<blockquote><p><a href="http://www.eurisko.us/solving-magic-squares-using-backtracking/">http://www.eurisko.us/solving-magic-squares-using-backtracking/</a></p>
+</blockquote>
+<p>He managed to consolidate the numerous for loops into a single while loop, which you're free to do if you'd like. But you're not required to use a while loop -- it's okay if you want to just create a script that writes all the for loops to a separate file, and then run that file. (It's not very elegant, but it's just as fast and it gets the job done.)</p>
+<p><strong>Lastly:</strong> Format your output so that when your code prints out the result, it prints out the result in the shape of a sudoku puzzle:</p>
+
+<pre><code>-----------------
+| . . 4 | . . . |
+| . . . | 2 3 . |
+-----------------
+| 3 . . | . 6 . |
+| . 6 . | . . 2 |
+-----------------
+| . 2 1 | . . . |
+| . . . | 5 . . |
+-----------------</code></pre>
+<p>Make sure to look at your solution to check that it is indeed correct!</p>
 
 </div>
 </div>
