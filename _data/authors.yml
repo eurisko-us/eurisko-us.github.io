@@ -70,24 +70,24 @@ Maia Dimas:
   
 Justin Hong:
   name        : "Justin Hong"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is on the water polo and swim teams at PHS, plays some chess, and enjoys skiing during winters. When he has free time, he likes to play video games, sleep in, and wander around the kitchen. After high school, he wants to study something along the lines of software or AI development."
+  avatar      : "headshots/justin-hong.png"
   role        : "student"
   class       : "Computation & Modeling"
   graduationYear : "'23"
   
 Cayden Lau:
   name        : "Cayden Lau"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He enjoys video games and mathematics."
+  avatar      : "headshots/cayden-lau.png"
   role        : "student"
   class       : "Computation & Modeling"
   graduationYear : "'23"
   
 Anton Perez:
   name        : "Anton Perez"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He runs track and cross country, and is an active member of his school's politics and astronomy clubs.  Outside of school, he enjoys programming, reading, tutoring, and seeking new knowledge wherever and whenever he can. He plans on studying mathematics, physics, and/or philosophy in college, and eventually wants to pursue a career in academia."
+  avatar      : "headshots/anton-perez.png"
   role        : "student"
   class       : "Computation & Modeling"
   graduationYear : "'23"
@@ -102,15 +102,15 @@ Nathan Reynoso:
   
 William Wallius:
   name        : "William Wallius"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He likes to build computers, run cross country, and play video games. He was involved in the Boy Scouting program and earned the rank of Eagle. Though he isn't too sure on what he wants to do after high school, he enjoys coding and might want to pursue that in college and get a job in the field later on."
+  avatar      : "headshots/william-wallius.png"
   role        : "student"
   class       : "Computation & Modeling"
   graduationYear : "'23"
   
 Charlie Weinberger:
   name        : "Charlie Weinberger"
-  bio         : ""
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is a member of the Robotics Club and Politics Club. In his free time, he likes to hang out with his friends, code, play video games, play soccer, and discuss politics. After high school, Charlie is interested in studying computer science."
   avatar      : "headshots/anonymous.png"
   role        : "student"
   class       : "Computation & Modeling"
