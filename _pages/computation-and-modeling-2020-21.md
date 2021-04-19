@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="81">
+<font size="3em"><ol reversed start="82">
+    <li><b>Monday, April 19</b>
+        <br>No class, but there is an assignment
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-82">Solving Mini Sudoku</a>
+    </li>
+    <br>
     <li><b>Friday, April 16</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/537925521">Class Recording</a> - k-nearest neighbors implementation
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-81">K-Nearest Neighbors Implementation</a>
