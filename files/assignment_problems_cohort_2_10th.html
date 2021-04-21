@@ -14503,6 +14503,21 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-83">Problem 83<a class="anchor-link" href="#Problem-83">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>If there were any problems you didn't get right, fix them and show all your work (or all your code).</p>
+<h3 id="Sudoku-Solver">Sudoku Solver<a class="anchor-link" href="#Sudoku-Solver">&#182;</a></h3><p>Based on feedback about the sudoku puzzle, we'll devote one more assignment to it.</p>
+<p>Again, the idea is just a slight extension of the magic square problem (55-1), so if you've forgotten how to do the magic square problem or didn't fully learn it in the first place, then that's the first thing you need to address. I'll be available to field questions on Slack, as always.</p>
+<p>Recall this part of the problem statement:</p>
+<blockquote><p>There are 26 open spots, which means there's going to be 26 for loops. That's a lot! It'll be faster if you create a script that writes all these for loops to a separate file, and then you can run that file.</p>
+</blockquote>
+<p>If the idea of writing a script to generate another script threw you off, then ignore it and try writing the 26 loops manually. After a handful of lines you'll notice that you're just doing a repetitive task over and over -- writing a <code>for</code> loop from a basic template and indenting it. Once you get to that point, then you'll be able to see why it'll save you time and headache if you automate the process of writing all these <code>for</code> loops.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Overleaf doc with quiz corrections, link to sudoku solver on repl.it (it should print out the solution when I run the file).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-82">Problem 82<a class="anchor-link" href="#Problem-82">&#182;</a></h1><p><strong>Location:</strong> <code>assignment-problems/sudoku_solver.py</code></p>
 <p>This problem is basically the same as 55-1, except that instead of a magic square, it's a mini sudoku puzzle. The goal is to fill in the grid so that every row, every column, and every 3x2 box contains the digits 1 through 6.</p>
 <center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/small-sudoku.png' border='0'/></center><p>There are 26 open spots, which means there's going to be 26 for loops. That's a lot! It'll be faster if you create a script that writes all these for loops to a separate file, and then you can run that file.</p>
