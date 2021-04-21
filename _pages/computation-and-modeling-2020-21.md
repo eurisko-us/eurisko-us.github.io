@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="82">
+<font size="3em"><ol reversed start="83">
+    <li><b>Wednesday, April 21</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/539777375">Class Recording</a> - quiz 2-5 review
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-83">Quiz Corrections; Continue Solving Mini Sudoku</a>
+    </li>
+    <br>
     <li><b>Monday, April 19</b>
         <br>No class, but there is an assignment
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-82">Solving Mini Sudoku</a>
