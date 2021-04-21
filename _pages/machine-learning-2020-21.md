@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="115">
+<font size="3em"><ol reversed start="116">
+    <li><b>Wednesday, April 21</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/539777375">Class Recording</a> - quiz 2-5 review
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-116">Quiz Corrections; Intro to Game Trees; prepare to present your unit testing framework</a>
+    </li>
+    <br>
     <li><b>Monday, April 19</b>
         <br>No class
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-115">Catch-up day</a>
