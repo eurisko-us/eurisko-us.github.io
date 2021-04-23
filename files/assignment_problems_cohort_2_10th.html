@@ -14503,6 +14503,35 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-84">Problem 84<a class="anchor-link" href="#Problem-84">&#182;</a></h1><p>In this assignment, you'll do "backward selection", which is very similar to forward selection except that we start with all features and remove features that don't improve the accuracy.</p>
+<p><strong>One key difference</strong> is that with backward selection, we'll just loop through all the features once and remove any features that don't improve the accuracy. This is different from forward selection (in forward selection, we looped through all the features repeatedly).</p>
+<ul>
+<li>The reason why we'll just loop through all the features once is that backward selection is expensive (it takes a long time to fit each model when we're using all the features).</li>
+</ul>
+<p><strong>A couple notes:</strong></p>
+<ul>
+<li><p>Use 100 iterations and set <code>random_state=0</code> (it's a parameter in the logistic regressor; check out the documentation for more info)</p>
+</li>
+<li><p>100 iterations isn't enough for the regressor to converge, but since things run slow on the chromebooks, we'll just do this exercise with 100 iterations regardless. To suppress convergence warnings, set the following:</p>
+
+<pre><code>from warnings import simplefilter
+from sklearn.exceptions import ConvergenceWarning
+simplefilter("ignore", category=ConvergenceWarning)</code></pre>
+</li>
+</ul>
+<p><strong>Results</strong></p>
+<p>Initially, using all the features, testing accuracy should be about <code>0.788</code></p>
+<p>Then, after backwards selection, testing accuracy should have increased to <code>0.813</code></p>
+<p>For your ease of debugging, all the features along with information about each iteration of backward selection are shown in the log below.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-backward-selection-100-iterations.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-backward-selection-100-iterations.txt</a></p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-83">Problem 83<a class="anchor-link" href="#Problem-83">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>If there were any problems you didn't get right, fix them and show all your work (or all your code).</p>
 <h3 id="Sudoku-Solver">Sudoku Solver<a class="anchor-link" href="#Sudoku-Solver">&#182;</a></h3><p>Based on feedback about the sudoku puzzle, we'll devote one more assignment to it.</p>
 <p>Again, the idea is just a slight extension of the magic square problem (55-1), so if you've forgotten how to do the magic square problem or didn't fully learn it in the first place, then that's the first thing you need to address. I'll be available to field questions on Slack, as always.</p>

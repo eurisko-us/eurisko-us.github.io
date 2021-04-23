@@ -13144,6 +13144,64 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-117">Problem 117<a class="anchor-link" href="#Problem-117">&#182;</a></h1><p><strong>Overview:</strong> There are 2 parts to this assignment: backward selection and space empires.</p>
+<h3 id="Backward-Selection">Backward Selection<a class="anchor-link" href="#Backward-Selection">&#182;</a></h3><p>In this assignment, you'll do "backward selection", which is very similar to forward selection except that we start with all features and remove features that don't improve the accuracy.</p>
+<p><strong>One key difference</strong> is that with backward selection, we'll just loop through all the features once and remove any features that don't improve the accuracy. This is different from forward selection (in forward selection, we looped through all the features repeatedly).</p>
+<ul>
+<li>The reason why we'll just loop through all the features once is that backward selection is expensive (it takes a long time to fit each model when we're using all the features).</li>
+</ul>
+<p><strong>A couple notes:</strong></p>
+<ul>
+<li><p>Use 100 iterations and set <code>random_state=0</code> (it's a parameter in the logistic regressor; check out the documentation for more info)</p>
+</li>
+<li><p>100 iterations isn't enough for the regressor to converge, but since things run slow on the chromebooks, we'll just do this exercise with 100 iterations regardless. To suppress convergence warnings, set the following:</p>
+
+<pre><code>from warnings import simplefilter
+from sklearn.exceptions import ConvergenceWarning
+simplefilter("ignore", category=ConvergenceWarning)</code></pre>
+</li>
+</ul>
+<p><strong>Results</strong></p>
+<p>Initially, using all the features, testing accuracy should be about <code>0.788</code></p>
+<p>Then, after backwards selection, testing accuracy should have increased to <code>0.813</code></p>
+<p>For your ease of debugging, all the features along with information about each iteration of backward selection are shown in the log below.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-backward-selection-100-iterations.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-backward-selection-100-iterations.txt</a></p>
+</blockquote>
+<h3 id="Space-Empires">Space Empires<a class="anchor-link" href="#Space-Empires">&#182;</a></h3><p>In class, decided on using George's implementation, with the following tweaks:</p>
+<ul>
+<li><p>allow it to run all tests at once if we want (like how Colby did)</p>
+</li>
+<li><p>get the phase from the game state (like how David did)</p>
+</li>
+</ul>
+<p>Elijah - your implementation was clever, but George's seemed simpler for everyone to build off of.</p>
+<p>This weekend:</p>
+<ul>
+<li><p><strong>George</strong> - merge your pull request (do this ASAP, definitely by Saturday, because Colby and David's tasks depend on this). There are probably merge conflicts that you'll have to resolve.</p>
+</li>
+<li><p><strong>Colby</strong> - after George has merged his pull request, create a new branch to include the capability to run all unit tests at once. Then create a pull request and merge the code.</p>
+</li>
+<li><p><strong>David</strong> - after George has merged his pull request, create a new branch to and tweak the code to get the phase from the game state. Then create a pull request and merge the code.</p>
+</li>
+<li><p><strong>Riley</strong> - create a page on the wiki called "Unit Test Descriptions" and write a brief description for each of the existing unit tests. This way, we can look to this page to understand what we do and don't have unit tests for already.</p>
+</li>
+<li><p><strong>Elijah</strong> - everyone was having an issue translating between the native game state and the standard game state, so you'll need to either</p>
+<ul>
+<li><p>write documentation for the native game state and write functions for translating to and from the standard game state, or</p>
+</li>
+<li><p>update the standard game state (and its documentation) so that we no longer need a native game state</p>
+</li>
+</ul>
+<p>Since you're the one who knows the most about the native game state, this can be your call.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-116">Problem 116<a class="anchor-link" href="#Problem-116">&#182;</a></h1><h3 id="Quiz-Corrections">Quiz Corrections<a class="anchor-link" href="#Quiz-Corrections">&#182;</a></h3><p>If there were any problems you didn't get right, fix them and show all your work (or all your code).</p>
 <h3 id="Intro-to-Minimax-Algorithm">Intro to Minimax Algorithm<a class="anchor-link" href="#Intro-to-Minimax-Algorithm">&#182;</a></h3><p>To introduce the idea of how one can designin intelligent agents, we'll implement an intelligent angent that solves tic-tac-toe using the minimax algorithm. But before we actually implement it, we need to understand it at a high level.</p>
 <p><strong>Watch the first 8 minutes of the following video</strong> that explains the minimax algorithm. (You can probably set it to 1.5x speed)</p>
