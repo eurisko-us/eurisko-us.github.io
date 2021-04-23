@@ -1,0 +1,1175 @@
+EVERYTHING:
+all features: ['Sex', 'Pclass', 'Fare', 'Age', 'SibSp', 'SibSp>0', 'Parch>0', 'Embarked=C', 'Embarked=None', 'Embarked=Q', 'Embarked=S', 'CabinType=A', 'CabinType=B', 'CabinType=C', 'CabinType=D', 'CabinType=E', 'CabinType=F', 'CabinType=G', 'CabinType=None', 'CabinType=T', 'Sex * Pclass', 'Sex * Fare', 'Sex * Age', 'Sex * SibSp', 'Sex * SibSp>0', 'Sex * Parch>0', 'Sex * Embarked=C', 'Sex * Embarked=None', 'Sex * Embarked=Q', 'Sex * Embarked=S', 'Sex * CabinType=A', 'Sex * CabinType=B', 'Sex * CabinType=C', 'Sex * CabinType=D', 'Sex * CabinType=E', 'Sex * CabinType=F', 'Sex * CabinType=G', 'Sex * CabinType=None', 'Sex * CabinType=T', 'Pclass * Fare', 'Pclass * Age', 'Pclass * SibSp', 'Pclass * SibSp>0', 'Pclass * Parch>0', 'Pclass * Embarked=C', 'Pclass * Embarked=None', 'Pclass * Embarked=Q', 'Pclass * Embarked=S', 'Pclass * CabinType=A', 'Pclass * CabinType=B', 'Pclass * CabinType=C', 'Pclass * CabinType=D', 'Pclass * CabinType=E', 'Pclass * CabinType=F', 'Pclass * CabinType=G', 'Pclass * CabinType=None', 'Pclass * CabinType=T', 'Fare * Age', 'Fare * SibSp', 'Fare * SibSp>0', 'Fare * Parch>0', 'Fare * Embarked=C', 'Fare * Embarked=None', 'Fare * Embarked=Q', 'Fare * Embarked=S', 'Fare * CabinType=A', 'Fare * CabinType=B', 'Fare * CabinType=C', 'Fare * CabinType=D', 'Fare * CabinType=E', 'Fare * CabinType=F', 'Fare * CabinType=G', 'Fare * CabinType=None', 'Fare * CabinType=T', 'Age * SibSp', 'Age * SibSp>0', 'Age * Parch>0', 'Age * Embarked=C', 'Age * Embarked=None', 'Age * Embarked=Q', 'Age * Embarked=S', 'Age * CabinType=A', 'Age * CabinType=B', 'Age * CabinType=C', 'Age * CabinType=D', 'Age * CabinType=E', 'Age * CabinType=F', 'Age * CabinType=G', 'Age * CabinType=None', 'Age * CabinType=T', 'SibSp * Parch>0', 'SibSp * Embarked=C', 'SibSp * Embarked=None', 'SibSp * Embarked=Q', 'SibSp * Embarked=S', 'SibSp * CabinType=A', 'SibSp * CabinType=B', 'SibSp * CabinType=C', 'SibSp * CabinType=D', 'SibSp * CabinType=E', 'SibSp * CabinType=F', 'SibSp * CabinType=G', 'SibSp * CabinType=None', 'SibSp * CabinType=T', 'SibSp>0 * Parch>0', 'SibSp>0 * Embarked=C', 'SibSp>0 * Embarked=None', 'SibSp>0 * Embarked=Q', 'SibSp>0 * Embarked=S', 'SibSp>0 * CabinType=A', 'SibSp>0 * CabinType=B', 'SibSp>0 * CabinType=C', 'SibSp>0 * CabinType=D', 'SibSp>0 * CabinType=E', 'SibSp>0 * CabinType=F', 'SibSp>0 * CabinType=G', 'SibSp>0 * CabinType=None', 'SibSp>0 * CabinType=T', 'Parch>0 * Embarked=C', 'Parch>0 * Embarked=None', 'Parch>0 * Embarked=Q', 'Parch>0 * Embarked=S', 'Parch>0 * CabinType=A', 'Parch>0 * CabinType=B', 'Parch>0 * CabinType=C', 'Parch>0 * CabinType=D', 'Parch>0 * CabinType=E', 'Parch>0 * CabinType=F', 'Parch>0 * CabinType=G', 'Parch>0 * CabinType=None', 'Parch>0 * CabinType=T', 'Embarked=C * CabinType=A', 'Embarked=C * CabinType=B', 'Embarked=C * CabinType=C', 'Embarked=C * CabinType=D', 'Embarked=C * CabinType=E', 'Embarked=C * CabinType=F', 'Embarked=C * CabinType=G', 'Embarked=C * CabinType=None', 'Embarked=C * CabinType=T', 'Embarked=None * CabinType=A', 'Embarked=None * CabinType=B', 'Embarked=None * CabinType=C', 'Embarked=None * CabinType=D', 'Embarked=None * CabinType=E', 'Embarked=None * CabinType=F', 'Embarked=None * CabinType=G', 'Embarked=None * CabinType=None', 'Embarked=None * CabinType=T', 'Embarked=Q * CabinType=A', 'Embarked=Q * CabinType=B', 'Embarked=Q * CabinType=C', 'Embarked=Q * CabinType=D', 'Embarked=Q * CabinType=E', 'Embarked=Q * CabinType=F', 'Embarked=Q * CabinType=G', 'Embarked=Q * CabinType=None', 'Embarked=Q * CabinType=T', 'Embarked=S * CabinType=A', 'Embarked=S * CabinType=B', 'Embarked=S * CabinType=C', 'Embarked=S * CabinType=D', 'Embarked=S * CabinType=E', 'Embarked=S * CabinType=F', 'Embarked=S * CabinType=G', 'Embarked=S * CabinType=None', 'Embarked=S * CabinType=T']
+training: 0.822
+testing: 0.7877237851662404
+removed indices: []
+
+PRUNING:
+candidate for removal: Embarked=S * CabinType=T (index 0)
+training: 0.824
+testing: 0.7928388746803069
+removed
+baseline testing accuracy: 0.7928388746803069
+removed indices: [0]
+
+candidate for removal: Embarked=S * CabinType=None (index 1)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7928388746803069
+removed indices: [0]
+
+candidate for removal: Embarked=S * CabinType=G (index 2)
+training: 0.82
+testing: 0.7953964194373402
+removed
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=F (index 3)
+training: 0.822
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=E (index 4)
+training: 0.824
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=D (index 5)
+training: 0.822
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=C (index 6)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=B (index 7)
+training: 0.828
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=S * CabinType=A (index 8)
+training: 0.822
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2]
+
+candidate for removal: Embarked=Q * CabinType=T (index 9)
+training: 0.822
+testing: 0.7953964194373402
+removed
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2, 9]
+
+candidate for removal: Embarked=Q * CabinType=None (index 10)
+training: 0.824
+testing: 0.7953964194373402
+removed
+baseline testing accuracy: 0.7953964194373402
+removed indices: [0, 2, 9, 10]
+
+candidate for removal: Embarked=Q * CabinType=G (index 11)
+training: 0.822
+testing: 0.7979539641943734
+removed
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=F (index 12)
+training: 0.82
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=E (index 13)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=D (index 14)
+training: 0.824
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=C (index 15)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=B (index 16)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=Q * CabinType=A (index 17)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=T (index 18)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=None (index 19)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=G (index 20)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=F (index 21)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=E (index 22)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=D (index 23)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=C (index 24)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=B (index 25)
+training: 0.822
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=None * CabinType=A (index 26)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=T (index 27)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=None (index 28)
+training: 0.824
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=G (index 29)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=F (index 30)
+training: 0.824
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=E (index 31)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=D (index 32)
+training: 0.824
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=C (index 33)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=B (index 34)
+training: 0.824
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Embarked=C * CabinType=A (index 35)
+training: 0.828
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Parch>0 * CabinType=T (index 36)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11]
+
+candidate for removal: Parch>0 * CabinType=None (index 37)
+training: 0.822
+testing: 0.7979539641943734
+removed
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=G (index 38)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=F (index 39)
+training: 0.824
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=E (index 40)
+training: 0.826
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=D (index 41)
+training: 0.828
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=C (index 42)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=B (index 43)
+training: 0.824
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * CabinType=A (index 44)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * Embarked=S (index 45)
+training: 0.824
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * Embarked=Q (index 46)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * Embarked=None (index 47)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: Parch>0 * Embarked=C (index 48)
+training: 0.824
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=T (index 49)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=None (index 50)
+training: 0.824
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=G (index 51)
+training: 0.82
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=F (index 52)
+training: 0.822
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=E (index 53)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=D (index 54)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=C (index 55)
+training: 0.828
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=B (index 56)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * CabinType=A (index 57)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * Embarked=S (index 58)
+training: 0.824
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * Embarked=Q (index 59)
+training: 0.826
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * Embarked=None (index 60)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * Embarked=C (index 61)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp>0 * Parch>0 (index 62)
+training: 0.828
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=T (index 63)
+training: 0.826
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=None (index 64)
+training: 0.824
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=G (index 65)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=F (index 66)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=E (index 67)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=D (index 68)
+training: 0.826
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37]
+
+candidate for removal: SibSp * CabinType=C (index 69)
+training: 0.822
+testing: 0.7979539641943734
+removed
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * CabinType=B (index 70)
+training: 0.822
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * CabinType=A (index 71)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * Embarked=S (index 72)
+training: 0.826
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * Embarked=Q (index 73)
+training: 0.822
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * Embarked=None (index 74)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * Embarked=C (index 75)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: SibSp * Parch>0 (index 76)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.7979539641943734
+removed indices: [0, 2, 9, 10, 11, 37, 69]
+
+candidate for removal: Age * CabinType=T (index 77)
+training: 0.822
+testing: 0.8005115089514067
+removed
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=None (index 78)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=G (index 79)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=F (index 80)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=E (index 81)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=D (index 82)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=C (index 83)
+training: 0.826
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=B (index 84)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * CabinType=A (index 85)
+training: 0.824
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * Embarked=S (index 86)
+training: 0.82
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * Embarked=Q (index 87)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * Embarked=None (index 88)
+training: 0.822
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * Embarked=C (index 89)
+training: 0.826
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * Parch>0 (index 90)
+training: 0.822
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * SibSp>0 (index 91)
+training: 0.826
+testing: 0.782608695652174
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Age * SibSp (index 92)
+training: 0.83
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=T (index 93)
+training: 0.826
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=None (index 94)
+training: 0.824
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=G (index 95)
+training: 0.822
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=F (index 96)
+training: 0.822
+testing: 0.7953964194373402
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=E (index 97)
+training: 0.822
+testing: 0.7979539641943734
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=D (index 98)
+training: 0.828
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=C (index 99)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=B (index 100)
+training: 0.824
+testing: 0.7979539641943734
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * CabinType=A (index 101)
+training: 0.82
+testing: 0.7902813299232737
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Embarked=S (index 102)
+training: 0.824
+testing: 0.7851662404092071
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Embarked=Q (index 103)
+training: 0.824
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Embarked=None (index 104)
+training: 0.822
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Embarked=C (index 105)
+training: 0.83
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Parch>0 (index 106)
+training: 0.826
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * SibSp>0 (index 107)
+training: 0.822
+testing: 0.7928388746803069
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * SibSp (index 108)
+training: 0.822
+testing: 0.7877237851662404
+kept
+baseline testing accuracy: 0.8005115089514067
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77]
+
+candidate for removal: Fare * Age (index 109)
+training: 0.844
+testing: 0.8081841432225064
+removed
+baseline testing accuracy: 0.8081841432225064
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109]
+
+candidate for removal: Pclass * CabinType=T (index 110)
+training: 0.844
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=None (index 111)
+training: 0.842
+testing: 0.8056265984654731
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=G (index 112)
+training: 0.838
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=F (index 113)
+training: 0.848
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=E (index 114)
+training: 0.846
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=D (index 115)
+training: 0.846
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=C (index 116)
+training: 0.848
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=B (index 117)
+training: 0.846
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * CabinType=A (index 118)
+training: 0.84
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110]
+
+candidate for removal: Pclass * Embarked=S (index 119)
+training: 0.844
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119]
+
+candidate for removal: Pclass * Embarked=Q (index 120)
+training: 0.842
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119]
+
+candidate for removal: Pclass * Embarked=None (index 121)
+training: 0.838
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119]
+
+candidate for removal: Pclass * Embarked=C (index 122)
+training: 0.84
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122]
+
+candidate for removal: Pclass * Parch>0 (index 123)
+training: 0.836
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122]
+
+candidate for removal: Pclass * SibSp>0 (index 124)
+training: 0.844
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124]
+
+candidate for removal: Pclass * SibSp (index 125)
+training: 0.85
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125]
+
+candidate for removal: Pclass * Age (index 126)
+training: 0.83
+testing: 0.7979539641943734
+kept
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125]
+
+candidate for removal: Pclass * Fare (index 127)
+training: 0.84
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127]
+
+candidate for removal: Sex * CabinType=T (index 128)
+training: 0.84
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128]
+
+candidate for removal: Sex * CabinType=None (index 129)
+training: 0.842
+testing: 0.8107416879795396
+removed
+baseline testing accuracy: 0.8107416879795396
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129]
+
+candidate for removal: Sex * CabinType=G (index 130)
+training: 0.844
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=F (index 131)
+training: 0.842
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=E (index 132)
+training: 0.844
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=D (index 133)
+training: 0.834
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=C (index 134)
+training: 0.836
+testing: 0.8056265984654731
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=B (index 135)
+training: 0.836
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130]
+
+candidate for removal: Sex * CabinType=A (index 136)
+training: 0.844
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136]
+
+candidate for removal: Sex * Embarked=S (index 137)
+training: 0.842
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136]
+
+candidate for removal: Sex * Embarked=Q (index 138)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136]
+
+candidate for removal: Sex * Embarked=None (index 139)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136]
+
+candidate for removal: Sex * Embarked=C (index 140)
+training: 0.844
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140]
+
+candidate for removal: Sex * Parch>0 (index 141)
+training: 0.842
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140]
+
+candidate for removal: Sex * SibSp>0 (index 142)
+training: 0.848
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142]
+
+candidate for removal: Sex * SibSp (index 143)
+training: 0.836
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142]
+
+candidate for removal: Sex * Age (index 144)
+training: 0.82
+testing: 0.7800511508951407
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142]
+
+candidate for removal: Sex * Fare (index 145)
+training: 0.84
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142]
+
+candidate for removal: Sex * Pclass (index 146)
+training: 0.838
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=T (index 147)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=None (index 148)
+training: 0.838
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=G (index 149)
+training: 0.838
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=F (index 150)
+training: 0.844
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=E (index 151)
+training: 0.844
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=D (index 152)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=C (index 153)
+training: 0.84
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=B (index 154)
+training: 0.842
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: CabinType=A (index 155)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: Embarked=S (index 156)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: Embarked=Q (index 157)
+training: 0.842
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146]
+
+candidate for removal: Embarked=None (index 158)
+training: 0.844
+testing: 0.8132992327365729
+removed
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Embarked=C (index 159)
+training: 0.838
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Parch>0 (index 160)
+training: 0.84
+testing: 0.8056265984654731
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: SibSp>0 (index 161)
+training: 0.838
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: SibSp (index 162)
+training: 0.84
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Age (index 163)
+training: 0.836
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Fare (index 164)
+training: 0.836
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Pclass (index 165)
+training: 0.834
+testing: 0.8081841432225064
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
+
+candidate for removal: Sex (index 166)
+training: 0.838
+testing: 0.8107416879795396
+kept
+baseline testing accuracy: 0.8132992327365729
+removed indices: [0, 2, 9, 10, 11, 37, 69, 77, 109, 110, 119, 122, 124, 125, 127, 128, 129, 130, 136, 140, 142, 146, 158]
