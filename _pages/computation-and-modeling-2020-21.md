@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="83">
+<font size="3em"><ol reversed start="84">
+    <li><b>Friday, April 23</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/540806693">Class Recording</a> - sudoku solver review
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-84">Backward Selection</a>
+    </li>
+    <br>
     <li><b>Wednesday, April 21</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/539777375">Class Recording</a> - quiz 2-5 review
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-83">Quiz Corrections; Continue Solving Mini Sudoku</a>
