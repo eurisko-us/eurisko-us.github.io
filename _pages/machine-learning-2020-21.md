@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="117">
+<font size="3em"><ol reversed start="118">
+    <li><b>Monday, April 26</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/541803614">Class Recording</a> - game trees
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-118">Tic-Tac-Toe Implementation</a>
+    </li>
+    <br>
     <li><b>Friday, April 23</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/540806693">Class Recording</a> - unit testing framework presentations
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-117">Backward Selection; Space Empires</a>
