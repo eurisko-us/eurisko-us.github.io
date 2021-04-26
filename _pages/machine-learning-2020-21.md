@@ -77,7 +77,7 @@ author_profile: false
 <font size="3em"><ol reversed start="118">
     <li><b>Monday, April 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/541803614">Class Recording</a> - game trees
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-118">Tic-Tac-Toe Implementation</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-118">Tic-Tac-Toe Implementation & Presentation Prep</a>
     </li>
     <br>
     <li><b>Friday, April 23</b>
