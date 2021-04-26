@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="84">
+<font size="3em"><ol reversed start="85">
+    <li><b>Monday, April 26</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/540806693">Class Recording</a> - switching to shared implementation of space empires
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-85">Space Empires Implementation Presentation; Game Trees</a>
+    </li>
+    <br>
     <li><b>Friday, April 23</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/540806693">Class Recording</a> - sudoku solver review
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-84">Backward Selection</a>
