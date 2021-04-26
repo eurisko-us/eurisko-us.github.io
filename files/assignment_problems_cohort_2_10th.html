@@ -14495,7 +14495,44 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>Game</p>
+<h1 id="Problem-85">Problem 85<a class="anchor-link" href="#Problem-85">&#182;</a></h1><h3 id="Space-Empires-Presentation">Space Empires Presentation<a class="anchor-link" href="#Space-Empires-Presentation">&#182;</a></h3><p>Prepare a 3-5 minute presentation about your Space Empires implementation for Wednesday. Don't exceed 5 minutes. Address the following:</p>
+<ol>
+<li>What is your general architecture? E.g. what classes do you use, how does your combat engine work, how is state stored/updated, how do players communicate with the game.</li>
+<li>What are some things your implementation does elegantly?</li>
+<li>What are some things that could be improved, and what kind of state are they in (are they just nice-to-haves, or are there things that will cause major issues down the road if not adjusted)?</li>
+</ol>
+<p>You can show parts of your code, but DON'T go through it line-by-line. This is supposed to be a quick elevator pitch of your implementation.</p>
+<p><strong>Note:</strong> You don't have to make slides or write stuff on notecards or anything like that. You just need to deliver a clear and concise explanation of how your implementation works. But in order to achieve that, you'll need to practice a bit beforehand.</p>
+<h3 id="Intro-to-Minimax-Algorithm">Intro to Minimax Algorithm<a class="anchor-link" href="#Intro-to-Minimax-Algorithm">&#182;</a></h3><p>To introduce the idea of how one can design intelligent agents, we'll implement an intelligent angent that solves tic-tac-toe using the minimax algorithm. But before we actually implement it, we need to understand it at a high level.</p>
+<p><strong>Watch the first 8 minutes of the following video</strong> that explains the minimax algorithm. (You can probably set it to 1.5x speed)</p>
+<blockquote><p><a href="https://www.youtube.com/watch?v=trKjYdBASyQ">https://www.youtube.com/watch?v=trKjYdBASyQ</a></p>
+</blockquote>
+<p>Then, answer the following questions:</p>
+<ol>
+<li><p>What does the root of the game tree represent?</p>
+</li>
+<li><p>What does each edge of the game tree represent?</p>
+</li>
+<li><p>What are the scores of a win, a loss, a tie? (3 answers)</p>
+</li>
+<li><p>Is your opponent the maximizing player or the minimizing player?</p>
+</li>
+<li><p>If a node has a child with score +1 and a child with score -1, then what is the score of the node?</p>
+</li>
+<li><p>If a node has two children with score +1, one child with score 0, and one child with score -1, then what is the score of the node?</p>
+</li>
+<li><p>Draw the full game tree proceeding from the following root node, and <strong>label each node with its score according to the minimax algorithm.</strong> There should be 12 nodes in total.</p>
+</li>
+</ol>
+
+<pre><code>X | O | X
+---------
+  | O | O
+---------
+  |   | X</code></pre>
+<p>You can do the drawing on paper, take a picture, and put that in your Overleaf doc.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Overleaf doc with answers to the above questions</p>
+<h3 id="Quiz-Friday">Quiz Friday<a class="anchor-link" href="#Quiz-Friday">&#182;</a></h3><p>Forward/backward selection, basic manipulations with pandas / numpy / sklearn.</p>
 
 </div>
 </div>
