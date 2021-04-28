@@ -14276,56 +14276,6 @@ $$<p>See the updated <a href="https://www.overleaf.com/read/wjmgkxpccvpj">Eurisk
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Grading:</strong> 10 points</p>
-<p><strong>Part 2: The danger of using too large a $k$</strong></p>
-<p><strong>a.</strong> What happens if we try to perform the $k$ nearest neighbors approach with $k=13$ (i.e. the full dataset) to infer the cookie classification of point $P?$ What issue occurs, and why does it occur?</p>
-<p>Recall the following cookie dataset (that has been augmented with some additional examples):</p>
-
-<pre><code>['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
-[['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
-['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
-['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
-['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
-['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
-['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
-['Sugar'       ,     0.02     ,       0.08     ,      0.45     ,     0.45      ],
-['Sugar'       ,     0.10     ,       0.15     ,      0.35     ,     0.40      ],
-['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
-['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
-['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
-['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
-['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
-['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
-['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
-['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
-['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
-['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
-['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]]</code></pre>
-<p>When fitting our k-nearest neighbors models, we have been using this dataset to predict the type of a cookie based on its ingredient portions. We've also seen that issues can arise when $k$ is too small or too large.</p>
-<p><strong>So, what is a good value of $k?$</strong></p>
-<p><strong>a.</strong> To explore this question, plot the function
-$$
-y= \text{percent_correct}(k), \qquad k=1,2,3, \ldots, 16,
-$$
-where $\text{percent_correct}(k)$ is the percentage of points in the dataset that the $k$-nearest neighbors model would classify correctly.</p>
-
-<pre><code>for each data point:
-    1. fit a kNN model to all the data EXCEPT that data point
-    2. use the kNN model to classify the data point
-    3. determine whether the kNN classification matches up
-       with the actual class of the data point
-
-percent_correct = num_correct_classifications / tot_num_data_points</code></pre>
-<p>You should get the following result:</p>
-<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/knn-intro-cross-validation.png' border='0'/></center><p><strong>b.</strong> Based on what you know about what happens when $k$ is too small or too large, does the shape of your plot makes sense?</p>
-<p><strong>c.</strong> What would be an appropriate value (or range of values) of $k$ for this modeling task? Justify your answer by referring to your plot.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><h3 id="Neural-Nets">Neural Nets<a class="anchor-link" href="#Neural-Nets">&#182;</a></h3><p><strong>Notation</strong></p>
 <ul>
 <li><p>$n_k$ - the $k$th neuron</p>
@@ -14488,6 +14438,81 @@ $$
 <p>log for debugging purposes:</p>
 <blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/logistic-regressor-post-pruning.txt</a></p>
 </blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Minimax-Algorithm">Minimax Algorithm<a class="anchor-link" href="#Minimax-Algorithm">&#182;</a></h3><p>exercise by hand</p>
+<h3 id="KNN">KNN<a class="anchor-link" href="#KNN">&#182;</a></h3><p>Fit the titanic surival dataset using sklearn's k-nearest neighbors classifier.</p>
+<p>table with train &amp; test accuracies for k=5, 15, 25</p>
+<p>Using all non-interaction features</p>
+<p>Backwards selection on non-interaction features</p>
+<p>Get the baseline training/testing accuracy using the non-interaction</p>
+<p>use k=5, 15, 25</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-86">Problem 86<a class="anchor-link" href="#Problem-86">&#182;</a></h1><h3 id="K-Nearest-Neighbors-&amp;-Leave-One-Out-Cross-Validation">K-Nearest Neighbors &amp; Leave-One-Out Cross Validation<a class="anchor-link" href="#K-Nearest-Neighbors-&amp;-Leave-One-Out-Cross-Validation">&#182;</a></h3><p>Consider the following cookie dataset (it's similar to the one we used before, but it has some additional entries).</p>
+
+<pre><code>&gt;&gt;&gt; df = pd.DataFrame(
+    [['Shortbread'  ,     0.14     ,       0.14     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.10     ,       0.18     ,      0.28     ,     0.44      ],
+['Shortbread'  ,     0.12     ,       0.10     ,      0.33     ,     0.45      ],
+['Shortbread'  ,     0.10     ,       0.25     ,      0.25     ,     0.40      ],
+['Sugar'       ,     0.00     ,       0.10     ,      0.40     ,     0.50      ],
+['Sugar'       ,     0.00     ,       0.20     ,      0.40     ,     0.40      ],
+['Sugar'       ,     0.02     ,       0.08     ,      0.45     ,     0.45      ],
+['Sugar'       ,     0.10     ,       0.15     ,      0.35     ,     0.40      ],
+['Sugar'       ,     0.10     ,       0.08     ,      0.35     ,     0.47      ],
+['Sugar'       ,     0.00     ,       0.05     ,      0.30     ,     0.65      ],
+['Fortune'     ,     0.20     ,       0.00     ,      0.40     ,     0.40      ],
+['Fortune'     ,     0.25     ,       0.10     ,      0.30     ,     0.35      ],
+['Fortune'     ,     0.22     ,       0.15     ,      0.50     ,     0.13      ],
+['Fortune'     ,     0.15     ,       0.20     ,      0.35     ,     0.30      ],
+['Fortune'     ,     0.22     ,       0.00     ,      0.40     ,     0.38      ],
+['Shortbread'  ,     0.05     ,       0.12     ,      0.28     ,     0.55      ],
+['Shortbread'  ,     0.14     ,       0.27     ,      0.31     ,     0.28      ],
+['Shortbread'  ,     0.15     ,       0.23     ,      0.30     ,     0.32      ],
+['Shortbread'  ,     0.20     ,       0.10     ,      0.30     ,     0.40      ]],
+    columns = ['Cookie Type' ,'Portion Eggs','Portion Butter','Portion Sugar','Portion Flour' ]
+    )</code></pre>
+<p>The goal is to create a k-nearest neighbors model for this data. But there are two issues:</p>
+<ol>
+<li><p>We don't know what value of k to use. Should we use k=2? k=5? k=9? It's not clear.</p>
+</li>
+<li><p>Our dataset is small (19 data points). If we split it in half for training and validation, we'll be severely handicapping our model's performance (cutting a small dataset in half is usually worse than cutting a big dataset in half) and we might not have enough validation points to draw good conclusions about the performance of the model.</p>
+</li>
+</ol>
+<p>The way to resolve these two issues is to use <strong>leave-one-out cross-validation</strong>:</p>
+<ul>
+<li><p>For each record in our dataset, we'll train a k-nearest neighbors model on all the OTHER records, and then check whether the model classifies our record correctly.</p>
+</li>
+<li><p>We'll do this for all records in the data set and compute the accuracy.</p>
+</li>
+<li><p>Then, we'll plot the accuracy for various values of k and see where it's the highest.</p>
+</li>
+</ul>
+<p>Carry out the above procedure using sklearn's k-nearest neighbors implementation. You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/leave-one-out-knn-cookie-data.png' border='0'/></center><p>For your debugging purposes, here are the accuracy values you should be getting (rounded to 2 decimal places):</p>
+
+<pre><code>[0.61, 0.61, 0.67, 0.78, 0.83, 0.83, 0.61, 0.56, 0.61, 0.44, 0.44, 0.33, 0.44, 0.44, 0.44, 0.44, 0.44, 0.44]</code></pre>
+<p>And here is a log:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/knn-leave-one-out-cookie-dataset.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/knn-leave-one-out-cookie-dataset.txt</a></p>
+</blockquote>
+<p>Once you've got that plot, answer the following questions.</p>
+<ol>
+<li>Why is the accuracy low when k is very low?</li>
+<li>Why is the accuracy low when k is very high?</li>
+</ol>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Overleaf doc containing your plot and the answers to the 2 questions, along with a commit link to your code that generated the plot.</p>
+<p><strong>Remember, quiz Friday! See the previous assignment for information on what's on it.</strong></p>
 
 </div>
 </div>
