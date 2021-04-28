@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="85">
+<font size="3em"><ol reversed start="86">
+    <li><b>Wednesday, April 28</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/542831865">Class Recording</a> - space empires presentations. (This was a really good class!)
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-86">Leave-One-Out Cross-Validation with K-Nearest-Neighbors</a>
+    </li>
+    <br>
     <li><b>Monday, April 26</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/540806693">Class Recording</a> - switching to shared implementation of space empires
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-85">Space Empires Implementation Presentation; Game Trees</a>
