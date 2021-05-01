@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="86">
+<font size="3em"><ol reversed start="87">
+    <li><b>Friday, April 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/543699559">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-87">Normalization, K-Fold Cross Validation</a>
+    </li>
+    <br>
     <li><b>Wednesday, April 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/542831865">Class Recording</a> - space empires presentations. (This was a really good class!)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-86">Leave-One-Out Cross-Validation with K-Nearest-Neighbors</a>
