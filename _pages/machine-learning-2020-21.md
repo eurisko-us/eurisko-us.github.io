@@ -75,6 +75,11 @@ author_profile: false
 
 <br><br>
 <font size="3em"><ol reversed start="119">
+    <li><b>Friday, April 30</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/543699559">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-120">Normalization, K-Fold Cross Validation</a>
+    </li>
+    <br>
     <li><b>Wednesday, April 28</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/542831865">Class Recording</a> - tic-tac-toe presentations. (This was a really good class!)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-119">Minimax Player</a>
