@@ -13136,22 +13136,27 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Problem-120">Problem 120<a class="anchor-link" href="#Problem-120">&#182;</a></h1><h3 id="KNN---Titanic-Survival-Modeling">KNN - Titanic Survival Modeling<a class="anchor-link" href="#KNN---Titanic-Survival-Modeling">&#182;</a></h3><p><strong>a.</strong> Use scikit-learn's k-nearest neighbors implementation to predict survival in the titanic survival modeling dataset, without interaction terms.</p>
-<p>Create a plot of leave-one-out accuracy vs $k$ for the following values of $k{:}$</p>
-
-<pre><code>[1,3,5,10,15,20,30,40,50,75,100,150,200,300,400,600,800]</code></pre>
+<h1 id="Problem-120">Problem 120<a class="anchor-link" href="#Problem-120">&#182;</a></h1><h3 id="KNN---Titanic-Survival-Modeling">KNN - Titanic Survival Modeling<a class="anchor-link" href="#KNN---Titanic-Survival-Modeling">&#182;</a></h3><p><strong>Note:</strong> Previously, this problem had consisted of a KNN model on the full titanic dataset along with normalization techniques. The analysis was taking too long on chromebooks, so I've reduced the size of the dataset. Also, the normalization techniques weren't having an effect on the result, so I took that off this assignment but will revise the normalization task and put it on the next assignment. Any code you wrote for the normalization techniques will be useful in the next assignment.</p>
 <hr>
-<p>Before fitting a k-nearest neighbors model, it's common to "normalize" the data so that all the features lie within the same range. Otherwise, variables with larger ranges are given greater distance contributions (which is usually not what we want).</p>
-<p>The following video explains 3 different normalization techniques: simple scaling, min-max scaling, and z-scoring.</p>
-<blockquote><p><a href="https://www.youtube.com/watch?v=vaBIkSJ4b5k">https://www.youtube.com/watch?v=vaBIkSJ4b5k</a></p>
+<p>In this problem, your task is to use scikit-learn's k-nearest neighbors implementation to predict survival in a portion of the titanic survival modeling dataset.</p>
+<p>Remember that the fully-processed dataset is here:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv</a></p>
 </blockquote>
-<hr>
-<p><strong>b.</strong> Repeat (a), but this time normalize the data using simple scaling beforehand.</p>
-<p><strong>c.</strong> Repeat (a), but this time normalize the data using min-max scaling beforehand.</p>
-<p><strong>d.</strong> Repeat (a), but this time normalize the data using z-scoring beforehand.</p>
-<p><strong>e.</strong> Overlay all 4 plots on the same graph. Be sure to include a legend that labels the plots as "unscaled", "simple scaling", "min-max", "z-score".</p>
-<p>Once you have your plot, post it on Slack in the #checkpoints channel.</p>
-<h3 id="K-Fold-Cross-Validation">K-Fold Cross Validation<a class="anchor-link" href="#K-Fold-Cross-Validation">&#182;</a></h3><p>K-fold cross validation is similar to leave-one-out cross validation, except that instead of repeatedly leaving out one record, we split the dataset into $k$ sections or "folds" and repeatedly leave out one of those folds.</p>
+<p>Take that fully-processed dataset and filter it down to the first 100 rows, and only these columns:</p>
+
+<pre><code>[
+    "Survived",
+    "Sex",
+    "Pclass",
+    "Fare",
+    "Age",
+    "SibSp"
+]</code></pre>
+<p>Then, create a plot of leave-one-out accuracy vs $k$ for the following values of $k{:}$</p>
+
+<pre><code>[1,3,5,10,15,20,30,40,50,75]</code></pre>
+<p>You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/leave-one-out-knn-titanic-100.png' border='0'/></center><h3 id="K-Fold-Cross-Validation">K-Fold Cross Validation<a class="anchor-link" href="#K-Fold-Cross-Validation">&#182;</a></h3><p>K-fold cross validation is similar to leave-one-out cross validation, except that instead of repeatedly leaving out one record, we split the dataset into $k$ sections or "folds" and repeatedly leave out one of those folds.</p>
 <p>This video explains it pretty well, with a really good visual at the end:</p>
 <blockquote><p><a href="https://www.youtube.com/watch?v=ClZYAou70Ug">https://www.youtube.com/watch?v=ClZYAou70Ug</a></p>
 </blockquote>
@@ -13164,7 +13169,12 @@ div#notebook {
 <li><p>If we had a dataset with 800 records, for what value of $k$ would $k$-fold cross validation be equivalent to leave-one-out cross validation?</p>
 </li>
 </ol>
-<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Overleaf doc with the plot and the answers to the 3 questions</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><ul>
+<li><p>Link to your code that generates the plot</p>
+</li>
+<li><p>Overleaf doc with the plot and the answers to the 3 questions</p>
+</li>
+</ul>
 
 </div>
 </div>
