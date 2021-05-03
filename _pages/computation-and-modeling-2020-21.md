@@ -75,10 +75,15 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="87">
+<font size="3em"><ol reversed start="88">
+    <li><b>Monday, May 3</b>
+        <br>No class, but there is an assignment
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-88">KNN and Normalization</a>
+    </li>
+    <br>
     <li><b>Friday, April 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/543699559">Class Recording</a>
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-87">Normalization, K-Fold Cross Validation</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-87">KNN on Titanic Data Set, K-Fold Cross Validation</a>
     </li>
     <br>
     <li><b>Wednesday, April 28</b>
