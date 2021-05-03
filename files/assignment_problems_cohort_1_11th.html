@@ -13136,6 +13136,30 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-121">Problem 121<a class="anchor-link" href="#Problem-121">&#182;</a></h1><p>Before fitting a k-nearest neighbors model, it's common to "normalize" the data so that all the features lie within the same range. Otherwise, variables with larger ranges are given greater distance contributions (which is usually not what we want).</p>
+<p>The following video explains 3 different normalization techniques: simple scaling, min-max scaling, and z-scoring.</p>
+<blockquote><p><a href="https://www.youtube.com/watch?v=vaBIkSJ4b5k">https://www.youtube.com/watch?v=vaBIkSJ4b5k</a></p>
+</blockquote>
+<hr>
+<p>Consider the following dataset. The goal is to use the features to predict the book type (children's book vs adult book).</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/book-data.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/book-data.csv</a></p>
+</blockquote>
+<p>First, read in this dataset and change the "book type" column to be numeric (1 if adult book, 0 if children's book).</p>
+<p><strong>a.</strong> Create a "leave-one-out accuracy vs k" curve for <code>k=[1,3,5,...,99]</code>.</p>
+<p><strong>b.</strong> Repeat (a), but this time normalize the data using simple scaling beforehand.</p>
+<p><strong>c.</strong> Repeat (a), but this time normalize the data using min-max scaling beforehand.</p>
+<p><strong>d.</strong> Repeat (a), but this time normalize the data using z-scoring beforehand.</p>
+<p><strong>e.</strong> Overlay all 4 plots on the same graph. Be sure to include a legend that labels the plots as "unscaled", "simple scaling", "min-max", "z-score".</p>
+<p>You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/leave-one-out-knn-books.png' border='0'/></center><p><strong>f.</strong> Answer the big question: why does normalization improve the accuracy? (Or equivalently, why did the model perform worse on the unnormalized data?)</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Overleaf doc with plot and explanation, as well as a link to the code that you wrote to generate the plot.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-120">Problem 120<a class="anchor-link" href="#Problem-120">&#182;</a></h1><h3 id="KNN---Titanic-Survival-Modeling">KNN - Titanic Survival Modeling<a class="anchor-link" href="#KNN---Titanic-Survival-Modeling">&#182;</a></h3><p><strong>Note:</strong> Previously, this problem had consisted of a KNN model on the full titanic dataset along with normalization techniques. The analysis was taking too long on chromebooks, so I've reduced the size of the dataset. Also, the normalization techniques weren't having an effect on the result, so I took that off this assignment but will revise the normalization task and put it on the next assignment. Any code you wrote for the normalization techniques will be useful in the next assignment.</p>
 <hr>
 <p>In this problem, your task is to use scikit-learn's k-nearest neighbors implementation to predict survival in a portion of the titanic survival modeling dataset.</p>
