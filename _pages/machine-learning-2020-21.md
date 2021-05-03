@@ -74,10 +74,15 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="119">
+<font size="3em"><ol reversed start="121">
+    <li><b>Monday, May 3</b>
+        <br>No class, but there is an assignment
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-121">KNN and Normalization</a>
+    </li>
+    <br>
     <li><b>Friday, April 30</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/543699559">Class Recording</a>
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-120">Normalization, K-Fold Cross Validation</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-120"KNN on Titanic Data Set, K-Fold Cross Validation</a>
     </li>
     <br>
     <li><b>Wednesday, April 28</b>
