@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="88">
+<font size="3em"><ol reversed start="89">
+    <li><b>Wednesday, May 5</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/545599615">Class Recording</a> - review quiz 2-6, review kNN normalization, demonstration of code efficiency
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-89">KNN Code Efficiency + Quiz Corrections</a>
+    </li>
+    <br>
     <li><b>Monday, May 3</b>
         <br>No class, but there is an assignment
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-88">KNN and Normalization</a>
