@@ -14483,7 +14483,19 @@ $$
 
 <pre><code>["Survived", "Sex", "Pclass", "Fare", "Age","SibSp"]</code></pre>
 <p>Then, just as before, make a plot of leave-one-out cross validation vs $k$ for <code>k=[1,3,5,7,...,99]</code>. Overlay the 4 resulting plots: "unscaled", "simple scaling", "min-max", "z-score". You should get the following result:</p>
-<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/leave-one-out-knn-titanic-100-normalization.png' border='0'/></center><p><strong>b.</strong> Speed up your code in part (a) so it runs in 45 seconds or less. I took a deeper dive into some code that was running slow for students, and it turns out the code just needs to be written more efficiently.</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/leave-one-out-knn-titanic-100-normalization.png' border='0'/></center><p><strong>b.</strong> Compute the relative speed at which your code runs (relative to mine). The way you can do this is to run this code snippet 5 times and take the average time:</p>
+
+<pre><code>import time
+start = time.time()
+
+counter = 0
+for _ in range(1000000):
+    counter += 1
+
+end = time.time()
+print(end - start)</code></pre>
+<p>When I do this, I get an average time of about 0.15 seconds. So to find your relative speed, divide your result by mine.</p>
+<p><strong>c.</strong> Speed up your code in part (a) so it runs in (your relative speed) * 45 seconds or less. I took a deeper dive into some code that was running slow for students, and it turns out the code just needs to be written more efficiently.</p>
 <p>To make the code more efficient, you need to avoid unnessarily repeating expensive operations. Anything involving a dataset transformation is usually expensive.</p>
 <ul>
 <li><p>The very first thing you do should be processing all of your data and splitting it into your <code>X</code> and <code>y</code> arrays. DON'T do this every time you fit a model -- just do it once at the beginning.</p>
@@ -14507,8 +14519,8 @@ print('time taken:', end_time - start_time)</code></pre>
 <li><p><strong>If you get stuck for more than 10 minutes without making progress, ping me on Slack so that I can take a look at your code and let you know if there's anything else that's making it slow.</strong></p>
 </li>
 </ul>
-<p><strong>c.</strong> Complete quiz corrections for any problems you missed. (I'll have the quizzes graded by tonight, 5/5.) That will either involve revising your free response answers or revising your code and sending me the revised version.</p>
-<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Link to KNN code that runs in 40 seconds or less. When I run your code, it should print out the total time it took to run.</p>
+<p><strong>d.</strong> Complete quiz corrections for any problems you missed. (I'll have the quizzes graded by tonight, 5/5.) That will either involve revising your free response answers or revising your code and sending me the revised version.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Link to KNN code that runs in (your relative speed) * 45 seconds or less. When I run your code, it should print out the total time it took to run.</p>
 <p>Quiz corrections</p>
 
 </div>
