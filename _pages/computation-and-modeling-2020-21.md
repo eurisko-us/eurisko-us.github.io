@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="89">
+<font size="3em"><ol reversed start="90">
+    <li><b>Wednesday, Friday 7</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/546615398">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-90">Tic-tac-toe implementation</a>
+    </li>
+    <br>
     <li><b>Wednesday, May 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/545599615">Class Recording</a> - review quiz 2-6, review kNN normalization, demonstration of code efficiency
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-89">KNN Code Efficiency + Quiz Corrections</a>
