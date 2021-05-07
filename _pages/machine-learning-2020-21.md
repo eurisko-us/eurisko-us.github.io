@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="122">
+<font size="3em"><ol reversed start="123">
+    <li><b>Friday, May 7</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/546615398">Class Recording</a> - "gobble" game
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-123">Gobble Implementation + Game Tree Analysis</a>
+    </li>
+    <br>
     <li><b>Wednesday, May 5</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/545599615">Class Recording</a> - review quiz 2-6, review kNN normalization, demonstration of code efficiency
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-122">KNN Code Efficiency + Quiz Corrections</a>
