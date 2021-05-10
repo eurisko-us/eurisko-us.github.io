@@ -75,8 +75,13 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="90">
-    <li><b>Wednesday, Friday 7</b>
+<font size="3em"><ol reversed start="91">
+    <li><b>Monday, May 10</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/547706993">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-91">K-Means Clustering, Pull Requests</a>
+    </li>
+    <br>
+    <li><b>Friday, May 7</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/546615398">Class Recording</a>
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-90">Tic-tac-toe implementation</a>
     </li>
