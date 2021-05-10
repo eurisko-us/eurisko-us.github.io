@@ -75,6 +75,11 @@ author_profile: false
 
 <br><br>
 <font size="3em"><ol reversed start="123">
+    <li><b>Monday, May 10</b>
+        <br>No class, but there is an assignment
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_11th.html#Problem-124">K-Means Clustering</a>
+    </li>
+    <br>
     <li><b>Friday, May 7</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/546615398">Class Recording</a> - "gobble" game
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-123">Gobble Implementation + Game Tree Analysis</a>
