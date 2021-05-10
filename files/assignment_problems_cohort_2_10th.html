@@ -14467,6 +14467,259 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-91">Problem 91<a class="anchor-link" href="#Problem-91">&#182;</a></h1><h3 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h3><p><strong>Clustering in General</strong></p>
+<p>"Clustering" is the act of finding "groups" of similar records within data.</p>
+<p>Watch this video to get a general sense of what clustering is and why we care about it. (Best to play it at 1.5 or 1.75x speed to save time)</p>
+<blockquote><p><a href="https://www.youtube.com/watch?v=KtRLF6rAkyo">https://www.youtube.com/watch?v=KtRLF6rAkyo</a></p>
+</blockquote>
+<p><strong>K-Means Clustering</strong></p>
+<p>Your task will be to implement a basic clustering technique called "k-means clustering". Here is a video describing k-means clustering:</p>
+<blockquote><p><a href="https://www.youtube.com/watch?v=R2e3Ls9H_fc">https://www.youtube.com/watch?v=R2e3Ls9H_fc</a></p>
+</blockquote>
+<p>Here is a summary of k-means clustering:</p>
+<ol>
+<li><p>Initialize the clusters</p>
+<ul>
+<li><p>Randomly divide the data into k parts. Each part represents an initial "cluster".</p>
+</li>
+<li><p>Compute the mean of each part. Each mean represents an initial cluster center.</p>
+</li>
+</ul>
+</li>
+<li><p>Update the clusters</p>
+<ul>
+<li><p>Re-assign each record to the cluster with the nearest center (using Euclidean distance).</p>
+</li>
+<li><p>Compute the new cluster centers by taking the mean of the records in each cluster.</p>
+</li>
+</ul>
+</li>
+<li><p>Keep repeating step 2 until the clusters don't change after the update.</p>
+</li>
+</ol>
+<p><strong>Your Task</strong></p>
+<p>Write a <code>KMeans</code> clustering class and use it to classify the following data.</p>
+
+<pre><code># these column labels aren't necessary to use
+# in the problem, but they make the problem more
+# concrete when you're thinking about what the data
+# means.
+columns = ['Portion Eggs',
+            'Portion Butter',
+            'Portion Sugar',
+            'Portion Flour']
+
+data = [[0.14, 0.14, 0.28, 0.44],
+        [0.22, 0.1, 0.45, 0.33],
+        [0.1, 0.19, 0.25, 0.4],
+        [0.02, 0.08, 0.43, 0.45],
+        [0.16, 0.08, 0.35, 0.3],
+        [0.14, 0.17, 0.31, 0.38],
+        [0.05, 0.14, 0.35, 0.5],
+        [0.1, 0.21, 0.28, 0.44],
+        [0.04, 0.08, 0.35, 0.47],
+        [0.11, 0.13, 0.28, 0.45],
+        [0.0, 0.07, 0.34, 0.65],
+        [0.2, 0.05, 0.4, 0.37],
+        [0.12, 0.15, 0.33, 0.45],
+        [0.25, 0.1, 0.3, 0.35],
+        [0.0, 0.1, 0.4, 0.5],
+        [0.15, 0.2, 0.3, 0.37],
+        [0.0, 0.13, 0.4, 0.49],
+        [0.22, 0.07, 0.4, 0.38],
+        [0.2, 0.18, 0.3, 0.4]]
+
+# we usually don't know the classes, of the 
+# data we're trying to cluster, but I'm providing
+# them here so that you can actually see that the
+# k-means algorithm succeeds.
+
+classes = ['Shortbread',
+            'Fortune',
+            'Shortbread',
+            'Sugar',
+            'Fortune',
+            'Shortbread',
+            'Sugar',
+            'Shortbread',
+            'Sugar',
+            'Shortbread',
+            'Sugar',
+            'Fortune',
+            'Shortbread',
+            'Fortune',
+            'Sugar',
+            'Shortbread',
+            'Sugar',
+            'Fortune',
+            'Shortbread']</code></pre>
+<p>Make sure your class passes the following test:</p>
+
+<pre><code># initial_clusters is a dictionary where the key
+# represents the cluster number and the value is
+# a list of indices (i.e. row numbers in the data set)
+# of records that are said to be in that cluster
+
+&gt;&gt;&gt; initial_clusters = {
+    1: [0,3,6,9,12,15,18],
+    2: [1,4,7,10,13,16],
+    3: [2,5,8,11,14,17]
+    }
+&gt;&gt;&gt; kmeans = KMeans(initial_clusters, data)
+&gt;&gt;&gt; kmeans.run()
+&gt;&gt;&gt; kmeans.clusters
+{
+    0: [0, 2, 5, 7, 9, 12, 15, 18],
+    1: [3, 6, 8, 10, 14, 16],
+    2: [1, 4, 11, 13, 17]
+}</code></pre>
+<p>Here are some step-by-step tests to help you along:</p>
+
+<pre><code>&gt;&gt;&gt; initial_clusters = {
+    1: [0,3,6,9,12,15,18],
+    2: [1,4,7,10,13,16],
+    3: [2,5,8,11,14,17]
+    }
+&gt;&gt;&gt; kmeans = KMeans(initial_clusters, data)
+
+### ITERATION 1
+&gt;&gt;&gt; kmeans.update_clusters_once()
+
+&gt;&gt;&gt; kmeans.clusters
+{
+    1: [0, 3, 6, 9, 12, 15, 18],
+    2: [1, 4, 7, 10, 13, 16],
+    3: [2, 5, 8, 11, 14, 17]
+}
+&gt;&gt;&gt; kmeans.centers
+{
+    1: [0.113, 0.146, 0.324, 0.437],
+    2: [0.122, 0.115, 0.353, 0.427],
+    3: [0.117, 0.11, 0.352, 0.417]
+}
+&gt;&gt;&gt; {n: [classes[i] for i in cluster_indices] \
+    for cluster_number, cluster_indices in kmeans.clusters.items()}
+{
+    1: ['Shortbread', 'Sugar', 'Sugar', 'Shortbread', 'Shortbread', 'Shortbread', 'Shortbread'], 
+    2: ['Fortune', 'Fortune', 'Shortbread', 'Sugar', 'Fortune', 'Sugar'], 
+    3: ['Shortbread', 'Shortbread', 'Sugar', 'Fortune', 'Sugar', 'Fortune']
+}
+
+### ITERATION 2
+&gt;&gt;&gt; kmeans.update_clusters_once()
+
+&gt;&gt;&gt; kmeans.clusters
+{
+    1: [0, 2, 5, 6, 7, 9, 10, 12, 15, 18],
+    2: [14, 16],
+    3: [1, 3, 4, 8, 11, 13, 17]
+}
+
+&gt;&gt;&gt; kmeans.centers
+{
+    1: [0.111, 0.158, 0.302, 0.448],
+    2: [0.0, 0.115, 0.4, 0.495],
+    3: [0.159, 0.08, 0.383, 0.379]
+}
+
+&gt;&gt;&gt; {n: [classes[i] for i in cluster_indices] \
+    for cluster_number, cluster_indices in kmeans.clusters.items()}
+{
+    1: ['Shortbread', 'Shortbread', 'Shortbread', 'Sugar', 'Shortbread', 'Shortbread', 'Sugar', 'Shortbread', 'Shortbread', 'Shortbread'], 
+    2: ['Sugar', 'Sugar'], 
+    3: ['Fortune', 'Sugar', 'Fortune', 'Sugar', 'Fortune', 'Fortune', 'Fortune']
+}
+
+### ITERATION 3
+&gt;&gt;&gt; kmeans.update_clusters_once()
+
+&gt;&gt;&gt; kmeans.clusters
+{
+    0: [0, 2, 5, 7, 9, 12, 15, 18],
+    1: [3, 6, 8, 10, 14, 16],
+    2: [1, 4, 11, 13, 17]
+}
+
+&gt;&gt;&gt; kmeans.centers
+{
+    0: [0.133, 0.171, 0.291, 0.416],
+    1: [0.018, 0.1, 0.378, 0.51],
+    2: [0.21, 0.08, 0.38, 0.346]
+}
+
+&gt;&gt;&gt; {n: [classes[i] for i in cluster_indices] \
+    for cluster_number, cluster_indices in kmeans.clusters.items()}
+{
+    0: ['Shortbread', 'Shortbread', 'Shortbread', 'Shortbread', 'Shortbread', 'Shortbread', 'Shortbread', 'Shortbread'],
+    1: ['Sugar', 'Sugar', 'Sugar', 'Sugar', 'Sugar', 'Sugar'],
+    2: ['Fortune', 'Fortune', 'Fortune', 'Fortune', 'Fortune']
+}</code></pre>
+<h3 id="Github">Github<a class="anchor-link" href="#Github">&#182;</a></h3><p><strong>This walkthough has a lot of writing, but it should only take you 10 minutes max to complete it. We did most of it in class.</strong></p>
+<p><strong>a.</strong> I invited everyone to a team <code>eurisko-us/cohort-2</code> and gave that team write access to our shared game implementation. Check your email for the invite and accept it.</p>
+<p><strong>b.</strong> Follow the steps below to practice creating a branch and a pull request.</p>
+<p>Our shared game implementation is here:</p>
+<blockquote><p><a href="https://github.com/eurisko-us/space-empires-cohort-2">https://github.com/eurisko-us/space-empires-cohort-2</a></p>
+</blockquote>
+<p>Here is a high-level guide of the process for making changes to our shared repository:</p>
+<blockquote><p><a href="https://guides.github.com/introduction/flow/">https://guides.github.com/introduction/flow/</a></p>
+</blockquote>
+<p>To clone and enter the repository</p>
+
+<pre><code>&gt;&gt;&gt; git clone https://github.com/eurisko-us/space-empires-cohort-2.git
+&gt;&gt;&gt; cd space-empires-cohort-2</code></pre>
+<p>To check out a new branch:</p>
+
+<pre><code>&gt;&gt;&gt; git checkout -b justin-comment
+Switched to a new branch 'justin-comment'</code></pre>
+<p>Add a comment to <code>test.txt</code> (you can just "write YourName was here"). Then, check the status of your branch:</p>
+
+<pre><code>&gt;&gt;&gt; git status
+On branch justin-comment
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+    test.txt
+
+nothing added to commit but untracked files present (use "git add" to track)</code></pre>
+<p>Add your changes and commit to your branch</p>
+
+<pre><code>&gt;&gt;&gt; git add test.txt
+&gt;&gt;&gt; git commit -m "create Justin's comment"
+[justin-comment 542f30e] create Justin's comment
+ 1 file changed, 1 insertion(+)
+ create mode 100644 justin-comment.txt</code></pre>
+<p>Push to your branch</p>
+
+<pre><code>&gt;&gt;&gt; git push origin justin-comment
+Username for 'https://github.com': jpskycak
+Password for 'https://jpskycak@github.com': 
+    (for privacy reasons the password won't appear 
+    as you type it, but your keystrokes will still 
+    be getting logged, so you just need to type 
+    your password and press enter)
+
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 309 bytes | 309.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'justin-comment' on GitHub by visiting:
+remote:      https://github.com/eurisko-us/space-empires-cohort-1/pull/new/justin-comment
+remote: 
+To https://github.com/eurisko-us/space-empires-cohort-1.git
+ * [new branch]      justin-comment -&gt; justin-comment</code></pre>
+<p>On GitHub, it will show that your branch is a commit ahead, and possibly even commits behind (if other people have made commits in the time since you first created your branch).</p>
+<center><img width=600 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/justin-comment.png' border='0'/></center><p>Click "Pull request", and create the pull request. Don't merge it yet, though. We'll do that during the next class.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Repl.it link to your k-means tests (and your github commit)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-90">Problem 90<a class="anchor-link" href="#Problem-90">&#182;</a></h1><h3 id="Tic-Tac-Toe-Game">Tic-Tac-Toe Game<a class="anchor-link" href="#Tic-Tac-Toe-Game">&#182;</a></h3><p>Create a basic tic-tac-toe game. There should be a <code>Game</code> class that accepts two <code>Player</code> classes, similar to how <code>space-empires</code> works. (You can make additional classes as you see fit.)</p>
 <p>You should also include some basic tests to demonstrate that the game works properly. One test to have for sure is to match up two random players against each other, play 100 or 1000 games while alternating who goes first, and then make sure that the players' win rates are roughly equal.</p>
 <p>Next class, be ready to present your implementation.</p>
