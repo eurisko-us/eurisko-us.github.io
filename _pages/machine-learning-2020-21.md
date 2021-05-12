@@ -74,10 +74,15 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="123">
+<font size="3em"><ol reversed start="125">
+    <li><b>Wednesday, May 12</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/548590555">Class Recording</a> - gobble presentations
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-125">Gobble Minimax Player</a>
+    </li>
+    <br>
     <li><b>Monday, May 10</b>
         <br>No class, but there is an assignment
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_11th.html#Problem-124">K-Means Clustering</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-124">K-Means Clustering</a>
     </li>
     <br>
     <li><b>Friday, May 7</b>
