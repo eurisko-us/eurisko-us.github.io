@@ -14467,6 +14467,40 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>minimax player for tic-tac-toe</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-92">Problem 92<a class="anchor-link" href="#Problem-92">&#182;</a></h1><h3 id="Anton-&amp;-Charlie---Repository-Updates">Anton &amp; Charlie - Repository Updates<a class="anchor-link" href="#Anton-&amp;-Charlie---Repository-Updates">&#182;</a></h3><p>Here is where our shared tic-tac-toe implementation will live:</p>
+<blockquote><p><a href="https://github.com/eurisko-us/games-cohort-2/tree/main/tic-tac-toe">https://github.com/eurisko-us/games-cohort-2/tree/main/tic-tac-toe</a></p>
+</blockquote>
+<p>Anton -- create a pull request for your tic-tac-toe implementation, and ping me on Slack once you've made the pull request so that I can accept it. <strong>Please do this today (Wednesday)</strong> so that Charlie has time to do his part afterwards.</p>
+<p>Charlie -- once Anton's game has been pulled in, check that your InputPlayer works with the game implementation, and then create a pull request for your InputPlayer. Let me know once you've made the pull request so that I can accept it.</p>
+<h3 id="Game-Tree">Game Tree<a class="anchor-link" href="#Game-Tree">&#182;</a></h3><p>Construct a game tree for tic-tac-toe. Remember that each node in the game tree corresponds to a state of the game. The root node's state is an empty board. It has 9 children, one for each move that the first player can make. Each of those 9 children have 8 children (after the first player has moved, there are 8 moves remaining for the second player).</p>
+<p>This will be similar to a regular Tree class, except that</p>
+<ul>
+<li><p>each node should have a <code>state</code> attribute that holds the state of the tic-tac-toe game, a <code>player</code> attribute that says whose turn it is, and a <code>winner</code> attribute that says if someone has won.</p>
+</li>
+<li><p>instead of passing edges into the tree at initialization, you'll need to build up your tree recursively: start with a tree with a single node, and then recursively create child nodes until they reach a terminal state (i.e. a state with a winner).</p>
+</li>
+</ul>
+<p>According to Wikipedia, (<a href="https://en.wikipedia.org/wiki/Game_tree#Understanding_the_game_tree">https://en.wikipedia.org/wiki/Game_tree#Understanding_the_game_tree</a>), there will be 255,168 leaf nodes. But if you get something different and can't find anything wrong with your code after checking the first couple layers of the tree and the terminal states, let me know and I'll check it out.</p>
+<p><strong>Note:</strong> On Friday, the assignment will be to create a minimax player and run it against the random player on the shared tic-tac-toe implementation. This assignment is meant to help you get the infrastructure (i.e. game tree) set up to accomplish Friday's assignment.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Link to your code that generates the game tree. Put this in a branch of the shared repository and submit a link to your branch. Be sure to reach out if you have any issues doing that.</p>
+<blockquote><p><a href="https://github.com/eurisko-us/games-cohort-2">https://github.com/eurisko-us/games-cohort-2</a></p>
+</blockquote>
+<p>You can call your branch <code>your-name-game-tree</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-91">Problem 91<a class="anchor-link" href="#Problem-91">&#182;</a></h1><h3 id="Clustering">Clustering<a class="anchor-link" href="#Clustering">&#182;</a></h3><p><strong>Clustering in General</strong></p>
 <p>"Clustering" is the act of finding "groups" of similar records within data.</p>
 <p>Watch this video to get a general sense of what clustering is and why we care about it. (Best to play it at 1.5 or 1.75x speed to save time)</p>
