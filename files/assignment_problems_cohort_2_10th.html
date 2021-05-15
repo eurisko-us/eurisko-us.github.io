@@ -14467,7 +14467,28 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p>minimax player for tic-tac-toe</p>
+<h1 id="Problem-93">Problem 93<a class="anchor-link" href="#Problem-93">&#182;</a></h1><h3 id="Minimax-Strategy-Player">Minimax Strategy Player<a class="anchor-link" href="#Minimax-Strategy-Player">&#182;</a></h3><p><strong>a.</strong> Implement a minimax player for your tic-tac-toe game.</p>
+<p>Remember that the minimax strategy works as follows:</p>
+<ol>
+<li>Create a game tree with all the states of the tic tac toe game</li>
+<li>Identify the nodes that represent terminal states and assign them 1, -1, or 0 depending on whether it corresponds to a win, loss, or tie for you</li>
+<li><p>Repeatedly propogate those scores up the tree to parent nodes.</p>
+<ul>
+<li><p>If the game state of the parent node implies that it's your turn, then the score of that node is the maximum value of the child scores (since you want to maximize your score).</p>
+</li>
+<li><p>If the game state of the parent node implies that it's the opponent's turn, then the score of that node is the minimum value of the child scores (since your opponent wants to minimize your score).</p>
+</li>
+<li><p>Remember that we went over the score propagation + implementation recommendations in class, at the end of the computation &amp; modeling portion.</p>
+</li>
+</ul>
+</li>
+<li><p>Always make the move that takes you to the highest-score child state. (If there are ties, then you can choose randomly.)</p>
+</li>
+</ol>
+<p><strong>b.</strong> Check that your minimax strategy usually beats a random strategy. Run as many minimax vs random matchups as you can in 3 minutes, alternating who goes first. What percentage of the time does minimax win? <strong>Post your win percentage on Slack.</strong></p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Repl.it link that I can run to simulate &amp; print out your win percentage</p>
+<p>Link to github commit (should be a branch of games-cohort-2)</p>
+<p><strong>Be ready to present your implementation next week!</strong></p>
 
 </div>
 </div>

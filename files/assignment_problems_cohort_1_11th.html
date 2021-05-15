@@ -13136,6 +13136,68 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Future-Problem">Future Problem<a class="anchor-link" href="#Future-Problem">&#182;</a></h1><p><strong>Extra Credit</strong></p>
+<p>You can get 100 points worth of extra credit on this assignment (i.e. a full assignment's worth of extra credit) if you create your own heuristic scoring technique and demonstrate that it performs better than the basic scoring technique shown in this assignment.</p>
+<p>To demonstrate that it performs better, you'll need to run the same experiments for it and plot it on the same graph as the</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-126">Problem 126<a class="anchor-link" href="#Problem-126">&#182;</a></h1><p>Previously, we ran into the issue that the Gobble game tree is too big to work with. So, what we can do instead is repeatedly generate a smaller <em>local</em> tree, and use that instead.</p>
+<p><strong>Minimax Algorithm usng Local Trees</strong></p>
+<p>Each time it's your player's turn to move, you can build a local tree as follows:</p>
+<ul>
+<li><p>Use the current game state as the root node</p>
+</li>
+<li><p>Generate more nodes corresponding to $N$ turns of the game</p>
+<ul>
+<li><p>$N=1$ would mean you stop after generating the child nodes.</p>
+</li>
+<li><p>$N=2$ would mean you stop after generating the grandchild nodes.</p>
+</li>
+<li><p>and so on...</p>
+</li>
+</ul>
+</li>
+<li><p>Assign scores to the leaf nodes of the local tree (I'll explain this more after these bullet points).</p>
+</li>
+<li><p>Propagate the scores up the tree using the standard minimax approach.</p>
+</li>
+<li><p>Choose your action in accordance with the standard minimax strategy (i.e. choose the action which takes you to the highest-score child).</p>
+</li>
+</ul>
+<p><strong>Scoring Non-Terminal States</strong></p>
+<p>How do we assign scores to the leaf nodes of the local tree? The local tree only tracks the possibilities of the game $N$ turns into the future, and at that point, it's unlikely that either player has won the game.</p>
+<p>What we can do is use a <em>heuristic</em> technique to assign scores. The word "heuristic" refers to a technique that is intuitive and practical, though not necessarily optimal.</p>
+<p>In our case, a good heuristic technique is to create a score that gets higher when you're in a better position to win (and is highest when you have won).</p>
+<p>For tic-tac-toe-like games, we can create a heuristic score like this:</p>
+<ul>
+<li><p>Start with score=0</p>
+</li>
+<li><p>ADD 100 for each row, column, or diagonal that contains 3 of YOUR OWN pieces.</p>
+</li>
+<li><p>ADD 10 for each row, column, or diagonal that contains 2 of YOUR OWN pieces, and where the remaining spot has nobody's piece in it.</p>
+</li>
+<li><p>SUBTRACT 100 for each row, column, or diagonal that contains 3 of your OPPONENT'S pieces.</p>
+</li>
+<li><p>SUBTRACT 10 for each row, column, or diagonal that contains 2 of YOUR OPPONENT'S pieces, and where the remaining spot has nobody's piece in it.</p>
+</li>
+</ul>
+<p><strong>Your Task</strong></p>
+<p><em>Experiment:</em> create a Gobble player that uses a local game tree approach, and match it up against a random player for 200 games (alternating who goes first).</p>
+<p>Repeat the above experiment for $N=1,2,3,$ and so on, stopping at the value of $N$ for which the experiment takes more than 3 minutes to run.</p>
+<p>Make a table of win rate &amp; loss rate vs N in an Overleaf doc and submit it along with a replit link and github commit.</p>
+<p><strong>Note:</strong> This heuristic scoring technique is pretty basic so it might not perform super well. But I think it should at least do a bit better than the random player.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-125">Problem 125<a class="anchor-link" href="#Problem-125">&#182;</a></h1><p>Riley -- once you've cleaned up your code, pull your Gobble game to the shared repo. You can accept your own pull request for this. <strong>Please do this today (Wednesday) so that everyone can use it for this assignment.</strong></p>
 <p>George -- be ready present your gobble implementation on Friday. If you're stuck, that's okay, just present where you got stuck and what you tried to get around it.</p>
 <p>Everyone -- create a branch of our shared repo called <code>your-name-game-tree</code>. Put your game tree in there, and then create a minimax player and test it using our shared repo. Have it play 200 games against a random player (100 as first player, 100 as second player) and post its win rate on Slack.</p>
