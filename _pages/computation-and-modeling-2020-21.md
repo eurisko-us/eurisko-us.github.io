@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="92">
+<font size="3em"><ol reversed start="93">
+    <li><b>Friday, May 14</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/549513042">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-93">Minimax Player - Tic-Tac-Toe</a>
+    </li>
+    <br>
     <li><b>Wednesday, May 12</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/548590555">Class Recording</a> - tic-tac-toe presentations
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-92">Tic-Tac-Toe Game Tree</a>
