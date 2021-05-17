@@ -14467,6 +14467,57 @@ $$
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-94">Problem 94<a class="anchor-link" href="#Problem-94">&#182;</a></h1><p><em>Since AP tests are starting this week, the assignments will be shorter, starting with this assignment.</em></p>
+<p>When clustering data, we often don't know how many clusters are in the data to begin with.</p>
+<p>A common way to determine the number of clusters is using the <strong>"elbow method"</strong>, which involves plotting the total "squared error" and then finding where the graph has an "elbow", i.e. goes from sharply decreasing to gradually decreasing.</p>
+<p>Here, the "squared error" associated with any data point is its distance from its cluster center. If a data point $(1.1,1.8,3.5)$ is assigned to a cluster whose center is $(1,2,3),$ then the squared error associated with that data point would be</p>
+$$
+ (1.1-1)^2 + (1.8-2)^2 + (3.5-3)^2 = 0.3.
+$$<p>The total squared error is just the sum of squared error associated with all the data points.</p>
+<p>Watch the following video to learn about the elbow method:</p>
+<blockquote><p><a href="https://www.youtube.com/watch?v=lbR5br5yvrY">https://www.youtube.com/watch?v=lbR5br5yvrY</a></p>
+</blockquote>
+<p>Recall the following dataset of cookie ingredients:</p>
+
+<pre><code>columns = ['Portion Eggs',
+            'Portion Butter',
+            'Portion Sugar',
+            'Portion Flour']
+
+data = [[0.14, 0.14, 0.28, 0.44],
+        [0.22, 0.1, 0.45, 0.33],
+        [0.1, 0.19, 0.25, 0.4],
+        [0.02, 0.08, 0.43, 0.45],
+        [0.16, 0.08, 0.35, 0.3],
+        [0.14, 0.17, 0.31, 0.38],
+        [0.05, 0.14, 0.35, 0.5],
+        [0.1, 0.21, 0.28, 0.44],
+        [0.04, 0.08, 0.35, 0.47],
+        [0.11, 0.13, 0.28, 0.45],
+        [0.0, 0.07, 0.34, 0.65],
+        [0.2, 0.05, 0.4, 0.37],
+        [0.12, 0.15, 0.33, 0.45],
+        [0.25, 0.1, 0.3, 0.35],
+        [0.0, 0.1, 0.4, 0.5],
+        [0.15, 0.2, 0.3, 0.37],
+        [0.0, 0.13, 0.4, 0.49],
+        [0.22, 0.07, 0.4, 0.38],
+        [0.2, 0.18, 0.3, 0.4]]</code></pre>
+<p>Use the elbow method to construct a graph of error vs k. You should get the following result:</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kmeans-elbow-plot-cookie-data.png' border='0'/></center><p>Then, estimate the number of clusters in the data by finding the "elbow" in the graph.</p>
+<p><strong>Note:</strong> Here is a log to help you debug.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/elbow-method-cookie-data.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/elbow-method-cookie-data.txt</a></p>
+</blockquote>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Link to repl.it code that generates the plot</p>
+<p>Github commit to machine-learning repository</p>
+<p>In your submission, write down your estimated number of clusters in the data set.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-93">Problem 93<a class="anchor-link" href="#Problem-93">&#182;</a></h1><h3 id="Minimax-Strategy-Player">Minimax Strategy Player<a class="anchor-link" href="#Minimax-Strategy-Player">&#182;</a></h3><p><strong>a.</strong> Implement a minimax player for your tic-tac-toe game.</p>
 <p>Remember that the minimax strategy works as follows:</p>
 <ol>
