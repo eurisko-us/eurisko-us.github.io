@@ -14503,7 +14503,23 @@ data = [[0.14, 0.14, 0.28, 0.44],
         [0.0, 0.13, 0.4, 0.49],
         [0.22, 0.07, 0.4, 0.38],
         [0.2, 0.18, 0.3, 0.4]]</code></pre>
-<p>Use the elbow method to construct a graph of error vs k. You should get the following result:</p>
+<p>Use the elbow method to construct a graph of error vs k. For each value of k, you should do the following:</p>
+<ul>
+<li><p>To initialize the clusters, assign the first row in the dataset to the first cluster, the second row to second cluster, and so on, looping back to the first cluster after you assign a row to the $k$th cluster. So the cluster assignments will look like this:</p>
+
+<pre><code>{
+  1: [0, k-1, ...],
+  2: [1, k, ...],
+  3: [2, k+1, ...]
+  ...
+  k: [k-1, ...]
+}</code></pre>
+<p>Check the logs if you need some more concrete examples.</p>
+</li>
+<li><p>For each value of k, you should run the k-means algorithm until it converges, and then compute the squared error.</p>
+</li>
+</ul>
+<p>You should get the following result:</p>
 <center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/kmeans-elbow-plot-cookie-data.png' border='0'/></center><p>Then, estimate the number of clusters in the data by finding the "elbow" in the graph.</p>
 <p><strong>Note:</strong> Here is a log to help you debug.</p>
 <blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/elbow-method-cookie-data.txt">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/elbow-method-cookie-data.txt</a></p>
