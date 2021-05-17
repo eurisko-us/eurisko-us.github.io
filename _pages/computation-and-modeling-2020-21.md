@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="93">
+<font size="3em"><ol reversed start="94">
+    <li><b>Monday, May 17</b>
+        <br>No class, but there is an assignment.
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-94">Elbow Method</a>
+    </li>
+    <br>
     <li><b>Friday, May 14</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/549513042">Class Recording</a>
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-93">Minimax Player - Tic-Tac-Toe</a>
