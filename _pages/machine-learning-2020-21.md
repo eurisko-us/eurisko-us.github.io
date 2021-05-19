@@ -74,7 +74,11 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="127">
+<font size="3em"><ol reversed start="128">
+    <li><b>Wednesday, May 19</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/552569186">Class Recording</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-128">K-Means with Scikit-Learn</a>
+    </li>
     <li><b>Monday, May 17</b>
         <br>No class, but there is an assignment.
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-127">Elbow Method</a>
