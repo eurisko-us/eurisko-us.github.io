@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="128">
+<font size="3em"><ol reversed start="129">
+    <li><b>Friday, May 21</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/553771977">Class Recording</a> Review for final
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-129">K-Means on Titanic Data</a>
+    </li>
+    <br>
     <li><b>Wednesday, May 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/552569186">Class Recording</a>
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-128">K-Means with Scikit-Learn</a>
