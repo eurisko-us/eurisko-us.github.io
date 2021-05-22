@@ -75,7 +75,12 @@ author_profile: false
 
 <br><br>
 
-<font size="3em"><ol reversed start="95">
+<font size="3em"><ol reversed start="96">
+    <li><b>Friday, May 21</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/553771977">Class Recording</a> Review for final
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-96">K-Means on Titanic Data</a>
+    </li>
+    <br>
     <li><b>Wednesday, May 19</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/552569186">Class Recording</a> (note: most of the class was taking an AP test, so this was pretty much just a TA session. It's not necessary to watch the recording)
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-95">K-Means with Scikit-Learn</a>
