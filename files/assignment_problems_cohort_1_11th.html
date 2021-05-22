@@ -13159,6 +13159,44 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Problem-129">Problem 129<a class="anchor-link" href="#Problem-129">&#182;</a></h1><p>Create an elbow curve for k-means clustering on the titanic dataset, using min-max normalization.</p>
+<p>Remember that the titanic dataset is provided here:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/debugging-help/processed_titanic_data.csv</a></p>
+</blockquote>
+<p>Use all the rows of the data set, but only these columns:</p>
+
+<pre><code>["Survived", "Sex", "Pclass", "Fare", "Age", "SibSp"]</code></pre>
+<p>Then, just as before, make a plot of sum squared distance to cluster centers vs $k$ for <code>k=[1,2,3,...,25]</code>.</p>
+<center><img height=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/k-means-titanic-minmax.png' border='0'/></center><p>Choose k to be at the elbow of the graph (looks like k=5). Then, fit a k-means model with k=5, add the cluster label as a column in your data set, and find the column averages.</p>
+<p><strong>Tip:</strong> Use groupby: <code>df.groupby(['cluster']).mean()</code></p>
+
+<pre><code>              Sex    Pclass       Fare        Age     SibSp
+cluster                                                                     
+0        0.000000  2.419355  20.452848  31.896441  0.000000
+1        0.461538  2.820513  48.985687  11.892217  3.717949
+2        0.502110  2.092827  45.046011  29.253985  1.118143
+3        0.428571  3.000000  69.550000  29.699118  8.000000
+4        1.000000  2.183908  38.759867  28.815940  0.000000</code></pre>
+<p>To help us interpret the clusters, add a column for <code>Survived</code> (the mean survival rate in each cluster) and add a column for <code>count</code> (i.e. the number of data points in each cluster).</p>
+<p><strong>Note:</strong> We only include <code>Survived</code> AFTER the clustering. Later, we'll want to incorporate clustering into our predictive model, and we don't know the <code>Survived</code> values for the passengers we're trying to predict.</p>
+
+<pre><code>              Sex    Pclass       Fare        Age     SibSp  Survived  count
+cluster                                                                     
+0        0.000000  2.419355  20.452848  31.896441  0.000000  0.168203  434.0
+1        0.461538  2.820513  48.985687  11.892217  3.717949  0.179487   39.0
+2        0.502110  2.092827  45.046011  29.253985  1.118143  0.527426  237.0
+3        0.428571  3.000000  69.550000  29.699118  8.000000  0.000000    7.0
+4        1.000000  2.183908  38.759867  28.815940  0.000000  0.787356  174.0</code></pre>
+<p>Then, interpret the clusters. Write down, roughly, what kind of passengers each cluster represents.</p>
+<h3 id="Submission">Submission<a class="anchor-link" href="#Submission">&#182;</a></h3><p>Code that generates the plot and prints out the mean data grouped by cluster</p>
+<p>Overleaf doc with the grouped data as a table, and your interpretation of what each cluster means</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Problem-128">Problem 128<a class="anchor-link" href="#Problem-128">&#182;</a></h1><p>Generate an elbow graph for the same data set as in the previous assignment, except using scikit-learn's k-means implementation. This problem will mainly be an exercise in looking up and using documentation.</p>
 <p>It's possible that the sum squared error values may come out a bit different due to scikit-learn using a different method to assign initial clusters. That's okay. Just check that the elbow of the graph still occurs at k=3.</p>
 <p><strong>Submission:</strong> Code that generates the elbow plot using scikit-learn's implementation.</p>
