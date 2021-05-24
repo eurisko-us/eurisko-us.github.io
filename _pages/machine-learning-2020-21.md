@@ -77,7 +77,7 @@ author_profile: false
 <font size="3em"><ol reversed start="130">
     <li><b>Monday, May 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/554510808">Class Recording</a> Review for final
-        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-130">Revisit & Finalize Blog Post</a>
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-130">Prof. Wierman's Videos</a>
     </li>
     <br>
     <li><b>Friday, May 21</b>
