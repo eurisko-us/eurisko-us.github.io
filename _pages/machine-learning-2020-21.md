@@ -74,7 +74,12 @@ author_profile: false
 <br><br><font size="3em">All assignments are due on Sunday / Tuesday / Thursday nights by midnight before the next class.</font>
 
 <br><br>
-<font size="3em"><ol reversed start="130">
+<font size="3em"><ol reversed start="131">
+    <li><b>Wednesday, May 27</b>
+        <br><a class="body" target="_blank" href="https://vimeo.com/555447224">Class Recording</a> Review for final
+        <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-131">End-of-year survey</a>
+    </li>
+    <br>
     <li><b>Monday, May 24</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/554510808">Class Recording</a> Review for final
         <br>Assignment: <a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_11th.html#Problem-130">Prof. Wierman's Videos</a>
