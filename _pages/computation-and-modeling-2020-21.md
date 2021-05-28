@@ -76,7 +76,7 @@ author_profile: false
 <br><br>
 
 <font size="3em"><ol reversed start="99">
-    <li><b>Wednesday, May 27</b>
+    <li><b>Friday, May 29</b>
         <br><a class="body" target="_blank" href="https://vimeo.com/556291193">Class Recording</a> Review for final - last day of class!
     </li>
     <br>
