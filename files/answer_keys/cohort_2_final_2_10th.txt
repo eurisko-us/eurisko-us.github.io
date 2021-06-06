@@ -1,0 +1,25 @@
+
+Here is the answer key for parts 1 and 2. I've put a big X next to any questions that you got fully incorrect and a small x next to any that you got partially incorrect.
+
+PART 1
+
+1. False; they eventually converge.
+2. False; the constant in x^b can't be separated into the form constant * expression of x
+3. True; 1/sqrt(a) * 1/sqrt(x) + 1/e^b * e^x
+4. False; trained on (k-1)/k of the data and tested on 1/k of the data
+5. True; k=number of data points
+6. False; they oscillate with the same frequency since their increases/decreases are directly tied to each other
+7. False; there's an S*I interaction term
+8. False; if one of the probabilities is 0 then the cumulative property will have a duplicate, which will get skipped over. So any entries with probability 0 will get ignored (which is what we want).
+
+PART 2
+
+1. Distance of cluster entries from the cluster centers
+2. Keep it. Removing feature A decreased the training accuracy, so feature A is helpful and should be kept.
+3. The mean is (1+2+3)/3 = 2. The variance is [(1-2)^2 + (2-2)^2 + (3-2)^2]/3 = 2/3, so the standard deviation is sqrt(2/3). Therefore, the z-scores are [(1-2)/sqrt(2/3), (2-2)/sqrt(2/3), (3-2)/sqrt(2/3)] which becomes [-sqrt(3/2), 0, sqrt(3/2)]
+4. One example is the book dataset, where unimportant features like number of copies sold have a greater range than important features like average sentence length. This leads the model to over-weight the unimportant features. Normalizing gives the features the same range, which prevents the issue.
+5. Overfitting: [flexible, memorize, paranoid, high training accuracy, high-degree polynomial]
+Underfitting: [inflexible, k nearest neighbors with high value of k]
+6. Introduce an interaction term A*B
+7. The target has 0's and 1's, so the pseudoinverse method won't work. We need to use gradient descent.
+8. The scores of (0,1,2,3,4) are (0,3,4,6,8)
