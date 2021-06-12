@@ -28,7 +28,7 @@ redirect_from:
 <b>How rigorous is the program?</b><br>
 
 <font size="3em">
-Eurisko one of the most advanced high school math/CS sequences in the world. Students write all their code from scratch without the use of external libraries. Being in Math Academy, these students have already learned a large amount of college-level math, including multivariable calculus, linear algebra, and differential equations, so our Computation & Modeling and Machine Learning courses are presented at a level of rigor comparable to those offered at elite technical universities.
+Eurisko one of the most advanced high school math/CS sequences in the world. Students write all their code from scratch before they are allowed to use external libraries. Being in Math Academy, these students have already learned a large amount of college-level math, including multivariable calculus, linear algebra, and differential equations, so our Computation & Modeling and Machine Learning courses are presented at a level of intensity comparable to those offered at elite technical universities.
 </font>
   
 <br><br><b>What kinds of things are the students building?</b><br>
