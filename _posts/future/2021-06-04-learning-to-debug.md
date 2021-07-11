@@ -17,10 +17,10 @@ An example of unclear coding is as follows:
 
 <font size="3em">
 <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">funct</span>(var, var2):
-    numbers <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
-    numbers <span style="color: #333333">+=</span> var
-    numbers <span style="color: #333333">=</span> numbers <span style="color: #333333">+</span> var2
-    <span style="color: #008800; font-weight: bold">return</span> numbers
+    number <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">0</span>
+    number <span style="color: #333333">+=</span> var
+    number <span style="color: #333333">=</span> numbers <span style="color: #333333">+</span> var2
+    <span style="color: #008800; font-weight: bold">return</span> number
 </pre></div>
 </font>
 <br>
@@ -28,5 +28,19 @@ An example of unclear coding is as follows:
 Though this code would run and return the sum of the two inputs, it can be hard to tell exactly what it's doing. There are multiple ways that this code could be cleaned up:
 
 <ul>
-    <li>asdf</li>
+  <li>On line 1, the two input variables (<code>var</code>, <code>var2</code>) could be defined as <code>num_1</code> and <code>num_2</code> (or similar), to show that these are numbers.</li>
+  <li>Function naming is also very important. The name of the function can tell you what it does very easily without even having to look at the code. In this example, <code>funct</code> explains nothing about the function itself. Instead, <code>calc_sum</code> would be a better name for the function, as it is clear that you are taking the sum of the two inputs.</li>
+  <li>In the function's body, there are multiple confusions and inconsistencies. The method used to calculate the sum is fine: initialize a variable, add each input, return the variable. However, the execution can be confusing. Initializing the variable as 0 in line 2 is fine, but unnecessary. Lines 3 and 4 use two different methods of variable addition and reassignment, which can be confusing to switch between (line 3's method is typically better, as it is more concise). These lines could also be condensed into a single line.</li>
+  <li>One issue in the code is knowing if you need a variable at all. In this case, <code>number</li> could be done without, since you can just return the sum without assigning it to an intermediate the variable.</li>
 </ul>
+
+Using the changes listed above, here is a better version of the code:
+
+<font size="3em">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">calc_sum</span>(num_1, num_2):
+    <span style="color: #008800; font-weight: bold">return</span> num_1 <span style="color: #333333">+</span> num_2
+</pre></div>
+</font>
+<br>
+
+It's much easier to read, and consequently, much easier to debug.
