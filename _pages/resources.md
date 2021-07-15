@@ -489,7 +489,7 @@ author_profile: false
   
 </font>
 </div>
-
+<!--
 ## [<center>Preparing for Eurisko</center>](#preparing)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
@@ -498,4 +498,4 @@ author_profile: false
 
 <br>Once you're done with that, then move on to Hackerrank challenges: <a class="body" href="https://www.hackerrank.com/domains/python">hackerrank.com/domains/python</a>
 
-</div>
+</div>-->
