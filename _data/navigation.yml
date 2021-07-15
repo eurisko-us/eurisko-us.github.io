@@ -5,6 +5,9 @@ main:
 
   - title: "Blog"
     url: /blog/
+    
+  - title: "Clips"
+    url: /clips/
 
   - title: "Resources"
     url: /resources/
