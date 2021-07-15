@@ -33,7 +33,7 @@ Eurisko one of the most advanced high school math/CS sequences in the world. Stu
   
 <br><br><b>What kinds of things are the students building?</b><br>
   
-<font size="3em">In the very first semester, students write their own Matrix, DataFrame, and Graph classes in Python from scratch, and begin writing their own machine learning library. Students also implement their own games (ranging from simple games like snake to a large-scale game, Space Empires) and develop intelligent game-playing agents. Additionally, they write academic blog posts and are exposed to the basics of SQL, C++, and Haskell.</font>
+<font size="3em">In the very first semester, students write their own Matrix, DataFrame, and Graph classes in Python from scratch, and begin writing their own machine learning library. It only gets better from there! Among other things, students also implement their own games (ranging from simple games like snake to a large-scale game, Space Empires) and develop intelligent game-playing agents. Additionally, they write academic blog posts and are exposed to the basics of SQL, C++, and Haskell.</font>
 
 <br><br><b>Where does the name "Eurisko" come from?</b><br>
 
