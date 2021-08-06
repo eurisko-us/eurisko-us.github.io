@@ -1,7 +1,7 @@
 ---
 layout: archive
 title: ""
-permalink: /computation-and-modeling-2020-21/
+permalink: /courses-2021-22/
 author_profile: false
 ---
 
@@ -14,9 +14,9 @@ author_profile: false
 <center>
 <table style="width:80%">
     <tr>
-    <td width="33%"><center>Date</center></td>
-    <td width="33%"><center>Computation & Modeling (10th)</center></td>
-    <td width="33%"><center>Machine Learning (11th/12th)</center></td>
+    <td width="33%"><center><b>Date<b></center></td>
+    <td width="33%"><center><b>Computation & Modeling<b></center></td>
+    <td width="33%"><center><b>Machine Learning</b></center></td>
   </tr>
    <tr>
     <td width="33%"><center>Aug 12-13</center></td>
