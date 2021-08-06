@@ -6,7 +6,7 @@ author_profile: false
 ---
 
 <div style="width:100%; max-width:800px; margin:auto"> 
-    <p><center><b><hr><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">Link to current assignments</a></p>
+    <p><center><b><hr><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">Link to current assignments</a><hr><b></center></p>
     <br>
 </div>
 
