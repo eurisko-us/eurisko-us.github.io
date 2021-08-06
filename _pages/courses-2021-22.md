@@ -21,7 +21,7 @@ author_profile: false
    <tr>
     <td width="33%"><center>Aug 12-13</center></td>
     <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Assignment</a></center></td>
-    <td width="33%"><center>coming soon</center></td>
+    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Assignment</a></center></td>
   </tr>
 </table>
 </center>
