@@ -15,7 +15,7 @@ author_profile: false
 <table style="width:80%">
     <tr>
     <td width="33%"><center><b>Date<b></center></td>
-    <td width="33%"><center><b>Computation & Modeling<b></center></td>
+    <td width="33%"><center><b>Computation & Modeling</b></center></td>
     <td width="33%"><center><b>Machine Learning</b></center></td>
   </tr>
    <tr>
