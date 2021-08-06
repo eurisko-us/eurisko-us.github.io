@@ -13112,6 +13112,213 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Final-2">Final 2<a class="anchor-link" href="#Final-2">&#182;</a></h1><p><strong>Date:</strong> 6/2</p>
+<p><strong>Time:</strong> 120 min</p>
+<p><strong>SUPER IMPORTANT: Part 3 (implementations) will take the most time and is worth the most points, so go through parts 1 and 2 quickly answering everything that you know how to do, and then go to part 3, and then come back to any questions from parts 1 and 2 that stumped you.</strong></p>
+<h3 id="Part-1-(20-points)">Part 1 (20 points)<a class="anchor-link" href="#Part-1-(20-points)">&#182;</a></h3><p><strong>True/False (2.5 points each). Determine whether the following statements are true or false. If false, then explain why with a single sentence. If true, then you don't have to write any additional justification.</strong></p>
+<ol>
+<li><p>Whenever we update the cluster centers in the k-means algorithm, they always change by some amount. They never stay exactly the same as what they were previously.</p>
+</li>
+<li><p>If you have sufficiently many data points for the function $f(x) = ax + x^b,$ you can use linear regression to find the missing parameters.</p>
+</li>
+<li><p>If you have sufficiently many data points for the function $f(x) = \dfrac{1}{\sqrt{ax}} + e^{x-b},$ you can use linear regression to find the missing parameters.</p>
+</li>
+<li><p>In $k$-fold cross validation, the model is repeatedly trained on $\dfrac{1}{k}$ of the records in the data and tested on $\dfrac{k-1}{k}$ records in the data.</p>
+</li>
+<li><p>Leave-one-out cross validation is a special case of $k$-fold cross validation.</p>
+</li>
+<li><p>In the predator-prey model, the two populations oscillate with different frequencies.</p>
+</li>
+<li><p>In the SIR model, there are no interaction terms.</p>
+</li>
+<li><p>The roulette probability selection algorithm (shown below) assumes that all the probabilities are nonzero. It can fail when one of the probabilities is 0.</p>
+</li>
+</ol>
+<center><img width=500 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/roulette-probability-selection.png' border='0'/></center><h3 id="Part-2-(20-points)">Part 2 (20 points)<a class="anchor-link" href="#Part-2-(20-points)">&#182;</a></h3><p><strong>Quick Answer (2.5 points each). You don't have to show any work. Just state the final answer.</strong></p>
+<ol>
+<li><p>K-means can be interpreted as an optimization algorithm that finds the best grouping of records into clusters to minimize some objective function. What is the objective function?</p>
+</li>
+<li><p>Suppose that while carrying out backwards selection, you notice that when feature A is removed from the data set, the training accuracy increases by 3% but the testing accuracy decreases by 2%. Should you keep feature A or remove it permanently?</p>
+</li>
+<li><p>What are the z-scores for the list <code>[1, 2, 3]</code>?</p>
+</li>
+<li><p>Give a concrete example in which a k-nearest neighbors model would perform poorly if the data is not normalized beforehand. Explain why normalizing the data would help the model perform better.</p>
+</li>
+<li><p>Consider the following words/phrases: flexible, memorize, inflexible, paranoid, high training accuracy, high-degree polynomial, k-nearest neighbors with high value of k.</p>
+<p>Which of these words/phrases are associated with overfitting? Which are associated with underfitting?</p>
+</li>
+<li><p>Suppose that you have a data set of features $A$ and $B$ and target variable $C,$ and you wish to predict $C$ using a linear or logistic regression. You notice that when $A$ is high and $B$ is low, then $C$ is low, and when $B$ is high and $A$ is low, then $C$ is also low. But when $A$ and $B$ are both high, then $C$ is high. What should do you do to the data before you fit the model?</p>
+</li>
+<li><p>Suppose you're trying to predict the survival probability of patients undergoing surgery using logistic regression. For many patients, you have data about the health of the patient and the context of the surgery, along with whether or not the patient survived the surgery. What technique should you use to fit the logistic regression?</p>
+</li>
+<li><p>Carry out Dijkstra's algorithm for the following graph, starting with node 0, and continuing until the scores of all the nodes have been finalized. What are the final scores of the nodes?</p>
+</li>
+</ol>
+<center><img width=300 src='https://raw.githubusercontent.com/jpskycak/photoEmbed/master/weighted-graph.png' border='0'/></center><h3 id="Part-3-(60-points)">Part 3 (60 points)<a class="anchor-link" href="#Part-3-(60-points)">&#182;</a></h3><p><strong>Write the following programs. SUBMIT YOUR REPL.IT LINK ALONG WITH A SCREENSHOT OF YOUR CODE AND THE TERMINAL OUTPUT AFTER YOUR RUN IT.</strong></p>
+<p><strong>Note:</strong> You are free to use <code>numpy</code>, <code>pandas</code>, and <code>scikit-learn</code> in these problems.</p>
+<ol>
+<li><p>(20 points) Write <strong>a)</strong> a haskell program AND <strong>b)</strong> a C++ program that print out the sum of the first $N$ perfect cubes. Test your code on the case of $N=10.$ The result should be $3025.$ (You're writing two different programs in two different languages that accomplish the same task.)</p>
+</li>
+<li><p>(20 points) Write a python program that fits the function $y=a\sin(bx)$ to the data points <code>[(0.5,2), (0.9,0.9), (1,0.3)]</code> by minimizing the residual sum squares using gradient descent, using the initial guess <code>a=1, b=1</code>. Have your program periodically print out the parameters and the residual sum squares. Choose the step size (in your gradient estimation) and learning rate (in your parameter updates) so that the parameters converge quickly.</p>
+</li>
+<li><p>(20 points) The following data set contains information about some physical characteristics of flowers. There are 3 types of flowers represented in the data set, "Iris-setosa," "Iris-versicolor," and "Iris-virginica."</p>
+</li>
+</ol>
+<ul>
+<li><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/iris-flowers.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/iris-flowers.csv</a></p>
+<p><strong>a.</strong> (5 points) For each flower, state the mean sepal length, sepal width, petal length, and petal width. (Put this in your Canvas submission.)</p>
+<p><strong>b.</strong> (15 points) Create a k-nearest-neighbors model that uses the sepal length, sepal width, petal length, and petal width to predict the type of flower. Normalize your data using max-min scaling, split your data into a training half and a testing half, find the optimal value of $k$ (the value that maximizes the testing accuracy), and report the testing accuracy using the optimal value of $k.$</p>
+<p><strong>Watch out!</strong> The data set is ordered, so be sure that when you split your data into a training half and a testing half, you shuffle the data beforehand. You can do that using <code>df = df.sample(frac=1).reset_index(drop=True)</code>. Otherwise, your training half might have all one type of flower and the testing half might have only the other type of flower.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-6">Quiz 2-6<a class="anchor-link" href="#Quiz-2-6">&#182;</a></h1><h3 id="Problem-1-(7-points)">Problem 1 (7 points)<a class="anchor-link" href="#Problem-1-(7-points)">&#182;</a></h3><p><strong>a.</strong> (1pt) What is the point of feature selection? Why do we care about it; what good does it do for our models?</p>
+<p><strong>b.</strong> (2pt) Which is more computationally expensive, forward selection or backward selection, and why?</p>
+<p><strong>c.</strong> (2pt) Suppose that with features A, B, and C, we have</p>
+
+<pre><code>training accuracy = 0.81
+testing accuracy = 0.75</code></pre>
+<p>Then, when <strong>feature D is added</strong>, we have</p>
+
+<pre><code>training accuracy = 0.80
+testing accuracy = 0.76</code></pre>
+<p>Following the <strong>forward selection procedure</strong>, should we keep feature D? Why or why not?</p>
+<p><strong>d.</strong> (2pt) Suppose that with features W, X, Y, and Z, we have</p>
+
+<pre><code>training accuracy = 0.81
+testing accuracy = 0.75</code></pre>
+<p>Then, when <strong>feature W is removed</strong>, we have</p>
+
+<pre><code>training accuracy = 0.80
+testing accuracy = 0.76</code></pre>
+<p>Following the <strong>backward selection procedure</strong>, should we keep feature W? Why or why not?</p>
+<h3 id="Problem-2-(7-points)">Problem 2 (7 points)<a class="anchor-link" href="#Problem-2-(7-points)">&#182;</a></h3><p>This question deals with the following data set, in which each row represents a student in a company's data science training course. The target variable (aptly named "target") is 1 if the student was looking to change jobs after the course.</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/data-scientist-hiring.csv">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/datasets/data-scientist-hiring.csv</a></p>
+</blockquote>
+<p>The data dictionary is here:</p>
+
+<pre><code>enrollee_id : Unique ID for candidate
+city: City code
+city_ development _index : Developement index of the city (scaled)
+gender: Gender of candidate
+relevent_experience: Relevant experience of candidate
+enrolled_university: Type of University course enrolled if any
+education_level: Education level of candidate
+major_discipline :Education major discipline of candidate
+experience: Candidate total experience in years
+company_size: No of employees in current employer's company
+company_type : Type of current employer
+lastnewjob: Difference in years between previous job and current job
+training_hours: training hours completed
+target: 0 – Not looking for job change, 1 – Looking for a job change</code></pre>
+<p>You can use <code>pandas</code> and <code>numpy</code>. Feel free to use Google to look up any documentation.</p>
+<p><strong>In addition to answering these questions on the quiz, also include a link to your code.</strong></p>
+<p><strong>a.</strong> (1pt) What was the mean number of training hours?</p>
+<p><strong>b.</strong> (1pt) What percent of students were looking to change jobs after the course?</p>
+<p><strong>c.</strong> (1pt) Which city ID had the most students?</p>
+<p><strong>d.</strong> (1pt) How many students did that city have?</p>
+<p><strong>e.</strong> (1pt) What is the highest city ID?</p>
+<p><strong>f.</strong> (1pt) How many students in the data set came from companies with fewer than 10 employees?</p>
+<p><strong>g.</strong> (1pt) How many students in the data set came from companies with fewer than 100 employees?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-5">Quiz 2-5<a class="anchor-link" href="#Quiz-2-5">&#182;</a></h1><h3 id="Problem-1-(10-points)">Problem 1 (10 points)<a class="anchor-link" href="#Problem-1-(10-points)">&#182;</a></h3><p>This question deals with logistic regression (pseudoinverse vs gradient descent). It's possible to get partial credit if you show your work.</p>
+<p>Suppose you're given the dataset <code>[(2,1), (3,0)]</code> and you want to fit a logistic regression model $y=\dfrac{1}{1+e^{a+bx}}.$</p>
+<p><strong>a.</strong> (2pts) Why is it necessary to use gradient descent in this scenario? What would happen if we tried to use the pseudoinverse?</p>
+<p><strong>b.</strong> (1pt) Starting with initial values $a=1$ and $b=1,$ what is the RSS?</p>
+<p><strong>c.</strong> (3pts) What are the numerical estimates for the gradients $\dfrac{\partial (RSS)}{\partial a}$ and $\dfrac{\partial (RSS)}{\partial b}$ using a central difference quotient with step size $\delta = 0.1?$</p>
+<p><strong>d.</strong> (1pt) If you use a learning rate of $\alpha = 0.2,$ what are the updated values of $a$ and $b?$</p>
+<p><strong>e.</strong> (1pt) What is the new RSS?</p>
+<p><strong>f.</strong> (2pts) In general, if we run gradient descent for infinitely many iterations, is it guaranteed to give us the best-fitting model? Why or why not?</p>
+<h3 id="Problem-2-(7-points)">Problem 2 (7 points)<a class="anchor-link" href="#Problem-2-(7-points)">&#182;</a></h3><p>This question deals with the following data set:</p>
+<blockquote><p><a href="https://www.kaggle.com/spscientist/students-performance-in-exams">https://www.kaggle.com/spscientist/students-performance-in-exams</a></p>
+</blockquote>
+<p>You can use <code>pandas</code>, <code>numpy</code>, and <code>sklearn</code>. Feel free to use Google to look up any documentation.</p>
+<p><strong>Create a file in repl.it that prints out the answers to the following questions. Copy and paste those answers into your quiz submission, and also paste in the link to your repl.it code.</strong></p>
+<p><strong>a.</strong> (1pt) What are the math scores in the last 3 rows of the data?</p>
+<p><strong>b.</strong> (1pt) What is the average math score across all students?</p>
+<p><strong>c.</strong> (1pt) What were the average math scores for students who did vs didn't complete the test preparation course?</p>
+<p><strong>d.</strong> (1pt) How many categories of <code>parental level of education</code> are there?</p>
+<p><strong>e.</strong> (3pts) Create dummy variables for <code>test preparation course</code> and <code>parental level of education</code>. Then, fit a linear regression to all the data <em>except</em> for the last 3 rows, and use it to predict the math scores in the last 3 rows of the data. What scores do you get?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Quiz-2-4">Quiz 2-4<a class="anchor-link" href="#Quiz-2-4">&#182;</a></h1><p><strong>Date:</strong> 3/12</p>
+<p><strong>Time:</strong> 60 min</p>
+<p><strong>Topics:</strong> C++, SQL, Regression</p>
+<p><strong>Allowed / prohibited resources:</strong> This quiz is open-book. You can refer to examples/solutions from previous assignments. But you cannot copy code from the internet nor discuss with classmates. (If you do either of these two things, it will probably show in your code, and you'll get a 0 -- so don't chance it.)</p>
+<p><strong>Submission:</strong> On this quiz, you'll need to write functions in C++ and Haskell. Write these functions in repl.it, turn in your repl.it links, and <strong>also copy/paste your actual repl.it code into the submission box as evidence that your code hasn't been modified since submitting the quiz.</strong></p>
+<h3 id="Problem-1-(C++;-33%-of-grade)">Problem 1 (C++; 33% of grade)<a class="anchor-link" href="#Problem-1-(C++;-33%-of-grade)">&#182;</a></h3><p>Complete the C++ template below.</p>
+
+<pre><code># include &lt;iostream&gt;
+# include &lt;cassert&gt;
+
+// write your function calcSum here
+
+int main() {
+    std::cout &lt;&lt; "Testing...\n";
+
+    int matrix[2][3] = {
+        { 1, 2, 3 },
+        { 4, 5, 6 }
+    };
+
+    int numRows = 2;
+    int numCols = 3;
+    // calculate numRows and numCols using a general method.
+    // DO NOT just set numRows = 2 and numCols = 3.
+    // hint: use the size of the variable
+
+    assert(numRows == 2);
+    assert(numCols == 3);
+
+    int rowSum[numCols];
+    calcSum(matrix[0], matrix[1], rowSum, numCols);
+
+    assert(rowSum[0] == 5);
+    assert(rowSum[1] == 7);
+    assert(rowSum[2] == 9);
+
+    std::cout &lt;&lt; "Success!";
+
+    return 0;
+}</code></pre>
+<h3 id="Problem-2-(SQL;-33%-of-grade)">Problem 2 (SQL; 33% of grade)<a class="anchor-link" href="#Problem-2-(SQL;-33%-of-grade)">&#182;</a></h3><p>On sqltest.net, copy the following table in:</p>
+<blockquote><p><a href="https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/3.sql">https://raw.githubusercontent.com/eurisko-us/eurisko-us.github.io/master/files/sql-tables/3.sql</a></p>
+</blockquote>
+<p>Find Ishmael Smith's average grades in his classes. Order the results from lowest grade to highest grade. As usual, submit the link to your query, and make sure you're using MySQL.</p>
+
+<pre><code>subject avgScore
+Math    57.5000
+English 80.0000
+Science 85.0000</code></pre>
+<h3 id="Problem-3-(Regression,-33%-of-grade)">Problem 3 (Regression, 33% of grade)<a class="anchor-link" href="#Problem-3-(Regression,-33%-of-grade)">&#182;</a></h3><p><strong>a.</strong> Suppose that you fit the data points $\left\{ (1,1), (3,7), (5,7) \right\}$ using the function $f(x)=x+2.$ Compute the RSS.</p>
+<p><strong>b.</strong> What is the difference between a training dataset and a testing dataset?</p>
+<p><strong>c.</strong> Which is a better model: a model with training RSS = 100 and testing RSS = 90, or a model with training RSS = 10 and testing RSS = 130?</p>
+<p><strong>d.</strong> Suppose your friend fits a dataset with a polynomial regressor and notices that the higher the degree of the regressor, the closer it comes to hitting all the data points in the dataset. Your friend concludes that the higher the degree of the regressor, the better the model it is. Is your friend correct? Why or why not?</p>
+<p><strong>e.</strong> What kind of procedure would you suggest to your friend, to find the best regressor for the dataset?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Quiz-2-3">Quiz 2-3<a class="anchor-link" href="#Quiz-2-3">&#182;</a></h1><p><strong>Date:</strong> 2/26</p>
 <p><strong>Time:</strong> 60 min</p>
 <p><strong>Topics:</strong> C++, Haskell, SQL, Dijkstra's Algorithm</p>
