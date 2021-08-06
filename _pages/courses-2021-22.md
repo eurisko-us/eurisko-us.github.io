@@ -18,6 +18,11 @@ author_profile: false
     <td width="33%"><center><b>Computation & Modeling</b></center></td>
     <td width="33%"><center><b>Machine Learning</b></center></td>
   </tr>
+    <tr>
+    <td width="33%"><center>Aug 16-20</center></td>
+    <td width="33%"><center>Coming soon</center></td>
+    <td width="33%"><center>Coming soon</center></td>
+  </tr>
    <tr>
     <td width="33%"><center>Aug 12-13</center></td>
     <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Assignment</a></center></td>
