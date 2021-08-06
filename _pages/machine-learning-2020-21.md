@@ -15,6 +15,26 @@ author_profile: false
 
 <center>
 <table style="width:80%">
+    <tr>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Final-2" target="_blank">Final 2</a></center></td>
+    <td width="33%"><center>Thursday, June 3</center></td>
+    <td width="33%"><center></center></td>
+  </tr>
+   <tr>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-2-6" target="_blank">Quiz 2-6</a></center></td>
+    <td width="33%"><center>Friday, May 7</center></td>
+    <td width="33%"><center>reviewed in class, 5/5</center></td>
+  </tr>
+    <tr>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-2-5" target="_blank">Quiz 2-5</a></center></td>
+    <td width="33%"><center>Friday, April 16</center></td>
+    <td width="33%"><center>reviewed in class, 4/21</center></td>
+  </tr>
+    <tr>
+    <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-2-4" target="_blank">Quiz 2-4</a></center></td>
+    <td width="33%"><center>Friday, March 12</center></td>
+    <td width="33%"><center>reviewed in class, 3/19</center></td>
+  </tr>
    <tr>
     <td width="33%"><center><a class="body" href="https://eurisko-us.github.io/files/all_assessments_iteration_1.html#Quiz-2-3" target="_blank">Quiz 2-3</a></center></td>
     <td width="33%"><center>Friday, February 26</center></td>
