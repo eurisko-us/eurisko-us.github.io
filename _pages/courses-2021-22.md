@@ -25,8 +25,8 @@ author_profile: false
   </tr>
    <tr>
     <td width="33%"><center>Set 1</center></td>
-    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">8/12-17</a></center></td>
-    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">8/12-17</a></center></td>
+    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">8/13-18</a></center></td>
+    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">8/13-18</a></center></td>
   </tr>
 </table>
 </center>
