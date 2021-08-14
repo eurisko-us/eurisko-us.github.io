@@ -1,11 +1,11 @@
-<!-- ---
+<!--
 title: "Learning to Debug"
 author: "William Wallius"
 reviewers:
   - "Maia Dimas"
 tags:
   - Debugging
---- -->
+-->
 
 At the beginning of the year, I knew nothing about Python. I learned different methods and syntaxes, but I had no idea what it meant, and if something went wrong, I was practically hopeless. My main source for help would be asking friends - which is a very good resource - though I grew reliant upon them, instead of using them as a tool for help. Looking back now, I realize that understanding what you're coding - not just how Python works - but also the problem you are trying to solve, is very important. If you don't know how the code is supposed to work, you can't debug the issues.
 
