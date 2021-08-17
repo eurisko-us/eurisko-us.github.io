@@ -14,19 +14,12 @@ author_profile: false
 <center>
 <table style="width:80%">
     <tr>
-    <td width="33%"><center><b> </b></center></td>
-    <td width="33%"><center><b>Computation & Modeling</b></center></td>
-    <td width="33%"><center><b>Machine Learning</b></center></td>
-  </tr>
-    <tr>
-    <td width="33%"><center>Set 2</center></td>
-    <td width="33%"><center>Coming soon</center></td>
-    <td width="33%"><center>Coming soon</center></td>
+    <td width="50%"><center><b>Computation & Modeling</b></center></td>
+    <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
    <tr>
-    <td width="33%"><center>Set 1</center></td>
-    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">8/13-18</a></center></td>
-    <td width="33%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">8/13-18</a></center></td>
+    <td width="50%"><center><!--<a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">8/13-18</a>--></center></td>
+    <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: 8/18-20</a></center></td>
   </tr>
 </table>
 </center>
