@@ -18,7 +18,7 @@ author_profile: false
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
    <tr>
-    <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1 (8/13-18)</a></center></td>
+    <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1 (8/23-27)</a></center></td>
     <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia (8/18-24)</a></center></td>
   </tr>
 </table>
