@@ -19,7 +19,11 @@ author_profile: false
   </tr>
    <tr>
     <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1 (8/23-27)</a></center></td>
-    <td width="50%"><center><a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia (8/18-24)</a></center></td>
+    <td width="50%"><center>
+        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia (8/18-24)</a>
+        <br>
+        <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a>
+        </center></td>
   </tr>
 </table>
 </center>
