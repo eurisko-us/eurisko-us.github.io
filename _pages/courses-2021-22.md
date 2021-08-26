@@ -27,14 +27,12 @@ author_profile: false
     <td width="50%"><center><b>Computation & Modeling</b></center></td>
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
-    <tr>
+   <tr>
+    <td width="50%"></td>
     <td width="50%">
-        
-    </td>
-    <td width="50%">
-        Space Empires progress (8/25-)
-        <br>11th grade: <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">Space Empires (8/25-)</a>
-        <br>12th grade: <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">Space Empires (8/25-)</a>
+        Space Empires development (8/25-):
+        <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, 
+        <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a>
      </td>
   </tr>
    <tr>
