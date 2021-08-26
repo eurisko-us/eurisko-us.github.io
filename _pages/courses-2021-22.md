@@ -38,6 +38,7 @@ author_profile: false
    <tr>
     <td width="50%">
         Assignment: <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1 (8/23-27)</a>
+        <br>Clips: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Algorithm Walkthroughs</a>
     </td>
     <td width="50%">
         Assignment: <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1 - Quant Review in Julia (8/18-24)</a>
