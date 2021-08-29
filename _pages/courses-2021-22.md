@@ -21,8 +21,6 @@ author_profile: false
     
 <br><br><b>Assignments / Clips</b><br><br>
     
-    https://www.overleaf.com/read/zywqbphxwvzh
-
 <center>
 <table style="width:80%">
     <tr>
@@ -37,6 +35,7 @@ author_profile: false
         Space Empires development
         <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, 
         <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a>
+        Quiz on Friday (9/3) - gradient descent, bias-variance tradeoff
      </td>
   </tr>
     <tr>
