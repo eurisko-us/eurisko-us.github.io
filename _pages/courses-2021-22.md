@@ -20,6 +20,8 @@ author_profile: false
 </ul></font>
     
 <br><br><b>Assignments / Clips</b><br><br>
+    
+    https://www.overleaf.com/read/zywqbphxwvzh
 
 <center>
 <table style="width:80%">
@@ -28,20 +30,22 @@ author_profile: false
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
    <tr>
-    <td width="50%"></td>
     <td width="50%">
-        Space Empires development (8/25-):
+        Assignment: <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Set 2</a>
+    </td>
+    <td width="50%">
+        Space Empires development
         <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, 
         <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a>
      </td>
   </tr>
-   <tr>
+    <tr>
     <td width="50%">
-        Assignment: <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1 (8/23-27)</a>
+        Assignment: <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1</a>
         <br>Clips: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Algorithm Walkthroughs</a>
     </td>
     <td width="50%">
-        Assignment: <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1 - Quant Review in Julia (8/18-24)</a>
+        Assignment: <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1 - Quant Review in Julia</a>
         <br>Clips: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a>
      </td>
   </tr>
