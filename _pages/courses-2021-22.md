@@ -27,6 +27,14 @@ author_profile: false
     <td width="50%"><center><b>Computation & Modeling</b></center></td>
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
+    <tr>
+    <td width="50%">
+
+    </td>
+    <td width="50%">
+        Quiz on Friday (9/10) - gradient descent, bias-variance tradeoff
+     </td>
+  </tr>
    <tr>
     <td width="50%">
         Assignment: <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Set 2</a>
@@ -35,7 +43,6 @@ author_profile: false
         Space Empires development
         <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, 
         <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a>
-        Quiz on Friday (9/3) - gradient descent, bias-variance tradeoff
      </td>
   </tr>
     <tr>
