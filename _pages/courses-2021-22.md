@@ -46,7 +46,7 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Assignment 2</a>
     </td>
     <td width="50%">
-        Space Empires development: 11th grade refactors and extends game to multiple ship types; 12th grade begins rewriting in Javascript
+        Space Empires development - 11th grade refactors and extends game to multiple ship types, 12th grade begins rewriting in Javascript
      </td>
   </tr>
     <tr>
