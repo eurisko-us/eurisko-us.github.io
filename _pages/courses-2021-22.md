@@ -15,7 +15,6 @@ author_profile: false
 <li><a class="body" target="_blank" href="https://www.statlearning.com/"><i>Introduction to Statistical Learning</i></a></li>
 <li><a class="body" target="_blank" href="https://www.cs.cmu.edu/~tom/mlbook.html"><i>Machine Learning</i> (Mitchell)</a></li>
 <li><a class="body" target="_blank" href="http://incompleteideas.net/book/the-book.html"><i>Reinforcement Learning</i> (Sutton & Barto)</a></li>
-<li><a class="body" target="_blank" href="https://www.networkatlas.eu/"><i>The Atlas For the Aspiring Network Scientist</i></a></li>
 <li><i>An Introduction to Linear Programming and Game Theory</i> - readings will be provided as needed</li>
 </ul></font>
     
