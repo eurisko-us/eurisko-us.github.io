@@ -36,7 +36,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Assignment 3</a>
+        <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Set 3</a>
     </td>
     <td width="50%">
         Quiz on Friday (9/10) - gradient descent, bias-variance tradeoff
@@ -44,7 +44,7 @@ author_profile: false
   </tr>
    <tr>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Assignment 2</a>
+        <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Set 2</a>
     </td>
     <td width="50%">
         Space Empires development - 11th grade refactors and extends game to multiple ship types, 12th grade begins rewriting in Javascript
@@ -52,10 +52,10 @@ author_profile: false
   </tr>
     <tr>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Assignment 1</a>
+        <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1</a>
     </td>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Assignment 1 - Quant Review in Julia</a>
+        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1 - Quant Review in Julia</a>
      </td>
   </tr>
 </table>
