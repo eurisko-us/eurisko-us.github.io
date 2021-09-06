@@ -28,6 +28,8 @@ author_profile: false
     
 <br><br><b>Assignments / Clips</b><br><br>
     
+    https://www.overleaf.com/read/ngtwymgrzzyd
+    
 <center>
 <table style="width:80%">
     <tr>
@@ -39,7 +41,8 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Set 3: Basic Sorting and Matrices</a>
     </td>
     <td width="50%">
-        Exam NEXT Friday (9/17) - gradient descent, bias-variance tradeoff, decision trees (11th only) and neural nets (12th only)
+        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Decision Trees (11th) and Neural Nets (12th)</a><br>
+        Exam NEXT Friday (9/17) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
      </td>
   </tr>
    <tr>
@@ -55,7 +58,7 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1: Some Basic Problems</a>
     </td>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1 - Quant Review in Julia</a>
+        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia</a>
      </td>
   </tr>
 </table>
