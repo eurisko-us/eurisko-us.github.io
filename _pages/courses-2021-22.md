@@ -26,7 +26,7 @@ author_profile: false
     <li>Space Empires development: <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a></li>
 </ul></font>
     
-<br><br><b>Assignments / Clips</b><br><br>
+<br><br><b>Assignments</b><br><br>
         
 <center>
 <table style="width:80%">
