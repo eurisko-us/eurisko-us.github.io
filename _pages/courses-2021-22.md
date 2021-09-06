@@ -35,7 +35,9 @@ author_profile: false
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
     <tr>
-    <td width="50%"></td>
+    <td width="50%">
+        <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Assignment 3</a>
+    </td>
     <td width="50%">
         Quiz on Friday (9/10) - gradient descent, bias-variance tradeoff
      </td>
