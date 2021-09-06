@@ -27,9 +27,7 @@ author_profile: false
 </ul></font>
     
 <br><br><b>Assignments / Clips</b><br><br>
-    
-    https://www.overleaf.com/read/ngtwymgrzzyd
-    
+        
 <center>
 <table style="width:80%">
     <tr>
