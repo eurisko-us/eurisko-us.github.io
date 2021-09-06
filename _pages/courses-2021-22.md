@@ -39,7 +39,7 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Set 3: Basic Sorting and Matrices</a>
     </td>
     <td width="50%">
-        Quiz on Friday (9/17) - gradient descent, bias-variance tradeoff, decision trees (11th only) and neural nets (12th only)
+        Exam NEXT Friday (9/17) - gradient descent, bias-variance tradeoff, decision trees (11th only) and neural nets (12th only)
      </td>
   </tr>
    <tr>
