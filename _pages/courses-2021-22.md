@@ -21,7 +21,7 @@ author_profile: false
 <br><br><b>Media</b><br><br>
     
 <font size="3em"><ul>
-    <li>Algorithm Walkthroughs: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">10th Grade</a></li>
+    <li>Algorithm Walkthroughs: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">10th Grade</a>,  <a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">12th Grade</a></li>
     <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
     <li>Space Empires development: <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a></li>
 </ul></font>
