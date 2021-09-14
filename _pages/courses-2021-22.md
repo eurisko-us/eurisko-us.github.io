@@ -38,7 +38,7 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Rhapson, Merging</a><br>
     </td>
     <td width="50%">
-        Space Empires<br>
+        Finish up set 3, and then continue Space Empires development<br>
         Exam NEXT Friday (9/24) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
      </td>
   </tr>
