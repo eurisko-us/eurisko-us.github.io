@@ -35,11 +35,19 @@ author_profile: false
   </tr>
     <tr>
     <td width="50%">
+        Set 4 - will be posted tomorrow
+    </td>
+    <td width="50%">
+        Space Empires<br>
+        Exam NEXT Friday (9/24) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+     </td>
+  </tr>
+    <tr>
+    <td width="50%">
         <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Set 3: Basic Sorting and Matrices</a>
     </td>
     <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Decision Trees (11th) and Neural Nets (12th)</a><br>
-        Exam NEXT Friday (9/17) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Decision Trees (11th) and Neural Nets (12th)</a>
      </td>
   </tr>
    <tr>
