@@ -35,7 +35,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="50%">
-        Set 4 - will be posted tomorrow
+        <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Rhapson, Merging</a><br>
     </td>
     <td width="50%">
         Space Empires<br>
