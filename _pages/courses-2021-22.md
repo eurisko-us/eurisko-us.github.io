@@ -38,8 +38,8 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/mrpvgqypyfvz" target="_blank">Set 5: RREF Algorithm</a><br>
     </td>
     <td width="50%">
-        Space Empires - 11th grade writes tests; 12th grade coordinates to get tests working<br>
-        Exam Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+        • Space Empires - 11th grade writes tests; 12th grade coordinates to get tests working<br>
+        • Exam Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
      </td>
   </tr>
     <tr>
@@ -47,8 +47,8 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Rhapson, Merging</a><br>
     </td>
     <td width="50%">
-        Finish up set 3, and then continue Space Empires development - 11th grade creates strategy players; and 12th grade coordinates to write tests<br>
-        Exam NEXT Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+        • Finish up set 3, and then continue Space Empires development - 11th grade creates strategy players; and 12th grade coordinates to write tests<br>
+        • Exam NEXT Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
      </td>
   </tr>
     <tr>
