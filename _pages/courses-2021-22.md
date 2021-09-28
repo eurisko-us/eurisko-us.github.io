@@ -33,6 +33,15 @@ author_profile: false
     <td width="50%"><center><b>Computation & Modeling</b></center></td>
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
+     <tr>
+    <td width="50%">
+        Continue set 5<br>
+    </td>
+    <td width="50%">
+        • Quant week #3 - 11th grade does decision tree pruning; 12th grade implements bias nodes and learns about activation functions<br>
+        • See "Algorithm Walkthroughs" photo album (on this page, above) for homework in your respective grade level
+     </td>
+  </tr>
     <tr>
     <td width="50%">
         <a class="body" href="https://www.overleaf.com/read/mrpvgqypyfvz" target="_blank">Set 5: RREF Algorithm</a><br>
