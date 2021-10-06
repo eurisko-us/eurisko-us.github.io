@@ -33,6 +33,14 @@ author_profile: false
     <td width="50%"><center><b>Computation & Modeling</b></center></td>
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
+   <tr>
+    <td width="50%">
+        <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
+    </td>
+    <td width="50%">
+        • Space Empires - 11th grade standardizes their strategy class; 12th grade gets their core game engine running<br>
+     </td>
+  </tr>
      <tr>
     <td width="50%">
         Continue set 5<br>
