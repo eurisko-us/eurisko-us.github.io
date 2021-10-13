@@ -35,7 +35,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="50%">
-        Linear and logistic regressor classes (see 10th grade "Algorithm Walkthroughs" photo album for homework statement)<br>
+        Set 7: Linear and logistic regressor classes (see 10th grade "Algorithm Walkthroughs" photo album for homework statement)<br>
     </td>
     <td width="50%">
         • Quant week #4 - 11th grade implements random forests; 12th grade implements backpropagation<br>
