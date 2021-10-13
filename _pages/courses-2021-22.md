@@ -33,6 +33,15 @@ author_profile: false
     <td width="50%"><center><b>Computation & Modeling</b></center></td>
     <td width="50%"><center><b>Machine Learning</b></center></td>
   </tr>
+    <tr>
+    <td width="50%">
+        Linear and logistic regressor classes (see 10th grade "Algorithm Walkthroughs" photo album for homework statement)<br>
+    </td>
+    <td width="50%">
+        • Quant week #4 - 11th grade implements random forests; 12th grade implements backpropagation<br>
+        • See "Algorithm Walkthroughs" photo album (on this page, above) for homework in your respective grade level
+     </td>
+  </tr>
    <tr>
     <td width="50%">
         <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
