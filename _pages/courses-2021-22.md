@@ -37,7 +37,8 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        Set 7: Linear and logistic regressor classes (see 10th grade "Algorithm Walkthroughs" photo album for homework statement)<br>
+        • Set 7: Linear and logistic regressor classes<br>
+        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level<br>
     </td>
     <td width="33%">
         • Quant week #4 - implement random forests<br>
