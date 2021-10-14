@@ -33,6 +33,7 @@ author_profile: false
     <td width="33%"><center><b>Computation & Modeling</b></center></td>
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
     <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
+    <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
   </tr>
     <tr>
     <td width="33%">
