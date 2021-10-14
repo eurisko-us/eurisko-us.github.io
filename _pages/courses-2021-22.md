@@ -21,9 +21,9 @@ author_profile: false
 <br><br><b>Media</b><br><br>
     
 <font size="3em"><ul>
-    <li>Algorithm Walkthroughs: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">10th Grade</a>, <a class="body" href="https://photos.app.goo.gl/frJExShsPvePL2Vy5" target="_blank">11th Grade</a>,  <a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">12th Grade</a></li>
-    <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
-    <li>Space Empires development: <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">11th Grade</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">12th Grade</a></li>
+    <li><a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Computation & Modeling Board Pictures</a></li>
+    <li>Machine Learning (11th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/frJExShsPvePL2Vy5" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">Space Empires</a></li>
+    <li>Machine Learning (12th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">Space Empires</a></li>
 </ul></font>
     
 <br><br><b>Assignments</b><br><br>
@@ -39,7 +39,7 @@ author_profile: false
     </td>
     <td width="50%">
         • Quant week #4 - 11th grade implements random forests; 12th grade implements backpropagation<br>
-        • See "Algorithm Walkthroughs" photo album (on this page, above) for homework in your respective grade level
+        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
      </td>
   </tr>
    <tr>
@@ -56,7 +56,7 @@ author_profile: false
     </td>
     <td width="50%">
         • Quant week #3 - 11th grade does decision tree pruning; 12th grade implements bias nodes and learns about activation functions<br>
-        • See "Algorithm Walkthroughs" photo album (on this page, above) for homework in your respective grade level
+        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
      </td>
   </tr>
     <tr>
