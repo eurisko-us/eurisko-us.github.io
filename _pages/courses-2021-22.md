@@ -52,10 +52,10 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
     </td>
     <td width="33%">
-        • Standardize strategy class<br>
+        • Space Empires - standardize strategy class<br>
      </td>
      <td width="33%">
-        • Gets their core game engine running<br>
+        • Space Empires - get core game engine running<br>
      </td>
   </tr>
      <tr>
