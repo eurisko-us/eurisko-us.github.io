@@ -30,74 +30,103 @@ author_profile: false
 <center>
 <table style="width:80%">
     <tr>
-    <td width="50%"><center><b>Computation & Modeling</b></center></td>
-    <td width="50%"><center><b>Machine Learning</b></center></td>
+    <td width="33%"><center><b>Computation & Modeling</b></center></td>
+    <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
+    <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
   </tr>
     <tr>
-    <td width="50%">
+    <td width="33%">
         Set 7: Linear and logistic regressor classes (see 10th grade "Algorithm Walkthroughs" photo album for homework statement)<br>
     </td>
-    <td width="50%">
-        • Quant week #4 - 11th grade implements random forests; 12th grade implements backpropagation<br>
+    <td width="33%">
+        • Quant week #4 - implement random forests<br>
+        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+     </td>
+    <td width="33%">
+        • Quant week #4 - implement backpropagation<br>
         • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
      </td>
   </tr>
    <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
     </td>
-    <td width="50%">
-        • Space Empires - 11th grade standardizes their strategy class; 12th grade gets their core game engine running<br>
+    <td width="33%">
+        • Standardize strategy class<br>
+     </td>
+     <td width="33%">
+        • Gets their core game engine running<br>
      </td>
   </tr>
      <tr>
-    <td width="50%">
+    <td width="33%">
         Continue set 5<br>
     </td>
-    <td width="50%">
-        • Quant week #3 - 11th grade does decision tree pruning; 12th grade implements bias nodes and learns about activation functions<br>
+    <td width="33%">
+        • Quant week #3 - decision tree pruning<br>
+        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+     </td>
+     <td width="33%">
+        • Quant week #3 - implement bias nodes and learn about activation functions<br>
         • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
      </td>
   </tr>
     <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/mrpvgqypyfvz" target="_blank">Set 5: RREF Algorithm</a><br>
     </td>
-    <td width="50%">
-        • Space Empires - 11th grade writes tests; 12th grade coordinates to get tests working<br>
+    <td width="33%">
+        • Space Empires - write tests<br>
+        • Exam Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+     </td>
+     <td width="33%">
+        • Space Empires - coordinate to get tests working<br>
         • Exam Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
      </td>
   </tr>
     <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Rhapson, Merging</a><br>
     </td>
-    <td width="50%">
-        • Finish up set 2, and then continue Space Empires development - 11th grade creates strategy players; and 12th grade coordinates to write tests<br>
-        • Exam NEXT Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees (11th) and neural nets (12th)
+    <td width="33%">
+        • Finish up set 2, and then continue Space Empires development - creates strategy players<br>
+        • Exam NEXT Thursday (9/23) - gradient descent, bias-variance tradeoff, decision trees
+     </td>
+    <td width="33%">
+        • Finish up set 2, and then continue Space Empires development - coordinate to write tests<br>
+        • Exam NEXT Thursday (9/23) - gradient descent, bias-variance tradeoff, neural nets
      </td>
   </tr>
     <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/jynswxmmhyvk" target="_blank">Set 3: Basic Sorting and Matrices</a>
     </td>
-    <td width="50%">
-        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Decision Trees (11th) and Neural Nets (12th)</a>
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Decision Trees</a>
+     </td>
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/wpngrrdjsdyt" target="_blank">Set 2: Intro to Neural Nets</a>
      </td>
   </tr>
    <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/zywqbphxwvzh" target="_blank">Set 2: Brute-Force Search, Bisection Search, Intro to Data Structures and Sorting</a>
     </td>
-    <td width="50%">
-        Space Empires development - 11th grade refactors and extends game to multiple ship types, 12th grade begins rewriting in Javascript
+    <td width="33%">
+        Space Empires development - refactor and extend game to multiple ship types
+     </td>
+    <td width="33%">
+        Space Empires development - begin rewriting in Javascript
      </td>
   </tr>
     <tr>
-    <td width="50%">
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/xtxcrqwdgkvt" target="_blank">Set 1: Some Basic Problems</a>
     </td>
-    <td width="50%">
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia</a>
+     </td>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Set 1: Quant Review in Julia</a>
      </td>
   </tr>
