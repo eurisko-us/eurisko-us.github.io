@@ -24,6 +24,7 @@ author_profile: false
     <li><a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Computation & Modeling Board Pictures</a></li>
     <li>Machine Learning (11th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/frJExShsPvePL2Vy5" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">Space Empires</a></li>
     <li>Machine Learning (12th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">Space Empires</a></li>
+    <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
 </ul></font>
     
 <br><br><b>Assignments</b><br><br>
@@ -33,7 +34,6 @@ author_profile: false
     <td width="33%"><center><b>Computation & Modeling</b></center></td>
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
     <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
-    <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
   </tr>
     <tr>
     <td width="33%">
