@@ -28,6 +28,7 @@ author_profile: false
 </ul></font>
     
 <br><br><b>Assignments</b><br><br>
+    Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
 <center>
 <table style="width:80%">
     <tr>
@@ -37,16 +38,13 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        • Set 7: Linear and logistic regressor classes<br>
-        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level<br>
+        Set 7: Linear and logistic regressor classes
     </td>
     <td width="33%">
-        • Quant week #4 - implement random forests<br>
-        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+        Quant week #4 - implement random forests
      </td>
     <td width="33%">
-        • Quant week #4 - implement backpropagation<br>
-        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+        Quant week #4 - implement backpropagation
      </td>
   </tr>
    <tr>
@@ -54,10 +52,10 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
     </td>
     <td width="33%">
-        • Space Empires - standardize strategy class<br>
+        Space Empires - standardize strategy class
      </td>
      <td width="33%">
-        • Space Empires - get core game engine running<br>
+        Space Empires - get core game engine running
      </td>
   </tr>
      <tr>
@@ -65,12 +63,10 @@ author_profile: false
         Continue set 5<br>
     </td>
     <td width="33%">
-        • Quant week #3 - decision tree pruning<br>
-        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+        Quant week #3 - decision tree pruning
      </td>
      <td width="33%">
-        • Quant week #3 - implement bias nodes and learn about activation functions<br>
-        • See "Board Pictures" photo album (on this page, above) for homework in your respective grade level
+        Quant week #3 - implement bias nodes and learn about activation functions
      </td>
   </tr>
     <tr>
