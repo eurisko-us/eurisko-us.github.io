@@ -38,6 +38,16 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 8: Determinant via RREF, Merge Sort, Intro to Graphs</a>
+    </td>
+    <td width="33%">
+        Space Empires (TBD)
+     </td>
+    <td width="33%">
+        Space Empires (TBD)
+     </td>
+    <tr>
+    <td width="33%">
         Set 7: Linear and logistic regressor classes
     </td>
     <td width="33%">
@@ -49,7 +59,7 @@ author_profile: false
   </tr>
    <tr>
     <td width="33%">
-        <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a><br>
+        <a class="body" href="https://www.overleaf.com/read/hdzgdsctkmkb" target="_blank">Set 6: Matrix Inverse</a>
     </td>
     <td width="33%">
         Space Empires - standardize strategy class
