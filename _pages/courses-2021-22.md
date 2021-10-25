@@ -36,16 +36,29 @@ author_profile: false
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
     <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
   </tr>
+    
+    <tr>
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
+    </td>
+    <td width="33%">
+        Quant week #5
+     </td>
+    <td width="33%">
+        Quant week #5
+    </td>
+        
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 8: Determinant via RREF, Merge Sort, Intro to Graphs</a>
     </td>
     <td width="33%">
-        Space Empires (TBD)
+        Space Empires (Running standardized strategies on each other's games)
      </td>
     <td width="33%">
-        Space Empires (TBD)
-     </td>
+        Space Empires (Visualization)
+    </td>
+    </tr>
     <tr>
     <td width="33%">
         Set 7: Linear and logistic regressor classes
