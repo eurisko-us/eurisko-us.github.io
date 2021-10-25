@@ -38,10 +38,10 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
+        <a class="body" href="https://www.overleaf.com/read/tppjhqgmfxfy" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
     </td>
     <td width="33%">
-        Quant week #5
+        Quant week #5 - 
      </td>
     <td width="33%">
         Quant week #5
@@ -51,10 +51,10 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 8: Determinant via RREF, Merge Sort, Intro to Graphs</a>
     </td>
     <td width="33%">
-        Space Empires (Running standardized strategies on each other's games)
+        Space Empires - running standardized strategies on each other's games
      </td>
     <td width="33%">
-        Space Empires (Visualization)
+        Space Empires - visualization
     </td>
     </tr>
     <tr>
