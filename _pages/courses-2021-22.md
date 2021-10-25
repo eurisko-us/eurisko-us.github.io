@@ -36,7 +36,6 @@ author_profile: false
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
     <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
   </tr>
-    
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
@@ -46,8 +45,7 @@ author_profile: false
      </td>
     <td width="33%">
         Quant week #5
-    </td>
-        
+    </td> 
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/qdwjqqtjrfjw" target="_blank">Set 8: Determinant via RREF, Merge Sort, Intro to Graphs</a>
