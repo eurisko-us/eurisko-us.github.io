@@ -18,15 +18,15 @@ author_profile: false
 <li><i>An Introduction to Linear Programming and Game Theory</i> - readings will be provided as needed</li>
 </ul></font>
     
-<br><br><b>Media</b><br><br>
+<br><br><b>Resources</b><br><br>
     
 <font size="3em"><ul>
-    <li><a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Computation & Modeling Board Pictures</a></li>
-    <li>Machine Learning (11th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/frJExShsPvePL2Vy5" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">Space Empires</a></li>
-    <li>Machine Learning (12th grade) Board Pictures: <a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">Space Empires</a></li>
-    <li>Concepts: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
+    <li>Board Pictures: <a class="body" href="https://photos.app.goo.gl/eWy5nqwPeJVqXVtz6" target="_blank">Computation & Modeling</a>, 11th Grade Machine Learning (<a class="body" href="https://photos.app.goo.gl/frJExShsPvePL2Vy5" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/Zhmdn3uPSPMK58sR9" target="_blank">Space Empires</a>), 12th Grade Machine Learning (<a class="body" href="https://photos.app.goo.gl/VvXE6JpLQpCH2vsX9" target="_blank">Algorithms</a>, <a class="body" href="https://photos.app.goo.gl/ahEaJYqttX2ir6wr6" target="_blank">Space Empires</a>)</li>
+    <li>Lessons: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>
+    <li>Exams: <a class="body" href="https://photos.app.goo.gl/o6zWkhkf9ZBLBy9C6" target="_blank">9/23 Machine Learning (11th & 12th)</a> </li>
+    <li>Supplemental Readings: <a class="body" target="_blank" href="https://www.statlearning.com/"><i>Introduction to Statistical Learning</i></a>, <a class="body" target="_blank" href="https://www.cin.ufpe.br/~cavmj/Machine%20-%20Learning%20-%20Tom%20Mitchell.pdf"><i>Machine Learning</i> (Mitchell)</a>, <a class="body" target="_blank" href="http://incompleteideas.net/book/the-book.html"><i>Reinforcement Learning</i> (Sutton & Barto)</a><li></li>
 </ul></font>
-    
+       
 <br><br><b>Assignments</b><br><br>
     Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
 <center>
