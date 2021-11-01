@@ -39,7 +39,7 @@ author_profile: false
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/rhvmqyvwggtq" target="_blank">Set 10</a><br>
-        • Exam NEXT Friday (11/12) - sorting algorithms, newton-rhapson, single-variable gradient descent, recursive vs non-recursive matrix determinant, breadth-first and depth-first traversals
+        • Exam NEXT Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, breadth-first and depth-first traversals
     </td>
     <td width="33%">
         Space Empires<br>
@@ -50,11 +50,6 @@ author_profile: false
         • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting plots that were created using sklearn implementations on artificial data set; random forests (11th only) and backpropagation algorithm (12th only)
     </td> 
     </tr>
-    <tr>
-    <td width="33%"><center><b>Computation & Modeling</b></center></td>
-    <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
-    <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
-  </tr>
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/tppjhqgmfxfy" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
