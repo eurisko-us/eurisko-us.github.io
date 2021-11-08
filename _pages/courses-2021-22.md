@@ -29,16 +29,30 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        • <a class="body" href="https://www.overleaf.com/read/qvtfnkdjbyzg" target="_blank">Set 11</a><br>
+        • Exam Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
+    </td>
+    <td width="33%">
+        • Space Empires - first competition<br>
+        • Exam Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
+     </td>
+    <td width="33%">
+        • Neural net plots<br>
+        • Exam Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         • <a class="body" href="https://www.overleaf.com/read/rhvmqyvwggtq" target="_blank">Set 10</a><br>
         • Exam NEXT Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
     </td>
     <td width="33%">
         • Space Empires<br>
-        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting plots that were created using sklearn implementations on artificial data set; random forests (11th only) and backpropagation algorithm (12th only)
+        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
      </td>
     <td width="33%">
         • Space Empires<br>
-        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting plots that were created using sklearn implementations on artificial data set; random forests (11th only) and backpropagation algorithm (12th only)
+        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
     </td> 
     </tr>
     <tr>
@@ -46,10 +60,10 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/tppjhqgmfxfy" target="_blank">Set 9: Regression with Multiple Inputs, Breadth-First and Depth-First Traversals, Intro to DataFrames</a>
     </td>
     <td width="33%">
-        Quant week #5 - plots using artificial data set and sklearn implementations of kNN, decision tree, random forest
+        Plots using artificial data set and sklearn implementations of kNN, decision tree, random forest
      </td>
     <td width="33%">
-        Quant week #5 - plots using artificial data set and sklearn implementations of kNN, decision tree, random forest
+        Plots using artificial data set and sklearn implementations of kNN, decision tree, random forest
     </td> 
     </tr>
     <tr>
@@ -68,10 +82,10 @@ author_profile: false
         Set 7: Linear and logistic regressor classes
     </td>
     <td width="33%">
-        Quant week #4 - implement random forests
+        Implement random forests
      </td>
     <td width="33%">
-        Quant week #4 - implement backpropagation
+        Implement backpropagation
      </td>
   </tr>
    <tr>
@@ -90,10 +104,10 @@ author_profile: false
         Continue set 5<br>
     </td>
     <td width="33%">
-        Quant week #3 - decision tree pruning
+        Decision tree pruning
      </td>
      <td width="33%">
-        Quant week #3 - implement bias nodes and learn about activation functions
+        Implement bias nodes and learn about activation functions
      </td>
   </tr>
     <tr>
