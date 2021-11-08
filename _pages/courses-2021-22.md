@@ -37,7 +37,7 @@ author_profile: false
         • Exam Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
      </td>
     <td width="33%">
-        • Neural net plots<br>
+        • Neural net plots using sklearn implementations<br>
         • Exam Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
     </td> 
     </tr>
