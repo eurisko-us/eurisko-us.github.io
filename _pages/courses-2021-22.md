@@ -29,7 +29,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        • <a class="body" href="https://www.overleaf.com/read/qvtfnkdjbyzg" target="_blank">Set 11</a><br>
+        • <a class="body" href="https://www.overleaf.com/read/qvtfnkdjbyzg" target="_blank">Set 11: Logistic Regression with General Bounds + Data Set Analysis using DataFrames</a><br>
         • Exam Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
     </td>
     <td width="33%">
@@ -43,7 +43,7 @@ author_profile: false
     </tr>
     <tr>
     <td width="33%">
-        • <a class="body" href="https://www.overleaf.com/read/rhvmqyvwggtq" target="_blank">Set 10</a><br>
+        • <a class="body" href="https://www.overleaf.com/read/rhvmqyvwggtq" target="_blank">Set 10: Interaction Terms and Intro to DataFrames</a><br>
         • Exam NEXT Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
     </td>
     <td width="33%">
