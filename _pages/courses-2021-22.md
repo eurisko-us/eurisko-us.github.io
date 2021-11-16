@@ -29,6 +29,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/yxmnvkzsfxtm" target="_blank">Set 12: DataFrames from Scatch</a><br>
+    </td>
+    <td width="33%">
+        Neural Nets: forward propagation by hand with simple activation f(x) = 2x, calculating gradients by hand using the direct approach, identifying the general pattern
+     </td>
+    <td width="33%">
+        Keras: https://www.tensorflow.org/tutorials/keras/classification (for each tutorial we cover, walk through it and be ready to discuss it the following day)
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         • <a class="body" href="https://www.overleaf.com/read/qvtfnkdjbyzg" target="_blank">Set 11: Logistic Regression with General Bounds + Data Set Analysis using DataFrames</a><br>
         • Exam Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
     </td>
