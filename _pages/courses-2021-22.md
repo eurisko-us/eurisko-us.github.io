@@ -29,10 +29,21 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/mcbdmpcdbbfw" target="_blank">Set 13: SQL, Gradient Descent, Operator Overloading, kNN</a><br>
+    </td>
+    <td width="33%">
+        Space Empires Competition 2; calculating neural net gradients by hand using the direct approach
+     </td>
+    <td width="33%">
+        Space Empires
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/yxmnvkzsfxtm" target="_blank">Set 12: DataFrames from Scatch</a><br>
     </td>
     <td width="33%">
-        Neural Nets: forward propagation by hand with simple activation f(x) = 2x, calculating gradients by hand using the direct approach, identifying the general pattern
+        Neural Nets: forward propagation by hand with simple activation f(x) = 2x
      </td>
     <td width="33%">
         Keras: https://www.tensorflow.org/tutorials/keras/classification (for each tutorial we cover, walk through it and be ready to discuss it the following day)
