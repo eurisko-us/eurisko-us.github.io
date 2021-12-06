@@ -29,6 +29,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/tpgnqxpfthmr" target="_blank">Set 14: SQL, Multivariable Gradient Descent</a><br>
+    </td>
+    <td width="33%">
+        Benefits of gradient descent over transformations into linear space: power regression and exponential regression <!--calculating neural net gradients by hand using the direct approach-->
+     </td>
+    <td width="33%">
+        Benefits of gradient descent over transformations into linear space: power regression and exponential regression
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/mcbdmpcdbbfw" target="_blank">Set 13: SQL, Gradient Descent, Operator Overloading, kNN</a><br>
     </td>
     <td width="33%">
