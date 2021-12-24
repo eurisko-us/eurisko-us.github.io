@@ -43,5 +43,22 @@ Now that we know what graphs and directed graphs are, we can introduce depth-fir
 
 A graph class is a collection of nodes along with methods for operating on the nodes. Each node has an index and a list of "neighbors" (in the case of an undirected graph) or "parents" (in the case of a directed graph).
 
+To initialize a graph, we can pass in a list of edges, where each edge is a tuple of node indices. From the edges list, we can determine all the possible indices of nodes, and then create a node that corresponds to each of those indices.
 
+<font size="3em">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">class</span> <span style="color: #BB0066; font-weight: bold">Graph</span>:
+    <span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">__init__</span>(<span style="color: #007020">self</span>, edges):
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>edges <span style="color: #333333">=</span> edges
+        indices <span style="color: #333333">=</span> []
+
+        <span style="color: #008800; font-weight: bold">for</span> edge <span style="color: #000000; font-weight: bold">in</span> edges:
+            indices<span style="color: #333333">.</span>append(edge[<span style="color: #0000DD; font-weight: bold">0</span>])
+            indices<span style="color: #333333">.</span>append(edge[<span style="color: #0000DD; font-weight: bold">1</span>])
+
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>nodes <span style="color: #333333">=</span> [Node(n) <span style="color: #008800; font-weight: bold">for</span> n <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #007020">max</span>(indices) <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">1</span>)]
+</pre></div>
+</font>
+<br>
+
+Now that we have initialized our graph, we are now able to build it.
 
