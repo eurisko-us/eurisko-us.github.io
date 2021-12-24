@@ -134,3 +134,5 @@ Depth-first search is similar to breadth-first search. The only difference is th
 </pre></div>
 </font>
 <br>
+
+Keep in mind that there can be different outputs for each of the search methods. In the case of breadth first search, you can switch up the order of elements on the same layer. In the case of depth first search, you can choose different paths to start going down.
