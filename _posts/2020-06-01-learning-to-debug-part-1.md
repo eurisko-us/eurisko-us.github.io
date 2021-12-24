@@ -1,9 +1,11 @@
-title: "Learning to Debug"
+---
+title: "Learning to Debug, Part 1"
 author: "William Wallius"
 reviewers:
   - "Maia Dimas"
 tags:
   - Debugging
+---
 
 <i>Note to reader: this post was written before students had access to VS Code and its associated debugging capabilities. Consequently, some valuable debugging tools like breakpoints are not covered in the post.</i>
 
