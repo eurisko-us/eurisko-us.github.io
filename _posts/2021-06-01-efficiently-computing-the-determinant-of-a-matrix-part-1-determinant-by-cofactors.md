@@ -1,5 +1,5 @@
 ---
-title: "Efficiently Computing the Determinant of a Matrix, Part 1: Determinant By Cofactors"
+title: "Efficiently Computing the Determinant of a Matrix, Part 1: Determinant by Cofactors"
 author: "Charlie Weinberger"
 reviewers:
   - "Nathan Reynoso"
