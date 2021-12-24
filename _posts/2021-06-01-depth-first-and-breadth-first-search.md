@@ -31,8 +31,11 @@ Again, the nodes are labeled circles and the edges are the lines between the nod
 
 In the context of cities connected by railroad tracks, node A would be your home city. The directed edge $A \to B$ represents a railroad that goes from city A to city B (but does not go back to city A). From city A, we can only go to city B. From city B, we can only go to city C (since the edge connecting B and D is $D \to B$, not $B \to D$). City C can only go to city E. When we get to city E, we can either go to city D (which in turn will allow us to loop back to city A city B) or city F (from which we can go to city D).
 
+<h2>Depth-First and Breadth-First Search</h2>
 
+Now that we know what graphs and directed graphs are, we can introduce depth-first and breadth-first search. As implied by the name, these methods traverse the graph by prioritizing either depth or breadth.
 
+<b>Depth-first search</b> prioritizes depth. Starting at some node in the graph, we travel along one of the edges that connects to this node. This edge takes us to a new node, and we repeat the process, traveling along one of the edges that connects to the new node. This takes us deeper and deeper into the graph. Once we reach a node for which there are no more edges that we can travel along, we backtrack and go back up the graph until there is a path that we haven't taken already. We then go deep down the path as far as possible, and then repeat the process until we've visited each and every node in the graph.
 
 
 
