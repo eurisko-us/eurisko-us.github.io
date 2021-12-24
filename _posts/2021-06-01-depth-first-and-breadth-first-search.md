@@ -18,8 +18,6 @@ The following picture is an example of an undirected graph:
 <center><img src="https://eurisko-us.github.io/images/blog/depth-first-and-breadth-first-search-1-undirected-graph.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
-[[graph.png]]
-
 Here, the labeled circles represent nodes and the lines between the nodes represent undirected edges. 
 
 In the context of a social network, think of node 1 as yourself. The nodes 2, 7, and 8 would be your friends. The nodes 3 and 6 would be the friends of 2 and the nodes 9 and 12 would be the friends of 8. Since no other nodes are connected to 7, you are node 7's only friend. By the same logic, nodes 4 and 5 are friends of 3 while nodes 9 and 12 are friends of 8.
