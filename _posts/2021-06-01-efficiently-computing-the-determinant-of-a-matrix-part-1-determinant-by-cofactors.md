@@ -7,6 +7,8 @@ tags:
   - Algorithms
 ---
 
+<i>Note: This post is part 1 of a 2-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-1-determinant-by-cofactors/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">part 2</a>.</i>
+
 The determinant is a number associated with a matrix that can be used to figure out many characteristics of that matrix. You can find the determinant of any square matrix.
 
 For example, the determinant can be used to tell if a matrix is invertible, and it can be used to perform a change of variables in a higher-order integral. It can also tell us if a system of equations has a unique solution, and has multiple uses in calculus and linear algebra, including defining the characteristic polynomial of a matrix.
