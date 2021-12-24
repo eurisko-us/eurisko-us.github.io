@@ -340,3 +340,5 @@ Continuing the expansion, when solving an $n \times n$ matrix, we would have $\d
 There are three operations per $2 \times 2$ matrix: multiplying the first and fourth elements, multiplying the second and third elements, and subtracting the latter from the former. Given that we have $\dfrac{n!}{2}$ $2 \times 2$ matrices, for the $2 \times 2$ matrices in the expansion of an $n \times n$ matrix, we have $\dfrac{3}{2}n!$ operations.
 
 Finally, we must multiply our number of operations for all $2 \times 2$ matrices by $2$, because every $2 \times 2$ matrix can have a coefficient, which is one extra operation. This brings our maximum number of operations for finding the determinant of an $n \times n$ matrix to $3 \cdot n!$ operations. This is very inefficient!
+
+<i>This post is part 1 of a 2-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">Click here to continue to part 2.</a></i>
