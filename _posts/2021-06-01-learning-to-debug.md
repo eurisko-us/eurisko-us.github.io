@@ -1,5 +1,5 @@
 ---
-title: "Learning to Debug, Part 1"
+title: "Learning to Debug"
 author: "William Wallius"
 reviewers:
   - "Maia Dimas"
