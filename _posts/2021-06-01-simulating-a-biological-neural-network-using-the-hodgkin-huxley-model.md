@@ -133,3 +133,54 @@ h_0 &= \dfrac{\alpha_h(V_0)}{\alpha_h(V_0) + \beta_h(V_0)}
 <br>
 
 <h2>Simulating a Hodgkin-Huxley Neuron</h2>
+
+Creating the Hodgkin-Huxley model through code first requires a class or function (using the Python coding language in this case) that is able to create graphs with just differential equations. Euler estimation is the method that is used to do just that. At its very core, the Euler estimator takes the rate of change of a function at a point and predicts the next point based on that rate of change and the user-inputted step size (rate of change times step size gives us the change from the original point to the next point). As the step size decreases, the graph becomes more accurate.
+
+For the Euler estimator used in this case, the user inputs rates of change for each dependent variable, and uses that to calculate the variables needed to graph. Point output is in the form $(t,x),$ where $t$ represents time and $x$ can represent multiple dependent variables via Python dictionary. The estimator will graph time vs. each dependent variable.
+
+All that is left to do is turn the differentials and functions into Python functions, and use the Euler estimator to graph the model.
+
+Here are some examples of turning the equations into code. There is one Python function for every "part" of the model: alphas and betas, initial values, currents, etc.
+
+<font size="3em">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">alpha_n</span>(t,x):
+    V <span style="color: #333333">=</span> x[<span style="background-color: #fff0f0">&#39;V&#39;</span>]
+    <span style="color: #008800; font-weight: bold">return</span> (<span style="color: #6600EE; font-weight: bold">0.01</span><span style="color: #333333">*</span>(<span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">-</span>V)) <span style="color: #333333">/</span> (math<span style="color: #333333">.</span>exp(<span style="color: #6600EE; font-weight: bold">0.1</span><span style="color: #333333">*</span>(<span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">-</span>V)) <span style="color: #333333">-</span> <span style="color: #0000DD; font-weight: bold">1</span>)
+
+n_0 <span style="color: #333333">=</span> alpha_n(<span style="color: #0000DD; font-weight: bold">0</span>,{<span style="background-color: #fff0f0">&#39;V&#39;</span>:<span style="color: #0000DD; font-weight: bold">0</span>}) <span style="color: #333333">/</span> (alpha_n(<span style="color: #0000DD; font-weight: bold">0</span>,{<span style="background-color: #fff0f0">&#39;V&#39;</span>:<span style="color: #0000DD; font-weight: bold">0</span>}) <span style="color: #333333">+</span> beta_n(<span style="color: #0000DD; font-weight: bold">0</span>,{<span style="background-color: #fff0f0">&#39;V&#39;</span>:<span style="color: #0000DD; font-weight: bold">0</span>}))
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">I_Na</span>(t,x):
+    V <span style="color: #333333">=</span> x[<span style="background-color: #fff0f0">&#39;V&#39;</span>]
+    m <span style="color: #333333">=</span> x[<span style="background-color: #fff0f0">&#39;m&#39;</span>]
+    h <span style="color: #333333">=</span> x[<span style="background-color: #fff0f0">&#39;h&#39;</span>]
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">120</span><span style="color: #333333">*</span>(m<span style="color: #333333">**</span><span style="color: #0000DD; font-weight: bold">3</span>)<span style="color: #333333">*</span>h<span style="color: #333333">*</span>(V <span style="color: #333333">-</span> V_Na)
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">stim</span>(t):
+    <span style="color: #008800; font-weight: bold">if</span> <span style="color: #0000DD; font-weight: bold">10</span><span style="color: #333333">&lt;=</span>t<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">11</span> <span style="color: #000000; font-weight: bold">or</span> <span style="color: #0000DD; font-weight: bold">20</span><span style="color: #333333">&lt;=</span>t<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">21</span> <span style="color: #000000; font-weight: bold">or</span> <span style="color: #0000DD; font-weight: bold">30</span><span style="color: #333333">&lt;=</span>t<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">40</span> <span style="color: #000000; font-weight: bold">or</span> <span style="color: #0000DD; font-weight: bold">50</span><span style="color: #333333">&lt;=</span>t<span style="color: #333333">&lt;=</span><span style="color: #0000DD; font-weight: bold">51</span> <span style="color: #888888"># (etc)</span>
+        <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">150</span>
+    <span style="color: #008800; font-weight: bold">return</span> <span style="color: #0000DD; font-weight: bold">0</span>
+
+<span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">dV_dt</span>(t,x):
+    s <span style="color: #333333">=</span> stim(t)
+    Na_curr <span style="color: #333333">=</span> I_Na(t,x)
+    K_curr <span style="color: #333333">=</span> I_K(t,x)
+    L_curr <span style="color: #333333">=</span> I_L(t,x)
+    <span style="color: #008800; font-weight: bold">return</span> (<span style="color: #0000DD; font-weight: bold">1</span><span style="color: #333333">/</span>C) <span style="color: #333333">*</span> (s <span style="color: #333333">-</span> Na_curr <span style="color: #333333">-</span> K_curr <span style="color: #333333">-</span> L_curr)
+</pre></div>
+</font>
+<br>
+
+The end product looks something like this:
+
+<center><img src="https://eurisko-us.github.io/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-3-end-product.png" style="border: none; height: 20em;" alt="icon"></center>
+<br>
+
+<h2>Analyzing the Model</h2>
+
+Now that we have the actual model, we can analyze how it relates to all the information about neurons above, as well as what the model could imply.
+
+If we look at the first burst of stimulus (between $t=10$ and $t=11$), we can see the most basic reaction to stimulus: a sudden spike caused by both depolarization and the stimulus provided (two factors), a more gradual decrease in voltage as the repolarizes (it's slower than the increase because there is only one factor repolarizing the neuron), and then where the neuron becomes hyperpolarized. This occurs at both $t=20$ and $t=30$ as well, but the example for $t=30$ will be discussed in the following paragraph.
+
+The prolonged stimulus between $t=30$ and $t=40$ causes something interesting to occur in the neuron. The first thing to be noticed is that the neuron initially repolarizes at a slower rate. This is due to constant voltage being added into the system while the neuron is repolarizing. The reason the voltage doesn't keep going down is because it about reaches the threshold where the cell can once again depolarize (-55 mV, which would be represented as 15 mV on the graph). The odd half-spike that starts around $t=33$ is the second thing to be analyzed. The reason the voltage through the neuron does not increase as quickly as previous increases is because the neuron is still repolarizing (losing voltage) as the stimulus is providing voltage. And the little spike eventually reaches the point where sodium channels just all close, and depolarization stops.
+
+The example shown in the preceding paragraph shows what happens when stimulus is constantly being poured into the system. But what happens when stimulus is provided in many short bursts? This question can be answered by analyzing the neuron's behavior at $t = 50, 53, 56, 59, 62, 65$. The first burst of stimulus looks normal, but since the second burst of stimulus came before the neuron could properly repolarize (and while it was hyperpolarized), the amount of depolarization was very low. The next burst of stimulus (third one) got a better reaction because the neuron was less hyperpolarized, but it was still less than what we would normally expect. The fourth and sixth bursts are similar to the second, and the fifth one to the first and third.
