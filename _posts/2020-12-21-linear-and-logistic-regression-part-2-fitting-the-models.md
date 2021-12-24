@@ -191,3 +191,5 @@ f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n
 </pre></div>
 </font>
 <br>
+
+<i>This post is part 2 of a 3-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">click here to continue to part 3</a>.</i>
