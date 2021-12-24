@@ -37,8 +37,7 @@ Now that we know what graphs and directed graphs are, we can introduce depth-fir
 
 <b>Depth-first search</b> prioritizes depth. Starting at some node in the graph, we travel along one of the edges that connects to this node. This edge takes us to a new node, and we repeat the process, traveling along one of the edges that connects to the new node. This takes us deeper and deeper into the graph. Once we reach a node for which there are no more edges that we can travel along, we backtrack and go back up the graph until there is a path that we haven't taken already. We then go deep down the path as far as possible, and then repeat the process until we've visited each and every node in the graph.
 
-
-
+<b>Breadth-first search</b> prioritizes breadth. Instead of repeatedly traveling deep into the graph, breadth-first search has us traveling through each "layer" of the graph. If we think about a family tree diagram as an example, a "layer" would be a single generation of people. In the case of a graph, a "layer" would be a single generation of nodes, so to speak. In this context, breadth-first searching can be interpreted as traversing by "generation", whereas depth-first searching can be interpreted as traversing by direct "branches" of the family tree.
 
 
 
