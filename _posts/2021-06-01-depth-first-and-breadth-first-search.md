@@ -41,7 +41,7 @@ Now that we know what graphs and directed graphs are, we can introduce depth-fir
 
 <h2>Implementing a Graph Class</h2>
 
-A graph class is a collection of nodes along with methods for operating on the nodes. Each node has an index and a list of "neighbors" (in the case of an undirected graph) or "parents" (in the case of a directed graph).
+A graph class is a collection of nodes along with methods for operating on the nodes. Each node has an index and a list of "neighbors" (or "parents", in the case of a directed graph).
 
 To initialize a graph, we can pass in a list of edges, where each edge is a tuple of node indices. From the edges list, we can determine all the possible indices of nodes, and then create a node that corresponds to each of those indices.
 
@@ -60,5 +60,48 @@ To initialize a graph, we can pass in a list of edges, where each edge is a tupl
 </font>
 <br>
 
-Now that we have initialized our graph, we are now able to build it.
+Now that we have initialized our graph, we are now able to build it. Building a graph involves setting the neighbors of each node.
+
+<font size="3em">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">build_from_edges</span>(<span style="color: #007020">self</span>):
+    <span style="color: #008800; font-weight: bold">for</span> edge <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>edges:
+    	i <span style="color: #333333">=</span> edge[<span style="color: #0000DD; font-weight: bold">0</span>]
+    	j <span style="color: #333333">=</span> edge[<span style="color: #0000DD; font-weight: bold">1</span>]
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>nodes[i]<span style="color: #333333">.</span>neighbors<span style="color: #333333">.</span>append(<span style="color: #007020">self</span><span style="color: #333333">.</span>nodes[j])
+        <span style="color: #007020">self</span><span style="color: #333333">.</span>nodes[j]<span style="color: #333333">.</span>neighbors<span style="color: #333333">.</span>append(<span style="color: #007020">self</span><span style="color: #333333">.</span>nodes[i])
+</pre></div>
+</font>
+<br>
+
+<h2>Implementing Depth-First and Breadth-First Search</h2>
+
+To implement a breadth first search, we use a queue, a data structure that has elements inserted and removed according to the first-in first-out concept. Every time we visit a node, we want to add it to our queue if we haven't visited it already. Our queue keeps track of which nodes we still need to "deal with", so to speak. When we "deal with" a node, we add the node to our output array, add the node's unvisited neighbors to the queue, and then finally remove the node from the queue. We continue doing this until there are no more nodes left in the queue.
+
+<font size="3em">
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">def</span> <span style="color: #0066BB; font-weight: bold">fetch_nodes_breadth_first</span>(<span style="color: #007020">self</span>, root_index):
+    root_node <span style="color: #333333">=</span> <span style="color: #007020">self</span><span style="color: #333333">.</span>nodes[root_index]
+    queue <span style="color: #333333">=</span> []
+    queue<span style="color: #333333">.</span>append(root_node)
+
+    visited <span style="color: #333333">=</span> {}
+    visited[root_node<span style="color: #333333">.</span>index] <span style="color: #333333">=</span> <span style="color: #007020">True</span>
+
+    result <span style="color: #333333">=</span> []
+    result<span style="color: #333333">.</span>append(root_node)
+
+    <span style="color: #008800; font-weight: bold">while</span> <span style="color: #007020">len</span>(queue) <span style="color: #333333">&gt;</span> <span style="color: #0000DD; font-weight: bold">0</span>:
+    	node <span style="color: #333333">=</span> queue[<span style="color: #0000DD; font-weight: bold">0</span>]
+
+        <span style="color: #008800; font-weight: bold">for</span> neighbor <span style="color: #000000; font-weight: bold">in</span> node<span style="color: #333333">.</span>neighbors:
+            <span style="color: #008800; font-weight: bold">if</span> neighbor<span style="color: #333333">.</span>index <span style="color: #000000; font-weight: bold">not</span> <span style="color: #000000; font-weight: bold">in</span> visited:
+                queue<span style="color: #333333">.</span>append(neighbor)
+                result<span style="color: #333333">.</span>append(neighbor)
+                visited[neighbor<span style="color: #333333">.</span>index] <span style="color: #333333">=</span> <span style="color: #007020">True</span>
+
+        queue <span style="color: #333333">=</span> queue[<span style="color: #0000DD; font-weight: bold">1</span>:]
+
+    <span style="color: #008800; font-weight: bold">return</span> result
+</pre></div>
+</font>
+<br>
 
