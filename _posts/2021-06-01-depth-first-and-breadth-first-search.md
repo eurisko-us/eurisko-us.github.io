@@ -39,7 +39,9 @@ Now that we know what graphs and directed graphs are, we can introduce depth-fir
 
 <b>Breadth-first search</b> prioritizes breadth. Instead of repeatedly traveling deep into the graph, breadth-first search has us traveling through each "layer" of the graph. If we think about a family tree diagram as an example, a "layer" would be a single generation of people. In the case of a graph, a "layer" would be a single generation of nodes, so to speak. In this context, breadth-first searching can be interpreted as traversing by "generation", whereas depth-first searching can be interpreted as traversing by direct "branches" of the family tree.
 
+<h2>Implementing a Graph Class</h2>
 
+A graph class is a collection of nodes along with methods for operating on the nodes. Each node has an index and a list of "neighbors" (in the case of an undirected graph) or "parents" (in the case of a directed graph).
 
 
 
