@@ -7,6 +7,8 @@ tags:
   - Machine Learning
 ---
 
+<i>Note: This post is part 1 of a 3-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
+
 Regression is when you measure specific data points and fit a function to the trend. This can be used to establish connections between known variables and uncertainties, like the probability of a heart attack occurring via known traits. Another example could be determining the perfect amount of something, like the perfect amount of toppings on a pizza. You can relate the amount of toppings with customer satisfaction and determine an average amount of toppings that would lead to best reviews from customers.
 
 There are two main types of regression I'm going to talk about, linear and logistic. Linear regression comes in the form of a straight line:
