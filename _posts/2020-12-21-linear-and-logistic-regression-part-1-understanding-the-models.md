@@ -100,3 +100,5 @@ In this equation, $U$ is your upper limit, and $L$ is your lower limit. We would
 
 For example, say you have a crowd of people and you want to predict the direction in which the crowd will move. This could go from $-180^\circ$ to $180\circ$ where $0^\circ$ represents straight ahead, $-90^\circ$ represents left, and $90^\circ$ represents right. There are many different scenarios in which you wouldn't want the standard $0$ to $1$ bounds.
 <br>
+
+<i>This post is part 1 of a 3-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">click here to continue to part 2</a>.</i>
