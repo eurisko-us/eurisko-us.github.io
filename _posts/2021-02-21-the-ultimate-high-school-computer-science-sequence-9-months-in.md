@@ -113,7 +113,7 @@ Here are our plans for the rest of the semester:
 
 <li><i>Data Structures and Algorithms</i> - we will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), and genetic algorithms.</li>
 
-<li><i>Programming Languages</i> - we'll do a bit more Haskell, C++, and SQL before hitting the brakes (pursuing them further isn't going to be as valuable to the goals of the class as the space empires, machine learning, and algorithms problems). But we'll also write our own SQL parser within the DataFrame class, to gain further insight into how programming languages are structured and what goes on behind the scenes when you run a program.</li>
+<li><i>Programming Languages</i> - we'll do a bit more Haskell, C++, and SQL before hitting the brakes (pursuing them further isn't going to be as valuable to the goals of the class as the Space Empires, machine learning, and algorithms problems). But we'll also write our own SQL parser within the DataFrame class, to gain further insight into how programming languages are structured and what goes on behind the scenes when you run a program.</li>
 
 <li><i>Space Empires</i> - we will continue building up the game level by level and building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that we have built. We may have to start collaborating on a shared implementation if resolving discrepancies across students' own implementation proves too time-consuming.</li>
 
