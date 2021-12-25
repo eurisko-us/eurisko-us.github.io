@@ -1,5 +1,5 @@
 ---
-title: "Efficiently Computing the Determinant of a Matrix, Part 1: Determinant by Elementary Row Operations"
+title: "Efficiently Computing the Determinant of a Matrix, Part 2: Determinant by Elementary Row Operations"
 author: "Nathan Reynoso"
 reviewers:
   - "Charlie Weinberger"
