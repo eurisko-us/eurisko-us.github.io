@@ -46,8 +46,12 @@ $\begin{align*}
 0&3&20\\
 0&2&4
 \end{bmatrix}, \text{row divisors:(2), row swaps:(1)}
-$$
-$$
+\end{align*}$
+</center>
+<br>
+
+<center>
+$\begin{align*}
 \begin{bmatrix}
 1&0&-16\\
 0&3&-27\\
