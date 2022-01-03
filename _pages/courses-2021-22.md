@@ -29,6 +29,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/jjvvzchhtrqx" target="_blank">Set 15: Linear and Polynomial Regression via Gradient Descent</a><br>
+    </td>
+    <td width="33%">
+    TBD    
+    </td>
+    <td width="33%">
+    TBD
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/tpgnqxpfthmr" target="_blank">Set 14: SQL, Multivariable Gradient Descent</a><br>
     </td>
     <td width="33%">
