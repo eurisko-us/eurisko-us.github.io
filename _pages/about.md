@@ -44,10 +44,8 @@ Eurisko one of the most advanced high school math/CS sequences in the world. Stu
 <br><br><b>More Information</b><br>
   
 <font size="3em">
-    
+    <a class="body" target="_blank" href="https://eurisko-us.github.io/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 </font>
-  
-<a class="body" target="_blank" href="https://eurisko-us.github.io/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 
 </div>
 
