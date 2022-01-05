@@ -41,6 +41,13 @@ Eurisko one of the most advanced high school math/CS sequences in the world. Stu
   "Eurisko" is Greek for "I discover", and is the namesake of an AI system from the 1980s that won a particular game competition twice in a row, even when the rules were changed in attempt to handicap it (<a class="body" target="_blank" href="https://en.wikipedia.org/wiki/Eurisko">read more here</a>). We're all about discovering and applying knowledge. 
 </font>
 
+<br><br><b>More Information</b><br>
+  
+<font size="3em">
+    
+</font>
+  
+<a class="body" target="_blank" href="https://eurisko-us.github.io/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 
 </div>
 
