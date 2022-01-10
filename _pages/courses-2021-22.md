@@ -17,6 +17,8 @@ author_profile: false
     <li>Exams: <a class="body" href="https://photos.app.goo.gl/o6zWkhkf9ZBLBy9C6" target="_blank">9/23 Machine Learning (11th & 12th)</a>, <a class="body" href="https://photos.app.goo.gl/vJa3UGgr1GZ8AWzW7" target="_blank">11/12 Computation & Modeling (10th)</a>, <a class="body" href="https://photos.app.goo.gl/sBfEKVwz7XWhXAEs7" target="_blank">11/12 Machine Learning (11th & 12th)</a></li>
     <!--<li>Supplemental Readings: <a class="body" target="_blank" href="https://www.statlearning.com/"><i>Introduction to Statistical Learning</i></a>, <a class="body" target="_blank" href="https://www.cin.ufpe.br/~cavmj/Machine%20-%20Learning%20-%20Tom%20Mitchell.pdf"><i>Machine Learning</i> (Mitchell)</a>, <a class="body" target="_blank" href="http://incompleteideas.net/book/the-book.html"><i>Reinforcement Learning</i> (Sutton & Barto)</a></li>-->
 </ul></font>
+    
+    zwcbswmwvwxn
        
 <br><br><b>Assignments</b><br><br>
     Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
@@ -29,13 +31,24 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/zwcbswmwvwxn" target="_blank">Set 16: SQL, Logistic Regression via Gradient Descent, Euler Estimation</a><br>
+    </td>
+    <td width="33%">
+    Regressing a linear combination of nonlinear functions via neural network   
+    </td>
+    <td width="33%">
+    Space Empires
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/jjvvzchhtrqx" target="_blank">Set 15: Linear and Polynomial Regression via Gradient Descent</a><br>
     </td>
     <td width="33%">
-    TBD    
+    Final exam corrections; Space Empires - economic phase    
     </td>
     <td width="33%">
-    TBD
+    Final exam corrections; principal component analysis
     </td> 
     </tr>
     <tr>
