@@ -22,7 +22,7 @@ author_profile: false
 <br><br><b>Assignments</b><br><br>
     Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
 <center>
-<table style="width:80%">
+<table style="width:99%">
     <tr>
     <td width="33%"><center><b>Computation & Modeling</b></center></td>
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
