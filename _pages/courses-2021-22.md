@@ -32,6 +32,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/kjktjjrhhfnq" target="_blank">Set 18: K-Means, Self Joins, Haskell</a><br>
+    </td>
+    <td width="33%">
+    TBD 
+    </td>
+    <td width="33%">
+    TBD
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/phdqtbxqmxxf" target="_blank">Set 17: Generalizing Euler Estimator to Systems of Differential Equations</a><br>
     </td>
     <td width="33%">
