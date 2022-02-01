@@ -32,13 +32,24 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/qmtpkgsytmqc" target="_blank">Set 19: Elbow Method, SQL</a><br>
+    </td>
+    <td width="33%">
+    Implement backpropagation algorithm in hard-coded neural net
+    </td>
+    <td width="33%">
+    Simplex method
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/kjktjjrhhfnq" target="_blank">Set 18: K-Means, Self Joins, Haskell</a><br>
     </td>
     <td width="33%">
-    TBD 
+    Finish Space Empires competition, intro to backpropagation algorithm
     </td>
     <td width="33%">
-    TBD
+    Space Empires - combat / economic phase log & random strategy development for simulation testing
     </td> 
     </tr>
     <tr>
