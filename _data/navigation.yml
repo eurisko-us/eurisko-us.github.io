@@ -6,11 +6,11 @@ main:
   - title: "Blog"
     url: /blog/
     
-  - title: "Clips"
-    url: /clips/
+  #- title: "Clips"
+  #  url: /clips/
 
-  - title: "Resources"
-    url: /resources/
+  #- title: "Resources"
+  #  url: /resources/
 
   - title: "People"
     url: /people/
