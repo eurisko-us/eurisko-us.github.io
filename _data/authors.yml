@@ -122,7 +122,6 @@ Christine Manoukian:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'23"
-  github      : ""
   
 Celeste Acosta:
   name        : "Celeste Acosta"
@@ -130,7 +129,6 @@ Celeste Acosta:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
-  github      : ""
   
 Elias Gee:
   name        : "Elias Gee"
@@ -138,7 +136,6 @@ Elias Gee:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
-  github      : ""
   
 Benjamin Park:
   name        : "Benjamin Park"
@@ -146,7 +143,6 @@ Benjamin Park:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
-  github      : ""
   
 Jeffrey Smithwick:
   name        : "Jeffrey Smithwick"
@@ -154,12 +150,10 @@ Jeffrey Smithwick:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
-  github      : ""
 
 Eobard Thawne:
   name        : "Eobard Thawne"
   bio         : " is a made-up person."
   avatar      : "headshots/anonymous.png"
   role        : ""
-  gradueationYear : "'22"
-  github      : ""
+  graduationYear : "'22"
