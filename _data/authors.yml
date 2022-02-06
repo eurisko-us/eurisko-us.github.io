@@ -103,6 +103,13 @@ Charlie Weinberger:
   role        : "student"
   graduationYear : "'23"
   
+Christine Manoukian:
+  name        : "Christine Manoukian"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  graduationYear : "'23"
+  
 Celeste Acosta:
   name        : "Celeste Acosta"
   bio         : ""
@@ -116,13 +123,6 @@ Elias Gee:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
-  
-Christine Manoukian:
-  name        : "Christine Manoukian"
-  bio         : ""
-  avatar      : "headshots/anonymous.png"
-  role        : "student"
-  graduationYear : "'23"
   
 Benjamin Park:
   name        : "Benjamin Park"
