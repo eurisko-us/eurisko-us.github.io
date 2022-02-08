@@ -32,6 +32,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/hgmhfjnmvtrw" target="_blank">Set 20: SQL, Haskell</a><br>
+    </td>
+    <td width="33%">
+    Space Empires - begin shared implementation
+    </td>
+    <td width="33%">
+    Space Empires - testing random player on economic phase; introduce planets/asteroids
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/qmtpkgsytmqc" target="_blank">Set 19: Elbow Method, SQL</a><br>
     </td>
     <td width="33%">
