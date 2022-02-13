@@ -21,6 +21,7 @@ author_profile: false
            
 <br><br><b>Assignments</b><br><br>
     Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
+  
     
 <br>
 <center>
@@ -30,6 +31,17 @@ author_profile: false
     <td width="33%"><center><b>Machine Learning (11th Grade)</b></center></td>
     <td width="33%"><center><b>Machine Learning (12th Grade)</b></center></td>
   </tr>
+    <tr>
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/hdbgrzgmdqdq" target="_blank">Set 21: Overfitting, Underfitting, Cross-Validation</a><br>
+    </td>
+    <td width="33%">
+    TBD
+    </td>
+    <td width="33%">
+    Intro to q-learning
+    </td> 
+    </tr>
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/hgmhfjnmvtrw" target="_blank">Set 20: SQL, Haskell</a><br>
