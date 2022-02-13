@@ -34,15 +34,15 @@ author_profile: false
     <tr>
     <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/hdbgrzgmdqdq" target="_blank">Set 21: Overfitting, Underfitting, Cross-Validation</a><br>
-        EXAM NEXT FRIDAY!
+        EXAM NEXT FRIDAY! (2/25)
     </td>
     <td width="33%">
     TBD<br>
-    EXAM NEXT FRIDAY!
+    EXAM NEXT FRIDAY! (2/25)
     </td>
     <td width="33%">
     Intro to q-learning<br>
-    EXAM NEXT FRIDAY!
+    EXAM NEXT FRIDAY! (2/25)
     </td> 
     </tr>
     <tr>
