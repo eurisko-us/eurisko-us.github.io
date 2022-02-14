@@ -161,15 +161,15 @@ author_profile: false
     <tr>
     <td width="33%">
         • <a class="body" href="https://www.overleaf.com/read/rhvmqyvwggtq" target="_blank">Set 10: Interaction Terms and Intro to DataFrames</a><br>
-        • Exam NEXT Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
+        • Exam NEXT Friday (11/12)
     </td>
     <td width="33%">
         • Space Empires<br>
-        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
+        • Exam NEXT Friday (11/12)
      </td>
     <td width="33%">
         • Space Empires<br>
-        • Exam NEXT Friday (11/12) - multivariable gradient descent, interpreting/predicting plots of running ML algorithms on data sets with particular features; random forests (11th only) and backpropagation algorithm (12th only)
+        • Exam NEXT Friday (11/12)
     </td> 
     </tr>
     <tr>
