@@ -42,7 +42,7 @@ author_profile: false
     </td>
     <td width="33%">
     Space Empires<br>
-    EXAM FRIDAY! Topics include PCA, fitting models to general data sets (mini kaggle), simplex method, q-learning, anything from last semester's final.
+    EXAM FRIDAY! Topics include PCA, fitting models to general data sets (mini kaggle), simplex method, Q-learning, anything from last semester's final.
     </td> 
     </tr>
     <tr>
@@ -55,7 +55,7 @@ author_profile: false
     EXAM NEXT FRIDAY! (2/25)
     </td>
     <td width="33%">
-    Intro to q-learning<br>
+    Intro to Q-learning<br>
     EXAM NEXT FRIDAY! (2/25)
     </td> 
     </tr>
