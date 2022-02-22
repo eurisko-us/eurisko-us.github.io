@@ -38,7 +38,7 @@ author_profile: false
     </td>
     <td width="33%">
     Beginning shared implementation of Space Empires<br>
-    EXAM FRIDAY! (2/25)
+    EXAM FRIDAY! The main topic is neural networks - direct differentiation, backpropagation, good vs bad activation functions, etc. Plus anything from last semester's final.
     </td>
     <td width="33%">
     Space Empires<br>
