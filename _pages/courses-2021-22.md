@@ -33,6 +33,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/shqhpcytqgbh" target="_blank">Set 23: Distance and Shortest Path in Graphs, Data Normalization</a><br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/gymjfnpphqjd" target="_blank">Set 22: Cross-Validation with KNN, Exam Prep</a><br>
         EXAM FRIDAY! Topics include multivariable gradient descent, fitting regressions via gradient descent on RSS, SQL (join, group by, subqueries), Euler estimation for systems of differential equations, k-means and elbow method, anything from last semester's final. 
     </td>
