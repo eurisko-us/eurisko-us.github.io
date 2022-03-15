@@ -44,17 +44,6 @@ author_profile: false
     </tr>
     <tr>
     <td width="33%">
-        <a class="body" href="https://www.overleaf.com/read/shqhpcytqgbh" target="_blank">Set 23: Distance and Shortest Path in Graphs, Data Normalization</a><br>
-    </td>
-    <td width="33%">
-    Space Empires<br>
-    </td>
-    <td width="33%">
-    Space Empires<br>
-    </td> 
-    </tr>
-    <tr>
-    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/zmdqjgfphsgg" target="_blank">Set 24: Tic-Tac-Toe with Random Players</a><br>
     </td>
     <td width="33%">
