@@ -33,6 +33,28 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/pftkqncrzxbq" target="_blank">Set 25: Dijkstra's Algorithm</a><br>
+    </td>
+    <td width="33%">
+    Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
+    </td>
+    <td width="33%">
+    Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/shqhpcytqgbh" target="_blank">Set 23: Distance and Shortest Path in Graphs, Data Normalization</a><br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/zmdqjgfphsgg" target="_blank">Set 24: Tic-Tac-Toe with Random Players</a><br>
     </td>
     <td width="33%">
