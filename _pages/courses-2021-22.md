@@ -33,7 +33,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        <a class="body" href="https://www.overleaf.com/read/pftkqncrzxbq" target="_blank">Set 26: Custom Tic-Tac-Toe Strategy (plus some other small exercises)</a><br>
+        <a class="body" href="https://www.overleaf.com/read/rkdbznycvhdc" target="_blank">Set 26: Custom Tic-Tac-Toe Strategy (plus some other small exercises)</a><br>
     </td>
     <td width="33%">
     Space Empires<br>
