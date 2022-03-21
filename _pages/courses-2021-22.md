@@ -33,13 +33,24 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/pftkqncrzxbq" target="_blank">Set 26: Custom Tic-Tac-Toe Strategy (plus some other small exercises)</a><br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td>
+    <td width="33%">
+    Debugging/validating GA 2.0<br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/pftkqncrzxbq" target="_blank">Set 25: Dijkstra's Algorithm</a><br>
     </td>
     <td width="33%">
-    Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
+    GA 2.0: Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
     </td>
     <td width="33%">
-    Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
+    GA 2.0: Continued genetic algorithms on tic-tac-toe: tournament selection, tournament fitness, mutation rates<br>
     </td> 
     </tr>
     <tr>
@@ -47,10 +58,10 @@ author_profile: false
         <a class="body" href="https://www.overleaf.com/read/zmdqjgfphsgg" target="_blank">Set 24: Tic-Tac-Toe with Random Players</a><br>
     </td>
     <td width="33%">
-    Intro to genetic algorithms on tic-tac-toe<br>
+    GA 1.0: Intro to genetic algorithms on tic-tac-toe<br>
     </td>
     <td width="33%">
-    Intro to genetic algorithms on tic-tac-toe<br>
+    GA 1.0: Intro to genetic algorithms on tic-tac-toe<br>
     </td> 
     </tr>
     <tr>
