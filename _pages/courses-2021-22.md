@@ -39,7 +39,7 @@ author_profile: false
     Space Empires<br>
     </td>
     <td width="33%">
-    Debugging/validating GA 2.0<br>
+    Finish GA 2.0; look over <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a> in preparation for next week<br>
     </td> 
     </tr>
     <tr>
