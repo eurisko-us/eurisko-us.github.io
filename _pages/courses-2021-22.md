@@ -50,7 +50,7 @@ author_profile: false
     Space Empires<br>
     </td>
     <td width="33%">
-    Finish GA 2.0; look over <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a> in preparation for next week<br>
+    Finish GA 2.0<br>
     </td> 
     </tr>
     <tr>
