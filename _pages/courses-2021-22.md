@@ -20,7 +20,7 @@ author_profile: false
 </ul></font>
            
 <br><br><b>Assignments</b><br><br>
-    Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album (on this page, above) in your respective grade level.
+    Note: If an assignment does not have a link, then it was written on the board, and it can be found in the "Board Pictures" photo album in your respective grade level (on this page, above).
   
     
 <br><br>
