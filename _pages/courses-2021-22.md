@@ -39,7 +39,7 @@ author_profile: false
     Space Empires<br>
     </td>
     <td width="33%">
-    Begin <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a><br>
+    <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a> - parts 1 and 2<br>
     </td> 
     </tr>
     <tr>
