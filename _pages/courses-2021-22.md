@@ -33,6 +33,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/shdqdpjdnrpx" target="_blank">Set 28: Tic-Tac-Toe Competition</a><br>
+    </td>
+    <td width="33%">
+    Space Empires<br>
+    </td>
+    <td width="33%">
+    Space Empires custom strategy competition; finish part 2 and begin part 3 of <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a><br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/hstmbpjkhthg" target="_blank">Set 27: Tic-Tac-Toe Game Tree</a><br>
     </td>
     <td width="33%">
