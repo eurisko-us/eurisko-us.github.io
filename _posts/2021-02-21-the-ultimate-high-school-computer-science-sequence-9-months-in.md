@@ -7,11 +7,11 @@ tags:
   - Eurisko Program
 ---
 
-<i>The Eurisko sequence started during the summer of 2019 with an initial cohort of 5 high school students, all aged 15-16 years old and entering their junior year (11th grade). The content of this sequence similar to what would be covered in upper-level undergraduate courses (e.g. data structures/algorithms ranging from linked lists & sorting algorithms to graphs & traversals), and some content may even be beyond (e.g. building a machine learning library in Python from the ground up). The students build everything from scratch: for example, instead of using external libraries like numpy or pandas, the students built their regressors and classifiers on top of matrix and dataframe classes that they wrote themselves.</i>
+<i>The Eurisko sequence started during the summer of 2020 with an initial cohort of 5 high school students, all aged 15-16 years old and entering their junior year (11th grade). The content of this sequence similar to what would be covered in upper-level undergraduate courses (e.g. data structures/algorithms ranging from linked lists & sorting algorithms to graphs & traversals), and some content may even be beyond (e.g. building a machine learning library in Python from the ground up). The students build everything from scratch: for example, instead of using external libraries like numpy or pandas, the students built their regressors and classifiers on top of matrix and dataframe classes that they wrote themselves.</i>
 
 <hr>
 
-Last June, <a class="body" href="https://eurisko-us.github.io/jason-roberts" target="_blank">Jason Roberts</a>, the founder of <a class="body" href="https://www.mathacademy.us/" target="_blank">Math Academy</a> and one of the original developers at Uber's real-time technology, most widely known for coining the term <a class="body" href="https://www.google.com/search?q=luck+surface+area" target="_blank">"luck surface area"</a>, asked me teach his son Colby some computer science. Colby was just finishing up his sophomore year in <a class="body" href="http://www.theappacademy.us/index.html" target="_blank">App Academy</a>, but Jason felt that the curriculum was not geared towards students who had a strong aptitude in the subject, and that Colby could and should be learning a lot more.
+Last June, <a class="body" href="https://eurisko-us.github.io/jason-roberts" target="_blank">Jason Roberts</a>, the founder of <a class="body" href="https://www.mathacademy.us/" target="_blank">Math Academy</a> and one of the original developers at Uber's real-time technology, most widely known for coining the term <a class="body" href="https://www.google.com/search?q=luck+surface+area" target="_blank">"luck surface area"</a>, asked me teach his son Colby some computer science. Colby was just finishing up his sophomore year in <a class="body" href="http://www.theappacademy.us/index.html" target="_blank">App Academy</a>, but Jason felt that the curriculum was not geared towards students who had a strong aptitude in the subject, and that Colby could and should be learning a lot more. Plus, it's the pandemic, and so many extracurriculars are shut down
 
 As I've come to expect with Jason, that initial idea grew quickly: he pulled in some of Colby's buddies who had the necessary mathematical background, and we put together a summer computer science group that met Mon / Wed / Fri with ~10 hours of problem sets each week. Long story short (which I'll elaborate on in a later post), the kids made progress faster than either of us could have possibly expected, and now App Academy is funding an official high school class in which a second cohort has joined the ranks.
 
@@ -62,7 +62,7 @@ Here is a list of the main topics we've covered. We pulled the basics from MIT's
 
 <b>Programming Languages.</b> The students have recently started learning C++, Haskell, Shell, and SQL. So far, the exercises they've completed have been simple HackerRank-style problems.
 
-<b>Writing.</b> The students each wrote a blog post last semester (the posts are linked in the categories above). I've started submitting them on Hacker News, and Elijah's post made it to the front page last weekend (<a class="body" href="https://news.ycombinator.com/item?id=26126652" target="_blank">link</a>). Everyone else's posts will be submitted in the coming weekends.
+<b>Writing.</b> The students each wrote a blog post last semester (the posts are linked in the categories above). Elijah's post made it to the front page of Hacker News last weekend (<a class="body" href="https://news.ycombinator.com/item?id=26126652" target="_blank">link</a>).
 
 <h2>Space Empires</h2>
 
@@ -104,35 +104,9 @@ The camper strategy exploited the fact that, when two units of the same tactics 
 
 We're now at a stage where the optimal strategy is no longer obvious.
 
-<h2>Where We're Headed</h2>
-
-Here are our plans for the rest of the semester:
-
-<ul>
-<li><i>Machine Learning</i> - we will continue implementing progressively more complex neural networks, more types of ensemble methods (including gradient boosting), and we will use their models for prediction tasks on larger real-world datasets.</li>
-
-<li><i>Data Structures and Algorithms</i> - we will implement any standard things we haven't done yet (e.g. hash tables and A* search), more heuristic algorithms (e.g. simulated annealing), and genetic algorithms.</li>
-
-<li><i>Programming Languages</i> - we'll do a bit more Haskell, C++, and SQL before hitting the brakes (pursuing them further isn't going to be as valuable to the goals of the class as the Space Empires, machine learning, and algorithms problems). But we'll also write our own SQL parser within the DataFrame class, to gain further insight into how programming languages are structured and what goes on behind the scenes when you run a program.</li>
-
-<li><i>Space Empires</i> - we will continue building up the game level by level and building custom strategies to compete at each level, eventually incorporating some of the more advanced algorithms and machine learning models that we have built. We may have to start collaborating on a shared implementation if resolving discrepancies across students' own implementation proves too time-consuming.</li>
-
-<li><i>Writing</i> - we will write another round of blog posts.</li>
-</ul>
-
-The working title for next year's class (12th grade) is "Intelligent Systems." In that class, we will
-
-<ul>
-<li>continue broadening our knowledge of machine learning (addressing unsupervised learning and reinforcement learning),</li>
-<li>implement several small-scale games (such as tic-tac-toe, snake, and checkers) and train intelligent agents to play them,</li>
-<li>put our fully-implemented Space Empires games on a server and have the agents communicate with the game using socket connections,</li>
-<li>continue improving our intelligent agents in the game of Space Empires, and create an app for playing Space Empires (so that us lowly humans can compete against some AI agents on our phones).</li>
-</ul>
-
 <h2>How Well is it Working?</h2>
 
 Again, the kids are making progress faster than either Jason or I could have possibly expected. But they're also having more fun than either Jason or I could have possibly expected, too. Class often runs over time due to interesting discussions surrounding Space Empires, and I have to regularly tell kids to leave class to go to their other classes. The kids are on Slack all the time, and I've heard them mention that "it's the only class that matters." It's their hardest class, by far -- even compared to their Math Academy classes (where they're studying upper-division college math), which is in turn far more advanced than their AP classes. But they're having a blast.
-
 
 
 
