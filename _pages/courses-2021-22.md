@@ -33,6 +33,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        <a class="body" href="https://www.overleaf.com/read/yfdsxnczyzpd" target="_blank">Set 30: Connect Four Custom Strategy</a><br>
+    </td>
+    <td width="33%">
+    <a class="body" href="https://www.overleaf.com/read/bxgjqbzmvwhn" target="_blank">Simplex Method</a> - matrix operations and implementation<br>
+    </td>
+    <td width="33%">
+    Continue <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a><br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/wtrvbvtyxwcc" target="_blank">Set 29: Connect Four</a><br>
     </td>
     <td width="33%">
