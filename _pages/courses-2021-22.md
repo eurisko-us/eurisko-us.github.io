@@ -16,6 +16,7 @@ author_profile: false
     <!--<li>Lessons: <a class="body" href="https://photos.app.goo.gl/PbwEKx1y29dKvQk58" target="_blank">Bias-Variance Tradeoff</a> </li>-->
     <li>Fall Midterms: <a class="body" href="https://photos.app.goo.gl/o6zWkhkf9ZBLBy9C6" target="_blank">9/23 Machine Learning (11th & 12th)</a>, <a class="body" href="https://photos.app.goo.gl/vJa3UGgr1GZ8AWzW7" target="_blank">11/12 Computation & Modeling (10th)</a>, <a class="body" href="https://photos.app.goo.gl/sBfEKVwz7XWhXAEs7" target="_blank">11/12 Machine Learning (11th & 12th)</a></li>
     <li>Fall Final: <a class="body" href="https://photos.app.goo.gl/3LwZpjFsDiAWG6U48" target="_blank">Machine Learning (11th & 12th)</a>, <a class="body" href="https://photos.app.goo.gl/3LGFNiL4JgyNpAuZ9" target="_blank">Computation & Modeling (10th)</a></li>
+    <li><a class="body" href="https://photos.app.goo.gl/6zNdBcZXZL5ndB3w9" target="_blank">2/25 Spring Midterms (all classes)</a></li>    
     <!--<li>Supplemental Readings: <a class="body" target="_blank" href="https://www.statlearning.com/"><i>Introduction to Statistical Learning</i></a>, <a class="body" target="_blank" href="https://www.cin.ufpe.br/~cavmj/Machine%20-%20Learning%20-%20Tom%20Mitchell.pdf"><i>Machine Learning</i> (Mitchell)</a>, <a class="body" target="_blank" href="http://incompleteideas.net/book/the-book.html"><i>Reinforcement Learning</i> (Sutton & Barto)</a></li>-->
 </ul></font>
            
