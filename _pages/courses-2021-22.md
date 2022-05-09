@@ -34,6 +34,17 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
+        Continue set 31<br>
+    </td>
+    <td width="33%">
+    <a class="body" href="https://www.overleaf.com/read/gyjkyqrybshm" target="_blank">Evolving Neural Nets</a><br>
+    </td>
+    <td width="33%">
+    Continue <a class="body" href="https://www.overleaf.com/read/msnkstspwqdm" target="_blank">Blondie24 Project</a><br>
+    </td> 
+    </tr>
+    <tr>
+    <td width="33%">
         <a class="body" href="https://www.overleaf.com/read/fbnspqhscymt" target="_blank">Set 31: Snake</a><br>
     </td>
     <td width="33%">
