@@ -36,10 +36,10 @@ Eurisko one of the most advanced high school math/CS sequences in the country. S
 <font size="3em">
 The first course in the sequence, <i>Computation & Modeling</i>, is inspired by MIT's Introduction to Computer Science, and goes far beyond it. Among other things, students write their own machine learning algorithms from scratch (including polynomial and logistic regression, k-nearest neighbors and k-means, and parameter fitting via gradient descent).
 
-<br>
+<br><br>
 The second course, <i>Machine Learning</i>, covers more advanced machine learning algorithms such as random forests and neural nets, and students also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit. Again, students implement all algorithms from scratch before using any external libraries.
 
-<br>
+<br><br>
 The third course, <i>Intelligent Systems</i>, involves using evolutionary algorithms to develop agents that behave intelligently in complex environments. Students reproduce Blondie24 and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it.
 </font>
 
