@@ -52,7 +52,7 @@ author_profile: false
 <br>Prerequisites: Machine Learning
 </i></font>
 <p><font size="3em">
-    <i>Intelligent Systems</i> involves using evolutionary algorithms to develop agents that behave intelligently in complex environments. Students reproduce academic papers leading up to Blondie24, a neuroevolution-based game-playing agent that learned to play checkers without having any access to information regarding human-expert strategies, and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it. Students work primarily in Python and Node.js.
+    <i>Intelligent Systems</i> involves developing agents that behave intelligently in complex environments. Students reproduce academic papers leading up to Blondie24, a neuroevolution-based game-playing agent that learned to play checkers without having any access to information regarding human-expert strategies, and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it. Students work primarily in Python and Node.js.
     </font></p>
     
  <font size="3em"><ul>
