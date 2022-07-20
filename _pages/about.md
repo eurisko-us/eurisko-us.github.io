@@ -34,13 +34,13 @@ Eurisko one of the most advanced high school math/CS sequences in the country. S
 <br><br><b>What kinds of things are the students building?</b><br>
   
 <font size="3em">
-The first course in the sequence, <i>Computation & Modeling</i>, is inspired by MIT's Introduction to Computer Science and goes far beyond it. Among other things, students write their own machine learning algorithms from scratch (including polynomial and logistic regression, k-nearest neighbors and k-means, and parameter fitting via gradient descent).
+The first course in the sequence, <i>Computation & Modeling</i>, is inspired by MIT's Introduction to Computer Science and goes far beyond it. In addition to implementing canonical data structures and algorithms (sorting, searching, graph traversals), students write their own machine learning algorithms from scratch (polynomial and logistic regression, k-nearest neighbors & k-means, parameter fitting via gradient descent).
 
 <br><br>
-The second course, <i>Machine Learning</i>, covers more advanced machine learning algorithms such as random forests and neural nets, and students also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit. Again, students implement all algorithms from scratch before using any external libraries.
+The second course, <i>Machine Learning</i>, covers more advanced machine learning algorithms such as decision trees and neural networks, as well as the development of strategic game-playing agents using game trees. Students also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit. Again, students implement algorithms from scratch before using external libraries.
 
 <br><br>
-The third course, <i>Intelligent Systems</i>, involves using evolutionary algorithms to develop agents that behave intelligently in complex environments. Students reproduce Blondie24 and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it.
+The third course, <i>Intelligent Systems</i>, involves using evolutionary algorithms to develop agents that behave intelligently in complex environments. Students reproduce academic papers leading up to Blondie24, a neuroevolution-based game-playing agent that learned to play checkers without having any access to information regarding human-expert strategies, and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it.
 </font>
 
 <br><br><b>Where does the name "Eurisko" come from?</b><br>

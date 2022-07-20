@@ -19,7 +19,7 @@ author_profile: false
 <br>Prerequisites: AP Calculus AB/BC, Introduction to Programming, concurrent enrollment in Multivariable Calculus & Linear Algebra
 </i></font>
 <p><font size="3em">
-    Computation & Modeling is a comprehensive, college-level course that integrates data structures & algorithms, modeling & optimization, machine learning, and object-oriented programming. This is an year-long elective course associated with a highly accelerated math sequence intended for gifted math students in high school. It covers methods of storing and manipulating data so as to achieve a desired result, techniques used to interpolate and extrapolate quantitative data, and software engineering practices used for building complex systems consisting of many interacting parts. More specifically, it introduces techniques from data structures & algorithms (including recursion, time complexity, arrays & sorting, matrices & dataframes, graphs & traversals); modeling & optimization (linear regression, logistic regression, least-squares projection, nonlinear regression, gradient descent, k-nearest neighbors, k-means clustering, simulation of coupled differential equations, game trees); and object-oriented programming (classes, inheritance, libraries, testing). Students work primarily in Python. The content for this course has been developed entirely from scratch.
+    <i>Computation & Modeling</i> is inspired by MIT's Introduction to Computer Science and goes far beyond it. In addition to implementing canonical data structures and algorithms (sorting, searching, graph traversals), students write their own machine learning algorithms from scratch (polynomial and logistic regression, k-nearest neighbors & k-means, parameter fitting via gradient descent). Students work primarily in Python.
     </font></p>
 
 <font size="3em"><ul>
@@ -38,11 +38,25 @@ author_profile: false
 <br>Prerequisites: Computation & Modeling, Multivariable Calculus & Linear Algebra
 </i></font>
 <p><font size="3em">
-    Machine Learning is a comprehensive, college-level course that integrates predictive modeling & optimization, clustering & dimensionality reduction, and reinforcement learning. This is a year-long elective course associated with a highly accelerated math sequence intended for gifted math students in high school. It covers methods of building models to draw insights and make predictions based on data, implementing a massively multiplayer game, and developing strategic game-playing agents. More specifically, it continues the study of techniques from modeling & optimization (decision trees, random forests, neural networks, genetic algorithms, clustering & dimensionality reduction) and gives students experience synchronizing with each other to build and manage a shared codebase. Students work primarily in Python and Node.js. The content for this course has been developed entirely from scratch.
+    <i>Machine Learning</i> covers more advanced machine learning algorithms such as decision trees and neural networks, as well as the development of strategic game-playing agents using game trees. Students also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit. Again, students implement algorithms from scratch before using external libraries. Students work primarily in Python and Node.js.
     </font></p>
     
  <font size="3em"><ul>
     <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">2021-22</a></li>
+</ul></font>
+
+<div style="width:100%; max-width:800px; margin:auto">  
+
+<br><b>Intelligent Systems</b>
+<font size="3em"><i>
+<br>Prerequisites: Machine Learning
+</i></font>
+<p><font size="3em">
+    <i>Intelligent Systems</i> involves using evolutionary algorithms to develop agents that behave intelligently in complex environments. Students reproduce academic papers leading up to Blondie24, a neuroevolution-based game-playing agent that learned to play checkers without having any access to information regarding human-expert strategies, and continue implementing Space Empires with the goal of designing artificially intelligent agents to play it. Students work primarily in Python and Node.js.
+    </font></p>
+    
+ <font size="3em"><ul>
+    <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">2021-22</a></li>-->
 </ul></font>
     
 </div>
