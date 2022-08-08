@@ -6,7 +6,9 @@ author_profile: false
 ---
         
 <div style="width:100%; max-width:800px; margin:auto"> 
-    <p><center><b><hr><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">Link to current assignments</a><hr></b></center></p>
+    <p><center><b><hr>
+    Frequently used links: <a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2022-23">current assignments</a>, <a class="body" target="_blank" href="https://www.justinmath.com/books/#introduction-to-algorithms-and-machine-learning">textbook</a>
+    <hr></b></center></p>
     <br>
 </div>
 
