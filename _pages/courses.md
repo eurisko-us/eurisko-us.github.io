@@ -25,6 +25,7 @@ author_profile: false
     </font></p>
 
 <font size="3em"><ul>
+    <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2022-23">2022-23</a></li>
     <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">2021-22</a></li>
     <li>2020-21: <a class="body" target="_blank" href="https://eurisko-us.github.io/computation-and-modeling-2020-21">10th grade</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/machine-learning-2020-21">11th grade</a></li>
     <li><a class="body" target="_blank" href="https://eurisko-us.github.io/computation-and-modeling-2020-summer">Summer 2020 Bootcamp (11th grade)</a></li>
@@ -44,6 +45,7 @@ author_profile: false
     </font></p>
     
  <font size="3em"><ul>
+    <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2022-23">2022-23</a></li>
     <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">2021-22</a></li>
 </ul></font>
 
@@ -58,7 +60,7 @@ author_profile: false
     </font></p>
     
  <font size="3em"><ul>
-    <!--<li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">2021-22</a></li>-->
+    <li><a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2022-23">2022-23</a></li>
 </ul></font>
     
 </div>
