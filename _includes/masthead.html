@@ -8,7 +8,7 @@
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
           <!--<li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>-->
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"><img src="{{site.url}}/files/icon-eurisko-transparent-cropped.png" style="border: none; height: 3em;" alt="icon"></a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/"><img src="{{site.url}}/files/icon-eurisko-transparent-cropped.png" style="border: none; height: 2em;" alt="icon"></a></li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
