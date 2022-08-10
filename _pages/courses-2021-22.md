@@ -5,6 +5,11 @@ permalink: /courses-2021-22/
 author_profile: false
 ---
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><font color="red"><b><hr>* * * This page has been archived. * * *<hr></b></font></center></p>
+    <br>
+</div>
+
 # [<center>Courses 2021-22</center>](#top)
 
 <div style="width:100%; max-width:800px; margin:auto"> 
