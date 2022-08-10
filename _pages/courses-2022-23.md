@@ -9,7 +9,7 @@ author_profile: false
 
 <div style="width:100%; max-width:800px; margin:auto"> 
 
-(in progress)
+This page will be constructed after the start of the 2022-23 school year.
     
     
 </div>
