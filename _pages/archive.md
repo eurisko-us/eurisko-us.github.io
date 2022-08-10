@@ -22,9 +22,9 @@ author_profile: false
 <h2>Other</h2>
 
 <ul>
-<li><font size="2em" color="red">[ARCHIVED 2021]</font> <a class="body" target="_blank" href="https://eurisko-us.github.io/blog">Blog</a></li>
-<li><font size="2em" color="red">[ARCHIVED 2021]</font> <a class="body" target="_blank" href="https://eurisko-us.github.io/blog">Clips</a></li>
-<li><font size="2em" color="red">[ARCHIVED 2021]</font> <a class="body" target="_blank" href="https://eurisko-us.github.io/resources">Resources</a></li>
+<li><a class="body" target="_blank" href="https://eurisko-us.github.io/blog">Blog</a></li>
+<li><a class="body" target="_blank" href="https://eurisko-us.github.io/blog">Clips</a></li>
+<li><a class="body" target="_blank" href="https://eurisko-us.github.io/resources">Resources</a></li>
 </ul>
     
 </div>
