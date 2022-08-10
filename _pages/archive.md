@@ -8,6 +8,7 @@ author_profile: false
 # [<center>Archive</center>](#top)
 
 <div style="width:100%; max-width:800px; margin:auto">  
+<p>These pages are old, out of date, and no longer maintained.</p>
 
 <h2>Course Pages</h2>
 
