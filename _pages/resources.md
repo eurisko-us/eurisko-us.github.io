@@ -5,6 +5,11 @@ permalink: /resources/
 author_profile: false
 --- 
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><font color="red"><b><hr>* * * This page has been archived (May 2021). * * *<hr></b></font></center></p>
+    <br>
+</div>
+
 # [<center>Resources</center>](#top)
 
 <div style="width:100%; max-width:500px; margin:auto">  

@@ -5,6 +5,11 @@ permalink: /machine-learning-2020-21/
 author_profile: false
 ---
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><font color="red"><b><hr>* * * This page has been archived (May 2021). * * *<hr></b></font></center></p>
+    <br>
+</div>
+
 # [<center>Machine Learning</center>](#top)
 
 <center><b>2020-21</b> (Cohort 1)</center>

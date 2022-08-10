@@ -5,6 +5,11 @@ permalink: /computation-and-modeling-2020-summer/
 author_profile: false
 ---
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><font color="red"><b><hr>* * * This page has been archived (August 2020). * * *<hr></b></font></center></p>
+    <br>
+</div>
+
 # [<center>Computation & Modeling</center>](#top)
 
 <center><b>Summer 2020</b> (Cohort 1)</center>

@@ -1,10 +1,16 @@
 # main links links
 main:  
-  - title: "Courses"
-    url: /courses/
+  - title: "Current Assignments"
+    url: /courses-2022-23/
 
-  - title: "Blog"
-    url: /blog/
+  - title: "Curriculum"
+    url: /curriculum/
+
+  #- title: "Courses"
+  #  url: /courses/
+
+  #- title: "Blog"
+  #  url: /blog/
     
   #- title: "Clips"
   #  url: /clips/
@@ -12,11 +18,14 @@ main:
   #- title: "Resources"
   #  url: /resources/
 
-  - title: "People"
-    url: /people/
+  #- title: "People"
+  #  url: /people/
     
   - title: "Contact"
     url: /contact/
+
+  - title: "Archive"
+    url: /archive/
     
   #- title: "Teaching"
   #  url: /teaching/
