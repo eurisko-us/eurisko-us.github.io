@@ -7,7 +7,7 @@ author_profile: false
         
 <div style="width:100%; max-width:800px; margin:auto"> 
     <p><center><b><hr>
-    <a class="body" target="_blank" href="https://www.justinmath.com/books/#introduction-to-algorithms-and-machine-learning">Link to Textbook</a>
+    Link to textbook: <a class="body" target="_blank" href="https://www.justinmath.com/books/#introduction-to-algorithms-and-machine-learning">Introduction to Algorithms and Machine Learning</a>
     <hr></b></center></p>
     <br>
 </div>
