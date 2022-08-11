@@ -18,8 +18,8 @@ main:
   #- title: "Resources"
   #  url: /resources/
 
-  #- title: "People"
-  #  url: /people/
+  - title: "People"
+    url: /people/
     
   - title: "Contact"
     url: /contact/
