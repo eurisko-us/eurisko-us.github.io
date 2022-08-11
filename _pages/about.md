@@ -24,7 +24,7 @@ redirect_from:
 
 <div style="width:100%; max-width:800px; height:15em; margin:auto">
   <center>
-  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:12em; width:auto; max-width:100%" alt="icon">
+  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:10em; width:auto; max-width:100%" alt="icon">
   </center>
 </div>
 
