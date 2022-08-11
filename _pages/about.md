@@ -16,11 +16,20 @@ redirect_from:
   <img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon">
 </div>-->
 
+<!-->
 <div style="width:25%;float:left;">
 <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
+-->
 
-<div style="width:70%;float:right;">
+<div style="width:100%; max-width:800px; height:15em; margin:auto">
+  <center>
+  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:15em; width:auto; max-width:100%" alt="icon">
+  </center>
+</div>
+
+<!--<div style="width:70%;float:right;">-->
+<br><div style="width:100%; max-width:800px; margin:auto">
   Eurisko is a group of high schoolers working on advanced projects in computer science. It was formed during the summer of 2020 as a collaboration between <a class="body" target="_blank" href="http://www.theappacademy.us/">App Academy</a> and <a class="body" target="_blank" href="https://mathacademy.us">Math Academy</a>.<br><br>
 
 <b>How rigorous is the program?</b><br>
