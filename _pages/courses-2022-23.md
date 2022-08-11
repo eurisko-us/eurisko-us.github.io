@@ -20,7 +20,7 @@ author_profile: false
     <td width="30%"><center><b>Intelligent Systems</b></center></td>
 </tr>
 <tr>
-    <td width="10%">8/11-12</td>
+    <td width="10%"><center>8/11-12</center></td>
     <td width="30%">
         <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - get set up, complete exercise 1, and start on the rest of the exercises
     </td>
