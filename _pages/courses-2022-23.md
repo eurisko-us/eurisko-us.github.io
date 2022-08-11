@@ -22,7 +22,7 @@ author_profile: false
 <tr>
     <td width="10%">8/11-12</td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - exercises 1, 2, 3</a>
+        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - get set up, complete exercise 1, and start on the rest of the exercises
     </td>
     <td width="30%">
         <a class="body" href="https://www.overleaf.com/read/ngtwymgrzzyd" target="_blank">Cartesian Product</a> (warm-up), start on <a class="body" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
