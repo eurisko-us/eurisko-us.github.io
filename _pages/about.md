@@ -16,7 +16,7 @@ redirect_from:
   <img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon">
 </div>-->
 
-<!-->
+<!--
 <div style="width:25%;float:left;">
 <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
@@ -24,7 +24,7 @@ redirect_from:
 
 <div style="width:100%; max-width:800px; height:15em; margin:auto">
   <center>
-  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:15em; width:auto; max-width:100%" alt="icon">
+  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:12em; width:auto; max-width:100%" alt="icon">
   </center>
 </div>
 
