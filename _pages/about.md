@@ -29,7 +29,7 @@ redirect_from:
 </div>
 
 <!--<div style="width:70%;float:right;">-->
-<br><div style="width:100%; max-width:800px; margin:auto">
+<div style="width:100%; max-width:800px; margin:auto">
   Eurisko is a group of high schoolers working on advanced projects in computer science. It was formed during the summer of 2020 as a collaboration between <a class="body" target="_blank" href="http://www.theappacademy.us/">App Academy</a> and <a class="body" target="_blank" href="https://mathacademy.us">Math Academy</a>.<br><br>
 
 <b>How rigorous is the program?</b><br>
@@ -41,10 +41,10 @@ Eurisko one of the most advanced high school math/CS sequences in the country. S
 <br><br><b>What kinds of things are the students building?</b><br>
   
 <font size="3em">
-The first course in the sequence, <i>Computation & Modeling</i>, is inspired by MIT's Introduction to Computer Science and goes far beyond it. In addition to implementing canonical data structures and algorithms (sorting, searching, graph traversals), students write their own machine learning algorithms from scratch (polynomial and logistic regression, k-nearest neighbors & k-means, parameter fitting via gradient descent).
+Our first course is inspired by MIT's Introduction to Computer Science and goes far beyond it. In addition to implementing canonical data structures and algorithms (sorting, searching, graph traversals), students write their own machine learning algorithms from scratch (polynomial and logistic regression, k-nearest neighbors & k-means, parameter fitting via gradient descent).
 
 <br><br>
-In the subsequent courses, students implement more advanced machine learning algorithms such as decision trees and neural networks, and reproduce academic papers leading up to Blondie24 a neuroevolution-based game-playing agent that learned to play checkers without having any access to information regarding human-expert strategies. They also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit, with the goal of designing artificially intelligent agents to play it. <font size="2em"><a class="body" target="_blank" href="{{site.url}}/curriculum">more</a></font> 
+In the subsequent courses, students implement more advanced machine learning algorithms such as decision trees and neural networks, and reproduce academic papers leading up to Blondie24, an AI computer program that taught itself to play checkers. They also work together to implement Space Empires, an extremely complex board game that pushes their large-scale project skills (object-oriented design, version control, etc) to the limit, with the goal of designing artificially intelligent agents to play it. <font size="2em"><a class="body" target="_blank" href="{{site.url}}/curriculum">more</a></font> 
 </font>
 
 <br><br><b>Where does the name "Eurisko" come from?</b><br>
