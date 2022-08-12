@@ -62,7 +62,7 @@ author_profile: false
 <p>This course interleaves through the following material:</p>
     
 <font size="3em"><ul style="list-style-type:none">
-    <li><b>6. Games</b> - <a class="body" target="_blank" href="{{site.url}}/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a>; <a class="body" target="_blank" href="{{site.url}}/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a>; <a class="body" target="_blank" href="{{site.url}}/reimplementing-blondie24-part-1">Reimplementing Blondie24: Part 1</a>; Reimplementing Blondie24: Part 2.</li>
+    <li><b>6. Games</b> - <a class="body" target="_blank" href="{{site.url}}/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a>; <a class="body" target="_blank" href="{{site.url}}/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a>; <a class="body" target="_blank" href="{{site.url}}/reimplementing-blondie24">Reimplementing Blondie24</a>; <a class="body" target="_blank" href="{{site.url}}/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>.</li>
     <li><b>Space Empires</b> - finish game development; develop intelligent game-playing agents.</li>
 </ul></font>
     
