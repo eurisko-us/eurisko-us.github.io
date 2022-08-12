@@ -22,13 +22,13 @@ author_profile: false
 <tr>
     <td width="10%"><center>8/11-12</center></td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - get set up, complete exercise 1, and start on the rest of the exercises
+        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - exercises 1, 2, 3
     </td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/cartesian-product" target="_blank">Cartesian Product</a> (warm-up), start on <a class="body" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+        <a class="body" href="https://justinmath.com/cartesian-product" target="_blank">Cartesian Product</a>, start <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>
      </td>
     <td width="30%">
-        Start on <a class="body" href="https://justinmath.com/naive-bayes" target="_blank">Naive Bayes</a>
+        <a class="body" href="https://justinmath.com/naive-bayes" target="_blank">Naive Bayes</a>
      </td>
 </tr>
 </table>
