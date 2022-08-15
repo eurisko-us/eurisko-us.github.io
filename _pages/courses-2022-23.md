@@ -25,10 +25,10 @@ author_profile: false
         <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - exercises 4, 5, 6, 7
     </td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>, <a class="body" href="http://eurisko.us/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+        <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>, <a class="body" href="http://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
      </td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://www.justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>, start <a class="body" target="_blank" href="https://www.justinmath.com/minimax-strategy">Minimax Strategy</a> - set up minimax player but doesn't have to actually work yet (we'll budget time for debugging next quant week)
+        <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>, start <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a> - set up minimax player but doesn't have to actually work yet (we'll budget time for debugging next quant week)
      </td>
 </tr>
 <tr>
