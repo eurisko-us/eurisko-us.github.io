@@ -22,7 +22,7 @@ author_profile: false
 <tr>
     <td width="10%"><center>8/15-19<br>(Quant Week)</center></td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - exercises 4, 5, 6, 7; <a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>; <a class="body" target="_blank" href="https://justinmath.com/recursive-sequences">Recursive Sequences</a>
+        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a>; <a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>; <a class="body" target="_blank" href="https://justinmath.com/recursive-sequences">Recursive Sequences</a>
     </td>
     <td width="30%">
         <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>, <a class="body" href="http://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
