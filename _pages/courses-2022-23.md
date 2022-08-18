@@ -22,14 +22,25 @@ author_profile: false
 <tr>
     <td width="10%"><center>8/15-19<br>(Quant Week)</center></td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a>; <a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>; <a class="body" target="_blank" href="https://justinmath.com/recursive-sequences">Recursive Sequences</a>
+        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/recursive-sequences">Recursive Sequences</a>
     </td>
     <td width="30%">
-        <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>; <a class="body" href="http://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>; <a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
+        <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>
+        
+        <br><br><a class="body" href="http://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
      </td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>; <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
-        <br>If you finish early, start on <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+        <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
+
+        <br><br>If you finish early, start on <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
      </td>
 </tr>
 <tr>
