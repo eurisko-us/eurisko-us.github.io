@@ -29,6 +29,7 @@ author_profile: false
      </td>
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>; <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
+        <br>If you finish early, start on <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
      </td>
 </tr>
 <tr>
