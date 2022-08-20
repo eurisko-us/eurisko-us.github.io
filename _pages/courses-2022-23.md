@@ -15,14 +15,16 @@ author_profile: false
 <table style="width:100%">
 <tr>
     <td width="10%"><center><b>Dates</b></center></td>
-    <td width="30%"><center><b>Computation & Modeling<br>(Matteo)</b></center></td>
+    <td width="30%"><center><b>Computation & Modeling</b><br>(Matteo)</center></td>
     <td width="30%"><center><b>Machine Learning</b></center></td>
     <td width="30%"><center><b>Intelligent Systems</b></center></td>
 </tr>
 <tr>
     <td width="10%"><center>8/22-26<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/roulette-wheel-selection">Roulette Wheel Selection</a>
+        Do at least 2 of these before using second half of class for other projects:
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/roulette-wheel-selection">Roulette Wheel Selection</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/brute-force-search-with-linear-encoding-cryptography">Brute Force Search with Linear-Encoding Cryptography</a>
         
@@ -39,10 +41,8 @@ author_profile: false
 </tr>
 <tr>
     <td width="10%"><center>8/15-19<br></center></td>
-    <td width="30%">
-        <a class="body" href="https://justinmath.com/some-short-introductory-coding-exercises" target="_blank">Some Short Introductory Coding Exercises</a> - exercises 4, 5, 6, 7
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>
+    <td width="30%">        
+        <a class="body" target="_blank" href="https://justinmath.com/converting-between-binary-decimal-and-hexadecimal">Converting Between Binary, Decimal, and Hexadecimal</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/recursive-sequences">Recursive Sequences</a>
         
