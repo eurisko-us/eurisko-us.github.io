@@ -10,7 +10,9 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto"> 
 
 <br>
+<b>Board Pics:</b> <a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Cohort 2</a>, <a class="body" target="_blank" href="https://photos.app.goo.gl/gCmUroVmFZT3hVqs8">Cohort 3</a>
 
+<br>
 <center>
 <table style="width:100%">
 <tr>
