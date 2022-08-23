@@ -25,7 +25,7 @@ Scouts and Colonyships each have several attributes: CP cost (i.e. the number of
 On each turn, there 3 phases: economic, movement, and combat.
 
 <br><br>
-<b>Economic phase</b>
+<b>Economic Phase</b>
 
 <br><br>
 During the economic phase, each player gets 20 Construction Points (CPs) from the Colony on their home Planet, as well as 5 CPs from any other colonies ("other colonies" will be defined in a later rule). However, each player must pay a maintenance cost (in CPs) for each ship. The maintenance cost of a ship is equal to the hull size of the ship, and if a player is unable to pay a maintenance cost, it must remove the ship.
@@ -34,14 +34,14 @@ During the economic phase, each player gets 20 Construction Points (CPs) from th
 A player can also build ships with any CPs it has remaining, but the ships must be built at a planet with one or more Shipyards, and the sum of the hull sizes of the ships built at a planet cannot exceed the number of Shipyards at that planet.
 
 <br><br>
-<b>Movement phase</b>
+<b>Movement Phase</b>
 
 <br><br>
 The movement phase consists of 3 rounds of movement. During each round of movement, each player can move each ship by one square in any direction. If a Colonyship lands on a planet, then it can "colonize" the planet by turning into a Colony.
 Combat phase
 
 <br><br>
-<b>Combat phase</b>
+<b>Combat Phase</b>
 
 <br><br>
 During the combat phase, a combat occurs at each square containing ships from both players. Each combat proceeds in rounds until only one player's ships remain at that spot.
@@ -56,7 +56,7 @@ Then, a "combat order" is constructed, in which ships are sorted by their attack
 The above procedure is repeated for each ship in the combat order. Then, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.
 
 <br><br>
-<b>Check your understanding of the above</b>
+<b>Check Your Understanding</b>
 
 <ol>
 <li>If a player is unable to pay the maintenance cost for one of it ships, what must the player do?</li>
@@ -195,7 +195,7 @@ The information is summarized as follows:
 </code></pre>
 
 <br><br>
-<b>Check your understanding of the above</b>
+<b>Check Your Understanding</b>
 
 <ul>
 <li>If a player has 30 CP and 2 Shipyards at its home colony (with Shipyard tech level 1), how many Scouts can it buy?</li>
