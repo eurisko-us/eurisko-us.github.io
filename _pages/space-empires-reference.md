@@ -55,9 +55,24 @@ Then, a "combat order" is constructed, in which ships are sorted by their attack
 <br><br>
 The above procedure is repeated for each ship in the combat order. Then, if there are still ships from both teams left over, another round of combat begins. Combat continues until only one team's ships occupy the square.
 
+<br><br>
+<b>Check your understanding of the above</b>
+
+<ol>
+<li>If a player is unable to pay the maintenance cost for one of it ships, what must the player do?</li>
+<li>Even if a player has a lot of CPs, that doesn't necessarily mean it can build a lot of ships on a single turn. Why not?</li>
+<li>How many spaces, in total, can a player move a ship during a turn? (Remember that the movement phase consists of multiple rounds of movement)</li>
+<li>If Player A has 5 ships and Player B has 3 ships in the same square, up to how many ships can Player A screen from combat?<li>
+<li>Is it possible for any of the losing player's ships to survive a combat?</li>
+</ol>
+
+
+
 <br>
 <hr>
 <br>
+
+
 
 There are a couple additional rules:
 
@@ -66,6 +81,110 @@ There are a couple additional rules:
 <li>The combat order is constructed according to ships' tactics level: ships with tactics 0 are destroyed immediately, and ships with higher tactics fire first. If two ships have the same tactics, then the defending ship fires first (the defending ship is the ship that was the first to occupy the grid space).</li>
 <li>Previously, I said that the maintenance cost is equal to the hullsize. This is usually true, but there are some special types of ships (Decoy, Colonyship, Base) that don't have a maintenance cost.</li>
 </ul>
+
+<br><br>
+<b>Ship Types/Attributes</b>
+
+<br><br>
+Different ships have different values for the following attributes:
+
+<ul>
+<li><code>cp\_cost</code> - the number of CPs required to build the ship</li>
+<li><code>hullsize</code> - the number of shipyards needed to build the ship (assuming shipyard technology level 1)</li>
+<li><code>shipsize\_needed</code> - the level of shipsize technology required to build the ship</li>
+<li><code>tactics</code> - determines the combat order; ships with tactics 0 are destroyed immediately</li>
+<il><code>attack</code> and <code>defense</code> - as usual</li>
+<li><code>maintenance</code> - the number of CPs that must be paid during each Economic phase to retain the ship</li>
+</ul>
+
+<pre><code>
+'unit_data': {
+        'Battleship': {'cp_cost': 20, 'hullsize': 3, 'shipsize_needed': 5, 'tactics': 5, 'attack': 5, 'defense': 2, 'maintenance': 3},
+        'Battlecruiser': {'cp_cost': 15, 'hullsize': 2, 'shipsize_needed': 4, 'tactics': 4, 'attack': 5, 'defense': 1, 'maintenance': 2},
+        'Cruiser': {'cp_cost': 12, 'hullsize': 2, 'shipsize_needed': 3, 'tactics': 3, 'attack': 4, 'defense': 1, 'maintenance': 2},
+        'Destroyer': {'cp_cost': 9, 'hullsize': 1, 'shipsize_needed': 2, 'tactics': 2, 'attack': 4, 'defense': 0, 'maintenance': 1},
+        'Dreadnaught': {'cp_cost': 24, 'hullsize': 3, 'shipsize_needed': 6, 'tactics': 5, 'attack': 6, 'defense': 3, 'maintenance': 3},
+        'Scout': {'cp_cost': 6, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 1, 'attack': 3, 'defense': 0, 'maintenance': 1},
+        'Shipyard': {'cp_cost': 3, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 3, 'attack': 3, 'defense': 0,, 'maintenance': 0},
+        'Decoy': {'cp_cost': 1, 'hullsize': 0, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+        'Colonyship': {'cp_cost': 8, 'hullsize': 1, 'shipsize_needed': 1, 'tactics': 0, 'attack': 0, 'defense': 0, 'maintenance': 0},
+        'Base': {'cp_cost': 12, 'hullsize': 3, 'shipsize_needed': 2, 'tactics': 5, 'attack': 7, 'defense': 2, 'maintenance': 0},
+}
+</code></pre>
+
+<br><br>
+<b>Technology</b>
+
+Here are the specifics regarding technology:
+
+attack, defense - determines the amount that gets added to a ship's attack or defense during battle
+
+shipsize - determines what kinds of ships can be built (provided you have enough CP and shipyards)
+
+Level  | Upgrade Cost | Benefit
+----------------------------------------------------------------------
+  1   |       -      | Can build Scout, Colony Ship, Ship Yard, Decoy
+  2   |      10      | Can build Destroyer, Base
+  3   |      15      | Can build Cruiser
+  4   |      20      | Can build Battlecruiser
+  5   |      25      | Can build Battleship
+  6   |      30      | Can build Dreadnaught
+movement - determines how many spaces each ship can move during each movement phase
+Level | Upgrade Cost | Benefit
+---------------------------------------------------------
+  1   |       -      | Can move one space per movement
+  2   |      20      | Can move 1 space in each of the
+                       first 2 movements and 2 spaces in
+                       the third movement
+  3   |      30      | Can move 1 space in the first movement
+                       and 2 spaces in each of the second and
+                       third movements
+  4   |      40      | Can move 2 spaces per movement
+  5   |      40      | Can move 2 spaces in each of the first 2 
+                       movements and 3 spaces in the third movement
+  6   |      40      | Can move 2 spaces in the first movement and 3
+                       spaces in each of the second and third movements
+shipyard - determines how much "hull size" each shipyard can build
+Level | Upgrade Cost | Hull Size Building Capacity of Each Ship Yard
+------------------------------------------------------------
+   1  |      -       |     1
+   2  |      20      |     1.5
+   3  |      30      |     2
+The information is summarized as follows:
+
+'technology_data': {
+    'shipsize':
+        {'upgrade_cost': [10, 15, 20, 25, 30],
+            'starting_level': 1},
+    'attack':
+        {'upgrade_cost': [20, 30, 40],
+            'starting_level': 0},
+    'defense':
+        {'upgrade_cost': [20, 30, 40],
+            'starting_level': 0},
+    'movement':
+        {'upgrade_cost': [20, 30, 40, 40, 40],
+            'starting_level': 1},
+    'shipyard':
+        {'upgrade_cost': [20, 30],
+            'starting_level': 1}
+}
+
+
+Check your understanding of the above:
+
+If a player has 30 CP and 2 Shipyards at its home colony (with Shipyard tech level 1), how many Scouts can it buy?
+
+Who would win in combat -- a Colonyship or a Scout?
+
+A Battleship and a Battlecruiser are in combat. Which ship attacks first?
+
+Two Scouts are in combat. How do you determine which Scout attacks first?
+
+Suppose you have 1000 CP and 4 shipyards. If you upgrade Shipyard technology to the max, how many Scouts could you build?
+
+
+
 
 
 </div>
