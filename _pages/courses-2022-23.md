@@ -10,6 +10,11 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto"> 
 
 <br>
+Shared resources: <a class="body" target="_blank" href="{{site.url}}/space-empires-reference">Space Empires reference</a>
+
+
+<br>
+<br>
 <center>
 <table style="width:100%">
 <tr>
