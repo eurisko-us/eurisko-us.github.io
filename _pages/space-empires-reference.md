@@ -92,8 +92,8 @@ Different ships have different values for the following attributes:
 <li><code>cp_cost</code> - the number of CPs required to build the ship</li>
 <li><code>hullsize</code> - the number of shipyards needed to build the ship (assuming shipyard technology level 1)</li>
 <li><code>shipsize_needed</code> - the level of shipsize technology required to build the ship</li>
-<li><code>tactics</code> - determines the combat order; ships with tactics 0 are destroyed immediately</li>
-<il><code>attack</code> and <code>defense</code> - as usual</li>
+<!--<li><code>tactics</code> - determines the combat order; ships with tactics 0 are destroyed immediately</li>
+<il><code>attack</code> and <code>defense</code> - as usual</li>-->
 <li><code>maintenance</code> - the number of CPs that must be paid during each Economic phase to retain the ship</li>
 </ul>
 
