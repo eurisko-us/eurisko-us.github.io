@@ -62,7 +62,7 @@ The above procedure is repeated for each ship in the combat order. Then, if ther
 <li>If a player is unable to pay the maintenance cost for one of it ships, what must the player do?</li>
 <li>Even if a player has a lot of CPs, that doesn't necessarily mean it can build a lot of ships on a single turn. Why not?</li>
 <li>How many spaces, in total, can a player move a ship during a turn? (Remember that the movement phase consists of multiple rounds of movement)</li>
-<li>If Player A has 5 ships and Player B has 3 ships in the same square, up to how many ships can Player A screen from combat?<li>
+<li>If Player A has 5 ships and Player B has 3 ships in the same square, up to how many ships can Player A screen from combat?</li>
 <li>Is it possible for any of the losing player's ships to survive a combat?</li>
 </ol>
 
