@@ -37,7 +37,7 @@ Shared resources: <a class="body" target="_blank" href="{{site.url}}/space-empir
         <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-rhapson-method">Estimating Roots via Bisection Search and Newton-Rhapson Method</a>
     </td>
     <td width="30%">
-        TBD - Space Empires
+        Get started on Space Empires
 
         <br><br>
         If you have moments when you're waiting on others, work on any of the upcoming quant assignments:
@@ -51,7 +51,7 @@ Shared resources: <a class="body" target="_blank" href="{{site.url}}/space-empir
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
     </td>
     <td width="30%">
-        TBD - Space Empires
+        Space Empires - fix failing tests and implement economic phase
     </td>
 </tr>
 <tr>
