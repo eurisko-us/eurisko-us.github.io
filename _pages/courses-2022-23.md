@@ -10,16 +10,13 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto"> 
 
 <br>
-<b>Board Pics:</b> <a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Cohort 2</a>, <a class="body" target="_blank" href="https://photos.app.goo.gl/gCmUroVmFZT3hVqs8">Cohort 3</a>
-
-<br>
 <center>
 <table style="width:100%">
 <tr>
     <td width="10%"><center><b>Dates</b></center></td>
     <td width="30%"><center><b>Computation & Modeling</b><br>(Matteo)</center></td>
-    <td width="30%"><center><b>Machine Learning</b></center></td>
-    <td width="30%"><center><b>Intelligent Systems</b></center></td>
+    <td width="30%"><center><b>Machine Learning</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/gCmUroVmFZT3hVqs8">Board Pics</a><br>(Cohort 3)</center></td>
+    <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
     <td width="10%"><center>8/22-26<br></center></td>
