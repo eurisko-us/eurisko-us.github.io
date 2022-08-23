@@ -115,12 +115,16 @@ Different ships have different values for the following attributes:
 <br><br>
 <b>Technology</b>
 
+<br><br>
 Here are the specifics regarding technology:
 
-attack, defense - determines the amount that gets added to a ship's attack or defense during battle
+<ul>
+<li>attack, defense - determines the amount that gets added to a ship's attack or defense during battle</li>
 
-shipsize - determines what kinds of ships can be built (provided you have enough CP and shipyards)
+<li>shipsize - determines what kinds of ships can be built (provided you have enough CP and shipyards)
 
+<br>
+<pre><code>
 Level  | Upgrade Cost | Benefit
 ----------------------------------------------------------------------
   1   |       -      | Can build Scout, Colony Ship, Ship Yard, Decoy
@@ -129,7 +133,13 @@ Level  | Upgrade Cost | Benefit
   4   |      20      | Can build Battlecruiser
   5   |      25      | Can build Battleship
   6   |      30      | Can build Dreadnaught
-movement - determines how many spaces each ship can move during each movement phase
+</code></pre>
+</li>
+
+<li>movement - determines how many spaces each ship can move during each movement phase
+
+<br>
+<pre><code>
 Level | Upgrade Cost | Benefit
 ---------------------------------------------------------
   1   |       -      | Can move one space per movement
@@ -144,14 +154,27 @@ Level | Upgrade Cost | Benefit
                        movements and 3 spaces in the third movement
   6   |      40      | Can move 2 spaces in the first movement and 3
                        spaces in each of the second and third movements
-shipyard - determines how much "hull size" each shipyard can build
+</code></pre>
+</li>
+
+<li>shipyard - determines how much "hull size" each shipyard can build
+
+<br>
+<pre><code>
 Level | Upgrade Cost | Hull Size Building Capacity of Each Ship Yard
 ------------------------------------------------------------
    1  |      -       |     1
    2  |      20      |     1.5
    3  |      30      |     2
+</code></pre>
+</li>
+
+</ul>
+
+<br><br>
 The information is summarized as follows:
 
+<pre><code>
 'technology_data': {
     'shipsize':
         {'upgrade_cost': [10, 15, 20, 25, 30],
@@ -169,22 +192,17 @@ The information is summarized as follows:
         {'upgrade_cost': [20, 30],
             'starting_level': 1}
 }
+</code></pre>
 
+<br><br>
+<b>Check your understanding of the above</b>
 
-Check your understanding of the above:
-
-If a player has 30 CP and 2 Shipyards at its home colony (with Shipyard tech level 1), how many Scouts can it buy?
-
-Who would win in combat -- a Colonyship or a Scout?
-
-A Battleship and a Battlecruiser are in combat. Which ship attacks first?
-
-Two Scouts are in combat. How do you determine which Scout attacks first?
-
-Suppose you have 1000 CP and 4 shipyards. If you upgrade Shipyard technology to the max, how many Scouts could you build?
-
-
-
-
+<ul>
+<li>If a player has 30 CP and 2 Shipyards at its home colony (with Shipyard tech level 1), how many Scouts can it buy?</li>
+<li>Who would win in combat -- a Colonyship or a Scout?</li>
+<li>A Battleship and a Battlecruiser are in combat. Which ship attacks first?</li>
+<li>Two Scouts are in combat. How do you determine which Scout attacks first?</li>
+<li>Suppose you have 1000 CP and 4 shipyards. If you upgrade Shipyard technology to the max, how many Scouts could you build?</li>
+</ul>
 
 </div>
