@@ -33,6 +33,17 @@ author_profile: false
     </td>
     <td width="30%">
         TBD - Space Empires
+
+        <br><br>
+        If you finish Space Empires stuff early, work on any of the upcoming quant assignments:
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
     </td>
     <td width="30%">
         TBD - Space Empires
