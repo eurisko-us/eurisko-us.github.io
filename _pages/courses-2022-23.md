@@ -35,7 +35,7 @@ author_profile: false
         TBD - Space Empires
 
         <br><br>
-        If you finish Space Empires stuff early, work on any of the upcoming quant assignments:
+        If you have moments when you're waiting on others, work on any of the upcoming quant assignments:
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
 
