@@ -10,7 +10,7 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto"> 
 
 <br>
-<i>The full rulebook is available online <a class="body" target="_blank" href="https://www.gmtgames.com/living_rules/SE-LivingRules-Sept2011.pdf">here</a>. It is incredibly long and complex, so I've come up with a high-level summary below. (If the link to the rulebook breaks, then you should be able to find another copy by googling "Space Empires rulebook.")</i>
+<i>The full rulebook is <a class="body" target="_blank" href="{{site.url}}/space-empires-rulebook.pdf">here</a>.It is incredibly long and complex, so I've come up with a high-level summary below.</i>
 
 <br>
 <hr>
