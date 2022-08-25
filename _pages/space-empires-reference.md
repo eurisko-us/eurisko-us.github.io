@@ -10,7 +10,7 @@ author_profile: false
 <div style="width:100%; max-width:800px; margin:auto"> 
 
 <br>
-<i>The full rulebook is <a class="body" target="_blank" href="{{site.url}}/space-empires-rulebook.pdf">here</a>.It is incredibly long and complex, so I've come up with a high-level summary below.</i>
+<i>The full rulebook is <a class="body" target="_blank" href="{{site.url}}/files/space-empires-rulebook.pdf">here</a>.It is incredibly long and complex, so I've come up with a high-level summary below.</i>
 
 <br>
 <hr>
