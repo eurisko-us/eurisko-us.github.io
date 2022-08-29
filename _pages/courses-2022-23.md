@@ -51,7 +51,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
     </td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a> - write the connect four game and construct the heuristic tic-tac-toe player. (You don't have to worry about the heuristic connect four player yet.)
 
         <br><br>We'll have an extra credit competition with connect four next quant week
     </td>
