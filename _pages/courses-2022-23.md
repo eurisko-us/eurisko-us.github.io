@@ -24,31 +24,45 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>8/22-26<br></center></td>
+    <td width="10%"><center>8/29-9/2<br></center></td>
     <td width="30%">
         Do at least 2 of these before using second half of class for other projects:
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/roulette-wheel-selection">Roulette Wheel Selection</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/brute-force-search-with-linear-encoding-cryptography">Brute Force Search with Linear-Encoding Cryptography</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-rhapson-method">Estimating Roots via Bisection Search and Newton-Rhapson Method</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/basic-matrix-arithmetic">Basic Matrix Arithmetic</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/single-variable-gradient-descent">Single-Variable Gradient Descent</a>
     </td>
     <td width="30%">
-        Get started on Space Empires
-
-        <br><br>
-        If you have moments when you're waiting on others, work on any of the upcoming quant assignments:
+        Complete the following:
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
 
+        <br><br>
+        If you finish early then you can either work on Space Empires the upcoming quant assignments:
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
+
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>8/22-26<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/roulette-wheel-selection">Roulette Wheel Selection</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/brute-force-search-with-linear-encoding-cryptography">Brute Force Search with Linear-Encoding Cryptography</a>
+    </td>
+    <td width="30%">
+        Get started on Space Empires
     </td>
     <td width="30%">
         Space Empires - fix failing tests and implement economic phase
@@ -76,8 +90,6 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
-
-        <br><br>If you finish early, start on <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
      </td>
 </tr>
 <tr>
