@@ -52,6 +52,8 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     </td>
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+
+        <br><br>We'll have an extra credit competition with connect four next quant week
     </td>
 </tr>
 <tr>
