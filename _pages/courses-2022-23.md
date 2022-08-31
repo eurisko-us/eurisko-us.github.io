@@ -26,13 +26,15 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 <tr>
     <td width="10%"><center>8/29-9/2<br></center></td>
     <td width="30%">
-        Do at least 2 of these before using second half of class for other projects:
+        Complete the following: 
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/basic-matrix-arithmetic">Basic Matrix Arithmetic</a>
+
+        <br><br>If you finish early, you can use second half of class for other projects and use first half of class to work on the following:
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-rhapson-method">Estimating Roots via Bisection Search and Newton-Rhapson Method</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/basic-matrix-arithmetic">Basic Matrix Arithmetic</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/single-variable-gradient-descent">Single-Variable Gradient Descent</a>
     </td>
