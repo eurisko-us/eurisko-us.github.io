@@ -24,23 +24,41 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
+    <td width="10%"><center>9/12-9/16<br></center></td>
+    <td width="30%">
+        Do at least 2: 
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/tic-tac-toe-and-connect-four">Tic-Tac-Toe and Connect Four</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/euler-estimation">Euler Estimation</a>
+    </td>
+    <td width="30%">
+        Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>. Work it out by hand first (and show me your work), and then code it up.
+
+        If you finish early, you can either work on Space Empires or the next quant assignment (<a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>).
+    </td>
+    <td width="30%">
+        Finish up <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>. If you finish early, work on developing a custom strategy for our connect four competition next quant week.
+    </td>
+</tr>
+<tr>
     <td width="10%"><center>9/6-9/9<br></center></td>
     <td width="30%">
-        Complete the following: 
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
+        <a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-rhapson-method">Estimating Roots via Bisection Search and Newton-Rhapson Method</a>
-
-        <br><br>If you finish early, you can use second half of class for other projects and first half of class to work on the following:
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/single-variable-gradient-descent">Single-Variable Gradient Descent</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/multivariable-gradient-descent">Multivariable Gradient Descent</a>
         
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/selection-bubble-insertion-and-counting-sort">Selection, Bubble, Insertion, and Counting Sort</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/selection-bubble-insertion-and-counting-sort">Selection, Bubble, Insertion, and Counting Sort</a>        
     </td>
     <td width="30%">
         Space Empires - get to the point where we can manually play the initial version of the game
