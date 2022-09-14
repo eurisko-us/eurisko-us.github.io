@@ -54,7 +54,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
         
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-rhapson-method">Estimating Roots via Bisection Search and Newton-Rhapson Method</a>
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/estimating-roots-via-bisection-search-and-newton-raphson-method">Estimating Roots via Bisection Search and Newton-Raphson Method</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/single-variable-gradient-descent">Single-Variable Gradient Descent</a>
 

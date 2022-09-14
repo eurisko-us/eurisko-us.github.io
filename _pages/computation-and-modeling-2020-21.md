@@ -919,7 +919,7 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/467426699">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-19-1">Newton-Rhapson Method for a General Function via Central Difference Approximation</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-19-1">Newton-Raphson Method for a General Function via Central Difference Approximation</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-19-2">Introduction to Expected Value and Variance</a></li>
         </ul></font>
         <br>Student submissions for LaTeX portion - 
@@ -947,7 +947,7 @@ author_profile: false
         <br><a class="body" target="_blank" href="https://vimeo.com/465871756">Class Recording</a>
         <br>Assignment Problems:
         <font size="2em"><ul>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-17-1">Newton-Rhapson Method</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-17-1">Newton-Raphson Method</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_2_10th.html#Problem-17-2">Matrix Inverse via RREF on Augmented Matrix</a></li>
         </ul></font>
     </li>

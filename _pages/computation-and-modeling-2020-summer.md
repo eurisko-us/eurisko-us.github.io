@@ -292,7 +292,7 @@ author_profile: false
         <font size="2em"><ul>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_10th.html#Problem-6-1">Mean, Variance, and Standard Deviation</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_10th.html#Problem-6-2">Identifying Is-a / Has-a Relationships Given a Class Hierarchy</a></li>
-        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_10th.html#Problem-6-3">Finding Roots via Newton-Rhapson Search</a></li>
+        <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_10th.html#Problem-6-3">Finding Roots via Newton-Raphson Search</a></li>
         <li><a class="body" target="_blank" href="https://eurisko-us.github.io/files/assignment_problems_cohort_1_10th.html#Problem-6-4">Reduced Row Echelon Form for Matrices that Reduce to the Identity Matrix</a></li>
         </ul></font>
     </li>

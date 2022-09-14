@@ -277,7 +277,7 @@ author_profile: false
     <tr>
     <td width="33%">
         • <a class="body" href="https://www.overleaf.com/read/qvtfnkdjbyzg" target="_blank">Set 11: Logistic Regression with General Bounds + Data Set Analysis using DataFrames</a><br>
-        • Exam Friday (11/12) - sorting algorithms, newton-rhapson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
+        • Exam Friday (11/12) - sorting algorithms, Newton-Raphson, recursive vs non-recursive matrix determinant, linear/logistic regression, breadth-first and depth-first traversals
     </td>
     <td width="33%">
         • Space Empires - first competition<br>
@@ -372,7 +372,7 @@ author_profile: false
   </tr>
     <tr>
     <td width="33%">
-        <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Rhapson, Merging</a><br>
+        <a class="body" href="https://www.overleaf.com/read/dvgfpdsjgycf" target="_blank">Set 4: Generalized Matrix Arithmetic, Newton-Raphson, Merging</a><br>
     </td>
     <td width="33%">
         • Finish up set 2, and then continue Space Empires development - creates strategy players<br>
