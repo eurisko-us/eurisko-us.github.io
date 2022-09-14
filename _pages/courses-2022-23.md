@@ -41,10 +41,12 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>. Work it out by hand first (and show me your work), and then code it up.
 
-        If you finish early, you can either work on Space Empires or the next quant assignment (<a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>).
+        <br><br>If you finish early, you can either work on Space Empires or the next quant assignment (<a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>).
     </td>
     <td width="30%">
-        Finish up <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>. If you finish early, work on developing a custom strategy for our connect four competition next quant week.
+        Finish up <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>.
+        
+        <br><br>If you finish early, work on developing a custom strategy for our connect four competition next quant week.
     </td>
 </tr>
 <tr>
@@ -78,18 +80,9 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/solving-magic-squares-via-backtracking">Solving Magic Squares via Backtracking</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
-
-        <br><br>
-        If you finish early then you can either work on Space Empires the upcoming quant assignments:
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
     </td>
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a> - write the connect four game and construct the heuristic tic-tac-toe player. (You don't have to worry about the heuristic connect four player yet.)
-
-        <br><br>We'll have an extra credit competition with connect four soon
     </td>
 </tr>
 <tr>
