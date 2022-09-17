@@ -120,7 +120,7 @@ Christine Manoukian:
   name        : "Christine Manoukian"
   bio         : ""
   avatar      : "headshots/anonymous.png"
-  role        : "student"
+  role        : "dropped"
   graduationYear : "'23"
   
 Celeste Acosta:
@@ -150,6 +150,13 @@ Jeffrey Smithwick:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
+
+Matteo Paz:
+  name        : "Matteo Paz"
+  bio         : ""
+  avatar      : "headshots/anonymous.png"
+  role        : "student"
+  graduationYear : "'25"
 
 Eobard Thawne:
   name        : "Eobard Thawne"
