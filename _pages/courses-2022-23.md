@@ -24,17 +24,33 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>9/12-9/16<br></center></td>
+    <td width="10%"><center>9/19-9/22<br></center></td>
     <td width="30%">
-        Do at least 2: 
+        Pick any of the following: 
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/tic-tac-toe-and-connect-four">Tic-Tac-Toe and Connect Four</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/sir-model-for-the-spread-of-disease">SIR Model for the Spread of Disease</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
+    </td>
+    <td width="30%">
+        Space Empires
+    </td>
+    <td width="30%">
+        Space Empires
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>9/12-9/16<br></center></td>
+    <td width="30%">
+        Do at least 2: 
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/euler-estimation">Euler Estimation</a>
     </td>
