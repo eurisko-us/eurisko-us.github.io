@@ -48,9 +48,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 <tr>
     <td width="10%"><center>9/12-9/16<br></center></td>
     <td width="30%">
-        Do at least 2: 
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/euler-estimation">Euler Estimation</a>
     </td>
