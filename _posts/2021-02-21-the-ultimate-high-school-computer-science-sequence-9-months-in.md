@@ -66,7 +66,7 @@ Here is a list of the main topics we've covered. We pulled the basics from MIT's
 
 <h2>Space Empires</h2>
 
-The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's provided the students with extensive practice planning, writing, and debugging code that's spread over multiple directories and files. The <a class="body" href="http://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how the game works:
+The Space Empires game is incredibly complicated, which is in part why we chose it as the "big project" for the class. It's provided the students with extensive practice planning, writing, and debugging code that's spread over multiple directories and files. The <a class="body" href="https://www.gmtgames.com/spaceemp/SE-Rules-4B.pdf" target="_blank">rule book</a> is incredibly dense, but here is the gist of how the game works:
 
 <ul>
 <li>There are 2 players on a grid. Each player starts with a "home colony" and some initial ships, and their goal is to destroy the opponent's home colony by sending ships to attack it.</li>

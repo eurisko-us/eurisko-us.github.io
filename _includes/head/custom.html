@@ -1,11 +1,11 @@
-{% include base_path %}
+<!--
+Attempt to prevent mixed content errors (example below)
+Mixed Content: The page at 'https://www.eurisko.us/' was loaded over HTTPS, but requested an insecure script 'http://www.eurisko.us/assets/js/main.min.js'.
+This request has been blocked; the content must be served over HTTPS.
+-->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-<style type="text/css">
-       a.body:link {color: #25779d;  text-decoration: underline; transition: 0s; transition-delay: 0s;}    /* unvisited link */
-       a.body:visited {color: #25779d;  text-decoration: underline; transition: 0s; transition-delay: 0s;}   /* visited link */
-       a.body:hover {color: #00b6ff; text-decoration: none; transition: 0s; transition-delay: 0s;}    /* mouse over link */
-       a.body:active {color: #00b6ff; text-decoration: none; transition: 0s; transition-delay: 0s;}   /* selected link */
-</style>
+{% include base_path %}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84390205-9"></script>
@@ -17,6 +17,12 @@
   gtag('config', 'UA-84390205-9');
 </script>
 
+<style type="text/css">
+  a.body:link {color: #25779d;  text-decoration: underline; transition: 0s; transition-delay: 0s;}    /* unvisited link */
+  a.body:visited {color: #25779d;  text-decoration: underline; transition: 0s; transition-delay: 0s;}   /* visited link */
+  a.body:hover {color: #00b6ff; text-decoration: none; transition: 0s; transition-delay: 0s;}    /* mouse over link */
+  a.body:active {color: #00b6ff; text-decoration: none; transition: 0s; transition-delay: 0s;}   /* selected link */
+</style>
 
 <!-- turn these metas off once https-force is finally disabled (?) -->
 <!--
@@ -25,10 +31,12 @@
 <meta http-equiv="Expires" content="0">
 -->
 
+<!--
 <script>
 if (window.location.protocol != "http:")
     window.location.protocol = "http:";
 </script>
+-->
 
 <!-- -->
 

@@ -127,7 +127,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         <a class="body" href="https://justinmath.com/sir-model-for-the-spread-of-disease" target="_blank">SIR Model for the Spread of Disease</a>
         
-        <br><br><a class="body" href="http://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+        <br><br><a class="body" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons" target="_blank">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
      </td>
