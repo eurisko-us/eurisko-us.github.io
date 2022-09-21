@@ -15,7 +15,7 @@ Graphs and directed graphs can be used to model many real-life phenomena. For ex
 
 The following picture is an example of an undirected graph:
 
-<center><img src="https://eurisko-us.github.io/images/blog/depth-first-and-breadth-first-search-1-undirected-graph.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/depth-first-and-breadth-first-search-1-undirected-graph.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Here, the labeled circles represent nodes and the lines between the nodes represent undirected edges. 
@@ -24,7 +24,7 @@ In the context of a social network, think of node 1 as yourself. The nodes 2, 7,
 
 The following picture is an example of a directed graph:
 
-<center><img src="https://eurisko-us.github.io/images/blog/depth-first-and-breadth-first-search-2-directed-graph.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/depth-first-and-breadth-first-search-2-directed-graph.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Again, the nodes are labeled circles and the edges are the lines between the nodes. However, notice that these edges have an arrow designating the direction.

@@ -106,7 +106,7 @@ new_point <span style="color: #333333">=</span> []
 
 The graph below shows the plot of the Euler estimation of the wolf and deer populations.
 
-<center><img src="https://eurisko-us.github.io/images/blog/predator-prey-modeling-with-euler-estimation-1.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/predator-prey-modeling-with-euler-estimation-1.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 The populations both oscillate. As the wolf population rises, they kill more deer. Then, as the deer population falls, the wolves starve and their population decreases. With the scarcity of wolves, the deer thrive and their population booms and the cycle begins again.

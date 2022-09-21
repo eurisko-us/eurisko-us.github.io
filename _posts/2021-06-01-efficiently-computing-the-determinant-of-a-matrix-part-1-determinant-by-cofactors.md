@@ -7,7 +7,7 @@ tags:
   - Algorithms
 ---
 
-<i>Note: This post is part 1 of a 2-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-1-determinant-by-cofactors/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">part 2</a>.</i>
+<i>Note: This post is part 1 of a 2-part series: <a class="body" target="_blank" href="https://eurisko.us/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-1-determinant-by-cofactors/">part 1</a>, <a class="body" target="_blank" href="https://eurisko.us/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">part 2</a>.</i>
 
 The determinant is a number associated with a matrix that can be used to figure out many characteristics of that matrix. You can find the determinant of any square matrix.
 
@@ -341,4 +341,4 @@ There are three operations per $2 \times 2$ matrix: multiplying the first and fo
 
 Finally, we must multiply our number of operations for all $2 \times 2$ matrices by $2$, because every $2 \times 2$ matrix can have a coefficient, which is one extra operation. This brings our maximum number of operations for finding the determinant of an $n \times n$ matrix to $3 \cdot n!$ operations. This is very inefficient!
 
-<i>This post is part 1 of a 2-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">Click here to continue to part 2.</a></i>
+<i>This post is part 1 of a 2-part series. <a class="body" target="_blank" href="https://eurisko.us/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">Click here to continue to part 2.</a></i>

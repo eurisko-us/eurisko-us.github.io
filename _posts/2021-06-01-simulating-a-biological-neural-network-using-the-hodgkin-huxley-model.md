@@ -19,7 +19,7 @@ There are three major types of neurons:
 
 The most basic structure of a neuron consists of the main cell body (the plasma membrane, nucleus, etc.), dendrites, and an axon. Dendrites allow the neuron to receive signals, while the single axon is how the cell sends signals.
 
-<center><img src="https://eurisko-us.github.io/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-1-neuron-structure.jpg" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-1-neuron-structure.jpg" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Neurons send signals via spikes in electrical activity called <b>action potentials</b>. Before we jump into modeling action potentials, let's learn a bit more about them.
@@ -28,7 +28,7 @@ Each neuron has a resting membrane potential around -70 mV (it is negative becau
 
 When the action potential reaches its peak, sodium channels close, potassium channels open, and the cell loses membrane potential (repolarization). The drop in membrane potential causes the neuron to become hyperpolarized, and enter a state where it is very difficult to cause the neuron to depolarize again. Eventually the neuron reaches its resting membrane potential again, where it is no longer hyperpolarized.
 
-<center><img src="https://eurisko-us.github.io/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-2-action-potential.jpg" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-2-action-potential.jpg" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 <h2>The Hodgkin-Huxley Model</h2>
@@ -172,7 +172,7 @@ n_0 <span style="color: #333333">=</span> alpha_n(<span style="color: #0000DD; f
 
 The end product looks something like this:
 
-<center><img src="https://eurisko-us.github.io/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-3-end-product.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/simulating-a-biological-neural-network-using-the-hodgkin-huxley-model-3-end-product.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 <h2>Analyzing the Model</h2>

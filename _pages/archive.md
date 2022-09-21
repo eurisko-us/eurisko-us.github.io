@@ -13,17 +13,17 @@ author_profile: false
 <h2>Course Pages</h2>
 
 <ul>
-<li>2021-22: <a class="body" target="_blank" href="https://eurisko-us.github.io/courses-2021-22">all grades</a></li>
-<li>2020-21: <a class="body" target="_blank" href="https://eurisko-us.github.io/computation-and-modeling-2020-21">10th grade</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/machine-learning-2020-21">11th grade</a></li>
-<li>Summer 2020 Bootcamp: <a class="body" target="_blank" href="https://eurisko-us.github.io/computation-and-modeling-2020-summer">incoming 11th grade</a></li>
+<li>2021-22: <a class="body" target="_blank" href="https://eurisko.us/courses-2021-22">all grades</a></li>
+<li>2020-21: <a class="body" target="_blank" href="https://eurisko.us/computation-and-modeling-2020-21">10th grade</a>, <a class="body" target="_blank" href="https://eurisko.us/machine-learning-2020-21">11th grade</a></li>
+<li>Summer 2020 Bootcamp: <a class="body" target="_blank" href="https://eurisko.us/computation-and-modeling-2020-summer">incoming 11th grade</a></li>
 </ul>
 
 <h2>Other</h2>
 
 <ul>
-<li><a class="body" target="_blank" href="https://eurisko-us.github.io/blog">Blog</a></li>
-<li><a class="body" target="_blank" href="https://eurisko-us.github.io/clips">Clips</a></li>
-<li><a class="body" target="_blank" href="https://eurisko-us.github.io/resources">Resources</a></li>
+<li><a class="body" target="_blank" href="https://eurisko.us/blog">Blog</a></li>
+<li><a class="body" target="_blank" href="https://eurisko.us/clips">Clips</a></li>
+<li><a class="body" target="_blank" href="https://eurisko.us/resources">Resources</a></li>
 </ul>
     
 </div>

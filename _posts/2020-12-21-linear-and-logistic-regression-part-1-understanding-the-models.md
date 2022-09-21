@@ -7,13 +7,13 @@ tags:
   - Machine Learning
 ---
 
-<i>Note: This post is part 1 of a 3-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
+<i>Note: This post is part 1 of a 3-part series: <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
 
 Regression is when you measure specific data points and fit a function to the trend. This can be used to establish connections between known variables and uncertainties, like the probability of a heart attack occurring via known traits. Another example could be determining the perfect amount of something, like the perfect amount of toppings on a pizza. You can relate the amount of toppings with customer satisfaction and determine an average amount of toppings that would lead to best reviews from customers.
 
 There are two main types of regression I'm going to talk about, linear and logistic. Linear regression comes in the form of a straight line:
 
-<center><img src="https://eurisko-us.github.io/images/blog/linear-and-logistic-regression-part-1-understanding-the-models-1.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/linear-and-logistic-regression-part-1-understanding-the-models-1.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Linear regression can be modeled with this equation:
@@ -27,7 +27,7 @@ y = \beta_0 + \beta_1x
 
 Logistic regression is a form of regression that comes in a sigmoid shape and has an upper and lower limit.  This sigmoid shape starts at the lower limit, but once it increases and goes towards the higher limit, it levels out again, forming the graph's s-like shape.
 
-<center><img src="https://eurisko-us.github.io/images/blog/linear-and-logistic-regression-part-1-understanding-the-models-2.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/linear-and-logistic-regression-part-1-understanding-the-models-2.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Logistic regression can be modeled with this equation:
@@ -101,4 +101,4 @@ In this equation, $U$ is your upper limit, and $L$ is your lower limit. We would
 For example, say you have a crowd of people and you want to predict the direction in which the crowd will move. This could go from $-180^\circ$ to $180\circ$ where $0^\circ$ represents straight ahead, $-90^\circ$ represents left, and $90^\circ$ represents right. There are many different scenarios in which you wouldn't want the standard $0$ to $1$ bounds.
 <br>
 
-<i>This post is part 1 of a 3-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">Click here to continue to part 2.</a></i>
+<i>This post is part 1 of a 3-part series. <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-2-fitting-the-models/">Click here to continue to part 2.</a></i>

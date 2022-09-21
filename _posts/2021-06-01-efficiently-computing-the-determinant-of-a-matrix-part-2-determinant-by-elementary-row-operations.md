@@ -7,7 +7,7 @@ tags:
   - Algorithms
 ---
 
-<i>Note: This post is part 2 of a 2-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-1-determinant-by-cofactors/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">part 2</a>.</i>
+<i>Note: This post is part 2 of a 2-part series: <a class="body" target="_blank" href="https://eurisko.us/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-1-determinant-by-cofactors/">part 1</a>, <a class="body" target="_blank" href="https://eurisko.us/2021-06-01-efficiently-computing-the-determinant-of-a-matrix-part-2-determinant-by-elementary-row-operations/">part 2</a>.</i>
 
 Computing the determinant by hand is often annoying, and using the cofactor method takes more time the larger the matrix. The most efficient way to compute the determinant of a matrix is through using elementary row operations. Through this process, we reduce the matrix to echelon form and take the operations we did on the rows to compute the determinant.
 

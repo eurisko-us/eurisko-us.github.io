@@ -8,11 +8,11 @@ tags:
   - Machine Learning
 ---
 
-<i>Note: This post is part 2 of a 3-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
+<i>Note: This post is part 2 of a 3-part series: <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
 
 This is a blog post exploring how to fit linear and logistic regressions. First, note that linear and logistic regressors have different shapes. The shape of linear regression is a line, while the shape of logistic regression is a sigmoid: 
 
-<center><img src="https://eurisko-us.github.io/images/blog/linear-and-logistic-regression-part-2-fitting-the-models-1.png" style="border: none; height: 20em;" alt="icon"></center>
+<center><img src="https://eurisko.us/images/blog/linear-and-logistic-regression-part-2-fitting-the-models-1.png" style="border: none; height: 20em;" alt="icon"></center>
 <br>
 
 Also note that the same procedure can be used to fit a linear or logistic regressor, because the logistic equation can be rearranged to become a linear one.
@@ -192,4 +192,4 @@ f(x_1,\ldots, x_n)=\dfrac{1}{1+e^{\beta_0 + \beta_1  x_1 + \ldots + \beta_n  x_n
 </font>
 <br>
 
-<i>This post is part 2 of a 3-part series. <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">Click here to continue to part 3.</a></i>
+<i>This post is part 2 of a 3-part series. <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">Click here to continue to part 3.</a></i>

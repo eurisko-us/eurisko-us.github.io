@@ -12,19 +12,19 @@ redirect_from:
 <div style="width:100%; max-width:800px; margin:auto">
 
 <!--<div style="width:20%;float:left;">
-<img src="https://eurisko-us.github.io/files/icon-appacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon"><br>
-  <img src="https://eurisko-us.github.io/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon">
+<img src="https://eurisko.us/files/icon-appacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon"><br>
+  <img src="https://eurisko.us/files/icon-mathacademy-circleBorder.png" align="left" style="border: none; /* height: 7em; */" alt="icon">
 </div>-->
 
 <!--
 <div style="width:25%;float:left;">
-<img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
+<img src="https://eurisko.us/files/icon-appacademy-mathacademy.png" align="left" style="border: none; /* height: 10em; */" alt="icon">
 </div>
 -->
 
 <div style="width:100%; max-width:800px; height:5em; margin:auto">
   <center>
-  <img src="https://eurisko-us.github.io/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:5em; width:auto; max-width:100%" alt="icon">
+  <img src="https://eurisko.us/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:5em; width:auto; max-width:100%" alt="icon">
   </center>
 </div>
 
@@ -57,7 +57,7 @@ In subsequent courses, students implement more advanced machine learning algorit
   
 <font size="3em">
     (2022) <a class="body" target="_blank" href="https://www.justinmath.com/introduction-to-algorithms-and-machine-learning-preamble/">Preamble to Eurisko Textbook</a>
-    <br>(2021) <a class="body" target="_blank" href="https://eurisko-us.github.io/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
+    <br>(2021) <a class="body" target="_blank" href="https://eurisko.us/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 </font>
 
 </div>

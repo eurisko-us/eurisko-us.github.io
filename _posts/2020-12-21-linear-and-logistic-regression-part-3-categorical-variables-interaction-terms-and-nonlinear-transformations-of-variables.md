@@ -8,9 +8,9 @@ tags:
   - Machine Learning
 ---
 
-<i>Note: This post is part 3 of a 3-part series: <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
+<i>Note: This post is part 3 of a 3-part series: <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-1-understanding-the-models/">part 1</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-2-fitting-the-models/">part 2</a>, <a class="body" target="_blank" href="https://eurisko.us/linear-and-logistic-regression-part-3-categorical-variables-interaction-terms-and-nonlinear-transformations-of-variables/">part 3</a>.</i>
 
-This blog post will explore categorical variables, interaction terms, and non-linear transformations variables. All of these topics revolve around linear regression, which is a way of solving for the coefficients of a linear function that best fits a set of data points. If you want to understand how linear regressions work, look at <a class="body" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-1-understanding-the-models/" target="_blank">Part 1</a> and <a class="body" href="https://eurisko-us.github.io/linear-and-logistic-regression-part-2-fitting-the-models/" target="_blank">Part 2</a>.
+This blog post will explore categorical variables, interaction terms, and non-linear transformations variables. All of these topics revolve around linear regression, which is a way of solving for the coefficients of a linear function that best fits a set of data points. If you want to understand how linear regressions work, look at <a class="body" href="https://eurisko.us/linear-and-logistic-regression-part-1-understanding-the-models/" target="_blank">Part 1</a> and <a class="body" href="https://eurisko.us/linear-and-logistic-regression-part-2-fitting-the-models/" target="_blank">Part 2</a>.
 
 <h2>Using Linear and Logistic Regression with Categorical Variables</h2>
 
