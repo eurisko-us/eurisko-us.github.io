@@ -56,8 +56,8 @@ In subsequent courses, students implement more advanced machine learning algorit
 <br><br><b>More Information</b><br>
   
 <font size="3em">
-    (2022) <a class="body" target="_blank" href="https://www.justinmath.com/introduction-to-algorithms-and-machine-learning-preamble/">Preamble to Eurisko Textbook</a>
-    <br>(2021) <a class="body" target="_blank" href="https://eurisko.us/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
+    <!--(2022) <a class="body" target="_blank" href="https://www.justinmath.com/introduction-to-algorithms-and-machine-learning-preamble/">Preamble to Eurisko Textbook</a>
+    <br>-->(2021) <a class="body" target="_blank" href="https://eurisko.us/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 </font>
 
 </div>
