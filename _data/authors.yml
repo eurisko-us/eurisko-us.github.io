@@ -14,7 +14,7 @@ Jason Roberts:
   
 Colby Roberts:
   name        : "Colby Roberts"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science. <i>Last updated 2020.</i>"
   avatar      : "headshots/colby-roberts.png"
   role        : "student"
   graduationYear : "'22"
@@ -22,7 +22,7 @@ Colby Roberts:
   
 George Meza:
   name        : "George Meza"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. (last updated 2020)"
   avatar      : "headshots/george-meza.png"
   role        : "student"
   graduationYear : "'22"
@@ -30,7 +30,7 @@ George Meza:
   
 Riley Paddock:
   name        : "Riley Paddock"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science. <i>Last updated 2020.</i>"
   avatar      : "headshots/riley-paddock.png"
   role        : "student"
   graduationYear : "'22"
@@ -38,7 +38,7 @@ Riley Paddock:
   
 David Gieselman:
   name        : "David Gieselman"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college."
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college. <i>Last updated 2020.</i>"
   avatar      : "headshots/david-gieselman.png"
   role        : "student"
   graduationYear : "'22"
@@ -46,7 +46,7 @@ David Gieselman:
 
 Elijah Tarr:
   name        : "Elijah Tarr"
-  bio         : " is a junior at Tamalpais High School who also participates in Math Academy and App Academy. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains a <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> for displaying his projects. In college, he wants to study mathematics and computer science."
+  bio         : " is a junior at Tamalpais High School who also participates in Math Academy and App Academy. In his free time, he enjoys playing video games, writing software, and building hardware. He maintains a <a class='body' target='_blank' href='https://oriont.net/'>personal website</a> for displaying his projects. In college, he wants to study mathematics and computer science. <i>Last updated 2020.</i>"
   avatar      : "headshots/elijah-tarr.png"
   role        : "student"
   graduationYear : "'22"
@@ -54,7 +54,6 @@ Elijah Tarr:
   
 Nathan Allen:
   name        : "Nathan Allen"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "dropped"
   graduationYear : "'23"
@@ -62,7 +61,7 @@ Nathan Allen:
   
 Maia Dimas:
   name        : "Maia Dimas"
-  bio         : ""
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. <i>Last updated 2020.</i>"
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'23"
@@ -70,7 +69,7 @@ Maia Dimas:
   
 Justin Hong:
   name        : "Justin Hong"
-  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is on the water polo and swim teams at PHS, plays some chess, and enjoys skiing during winters. When he has free time, he likes to play video games, sleep in, and wander around the kitchen. After high school, he wants to study something along the lines of software or AI development."
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is on the water polo and swim teams at PHS, plays some chess, and enjoys skiing during winters. When he has free time, he likes to play video games, sleep in, and wander around the kitchen. After high school, he wants to study something along the lines of software or AI development. <i>Last updated 2020.</i>"
   avatar      : "headshots/justin-hong.png"
   role        : "student"
   graduationYear : "'23"
@@ -78,7 +77,7 @@ Justin Hong:
   
 Cayden Lau:
   name        : "Cayden Lau"
-  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He enjoys video games and mathematics."
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He enjoys video games and mathematics. <i>Last updated 2020.</i>"
   avatar      : "headshots/cayden-lau.png"
   role        : "student"
   graduationYear : "'23"
@@ -86,7 +85,7 @@ Cayden Lau:
   
 Anton Perez:
   name        : "Anton Perez"
-  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He runs track and cross country, and is an active member of his school's politics and astronomy clubs.  Outside of school, he enjoys programming, reading, tutoring, and seeking new knowledge wherever and whenever he can. He plans on studying mathematics, physics, and/or philosophy in college, and eventually wants to pursue a career in academia."
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He runs track and cross country, and is an active member of his school's politics and astronomy clubs.  Outside of school, he enjoys programming, reading, tutoring, and seeking new knowledge wherever and whenever he can. He plans on studying mathematics, physics, and/or philosophy in college, and eventually wants to pursue a career in academia. <i>Last updated 2020.</i>"
   avatar      : "headshots/anton-perez.png"
   role        : "student"
   graduationYear : "'23"
@@ -94,7 +93,6 @@ Anton Perez:
   
 Nathan Reynoso:
   name        : "Nathan Reynoso"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "dropped"
   graduationYear : "'23"
@@ -102,7 +100,7 @@ Nathan Reynoso:
   
 William Wallius:
   name        : "William Wallius"
-  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He likes to build computers, run cross country, and play video games. He was involved in the Boy Scouting program and earned the rank of Eagle. Though he isn't too sure on what he wants to do after high school, he enjoys coding and might want to pursue that in college and get a job in the field later on."
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He likes to build computers, run cross country, and play video games. He was involved in the Boy Scouting program and earned the rank of Eagle. Though he isn't too sure on what he wants to do after high school, he enjoys coding and might want to pursue that in college and get a job in the field later on. <i>Last updated 2020.</i>"
   avatar      : "headshots/william-wallius.png"
   role        : "student"
   graduationYear : "'23"
@@ -110,7 +108,7 @@ William Wallius:
   
 Charlie Weinberger:
   name        : "Charlie Weinberger"
-  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is a member of the Robotics Club and Politics Club. In his free time, he likes to hang out with his friends, code, play video games, play soccer, and discuss politics. After high school, Charlie is interested in studying computer science."
+  bio         : " is a sophomore in Math Academy and App Academy at Pasadena High School. He is a member of the Robotics Club and Politics Club. In his free time, he likes to hang out with his friends, code, play video games, play soccer, and discuss politics. After high school, Charlie is interested in studying computer science. <i>Last updated 2020.</i>"
   avatar      : "headshots/charlie-weinberger.png"
   role        : "student"
   graduationYear : "'23"
@@ -118,42 +116,36 @@ Charlie Weinberger:
   
 Christine Manoukian:
   name        : "Christine Manoukian"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "dropped"
   graduationYear : "'23"
   
 Celeste Acosta:
   name        : "Celeste Acosta"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
   
 Elias Gee:
   name        : "Elias Gee"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
   
 Benjamin Park:
   name        : "Benjamin Park"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
   
 Jeffrey Smithwick:
   name        : "Jeffrey Smithwick"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
 
 Matteo Paz:
   name        : "Matteo Paz"
-  bio         : ""
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'25"
