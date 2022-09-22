@@ -22,7 +22,7 @@ Colby Roberts:
   
 George Meza:
   name        : "George Meza"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. (last updated 2020)"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. <i>Last updated 2020.</i>"
   avatar      : "headshots/george-meza.png"
   role        : "student"
   graduationYear : "'22"
