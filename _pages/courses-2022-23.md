@@ -28,15 +28,33 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         Pick any of the following: 
         
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
-        
         <br><br><a class="body" target="_blank" href="https://justinmath.com/tic-tac-toe-and-connect-four">Tic-Tac-Toe and Connect Four</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/sir-model-for-the-spread-of-disease">SIR Model for the Spread of Disease</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
+
+        <br><br>OR, do these two shorter assignments:
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/sir-model-for-the-spread-of-disease">SIR Model for the Spread of Disease</a>
+    </td>
+    <td width="30%">
+        Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a> exercise 4.
+
+        <br><br>Then, make substantial progress on <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>. By the end of the week you should have a decision tree class all coded up and producing predictions for given input data -- though, it doesn't have to actually produce the <i>correct</i> predictions yet (you'll have more time to debug in the next quant week.).
+    </td>
+    <td width="30%">
+        Developing a custom strategy for our connect four competition. We will have the competition at the beginning of the next quant week.
+
+        <br><br>In order to get credit for this week, you'll need to code up an almost-random player that moves randomly unless it has the opportunity to capture a win or block a loss, and then demonstrate that your competition strategy beats this almost-random player.
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>9/19-9/22<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
     </td>
     <td width="30%">
         Space Empires
@@ -48,12 +66,10 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 <tr>
     <td width="10%"><center>9/12-9/16<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/reduced-row-echelon-form-and-applications-to-matrix-arithmetic">Reduced Row Echelon Form and Applications to Matrix Arithmetic</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/euler-estimation">Euler Estimation</a>
+        <a class="body" target="_blank" href="https://justinmath.com/euler-estimation">Euler Estimation</a>
     </td>
     <td width="30%">
-        Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>. Work it out by hand first (and show me your work), and then code it up.
+        Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a> exercises 1, 2, 3.
 
         <br><br>If you finish early, you can either work on Space Empires or the next quant assignment (<a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>).
     </td>
