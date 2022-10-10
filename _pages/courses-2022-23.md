@@ -24,21 +24,45 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>9/19-9/22<br></center></td>
+    <td width="10%"><center>10/3-10/7<br></center></td>
     <td width="30%">
-        Pick any of the following: 
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/tic-tac-toe-and-connect-four">Tic-Tac-Toe and Connect Four</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
+        Pick any of the following:
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
 
-        <br><br>OR, do these two shorter assignments:
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
+    </td>
+    <td width="30%">
+        Pick up where you left off on <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a> and get it fully working.
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
+        <br><br>Then, do <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>.
+    </td>
+    <td width="30%">
+        Monday/Tuesday -- prep your strategy for the connect four competition
+        
+        <br><br>Wednesday/Thursday -- competition
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>10/3-10/7<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/tic-tac-toe-and-connect-four">Tic-Tac-Toe and Connect Four</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/sir-model-for-the-spread-of-disease">SIR Model for the Spread of Disease</a>
+    </td>
+    <td width="30%">
+        Space Empires - get simple game running (single ship, no combat)
+    </td>
+    <td width="30%">
+        Space Empires - wrap up and merge latest updates to UI, economic phase, and manual input player
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>9/26-9/30<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/k-means-clustering">K-Means Clustering</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/merge-sort-and-quicksort">Merge Sort and Quicksort</a>
     </td>
     <td width="30%">
         Complete <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a> exercise 4.
