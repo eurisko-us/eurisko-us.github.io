@@ -31,6 +31,32 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
+
+        <br><br>If you finish early, continue working down the following two paths:
+
+        <br><br><u>Regression</u>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/regressing-a-linear-combination-of-nonlinear-functions-via-pseudoinverse">Regressing a Linear Combination of Nonlinear Functions via Pseudoinverse</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/overfitting-underfitting-cross-validation-and-the-bias-variance-tradeoff">Overfitting, Underfitting, Cross-Validation, and the Bias-Variance Tradeoff</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>; <a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
+
+        <br><br><u>Graphs</u>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/distance-and-shortest-paths-in-unweighted-graphs">Distance and Shortest Paths in Unweighted Graphs</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/dijkstras-algorithm-for-distance-and-shortest-paths-in-weighted-graphs">Dijkstra's Algorithm for Distance and Shortest Paths in Weighted Graphs</a>
+
+        <br><br><u>Misc</u>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
     </td>
     <td width="30%">
         Pick up where you left off on <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a> and get it fully working.
