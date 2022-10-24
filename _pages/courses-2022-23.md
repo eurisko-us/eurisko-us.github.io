@@ -24,37 +24,51 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>10/3-10/7<br></center></td>
+    <td width="10%"><center>10/24-10/28<br></center></td>
     <td width="30%">
         Pick any of the following:
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
-
-        <br><br>If you finish early, continue working down the following two paths:
-
-        <br><br><u>Regression</u>
-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/regressing-a-linear-combination-of-nonlinear-functions-via-pseudoinverse">Regressing a Linear Combination of Nonlinear Functions via Pseudoinverse</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/dijkstras-algorithm-for-distance-and-shortest-paths-in-weighted-graphs">Dijkstra's Algorithm for Distance and Shortest Paths in Weighted Graphs</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>  
+
+        <br><br>If you finish early, continue working down the "Regression" pathway:
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/overfitting-underfitting-cross-validation-and-the-bias-variance-tradeoff">Overfitting, Underfitting, Cross-Validation, and the Bias-Variance Tradeoff</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>; <a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
-
-        <br><br><u>Graphs</u>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
+    </td>
+    <td width="30%">
+        Dig this up from last year: <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
         
+        <br><br>Then start on this: <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
+    </td>
+    <td width="30%">
+        Finish connect four competition, and then Space Empires
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>10/17-10/21<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/breadth-first-and-depth-first-traversals">Breadth-First and Depth-First Traversals</a>
+
         <br><br><a class="body" target="_blank" href="https://justinmath.com/distance-and-shortest-paths-in-unweighted-graphs">Distance and Shortest Paths in Unweighted Graphs</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/dijkstras-algorithm-for-distance-and-shortest-paths-in-weighted-graphs">Dijkstra's Algorithm for Distance and Shortest Paths in Weighted Graphs</a>
-
-        <br><br><u>Misc</u>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
+    </td>
+    <td width="30%">
+        Space Empires - begin extending game to 2 ships with combat, and get user input through web UI rather than terminal
+    </td>
+    <td width="30%">
+        Connect four competition
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>10/10-10/14<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/linear-polynomial-and-multiple-linear-regression-via-pseudoinverse">Linear, Polynomial, and Multiple Linear Regression via Pseudoinverse</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
     </td>
@@ -64,9 +78,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br>Then, do <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>.
     </td>
     <td width="30%">
-        Monday/Tuesday -- prep your strategy for the connect four competition
-        
-        <br><br>Wednesday/Thursday -- competition
+        Prep your strategy for the connect four competition        
     </td>
 </tr>
 <tr>
