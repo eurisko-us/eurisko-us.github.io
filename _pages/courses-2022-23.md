@@ -24,13 +24,11 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>10/24-10/28<br></center></td>
+    <td width="10%"><center>10/31-11/4<br></center></td>
     <td width="30%">
         Pick any of the following:
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/regressing-a-linear-combination-of-nonlinear-functions-via-pseudoinverse">Regressing a Linear Combination of Nonlinear Functions via Pseudoinverse</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/dijkstras-algorithm-for-distance-and-shortest-paths-in-weighted-graphs">Dijkstra's Algorithm for Distance and Shortest Paths in Weighted Graphs</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>  
 
@@ -41,6 +39,18 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/overfitting-underfitting-cross-validation-and-the-bias-variance-tradeoff">Overfitting, Underfitting, Cross-Validation, and the Bias-Variance Tradeoff</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>; <a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
+    </td>
+    <td width="30%">
+        Space Empires
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a> - write your initial draft implementation and get some kind of output curve. (It's okay if the curve doesn't look right yet -- we'll budget for more debugging time during the next quant week.)
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>10/24-10/28<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/dijkstras-algorithm-for-distance-and-shortest-paths-in-weighted-graphs">Dijkstra's Algorithm for Distance and Shortest Paths in Weighted Graphs</a>
     </td>
     <td width="30%">
         Dig this up from last year: <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
