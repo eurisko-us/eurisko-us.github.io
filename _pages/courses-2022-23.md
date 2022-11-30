@@ -24,21 +24,49 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>10/31-11/4<br></center></td>
+    <td width="10%"><center>11/28-12/2<br></center></td>
     <td width="30%">
-        Pick any of the following:
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/regressing-a-linear-combination-of-nonlinear-functions-via-pseudoinverse">Regressing a Linear Combination of Nonlinear Functions via Pseudoinverse</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>  
-
-        <br><br>If you finish early, continue working down the "Regression" pathway:
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
-        
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/overfitting-underfitting-cross-validation-and-the-bias-variance-tradeoff">Overfitting, Underfitting, Cross-Validation, and the Bias-Variance Tradeoff</a>
+        <a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>; <a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
+    </td>
+    <td width="30%">
+        Space Empires
+    </td>
+    <td width="30%">
+        Space Empires competition
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>11/14-11/18<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/overfitting-underfitting-cross-validation-and-the-bias-variance-tradeoff">Overfitting, Underfitting, Cross-Validation, and the Bias-Variance Tradeoff</a>
+    </td>
+    <td width="30%">
+        Catchup week
+    </td>
+    <td width="30%">
+        Begin debugging Fogel tic-tac-toe project 
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>11/7-11/11<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/regressing-a-linear-combination-of-nonlinear-functions-via-pseudoinverse">Regressing a Linear Combination of Nonlinear Functions via Pseudoinverse</a>
+    </td>
+    <td width="30%">
+        Finish <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>.
+
+        <br><br>Then, work on <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>.
+    </td>
+    <td width="30%">
+        Space Empires
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>10/31-11/4<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/hodgkin-huxley-model-of-action-potentials-in-neurons">Hodgkin-Huxley Model of Action Potentials in Neurons</a>
     </td>
     <td width="30%">
         Space Empires
@@ -91,9 +119,9 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/hash-tables">Hash Tables</a>
     </td>
     <td width="30%">
-        Pick up where you left off on <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a> and get it fully working.
+        Continue <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>.
 
-        <br><br>Then, do <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>.
+        <br><br>If you finish early, work on <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>.
     </td>
     <td width="30%">
         Prep your strategy for the connect four competition        
