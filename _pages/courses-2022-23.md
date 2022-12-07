@@ -84,7 +84,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a> - write your initial draft implementation and get some kind of output curve. (It's okay if the curve doesn't look right yet -- we'll budget for more debugging time during the next quant week.)
 
-        <br><br>Also, check out the introduction and Blondie24 section of <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">this writeup</a> for more context on what we're doing. (You can ignore the exercise in that writeup, since we already did it last year.)   
+        <br><br>Also, check out the introduction and Blondie24 section of <a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">this writeup</a> for more context on what we're doing. (You can ignore the exercise in that writeup, since we already did it last year.)   
 
         <br><br>If you want to configure your implementation with an eye towards the future, here are the summaries of the other two papers that we'll be reimplementing:
 
