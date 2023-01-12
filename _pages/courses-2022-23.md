@@ -12,7 +12,6 @@ author_profile: false
 <br>
 Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-reference">summary</a> and <a class="body" target="_blank" href="{{site.url}}/files/space-empires-rulebook.pdf">full rulebook</a>
 
-
 <br>
 <br>
 <center>
@@ -24,21 +23,71 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>11/28-12/2<br></center></td>
+    <td width="10%"><center>1/9-1/13<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
+        <a class="body" target="_blank" href="https://justinmath.com/k-nearest-neighbors">K-Nearest Neighbors</a>
 
-        <br><br>Once you finish the above, work on this: <a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>
-        
-        <br><br>And after that, any of these:
-        
+        <br><br>Afterwards, you can work on any of these:
+
         <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/k-nearest-neighbors">K-Nearest Neighbors</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
+    </td>
+    <td width="30%">
+        Space Empires - implementing combat and debugging manual player vs manual player
+    </td>
+    <td width="30%">
+        Space Empires - begin final push on features before focusing on AI strats
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>12/19-12/23<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://www.overleaf.com/read/gjbrpdggwdkf">Final Exam</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://www.overleaf.com/read/cwvwvpsssshf">Final Exam</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://www.overleaf.com/read/jmmzrjwttrpr">Final Exam</a>
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>12/12-12/16<br></center></td>
+    <td width="30%">
+        Final review
+    </td>
+    <td width="30%">
+        Final review
+    </td>
+    <td width="30%">
+        Final review
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>12/5-12/9<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>
+    </td>
+    <td width="30%">
+        Decision Trees / Intro Neural Networks
+    </td>
+    <td width="30%">
+        Fogel tic-tac-toe debugging
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>11/28-12/2<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/power-exponential-and-logistic-regression-via-pseudoinverse">Power, Exponential, and Logistic Regression via Pseudoinverse</a>
     </td>
     <td width="30%">
         Space Empires
