@@ -162,7 +162,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         Dig this up from last year: <a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
         
-        <br><br>Then start on this: <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
+        <br><br>Then do <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>.
     </td>
     <td width="30%">
         Finish connect four competition, and then Space Empires
