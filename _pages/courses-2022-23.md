@@ -44,7 +44,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         Dig up your Connect Four implementation from last year and make sure you can still run it.
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+        <br><br>Then, start <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>.
     </td>
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - Goal for this week is just to make the checkers game. It should be playable through manual input too, just like the tic-tac-toe game.
