@@ -23,9 +23,9 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>1/9-1/13<br></center></td>
+    <td width="10%"><center>1/17-1/20<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/k-nearest-neighbors">K-Nearest Neighbors</a>
+        <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
 
         <br><br>Afterwards, you can work on any of these:
 
@@ -39,7 +39,19 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a>
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>1/9-1/13<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/k-nearest-neighbors">K-Nearest Neighbors</a>
     </td>
     <td width="30%">
         Space Empires - implementing combat and debugging manual player vs manual player
@@ -78,7 +90,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <a class="body" target="_blank" href="https://justinmath.com/regression-via-gradient-descent">Regression via Gradient Descent</a>
     </td>
     <td width="30%">
-        Decision Trees / Intro Neural Networks
+        <a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a> / <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
     </td>
     <td width="30%">
         Fogel tic-tac-toe debugging
