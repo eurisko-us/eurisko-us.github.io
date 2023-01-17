@@ -45,7 +45,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a>
     </td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a>
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - Goal for this week is just to make the checkers game. It should be playable through manual input too, just like the tic-tac-toe game.
     </td>
 </tr>
 <tr>
