@@ -27,7 +27,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%">
         <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
 
-        <br><br>Afterwards, you can work on any of these:
+        <br><br>Afterwards, you can work on any of these.
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
 
@@ -40,6 +40,14 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+
+        <br><br><br>Below is the path that you can follow if you want to fast-track yourself up to the grad-school-level stuff that the seniors are doing (reimplementing research papers in which neural networks are evolved to play board games).
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+        
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a> --> <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a> --> <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+        
+        <br><br>{Backprop, Connect Four} --> <a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
     </td>
     <td width="30%">
         Dig up your Connect Four implementation from last year and make sure you can still run it.
