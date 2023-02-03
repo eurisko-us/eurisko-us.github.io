@@ -78,7 +78,8 @@ There are a couple additional rules:
 
 <ul>
 <li>In order to build a ship, not only must you have enough CPs and shipyards, but you must also have the necessary shipsize technology.</li>
-<li>The combat order is constructed according to ships' tactics level: ships with tactics 0 are destroyed immediately, and ships with higher tactics fire first. If two ships have the same tactics, then the defending ship fires first (the defending ship is the ship that was the first to occupy the grid space).</li>
+<li>Ships with tactics 0 are destroyed immediately at the start of combat, before any attacks have occurred.</li>
+<li>The combat order is constructed so that ships with higher attack class attack before ships with lower attack class. If two ships have the same attack class, then the ship with higher tactics attacks first. If two ships have the same attack class AND tactics, then the defending ship fires first (the defending ship is the ship that was the first to occupy the grid space).</li>
 <li>Previously, I said that the maintenance cost is equal to the hullsize. This is usually true, but there are some special types of ships (Decoy, Colonyship, Base) that don't have a maintenance cost.</li>
 </ul>
 
