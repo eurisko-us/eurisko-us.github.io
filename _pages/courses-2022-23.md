@@ -23,15 +23,13 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>1/17-1/20<br></center></td>
+    <td width="10%"><center>1/30-2/3<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
+        <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
 
         <br><br>Afterwards, you can work on any of these.
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
 
@@ -39,22 +37,42 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
 
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
-
         <br><br><br>Below is the path that you can follow if you want to fast-track yourself up to the grad-school-level stuff that the seniors are doing (reimplementing research papers in which neural networks are evolved to play board games).
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a> --> <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a> --> <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
         
         <br><br>{Backprop, Connect Four} --> <a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
     </td>
     <td width="30%">
-        Dig up your Connect Four implementation from last year and make sure you can still run it.
+        Space Empires - converting game to be state-based, and updating UI accordingly
+    </td>
+    <td width="30%">
+        Space Empires - map out model architecture for AI player
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>1/23-1/27<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+    </td>
+    <td width="30%">
+        <br><br>In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish both of the following. (You should already have one of these completed from last time.)
+        <br>- Build the Connect Four game tree (with a variable number of ply)
+        <br>- Finish exercise 1
+    </td>
+    <td width="30%">
+        Debugging week - get checkers game fully working, with ability to play manually against random player.
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>1/17-1/20<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/introduction-to-neural-network-regressors">Introduction to Neural Network Regressors</a>
 
-        <br><br>Then, start <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>.
-
-        <br><br>Accomplish one of the following:
+        <br><br>Start on <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+    </td>
+    <td width="30%">
+        <br><br>In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish one of the following:
         <br>- Build the Connect Four game tree (with a variable number of ply)
         <br>- OR, finish exercise 1
     </td>
