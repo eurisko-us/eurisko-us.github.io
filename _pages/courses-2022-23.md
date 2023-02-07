@@ -56,7 +56,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
     </td>
     <td width="30%">
-        <br><br>In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish both of the following. (You should already have one of these completed from last time.)
+        In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish both of the following. (You should already have one of these completed from last time.)
         <br>- Build the Connect Four game tree (with a variable number of ply)
         <br>- Finish exercise 1
     </td>
@@ -72,7 +72,7 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
         <br><br>Start on <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
     </td>
     <td width="30%">
-        <br><br>In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish one of the following:
+        In <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>, accomplish one of the following:
         <br>- Build the Connect Four game tree (with a variable number of ply)
         <br>- OR, finish exercise 1
     </td>
