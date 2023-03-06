@@ -23,11 +23,11 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>1/30-2/3<br></center></td>
+    <td width="10%"><center>3/6-3/10<br></center></td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
+        Any of these:
 
-        <br><br>Afterwards, you can work on any of these.
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
 
@@ -37,11 +37,78 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
 
-        <br><br><br>Below is the path that you can follow if you want to fast-track yourself up to the grad-school-level stuff that the seniors are doing (reimplementing research papers in which neural networks are evolved to play board games).
+        <br><br><br>Below are the paths that you can follow if you want to fast-track yourself up to the grad-school-level stuff that the seniors are doing (reimplementing research papers in which neural networks are evolved to play board games).
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a> --> <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a> --> <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a>
         
-        <br><br>{Backprop, Connect Four} --> <a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
+        <br><br>{ Connect Four} --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a> - forward pass
+
+        <br><br>
+        But finish your Connect-4 heuristic first, so that we can have a competition. (We can't have the competition until everyone is done.)
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - implement evolution and make the performance plot (it's okay if it doesn't look correct yet)
+    </td>
+</tr>
+
+
+<tr>
+    <td width="10%"><center>2/27-3/3<br></center></td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a>
+    </td>
+    <td width="30%">
+        Space Empires - finish converting game to be state-based, begin working on combat & manual player
+    </td>
+    <td width="30%">
+        Space Empires - map out training procedure for AI player; begin implementing combat minigame
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>2/20-2/24<br></center></td>
+    <td width="30%">
+        Science project
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a> - Exercises 3-5
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - hook everything up for individual agents
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>2/13-2/17<br></center></td>
+    <td width="30%">
+        Science project
+    </td>
+    <td width="30%">
+        Space Empires - converting game to be state-based, and updating UI accordingly
+    </td>
+    <td width="30%">
+        Space Empires - begin developing infrastructure for AI player
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>2/6-2/10<br></center></td>
+    <td width="30%">
+        Science project
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a> - Exercise 2
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - revise checkers game to make game tree simpler
+    </td>
+</tr>
+<tr>
+    <td width="10%"><center>1/30-2/3<br></center></td>
+    <td width="30%">
+        Science project
     </td>
     <td width="30%">
         Space Empires - converting game to be state-based, and updating UI accordingly
