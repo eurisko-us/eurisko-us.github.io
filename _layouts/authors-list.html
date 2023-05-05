@@ -53,19 +53,23 @@ layout: archive
 
           <h2><br>{{ author.name }} {{author.graduationYear}}</h2>
 
+          <!-- commented out since student images/bios are way out of date -->
+
+          <!--
           <div style="width:25%;float:left;">
 
           {% if author.avatar contains "://" %}
                 <img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
-              {% else %}
+          {% else %}
                 <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
-              {% endif %}
+          {% endif %}
           </div>
 
+
           <div style="width:70%;float:right;">
-            <!-- commented out since student bios are way out of date -->
-            <!--{% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko.us/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }} {% if author.github %}(<a class="body" target="_blank" href="https://github.com/{{ author.github }}">Github</a>){% endif %}</p>{% endif %}-->
+            {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko.us/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }} {% if author.github %}(<a class="body" target="_blank" href="https://github.com/{{ author.github }}">Github</a>){% endif %}</p>{% endif %}
           </div>
+          -->
 
           </div>
 
