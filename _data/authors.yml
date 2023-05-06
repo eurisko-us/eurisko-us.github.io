@@ -5,6 +5,7 @@ Justin Skycak:
   bio         : " runs Eurisko together with Jason Roberts. He specializes in the mathy parts of computer science and has a varied quantitative background ranging from improving data transmission in particle detectors, to simulating and proving properties of biological neural networks, to building predictive models for businesses while working as a data scientist. Currently, Justin is developing the algorithms that form the brain of <a class='body' target='_blank' href='https://mathacademy.us'>Math Academy</a>'s fully automated and personalized online learning system. If you'd like to know more about Justin, you can check out his personal site at <a class='body' target='_blank' href='https://www.justinmath.com/'>justinmath.com</a>."
   avatar      : "headshots/justin-skycak.png"
   role        : "admin"
+  title       : "Instructor"
   website     : "justinmath.com"
   
 Jason Roberts:
@@ -12,6 +13,7 @@ Jason Roberts:
   bio         : " has spent decades launching technology startups and building high-frequency trading systems. Not wanting to leave Pasadena for San Francisco, he infamously turned down the CTO position at Uber, but instead, opting to work as a consultant, designed and developed much of the company's original real-time technology, their global &quot;air traffic control&quot;, and other foundational technologies. In addition to founding and working on <a class='body' target='_blank' href='https://mathacademy.us'>Math Academy</a>, Jason spends his time advising startups and Fortune 500 companies on their technology strategy and product roadmaps."
   avatar      : "headshots/jason-roberts.png"
   role        : "admin"
+  title       : "Advisor"
   website     : "codusoperandi.com"
   
 Colby Roberts:
