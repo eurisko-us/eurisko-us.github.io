@@ -78,13 +78,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Justin Skycak"
-  avatar           : "jpskycak.jpg"
+  name             : #"Justin Skycak"
+  avatar           : #"jpskycak.jpg"
   bio              :
   location         : # "Pasadena, CA"
   employer         :
   googlescholar    :
-  email            : "jpskycak@gmail.com"
+  email            : #"jpskycak@gmail.com"
   uri              :
   bitbucket        :
   codepen          :
