@@ -15,11 +15,7 @@ layout: archive
 
       <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
 
-      <h2><br>{{ author.name }}</h2>
-
-      {% if author.title %}
-      {{ author.title }}
-      {% endif %}
+      <h2><br>{{ author.name }}{% if author.title %} ({{ author.title }}){% endif %}</h2>
 
       {% if author.website %}
       <a class='body' target='_blank' href='http://{{ author.website }}'>{{ author.website }}</a>
