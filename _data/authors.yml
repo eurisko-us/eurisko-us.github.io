@@ -15,31 +15,7 @@ Jason Roberts:
   role        : "admin"
   title       : "Advisor"
   website     : "codusoperandi.com"
-  
-Colby Roberts:
-  name        : "Colby Roberts"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science. <i>Last updated 2020.</i>"
-  avatar      : "headshots/colby-roberts.png"
-  role        : "student"
-  graduationYear : "'22"
-  github      : "C0BBL3"
-  
-George Meza:
-  name        : "George Meza"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. <i>Last updated 2020.</i>"
-  avatar      : "headshots/george-meza.png"
-  role        : "student"
-  graduationYear : "'22"
-  github      : "geomeza"
-  
-Riley Paddock:
-  name        : "Riley Paddock"
-  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science. <i>Last updated 2020.</i>"
-  avatar      : "headshots/riley-paddock.png"
-  role        : "student"
-  graduationYear : "'22"
-  github      : "RileyPaddock"
-  
+
 David Gieselman:
   name        : "David Gieselman"
   bio         : " is a junior in Math Academy and App Academy at Pasadena High School. David plays for the PHS football team and also runs track. In his free time, David likes to play video games, practice graphic design, and listen to music. He is also working to get his Eagle Scout rank in boy scouts. David plans on studying aerospace engineering in college. <i>Last updated 2020.</i>"
@@ -47,6 +23,30 @@ David Gieselman:
   role        : "student"
   graduationYear : "'22"
   github      : "DrM00G"
+
+George Meza:
+  name        : "George Meza"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He enjoys coding, playing video games, and going to church. He also runs track. For college he wants to become an engineer. <i>Last updated 2020.</i>"
+  avatar      : "headshots/george-meza.png"
+  role        : "student"
+  graduationYear : "'22"
+  github      : "geomeza"
+
+Riley Paddock:
+  name        : "Riley Paddock"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. Riley plays for the high school baseball team and is a member of the Chess Club and Astronomy Club. Outside of school, Riley is an aspiring Eagle Scout in Troop 4 and works as a lifeguard. Beyond high school, Riley wants to study mathematics and computer science. <i>Last updated 2020.</i>"
+  avatar      : "headshots/riley-paddock.png"
+  role        : "student"
+  graduationYear : "'22"
+  github      : "RileyPaddock"
+
+Colby Roberts:
+  name        : "Colby Roberts"
+  bio         : " is a junior in Math Academy and App Academy at Pasadena High School. He plays on the PHS Football team, loves coding and and gaming, and is in Chess Club. He is a true nerd who spends 99% of his money on better PC parts for the computer he <a class='body' target='_blank' href='https://pcpartpicker.com/user/Colbiverse/saved/cnjQZL'>built</a>. In college, Colby wants to study computer science. <i>Last updated 2020.</i>"
+  avatar      : "headshots/colby-roberts.png"
+  role        : "student"
+  graduationYear : "'22"
+  github      : "C0BBL3"
 
 Elijah Tarr:
   name        : "Elijah Tarr"
@@ -120,12 +120,6 @@ Charlie Weinberger:
   graduationYear : "'23"
   github      : "charliebrown364"
   
-Christine Manoukian:
-  name        : "Christine Manoukian"
-  avatar      : "headshots/anonymous.png"
-  role        : "dropped"
-  graduationYear : "'23"
-  
 Celeste Acosta:
   name        : "Celeste Acosta"
   avatar      : "headshots/anonymous.png"
@@ -137,6 +131,12 @@ Elias Gee:
   avatar      : "headshots/anonymous.png"
   role        : "student"
   graduationYear : "'24"
+
+Christine Manoukian:
+  name        : "Christine Manoukian"
+  avatar      : "headshots/anonymous.png"
+  role        : "dropped"
+  graduationYear : "'23"
   
 Benjamin Park:
   name        : "Benjamin Park"
