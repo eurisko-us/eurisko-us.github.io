@@ -12,6 +12,11 @@ layout: archive
 
 <div style="width:100%; max-width:800px; margin:auto;"> 
     
+{% if author.website %}
+<a class='body' target='_blank' href='http://{{ author.website }}'>{{ author.website }}</a>
+{% endif %}
+
+<!--
 <div style="width:25%;float:left;">
     {% if author.avatar contains "://" %}
     	<img src="{{ author.avatar }}" alt="{{ author.name }}" align="left" style="border: none; /* height: 10em; */">
@@ -24,6 +29,7 @@ layout: archive
   {% if author.bio %}{{ page.title }} {{ author.bio }}</p>{% endif %}
 {{ content }}
 </div>
+-->
     
 </div>
 

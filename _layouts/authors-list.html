@@ -17,6 +17,11 @@ layout: archive
 
       <h2><br>{{ author.name }}</h2>
 
+      {% if author.website %}
+      <a class='body' target='_blank' href='http://{{ author.website }}'>{{ author.website }}</a>
+      {% endif %}
+
+      <!--
       <div style="width:25%;float:left;">
 
       {% if author.avatar contains "://" %}
@@ -29,6 +34,7 @@ layout: archive
       <div style="width:70%;float:right;">
         {% if author.bio %}<p class="author__bio"><a class="body" target="_blank" href="https://eurisko.us/{{ author.name | slugify | downcase }}">{{ author.name }}</a> {{ author.bio }}</p>{% endif %}
       </div>
+      -->
 
       </div>
 
@@ -52,6 +58,10 @@ layout: archive
           <div style="width:100%; max-width:800px; margin:auto; clear:both;"> 
 
           <h2><br>{{ author.name }} {{author.graduationYear}}</h2>
+
+          {% if author.website %}
+          <a class='body' target='_blank' href='http://{{ author.website }}'>{{ author.website }}</a>
+          {% endif %}
 
           <!-- commented out since student images/bios are way out of date -->
 
