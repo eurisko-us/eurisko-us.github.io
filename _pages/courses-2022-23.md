@@ -23,36 +23,43 @@ Space Empires: <a class="body" target="_blank" href="{{site.url}}/space-empires-
     <td width="30%"><center><b>Intelligent Systems</b><br><a class="body" target="_blank" href="https://photos.app.goo.gl/uwQfKUNkxS6jngpM7">Board Pics</a><br>(Cohort 2)</center></td>
 </tr>
 <tr>
-    <td width="10%"><center>3/6-3/10<br></center></td>
+    <td width="10%"><center>3/6-5/19<br>(final quarter)</center></td>
     <td width="30%">
-        Any of these:
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
-
-        <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
-
-        <br><br><br>Below are the paths that you can follow if you want to fast-track yourself up to the grad-school-level stuff that the seniors are doing (reimplementing research papers in which neural networks are evolved to play board games).
+        From this point onwards, the rest of the main curriculum centers around reimplementing research papers in which neural networks are evolved to play board games. Below are the learning paths:
         
         <br><br><a class="body" target="_blank" href="https://justinmath.com/canonical-and-reduced-game-trees-for-tic-tac-toe">Canonical and Reduced Game Trees for Tic-Tac-Toe</a> --> <a class="body" target="_blank" href="https://justinmath.com/minimax-strategy">Minimax Strategy</a> --> <a class="body" target="_blank" href="https://justinmath.com/reduced-search-depth-and-heuristic-evaluation-for-connect-four">Reduced Search Depth and Heuristic Evaluation for Connect Four</a>
 
         <br><br><a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a>
         
-        <br><br>{ Connect Four} --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
-    </td>
-    <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a> - forward pass
+        <br><br>{ Heuristic Connect Four, Fogel Tic-Tac-Toe } --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> --> <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
 
-        <br><br>
-        But finish your Connect-4 heuristic first, so that we can have a competition. (We can't have the competition until everyone is done.)
+        <br><br><br>And here are the final remaining offshoots from the main curriculum:
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/simplex-method">Simplex Method</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/multiple-regression-and-interaction-terms">Multiple Regression and Interaction Terms</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/naive-bayes">Naive Bayes</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/decision-trees">Decision Trees</a>
     </td>
     <td width="30%">
-        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a> - implement evolution and make the performance plot (it's okay if it doesn't look correct yet)
+        Connect-4 competition
+
+        <br><br>Space Empires -- get combat working
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/backpropagation">Backpropagation</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/introduction-to-blondie24-and-neuroevolution">Introduction to Blondie24 and Neuroevolution</a>
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/reimplementing-fogels-tic-tac-toe-paper">Reimplementing Fogel's Tic-Tac-Toe Paper</a>
+    </td>
+    <td width="30%">
+        <a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24">Reimplementing Blondie24</a>
+        
+        <br><br>Space Empires -- manual player, combat minigame, combat strategy with trainable weights
+
+        <br><br><a class="body" target="_blank" href="https://justinmath.com/reimplementing-blondie24-convolutional-version">Reimplementing Blondie24: Convolutional Version</a>
     </td>
 </tr>
 
