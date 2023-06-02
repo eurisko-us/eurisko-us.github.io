@@ -22,6 +22,11 @@ redirect_from:
 </div>
 -->
 
+<div style="width:100%; max-width:800px; margin:auto"> 
+    <p><center><font color="red"><b><hr>* * * As of spring 2023, Eurisko is no longer running. This site exists for historical purposes only. (<a class="body" target="_blank" href="https://www.justinmath.com/the-story-of-math-academys-eurisko-sequence/">further reading</a>) * * *<hr></b></font></center></p>
+    <br>
+</div>
+
 <div style="width:100%; max-width:800px; height:5em; margin:auto">
   <center>
   <img src="https://eurisko.us/files/icon-appacademy-mathacademy-landscape.png" align="center" style="border:none; max-height:5em; width:auto; max-width:100%" alt="icon">
@@ -35,7 +40,7 @@ redirect_from:
 <b>How rigorous is the program?</b><br>
 
 <font size="3em">
-Eurisko one of the most advanced high school math/CS sequences in the country. Students write all their code from scratch before they are allowed to import from external libraries. Being in Math Academy, these students have already learned a large amount of college-level math, including multivariable calculus, linear algebra, and differential equations, so our courses are presented at a level of intensity comparable to those offered at elite technical universities.
+Eurisko is the most advanced high school math/CS sequence in the USA. Students write all their code from scratch before they are allowed to import from external libraries. Being in Math Academy, these students have already learned a large amount of college-level math, including multivariable calculus, linear algebra, and differential equations, so our courses are presented at a level of intensity comparable to those offered at elite technical universities.
 </font>
   
 <br><br><b>What kinds of things are the students building?</b><br>
@@ -53,12 +58,14 @@ In subsequent courses, students implement more advanced machine learning algorit
   "Eurisko" is Greek for "I discover", and is the namesake of an <a class="body" target="_blank" href="https://en.wikipedia.org/wiki/Eurisko">AI system</a> from the 1980s that won a particular game competition twice in a row, even when the rules were changed in an attempt to handicap it.
 </font>
 
+<!--
 <br><br><b>More Information</b><br>
   
 <font size="3em">
-(2023) <a class="body" target="_blank" href="https://www.justinmath.com/the-story-of-math-academys-eurisko-sequence/">The Story of Math Academy's Eurisko Sequence</a>
-    <!--<br>(2021) <a class="body" target="_blank" href="https://eurisko.us/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>-->
+    (2023) <a class="body" target="_blank" href="https://www.justinmath.com/the-story-of-math-academys-eurisko-sequence/">The Story of Math Academy's Eurisko Sequence</a>
+    <br>(2021) <a class="body" target="_blank" href="https://eurisko.us/the-ultimate-high-school-computer-science-sequence-9-months-in/">The Ultimate High School Computer Science Sequence: 9 Months In</a>
 </font>
+-->
 
 </div>
 
