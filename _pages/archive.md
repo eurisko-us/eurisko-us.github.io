@@ -25,6 +25,7 @@ author_profile: false
 <li><a class="body" target="_blank" href="https://eurisko.us/blog">Blog</a></li>
 <li><a class="body" target="_blank" href="https://eurisko.us/clips">Clips</a></li>
 <li><a class="body" target="_blank" href="https://eurisko.us/resources">Resources</a></li>
+<li><a class="body" target="_blank" href="https://eurisko.us/contact">Contact</a></li>
 </ul>
     
 </div>

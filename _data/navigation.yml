@@ -21,8 +21,8 @@ main:
   - title: "People"
     url: /people/
     
-  - title: "Contact"
-    url: /contact/
+  #- title: "Contact"
+  #  url: /contact/
 
   - title: "Archive"
     url: /archive/

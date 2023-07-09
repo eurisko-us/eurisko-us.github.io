@@ -23,7 +23,7 @@ redirect_from:
 -->
 
 <div style="width:100%; max-width:800px; margin:auto"> 
-    <p><center><font color="red"><b><hr>* * * As of spring 2023, Eurisko is no longer running. This site exists for historical purposes only. <a class="body" target="_blank" href="https://www.justinmath.com/the-story-of-math-academys-eurisko-sequence/">further reading</a> * * *<hr></b></font></center></p>
+    <p><center><font color="red"><b><hr>* * * As of spring 2023, Eurisko is no longer running. This site exists for historical purposes only. <a class="body" target="_blank" href="https://www.justinmath.com/the-story-of-math-academys-eurisko-sequence/">Further reading here.</a> * * *<hr></b></font></center></p>
     <br>
 </div>
 
